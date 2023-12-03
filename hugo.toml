@@ -1,7 +1,8 @@
-baseURL = 'https://programmerraja.github.io/MyBlog/public/'
+baseURL = 'https://programmerraja.github.io/blog'
 languageCode = 'en-us'
 title = 'My Blog'
 theme = 'blog'
+publishDir='public/blog'
 
 enableEmoji = true
 
