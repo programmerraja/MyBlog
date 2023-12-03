@@ -1,0 +1,57 @@
+baseURL = 'https://programmerraja.github.io'
+languageCode = 'en-us'
+title = 'My Blog'
+theme = 'blog'
+
+enableEmoji = true
+
+[menu]
+  [[menu.main]]
+    pageRef="/"
+    name = 'Home'
+    url = '/'
+    weight = 10
+  [[menu.main]]
+    pageRef="posts"
+    name = 'Posts'
+    url = '/post/'
+    weight = 20
+  [[menu.main]]
+    pageRef="whoami"
+    name = 'Portfolio'
+    url = '/'
+    weight = 30
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+  [markup.goldmark.renderer]
+    unsafe = true
+	[markup.tableOfContents]
+		startLevel = 2 # ToC starts from H2
+		endLevel = 4 # ToC ends at H4
+		ordered = false # generates <ul> instead of <ol>
+
+[params.author]
+    avatar = "myself.jpeg"
+    intro = "K.Boopathi"
+    name = "K.Boopathi"
+    description = "Exploring diverse tech realms, I'm a curious programmer crafting blogs on web dev and sharing learning resources! 🚀 Dive into my world of code exploration and innovation!"
+
+[[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/programmerraja"
+
+[[params.socialIcons]]
+    name = "twitter"
+    url = "https://twitter.com/programmerraja"
+
+[[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/programmerraja/"
+
+[[params.socialIcons]]
+    name = "Rss"
+    url = "index.xml"
+
+
