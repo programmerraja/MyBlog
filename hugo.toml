@@ -1,4 +1,4 @@
-baseURL = 'https://programmerraja.github.io'
+baseURL = 'https://programmerraja.github.io/MyBlog/public/'
 languageCode = 'en-us'
 title = 'My Blog'
 theme = 'blog'

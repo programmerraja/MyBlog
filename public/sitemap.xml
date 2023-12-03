@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://programmerraja.github.io/post/helloworld/</loc>
+    <loc>https://programmerraja.github.io/MyBlog/public/post/helloworld/</loc>
     <lastmod>2023-12-03T09:44:50+05:30</lastmod>
   </url><url>
-    <loc>https://programmerraja.github.io/</loc>
+    <loc>https://programmerraja.github.io/MyBlog/public/</loc>
     <lastmod>2023-12-03T09:44:50+05:30</lastmod>
   </url><url>
-    <loc>https://programmerraja.github.io/post/</loc>
+    <loc>https://programmerraja.github.io/MyBlog/public/post/</loc>
     <lastmod>2023-12-03T09:44:50+05:30</lastmod>
   </url><url>
-    <loc>https://programmerraja.github.io/categories/</loc>
+    <loc>https://programmerraja.github.io/MyBlog/public/categories/</loc>
   </url><url>
-    <loc>https://programmerraja.github.io/tags/</loc>
+    <loc>https://programmerraja.github.io/MyBlog/public/tags/</loc>
   </url>
 </urlset>
