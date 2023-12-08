@@ -8,20 +8,28 @@ enableEmoji = true
 
 [menu]
   [[menu.main]]
-    pageRef="/"
-    name = 'Home'
-    url = '/'
-    weight = 10
-  [[menu.main]]
     pageRef="posts"
     name = 'Posts'
     url = '/post/'
     weight = 20
+ 
+  [[menu.main]]
+    pageRef="resources"
+    name = 'Resources'
+    url = '/resources/'
+    weight = 40
+  
+   [[menu.main]]
+    pageRef="notes"
+    name = 'Notes'
+    url = '/notes/'
+    weight = 50
+
   [[menu.main]]
     pageRef="whoami"
     name = 'Portfolio'
-    url = '/'
-    weight = 30
+    url = 'https://programmerraja.github.io/'
+    weight = 50
 
 [markup]
   [markup.highlight]
@@ -29,9 +37,9 @@ enableEmoji = true
   [markup.goldmark.renderer]
     unsafe = true
 	[markup.tableOfContents]
-		startLevel = 2 # ToC starts from H2
-		endLevel = 4 # ToC ends at H4
-		ordered = false # generates <ul> instead of <ol>
+		startLevel = 2 
+		endLevel = 4 
+		ordered = true 
 
 [params.author]
     avatar = "myself.jpeg"
