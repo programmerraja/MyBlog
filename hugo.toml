@@ -1,6 +1,6 @@
 baseURL = 'https://programmerraja.github.io/blog'
 languageCode = 'en-us'
-title = 'My Blog'
+title = 'programmerraja blog'
 theme = 'blog'
 publishDir='public/blog'
 
