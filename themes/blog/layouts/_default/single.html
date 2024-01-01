@@ -11,6 +11,7 @@
                 </div>
                 {{ end }}
             </header>
+
             {{- if .Site.Params.toc -}}
                 {{ if not (eq .Params.toc false) }}
                 {{ $tocOpen := "" }}
@@ -20,7 +21,7 @@
                     {{ end }}
                 {{ end }}
                 <details class="toc" {{ $tocOpen }}>
-                    <summary><b>{{ T "single.table_of_contents" }}</b></summary>
+                    <summary><b>Table of Contents</b></summary>
                     {{ .TableOfContents }}
                 </details>
                 {{ end }}

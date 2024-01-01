@@ -6,6 +6,11 @@ publishDir='public/blog'
 
 enableEmoji = true
 
+[params]
+  toc = true # set to false to disable table of contents 'globally'
+  tocOpen = false # set to true to open table of contents by default
+  goToTop = true # set to false to disable 'go to top' b
+
 [menu]
   [[menu.main]]
     pageRef="posts"
