@@ -17,12 +17,6 @@ enableEmoji = true
     name = 'Posts'
     url = '/post/'
     weight = 20
- 
-  [[menu.main]]
-    pageRef="resources"
-    name = 'Resources'
-    url = '/resources/'
-    weight = 40
   
    [[menu.main]]
     pageRef="notes"

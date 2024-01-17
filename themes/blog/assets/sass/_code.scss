@@ -29,9 +29,9 @@ pre {
   display: block;
   overflow-x: auto;
 
-  @include media-query($on-mobile) {
-    margin: 0 calc(51% - 51vw);
-  }
+  // @include media-query($on-mobile) {
+  //   margin: 0 calc(51% - 51vw);
+  // }
 
   // Configure scrollbars for code blocks
   &::-webkit-scrollbar {

@@ -13,18 +13,7 @@
             </header>
 
             {{- if .Site.Params.toc -}}
-                {{ if not (eq .Params.toc false) }}
-                {{ $tocOpen := "" }}
-                {{ if or .Site.Params.tocOpen .Params.tocOpen }}
-                    {{ if not (eq .Params.tocOpen false) }}
-                        {{ $tocOpen = "open" }}
-                    {{ end }}
-                {{ end }}
-                <details class="toc" {{ $tocOpen }}>
-                    <summary><b>Table of Contents</b></summary>
-                    {{ .TableOfContents }}
-                </details>
-                {{ end }}
+            {{- partial "toc.html" . }}
             {{- end -}}
             <div class="page-content">
                 {{ .Content }}

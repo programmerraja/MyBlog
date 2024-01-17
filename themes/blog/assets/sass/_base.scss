@@ -6,7 +6,14 @@
   -o-transition: background-color 75ms ease-in, border-color 75ms ease-in;
   transition: background-color 75ms ease-in, border-color 75ms ease-in;
 }
-
+:root{
+  --gap: 24px;
+  --content-gap: 20px;
+  --nav-width: 1024px;
+  --main-width: 720px;
+  --header-height: 60px;
+  --footer-height: 60px;  
+}
 .notransition {
   -webkit-transition: none;
   -moz-transition: none;

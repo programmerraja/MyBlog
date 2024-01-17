@@ -45,22 +45,17 @@ operations that are currently running on the database
 -  Index is not suitable if we going to read all docs but mongo use index u can specify to use col scan hint({$natural:1}),
 - To fully optimize an $or query, index all the attributes in the $or array.
 - An $exists:true lookup can be optimized by a sparse index on the attribute concerned. However, such an index cannot optimize an $exists:false query.
-- If you want to do case-insensitive searches, then there is a trick you can use. First, create an index with a case-insensitive collation sequence. This is done by specifying a collation sequence with a strength
-```js
-db.customers.createIndex(
-  { LastName: 1 },
-  { collation: { locale: 'en', strength: 2 } }
-);
-```
+- If you want to do case-insensitive searches, then there is a trick you can use. First, create an index with a case-insensitive collation sequence. This is done by specifying a collation sequence with a strength `db.customers.createIndex({ LastName: 1 },{ collation: { locale: 'en', strength: 2 } });`
+		
 
 ### Index Merges
 - if we have 2 index one for a and b if search of a and b mongodb will merges the index value on search
-```text
-1  IXSCAN a_1
-2  IXSCAN b_1
-3  AND_SORTED
-4  FETCH
-```
+- ```text
+	1  IXSCAN a_1
+	2  IXSCAN b_1
+	3  AND_SORTED
+	4  FETCH
+	```
 - The **AND_SORTED** step indicates that an index intersection has been performed.
 Index intersections for $and conditions are unusual
 ### Type of index
@@ -274,3 +269,5 @@ var blockingEvictRate=wt['thread-yield']['page acquire eviction blocked'] *100 /
 
 ## Sharding
 - Need to study :)
+
+

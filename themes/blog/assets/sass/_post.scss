@@ -44,7 +44,6 @@
 
 // Post content
 .page-content {
-  padding-top: 8px;
 
   iframe {
     text-align: center;
@@ -85,8 +84,8 @@
 
   > p {
     margin: 0;
-    padding-top: $spacing-full - 15;
-    padding-bottom: $spacing-full - 15;
+    padding-top: $spacing-full - 18;
+    padding-bottom: $spacing-full - 18;
   }
 
   ul.task-list {
@@ -233,3 +232,4 @@
 .post-updated-at {
   font-family: "Ubuntu mono", "monospace";
 }
+
