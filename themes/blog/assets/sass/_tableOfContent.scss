@@ -3,7 +3,7 @@ details {
     cursor: pointer;
 }
 .toc a {
-    color: rgb(218, 218, 219) !important;
+    color: $dark-text-base-color !important;
 }
 .toc a:hover {
     box-shadow: 0 1px 0;

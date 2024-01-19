@@ -2,6 +2,7 @@
 $text-base-color: #434648;
 $text-link-blue: #003fff;
 $text-link-blue-active: #0036c7;
+$text-blue-color:#81e5ec;
 $bloquote-border: #c4c8cc;
 $blockquote-text: #525b66;
 $inline-code-text: #333638;
@@ -86,7 +87,5 @@ $on-widescreen: 1152px;
 @import "dark";
 @import "listpage";
 @import "custom";
-
-{{ with .Site.Params.goToTop }}
+@import "search";
 @import "goToTop";
-{{ end }}

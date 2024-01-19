@@ -36,9 +36,25 @@
 
     {{- if or .Params.math .Site.Params.math }}{{ partial "helpers/katex.html" . -}}{{- end -}}
 
+    {{/*  SCRIPTS  */}}
+
+   {{- /* Search */}}
+    {{- if (eq .Layout `search`) -}}
+    <link crossorigin="anonymous" rel="preload" as="fetch" href="../index.json">
+    {{- $fastsearch := resources.Get "js/fastsearch.js" | js.Build (dict "params" (dict "fuseOpts" site.Params.fuseOpts)) | resources.Minify }}
+    {{- $fusejs := resources.Get "js/fuse.basic.min.js" }}
+    {{- if not site.Params.assets.disableFingerprinting }}
+    {{- $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" | fingerprint }}
+    <script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}" integrity="{{ $search.Data.Integrity }}"></script>
+    {{- else }}
+    {{- $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" }}
+    <script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}"></script>
+    {{- end }}
+    {{- end -}}
+
     {{/* Google analytics script. See config.toml to enable/disable this. */}}
     {{- if hugo.IsProduction | or (eq site.Params.env "production") }}
-    {{ template "_internal/google_analytics.html" . }}
+    {{/*  {{ template "_internal/google_analytics.html" . }}  */}}
     {{- end -}}
 
 </head>

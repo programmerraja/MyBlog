@@ -1,6 +1,7 @@
 +++
 title = 'Kubernetes'
 date  = 2024-01-01T08:19:32.3232+05:30
+tags  = ['kubernetes','devops']
 draft = false
 +++
 ### Kubernetes is two things

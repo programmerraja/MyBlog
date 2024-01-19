@@ -44,3 +44,15 @@ draft = false
     - Message 3: Timestamp 12:04:02
     
     When Message 3 arrives, it crosses the minute boundary of 12:04. This signals that all check-ins before 12:04 have been processed. This event becomes the trigger to generate tasks for detecting missing check-ins, eliminating the need for periodic celery beat tasks. This way, they avoid skipping tasks during deployment and accurately detect missed check-ins even during Kafka backlog scenarios.
+
+## [ An overview of Cloudflare's logging pipeline](https://blog.cloudflare.com/an-overview-of-cloudflares-logging-pipeline)
+
+- They used BSD syslog protocol to send the log from system
+
+-  [Syslog-ng ](https://github.com/syslog-ng/syslog-ng) is a daemon that implements the aforementioned BSD syslog protocol. In our case, it reads logs from journald, and applies another layer of rate limiting. It then applies rewriting rules to add common fields, such as the name of the machine that emitted the log, the name of the data center the machine is in
+
+- Logs are pushed to Kafka 
+
+- Logs stored in ELK stack, and a Clickhouse cluster
+	- ElasticSearch with 90 cluster 
+	- Clickhouse with 10 Nodes of cluster

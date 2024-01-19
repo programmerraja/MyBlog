@@ -25,10 +25,17 @@ enableEmoji = true
     weight = 50
 
   [[menu.main]]
-    pageRef="whoami"
-    name = 'Portfolio'
-    url = 'https://programmerraja.github.io/'
+    pageRef="search"
+    name = 'Search'
+    url = 'search/'
     weight = 50
+
+  [[menu.main]]
+    pageRef="tags"
+    name = 'Tags'
+    url = 'tags/'
+    weight = 50
+    
 
 [markup]
   [markup.highlight]
@@ -62,4 +69,5 @@ enableEmoji = true
     name = "Rss"
     url = "index.xml"
 
-
+[outputs]
+	home = ["HTML","RSS","JSON"]

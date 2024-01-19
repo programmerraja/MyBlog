@@ -32,6 +32,29 @@ Is the protocol used to communicate with server. it underling using TCP protocol
 |                               | Entity Headers (e.g., Content-Length)                     |
 | **(Empty line)**              |                                                          |
 | **Message Body**              | Request Body (for Request) / Response Body (for Response) |
+message consists of a start-line followed by a CRLF(carriage-return and linefeed) and a sequence of octets in a format similar to the Internet Message Format
+
+example
+```plaintext
+
+GET / HTTP/1.1 CRLFHost: google.comCRLFCRLF
+
+response would look like:
+
+HTTP/1.1 200 OK CRLFServer: googleCRLFContent-Length: 100CRLFtext/html; charset=UTF-8CRLFCRLF<100 bytes of data>
+
+will be decoded as
+
+Http/1.1 200 ok
+server:google
+Content-Length: 100
+charset=UTF-8
+<100 bytes of data>
+```
+
+because of this we cannot do multiplexed two request need to send in ordered and response need to be in ordered.
+
+If the client sends Request 1, Request 2, and then Request 3 over a single TCP connection, it will receive Response 1, Response 2, and then Response 3 in the same order.
 
 #### Methods of HTTP
 
@@ -85,6 +108,89 @@ Is the improvement of the http and have some key features like below
     
 6. **Connection Multiplexing:** HTTP/2 uses a single, multiplexed connection per origin.
 
+ **HTTP/2 frames** that have type, length, flags, stream identifier (ID) and payload. The stream ID makes it clear which bytes on the wire apply to which message, allowing safe multiplexing and concurrency. Streams are bidirectional. Clients send frames and servers reply with frames using the same ID.
+ 
+Client requests always use odd-numbered stream IDs, so subsequent requests would use stream IDs 3, 5, and so on. Responses can be served in any order, and frames from different streams can be interleaved.
+
+A server that is unable to establish a new stream identifier can send a **GOAWAY** frame so that the client is forced to open a new connection for new streams
+
+#### Format
+
+```
++-----------------------------------------------+
+|                 Frame Header                  |
++-----------------------------------------------+
+|                 Frame Payload                 |
++-----------------------------------------------+
+```
+
+**Frame Header:** Represents the common structure at the beginning of each frame. It includes fields such as:
+
+- Length: The length of the frame payload.
+
+- Type: The type of the frame (e.g., HEADERS, DATA, SETTINGS, etc.).
+
+	1. **HEADERS Frame (Type 0x1):**
+	    - Carries header fields for a particular stream.
+	    - Can be used for request or response headers.
+	2. **PRIORITY Frame (Type 0x2):**
+	    - Indicates the sender's priority weighting for a stream.
+	    - Helps in managing the order of processing streams.
+	3. **RST_STREAM Frame (Type 0x3):**
+	    - Indicates that a stream is being terminated or reset.
+	    - Includes an error code indicating the reason for termination.
+	    - this will send when we navigate to another page browser will send to free up resources in server that no need anymore
+	1. **SETTINGS Frame (Type 0x4):**
+	    - Used to communicate configuration settings for both the client and server.
+	    - Parameters include initial window size, maximum frame size, etc.
+	2. **PUSH_PROMISE Frame (Type 0x5):**
+	    - Sent by the server to initiate a server push.
+	    - Specifies a promised request and the associated stream identifier.
+	3. **PING Frame (Type 0x6):**
+	    - Used to measure a round-trip time between endpoints.
+	    - Primarily used as a keep-alive mechanism.
+	4. **GOAWAY Frame (Type 0x7):**
+	    - Sent by a server to indicate that further communication should not occur on a given connection.
+	    - Includes information about the last stream ID processed.
+	5. **WINDOW_UPDATE Frame (Type 0x8):**
+	    - Used to adjust the size of the flow-control window.
+	    - Can be sent by both the client and the server.
+	6. **CONTINUATION Frame (Type 0x9):**
+	    - Used to continue a sequence of header block fragments.
+	    - Allows header information to be spread across multiple frames.
+	7. **DATA Frame (Type 0x0):**
+	    - Used to carry the payload of an HTTP message, such as the content of a request or response body.
+	    - It can be associated with a specific stream.
+
+- Flags: Flags providing additional information about the frame.
+	 1. **END_STREAM (0x1):**
+	    - Indicates that the frame represents the end of a stream.
+	    - Applies to HEADERS, DATA, and CONTINUATION frames.
+	2. **END_HEADERS (0x4):**
+	    - Indicates that this frame contains the final chunk of a header set.
+	    - Applies to HEADERS, CONTINUATION, and PUSH_PROMISE frames.
+	3. **PADDED (0x8):**
+	    - Indicates that the frame is followed by padding.
+	    - The length of the padding is determined by the value of the Pad Length field in the frame.
+	4. **PRIORITY (0x20):**
+	    - Indicates that the frame includes stream priority information.
+	    - Applies to HEADERS, PUSH_PROMISE, and CONTINUATION frames.
+	5. **ACK (0x1):**
+	    - Indicates that the SETTINGS frame acknowledges the receipt and application of the peer's settings.
+	    - Applies to SETTINGS frames.
+- Stream Identifier: Identifies the stream to which the frame belongs.
+
+**Frame Payload:** Represents the specific content of the frame, which varies based on the frame type. For example:
+
+- For a HEADERS frame, the payload includes header information.
+- For a DATA frame, the payload includes the actual data being sent.
+
+ **Rapid resets leading to denial of service**
+
+The challenge occurs when a client rapidly cancels many requests in an HTTP/2 environment, and the server or intermediary (like a proxy) struggles to promptly handle these cancellations. This can result in a buildup of tasks, causing resource consumption issues, especially in scenarios where there's a delay in cleaning up in-process jobs.
+refere [here](https://blog.apnic.net/2024/01/11/http-2-rapid-reset-deconstructing-the-record-breaking-attack/) 
+#### HTTP3
+ It uses QUIC in transport layer 
 #### Security Header in HTTP
 
 1. **Content-Security-Policy (CSP):**
@@ -228,7 +334,6 @@ First browser check does the domain corresponding IP in local cache if so use if
 
 `Note:` The DNS first Query for the A Record if it exist it use the IP else it look for the CName for the domain which will have a another domain which have A Record that will hold the IP of the server
 
-
 #### DHCP
 
 Dynamic Host Configuration Protocol is used to dynamically assign IP addresses and other network configuration information to devices on a network.
@@ -257,7 +362,9 @@ tool for querying the Domain Name System to obtain the mapping between domain na
 - nslookup -type=AAAA mydomain.com -> will print only AAA record
 
 **Domain Information Groper command (DIG)**
+
 for Making DNS queries `dig example.com` , `dig NS com ` will print name server of the domain
+
 ## Transport Layer
 
 It is responsible for ensuring end-to-end communication and data transfer between applications. In this layer the data is divided into small small segements and also it control the flow of the data transfer ,detecting packet losses (via sequence numbers) and errors (via per-segment checksums), as well as correction via retransmission
@@ -334,9 +441,9 @@ TCP Peer A                                              TCP Peer B
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 |                    Acknowledgment Number                      |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|  Data |       |C|E|U|A|P|R|S|F|                               |
-| Offset| Rsrvd |W|C|R|C|S|S|Y|I|            Window             |
-|       |       |R|E|G|K|H|T|N|N|                               |
+|  Data |       |            |                                  |
+| Offset| Rsrvd |control bits|             Window               |
+|       |       |            |                                  |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 |           Checksum            |         Urgent Pointer        |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
@@ -348,6 +455,29 @@ TCP Peer A                                              TCP Peer B
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 ```
 
+
+**Control bits**
+
+The currently assigned control bits are CWR, ECE, URG, ACK, PSH, RST, SYN, and FIN.
+- CWR: Congestion Window Reduced
+- ECE: ECN-Echo
+- URG: Urgent pointer field is significant
+- ACK: Acknowledgment field is significant
+- RST: Reset the connection
+- SYN: Synchronize sequence numbers
+- FIN: No more data from sender.
+
+**Urgent Pointer** 
+
+is used to provide a way for the sender to inform the receiver that certain data in the segment is urgent and should be prioritized
+
+**Options**
+- **Maximum Segment Size (MSS)**  is used to indicate the maximum size of a TCP segment that the sender can receive.
+- **Window Scale:** allows the sender to advertise a larger window size than what can be represented in the standard 16-bit window field in the TCP header.
+- **Timestamps:** used to measure the round-trip time and calculate the RTT (Round-Trip Time) between the sender and receiver.
+- **Selective Acknowledgment (SACK):** allows a receiver to acknowledge out-of-order segments and gaps in the received data, providing more efficient error recovery and congestion control.
+- **No-Operation (NOP):** is used as a placeholder for padding and does not carry any useful information.
+- **Window Size:** is used to extend the window size field, providing a larger window for flow control. 
 #### How TCP do reliable data transfer service
 
 TCP sender uses timout to resend the segement if the recevier does not **ACK** the segement that send within the specific time period.
@@ -357,6 +487,23 @@ TCP sender uses timout to resend the segement if the recevier does not **ACK** t
 When the TCP connection receives bytes that are correct and in sequence, it places the data in the receive buffer. The associated application process will read data from this buffer.
 
 The **receive window** is used to give the sender an idea of how much free buffer space is available at the receiver.
+
+**TCP slow start**
+
+ Servers only send a few packets (typically 10) in the initial round-trip while TCP is warming up (referred to as TCP slow start). After sending the first set of packets, it needs to wait for the client to acknowledge it received all those packets. server make sure at air it won't go above 10 that does not recevie ACK.
+ 
+ The larger the initial window, the more we can transfer in the first roundtrip, the faster your site is on the initial page load. For a large roundtrip time .
+
+The only way to estimate the available capacity between the client and the server is to measure it by exchanging data, and this is precisely what slow-start is designed to do. To start, the server initializes a new congestion window (cwnd) variable per TCP connection and sets its initial value to a conservative, system-specified value (initcwnd on Linux).
+
+Congestion window size (cwnd)
+- Sender-side limit on the amount of data the sender can have in flight before receiving an acknowledgment (ACK) from the client.
+
+The maximum amount of data in flight for a new TCP connection is the minimum of the rwnd and cwnd values; hence a modern server can send up to ten network segments to the client, at which point it must stop and wait for an acknowledgment.
+
+Then, for every received ACK, the slow-start algorithm indicates that the server can increment its cwnd window size by one segment — for every ACKed packet, two new packets can be sent. This phase of the TCP connection is commonly known as the "exponential growth" algorithm.
+
+[Google](https://cloud.google.com/blog/products/networking/tcp-bbr-congestion-control-comes-to-gcp-your-internet-just-got-faster) introduced a new Algo for this which is called **BBR** (**B**ottleneck **B**andwidth and **R**ound-trip propagation time) which make YouTube network throughput by 4 percent on average globally
 
  **TCP Congestion Control**
  
@@ -396,7 +543,6 @@ No handshaking is required on UDP mostly it used for live streaming data
  +---------------- ...---------------+
 ```
 
-
 #### Tools
 
 **Netcat**
@@ -406,7 +552,6 @@ used to create TCP or UDP connections.
 - **nc -l port :** ->in listen mode to receive incoming connections.
 - **nc -l port > output_file:** (listen on the port and store the data to file)
 - **nc ip port < input_file:** send the file content to the host on port 
-
 
 **Tcpdump**
 
@@ -479,7 +624,38 @@ CIDR notation represents IP addresses using a format that combines the base IP a
 - Time: This field indicates the maximum time the datagram is allowed to remain in the internet system.The router that route the packet will decrease the Time if it became zero router will drop this helps to avoid packets get loops in router it will drop once it get 0.
 
 #### IPV6
+IPv6 increases the IP address size from 32 bits to 128 bits
 
+**IPv6 Header Format**
+
+```plaintext
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|Version| Traffic Class |           Flow Label                  |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|         Payload Length        |  Next Header  |   Hop Limit   |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                                                               |
++                                                               +
+|                                                               |
++                         Source Address                        +
+|                                                               |
++                                                               +
+|                                                               |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                                                               |
++                                                               +
+|                                                               |
++                      Destination Address                      +
+|                                                               |
++                                                               +
+|                                                               |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+```
+
+ - Version : 4-bit Internet Protocol version number = 6.
+ - Hop Limit : like TTL in IPV4 (Decremented by 1 by each node that forwards the packet.)
+ - Traffic Class : 
+ 
 #### ICMP
 #### Routing Protocol
 Routing protocols determine how your data gets to its destination it mainly classify in two types 
@@ -597,5 +773,17 @@ pending
 5. [Journey from request to response](https://medium.com/@felipemantillagomez/http-journey-from-request-to-response-7b122b8e74e9)
 6. [Visulaize how we reach the website using traceroute]([https://how-did-i-get-here.net/](https://how-did-i-get-here.net/))
 7. Computer networking A top down approach (best book)
+#### Advanced
+
+#### [Increase HTTP Performance by Fitting In the Initial TCP Slow Start Window](https://sirupsen.com/napkin/problem-15)
+-  How TCP slow start affect page load
+ - Try make the page size small as possible that can fit in 10 TCP segment roughly 12kb
+ -  Increase the  initial congestion window for the server by default for linux it has 10 . it will send 10 TCP segment parallely and it will wait for ACK for each one if it recevied it send next segment.
+#### [TCP Tuning for HTTP](https://datatracker.ietf.org/doc/html/draft-stenberg-httpbis-tcp)
+- List of methods to tunning TCP for HTTP 
 
 
+## Book
+1. [High Performance Browser Networking](https://hpbn.co/)
+	- Provides a hands-on overview of what every web developer needs to know about the various types of networks
+2. 
