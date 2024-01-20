@@ -353,6 +353,67 @@ Dynamic Host Configuration Protocol is used to dynamically assign IP addresses a
 
 Provides secure access to a remote device or server over a network, allowing for encrypted communication and command execution.
 
+#### WebRTC
+
+
+#### VoIP
+allows voice communication and multimedia sessions over the Internet.
+
+VoIP devices register with a VoIP server using a protocol like SIP (Session Initiation Protocol). SIP is responsible for establishing, modifying, and terminating real-time sessions.
+
+To connect with traditional phone networks, VoIP calls often go through an Internet Telephony Service Provider (ITSP). The ITSP serves as a gateway between the IP-based and traditional telephone networks.
+
+**protocols commonly used in VoIP**
+
+1. **SIP (Session Initiation Protocol):**
+    - SIP is a signaling protocol used for initiating, modifying, and terminating communication sessions. It's widely used for setting up and tearing down VoIP calls.
+2. **RTP (Real-Time Transport Protocol):**
+    - RTP is used for transmitting audio and video data in real-time over the internet. It works in conjunction with RTCP (Real-Time Control Protocol) for quality monitoring.
+3. **SDP (Session Description Protocol):**
+    - SDP is used to describe multimedia sessions for the purpose of session announcement, invitation, and other forms of initiation.
+4. **RTCP (Real-Time Control Protocol):**
+    - RTCP works alongside RTP to provide control information during a VoIP session, including statistics on packet loss, jitter, and round-trip delay.
+5. **UDP (User Datagram Protocol):**
+    - UDP is a transport protocol commonly used for carrying voice packets in VoIP due to its low-latency characteristics. It's also used for SIP signaling.
+6. **TCP (Transmission Control Protocol):**
+    - While less common for voice transmission due to its connection-oriented nature, TCP is used in certain scenarios for SIP signaling and situations where retransmission of lost packets is preferred over real-time delivery.
+7. **TLS (Transport Layer Security):**
+    - TLS is used to secure the signaling (SIP) and media streams in VoIP, ensuring the confidentiality and integrity of communications.
+8. **STUN (Session Traversal Utilities for NAT):**
+    - STUN is used to discover the presence of network address translators (NATs) and to obtain the public IP address and port of a VoIP client.
+9. **TURN (Traversal Using Relays around NAT):**
+    - TURN is used to relay media when direct peer-to-peer communication is not possible due to NAT or firewall traversal issues.
+10. **ICE (Interactive Connectivity Establishment):**
+    - ICE is a framework that leverages STUN and TURN to facilitate the establishment of peer-to-peer connections in the presence of NAT and firewalls.
+11. **MGCP (Media Gateway Control Protocol):**
+    - MGCP is a protocol used for controlling media gateways in VoIP networks, often used in conjunction with the more modern SIP and H.323.
+
+ **SIP Proxy Server**
+
+A SIP proxy receives and processes SIP requests from a redirect server or software.
+
+**Session Initiation Protocol (SIP)**
+
+ SIP is an application-layer control protocol that can establish,modify, and terminate multimedia sessions (conferences) such as calls.
+ 
+Responses are coded based on their message. Different preceding numbers in a three-digit sequence have different meanings.
+
+For example, **1xx** response codes mean the device received and is processing the message. Codes starting with **2xx** mean completion, **3xx** is used for redirections, **4xx** is for authentication errors, etc.
+
+The most common code is **200**, meaning the action was completed successfully without further details.
+
+A SIP registrar is similar to an address book. It associates the various users with the access points on the IP network where one can reach them.
+
+Most SIP addresses connect to a unique phone number
+
+ underlying media streams for audio and video calls typically use separate protocols, like RTP (Real-time Transport Protocol), which ensures timely delivery of media data.
+
+SIP URI 
+It has a similar form to an email address, typically containing a username and a host name.  In this case, it is sip:bob@biloxi.com, where biloxi.com is the domain of Bob's SIP service provider.
+
+**Codecs**
+
+A codec, which stands for **coder-decoder**, converts an audio signal into compressed digital form for transmission and then back into an uncompressed audio signal for replay. 
 #### Tools
 
 **Nslookup**
