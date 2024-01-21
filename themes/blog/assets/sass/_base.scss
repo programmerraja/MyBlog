@@ -6,6 +6,28 @@
   -o-transition: background-color 75ms ease-in, border-color 75ms ease-in;
   transition: background-color 75ms ease-in, border-color 75ms ease-in;
 }
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #b4b4b4 #919191;
+}
+
+*::-webkit-scrollbar {
+  width: 6px !important;
+  height: 6px !important;
+  display: block;
+}
+
+*::-webkit-scrollbar-track {
+  background:#e1e1e3;
+  border-radius: 6px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color:#e1e1e3;
+  border-radius: 6px;
+}
+
 :root{
   --gap: 24px;
   --content-gap: 20px;
@@ -37,6 +59,10 @@ code {
   max-width: calc(var(--main-width) + var(--gap) * 2);
   margin: auto;
   padding: var(--gap);
+
+  @include media-query($on-mobile) {
+    padding: 0;
+  }
 }
 
 body,

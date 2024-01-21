@@ -38,6 +38,9 @@ details {
 .toc .inner {
     margin: 0 20px;
     padding: 10px 20px;
+    @include media-query($on-mobile) {
+        padding: 0;
+    }
 }
 
 .toc li ul {

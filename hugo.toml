@@ -6,6 +6,8 @@ publishDir='public/blog'
 
 enableEmoji = true
 
+ignoreFiles = ["content/template","template","misc/*"]
+
 [params]
   toc = true # set to false to disable table of contents 'globally'
   tocOpen = false # set to true to open table of contents by default

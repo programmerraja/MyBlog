@@ -1,7 +1,7 @@
 +++
 title = 'Software Architecture and Decision-Making'
 date  = 2024-01-12T08:19:32.3232+05:30
-draft = false
+draft = true
 +++
 
 Books for leadership
