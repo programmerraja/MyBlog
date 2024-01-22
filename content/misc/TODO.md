@@ -1,2 +1,10 @@
 - [ ] Scroll UI change blog
-- [ ] 
+- [ ] PR extn
+- [ ] Interveiw helper revamp
+- [ ] ELK rajesh bro\
+- [ ] Caching DOc find deos caching helps
+- [ ] Write CI job to warn for the constant that not used more then 2 file
+- [ ] Obsidian code check and write js script convert canvas to img in console
+- [ ] Pick system around u stock app bank app and try to implement system desgian for that
+- [ ] No broker
+- [ ] finance

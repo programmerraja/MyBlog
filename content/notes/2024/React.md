@@ -7,7 +7,7 @@ draft = true
 
 ## Notes
 
-#### Context
+##### Context
 
 ```js
 function App() {
@@ -70,10 +70,65 @@ export const useMobile = () => {
 };
 
 ```
-- Don't have single context for width and mobile beacuse when ever the width change the component that only using mobile (`child2`) will also get re-render. this will applicable only if `Child2` is Mounted to DOM
-- When should I use Context?
+
+Don't have single context for width and mobile beacuse when ever the width change the component that only using mobile (`child2`) will also get re-render. this will applicable only if `Child2` is Mounted to DOM
+
+When should I use Context?
 	- Any time you have some value that you want to make accessible to a portion of your React component tree, without passing that value down as props through each level of components.
 
+## Forward Ref and useImperativeHandle
+
+Forward Ref are used pass ref from parent to child and useImperativeHandle is used to limit the ref functionality to the parent who passed or we can use this if we want to access child method on parent.
+
+
+```js
+import React, { forwardRef, useRef, useImperativeHandle } from 'react';
+
+// ChildComponent is a functional component that forwards its ref to the underlying DOM element.
+const ChildComponent = forwardRef((props, ref) => {
+  const inputRef = useRef();
+
+  // Expose the inputRef as part of the component's ref.
+  useImperativeHandle(ref, () => ({
+    focus: () => {
+	  //we can access the child all var if we want in parent
+      inputRef.current.focus();
+    },
+    getValue: () => {
+      return inputRef.current.value;
+    },
+  }));
+
+  return (
+    <input
+      type="text"
+      placeholder="Type something"
+      ref={inputRef}
+    />
+  );
+});
+
+// ParentComponent renders the ChildComponent and uses its ref.
+const ParentComponent = () => {
+  const childRef = useRef();
+
+  const handleButtonClick = () => {
+    // Accessing the forwarded ref methods.
+    console.log('Input Value:', childRef.current.getValue());
+    childRef.current.focus();
+  };
+
+  return (
+    <div>
+      <ChildComponent ref={childRef} />
+      <button onClick={handleButtonClick}>Focus Input</button>
+    </div>
+  );
+};
+
+export default ParentComponent;
+
+```
 ## Tips And Tricks
 
 - Don't return Null on a component which cause the component to unmount if you want mount again if it based on conditon use boolean it wil be not dispalayed in UI but will be avalible in V-DOM
@@ -87,6 +142,8 @@ export const useMobile = () => {
 - Toggle CSS instead of forcing a component to mount and unmount
 
 - Use virtualization for large lists
+
+- Whenever you have JSX repeating itself, extract the logic to a config object and loop through it.
 #### UseRef
 
 - use instead of useCallback 
@@ -174,8 +231,6 @@ return (
 </MobileContext.Provider>
 )
 }
-
-
 //if we using this provider 
 
 function ComponentThatChange() {
@@ -465,9 +520,6 @@ const SomeOutsideComponent = () => {
 [Simplifying React state management](https://causal.app/blog/re-re-reselect)
 - They use [re select](https://www.npmjs.com/package/re-reselect) npm pkg for manipulating data from different store
 
-Need to cover
-1. Forward ref
-2. useSyncExternalStore
 
 Advanced
 1. https://medium.com/the-guild/under-the-hood-of-reacts-hooks-system-eb59638c9dba How hooks works under the hood
@@ -475,6 +527,8 @@ Advanced
 
 Pkg
 1. [State mangement like context but re-render only when actual val change](https://github.com/dai-shi/react-tracked)
+2. [A collection of modern, server-safe React hooks](https://usehooks.com/)
+3. 
 
 
 
@@ -510,10 +564,13 @@ Note: `do not use Context for passing user actions between components Use compos
 
 Don’t import SVGs as JSX or directly in React
 
-Whenever you have JSX repeating itself, extract the logic to a config object and loop through it.
-
-Use composition instead of Context
 
 
 
-Render Props
+Need to look
+1. https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior/
+2. https://github.com/coryhouse/reactjsconsulting/issues/77 
+
+Need to cover
+1. Forward ref
+2. useSyncExternalStore
