@@ -5,7 +5,6 @@ tags  = ['docker','devops']
 draft = false
 +++
 
-
 ## Docker Engine
 
 When you install Docker, you get two major components:
@@ -77,6 +76,8 @@ manifest list contain entries for each architecture the image supports with same
 
 When we pull an image, your Docker client makes the relevant calls to the Docker Registry API running on Docker Hub. If a manifest list exists for the image, it will be parsed to see if an entry exists for Linux on ARM. If an ARM entry exists, the manifest for that image is retrieved and parsed for the crypto ID’s of the layers that make up the image. Each layer is then pulled from Docker Hub’s
 
+#### Args
+
 ## Containers
 A container is the runtime instance of an image. `docker container run image --name`
 
@@ -115,6 +116,26 @@ CMD ["node", "app.js"]
 - docker build -t app-image . 
 - docker run -p 3000:3000 -d app-image
 
+#### Memory & CPU Constraints
+
+- By default it take the host cpu and memory as much it need
+- `docker run —-memory 60m my-image:tag` 60Mb limit
+- Docker have OOM killer (out of memory killer) which is enabled by default what it do was when ever the container is getting out of memory it wil the process that consume more memory to disable the OOM `docker run -m 128m --oom-kill-disable my-image:tag`
+- **Swap:** Swap is an extension of physical memory (RAM) that allows the operating system to use a portion of the disk as if it were additional RAM. `docker run --memory=512m --memory-swap=1g my_container`
+- swap space is typically enabled by default. This means that the operating system may use swap space to store less frequently accessed data when the physical memory (RAM) is fully utilized.
+- If we set memory and swap same it won't use swap
+- `Note:` Swap may downgrad the performance of the host
+- `docker run --cpus .5 my-image:tag` can use only 50% of the CPU
+- `docker run —-cpuset-cpus 1,2 my-image:tag` allocate the 2nd and 3rd CPU
+
+#### Enviroment Var
+- `docker run -e VARIABLE_NAME=variable_value my_container` 
+- `docker inspect --format='{{range .Config.Env}}{{println .}}{{end}}' container_id` to inspect the environment variables of a running container.
+#### Logs
+- `docker logs [container_name_or_id]`
+-  `docker events —-since ‘5m’`
+- `docker logs -f my-container` follow logs
+- `docker run -D ` Run in debugging mode
 
 ## Networking
 Docker networking comprises three major components:
@@ -242,6 +263,16 @@ CMD ["nginx", "-g", "daemon off;"]
 
 
 `docker image history image name `→ to print all layers and how it was builded
+
+
+## Security
+
+#### Scanning for vulernablity
+- **Trivy:** Lightweight and easy to use.
+- **Clair:** Part of the CoreOS project, designed for container scanning.
+- **Dagda:** Extensive vulnerability scanner for Docker containers.
+- **Anchore:** Provides detailed analysis and policy enforcement.
+- `docker scan <image_name>:<tag>` part of Docker Hub and is designed to analyze Docker images for security vulnerabilities.
 
 ## Docker Compose
 It was a Python tool (v1) that sat on top of Docker, and allowed you to define entire multi-container apps in a single YAML file. now v3 written in GO

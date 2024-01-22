@@ -8,3 +8,5 @@
 - [ ] Pick system around u stock app bank app and try to implement system desgian for that
 - [ ] No broker
 - [ ] finance
+- [ ] BUy me coffe need to setup and comments
+- [ ] Read book twice which give more idea

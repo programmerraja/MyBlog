@@ -10,13 +10,17 @@ It explains principles and concepts I believe a senior architect must understand
 
 ## Books for leadership
 
-The Hard Things About Hard Things by Ben Horowitz, Trillion Dollar Coach by Eric Schmidt et al., Team of Teams: New Rules of Engagement for a Complex World by Stanley McChrystal, Good Strategy, Bad Strategy by Richard Rumel
+- The Hard Things About Hard Things by Ben Horowitz, 
+- Trillion Dollar Coach by Eric Schmidt et al., 
+- Team of Teams: 
+- New Rules of Engagement for a Complex World by Stanley McChrystal
+- Good Strategy, Bad Strategy by Richard Rumel
 
 Three layers of architecture of The Open Group Architecture Framework (TOGAF)
 
-two prominent approaches to system architecture:
-• Waterfall ->identify the system’s requirements in full detail beforehand and start building
-• Agile -> Iterative way (collaborating with users to refine requirements and construct a system that can genuinely benefit the user)
+**Two prominent approaches to system architecture:**
+1.  **Waterfall** ->identify the system’s requirements in full detail beforehand and start building
+2. **Agile** -> Iterative way (collaborating with users to refine requirements and construct a system that can genuinely benefit the user)
 
 ## Understanding Systems, Design, and Architecture
 
@@ -61,26 +65,26 @@ Eight mental models that help us think about and understand performance
 
 2. Operations Hierarchy
 
-| Operation                        | Time/Speed (Example)       | Description                                      |
-|----------------------------------|---------------------------|--------------------------------------------------|
-| L1 Cache Reference               | 0.5 ns                    | Accessing data from Level 1 cache in the CPU.    |
-| L2 Cache Reference               | 7 ns                      | Accessing data from Level 2 cache in the CPU.    |
-| L3 Cache Reference               | 20 ns                     | Accessing data from Level 3 cache in the CPU.    |
-| Main Memory (RAM) Access         | 100 ns                    | Retrieving data from the system's RAM.           |
-| SSD Storage Access               | 1,000,000 ns (1 ms)       | Accessing data from Solid State Drive (SSD).     |
-| HDD Storage Access               | 10,000,000 ns (10 ms)     | Accessing data from Hard Disk Drive (HDD).       |
+| Operation | Time/Speed (Example) | Description |
+| ---- | ---- | ---- |
+| L1 Cache Reference | 0.5 ns | Accessing data from Level 1 cache in the CPU. |
+| L2 Cache Reference | 7 ns | Accessing data from Level 2 cache in the CPU. |
+| L3 Cache Reference | 20 ns | Accessing data from Level 3 cache in the CPU. |
+| Main Memory (RAM) Access | 100 ns | Retrieving data from the system's RAM. |
+| SSD Storage Access | 1,000,000 ns (1 ms) | Accessing data from Solid State Drive (SSD). |
+| HDD Storage Access | 10,000,000 ns (10 ms) | Accessing data from Hard Disk Drive (HDD). |
 | Network Packet Round Trip (US to India) | 150,000,000 ns (150 ms) | Sending a packet from the US to India and receiving the acknowledgment. |
-| CPU Processing (Instruction)     | 0.2 ns per instruction    | Executing a single CPU instruction.              |
-| GPU Processing (Parallel)        | 50 ns per parallel task   | Executing parallel tasks on a Graphics Processing Unit (GPU). |
-| PCIe Data Transfer (Device to CPU) | 2,000 ns (2 us)         | Transferring data between a peripheral device and the CPU via PCIe. |
-| Context Switch (Kernel)           | 1,000 ns (1 us)           | Switching between different processes in the kernel. |
-| RAM-to-Cache Transfer            | 20 ns                     | Copying data from RAM to cache in the CPU.       |
-| Database Query (Local)           | 10,000,000 ns (10 ms)     | Executing a database query on a local server.   |
-| Database Query (Remote)          | 50,000,000 ns (50 ms)     | Executing a database query on a remote server.  |
-| System Call (Linux)              | 1,000 ns (1 us)           | Initiating a system call in a Linux environment.|
-| I/O Operation (Disk Write)       | 10,000 ns (10 us)         | Writing data to a disk.                         |
-| I/O Operation (Network Send)     | 1,000,000 ns (1 ms)       | Sending data over a network.                    |
-| I/O Operation (Network Receive)  | 1,000,000 ns (1 ms)       | Receiving data over a network.                  |
+| CPU Processing (Instruction) | 0.2 ns per instruction | Executing a single CPU instruction. |
+| GPU Processing (Parallel) | 50 ns per parallel task | Executing parallel tasks on a Graphics Processing Unit (GPU). |
+| PCIe Data Transfer (Device to CPU) | 2,000 ns (2 us) | Transferring data between a peripheral device and the CPU via PCIe. |
+| Context Switch (Kernel) | 1,000 ns (1 us) | Switching between different processes in the kernel. |
+| RAM-to-Cache Transfer | 20 ns | Copying data from RAM to cache in the CPU. |
+| Database Query (Local) | 10,000,000 ns (10 ms) | Executing a database query on a local server. |
+| Database Query (Remote) | 50,000,000 ns (50 ms) | Executing a database query on a remote server. |
+| System Call (Linux) | 1,000 ns (1 us) | Initiating a system call in a Linux environment. |
+| I/O Operation (Disk Write) | 10,000 ns (10 us) | Writing data to a disk. |
+| I/O Operation (Network Send) | 1,000,000 ns (1 ms) | Sending data over a network. |
+| I/O Operation (Network Receive) | 1,000,000 ns (1 ms) | Receiving data over a network. |
 
 3. Context Switching Overhead
 	- Switching processes adds an overhead cost of about 5–7 microseconds
@@ -291,5 +295,39 @@ Refer
 - Software bugs in both ours and borrowed code
 
 #### Handling Unexpected Load
+
 - understand the load and set up a system that can keep up with the load most of the time. This is called **capacity planning**
-- Autoscaling
+- **Autoscaling**
+- **Admission Control:** set of policies, procedures, and checks that regulate the admission or acceptance of incoming entities or requests into a system example: Assume server is already overloaded instead of accepting new connection we through error.
+- **Noncritical Functionality:** Turn off the Noncritical Functionality
+- Disaster recovery (have a plan for what to when X go down)
+
+#### Handling Human Changes
+- Blue and green Deployment  (Having two system one with new updated one and one with old one if new one fails redirect traffic to old one)
+- Canary deployments (small percentage of users to the new system and gradually increase the load to that system)
+
+#### Handle Unknown Errors
+- Observability (Application Performance Monitoring (APM) tool, Open telementry)
+
+## Building and Evolving the Systems
+
+- Get the Basics Right
+- Understand the Design Process
+- Conway law: organizations design systems that mirror their own communication structure rather than fighting it
+- Make Decisions and Absorb Risks
+- Create checklists of questions that are useful for different situations and use them.
+- Communicating the Design
+- Growth hacking funnel (find where we stuck does in user side or in development are we not pusing not much feature etc..)
+- 
+
+Refer
+- https://blog.thinkst.com/2022/08/always-be-hacking.html.
+
+Book
+- The Coaching Habit: Say Less, Ask More & Change the Way You Lead Forever
+- Hacking Growth: How Today’s Fastest-Growing Companies Drive Breakout Success
+- Design-Driven Growth: Strategy & Case Studies for Product Shapers
+
+
+## My Learnings
+- 
