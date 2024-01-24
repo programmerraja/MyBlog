@@ -20,8 +20,7 @@ draft = false
 ## Strategic vs. Tactical Programming
 
 #### Tactical programming
-In the tactical approach, your main focus is to get something working, such as a new 
-feature or a bug fix.
+In the tactical approach, your main focus is to get something working, such as a new feature or a bug fix.
 #### Strategic programming
 Strategic programming requires an investment mindset. Rather than
 taking the fastest path to finish your current project, you must invest time to
@@ -217,7 +216,7 @@ If the same piece of code (or code that is almost the same) appears over and ove
 
 **Special-General Mixture  (RED FLAG)**
 
-when a general-purpose mechanism also contains code specialized for a particular use of that mechanism. This makes themechanism more complicated and creates information leakage between the mechanism and the particular use case: future modifications to the use case are likely to require changes to the underlying mechanism as well.
+when a general-purpose mechanism also contains code specialized for a particular use of that mechanism. This makes the mechanism more complicated and creates information leakage between the mechanism and the particular use case: future modifications to the use case are likely to require changes to the underlying mechanism as well.
 
 #### Splitting and joining methods
 
@@ -256,6 +255,7 @@ Reducing the number of places where exceptions must be handled is exception mask
 `NOTE:` Exception masking doesn’t work in all situations, but it is a powerful tool in the situations where it works.
 
 #### Exception aggregation
+
 exception aggregation is to handle many exceptions with a single piece of code; rather than writing distinct handlers for many individual exceptions, handle them all in one place with a single handler.
 
 

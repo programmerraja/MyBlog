@@ -10,3 +10,4 @@
 - [ ] finance
 - [ ] BUy me coffe need to setup and comments
 - [ ] Read book twice which give more idea
+- [ ] Try to reveiw the old code and implement proper system design

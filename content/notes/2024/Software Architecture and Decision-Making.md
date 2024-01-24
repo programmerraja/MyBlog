@@ -48,7 +48,6 @@ Seven principles
 
 5. Make decisions and absorb the risks
 
-
 6. Design deeply things that are hard to change but implement them slowly
 
 7. Eliminate the unknowns and learn from the evidence by working on hard problems early and in parallel
