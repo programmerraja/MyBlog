@@ -93,3 +93,8 @@ B+ Trees store values only in leaf nodes all operations (inserting,updating, rem
 ## Resources
 1. [Discover and learn about **960** database management systems](https://dbdb.io/)
 2. [Knowledge Base of Relational and NoSQL Database Management Systems](https://db-engines.com/en/)
+
+
+Indepth
+1. https://medium.com/@hnasr/following-a-database-read-to-the-metal-a187541333c2
+2. https://medium.com/@hnasr/database-pages-a-deep-dive-38cdb2c79eb5

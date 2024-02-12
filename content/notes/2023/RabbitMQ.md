@@ -164,6 +164,16 @@ The main difference between nack (negative acknowledgement) and reject in Rabbit
 
 In summary, nack provides more flexibility by allowing you to explicitly control requeuing behavior (requeue or discard), whereas reject gives you the option to requeue the message based on the requeue parameter. Both methods can be used to handle message rejection and retry scenarios in RabbitMQ, depending on your specific requirements.
 
+Rabbitmq simulator tool to playaround with it
+## Internal
+
+Protocol : AMQP
+
+Blog 
+1. how does elrang does  scheduling
+
+
+
 
 
 ## Resources

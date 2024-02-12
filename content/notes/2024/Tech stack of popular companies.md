@@ -1,7 +1,7 @@
 +++
 title = 'Tech stack of popular companies'
 date  = 2024-01-12T08:19:32.3232+05:30
-draft = false
+draft = true
 +++
 
 ## Shopify’s
@@ -17,3 +17,9 @@ draft = false
 1. Azure front end for CDN
 ## Cloudfare
 1. Logging : ELK and Clickhouse
+## Discord
+1. Mongodb -> cassendara -> Sycalldb
+## Netflix
+1. AWS
+## instagram
+1. Rabbitmq

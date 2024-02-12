@@ -251,3 +251,16 @@ mark {
   color: #000;
   border-radius: 3px;
 }
+
+
+.bio{
+  display: flex;
+}
+.bio-img img{
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+}
+.bio-text{
+  padding:0 1rem;
+}

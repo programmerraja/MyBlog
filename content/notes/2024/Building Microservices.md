@@ -20,16 +20,18 @@ Before thinking as service try to see does the problem can solved by
 
 Cohesion 
  related behavior to sit together, and unrelated behavior to sit elsewhere. Why?
-Well, if we want to change behavior, we want to be able to change it in one place, and release that change as soon as possible. If we have to change that behavior in lots of different places, we’ll have to release lots of different services (perhaps at the same time) to deliver that change. Making changes in lots of different places is slower, and deploying lots of services at once is risky
+Well, if we want to change behavior, we want to be able to change it in one place, and release that change as soon as possible. If we have to change that behavior in lots of different places, we’ll have to release lots of different services  to deliver that change. Making changes in lots of different places is slower, and deploying lots of services at once is risky
 
 Bounded context
 - understand the bussiness well and user then only we can come up with bounded context
+- Bounded context decouple parts. parts are code and teams
+- Bounded context  are about enabling team autonomy AAA
 
 clue for discovering context
 - Linguistic boundaries (group the word that are smillar)
 - data flow owner ship
 - Domain expert boundaries
-- 
+-
 
 finding service boundaries the one rule that matters maximise your ability to frequently deliver and get feedback
 
@@ -41,6 +43,16 @@ book: theory of constraints,finding service boundaires,alingment at scale,scs-ar
 events stroming
 
 Need to study above chapter
+
+Ways to find bounded context
+ 
+ [Domain story telling](https://youtu.be/Y1ykXnl6r7s?si=3PYtb_ak-IQP63_4)
+ - Draw the story with character and arrow of data flow (try to group the things where the arrows going to single point )	
+
+[Event Stroming](https://youtu.be/mLXQIYEwK24?si=C-WZb2_IvQRCtu52)
+-  is a collaborative meeting technique for Domain-Driven Design. It enables cross-functional teams to rapidly explore and model complex business domains through _workshop meetings_. It is a visual and interactive process that encourages team members to collaborate and share their knowledge to uncover _domain events_ and identify _business rules_.
+
+https://medium.com/building-inventa/how-we-used-event-storming-meetings-for-enabling-software-domain-driven-design-401e5d708eb
 
 ## Integration
 
@@ -142,8 +154,23 @@ Algorithm for handling distributed transactions
 - Netfilx they instead of sync data from service A database they have backup for there data from the backup the create a pipeliine to gather the data
 
 
+## Deployment
+
+
+## Monitoring
+
+
+
 
 
 My understanding
 - It is more about code it helps to how to orignize the pepole in company and how to make continous pushing code and understand well users
 - imporve velocity of dev 
+
+
+
+
+
+Resources
+1. [The Art of Discovering Bounded Contexts by Nick Tune](https://www.youtube.com/watch?v=ez9GWESKG4I&t=982s)
+2. 

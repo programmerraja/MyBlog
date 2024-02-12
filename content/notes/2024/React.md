@@ -570,6 +570,8 @@ Don’t import SVGs as JSX or directly in React
 Need to look
 1. https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior/
 2. https://github.com/coryhouse/reactjsconsulting/issues/77 
+3. https://molefrog.com/notes/react-tricks
+4. https://overreacted.io/a-chain-reaction/
 
 Need to cover
 1. Forward ref

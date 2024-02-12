@@ -1,3 +1,8 @@
++++
+title = 'Tech stack of popular companies'
+date  = 2024-01-12T08:19:32.3232+05:30
+draft = true
++++
 
 
  problems in a distributed system 
@@ -9,3 +14,7 @@ solutions
 
 Gossip Protocol 
 every node periodically sends out a message to a subset of other random nodes. The entire system will receive the particular message eventually with a high probability. In layman’s terms, the gossip protocol is a technique for nodes to build a global map through limited local interactions
+
+
+
+Load balancer anycast

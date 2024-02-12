@@ -355,6 +355,17 @@ Provides secure access to a remote device or server over a network, allowing for
 
 #### WebRTC
 
+Peer to peer exchange video and audio 
+
+STUN (session traversal util for NAT)
+- A Server tell me my public ip address/port through NAT
+- The client want to know his public ip and port (the ip of router)
+- The clent will do STUN request to the STUN server where it send the response of the public ip and port
+
+TURN (traversal using relay around NAT)
+- 
+
+
 
 #### VoIP
 allows voice communication and multimedia sessions over the Internet.
@@ -738,6 +749,14 @@ Host communicate with router using MAC address and use **ARP**  protocol to find
 #### NAT 
 Network Address Translation allows multiple devices within a local network to share a single public IP address for communication with external networks,
 
+ISP uses NAT where some group of users comes under the same Router where it replace his IP when the request going out of internal.
+
+Types
+1. One to one (packet to external IP:port on the router always maps to internal ip:port )
+2. Address restricted NAT 
+3. Port restricted
+4. Symmentric
+
 #### Tools
 
 **Traceroute**
@@ -822,9 +841,7 @@ The RFC documents cover a wide range of topics, including protocols, procedures,
 Above Notes are mostly refered from RFC doc
 
 
-pending
-1. webrtc
-2. new protocol combine of tcp and udp (qwic)
+
 ## Resources
 
 1. [RFC Spec for SMTP](https://datatracker.ietf.org/doc/html/rfc5321) 

@@ -16,7 +16,20 @@ it's important to know when a component is volatile and ensure that we don't ma
 ##  Responsibility-Driven Design
 Start with a requirement (functional or non-functional), convert it into responsibilities, assign those to roles, then find the collaborations.
 
+## The 6 Stereotypes[](https://khalilstemmler.com/articles/object-oriented/design/object-stereotypes/#The-6-Stereotypes)
+
+1. **The Information Holder**
+2. **The Structurer**
+3. **The Service Provider**
+4. **The Coordinator**
+5. **The Controller**
+6. **The Interfacer**
 TODO
 1. https://khalilstemmler.com/letters/3-steps-to-solve-most-design-problems/
 2. https://khalilstemmler.com/articles/the-phases-of-craftship/code-first/
-3. 
+
+
+
+
+Blog for Software principles
+1. https://khalilstemmler.com/ 

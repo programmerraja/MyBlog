@@ -1,7 +1,6 @@
 - [ ] Scroll UI change blog
 - [ ] PR extn
 - [ ] Interveiw helper revamp
-- [ ] ELK rajesh bro\
 - [ ] Caching DOc find deos caching helps
 - [ ] Write CI job to warn for the constant that not used more then 2 file
 - [ ] Obsidian code check and write js script convert canvas to img in console
@@ -11,3 +10,7 @@
 - [ ] BUy me coffe need to setup and comments
 - [ ] Read book twice which give more idea
 - [ ] Try to reveiw the old code and implement proper system design
+- [ ]  how to get more follower tiwtter / linkdein
+- [ ] chrome tracing look for Garbage collector time in klenty
+- [ ] IRCT remainder app
+

@@ -40,18 +40,12 @@ Five questions and 7 Principles to understand the context of system we building
 Seven principles
 
 1. Drive everything from the user’s journey.
-
 2. Use an iterative thin slice strategy
       - Unless you have a specific reason, always start with simple architectural choices. Measure the system, find the bottlenecks, and improve the system later.
-
 4. On each iteration, add the most value for the least effort to support more users
-
 5. Make decisions and absorb the risks
-
 6. Design deeply things that are hard to change but implement them slowly
-
 7. Eliminate the unknowns and learn from the evidence by working on hard problems early and in parallel
-
 8. Understand the trade-offs between cohesion and flexibility in the software architecture
 
 
@@ -61,7 +55,6 @@ Eight mental models that help us think about and understand performance
 
 1. Cost of Switching to the Kernel Mode from the User Mode
 	- Every time anapplication enters kernel mode, a context switch occurs, which adds nonessential costs to the system, such as time to save the stack and to rest the cache. To improve performance, we need to reduce the number of system calls.
-
 2. Operations Hierarchy
 
 | Operation | Time/Speed (Example) | Description |
@@ -87,21 +80,16 @@ Eight mental models that help us think about and understand performance
 
 3. Context Switching Overhead
 	- Switching processes adds an overhead cost of about 5–7 microseconds
-
 4. Amdahl’s Law
 	- is used to predict speed up of a task execution time when it’s scaled to run on multiple processors. It simply states that the maximum speed up will be limited by the serial fraction of the task execution as it will create resource contention.
 	- `one woman nine months to make one baby, “nine women can’t make a baby in one month`
 	- Assume if have 3 thread that doing a single task  it take 2 sec but the most of the time will spend on maintining the 3 thread and resources sharing
-	- Parellel process are efficient when they are independt
-
+	- Parellel process are efficient when they are independ
 5. Universal Scalability Law
 	- says that actual speedup is even worse than Amdahl’s law due to shared variables. USL defines a new parameter coherency, which is the overhead added by communication between multiple processes, threads, or nodes.
-
 6. Latency and Utilization Trade-offs
 	 - Only a single thread can use the most resources at a given time, which forces threads to wait and take turns
-
 7. Designing for Throughput with the Maximal Useful  Utilization (MUU) Model
-
 8. Adding Latency Limits
 
 #### Optimization Techniques
@@ -110,9 +98,7 @@ To optimize, we need to decide where the bottlenecks are. Bottlenecks usually co
 
 - One of the resources (e.g., CPU, I/O, or memory) is the
 bottleneck.
-
 - Thread models are causing critical resources to be idle.
-
 - Resources are wasted on nonessential tasks (e.g., context
 switches, GC).
 
@@ -132,11 +118,26 @@ switches, GC).
 - Do Work in Parallel
 - Reduce I/O
 
+#### CPU Utilization is Wrong 
+
+- CPU utilization is a metric that measures the percentage of time the CPU spends executing non-idle tasks. It doesn't necessarily mean the CPU is busy with computation; it's more about the time the CPU is not running the idle thread.
+- The idle thread is a special task that runs when the CPU has no other tasks to perform. The operating system kernel tracks CPU utilization during context switches.
+- So  high %CPU to mean that the processing unit is the bottleneck, which is wrong because CPU is capable of doing the process it may wait for I/O or something .
+- `Source: https://opensource.com/article/18/4/cpu-utilization-wrong`
+
+####  The USE Method
+
+The Utilization Saturation and Errors (USE) Method is a methodology for analyzing the performance of any system
+
+`For every resource, check utilization, saturation, and errors.`
+- **resource**: all physical server functional components (CPUs, disks, busses, ...) 
+- **utilization**: the average time that the resource was busy servicing work 
+- **saturation**: the degree to which the resource has extra work which it can't service, often queued
+- **errors**: the count of error events
 Refer
 1. https://fs.blog/mental-models/ 
 2. http://highscalability.com/blog/2012/5/16/big-list-of-20-common-bottlenecks.html
 3. https://opensource.com/article/18/4/cpu-utilization-wrong
-4. http://www.cs.cornell.edu/projects/ladis2009/talks/dean-keynote-ladis2009.pdf
 5. https://en.wikipedia.org/wiki/Queueing_theory
 6. https://www.brendangregg.com/usemethod.html [bottleneck]
 7. https://medium.freecodecamp.org/what-makes-apache-kafka-so-fast-a8d4f94ab145
@@ -159,8 +160,9 @@ Few concepts or principles that help us to design a good UX.
 
 ## Macro Architecture
 
-Spliting for serivce is macro Architecture
-Macro Architectural Building Blocks
+Spliting for serivce is macro Architecture.
+
+Macro Architectural Building Blocks are
 - Data Management  (DB,)
 - Routers and Messaging (API Gateway,loadbalancer,message broker)
 - Executors (Actual server)
@@ -317,7 +319,7 @@ Refer
 - Create checklists of questions that are useful for different situations and use them.
 - Communicating the Design
 - Growth hacking funnel (find where we stuck does in user side or in development are we not pusing not much feature etc..)
-- 
+
 
 Refer
 - https://blog.thinkst.com/2022/08/always-be-hacking.html.

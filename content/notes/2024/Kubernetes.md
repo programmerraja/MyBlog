@@ -112,6 +112,7 @@ Types
 - Cluster  (add more nodes when then cluster is full)
 - Horizontal pod autoscale (scale up pod up and down based on metrics)
 - Vertical pod autoscale (increase the resoures limit tool avalible for vertical pod autoscaler)
+- keda (event driven autoscalling)
 
 **Horizontal Pod Autoscaling (HPA):**
 
@@ -176,6 +177,46 @@ For example, a Deployment is a higher-level Kubernetes object that wraps around 
 
 Behind the scenes, Deployments, DaemonSets and StatefulSets implement a controller and a watch loop that is constantly observing the cluster making sure that current state matches desired state.
 
+#### Depolyment strategies
+
+to manage the rollout and updates of applications within a cluster. These strategies help in achieving continuous delivery, minimizing downtime, and ensuring reliability.
+
+**Rolling Update Deployment (default)** 
+- This strategy gradually replaces old pods with new ones, ensuring that there is always a specified number of replicas available.
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: example-deployment
+spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1 
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: example
+    spec:
+      containers:
+      - name: example-container
+        image: example:new-version
+
+```
+- maxUnavailable -> maximum number or percentage of pods that can be unavailable during the update
+- maxSurge -> maximum number or percentage of pods that can be created above the desired replica count during the update
+
+**Recreate Deployment:**
+- In this strategy, the existing pods are terminated all at once, and new pods with the updated version are created.
+- have down time (used on dev )
+
+**Blue-Green Deployment:**
+- there are two separate environments (blue and green), and the traffic is switched between them after a successful update.
+
+**Canary Deployment:**
+- deployment introduces the new version of the application to a subset of users or traffic.
 #### Difference between pod and Deployments
 
 Pods don’t self-heal, they don’t scale, and they don’t allow for easy updates or rollbacks. Deployments do all of these. As a result, you’ll almost always deploy Pods via a Deployment controller.
@@ -768,6 +809,12 @@ spec:
 
 More Example [refer here](https://kubernetes.io/docs/tutorials/stateful-application/)
 
+
+
+#### AutoScale
+
+
+
 ### Kubectl
 
 Kubectl is the main Kubernetes command-line tool and is what you will use for your day-to-day Kubernetes management activities.
@@ -783,6 +830,47 @@ kubectl configuration file is called config and lives in $HOME/.kube . It contai
 
 **Contexts** bring together clusters and users under a friendly name. For example, you might have a context called deploy-prod that combines the deploy user credentials with the prod cluster definition. If you use kubectl with this context you will be POSTing commands to the API server of the prod cluster as the deploy user.
 
+`kubctl version` -> to get version
+
+kube config file
+
+```yaml
+apiVersion: v1
+clusters:
+- cluster:
+	certificate-authority-data: ""
+	server: https:/localhost:443 ## master node
+  name: test 
+contexts:
+- context:
+	 cluster: test
+	 user: clusterUser_test_aks_rg_test
+ name: test
+current-context: test ## Curren 
+kind: Config
+preferences: {}
+users:
+	- name: clusterUser_test_aks_rg_test
+user:
+	client-certificate-data: ''
+	client-key-data: ''
+	token: ''
+```
+
+- `kubectl config current-context`- tell which context we are accessing currently now
+- `kubectl config get-context`  -> to get all context
+- `kubectl config use-context context-name` -> to switch the context to different cluster
+
+#### Namespaces
+ 
+ Used to isolate the resources by default it have `default` namespace 
+
+`kubctl get namespace` 
+`kubctl -n nampace_name cmd`
+
+`kubectl logs podname`
+
+`kubctl exec it podname`
 
 ### best practices
 
