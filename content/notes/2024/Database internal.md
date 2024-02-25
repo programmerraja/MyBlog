@@ -79,10 +79,16 @@ B+ Trees store values only in leaf nodes all operations (inserting,updating, rem
 
 
 
+## LSM tree
+![[Pasted image 20240218142044.png]]
 
+#### Write
+1. First it writes in WAL log and appended to an in-memory component known as the memtable.when  Mem-table became full, an Immutable MemTable was created, and a new Mem-table became empty.
+2. When Immutable Memtable is full, a FLUSH happens, dumping the “balanced tree in RAM” into a disk, called SSTable. which contains sorted values plus an index.
+3. SSTables are immutable, meaning once written, they are not modified. Any updates or deletes are handled by writing new SSTables with the modified data.Compaction is the process of merging and removing obsolete SSTables to reduce storage space and improve read performance.
 
-
-
+#### Bloom Filters
+- LSM trees often use Bloom filters to quickly check whether a key is present in the SSTables. Bloom filters are space-efficient data structures that provide a probabilistic answer to membership queries.
 
 
 
