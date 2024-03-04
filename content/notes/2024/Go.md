@@ -140,3 +140,10 @@ for i,id := range ids {
 for k,v := range map { }
 
 ```
+
+
+
+## others 
+
+
+Split your application into **components** written as regular Go interfaces. Don't fuss with any networking or serialization code. Focus on your business logic. (https://serviceweaver.dev/)

@@ -23,3 +23,7 @@ draft = true
 1. AWS
 ## instagram
 1. Rabbitmq
+
+## Apple
+1. ICloud
+	1. iCloud is partly powered by Cassandra. Apple runs one of the largest Cassandra deployments in the world, [according to DataStax](https://news.ycombinator.com/item?id=9307563).

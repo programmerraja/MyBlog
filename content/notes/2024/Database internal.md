@@ -104,3 +104,21 @@ B+ Trees store values only in leaf nodes all operations (inserting,updating, rem
 Indepth
 1. https://medium.com/@hnasr/following-a-database-read-to-the-metal-a187541333c2
 2. https://medium.com/@hnasr/database-pages-a-deep-dive-38cdb2c79eb5
+
+ 
+ 
+ 
+ [How to beat CAP theorm](https://archive.is/sDxQg)
+ 
+To overcoming the CAP theorem in building data systems. It proposes a solution that involves using immutable data, rejecting incremental updates, and recomputing queries from scratch each time. This approach eliminates the complexities associated with eventual consistency.
+
+The key properties of the proposed system include:
+	1. Easy storage and scaling of an immutable, constantly growing dataset.
+	2. Primary write operation involving adding new immutable facts of data.
+	3. Recomputation of queries from raw data, avoiding the CAP theorem complexities.
+	4. Use of incremental algorithms to lower query latency to an acceptable level.
+	
+The workflow involves storing data in flat files on HDFS, adding new data by appending files, and precomputing queries using MapReduce. The results are indexed for quick access by applications using databases like ElephantDB and Voldemort, which specialize in exporting key/value data from Hadoop for fast querying. These databases support batch writes and random reads, avoiding the complexities associated with random writes, leading to simplicity and robustness.
+
+Global secondar index
+Used in distributed shared database where the indexing is in global so when ever request go to the DB proxy that is infront of sharded DB it will do the query on GSI to get the doc shard database ref such that we don't want to query on all shard.**

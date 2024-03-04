@@ -56,3 +56,21 @@ draft = false
 - Logs stored in ELK stack, and a Clickhouse cluster
 	- ElasticSearch with 90 cluster 
 	- Clickhouse with 10 Nodes of cluster
+
+
+## https://roughlywritten.substack.com/p/a-simple-technique-for-more-reliable
+
+- Find the core service our app and list the things
+- List *how* something could fail, not *why* something could fail.
+- For each failure case, reason through a fix (Automated recovery,Manual recovery)
+- Prioritize and execute
+
+
+
+Two data processing architectures that are extremely popular in the industry are the **Lambda architecture** and the **Kappa architecture**.
+
+https://read.engineerscodex.com/p/how-apple-built-icloud-to-store-billions
+
+1. Apple uses [FoundationDB](https://www.foundationdb.org/) (apple bought this) and Cassandra
+
+##  DoorDash Uses Service Mesh and Cell-Based Architecture to Significantly Reduce Data Transfer Costs

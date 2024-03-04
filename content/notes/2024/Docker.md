@@ -1,4 +1,4 @@
-+++
+[]()+++
 title = 'Docker Notes'
 date  = 2024-01-15T08:19:32.3232+05:30
 tags  = ['docker','devops']
@@ -351,3 +351,13 @@ RUN apt-get install
 
 ## Tools
 - [A Docker + Kubernetes network trouble-shooting swiss-army container](https://github.com/nicolaka/netshoot)
+
+## internal 
+-  Cgroups, namespaces, and beyond: what are containers made from? By Jérôme Petazzoni - [https://youtube.com/watch?v=sK5i-N34im8…](https://t.co/6hJyVqYHGA) Watch: Containers From Scratch by
+- [https://youtube.com/watch?v=oSlheqvaRso…](https://t.co/KG4UWJbROE) Watch: Rootless Containers from Scratch by
+- [https://youtube.com/watch?v=jeTKgAEyhsA…](https://t.co/6TANRehH6u) Code: Build your own Docker at
+- [https://app.codecrafters.io/join?via=JohnCrickett…](https://t.co/wWWJGAH4mO) Watch: Build your own Container Runtime with chroot by Adam Gordon Bell - 
+- [https://youtu.be/89ESCBzM-3Q?si=D6S3V1cyJ1K_QKO4…](https://t.co/BR2y3MnNyC) and another version of the same presentation - [https://youtube.com/watch?v=JOsWB50LmwQ…](https://t.co/ELxy4PWRNG) 
+- Watch: Building Containers From Scratch by Vinesh Agrawal - [https://youtube.com/watch?v=GFUpXhft8zA…](https://t.co/G8eLXeoMZG) 
+- Code: Linux namespace Golang experiments by Songrong Jiang - [https://github.com/songrgg/namespace-demo…](https://t.co/j6jdIC9iYX) 
+- Read: Building a Container in Go - [https://infoq.com/articles/build-a-container-golang/…](https://t.co/8Mo122PK0n)

@@ -234,6 +234,18 @@ is a secure version of HTTP.
 
 - The browser sends its own `Finished` message, confirming the completion of the handshake.
 
+### SSL flow
+-  The client sends a ClientHello message to which the server must respond with a ServerHello message, or else a fatal error will occur and the connection will fail.  The ClientHello and ServerHello are used to establish security enhancement capabilities between client and server.
+-  The ClientHello and ServerHello establish the following attributes: `Protocol Version, Session ID, Cipher Suite, and Compression Method.  Additionally, two random values are generated and exchanged: ClientHello.random and ServerHello.random.`
+- Following the hello messages, the server will send its certificate in a Certificate message if it is to be authenticated.
+- Client vaildate the certificate and use the server public key to encyrpt the content such as session key and initiate the session 
+	Note : session key (which is symmentric key used to decrypt and encrypt the msg after TLS handshake done. symmentric is used because it is faster then asymmentric)
+- After server recevie the session key and it ack .
+-
+Resource
+- https://www.linuxbabe.com/security/ssltls-handshake-process-explained-with-wireshark-screenshot
+
+
  **What is Server Certificate**
  
 The server sends its digital certificate to the client. The certificate contains:

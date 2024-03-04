@@ -40,7 +40,7 @@ API gateway
 2. TAG (Tinder API Gateway)
 3. Krakend
 
-james lewis head ->microservice 
+james lewis head ->microservice []()
 
 Antipatterns
 
@@ -49,5 +49,6 @@ ways to find bounded context
  
  Domain story telling
  - A pictorial represnetation of the domain story
+
 
 
