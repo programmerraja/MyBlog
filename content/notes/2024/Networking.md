@@ -245,6 +245,16 @@ is a secure version of HTTP.
 Resource
 - https://www.linuxbabe.com/security/ssltls-handshake-process-explained-with-wireshark-screenshot
 
+#### Sever private key vs SSL session Key
+
+ **Server Private Key:**
+    - **Purpose:** The server's private key is a crucial component in the SSL/TLS handshake process. It is used for asymmetric encryption and decryption during the initial phase of establishing a secure connection.
+    - **Usage:** The server's private key is used by the server to decrypt the symmetric session key sent by the client during the handshake. It is kept confidential and is used for securing the key exchange process.
+    - **Lifetime:** The server's private key has a long lifespan and is associated with the SSL/TLS certificate, often valid for a year or more.
+**SSL/TLS Session Keys:**
+    - **Purpose:** Session keys are symmetric encryption keys that are generated uniquely for each SSL/TLS session. They are used for encrypting and decrypting the actual data being transmitted between the client and the server.
+    - **Usage:** Once the initial handshake is complete and the symmetric session key is agreed upon during the key exchange phase, the subsequent data transfer uses symmetric encryption. This is more efficient than asymmetric encryption and provides confidentiality for the transmitted data.
+    - **Lifetime:** Session keys are short-lived and are typically used for the duration of a single session. Perfect Forward Secrecy (PFS) mechanisms ensure that even if the server's private key is compromised in the future, previously captured encrypted sessions cannot be decrypted.
 
  **What is Server Certificate**
  

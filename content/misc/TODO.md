@@ -1,4 +1,4 @@
-- [ ] Scroll UI change blog
+
 - [ ] PR extn
 - [ ] Interveiw helper revamp
 - [ ] Caching DOc find deos caching helps
@@ -14,3 +14,16 @@
 - [ ] chrome tracing look for Garbage collector time in klenty
 - [ ] IRCT remainder app
 
+
+Personal
+1. NO broker
+2. Blog
+3. BUy me coffe need to setup and comments
+4. Read book twice which give more idea
+5.  IRCT remainder app
+
+
+office
+1. PR extn
+2. Interveiw helper revamp
+3. 

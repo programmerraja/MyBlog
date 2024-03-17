@@ -1,4 +1,4 @@
-[]()+++
++++
 title = 'Docker Notes'
 date  = 2024-01-15T08:19:32.3232+05:30
 tags  = ['docker','devops']
@@ -351,6 +351,7 @@ RUN apt-get install
 
 ## Tools
 - [A Docker + Kubernetes network trouble-shooting swiss-army container](https://github.com/nicolaka/netshoot)
+- https://github.com/serversideup/spin [Replicate your production environment locally using Docker.]
 
 ## internal 
 -  Cgroups, namespaces, and beyond: what are containers made from? By Jérôme Petazzoni - [https://youtube.com/watch?v=sK5i-N34im8…](https://t.co/6hJyVqYHGA) Watch: Containers From Scratch by

@@ -19,3 +19,14 @@ air crack ng airodump ng  -> capture the password send by other device and try t
 deauth -> make already connected one to disconnect and listen for the password
 
 cewl ,pipal ->  tool to guess password from there website and so on 
+
+
+Burpsuite toutorial
+1. https://hacklido.com/blog/628-burpsuite-101-exploring-burp-repeater-and-burp-comparer
+
+
+#### Reverse shell
+- [Revershell generator](https://www.revshells.com/) 
+- [Fancy reverse and bind shell handler](https://github.com/calebstewart/pwncat)
+- 
+- 

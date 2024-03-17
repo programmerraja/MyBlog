@@ -63,7 +63,7 @@ The first step (Stage 0) is to create a Facade that intercepts requests to the b
 
 ##  Cell-Based Architecture
 
-A cell-based architecture comes from the concept of a
+A cell-based architecture comes from the concept of a Bulkhead pattern. it simllar to that it was used on[ AWS cloud.](https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/what-is-a-cell-based-architecture.html) 
 
 Bulkhead pattern
 -  In a bulkhead architecture, elements of an application are isolated into pools so that if one fails, the others will continue to function.

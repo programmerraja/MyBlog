@@ -7,8 +7,11 @@ draft = false
 ### Kubernetes is two things
   - A cluster for running applications
   - An orchestrator of cloud-native microservices apps
+  
 
 ### Kubernetes cluster
+
+![[Pasted image 20240312073714.png]]
 
 A Kubernetes cluster contains six main components:
 
@@ -133,6 +136,17 @@ spec:
     resource:
       name: cpu
       targetAverageUtilization: 50
+
+
+# this will scale the pod based on no of request
+metrics:  
+- type: Pods  
+pods:  
+metric:  
+name: http_requests  
+target:  
+type: AverageValue  
+averageValue: 1000
 ```
 ### ReplicaSet
 
@@ -364,7 +378,7 @@ when we run `kubctl apply -f name.yml`
 - Next **Kubelet** get notified for actually creating and managing the containers within Pods
 - Once **Kubelet** run the pod sucessfully it update the status on **etcd**.
 ### Probe
-1. **Liveness Probe** indicates if the container is operating. If so, no action is taken. If not, the kubelet kills and restarts the container.
+1. **Liveness Probe** indicates if the container is operating. If so, no action is taken. If not, the kubelet kills and restarts the container. Liveness probes are used to tell kubernetes to restart a container. If the liveness probe fails, the application will restart. This can be used to catch issues such as a deadlock and make your application more available.
 2. **Readiness Probe** indicates whether the application running in the container is ready to accept requests. If so, Services matching the pod are allowed to send traffic to it. If not, the endpoints controller removes the pod from all matching Kubernetes Services.`Note:`**If you don't set the readiness probe, the kubelet assumes that the app is ready to receive traffic as soon as the container starts. If the container takes 2 minutes to start, all the requests to it will fail for those 2 minutes.**
 3. **Startup Probe** indicates whether the application running in the container has started. If so, other probes start functioning. If not, the kubelet kills and restarts the container.
 
@@ -373,6 +387,17 @@ when we run `kubctl apply -f name.yml`
   httpGet:
 	path: /ready
 	port: 80
+	httpHeaders:  
+		name: X-Custom-Header  
+		value: "CustomValue"
+
+#we can give as exec like below
+livenessProbe:  
+  exec:  
+	command:  
+	- sh  
+	- -c  
+	- "nc -z localhost 5432 || exit 1"
 ```
 
 
@@ -912,6 +937,7 @@ Need to study
 12. [Demystifying container networking](https://blog.mbrt.dev/posts/container-network/)
 13. [Handling Client Requests Properly with Kubernetes](https://freecontent.manning.com/handling-client-requests-properly-with-kubernetes/ "Handling Client Requests Properly with Kubernetes")
 14. [production-best-practices](https://learnk8s.io/production-best-practices)
+15. https://overcast.blog/11-kubernetes-deployment-configs-you-should-know-in-2024-1126740926f0
 
 ## Internal Resources
 - [Collection of resources for inner workings of Kubernetes](https://github.com/shubheksha/kubernetes-internals )
@@ -921,3 +947,11 @@ Need to study
 
 1. [To cut down the cost of kubernetes](https://cast.ai/)
 2. **[The first cloud native service provider powered only by Kubernetes](https://www.civo.com/)**
+
+#### Tools
+1. https://k9scli.io/ [Kubectl alternative]
+2. https://monokle.io/ [Monokle's integrated open-source tools and cloud platform make it easy to define, manage, and enforce Kubernetes YAML configuration policies in minutes]
+
+
+
+
