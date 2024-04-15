@@ -68,7 +68,26 @@ A cell-based architecture comes from the concept of a Bulkhead pattern. it simll
 Bulkhead pattern
 -  In a bulkhead architecture, elements of an application are isolated into pools so that if one fails, the others will continue to function.
 
+## Request Coalescing
+
+Request coalescing is a strategy used in web servers to streamline data processing by consolidating multiple similar requests into a single request, optimizing resource utilization, and improving response times.
+1. [resources](https://medium.com/@atarax/request-coalescing-a-shield-against-traffic-spikes-implementation-in-go-8d6cb3258630)
 
 
 Resources
 1. https://read.engineerscodex.com/p/meta-xfaas-serverless-functions-explained 
+
+
+
+How uber implements caching
+
+They have build own database top of SQL called docstore in that query engine they have introduced caching layer. 
+
+This caching layer is built on top of Redis and uses a _cache-aside_ strategy.
+So first it check cache and pick data from there
+
+**Cache Invalidation**
+- They add TTL 5 min and use CDC (change data capture) based on the MySQL binlog. Whenever there’s a data update, Uber will take the change (_and its associated timestamp_) and check if there should be any modification to a cached value in Redis.
+
+**Circuit Breakers**
+implement a circuit breaker that will cut off requests to Redis nodes with a high error rate. in redis

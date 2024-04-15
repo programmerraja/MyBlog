@@ -142,6 +142,7 @@ We have two options one we make sure the transactions happen on different servic
 
 Algorithm for handling distributed transactions
 - two-phase commit
+- use idopempotency and retry mechanism if one action failed
 
 **Grouping data from different service**
 
@@ -155,6 +156,10 @@ Algorithm for handling distributed transactions
 
 
 ## Deployment
+- one microservice per build
+- Countinous deployment
+- Our services need some configuration. Ideally, this should be a small amount, and limited to those features that change from one environment to another.Try to make ENV differenec for the service need to be minimal that will helpful when deploying in CI
+- Single Service Per Host
 
 
 ## Monitoring

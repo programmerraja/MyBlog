@@ -862,8 +862,18 @@ The RFC documents cover a wide range of topics, including protocols, procedures,
 
 Above Notes are mostly refered from RFC doc
 
+## Networking security
 
+#### Integrity
 
+Hashing Algo -> give same value if we do hashing
+1. MD5
+2. SHA-1
+
+HMAC -> hashing with private key (where private key is used to verify the data is not changed)
+
+DHCP starvation ,DHCP spoofing
+IP spoofingk
 ## Resources
 
 1. [RFC Spec for SMTP](https://datatracker.ietf.org/doc/html/rfc5321) 
@@ -886,4 +896,33 @@ Above Notes are mostly refered from RFC doc
 ## Book
 1. [High Performance Browser Networking](https://hpbn.co/)
 	- Provides a hands-on overview of what every web developer needs to know about the various types of networks
-2. 
+
+
+
+
+
+
+GRPC
+- use HTTP/2 and Protocol buffer
+- modes 
+	- unary 
+	- server streaming
+	- client  streaming
+	- bidirectional
+
+Protocol buffer
+- Protocol Buffers (protobuf) is a method developed by Google for serializing structured data
+```proto
+syntax = "proto3" //telling the prototcol buffer version
+
+message Employee {
+ int32 id=1;// Field 1
+ string name =2;
+ float salary = 3;
+}
+
+message Employess {
+	repeated Employee employees = 1 //Array of employee
+}
+```
+- Once you define your message types in a `.proto` file, you use the Protocol Buffers compiler (`protoc`) to generate source code in the language of your choice (e.g., C++, Java, Python). This generated code includes classes or structs for working with your defined message types in your chosen programming language.

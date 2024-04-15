@@ -8,3 +8,4 @@ tags =[]
 
 ## Cell-Based Architecture
 https://newsletter.systemdesign.one/p/cell-based-architecture
+https://slack.engineering/slacks-migration-to-a-cellular-architecture/

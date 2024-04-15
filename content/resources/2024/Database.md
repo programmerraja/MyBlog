@@ -7,6 +7,7 @@ tags =[]
 
 ## Tool
 1. [Database strees testing tool](https://github.com/adaptive-scale/dbchaos)
+2. https://www.uber.com/en-IN/blog/schemaless-sql-database
 
 
 

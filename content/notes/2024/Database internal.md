@@ -122,3 +122,7 @@ The workflow involves storing data in flat files on HDFS, adding new data by app
 
 Global secondar index
 Used in distributed shared database where the indexing is in global so when ever request go to the DB proxy that is infront of sharded DB it will do the query on GSI to get the doc shard database ref such that we don't want to query on all shard.**
+
+
+## Resources
+1. https://medium.com/@hnasr/following-a-database-read-to-the-metal-a187541333c2

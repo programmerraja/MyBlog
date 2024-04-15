@@ -13,17 +13,17 @@
 - [ ]  how to get more follower tiwtter / linkdein
 - [ ] chrome tracing look for Garbage collector time in klenty
 - [ ] IRCT remainder app
+- [ ] Extenst
 
 
 Personal
-1. NO broker
-2. Blog
-3. BUy me coffe need to setup and comments
+
 4. Read book twice which give more idea
-5.  IRCT remainder app
+
 
 
 office
 1. PR extn
 2. Interveiw helper revamp
-3. 
+3. Extenstion for fillinup token kubctl
+4. write a chrome extension or vscode extension to show the no of time each component is get rendering

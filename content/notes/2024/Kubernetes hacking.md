@@ -20,6 +20,10 @@ run inside POD it will access the token and do
 
 https://github.com/aquasecurity/kube-hunter
 
+https://sonobuoy.io/certifying-kubernetes-with-sonobuoy/ 
+
+
+
 ## Notes
 
 Run a container as noon root
@@ -43,7 +47,7 @@ Image scanning
 
 
 Every pod can access the token that will can call kube API 
-`cat /var/run/secrets/kubernetes.io/serviceaccount/token`
+ 
 we can use this token to acess the kube API  `https://kubernetes/api/v1/namespaces/default`
 
 
@@ -125,3 +129,26 @@ docker images are just tar file and json meta data
 
 
 if you create file inside container we can see inside proc file of the docker process id ls `/proc/procoid/root`
+
+
+#### Finding container service on internet
+1. https://search.censys.io/
+2. https://www.binaryedge.io/
+3. https://www.shodan.io/search
+
+
+#### OWASP Kubernetes Top Ten
+https://owasp.org/www-project-kubernetes-top-ten/
+
+
+Attacking kubelet
+1. https://www.cyberark.com/resources/threat-research-blog/using-kubelet-client-to-attack-the-kubernetes-cluster
+
+
+https://attack.mitre.org/ -> globally-accessible knowledge base of adversary tactics and techniques based on real-world observations.
+
+https://security.googleblog.com/2022/05/privileged-pod-escalations-in.html 
+
+## Docker
+
+

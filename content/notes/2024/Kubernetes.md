@@ -305,6 +305,15 @@ spec:
 
 - `kubectl get deploy hello-deploy`
 
+## Affinity and Anti-Affinity
+Affinity and Anti-Affinity are concepts used to control how pods are scheduled onto nodes in a cluster. They help define rules for pod placement based on characteristics of the nodes or other pods in the cluster.
+
+**Affinity**: Affinity rules specify conditions that pods prefer for their placement. Pods with affinity rules tend to be scheduled onto nodes that meet those conditions
+
+**Anti-Affinity**: Anti-affinity rules, on the other hand, specify conditions that pods should avoid for their placement. Pods with anti-affinity rules tend to be scheduled away from nodes or pods that meet those conditions
+
+It is use full when we need high avaliblity of the server in different node
+
 ### Yaml file explained
 
 #### API Version
@@ -401,7 +410,7 @@ livenessProbe:
 ```
 
 
-### Services
+### Services 
 
 When newly pods created are scaled it will have new IP so if we have other pod communicating with it. it is unrealible.This is where Services come in to play. Services provide reliable networking for a set of Pods.
 
@@ -536,8 +545,58 @@ CMD
 
 Every Pod on the cluster, meaning all containers and Pods know how to find it. Every new service is automatically registered with the cluster’s DNS so that all components in the cluster can find every Service by name. Some other components that are registered with the cluster DNS are StatefulSets and the individual Pods that a StatefulSet manages.Cluster DNS is based on CoreDNS ([https://coredns.io/](https://coredns.io/)).
 
+## Network policies
+
+By default all pod can communicate with other even in different namespace just by knowing the IP. If we want restrict that use network policies
 
 
+## Networking
+
+When we create a Kubernetes Service, it gets assigned a Cluster IP (also known as a virtual IP). This Cluster IP is managed by iptables on each node in the cluster.
+
+Here's how iptables is typically used in Kubernetes for routing traffic to different pods:
+
+1. **Service Cluster IP Routing**:
+    - When you create a Service in Kubernetes, it gets assigned a Cluster IP, which is an internal IP address.
+    - iptables rules are automatically configured on each node in the cluster to forward traffic destined to the Service's Cluster IP to one of the Service's endpoints (Pods).
+    - These iptables rules typically reside in the `nat` table and are managed by kube-proxy, which runs on each node in the cluster.
+    - kube-proxy watches the Kubernetes API server for changes to Services and Endpoints, and it updates iptables rules accordingly to ensure that traffic is properly routed to the appropriate Pods.
+2. **Service External Traffic Routing**:
+    - In addition to routing internal traffic within the cluster, iptables can also be used to route external traffic to Services.
+    - When you expose a Service externally (e.g., using a NodePort, LoadBalancer, or Ingress), iptables rules are configured to forward external traffic to the appropriate Service Cluster IP.
+3. **Pod-to-Pod Communication**:
+    - iptables rules are also used for enabling communication between different Pods in the cluster.
+    - Kubernetes assigns a unique IP address to each Pod, and iptables rules are configured to allow communication between Pods within the same namespace or across namespaces if Network Policies allow.
+4. **Network Policies**:
+    - Network Policies in Kubernetes allow you to define rules for controlling traffic to and from Pods.
+    - iptables rules are used to enforce these Network Policies, allowing or blocking traffic based on the defined rules.
+
+#### IPTable
+`iptables -t nat -L -n` ->displays the current NAT (Network Address Translation) table rules the output contain
+
+1. **Chain (Chain name)**:
+    - Each line starts with the chain name, which indicates the specific chain within the NAT table where the rule is applied. Common chains include `PREROUTING`, `POSTROUTING`, and `OUTPUT`.
+    - `PREROUTING` -> apply the rule before routing,`POSTROUTING` -> after routing and `OUTPUT` is for when the packets send to externam 
+1. **num**:
+    - The `num` column displays the sequential number of the rule within the chain. This number is used for referencing and managing rules.
+2. **target**:
+    - The `target` column indicates the target action to be taken when a packet matches the rule. Common targets include `DNAT`, `SNAT`, `MASQUERADE`, `REDIRECT`, etc.
+    - `DNAT (Destination Network Address Translation)` is used to rewrite the destination IP address and/or port of packets as they pass through the firewall.
+    - `SNAT` is used to rewrite the source IP address and/or port of packets as they pass through the firewall
+    - `MASQUERADE` is a special case of SNAT and is commonly used when the outbound interface's IP address is dynamically assigned (e.g., using DHCP).
+    - `REDIRECT` is used to redirect packets to the local machine itself, typically to a different port on the same machine.
+1. **prot**:
+    - The `prot` column specifies the protocol (e.g., tcp, udp) for which the rule is defined.
+2. **source**:
+    - The `source` column specifies the source IP address or IP range from which packets are matched against the rule.
+3. **destination**:
+    - The `destination` column specifies the destination IP address or IP range to which packets are matched against the rule.
+4. **options**:
+    - The `options` column provides additional options or flags associated with the rule. This may include port numbers, interface names, etc.
+5. **Original and Translated IP addresses/ports**:
+    - For DNAT and SNAT rules, you may see columns indicating the original and translated IP addresses or ports. These columns show the transformation that occurs on the packet's source or destination IP address or port.
+
+Note: use `ip` command
 ### Kubernetes storage
 
 When we restart the pod the data stored in pod will go. To solve this we using Kubernetes storage
@@ -834,7 +893,8 @@ spec:
 
 More Example [refer here](https://kubernetes.io/docs/tutorials/stateful-application/)
 
-
+## Kubernetes RBAC
+Kubernetes Role-Based Access Control (RBAC) allows you to define fine-grained access policies for users and services within a Kubernetes cluster.
 
 #### AutoScale
 
@@ -914,6 +974,27 @@ During any client trying to connect to it receives a Connection refused error. t
 	- can be used to prevent new requests from being directed to a pod
 5. **Service Load Balancing:**
 
+## Debugging
+
+- `kubctl debug -it -n pg podname --cop-to newpodname --container containername --image imagename -- /bin/sh` -> wil copy the pod and shell in to
+- Ephemeral container `kubctl debug -it -n pg podname`
+
+Linux namspace
+- PID (process), NET,MNT(file system),Cgroup,etc all virtual file system
+
+To see the namspace in kind
+- docker ps (get the kind control node)
+- docker exec -it kind-control-plane /bin/bash
+- ls -l /proc/1/ns/* -> print all namespace present in the process
+
+ nsenter cmd allow to excute cmd in namespace
+`nsenter -net=/proc/$(pgrep -o postgres)/ns/net ss --tcp -l` -> print all tcp connection in that namespace  is same `kubctl exec -it -n pg pg-postrgress -ss --tcp -l`
+
+ `ephemeral containers`: a special type of container that runs temporarily in an existing [Pod](https://kubernetes.io/docs/concepts/workloads/pods/) to accomplish user-initiated actions such as troubleshooting. You use ephemeral containers to inspect services rather than to build applications.
+
+Tool
+1. https://squash.solo.io/
+2. https://www.telepresence.io/
 
 
 Need to study
@@ -941,7 +1022,7 @@ Need to study
 
 ## Internal Resources
 - [Collection of resources for inner workings of Kubernetes](https://github.com/shubheksha/kubernetes-internals )
-- 
+- https://ronaknathani.com/blog/2020/08/how-a-kubernetes-pod-gets-an-ip-address/
 - 
 ### Products
 
@@ -953,5 +1034,11 @@ Need to study
 2. https://monokle.io/ [Monokle's integrated open-source tools and cloud platform make it easy to define, manage, and enforce Kubernetes YAML configuration policies in minutes]
 
 
+
+
+ `kubectl get deployments --selector=app.kubernetes.io/instance=kubesense,app.kubernetes.io/name=api -n kubesense`
+
+
+to get the deployment file that match the selector
 
 

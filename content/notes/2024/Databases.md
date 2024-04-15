@@ -11,6 +11,7 @@ ZippyDB is the largest strongly consistent, geographically distributed key-value
 
 ### **Cassandra**
 [Cassandra](https://cassandra.apache.org/_/index.html) is a wide-column NoSQL database management system. It was originally developed at Facebook to power the Facebook inbox search feature
+build in java
 
 ## FoundationDB
 [FoundationDB](https://github.com/apple/foundationdb) is an open-source, distributed, transactional key-value store. It’s designed to handle large volumes of data and works well for both read/write workloads and write-heavy workloads. It’s also [ACID-compliant](https://www.swequiz.com/learn/acid-properties).
@@ -21,6 +22,9 @@ ZippyDB is the largest strongly consistent, geographically distributed key-value
 #### Citus
 [Citus](https://www.citusdata.com/) gives you the Postgres you love, plus the superpower of distributed tables. 100% open source. Now with schema-based and row-based sharding—plus Postgres 16 support!
 
+## Cockroach DB
+SQL distributed database 
+
 
 
 ## Tools
@@ -30,6 +34,9 @@ ingestr is a CLI tool to copy data between any databases with a single command s
 
 #### [Debezium](https://debezium.io/)
 Debezium is an open source distributed platform for change data capture. Start it up, point it at your databases, and your apps can start responding to all of the inserts, updates, and deletes that other apps commit to your databases. 
+
+## [Risingwave](https://risingwave.com/)
+Scalable Postgres for stream processing, analytics, and management. KsqlDB and Apache Flink alternative. 🚀 10x more productive. 🚀 10x more cost-efficient.
 
 
 

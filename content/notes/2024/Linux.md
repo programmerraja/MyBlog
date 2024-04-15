@@ -85,3 +85,89 @@ Managing User Environment  Variables
 
 
 Filesystem and Storage Device Management
+
+## Proc file system
+
+in kuberntes the process id of the running is 1
+
+ls -l
+cwd
+exec -> entry point
+io -> the io used by the process
+task -> if it has multi thread it will be listed here what each thread doing
+
+
+all the content in proc file not generated they were pulled from current running process linux shows like us it is file
+
+
+iotop -> show who using most io in porcess
+
+`/proc/net` directory in Linux contains various files and subdirectories that provide information related to networking
+- **tcp**, **udp**, **udp6**, **tcp6**: These directories contain information about active TCP and UDP connections. in hexdecimal format
+- `cat /proc/net/ip/ip_forward` -> has 0 or 1. Zero mean it won't forward the packet 1 mean it act as router turn off when it not need to increase the performance.
+
+`PID/fd`  -> tell how many files are opened by the files
+
+
+EBPF
+
+`man bpf` -> The  bpf()  system  call  performs a range of operations related to ex‐
+tended Berkeley Packet Filters.  Extended BPF (or eBPF) is  similar  to the  original  ("classic")  BPF  (cBPF) used to filter network packets. For both cBPF and eBPF programs, the  kernel  statically  analyzes  the programs  before loading them, in order to ensure that they cannot harm the running system.
+
+ eBPF extends cBPF in multiple ways, including the  ability  to  call  a
+fixed set of in-kernel helper functions (via the BPF_CALL opcode extension provided by eBPF) and access shared data structures such  as  eBPF maps.
+
+BCC make bpf program easier to write
+
+
+iotop -> tell which process doing more io
+
+EBF  -> take a system call 
+
+EBF projects
+1. Katran by facebook (l4 loadbalancer)
+2. cillium (networking sercurity and load balancing for k8)
+3. bcc,bpftrace (netflix perf troubleshooting)
+4. android security (google andrioid bpf)
+5. traffice optimizaiton cloudfare
+6. falco container runtime security 
+
+
+https://tanelpoder.com/psnapper/
+
+
+BCC allow python to write epbf
+
+
+
+
+CMDs
+1. ps -eLf | awk '{print $8}' | sort | uniq -c | sort -nr
+2.  ps -eLo state,user | sort | uniq -c | sort -nr
+3. **ps -eo s,user | grep ^[RD] | sort | uniq -c | sort -nbr | head -20** -> Runnable state and **Uninterruptible** sleep
+4.  **ps -eo s,user,cmd | grep ^[RD] | sort | uniq -c | sort -nbr | head -20**
+
+- Check how many threads are in R state
+
+
+Tool
+- https://github.com/tanelpoder/0xtools (do profile on proc file for 5 sec and show the top result)
+- https://github.com/iovisor/bcc
+
+pchar -measures  the  characteristics/speed  of  the network path between two Internet hosts, on either IPv4 or IPv6 networks it use tracrroute. it tell bandwidth between each router
+
+
+## lSOF
+list open files
+- lsof -i tcp:80 -> the process used port 80 -i -> internet
+- lsof -P processid -> give all open files by the process
+
+
+
+ ## USE method 
+ Use mehod are used to find bottel necks in the system
+ - _Utilization_ is the percentage of time that the resource is busy servicing work during a specific time interval
+ - Saturation refers to the degree to which a resource is being overused.disk saturation measures the length of the disk queue, indicating how many I/O requests are waiting to be serviced.
+ - _Errors_ in terms of the USE method refer to the count of error events
+
+The first step in the USE method is to create a list of resources. in the system like cpu,memory, etc 

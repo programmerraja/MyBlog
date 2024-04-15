@@ -162,7 +162,7 @@ it defines three building blocks
 | `ipvlan` | IPvlan networks provide full control over both IPv4 and IPv6 addressing. |
 | `macvlan`| Assign a MAC address to a container.                     |
 
-By default docker have bridge network(in windows it called NAT) which assign a unique ip address for each container from the range of 172.17.0.0/16
+By default docker have bridge network(in windows it called NAT) which assign a unique ip address for each container from the range of `172.17.0.0/16`
 
 The default “bridge” network, on all Linux-based Docker hosts, maps to an underlying Linux bridge in the kernel called **“docker0”**  `docker network inspect bridge | grep bridge.name `
 
@@ -177,14 +177,85 @@ How to make two docker to communicate among them
 `Note`: The default bridge network on Linux does not support name resolution via the Docker DNS service.
 
 #### bridge Network
+
 we can create a custom bridge using `docker create network name `which will create the new netowork bind with bridge and allocate the new Ip range and if you want the container to run on this network attach with `—network=name`
 
 #### Host Network
+
 It directly bind the container to host and exposed to access publicly `docker run --network host name` we can access this by host IP.
 
 #### MACVLAN
 Connect the container interface through to the hosts interface.it requires the host NIC to be in promiscuous mode (isn’t allowed on most public cloud platforms)
 
+#### Communication between two container in same region
+
+When you send a packet to `172.23.2.1` on your local network, your operating system (Linux, for our purposes) looks up the MAC address for that IP address in a table it maintains (called the ARP table). Then it puts that MAC address on the packet and sends it off.
+
+So! What if I had a packet for the container `10.4.4.4` but I actually wanted it to go to the computer `172.23.1.1` where another container is running?. You just add an entry to another table. It’s all tables.
+
+Here’s command you could run to do this manually:
+
+```
+sudo ip route add 10.4.4.0/24 via 172.23.1.1 dev eth0
+```
+
+`ip route add` adds an entry to the **route table** on your computer. This route table entry says “Linux, whenever you see a packet for `10.4.4.*`, just send it to the MAC address for `172.23.2.1`,
+
+#### Communication between two container in different region
+
+ route table trick will only work if the computers are connected directly. If the two computers are far apart (in different local networks) we’ll need to do something more complicated.
+
+We want to send a packet to the container IP 10.4.4.4, and it is on the computer 172.9.9.9. But because the computer is far away, we **have** to address the packet to the IP address 172.9.9.9. Woe is us! All is lost! Where are we going to put the IP address 10.4.4.4?
+
+**Encapsulation**
+
+All is not lost. We can do a thing called “encapsulation”. This is where you take a network packet and put it inside ANOTHER network packet.
+
+So instead of sending
+
+```
+IP: 10.4.4.4
+TCP stuff
+HTTP stuff
+```
+
+we will send
+
+```
+IP: 172.9.9.9
+(extra wrapper stuff)
+IP: 10.4.4.4
+TCP stuff
+HTTP stuff
+```
+
+There are at least 2 different ways of doing encapsulation: there’s “ip-in-ip” and “vxlan” encapsulation.
+
+**vxlan** encapsulation takes your whole packet (including the MAC address) and wraps it inside a UDP packet. That looks like this:
+
+```
+MAC address: 11:11:11:11:11:11
+IP: 172.9.9.9
+UDP port 8472 (the "vxlan port")
+MAC address: ab:cd:ef:12:34:56
+IP: 10.4.4.4
+TCP port 80
+HTTP stuff
+```
+
+**ip-in-ip** encapsulation just slaps on an extra IP header on top of your old IP header. This means you don’t get to keep the MAC address you wanted to send it to but I’m not sure why you would care about that anyway.
+
+```
+MAC:  11:11:11:11:11:11
+IP: 172.9.9.9
+IP: 10.4.4.4
+TCP stuff
+HTTP stuff
+```
+
+####  How docker networking working from scratch
+- In linux we can create a multiple namespace and ethernet with ip table
+- refer https://github.dev/kristenjacobs/container-networking 
 ## Volumes
 
 If you want your container’s data to stick around (persist), you need to put it on a volume. Volumes are decoupled from containers, meaning you create and manage them separately, and they’re not tied to the lifecycle of any container. Net result, you can delete a container with a volume, and the volume will not be deleted.
@@ -345,6 +416,10 @@ RUN apt-get install
 - In above example COPY will always change if we make a code change which cause the doker to not use cache for the upcoming layer so move that to last as possible
 - Remove the pkg that no need
 
+
+## Debugging
+
+
 ## Resources
 1. [https://medium.com/datamindedbe/how-we-reduced-our-docker-build-times-by-40-afea7b7f5fe7](https://medium.com/datamindedbe/how-we-reduced-our-docker-build-times-by-40-afea7b7f5fe7)
 2. https://btholt.github.io/complete-intro-to-containers/
@@ -362,3 +437,12 @@ RUN apt-get install
 - Watch: Building Containers From Scratch by Vinesh Agrawal - [https://youtube.com/watch?v=GFUpXhft8zA…](https://t.co/G8eLXeoMZG) 
 - Code: Linux namespace Golang experiments by Songrong Jiang - [https://github.com/songrgg/namespace-demo…](https://t.co/j6jdIC9iYX) 
 - Read: Building a Container in Go - [https://infoq.com/articles/build-a-container-golang/…](https://t.co/8Mo122PK0n)
+- [Containers from Scratch - Eric Chiang, CoreOS](https://www.youtube.com/watch?v=wyqoi52k5jM) 
+- [Deep Dive in Docker Overlay Networks](https://www.youtube.com/watch?v=b3XDl0YsVsg)
+- https://blog.mbrt.dev/posts/container-network/
+-   [Writing a container in rust ](https://litchipi.site/serie/containers_in_rust)
+
+
+
+## Internal
+- [ ] b

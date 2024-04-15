@@ -171,4 +171,4 @@ resources
 
 
 
-- you should talk with the subject matter or domain experts to gain a good understanding of the domai
+- you should talk with the subject matter or domain experts to gain a good understanding of the domain

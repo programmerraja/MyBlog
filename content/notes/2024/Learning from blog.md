@@ -74,3 +74,13 @@ https://read.engineerscodex.com/p/how-apple-built-icloud-to-store-billions
 1. Apple uses [FoundationDB](https://www.foundationdb.org/) (apple bought this) and Cassandra
 
 ##  DoorDash Uses Service Mesh and Cell-Based Architecture to Significantly Reduce Data Transfer Costs
+
+## [ How Uber Serves Over 40 Million Reads Per Second from Online Storage Using an Integrated Cache](https://www.uber.com/en-IN/blog/how-uber-serves-over-40-million-reads-per-second-using-an-integrated-cache/)
+- See how they avoiding before itself when the redis down they know that there DB get more query so they adjust the query time out in db to reduce the load in there DB
+
+## [Using checksums to verify syncing 100M database records](https://sirupsen.com/napkin/problem-14-using-checksums-to-verify)
+- Pick one unique filed in collection let say `id` add all `id` and hash the content and do the same for another database and if both same it sync
+- To optimize do batch by batch check first 1000 and so until if one is not matched or all matched.
+
+## Backoff technique to heavy load of db write
+- Canva implemented the backoff in there autosave feature where they write custom monitor which will monitor each update query in db and check does it corssing the limit if so it will inform the front end to backoff the auto save time by sending in header `Canva-Throttle: true`
