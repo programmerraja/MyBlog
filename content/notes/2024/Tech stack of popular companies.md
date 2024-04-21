@@ -30,12 +30,25 @@ draft = true
 ## instagram
 1. Rabbitmq
 
+## Reddit
+- Rabbitmq
+- Cassendra/postgrsql
+- Monlotith
+- zookeeper
+- AWS
+- GO
+- Graphql
+- AWS Aurora Postgres  (for storing media metadata)
+
+
 ## Apple
 1. ICloud
 	1. iCloud is partly powered by Cassandra. Apple runs one of the largest Cassandra deployments in the world, [according to DataStax](https://news.ycombinator.com/item?id=9307563).
 
 ## Slack
 1. AWS (cell based architecture)
+2. mySQL
+3. PHP 
 
 
 ## Discord
@@ -72,3 +85,19 @@ draft = true
 
 ## Canva
 - Using Mongodb as primary database and having sharding
+
+#### Paypal
+- JunoDB [[Databases#JunoDB’s]]  for caching
+- PostgreSQL  primary datastor
+
+## Lyft
+- DynamoDB
+-  **Redis cluster**
+
+#### Figma
+- Amazon RDS
+- Ruby
+
+## Notion
+- PostgreSQL
+- AWS

@@ -93,9 +93,20 @@ B+ Trees store values only in leaf nodes all operations (inserting,updating, rem
 
 
 
+## OLTP (Online Transaction Processing) Databases
 
+- OLTP databases are designed for handling transactional workloads, which involve a high volume of short, simple transactions.
+- These transactions typically involve frequent insert, update, and delete operations on individual records or small sets of records.
+- OLTP databases prioritize fast response times, concurrency, and data integrity, making them suitable for applications such as e-commerce, banking, and order processing systems.
+- Examples of OLTP databases include MySQL, PostgreSQL, Oracle Database, and Microsoft SQL Server.
 
+## OLAP (Online Analytical Processing) Databases
 
+- OLAP databases are optimized for performing complex queries and analysis on large volumes of historical data.
+- These databases are designed to support decision-making processes by providing capabilities for data aggregation, slicing, dicing, and drilling down into data to uncover insights and trends.
+- OLAP databases typically store data in a denormalized format, optimizing them for analytical queries rather than transactional operations.
+- OLAP databases are commonly used in business intelligence (BI), data warehousing, and reporting applications.
+- Examples of OLAP databases include Amazon Redshift, Google BigQuery, Snowflake, Apache Hive, and Apache Spark.
 ## Resources
 1. [Discover and learn about **960** database management systems](https://dbdb.io/)
 2. [Knowledge Base of Relational and NoSQL Database Management Systems](https://db-engines.com/en/)
@@ -126,3 +137,6 @@ Used in distributed shared database where the indexing is in global so when ever
 
 ## Resources
 1. https://medium.com/@hnasr/following-a-database-read-to-the-metal-a187541333c2
+
+
+

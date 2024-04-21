@@ -318,6 +318,7 @@ A replica set following best practice consists of a primary node together with t
  **Replica Set Tag Sets**: Tag sets can be used to direct read requests to specific nodes. You can use tag sets to nominate nodes for special purposes such as analytics or to distribute read workload more evenly across all nodes in the cluster.
 
 ## Sharding
+- https://www.percona.com/blog/when-should-i-enable-mongodb-sharding/
 - Need to study :)
 
 

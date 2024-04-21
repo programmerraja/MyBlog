@@ -91,3 +91,14 @@ So first it check cache and pick data from there
 
 **Circuit Breakers**
 implement a circuit breaker that will cut off requests to Redis nodes with a high error rate. in redis
+
+
+## CRDT
+Conflict-free Replicated Data Type 
+https://jakelazaroff.com/words/an-interactive-intro-to-crdts/  
+## Resources
+1.  https://github.com/JohnCrickett/SystemDesign/tree/main/engineering-blogs
+2. https://github.com/Coder-World04/Complete-System-Design?tab=readme-ov-file
+3. https://systemdesign.one/leaderboard-system-design/
+4. https://engineering.grab.com/frequency-capping
+5. https://www.primevideotech.com/video-streaming/how-prime-video-ingests-processes-and-distributes-live-tv-to-millions-of-customers-around-the-world-while-reducing-costs?utm_source=blog.quastor.org&utm_medium=newsletter&utm_campaign=how-amazon-streams-live-video-to-tens-of-millions-of-people

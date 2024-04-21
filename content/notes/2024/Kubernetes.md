@@ -1019,6 +1019,8 @@ Need to study
 13. [Handling Client Requests Properly with Kubernetes](https://freecontent.manning.com/handling-client-requests-properly-with-kubernetes/ "Handling Client Requests Properly with Kubernetes")
 14. [production-best-practices](https://learnk8s.io/production-best-practices)
 15. https://overcast.blog/11-kubernetes-deployment-configs-you-should-know-in-2024-1126740926f0
+16. [Learn How To Create  Network Policies for Kubernetes using GUI and interactive way](https://editor.networkpolicy.io/)  
+17. 
 
 ## Internal Resources
 - [Collection of resources for inner workings of Kubernetes](https://github.com/shubheksha/kubernetes-internals )
@@ -1041,4 +1043,6 @@ Need to study
 
 to get the deployment file that match the selector
 
+
+network namespace are stored in /var/run/nets
 

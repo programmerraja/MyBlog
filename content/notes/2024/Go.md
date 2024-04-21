@@ -147,3 +147,8 @@ for k,v := range map { }
 
 
 Split your application into **components** written as regular Go interfaces. Don't fuss with any networking or serialization code. Focus on your business logic. (https://serviceweaver.dev/)
+
+
+
+1. Go routine -> make threads simple
+2. channel

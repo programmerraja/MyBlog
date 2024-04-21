@@ -71,3 +71,8 @@ ways to find bounded context
 
 
 Event drive architecture 
+
+
+## Caching
+- https://readyset.io/  Real-time SQL caching for Postgres and MySQL which will take care everything
+- They using streams and watch for the changes

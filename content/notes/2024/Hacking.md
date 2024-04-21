@@ -55,9 +55,47 @@ Burpsuite toutorial
 2. https://github.com/assetnote/surf [ SSRF vulnerabilities on Modern Cloud Environments.]
 3. https://caido.io/ # A lightweight web security auditing toolkit brupsuite alternative
 
+## Nmap
 
+#### CMDS
 
-OSNIT 
+- `nmap -iR 3` -> random ip scan be carefull don't use over our ISP will note
+- `nmap --reason ip` -> tell the reason for the port open close does it recevie sync ack packet or what happen
+- `nmap -V` -> verbose outut print log and double VV more verbose
+- `nmap ip or ip/16 (CIDR notation)`  -> scan for all port in that ip
+- `nmap --packet-trace ip`  -> print all packets transfered
+- `nmap -F ip` -> scan for commonly used port
+- `nmap -p portno1,etc ip` ->specfic port
+- `nmap -sP ip` -> only ping (namp used to check first by ping)
+- `nmap -PS ip` -> Send TCP sync on 
+- `nmap -PA ip` -> Send TCP sync and act 
+- `nmap --traceroute ip` -> print traceroute
+- `nmap -R ip` -> reverse DNS 
+- `nmap -sS ip` -> only tcp sync scan
+- `nmap -O ip` -> os detection
+- `nmap -sV ip` -> software used on the port
+- `nmap -D RND:5 [target]` ->will perform a scan on the specified target IP address, while also including 5 randomly selected decoy IP addresses to disguise the true source of the scan. be careful with ISP
+- 
+
+#### Port state
+1. **Open**: This means that the scanned port is accessible, and there is an application or service actively accepting connections on that port. An open port can indicate a potential entry point for communication with a system.
+    
+2. **Closed**: A closed port means that there is no application listening on that port. The system actively responds with a TCP RST packet for TCP scans or with an ICMP port unreachable message for UDP scans, indicating that the port is closed and no connection is possible.
+    
+3. **Filtered**: This state means that `nmap` was unable to determine whether the port is open or closed. This typically happens when a firewall or other network filtering device prevents `nmap` from making a reliable determination of the port's state. `nmap` cannot reliably tell whether the port is open or closed, so it reports the port as filtered.
+    
+4. **Unfiltered**: This state indicates that the port is accessible, but `nmap` cannot determine whether it is open or closed. It means that `nmap` was able to establish that the port is not firewalled, but it does not provide enough information to determine whether there is an active service listening on that port.
+    
+5. **Open|Filtered**: This state indicates that `nmap` cannot determine whether the port is open or filtered. It could mean that there is a firewall or similar device blocking the port, or it could mean that there is a service actively listening on the port.
+    
+6. **Closed|Filtered**: This state means that `nmap` cannot determine whether the port is closed or filtered. It could indicate a firewall or network filtering device that prevents `nmap` from making a determination about the port's state.
+
+Zenmap is GUI for nmap
+
+## OSNIT 
+
+#### Tools
+- https://inteltechniques.com/tools/ (best contain all tools in one place)
 - https://whatsmyname.app/ Enter the username(s) in the search box, select any category filters & click the search icon or press CTRL+Enter
 - [waybackmachine](https://web.archive.org/web/20030315000000*/http://sep11.wikipedia.org/wiki/In_Memoriam) 
 - https://urlscan.io/ by default if we scan it can be access by anyone try to scan in private mode. if you suspect the url use this website
@@ -68,6 +106,11 @@ OSNIT
 - [Free online free chrome browser](https://kasmweb.com/ )
 - https://epieos.com/  tool for email and phone reverse lookup
 - [SpiderFoot](https://github.com/smicallef/spiderfoot ) automates OSINT for threat intelligence and mapping your attack surface.
+- 
+#### Resources
+1. https://www.myosint.training/ free course
+2. https://start.me/p/DPYPMz/the-ultimate-osint-collection
+
 
 People
 - https://github.com/WebBreacher

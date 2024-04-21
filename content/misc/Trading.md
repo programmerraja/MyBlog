@@ -243,3 +243,12 @@ section 80c  1.5 lak
 ppf
 elss
 professional tax
+
+
+80c -> 150k
+80ccd -> 50
+
+80D health insurance -> 50k
+home loan -> 200l
+
+150
