@@ -60,6 +60,7 @@ Scalable Postgres for stream processing, analytics, and management. KsqlDB and A
 - [GitHub's Online Schema-migration Tool for MySQL ](https://github.com/github/gh-ost)
 - [Postgres Sharding](https://www.citusdata.com/) 
 - [Change Data Capture Tool ](https://debezium.io/)
+- https://github.com/mongodb/mongo-snippets
 
 
 **Sharding** -involves distributing Partitioning data across multiple independent databases or shards. replica are also called sharding because the shard the same data in both server

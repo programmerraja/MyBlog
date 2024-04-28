@@ -37,9 +37,7 @@ A Kubernetes cluster contains six main components:
 Nodes are the workers of a Kubernetes cluster. At a high-level they do three things:
 
 1. Watch the API Server for new work assignments
-    
 2. Execute new work assignments
-    
 3. Report back to the control plane (via the API server)
 
 Nodes contain
@@ -53,7 +51,6 @@ Nodes contain
 **Resources mangement** 
 
 When the node is running out of the resources for the pod. it will kill the pod that does not have resources mentioned in deployment file.
-
 
 ### Pods (it’s just a sandbox for hosting containers.)
 
@@ -377,7 +374,42 @@ used to provide data about the resource itself
 #### Spec
 is used to define the desired state of the resource. The `spec` section contains the configuration parameters and settings that specify how the resource should behave. The structure of the `spec` field varies depending on the type of resource being defined, as each resource type has its own set of properties and specifications.
 
+## Example
 
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-certbot
+  namespace: nginx-ingress
+  labels:
+    app: certbot
+    environment: test
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: certbot
+  template:
+    metadata:
+      labels:
+        app: certbot
+        environment: test
+    spec:
+      securityContext:
+            fsGroup: 1000
+            runAsUser: 1000
+      containers:
+        - name: certbot
+          image: test-certbot:latest
+          command: ["node"]
+          args: ["server.js"]
+```
+- Kuberentes apply from bottom first it will create a 2 pod with label certbot
+- Then replica will be created to monitor the pod status does is have 2 active pod by using selector
+- Then depolyment will be created 
+
+![[art-2024-04-28 14.38.57.excalidraw]]
 ### What happend when we apply yml file
 when we run `kubctl apply -f name.yml`
 - The `kubectl` command communicates with the Kubernetes API server.The API server performs several tasks, including authentication, authorization, validation, and admission control. Once the YAML file has passed validation and admission control, the API server persists the resource information in **etcd**.

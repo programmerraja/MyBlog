@@ -82,15 +82,56 @@ draft = false
 
 ## Function
 
-```jsx
+```go
 function name (params type) returnType {
 	cmd..
 }
 //type is not mandatory
 
 name(params)
+
+#multiple return vaule
+function name (params type) (int,bool..) {
+	return 4,true,..
+}
+ number ,bool := name()
+we can also give name for the return type of function like 
+
+function name () (number int , ..) -> it is purely for doc
+#Error Handling
+
 ```
 
+- Arguments are passed as copy use pointer for call by reference
+
+
+## Pointers
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    // Declare a variable
+    var num int = 10
+    
+    // Declare a pointer variable
+    var ptr *int
+    
+    // Assign the address of num to ptr
+    ptr = &num
+    
+    // Access the value through the pointer
+    fmt.Println("Value of num:", num)
+    fmt.Println("Value of num through pointer:", *ptr)
+    
+    // Modify the value through the pointer
+    *ptr = 20
+    fmt.Println("New value of num:", num)
+}
+
+```
 ## Conditions
 
 ```jsx
@@ -140,6 +181,43 @@ for i,id := range ids {
 for k,v := range map { }
 
 ```
+
+
+
+## Runes
+Go’s runes are used to represent single characters. 'A' ->65
+Runes are kept as numeric codes
+
+If you declare a variable without assigning it a value, that variable will
+contain the zero value
+
+## short variable declaration
+
+instead of explicitly declaring the type of the variable and later assigning to it with
+= , you do both at once using := .
+
+```Go
+quantity := 4
+```
+
+If the name of a variable, function, or type begins with a capital letter, it is considered exported and can be accessed from packages outside the current one.
+## Conversions
+Only same type can be do math operation float and int cannot to convert
+- int(3.0)
+- float64(9)
+
+
+
+
+## Packages
+
+Go tools look for package code in a special directory (folder) on your computer called the workspace. By default, the workspace is a directory named go in the current user’s home directory.
+
+The workspace directory contains three subdirectories
+- bin, which holds compiled binary executable programs.
+- pkg, which holds compiled binary package files. 
+- src, which holds Go source code.
+
 
 
 
