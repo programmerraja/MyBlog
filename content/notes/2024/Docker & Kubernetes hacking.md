@@ -109,7 +109,7 @@ https://networkpolicy.io/
 
 
 
-https://attack.mitre.org/ [MITRE ATT&CK® is a globally-accessible knowledge base of adversary tactics and techniques based on real-world observations. The ATT&CK knowledge base is used as a foundation for the development of specific threat models and methodologies in the private sector, in government, and in the cybersecurity product and service community.]
+https://attack.mitre.org/ MITRE ATT&CK® is a globally-accessible knowledge base of adversary tactics and techniques based on real-world observations. The ATT&CK knowledge base is used as a foundation for the development of specific threat models and methodologies in the private sector, in government, and in the cybersecurity product and service community
 
 
 
@@ -118,17 +118,7 @@ https://attack.mitre.org/ [MITRE ATT&CK® is a globally-accessible knowledge ba
 
 
 
-docker images are just tar file and json meta data 
 
-`docker save nginx:latest -o ngnix.tar` -> will save image as tar file
-`tar -xvf ngnix.tar --one-top-level` -> exctract the tar file which have tar and json for each layer
-`docker export containername -o mycontainer.tar` 
-
-`docker run -ti --previliged -net=host -pid=host --ipc=host --volume/:/host busybox chroot /host`  ->give the container unrestricted access to the host's resources.
-
-
-
-if you create file inside container we can see inside proc file of the docker process id ls `/proc/procoid/root`
 
 
 #### Finding container service on internet
@@ -151,6 +141,7 @@ https://security.googleblog.com/2022/05/privileged-pod-escalations-in.html
 
 ## Docker
 
+`docker run -ti --previliged -net=host -pid=host --ipc=host --volume/:/host busybox chroot /host`  ->give the container unrestricted access to the host's resources.
 
 #### Tool
 - [A Kubernetes attack graph tool allowing automated calculation of attack paths between assets in a cluster ](https://github.com/DataDog/KubeHound?tab=readme-ov-file)

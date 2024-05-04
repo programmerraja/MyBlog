@@ -452,6 +452,12 @@ Services use labels and a label selector to know which set of Pods to load-balan
 
 kube-proxy is responsible for all assign the IP , forwarding packet, load balancing etc.
 
+```yaml
+proxy_pass http://SERVICE-NAME.YOUR-NAMESPACE.svc.cluster.local:8080;
+```
+can be accessed  
+
+
 ### Types 
 
  **ClusterIP** (default)
@@ -561,6 +567,14 @@ spec:
 ```
 
 **Ingress Controller** is a component responsible for implementing the rules defined in the Ingress resource. It watches for changes to Ingress resources and configures the underlying load balancer or reverse proxy to handle incoming requests accordingly. Popular Ingress Controllers include NGINX Ingress Controller, Traefik, and HAProxy Ingress
+
+```
+
+```
+
+- **Ingress as Deployment**: Refers to deploying the Ingress controller as a set of pods using a Deployment resource.
+    
+- **Ingress as kind Ingress**: Refers to using the Ingress resource itself to define routing rules for incoming traffic.
 ### Endpoint Objects
 
 Kubernetes is constantly evaluating the Service’s label selector against the current list of healthy Pods on the cluster. Any new Pods that match the selector get added to the `Endpoints object`, and any Pods that disappear get removed. This means the Endpoints object is always up to date. Then, when a Service is sending traffic to Pods, it queries its Endpoints object for the latest list of healthy matching Pods. Every Service gets its own Endpoints object with the same name as the Service.This object holds a list of all the Pods the Service matches and is dynamically updated as matching Pods come and go.

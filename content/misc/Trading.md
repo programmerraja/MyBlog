@@ -248,7 +248,52 @@ professional tax
 80c -> 150k
 80ccd -> 50
 
-80D health insurance -> 50k
+80D health insurance -> 50k for self 25k and parent 25k
 home loan -> 200l
 
 150
+
+80c 80ccd -> EPF PPF LIC NPS 
+80D -> medical insurance 
+
+80C -> 1.5 lak
+
+- EPF  can show more then 1.5 no tax after taking
+- PPF -> 1.5 
+- NPS -> 1.5 under 80c and 50k under 80ccd 60 year lock in they put amount in bond and stock market and rate of return varry. and it is
+- ELSS 3 year lock in come under Taxable when we taking money after 3 we need to pay tax
+- 
+Term insurance
+ELSS
+chilldren tutuo fees
+
+80CCD (1B)  can claim 50k  Eemployee contribution to pension scheme 10% of salary max 50k
+
+80ccG -> investment in eligible equity shares our gross income need to come under 12lakh only we can use that can show 25k
+
+80D -> contribution to health insurance
+for self -> 25 
+for paranets - > 25 
+ -> 50k
+
+new tax EPF and NPS we can show
+
+1.5
+
+50k 
+10k
+
+1. HRA received Rent paid–10% of salary 40% (metro cities) of salary or 50% (metro cities) of salary.
+
+
+SIP 
+1. Direct fund -> put on this
+2. regular fund
+
+
+ELSS
+- DIvidend are taxable
+- 1 laksh will be subtracted
+- Expense ratio -> amount of ruppe they take when we investing 
+	- make sure it is low expense ratio
+- 

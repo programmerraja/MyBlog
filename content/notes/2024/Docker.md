@@ -445,4 +445,18 @@ RUN apt-get install
 
 
 ## Internal
-- [ ] b
+
+ ### What’s An OCI Image?
+ 
+  OCI is [the standardized container format used by Docker](https://github.com/opencontainers/image-spec/blob/main/spec.md) — are pretty simple. An OCI image is just a stack of tarballs. A OCI can run multiple different runtime
+
+ A useful way to look at a Dockerfile is as a series of shell commands, each generating a tarball; we call these “layers”. To rehydrate a container from its image, we just start the the first layer and unpack one on top of the next.
+ 
+docker images are just tar file and json meta data 
+
+`docker save nginx:latest -o ngnix.tar` -> will save image as tar file
+`tar -xvf ngnix.tar --one-top-level` -> exctract the tar file which have tar and json for each layer `docker export containername -o mycontainer.tar` 
+
+
+
+if you create file inside container we can see inside proc file of the docker process id ls `/proc/procoid/root`
