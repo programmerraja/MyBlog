@@ -926,3 +926,4 @@ message Employess {
 }
 ```
 - Once you define your message types in a `.proto` file, you use the Protocol Buffers compiler (`protoc`) to generate source code in the language of your choice (e.g., C++, Java, Python). This generated code includes classes or structs for working with your defined message types in your chosen programming language.
+

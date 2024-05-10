@@ -1,0 +1,627 @@
++++
+title = 'Python'
+date = 2024-05-09T12:16:34.3434+05:30
+draft = false
+tags =[]
++++ 
+
+## Data types
+
+```
+- Numeric Types
+  - int
+  - float
+  - complex
+- Sequence Types
+  - str #""
+  - list #[]
+  - tuple #()
+- Mapping Type
+  - dict #{}
+- Set Types
+  - set #{}
+  - frozenset
+- Boolean Type
+  - bool #True/False
+- Binary Types
+  - bytes #[]
+  - bytearray
+  - memoryview
+```
+ 
+## Mutable and Imutable
+
+Mutable data types are those whose contents can be changed after creation, while immutable data types cannot be changed once they are created.
+
+Mutable data types:
+1. Lists
+2. Dictionaries
+3. Sets
+4. Byte arrays
+
+Immutable data types:
+1. Integers (`int`)
+2. Floating-point numbers (`float`)
+3. Complex numbers (`complex`)
+4. Strings (`str`)
+5. Tuples (`tuple`)
+6. Frozensets (`frozenset`)
+7. Bytes (`bytes`)
+8. Booleans (`bool`)
+
+All mutable data type will point to same memory when they have same vaule 
+
+Example
+```python
+x=10
+y=10
+#both will be point to same memory reference
+id(x) # print the memory location
+x is y # is operator used to find does in same location
+```
+
+## Namespace
+
+A namespace is a mapping from names to objects. It serves as a container for identifiers (variable names, function names, class names, etc.) and helps in avoiding naming conflicts and organizing code logically.
+
+**Local Namespace**:
+- A local namespace contains the names that are defined within a specific function or method.
+- It is created when a function is called and is destroyed when the function exits.
+- The local namespace is accessible only within the function or method where it is defined.
+
+**Enclosing Namespace (non-local)**:
+- An enclosing namespace contains names defined in the enclosing function or outer scope.
+- It is used in nested functions or closures. use keyword `non-local`
+- `Names in the enclosing namespace are accessible within the nested function but not modifiable by it.`
+
+**Global Namespace**:
+- The global namespace contains names defined at the top level of a module or script.
+- It is created when the module is imported or when the script is executed.
+
+**Built-in Namespace**:
+- The built-in namespace contains names of built-in functions, exceptions, and other objects provided by Python.
+- It is automatically loaded when Python starts up.
+- The objects in `__builtins__` include commonly used functions like `print()`, `len()`, `range()`, etc
+- Python 3, `__builtins__` is read-only by default.
+
+```python
+
+print(__builtins__.len([1, 2, 3])) # Output: 3
+
+```
+## input and output 
+
+### Reading Input:
+
+```python
+# Reading input from the user
+user_input = input("Enter something: ")
+
+# Print the input
+print("You entered:", user_input)
+```
+
+The `input()` function takes an optional string argument that serves as the prompt, which will be displayed to the user before waiting for input. It returns the user's input as a string.
+
+### Output:
+
+```python
+# Printing output
+print("Hello, world!")
+```
+
+The `print()` function is used to display output to the console. You can pass one or more objects as arguments to `print()`, and they will be printed to the console separated by spaces by default.
+
+### Formatting Output:
+
+You can also format the output using various techniques such as string formatting or using the `.format()` method:
+
+```python
+name = "Alice"
+age = 30
+print("Name: {}, Age: {}".format(name, age))
+# or
+print(f"Name: {name}, Age: {age}")
+```
+
+In Python, conditional statements and loops are fundamental control structures used for decision-making and iteration. Let's go through each of them:
+
+### Conditional Statements:
+
+#### `if-elif-else` statement:
+The `if-elif-else` statement is used when there are multiple conditions to check.
+
+```python
+x = 10
+if x > 5:
+    print("x is greater than 5")
+elif x == 5:
+    print("x is equal to 5")
+else:
+    print("x is less than 5")
+```
+
+### Loops:
+
+#### 1. `for` loop:
+The `for` loop is used to iterate over a sequence (such as a list, tuple, string, etc.) or any iterable object.
+
+```python
+for i in range(5):
+    print(i)
+```
+
+#### 2. `while` loop:
+The `while` loop is used to execute a block of code repeatedly as long as a condition is true.
+
+```python
+x = 0
+while x < 5:
+    print(x)
+    x += 1
+```
+
+#### Loop Control Statements:
+
+##### - `break` statement:
+The `break` statement is used to exit the loop prematurely based on a condition.
+
+```python
+for i in range(10):
+    if i == 5:
+        break
+    print(i)
+```
+
+##### - `continue` statement:
+
+```python
+for i in range(10):
+    if i % 2 == 0:
+        continue
+    print(i)
+```
+
+## Functions
+
+```python
+def function_name(args):
+	body
+```
+
+function will default return none
+#### _arbitrary positional and Arbitrary Keyword arguments_
+
+**Positional** : When we define a parameter with `*args`, it allows the function to accept any number of positional arguments. These arguments are packed into a tuple inside the function
+
+**Keyword:** it allows the function to accept any number of keyword arguments. These arguments are packed into a dictionary inside the function.
+
+```python
+#**Positional**
+
+def my_function(*args):
+    for arg in args:
+        print(arg)
+
+my_function(1, 2, 3, 4)
+
+#Keyword
+def my_function(**kwargs):
+    for key, value in kwargs.items():
+        print(key, ":", value)
+
+my_function(a=1, b=2, c=3)
+
+```
+
+#### Unpacking arguments
+
+To pass elements of a list, tuple, or dictionary as separate arguments to a function.
+
+```python
+   def my_function(a, b, c):
+       print("a:", a)
+       print("b:", b)
+       print("c:", c)
+
+   my_list = [1, 2, 3]
+   my_function(*my_list)
+   
+   my_dict = {'a': 1, 'b': 2, 'c': 3}
+   my_function(**my_dict) 
+   # the function params need to have same name as keys in dict
+```
+
+#### **Lambda Functions**
+
+Lambda functions, also known as anonymous functions,
+
+```python
+lambda arguments: expression
+```
+
+Lambda functions are typically used when you need a simple function for a short period, often as an argument to higher-order functions like `map()`, `filter()`, and `sorted()`, or within a list comprehension.
+
+```python
+add = lambda x, y: x + y
+print(add(3, 5))  # Output: 8
+```
+
+## Generators
+
+Generators are functions that can pause and resume their execution. They generate a sequence of values lazily, one value at a time, and only when requested.
+
+```python
+def countdown(n):
+    while n > 0:
+        yield n
+        n -= 1
+
+# Using the generator in a loop
+for i in countdown(5):
+    print(i)
+    
+
+gen = countdown(3)
+
+print(next(gen))  # Output: 3
+print(next(gen))  # Output: 2
+
+```
+
+**Memory Efficiency**: Generators produce values on-the-fly, so they don't store the entire sequence in memory at once. This makes them memory efficient, particularly for large datasets.
+
+**Lazy Evaluation**: Values are generated only when requested, which can improve performance and reduce unnecessary computation.
+   
+**Support for Infinite Sequences**: Generators can produce infinite sequences of values without running out of memory or crashing the program.
+
+#### Decorators
+
+Allows us to modify or extend the behavior of functions or methods. They provide a clean and concise way to add functionality to existing code without modifying it directly.
+```python
+
+def my_decorator(func):
+    def wrapper():
+        print("Before")
+        func()
+        print("After")
+    return wrapper
+
+@my_decorator
+def say_hello():
+    print("Hello!")
+
+say_hello()
+
+#output
+Before
+Hello! 
+After
+```
+
+When we give multiple decorator it will excute from bottom to top
+## Modules
+
+When a Python module is imported, it gets its own `__name__` attribute. This attribute contains the name of the module. Additionally, modules have a `__file__` attribute, which stores the path to the module's source file.
+
+```python
+import my_module 
+import my_module as mm #**Module Aliases**
+from my_module import my_function` #**Importing Specific Items**
+```
+
+When Python executes a script, it assigns the special variable `__name__` a value of `"__main__"` if the script is being run directly. By using `if __name__ == "__main__":`, we can write code that will only execute when the script is run directly and not when it's imported as a module.
+
+```python
+# my_script.py
+
+def main():
+    print("This is the main function.")
+
+if __name__ == "__main__":
+    main()
+
+```
+
+#### Import module resolution
+
+ **sys.path**: Python maintains a list of directories called `sys.path` where it searches for modules when you import them. This list includes several default locations such as:
+ - The directory containing the script that is being executed.
+- The directories listed in the `PYTHONPATH` environment variable.
+- The installation-dependent default path, which typically includes standard library directories, site-packages directories, etc.
+
+**site-packages Directory**: When you install third-party packages using tools like `pip`, they are typically installed into a directory called `site-packages`. This directory contains modules and packages installed via `pip` and is added to `sys.path`.
+
+```python
+dir(modulename) #print all function present in module
+print(help(modulename))
+```
+
+#### __pycache__
+
+`__pycache__` is a directory automatically created by Python when it compiles source files into bytecode files. Python compiles source files into bytecode (.pyc) files to speed up execution by avoiding recompilation each time the script is run.
+
+1. When you import a module in Python, the interpreter first checks if there's a corresponding bytecode file (.pyc) in the `__pycache__` directory.
+2. If the bytecode file exists and is up to date (i.e., the source file has not been modified since the bytecode was generated), Python uses the bytecode file for execution, bypassing the compilation step.
+3. If the bytecode file does not exist or is outdated, Python compiles the source file into bytecode and stores it in the `__pycache__` directory for future use.
+## Packages
+
+A package is a collection of Python modules organized in a directory hierarchy. It typically contains an `__init__.py` file to indicate that the directory should be treated as a package. Packages allow you to further organize your code into meaningful units.
+
+## Context manger
+
+objects that are used with the `with` statement to ensure that certain operations are properly initialized and cleaned up
+
+```python
+class MyContextManager:
+    def __enter__(self):
+        # Initialization code goes here
+        print("Entering the context")
+        return self
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        # Cleanup code goes here
+        print("Exiting the context")
+        # Handle exceptions if needed
+        return False  # True if exceptions are handled, False otherwise
+
+# Using the context manager with the 'with' statement
+with MyContextManager() as cm:
+    # Code inside the 'with' block
+    print("Inside the context")
+
+```
+## Builtin modules
+
+
+## Exception handling
+
+```python
+try:
+    # Code that might raise an exception
+    x = 10 / 0
+except Exception as e: #catch all exception
+    print("Cannot divide by zero!")
+ # Handle the specific exception (ZeroDivisionError in this case)
+except ZeroDivisionError: 
+    print("Cannot divide by zero!")
+# Handle division by zero print("Cannot divide by zero!")
+
+finally:
+    # Optional cleanup code
+    print("This will always execute.")
+
+```
+ 
+ **Custom erros:**
+```python
+
+# Define a custom exception class
+class CustomError(Exception):
+    def __init__(self, message="Something went wrong."):
+        self.message = message
+        super().__init__(self.message)
+
+# Raise the custom exception
+def example_function(x):
+    if x < 0:
+        raise CustomError("Input value cannot be negative.")
+        #or
+        # raise Exception("Input value cannot be negative.") 
+
+try:
+    example_function(-5)
+except CustomError as e:
+    print("Custom error caught:", e)
+
+```
+## OOPS
+
+   ```python
+   class Car:
+       def __init__(self, brand, model):
+           self.brand = brand #attributes
+           self.model = model
+
+       def drive(self):
+           print(f"Driving {self.brand} {self.model}")
+
+   my_car = Car("Toyota", "Camry")
+   my_car.drive()  # Output: Driving Toyota Camry
+   ```
+
+ **Attributes**: Attributes are variables associated with a class or an object. They represent the state of the object. methods of attributes `hasattr()` , `setattr()`, `delattr()` and `getattr()`
+ 
+**Methods**:Methods are functions defined within a class that operate on the object's data. The first argument of a method is always `self`, which refers to the object itself.
+
+**Constructor (`__init__`)**: The `__init__` method is a special method called the constructor. It is used to initialize object attributes when an object is created.
+
+**Inheritance** Inheritance allows a class (subclass) to inherit attributes and methods from another class (superclass). Subclasses can override or extend the behavior of the superclass.
+
+```python
+   class ElectricCar(Car):
+       def __init__(self, brand, model, battery_capacity):
+           super().__init__(brand, model)
+           self.battery_capacity = battery_capacity
+
+       def charge(self):
+           print(f"Charging {self.brand} {self.model} with {self.battery_capacity} kWh")
+
+   my_electric_car = ElectricCar("Tesla", "Model S", 100)
+   my_electric_car.drive()   # Output: Driving Tesla Model S
+   my_electric_car.charge()  # Output: Charging Tesla Model S with 100 kWh
+```
+
+**Class (static) variable**: are variables that are shared among all instances (objects) of a class. They are defined within a class but outside of any methods. Class variables are accessed using the class name rather than instance variables
+
+**Static method** : It is decorated with `@staticmethod` to indicate that it is a static method. can be called using class name or using instance. static methods don't have access to instance attributes or methods
+
+**Class Methods**: They have access to class variables but not to instance variables.The first parameter of a class method conventionally named `cls`, which refers to the class itself.
+
+```python
+class Dog:
+    # Class variable
+    species = 'Canis familiaris'
+
+    def __init__(self, name, age):
+        # Instance variables
+        self.name = name
+        self.age = age
+	
+	@staticmethod 
+	def static_method(): 
+		print("This is a static method")
+	@classmethod 
+	def class_method(cls): 
+		print("Class method called")
+
+# Accessing class variable using class name
+print(Dog.species)  # Output: Canis familiaris
+
+# Creating instances of the Dog class
+dog1 = Dog('Buddy', 3)
+dog2 = Dog('Max', 5)
+
+# Accessing class variable using instance
+print(dog1.species)  # Output: Canis familiaris
+print(dog2.species)  # Output: Canis familiaris
+
+# Modifying class variable using class name
+Dog.species = 'Canis lupus'  # Changes species for all instances
+
+# Accessing class variable using instance after modification
+print(dog1.species)  # Output: Canis lupus
+print(dog2.species)  # Output: Canis lupus
+print(hasattr())
+```
+
+**Dunder methods**: are special methods in Python that have double underscores at the beginning and end of their names. These methods allow you to define behavior for built-in operations in Python. 
+
+```python
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    
+    def __str__(self):
+        return f"({self.x}, {self.y})"
+    
+    def __repr__(self):
+        return f"Point({self.x}, {self.y})"
+    
+    def __eq__(self, other):
+        return self.x == other.x and self.y == other.y
+    
+    def __add__(self, other):
+        return Point(self.x + other.x, self.y + other.y)
+    
+    def __sub__(self, other):
+        return Point(self.x - other.x, self.y - other.y)
+
+# Create two Point objects
+p1 = Point(1, 2)
+p2 = Point(3, 4)
+
+# Test magic methods
+print(p1)          # Output: (1, 2)
+print(repr(p1))    # Output: Point(1, 2)
+print(p1 == p2)    # Output: False
+print(p1 + p2)     # Output: Point(4, 6)
+print(p2 - p1)     # Output: Point(2, 2)
+
+```
+
+## File handling
+
+```python
+# Open a file for reading
+file = open("example.txt", "r")
+
+# Open a file for writing
+file = open("example.txt", "w")
+
+# Open a file for appending
+file = open("example.txt", "a")
+
+# Read the entire file
+content = file.read()
+
+# Read one line at a time
+line = file.readline()
+
+# Read all lines into a list
+lines = file.readlines()
+
+# Write to a file
+file.write("Hello, World!")
+
+# Close the file 
+file.close()
+
+#using context manager
+# Open a file for writing
+with open("example.txt", "w") as file:
+    file.write("Hello, World!\n")
+    file.write("This is a Python file handling example.\n")
+
+```
+
+#### File Modes
+- `"r"`: Read mode (default). Opens a file for reading. File must exist.
+- `"w"`: Write mode. Opens a file for writing. Creates a new file or truncates an existing file.
+- `"a"`: Append mode. Opens a file for appending. Creates a new file if it does not exist.
+- `"b"`: Binary mode. Used in conjunction with other modes to open a file in binary mode (e.g., `"rb"`, `"wb"`, `"ab"`).
+
+## Threading
+
+create a new thread by subclassing the `Thread` class and overriding the `run()` method or by passing a target function to the `Thread` constructor.
+```python
+import threading
+
+# Subclassing Thread class
+class MyThread(threading.Thread):
+    def run(self):
+        print("Thread is running")
+
+# Using target function
+def my_function():
+    print("Thread is running")
+
+thread1 = MyThread()
+thread2 = threading.Thread(target=my_function)
+
+thread1.start() 
+thread2.start()
+#### Waiting for Threads to Complete
+thread1.join()
+thread2.join()
+```
+
+**Join**: `join()` method is used to wait for a thread to complete its execution before continuing with the main thread. When you call `join()` on a thread object, the program will block and wait until that thread finishes its execution.`If we want the main thread to wait for one or more additional threads to finish their execution before proceeding further, you can call the `join()` method on those thread objects.`
+
+**Daemon thread**: Are threads that run in the background and are automatically terminated when the program exits it not like normal threads
+
+```python
+import threading
+import time
+
+def demon_worker():
+    while True:
+        print("Demon thread is running...")
+        time.sleep(1)
+
+# Create a demon thread
+demon_thread = threading.Thread(target=demon_worker)
+demon_thread.daemon = True  # Set the thread as demon
+
+# Start the demon thread
+demon_thread.start()
+
+# Main thread continues execution
+print("Main thread continues...")
+
+# Simulate the program running for a while
+time.sleep(5)
+
+```
+## Byte code

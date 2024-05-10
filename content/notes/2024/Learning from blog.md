@@ -66,14 +66,12 @@ draft = false
 - Prioritize and execute
 
 
-
 Two data processing architectures that are extremely popular in the industry are the **Lambda architecture** and the **Kappa architecture**.
 
 https://read.engineerscodex.com/p/how-apple-built-icloud-to-store-billions
 
 1. Apple uses [FoundationDB](https://www.foundationdb.org/) (apple bought this) and Cassandra
 
-##  DoorDash Uses Service Mesh and Cell-Based Architecture to Significantly Reduce Data Transfer Costs
 
 ## [ How Uber Serves Over 40 Million Reads Per Second from Online Storage Using an Integrated Cache](https://www.uber.com/en-IN/blog/how-uber-serves-over-40-million-reads-per-second-using-an-integrated-cache/)
 - See how they avoiding before itself when the redis down they know that there DB get more query so they adjust the query time out in db to reduce the load in there DB

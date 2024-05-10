@@ -546,6 +546,10 @@ spec:
 ### Ingress
 An Ingress is an API object that provides HTTP and HTTPS routing to services based on rules defined by the user.
 
+- **Ingress as Deployment**: Refers to deploying the Ingress controller as a set of pods using a Deployment resource.
+    
+- **Ingress as kind Ingress**: Refers to using the Ingress resource itself to define routing rules for incoming traffic.
+
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -569,12 +573,55 @@ spec:
 **Ingress Controller** is a component responsible for implementing the rules defined in the Ingress resource. It watches for changes to Ingress resources and configures the underlying load balancer or reverse proxy to handle incoming requests accordingly. Popular Ingress Controllers include NGINX Ingress Controller, Traefik, and HAProxy Ingress
 
 ```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-ingress-controller
+  namespace: ingress-nginx
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx-ingress
+  template:
+    metadata:
+      labels:
+        app: nginx-ingress
+    spec:
+      containers:
+        - name: nginx-ingress
+          image: 'nginx/nginx-ingress:latest'
+          ports:
+            - name: http
+              containerPort: 80
+            - name: https
+              containerPort: 443
 
 ```
 
-- **Ingress as Deployment**: Refers to deploying the Ingress controller as a set of pods using a Deployment resource.
-    
-- **Ingress as kind Ingress**: Refers to using the Ingress resource itself to define routing rules for incoming traffic.
+**Service** -> To expose the ingress controller
+
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-ingress
+  namespace: ingress-nginx
+spec:
+  type: LoadBalancer
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
+    - name: https
+      port: 443
+      targetPort: https
+  selector:
+    app: nginx-ingress
+
+```
+
+
 ### Endpoint Objects
 
 Kubernetes is constantly evaluating the Service’s label selector against the current list of healthy Pods on the cluster. Any new Pods that match the selector get added to the `Endpoints object`, and any Pods that disappear get removed. This means the Endpoints object is always up to date. Then, when a Service is sending traffic to Pods, it queries its Endpoints object for the latest list of healthy matching Pods. Every Service gets its own Endpoints object with the same name as the Service.This object holds a list of all the Pods the Service matches and is dynamically updated as matching Pods come and go.
@@ -1041,6 +1088,46 @@ To see the namspace in kind
 Tool
 1. https://squash.solo.io/
 2. https://www.telepresence.io/
+
+
+## Advanced
+
+#### Dynamic Admission Control for Customized Governance
+
+Dynamic Admission Control refers to a Kubernetes feature that allows administrators to intercept, inspect, and modify requests to the Kubernetes API server before the object creation, modification, or deletion is finalized.
+
+First create a Webhook Server: First, you’ll need a webhook server that can validate or mutate Kubernetes objects.
+
+Register the Webhook with Kubernetes: Create `ValidatingWebhookConfiguration` that points to your webhook server: 
+```
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingWebhookConfiguration
+metadata:
+  name: pod-validator-webhook
+webhooks:
+  - name: validator.example.com
+    rules:
+      - operations:
+          - CREATE
+        apiGroups:
+          - ''
+        apiVersions:
+          - v1
+        resources:
+          - pods
+    clientConfig:
+      service:
+        name: webhook-service
+        namespace: default
+        path: /validate-pods
+      caBundle: <CA_BUNDLE>
+    admissionReviewVersions:
+      - v1
+    sideEffects: None
+
+```
+
+
 
 
 Need to study

@@ -108,6 +108,9 @@ iotop -> show who using most io in porcess
 
 `PID/fd`  -> tell how many files are opened by the files
 
+`cat PID/status` - have the current status of the process and 
+`voluntary_ctxt_switches` and `nonvoluntary_ctxt_switches` – this tells you how many times the process was taken off CPU (or put back).
+
 
 EBPF
 
@@ -137,7 +140,6 @@ https://tanelpoder.com/psnapper/
 
 
 BCC allow python to write epbf
-
 
 
 

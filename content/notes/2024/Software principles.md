@@ -42,3 +42,16 @@ Blog for Software principles
 ## Hexgonal architecture
 
 write bussiness logic in centerk
+
+
+## Reactive Architecture
+
+A group of people came together in 2014 and publish a spesification to define the term called Reactive Manifesto. There are 4 principles in the context of Reactive Systems.
+- **Responsive** : The system has to respond quickly to all users under all conditions.
+- **Resilient**: The system stays responsive in the face of [failure](https://www.reactivemanifesto.org/glossary#Failure).
+- **Elastic**: The system should provide responsiveness, despite increases(or decreases) in load. Scaling up provides responsiveness during peak, while scaling down improves cost effectiveness.
+- **Message Driven**: Reactive Systems rely on asynchronous message-passing to establish a boundary between components that ensures loose coupling, isolation and location transparency.
+
+#### Actor Model
+
+It’s a programming paradigm that supports construction of Reactive Systems.It is Message Driven and provide Elasticity and Resilience. So we can use it to build Responsive software. Example [Akka](https://akka.io/)

@@ -54,7 +54,9 @@ Burpsuite toutorial
 1. [A modular exploitation framework extensible with Lua](https://github.com/farinap5/Venera)
 2. https://github.com/assetnote/surf [ SSRF vulnerabilities on Modern Cloud Environments.]
 3. https://caido.io/ # A lightweight web security auditing toolkit brupsuite alternative
+4. https://cylect.io/
 
+## Networking
 ## Nmap
 
 #### CMDS
@@ -92,6 +94,9 @@ Burpsuite toutorial
 
 Zenmap is GUI for nmap
 
+#### Scanning
+- [Invisible network protocol sniffer](https://github.com/casterbyte/Above )
+- 
 ## OSNIT 
 
 #### Tools
@@ -106,6 +111,7 @@ Zenmap is GUI for nmap
 - [Free online free chrome browser](https://kasmweb.com/ )
 - https://epieos.com/  tool for email and phone reverse lookup
 - [SpiderFoot](https://github.com/smicallef/spiderfoot ) automates OSINT for threat intelligence and mapping your attack surface.
+- https://www.osintcombine.com/
 - 
 #### Resources
 1. https://www.myosint.training/ free course
@@ -118,3 +124,11 @@ People
 
 Scanning tool
 - https://null-byte.wonderhowto.com/how-to/hack-like-pro-scan-for-vulnerabilities-with-nessus-0169971/ 
+
+
+Phising
+- https://github.com/kgretzky/evilginx2 Standalone man-in-the-middle attack framework used for phishing login credentials along with session cookies, allowing for the bypass of 2-factor authentication
+- keylogger https://github.com/Geeoon/DNS-Tunnel-Keylogger
+
+
+https://dnsdumpster.com/footprinting-reconnaissance/

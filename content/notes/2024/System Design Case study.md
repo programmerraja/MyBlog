@@ -110,6 +110,56 @@ To standardize key schema, we chose the uniform resource name ([URN](https://en.
 urn:doordash:<cache key type>:<id>#<cache name>
 ````
 
+### [Uber](https://www.uber.com/en-IN/blog/how-uber-serves-over-40-million-reads-per-second-using-an-integrated-cache/)
+
+They using [Docstore](https://www.uber.com/en-IN/blog/schemaless-sql-database/) (distributed database built on top of MySQL) database  where they want to implement caching in query engine layer to optimize the db so let see how they did
+
+#### Docstore
+
+Docstore is mainly divided into three layers: a stateless query engine layer, a stateful storage engine layer, and a control plane.
+
+The stateless query engine layer is responsible for query planning, routing, sharding, schema management, node health monitoring, request parsing, validation, and AuthN/AuthZ.  (they plan to build cache on front of  stateless query engine)
+
+The storage engine layer is responsible for consensus via Raft, replication, transactions, concurrency control, and load management. A partition is typically composed of MySQL nodes backed by NVMe SSDs, which are capable of handling heavy read and write workloads. Additionally, data is sharded across multiple partitions containing one leader and two follower nodes using Raft for consensus.
+
+#### CacheFront
+
+Since Docstore’s query engine layer is responsible for serving reads and writes to clients, it is well suited to integrate the caching layer. It also decouples the cache from disk-based storage, allowing us to scale either of them independently. The query engine layer implements an interface to Redis for storing cached data along with a mechanism to invalidate cached entries
+
+CacheFront uses a cache aside strategy to implement cached reads:
+
+1. Query engine layer gets read request for one more rows
+2. If caching is enabled, try getting rows from Redis; stream response to users
+3. Retrieve remaining rows (if any) from the storage engine
+4. Asynchronously populate Redis with the remaining rows
+5. Stream remaining rows to users
+
+####  Cache Invalidation
+
+They used `Change Data Capture for Cache Invalidation` they have publisher which will  publishes the events for each update in DB and they have consumer which will listen for the changes and do invalidation in Cache
+
+#### Cache key 
+
+They used below format
+`RK{<tablename} | <PARTIONkEY>| <ROWKEY>|<INSTANCE>}`
+
+#### Cache Warming
+
+A Docstore instance spawns two different geographical regions to ensure high availability and fault tolerance. they both have two seprate redis in there region
+ In case of a region failover, another region must be able to serve all requests.
+
+If we have two region we need to sync db and cache data among the region such that if one region get down we will get data from other region but the problem is for the Docstore has its own cross-region replication mechanism. If we replicate the cache content using Redis cross-region replication, we will have two independent replication mechanisms, which could lead to cache vs. storage engine inconsistency
+
+So to solve this they tail the Redis write stream and replicate keys to the remote region. In the remote region instead of directly updating the remote cache, read requests are issued to the query engine layer which, upon a cache miss, reads from the database and writes to the cache such that now both region have same consistent data.
+
+### Circuit Breakers
+
+If a Redis node goes down, we’d like to be able to short circuit requests to that node to avoid the unnecessary latency penalty of a Redis get/set request
+
+To achieve this, we use a sliding window circuit breaker. We count the number of errors on each node per time bucket and compute the number of errors in the sliding window width.
+
+Avoiding DB overload on cache down: let say the redis node is down then suddenly all request will forward to DB. db will be overloaded to avoid that they dynamically adjust the db timeout of the query
+
 
 ## Logging
 

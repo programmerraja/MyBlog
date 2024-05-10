@@ -190,3 +190,6 @@ Blog
 5. [Explain basic and how to handle error case]([https://medium.com/@upadhyayyuvi/building-a-reliable-message-queue-system-with-rabbitmq-and-node-js-step-by-step-guide-275e026d2090](https://medium.com/@upadhyayyuvi/building-a-reliable-message-queue-system-with-rabbitmq-and-node-js-step-by-step-guide-275e026d2090))
 6. [https://www.cloudamqp.com/blog/when-to-use-rabbitmq-or-apache-kafka.html](https://www.cloudamqp.com/blog/when-to-use-rabbitmq-or-apache-kafka.html)
 7. https://youtu.be/HzPOQsMWrGQ 
+
+
+https://github.com/sensu-plugins/sensu-plugins-rabbitmq
