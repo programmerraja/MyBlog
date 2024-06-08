@@ -1,3 +1,4 @@
+
 +++
 title = 'Hacking'
 date = 2024-01-25T07:41:37.3737+05:30
@@ -132,3 +133,18 @@ Phising
 
 
 https://dnsdumpster.com/footprinting-reconnaissance/
+
+
+
+Bluethoot hacking
+
+Scan for blethood
+
+`sudo hcitool scan
+
+
+sdptool browse mac address of bluethhod device
+
+https://github.com/pentestfunctions/BlueDucky
+
+https://urlhaus.abuse.ch/ URLhaus is a project from abuse.ch with the goal of sharing malicious URLs that are being used for malware distribution.

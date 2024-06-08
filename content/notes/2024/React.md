@@ -576,3 +576,12 @@ Need to look
 Need to cover
 1. Forward ref
 2. useSyncExternalStore
+
+
+
+
+
+
+Memory leak
+- Avoid using usecallback if you have a big object or varible it will be hold on reference by the callback
+- https://schiener.io/2024-03-03/react-closures

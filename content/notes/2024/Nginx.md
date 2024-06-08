@@ -297,12 +297,85 @@ stream {
 Rate limiting →https://www.nginx.com/blog/rate-limiting-nginx/
 
 
+## Optimization 
 
+When a client sends an HTTP request to the NGINX server, it typically establishes a TCP connection to send and receive data. This connection can be reused for multiple requests, especially if keepalive connections are enabled. 
 
+**keepalive_requests** and **keepalive_timeout** directives to
+alter the number of requests that can be made over a single connec‐
+tion and the time idle connections can stay open:
+
+```
+http {
+	
+	keepalive_requests 320;
+	keepalive_timeout 300s;
+
+}
+```
+The keepalive_requests directive defaults to 100, and the
+keepalive_timeout directive defaults to 75 seconds.
+
+**Keeping Connections Open Upstream**
+
+When opening connection to upstream server we can set keep live that make connection to open and resuse for further request such that for each request it won't open new connection
+
+```
+proxy_http_version 1.1; 
+proxy_set_header Connection "" #remove the `Connection` header when forwarding requests to upstream servers. to make connection live
+
+upstream backend {
+    server 10.0.0.42;
+    server 10.0.2.56;
+    keepalive 32; # specifies that NGINX should maintain up to 32 idle connections to each of the upstream servers
+}
+
+```
+
+**Response buffering**
+
+When nginx recevied the response that is passed to a client synchronously, immediately as it is received. nginx will not try to read the whole response from the proxied server. we can enable buffering .
+
+nginx receives a response from the proxied server as soon as possible, saving it into the buffers set by the [proxy_buffer_size](https://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_buffer_size) and [proxy_buffers](https://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_buffers) directives. If the whole response does not fit into memory, a part of it can be saved to a [temporary file](https://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_temp_path) on the disk.
+
+```
+server {
+proxy_buffering on;
+proxy_buffer_size 8k;
+proxy_buffers 8 32k;
+proxy_busy_buffer_size 64k;
+...
+}
+```
+
+`Note: **Proxy buffering is enabled by default in NGINX**`
+
+**Buffering Access Logs**
+
+buffer logs to reduce the opportunity of blocks to the NGINX worker process when the system is under load.
+```
+http {
+	access_log /var/log/nginx/access.log main buffer=32k flush=1m;
+}
+```
 ## CMDS 
 
 - `ngnix -t `→ to test the config file is everything ok
 
+## Security
+
+This will not send the ngix version
+```
+http{
+# Turn off server tokens 
+server_tokens off;
+}
+
+```
+
+1. **Prevents MIME type sniffing**: Browsers sometimes try to guess the MIME type of a file based on its content, which can lead to security vulnerabilities. For example, a file with a misleading extension might be interpreted as a different type of file than it actually is, potentially leading to XSS (Cross-Site Scripting) attacks.
+    
+2. **Forces the browser to respect the declared content type**: By sending the `X-Content-Type-Options: nosniff` header, you're instructing the browser to trust the MIME type provided by the server and not try to infer it.
 ## Alternative
 #### [Envoy](https://www.envoyproxy.io/docs/envoy/latest/)
 it is layer 7 proxy and use Yaml extension for config

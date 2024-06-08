@@ -65,3 +65,11 @@ vmstat’ - reports information about processes, memory, paging, block IO, traps
 
 
 GRPC
+
+
+virtual memory
+
+register is 32 bit so it can only store 2gb of ram address
+
+memory fragmention
+page table

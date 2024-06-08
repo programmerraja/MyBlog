@@ -5,6 +5,7 @@ date = 2024-02-11T19:01:46.4646+05:30
 draft = true
 tags =[]
 +++ 
+
 ## Linux Filesystem
 
 ## Getting Help
@@ -173,3 +174,4 @@ list open files
  - _Errors_ in terms of the USE method refer to the count of error events
 
 The first step in the USE method is to create a list of resources. in the system like cpu,memory, etc 
+https://queue.acm.org/detail.cfm?id=2413037

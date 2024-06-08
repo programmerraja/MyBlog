@@ -50,6 +50,69 @@ Scalable Postgres for stream processing, analytics, and management. KsqlDB and A
 ## Redis
 
 
+## Influx DB
+  
+InfluxDB is an open-source time-series database designed to handle high write and query loads for time-stamped data it uses column oriented
+
+#### Concepts
+
+Stroage Engine : LevelDB
+```
+7gy8H2ZmWzcb0YrWhzlbksyB9vkJjdp8mGvj6trn-USBhYFuf8ZMhQbPsI2fHcQoUOKGUA0WMtlKRmW48K04oQ==
+```
+
+
+InfluxDB is schemaless, there is still a conceptual schema that includes:
+
+1. **Measurement**: We'll have a measurement called "environment" to represent the environmental data recorded by the sensors.
+2. **Tag sets**: We'll use tags to identify each room. For example, we'll have tags like "room_id" and "building_floor" to uniquely identify each room. Tags are indexed and are useful for filtering and grouping data efficiently.
+3. **Field set**: The fields will contain the actual data values recorded by the sensors. We'll have fields for "temperature" and "humidity". Fields are where the data resides and are not indexed like tags.
+4. **Timestamp**: Each data point will have a timestamp representing when the data was recorded.
+
+**example**
+```
+Measurement: environment
+
+Tags: room_id=101, building_floor=1
+Fields: temperature=23.5°C, humidity=45%
+Timestamp: 2024-05-15T12:00:00Z
+
+Tags: room_id=102, building_floor=1
+Fields: temperature=24.0°C, humidity=50%
+Timestamp: 2024-05-15T12:00:00Z
+
+Tags: room_id=201, building_floor=2
+Fields: temperature=22.0°C, humidity=40%
+Timestamp: 2024-05-15T12:00:00Z
+
+INSERT environment,room_id=101,building_floor=1 temperature=23.5,humidity=45 1645660800000000000
+
+```
+
+**Flux**
+Flux is a powerful data scripting and query language.It's designed specifically for working with time-series data and is the primary query language for InfluxDB 2.0 and later versions.
+
+Downsampling is a technique used in time-series databases like InfluxDB to reduce the resolution of data by aggregating multiple data points into larger time intervals.
+
+  
+InfluxQL is the query language used with InfluxDB versions prior to 2.0. It's specifically designed for querying time-series data stored in InfluxDB
+
+  
+In InfluxDB, a "bucket" is a logical container that holds time-series data. It's essentially a storage abstraction used to organize and manage data within the database. Buckets serve as a way to group related data together and define the retention policy for that data.
+
+
+LSM  delete are expensive
+
+
+
+
+
+#### Resources
+- https://nakabonne.dev/posts/write-tsdb-from-scratch/ 
+
+
+
+
 #### Resources
 - https://redis.io/docs/latest/operate/oss_and_stack/management/optimization/benchmarks/
 - https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/understanding-partitioning-and-sharding-in-postgres-and-citus/ba-p/3891629
@@ -74,4 +137,5 @@ Scalable Postgres for stream processing, analytics, and management. KsqlDB and A
 #### **Horizontal Partitioning**
 
 - In this we split the data in two database based on shard key let say from user name start with A to F will be in one database and other's in new database
- 
+
+

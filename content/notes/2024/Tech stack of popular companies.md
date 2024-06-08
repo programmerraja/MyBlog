@@ -29,6 +29,11 @@ draft = true
 
 ## instagram
 1. Rabbitmq
+2. Django
+3. postgresql -> user, media frendship,comments
+4. cassendra -> feeds activites,etc
+5. celery
+6. memcache
 
 ## Reddit
 - Rabbitmq

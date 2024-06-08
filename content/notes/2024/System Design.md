@@ -68,10 +68,23 @@ A cell-based architecture comes from the concept of a Bulkhead pattern. it simll
 Bulkhead pattern
 -  In a bulkhead architecture, elements of an application are isolated into pools so that if one fails, the others will continue to function.
 
-## Request Coalescing
+## Concurrency Patterns
+#### Request Coalescing
+The idea of request collapsing is simple: if you have multiple requests for the same resource, allow only one to pass through but use its result for all responses.
 
-Request coalescing is a strategy used in web servers to streamline data processing by consolidating multiple similar requests into a single request, optimizing resource utilization, and improving response times.
-1. [resources](https://medium.com/@atarax/request-coalescing-a-shield-against-traffic-spikes-implementation-in-go-8d6cb3258630)
+#### **Request Hedging**.
+
+Lets say we have cache and we recevied the query that not in cache so it request DB for data but similarly there are more request for same resource all request will hit the DB
+
+To avoid this problem, we use a technique called **Request Collapsing**.
+
+1. The first read request acquires a lock.
+2. All subsequent requests are made to wait on this lock.
+3. Once the DB call returns and populates the cache, the lock is opened.
+4. All dependent requests read the result from the cache.
+
+What happens if a DB call fails? All request waiting for lock will request DB to solve this we send two duplicate requests. The first successful response is used to answer all dependent requests. is called **Request Hedging**.
+
 
 
 Resources
@@ -108,3 +121,9 @@ https://jakelazaroff.com/words/an-interactive-intro-to-crdts/
 How Canva Supports Real-Time Collaboration for 135 Million Monthly Users
 
 They using  [RSocket](https://rsocket.io/) for real-time collaboration. which better then WS
+
+
+
+Panic mode 
+multi cdn
+kafa
