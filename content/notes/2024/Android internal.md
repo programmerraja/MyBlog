@@ -84,3 +84,11 @@ CMD line tool it allows developers to communicate with and control Android devic
 
 
 ## The FastBoot Protocol
+
+
+
+
+
+
+## Tool
+- https://www.charlesproxy.com/ -> to proxy the  network request

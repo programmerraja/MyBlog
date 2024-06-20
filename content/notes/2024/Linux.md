@@ -112,6 +112,96 @@ iotop -> show who using most io in porcess
 `cat PID/status` - have the current status of the process and 
 `voluntary_ctxt_switches` and `nonvoluntary_ctxt_switches` – this tells you how many times the process was taken off CPU (or put back).
 
+cmd to print ip of process
+```
+cat /proc/$(pidof java)/net/tcp \ | awk -v DPORT=$(printf ":%x" 9042) '$3 ~ DPORT { print $3}' \ | sort -u \ | cut -f1 -d':' \ | awk '{gsub(/../,"0x& ")} OFS="." {for(i=NF;i>0;i--) printf "%d%s", $i, (i == 1 ? ORS : OFS)}'
+```
+
+```
+This document describes the interfaces /proc/net/tcp and /proc/net/tcp6.
+Note that these interfaces are deprecated in favor of tcp_diag.
+
+These /proc interfaces provide information about currently active TCP
+connections, and are implemented by tcp4_seq_show() in net/ipv4/tcp_ipv4.c
+and tcp6_seq_show() in net/ipv6/tcp_ipv6.c, respectively.
+
+It will first list all listening TCP sockets, and next list all established
+TCP connections. A typical entry of /proc/net/tcp would look like this (split
+up into 3 parts because of the length of the line):
+
+   46: 010310AC:9C4C 030310AC:1770 01
+   |      |      |      |      |   |--> connection state
+   |      |      |      |      |------> remote TCP port number
+   |      |      |      |-------------> remote IPv4 address
+   |      |      |--------------------> local TCP port number
+   |      |---------------------------> local IPv4 address
+   |----------------------------------> number of entry
+
+   00000150:00000000 01:00000019 00000000
+      |        |     |     |       |--> number of unrecovered RTO timeouts
+      |        |     |     |----------> number of jiffies until timer expires
+      |        |     |----------------> timer_active (see below)
+      |        |----------------------> receive-queue
+      |-------------------------------> transmit-queue
+
+   1000        0 54165785 4 cd1e6040 25 4 27 3 -1
+    |          |    |     |    |     |  | |  | |--> slow start size threshold,
+    |          |    |     |    |     |  | |  |      or -1 if the threshold
+    |          |    |     |    |     |  | |  |      is >= 0xFFFF
+    |          |    |     |    |     |  | |  |----> sending congestion window
+    |          |    |     |    |     |  | |-------> (ack.quick<<1)|ack.pingpong
+    |          |    |     |    |     |  |---------> Predicted tick of soft clock
+    |          |    |     |    |     |              (delayed ACK control data)
+    |          |    |     |    |     |------------> retransmit timeout
+    |          |    |     |    |------------------> location of socket in memory
+    |          |    |     |-----------------------> socket reference count
+    |          |    |-----------------------------> inode
+    |          |----------------------------------> unanswered 0-window probes
+    |---------------------------------------------> uid
+
+timer_active:
+  0  no timer is pending
+  1  retransmit-timer is pending
+  2  another timer (e.g. delayed ack or keepalive) is pending
+  3  this is a socket in TIME_WAIT state. Not all fields will contain
+     data (or even exist)
+  4  zero window probe timer is pending
+```
+
+
+Mem file 
+
+Maps file
+
+``55c58ca07000-55c58ca0c000 r--p 00000000 fd:01 6815950  /usr/bin/dash``
+
+- **Address Range (`55c58ca07000-55c58ca0c000`)**: This shows the range of virtual memory addresses that this mapping covers. The first address (`55c58ca07000`) is the starting address, and the second address (`55c58ca0c000`) is the ending address. The memory in this range is accessible to the process.
+
+- **Permissions (`r--p`)**: Indicates the permissions for this memory region:
+	- `r`: Readable
+    - `-`: Not writable
+    - `p`: Private (not shared with other processes)
+
+- **Offset (`00000000`)**: This is the offset within the file or device that the mapping is backed by. For executable files, this typically represents the offset within the file where this section resides.
+    
+- **Device (`fd:01`)**: This specifies the device (file descriptor) that backs this mapping. In this case, `fd:01` suggests a file descriptor associated with a file.
+    
+- **Inode (`6815950`)**: The inode number of the file that backs this mapping. This uniquely identifies the file within the filesystem.
+    
+- **File Path (`/usr/bin/dash`)**: The path to the file or device that backs this memory mapping. In this case, it's `/usr/bin/dash`, which is the executable file of the `dash` shell.
+
+### Common Types of Memory Regions:
+
+- **Code (`r-xp`)**: Executable code of the program.
+- **Data (`rw-p`)**: Read-write data.
+- **Read-only data (`r--p`)**: Read-only data such as constants or strings.
+- **Heap (`rw-p`)**: Dynamically allocated memory.
+- **Stack (`rw-p`)**: The process's stack, where local variables and function call information are stored.
+- **Shared libraries (`r-xp` or `r--p`)**: Memory regions mapped from shared libraries.
+
+
+
+
 
 EBPF
 

@@ -94,6 +94,8 @@ The main disadvantage is If the number of unique categories is very large, the r
 
 **Lemmatization** is the process of reducing words to their base or dictionary form (lemma) by considering the context and morphological analysis, such as converting "running" to "run" and "better" to "good".
 
+lib that used for above nltk, spacy in python
+
 
 https://www.tensorflow.org/text/tutorials/word2vec
 
@@ -303,6 +305,7 @@ https://aibyhand.substack.com/ -> AI by hand
 
 Transformer
 - https://www.philschmid.de/getting-started-pytorch-2-0-transformers
+- https://www.borealisai.com/research-blogs/tutorial-14-transformers-i-introduction/
 
 
 
@@ -333,6 +336,8 @@ Resources
 - https://weaviate.io/blog/local-rag-with-ollama-and-weaviate
 - https://videolectures.net/eswc2016_fortuna_machine_learning/
 
+To avoid halucination
+- https://arxiv.org/pdf/2303.08896 SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models
 
 emdeding
 - https://arxiv.org/pdf/1411.2738  need ot reaf
@@ -341,9 +346,8 @@ emdeding
 
 
 
-
-
-
+books
+- https://shepherd.com/best-books/machine-learning-and-deep-neural-networks
 
 
 
@@ -361,3 +365,9 @@ Transformer-
 
 Langchain alternative
 - https://haystack.deepset.ai/tutorials
+
+
+
+LLM evaulation
+- [truelens](https://www.trulens.org/) 
+- 
