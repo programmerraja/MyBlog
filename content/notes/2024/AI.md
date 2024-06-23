@@ -224,6 +224,11 @@ https://github.com/truera/trulens Evaluation and Tracking for LLM Experiments
 https://microsoft.github.io/autogen/
 https://github.com/decodingml/llm-twin-course 
 
+##  CRAG
+
+Corrective Retrieval Augmented Generation.The strategy we followed for this let’s say for each topic, we consult the book and identify relevant sections. Before forming an opinion, categorize the gathered information into three groups: `**Correct**`, `**Incorrect**`, and `**Ambiguous**`. Process each type of information separately. Then, based on this processed information, compile and summarize it mentally
+
+
 
 Rank GPT
 - instead of just querying in vector and sending to LLM after querying ask LLM can you rank the doc that fetched from vecotr db based relvant to the query and again send to LLM with re ranked doc
@@ -239,6 +244,7 @@ Hypothetical document embedding
 - ask LLM to suggest Hypothetical document for query and use that to fetch from DB
 
 ## Vector database
+
 A dataset of three sentences, each has 3 words (or tokens)
 - In practice, a dataset may contain millions or billions of sentences. 
 - The max number of tokens may be tens of thousands (e.g., 32,768 mistral-7b).
@@ -283,7 +289,10 @@ Process "how are you"
 
 ![[Screenshot from 2024-05-28 06-45-42.png]]
 
-
+algorithms commonly used for similarity search indexing
+- Product quantization (PQ)
+- Locality sensitive hashing
+- Hierarchical navigable small world (HNSW
 
 
 https://aibyhand.substack.com/ -> AI by hand
@@ -303,9 +312,6 @@ https://aibyhand.substack.com/ -> AI by hand
 - https://www.philschmid.de/fine-tune-llms-in-2024-with-trl
 
 
-Transformer
-- https://www.philschmid.de/getting-started-pytorch-2-0-transformers
-- https://www.borealisai.com/research-blogs/tutorial-14-transformers-i-introduction/
 
 
 
@@ -340,7 +346,7 @@ To avoid halucination
 - https://arxiv.org/pdf/2303.08896 SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models
 
 emdeding
-- https://arxiv.org/pdf/1411.2738  need ot reaf
+- https://arxiv.org/pdf/1411.2738  need ot read
 - https://ronxin.github.io/wevi/# word embedding visual inspector
 
 
@@ -350,19 +356,6 @@ books
 - https://shepherd.com/best-books/machine-learning-and-deep-neural-networks
 
 
-
-Neural network
-
-Transformer-
-- https://jalammar.github.io/illustrated-transformer/
-- https://daleonai.com/transformers-explained
-
-
-
-
-
-
-
 Langchain alternative
 - https://haystack.deepset.ai/tutorials
 
@@ -370,4 +363,7 @@ Langchain alternative
 
 LLM evaulation
 - [truelens](https://www.trulens.org/) 
-- 
+
+
+## AutoML 
+Frameworks represent a noteworthy leap in the evolution of machine learning. By streamlining the complete model development cycle, including tasks such as data cleaning, feature selection, model training, and hyperparameter tuning, AutoML frameworks significantly economize on the time and effort customarily expended by data scientists.
