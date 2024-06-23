@@ -2,7 +2,7 @@
 title = 'Natural Language Processing with Transformers  Notes'
 date = 2024-06-22T19:11:33.3333+05:30
 draft = true
-tags =[books]
+tags =['books']
 +++ 
 
 ## Hello Transformers
