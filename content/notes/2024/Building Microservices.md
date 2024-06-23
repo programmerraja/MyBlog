@@ -18,9 +18,7 @@ Before thinking as service try to see does the problem can solved by
 
 ## How to Model Services
 
-Cohesion 
- related behavior to sit together, and unrelated behavior to sit elsewhere. Why?
-Well, if we want to change behavior, we want to be able to change it in one place, and release that change as soon as possible. If we have to change that behavior in lots of different places, we’ll have to release lots of different services  to deliver that change. Making changes in lots of different places is slower, and deploying lots of services at once is risky
+Cohesion related behavior to sit together, and unrelated behavior to sit elsewhere. Why? Well, if we want to change behavior, we want to be able to change it in one place, and release that change as soon as possible. If we have to change that behavior in lots of different places, we’ll have to release lots of different services  to deliver that change. Making changes in lots of different places is slower, and deploying lots of services at once is risky
 
 Bounded context
 - understand the bussiness well and user then only we can come up with bounded context
@@ -31,7 +29,7 @@ clue for discovering context
 - Linguistic boundaries (group the word that are smillar)
 - data flow owner ship
 - Domain expert boundaries
--
+
 
 finding service boundaries the one rule that matters maximise your ability to frequently deliver and get feedback
 

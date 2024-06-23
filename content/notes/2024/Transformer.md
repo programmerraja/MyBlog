@@ -40,6 +40,33 @@ another; they’re suitable for machine translation and summarization tasks. In
 addition to the Transformer architecture, which as we’ve seen combines an
 encoder and a decoder, the BART and T5 models belong to this class.
 
+
+- **query** — asking for information
+- **key** — saying that it has some information
+- **value** — giving the information
+
+
+**Optimizer:** The optimizer in a Transformer model refers to the algorithm used to update the model parameters during training in order to minimize the loss function. Some common optimizers used in Transformer models include:
+
+1. **Adam (Adaptive Moment Estimation)**: This is a popular optimizer that computes adaptive learning rates for each parameter. It combines the advantages of two other extensions of stochastic gradient descent, namely AdaGrad and RMSProp.
+    
+2. **AdamW**: This is a variant of Adam that incorporates weight decay regularization directly into the optimizer, which can stabilize training and improve generalization.
+    
+3. **SGD (Stochastic Gradient Descent)**: Though less commonly used in Transformers compared to Adam variants, SGD updates model parameters based on the gradient of the loss function with respect to the parameters.
+    
+4. **AdaGrad and RMSProp**: These are older optimizers that adjust the learning rates of model parameters based on the frequency of their updates during training.
+
+
+**Loss Function:** The loss function in a Transformer model defines the objective that the optimizer seeks to minimize during training. For tasks like machine translation or language modeling, common loss functions include:
+
+1. **Cross-Entropy Loss**: This is widely used in classification tasks and measures the performance of a classification model whose output is a probability value between 0 and 1.
+    
+2. **Sequence-to-Sequence Loss**: Specifically designed for tasks where the model outputs a sequence (such as machine translation), this loss function considers the entire predicted sequence and compares it with the target sequence.
+    
+3. **Masked Language Modeling Loss**: Used in models like BERT (which uses Transformer architecture), this loss function helps the model learn to predict masked words within a sentence.
+    
+4. **Perplexity**: In language modeling tasks, perplexity is often used as an evaluation metric that correlates with the cross-entropy loss. Lower perplexity indicates a better-performing model.
+
 ## BERT Model
 
 has 768 feature vector for embedding and BERT has a fixed vocabulary of 30,000 words (or tokens).
@@ -131,3 +158,6 @@ Resource
 - https://daleonai.com/transformers-explained
 -  https://www.philschmid.de/getting-started-pytorch-2-0-transformers
 - https://www.borealisai.com/research-blogs/tutorial-14-transformers-i-introduction/
+- https://notesonai.com/bert
+
+https://karpathy.github.io/2015/05/21/rnn-effectiveness/

@@ -376,6 +376,7 @@ server_tokens off;
 1. **Prevents MIME type sniffing**: Browsers sometimes try to guess the MIME type of a file based on its content, which can lead to security vulnerabilities. For example, a file with a misleading extension might be interpreted as a different type of file than it actually is, potentially leading to XSS (Cross-Site Scripting) attacks.
     
 2. **Forces the browser to respect the declared content type**: By sending the `X-Content-Type-Options: nosniff` header, you're instructing the browser to trust the MIME type provided by the server and not try to infer it.
+
 ## Alternative
 #### [Envoy](https://www.envoyproxy.io/docs/envoy/latest/)
 it is layer 7 proxy and use Yaml extension for config

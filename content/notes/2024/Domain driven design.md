@@ -23,9 +23,6 @@ Chapter 3
 ## Binding Model and Implementation
 
 
-
-
-
 vaule objects
 tell dont ask -> if u have module that u want to do some validation u write a function that get required data from module and do the validation in here we just getting the data so  instead put the validation inside module
 

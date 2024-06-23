@@ -99,7 +99,7 @@ lib that used for above nltk, spacy in python
 
 https://www.tensorflow.org/text/tutorials/word2vec
 
-#### GloVe
+### GloVe
 Global Vectors for Word Representation.Unlike other word embedding methods like Word2Vec, which rely on local context information (e.g., predicting a word based on its neighbors), GloVe leverages global word co-occurrence statistics from a corpus to capture the meanings of words.
 
 GloVe constructs a word-word co-occurrence matrix using the entire corpus. Each element of this matrix represents how often a pair of words appears together in a context window like below let say we have a "**The cat is fluffy. The dog is fluffy. The cat and the dog are friends.**"
@@ -142,6 +142,101 @@ Modern LLM stack
 - Data bricks -> data pipelines preprocessing and summary analytics
 - hugging face -> datasets ,models,tokenizers and inference tools
 - mosaic ML -> model traning ,LLM config and manged GPU
+
+
+### Keras embedding layer
+
+Keras offers an embedding layer that can be used for neural networks, such as RNN’s (recurrent neural networks) for text data. This layer is defined as the first layer of a more complex architecture. The embedding layer needs at least three input values:
+
+- **input_dim:** Integer. Size of the vocabulary, i.e. maximum integer index+1.
+- **output_dim:** Integer. Dimension of the dense embedding.
+- **input_length:** Length of input sequences, when it is constant. This argument is required if you are going to connect Flatten then Dense layers upstream (without it, the shape of the dense outputs cannot be computed).
+
+
+```python
+import numpy as np
+from keras.preprocessing.text import Tokenizer
+from keras.preprocessing.sequence import pad_sequences
+from keras.models import Sequential
+from keras.layers import Embedding, Flatten, Dense
+
+# Sample training data
+texts = [
+    "I love this movie, it is fantastic!",
+    "The movie was okay, not great.",
+    "I did not like the movie, it was boring.",
+    "Fantastic film, I enjoyed every moment!",
+    "Terrible movie, I won't watch it again."
+]
+labels = [1, 0, 0, 1, 0]  # 1 for positive, 0 for negative
+
+# Tokenize the text
+tokenizer = Tokenizer(num_words=10000)
+tokenizer.fit_on_texts(texts)
+sequences = tokenizer.texts_to_sequences(texts)
+
+# Pad sequences to ensure uniform length
+max_length = 10
+data = pad_sequences(sequences, maxlen=max_length)
+
+# Convert labels to a numpy array
+labels = np.array(labels)
+
+# Define vocabulary size and embedding dimensions
+vocab_size = 10000
+embedding_dim = 50
+
+# Create the model
+model = Sequential()
+model.add(Embedding(input_dim=vocab_size, output_dim=embedding_dim, input_length=max_length))
+model.add(Flatten())
+model.add(Dense(1, activation='sigmoid'))  # For binary classification
+
+# Compile the model
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+# Print the model summary
+model.summary()
+
+# Train the model
+model.fit(data, labels, epochs=10, batch_size=2, validation_split=0.2)
+
+# Sample test data
+test_texts = [
+    "I really enjoyed this film, it was excellent!",
+    "The film was not good, I did not enjoy it.",
+]
+test_labels = [1, 0]  # 1 for positive, 0 for negative
+
+# Tokenize the test text
+test_sequences = tokenizer.texts_to_sequences(test_texts)
+
+# Pad sequences to ensure uniform length
+test_data = pad_sequences(test_sequences, maxlen=max_length)
+
+# Convert test labels to a numpy array
+test_labels = np.array(test_labels)
+
+# Evaluate the model on the test data
+loss, accuracy = model.evaluate(test_data, test_labels, batch_size=2)
+print(f"Test Loss: {loss}")
+print(f"Test Accuracy: {accuracy}")
+
+# Make predictions on the test data
+predictions = model.predict(test_data)
+
+# Print the predictions and corresponding test labels
+for i, prediction in enumerate(predictions):
+    print(f"Text: {test_texts[i]}")
+    print(f"Predicted: {'Positive' if prediction > 0.5 else 'Negative'}")
+    print(f"Actual: {'Positive' if test_labels[i] == 1 else 'Negative'}\n")
+
+```
+
+
+### Resources
+- https://medium.com/@RobinVetsch/nlp-from-word-embedding-to-transformers-76ae124e6281
+- [Text Embeddings: Comprehensive Guide](https://towardsdatascience.com/text-embeddings-comprehensive-guide-afd97fce8fb5)
 
 ## Transformer
 

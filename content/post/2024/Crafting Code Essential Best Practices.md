@@ -6,6 +6,8 @@ tags =[]
 +++ 
 
 ## Nodejs
+- Avoid using blocking operation
+- 
 
 
 

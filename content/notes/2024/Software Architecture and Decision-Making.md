@@ -1,6 +1,7 @@
 +++
 title = 'Software Architecture and Decision-Making'
 date  = 2024-01-22T08:19:32.3232+05:30
+tags  = ['book']
 draft = false
 +++
 
@@ -84,7 +85,7 @@ Eight mental models that help us think about and understand performance
 	- is used to predict speed up of a task execution time when it’s scaled to run on multiple processors. It simply states that the maximum speed up will be limited by the serial fraction of the task execution as it will create resource contention.
 	- `one woman nine months to make one baby, “nine women can’t make a baby in one month`
 	- Assume if have 3 thread that doing a single task  it take 2 sec but the most of the time will spend on maintining the 3 thread and resources sharing
-	- Parellel process are efficient when they are independ
+	- Parellel process are efficient when they are independt
 5. Universal Scalability Law
 	- says that actual speedup is even worse than Amdahl’s law due to shared variables. USL defines a new parameter coherency, which is the overhead added by communication between multiple processes, threads, or nodes.
 6. Latency and Utilization Trade-offs

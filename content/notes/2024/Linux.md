@@ -38,8 +38,8 @@ Linux has a Dynamic Host Configuration Protocol (DHCP) server that runs a daemon
 
 Changing Your DNS Server
 - /etc/resolv.conf -> change content here
-`If you’re using a DHCP address and the DHCP server provides a DNS setting, the
-DHCP server will replace the contents of the file when it renews the DHCP address.
+
+If you’re using a DHCP address and the DHCP server provides a DNS setting, the DHCP server will replace the contents of the file when it renews the DHCP address.
 
 The hosts file is located at /etc/hosts, and kind of as with
 DNS, you can use it to specify your own IP address–domain name mapping.
@@ -48,7 +48,6 @@ when you enter www.microsoft.com (or any other domain) into the browser,
 rather than let the DNS server decide. As a hacker, this can be useful for
 hijacking a TCP connection on your local area network to direct traffic to a
 malicious web server with a tool such as dnsspoof .
-From the command line, type in the followin`
 
 
 Advanced Packaging Tool
