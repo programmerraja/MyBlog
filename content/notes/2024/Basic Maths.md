@@ -16,3 +16,11 @@ A log is exponent log (base2) 8 is same as what 2 power is 8
 
 
 Log base 10 are used in maths
+
+
+
+Trignomentry
+
+Sin -> to represent the vaule in vertical
+cos-> to represent the vaule in horzontal
+

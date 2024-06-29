@@ -7,6 +7,67 @@ tags =[]
 
 ## RNN
 
+```plaintext
+
+    xt: Input at time step t
+    ht: Hidden state at time step t
+    yt: Output at time step t
+    Wh: Weights from input to hidden layer
+    Uh: Weights from hidden to hidden layer
+    Wy: Weights from hidden to output layer
+    bh: Bias for the hidden layer
+    by: Bias for the output layer
+
+                   Forward Pass
+    ------------------------------------------------
+    
+    Input Sequence           Hidden States              Outputs
+    
+    xt       xt+1      xt+2      ...       xt+n
+     |         |         |                   |
+     v         v         v                   v
+   +---+     +---+     +---+     ...       +---+
+   |   |     |   |     |   |               |   |
+   |Wh |     |Wh |     |Wh |               |Wh |
+   |   |     |   |     |   |               |   |
+   +---+     +---+     +---+     ...       +---+
+     |         |         |                   |
+     v         v         v                   v
+   +---+     +---+     +---+     ...       +---+
+   | h0| --> | h1| --> | h2| --> ... -->   | ht| --> ... 
+   +---+     +---+     +---+     ...       +---+
+     |         |         |                   |
+     v         v         v                   v
+   +---+     +---+     +---+     ...       +---+
+   |Uh |     |Uh |     |Uh |               |Uh |
+   +---+     +---+     +---+     ...       +---+
+     |         |         |                   |
+     v         v         v                   v
+   +---+     +---+     +---+     ...       +---+
+   |bh |     |bh |     |bh |               |bh |
+   +---+     +---+     +---+     ...       +---+
+     |         |         |                   |
+     v         v         v                   v
+   +---+     +---+     +---+     ...       +---+
+   |   |     |   |     |   |               |   |
+   |Wy |     |Wy |     |Wy |               |Wy |
+   |   |     |   |     |   |               |   |
+   +---+     +---+     +---+     ...       +---+
+     |         |         |                   |
+     v         v         v                   v
+   +---+     +---+     +---+     ...       +---+
+   | y0|     | y1|     | y2|     ...       | yt| --> ...
+   +---+     +---+     +---+     ...       +---+
+     |         |         |                   |
+     v         v         v                   v
+   +---+     +---+     +---+     ...       +---+
+   |by |     |by |     |by |               |by |
+   +---+     +---+     +---+     ...       +---+
+
+```
+
+- https://www.kaggle.com/code/fareselmenshawii/rnn-from-scratch
+
 #### BiLSTM
 
 A Bidirectional Long Short-Term Memory (BiLSTM) is a type of recurrent neural network (RNN) architecture that is used to process sequential data. It extends the standard Long Short-Term Memory (LSTM) model by introducing the concept of bidirectionality, allowing the model to have both forward and backward information about the sequence.
@@ -46,6 +107,8 @@ encoder and a decoder, the BART and T5 models belong to this class.
 - **value** — giving the information
 
 
+## Optimizer and loss function
+
 **Optimizer:** The optimizer in a Transformer model refers to the algorithm used to update the model parameters during training in order to minimize the loss function. Some common optimizers used in Transformer models include:
 
 1. **Adam (Adaptive Moment Estimation)**: This is a popular optimizer that computes adaptive learning rates for each parameter. It combines the advantages of two other extensions of stochastic gradient descent, namely AdaGrad and RMSProp.
@@ -56,6 +119,11 @@ encoder and a decoder, the BART and T5 models belong to this class.
     
 4. **AdaGrad and RMSProp**: These are older optimizers that adjust the learning rates of model parameters based on the frequency of their updates during training.
 
+#### SGD
+
+**Batch Gradient Descent**: Computes the gradient of the loss function with respect to the parameters for the entire training dataset and updates the parameters once per iteration. This can be computationally expensive for large datasets.
+
+**Stochastic Gradient Descent**: Computes the gradient of the loss function for each training example individually and updates the parameters for each training example. This makes SGD much faster and more efficient for large datasets.
 
 **Loss Function:** The loss function in a Transformer model defines the objective that the optimizer seeks to minimize during training. For tasks like machine translation or language modeling, common loss functions include:
 
@@ -70,6 +138,11 @@ encoder and a decoder, the BART and T5 models belong to this class.
 ## BERT Model
 
 has 768 feature vector for embedding and BERT has a fixed vocabulary of 30,000 words (or tokens).
+
+GPT-3 has 50,257 words of voc and 12288 dimension 
+query,key  have  `128 * 12,288` dimension
+vaule  = `12288 * 12288`
+96 head attention
 
 Has 12 layer of encoder only 
 
@@ -145,8 +218,10 @@ for sent in sentences:
     print(encoded_sent)
 ```
 
-
-
+### Resources
+- https://towardsdatascience.com/deconstructing-bert-part-2-visualizing-the-inner-workings-of-attention-60a16d86b5c1
+- https://peterbloem.nl/blog/transformers
+- https://github.com/jessevig/bertviz
 
 
 

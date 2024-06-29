@@ -15,3 +15,5 @@ tags =[]
 
 **View memory usage of processes:**
 - `ps aux --sort=-%mem | awk 'NR<=10{print $0}'`
+
+` sudo du -ah / | sort -n -r | head -n 20` -> top 20 most memory used file 

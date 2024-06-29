@@ -5,3 +5,5 @@
 - [ ] Reverse eng techinuque to debug
 - [ ] How i find eslint affecting our dev productivity
 - [ ] Best practice that i follow on node and react
+
+Nginx memory full issue

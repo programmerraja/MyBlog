@@ -176,4 +176,11 @@ My understanding
 
 Resources
 1. [The Art of Discovering Bounded Contexts by Nick Tune](https://www.youtube.com/watch?v=ez9GWESKG4I&t=982s)
-2. 
+
+
+
+
+## Question to ask when creating a service
+- why it required 
+- what are the benefits after we creating this service compare to before and after
+- what is if keep the current system as it as and check what pros and cons that make before service and after service
