@@ -1,3 +1,26 @@
+---
+
+excalidraw-plugin: parsed
+tags: [excalidraw]
+
+---
+==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠==
+
+
+# Text Elements
+Agent ^4rpVsvgm
+
+Action ^63LE7Jjj
+
+Observation ^RsE35PRZ
+
+Thought ^bWKfw2I9
+
+Final answer ^kX5wUkJy
+
+%%
+# Drawing
+```json
 {
 	"type": "excalidraw",
 	"version": 2,
@@ -693,6 +716,7 @@
 			"outline": true
 		}
 	},
-	"prevTextMode": "parsed",
 	"files": {}
 }
+```
+%%

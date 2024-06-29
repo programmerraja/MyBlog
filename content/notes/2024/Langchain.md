@@ -29,10 +29,19 @@ Prompt templates help to translate user input and parameters into instructions f
  
  ```python
 from langchain_core.prompts import PromptTemplate
+from langchain_core.prompts import ChatPromptTemplate
+
 
 prompt_template = PromptTemplate.from_template("Tell me a joke about {topic}")
 
-prompt_template.invoke({"topic": "cats"})
+prompt = prompt_template.invoke({"topic": "cats"}) # return as human message format
+
+messages = [
+			("system","you are .."),
+			("human","tell me ${msg}")
+]
+prompt = ChatPromptTemplate.from_messages(messages)
+prompt.invoke({msg:""})
 ```
 
 ### ChatPromptTemplates
@@ -51,10 +60,199 @@ These prompt templates are used to format a list of messages.
 
 A sequential chain is a chain that combines various individual chains, where the output of one chain serves as the input for the next in a continuous sequence. It operates by running a series of chains consecutively.
 
+```python
+from dotenv import load_dotenv
+from langchain.prompts import ChatPromptTemplate
+from langchain.schema.runnable import RunnableLambda, RunnableSequence
+from langchain_openai import ChatOpenAI
+
+model = ChatOpenAI(model="gpt-4")
+
+prompt_template = ChatPromptTemplate.from_messages([
+("system", "You are a comedian who tells jokes about {topic}."),
+("human", "Tell me {joke_count} jokes.")])
+
+# Create individual runnables (steps in the chain)
+
+format_prompt = RunnableLambda(lambda x: prompt_template.format_prompt(**x))
+
+invoke_model = RunnableLambda(lambda x: model.invoke(x.to_messages()))
+
+parse_output = RunnableLambda(lambda x: x.content)
+
+# Create the RunnableSequence (equivalent to the LCEL chain)
+chain = RunnableSequence(first=format_prompt, middle=[invoke_model], last=parse_output)
+
+# the above line is equlient to 
+chain = prompt_template | model | StrOutputParser()
+
+# Run the chain
+response = chain.invoke({"topic": "lawyers", "joke_count": 3})
 
 
 
+# Output
 
+print(response)
+```
+
+### Parallel Chain
+
+```python
+from dotenv import load_dotenv
+from langchain.prompts import ChatPromptTemplate
+from langchain.schema.output_parser import StrOutputParser
+from langchain.schema.runnable import RunnableParallel, RunnableLambda
+from langchain_openai import ChatOpenAI
+
+# Create a ChatOpenAI model
+model = ChatOpenAI(model="gpt-4o")
+
+# Define prompt template
+prompt_template = ChatPromptTemplate.from_messages(
+    [
+        ("system", "You are an expert product reviewer."),
+        ("human", "List the main features of the product {product_name}."),
+    ]
+)
+
+
+# Define pros analysis step
+def analyze_pros(features):
+    pros_template = ChatPromptTemplate.from_messages(
+        [
+            ("system", "You are an expert product reviewer."),
+            ("human","Given these features: {features}, list the pros of these features."),
+        ]
+    )
+    return pros_template.format_prompt(features=features)
+
+
+# Define cons analysis step
+def analyze_cons(features):
+    cons_template = ChatPromptTemplate.from_messages(
+        [
+            ("system", "You are an expert product reviewer."),
+            ("human","Given these features: {features}, list the cons of these features.",
+            ),
+        ]
+    )
+    return cons_template.format_prompt(features=features)
+
+
+# Combine pros and cons into a final review
+def combine_pros_cons(pros, cons):
+    return f"Pros:\n{pros}\n\nCons:\n{cons}"
+
+
+# Simplify branches with LCEL
+pros_branch_chain = (
+    RunnableLambda(lambda x: analyze_pros(x)) | model | StrOutputParser()
+)
+
+cons_branch_chain = (
+    RunnableLambda(lambda x: analyze_cons(x)) | model | StrOutputParser()
+)
+
+# Create the combined chain using LangChain Expression Language (LCEL)
+chain = (
+    prompt_template
+    | model
+    | StrOutputParser()
+    | RunnableParallel(branches={"pros": pros_branch_chain, "cons": cons_branch_chain})
+    | RunnableLambda(
+        lambda x: combine_pros_cons(x["branches"]["pros"], x["branches"]["cons"])
+    )
+)
+
+# Run the chain
+result = chain.invoke({"product_name": "MacBook Pro"})
+
+# Output
+print(result)
+
+```
+
+After parallel chain it will return as dict of branches that we provided in to get the the output of that use `x["branches"]["pros"]` 
+
+### Chain branching
+
+based on the condition we can choose which branch we can choose for further operation
+
+```python
+
+from dotenv import load_dotenv
+from langchain.prompts import ChatPromptTemplate
+from langchain.schema.output_parser import StrOutputParser
+from langchain.schema.runnable import RunnableBranch
+from langchain_openai import ChatOpenAI
+
+# Load environment variables from .env
+load_dotenv()
+
+# Create a ChatOpenAI model
+model = ChatOpenAI(model="gpt-4o")
+
+# Define prompt templates for different feedback types
+positive_feedback_template = ChatPromptTemplate.from_messages(
+    [
+        ("system", "You are a helpful assistant."),
+        ("human", "Generate a thank you note for this positive feedback: {feedback}."),
+    ]
+)
+
+negative_feedback_template = ChatPromptTemplate.from_messages(
+    [
+        ("system", "You are a helpful assistant."),
+        ("human", "Generate a response addressing this negative feedback: {feedback}."),
+    ]
+)
+
+
+
+# Define the feedback classification template
+classification_template = ChatPromptTemplate.from_messages(
+    [
+        ("system", "You are a helpful assistant."),
+        (
+            "human",
+            "Classify the sentiment of this feedback as positive, negative : {feedback}.",
+        ),
+    ]
+)
+
+# Define the runnable branches for handling feedback
+branches = RunnableBranch(
+    (
+        lambda x: "positive" in x,
+        positive_feedback_template
+        | model
+        | StrOutputParser(),  # Positive feedback chain
+    ),
+    (
+        lambda x: "negative" in x,
+        negative_feedback_template
+        | model
+        | StrOutputParser(),  # Negative feedback chain
+    )
+)
+
+# Create the classification chain
+classification_chain = classification_template | model | StrOutputParser()
+
+# Combine classification and response generation into one chain
+chain = classification_chain | branches
+
+
+review = (
+    "The product is terrible. It broke after just one use and the quality is very poor."
+)
+result = chain.invoke({"feedback": review})
+
+# Output the result
+print(result)
+
+```
 
 
 ## Langgraph
@@ -154,3 +352,12 @@ print(memory.chat_memory.messages)
 #### ZepMemory
 
 [Zep](https://github.com/getzep/zep) persists and recalls chat histories, and automatically generates summaries and other artifacts from these chat histories. It also embeds messages and summaries, enabling you to search Zep for relevant context from past conversations. Zep does all of this asyncronously, ensuring these operations don't impact your user's chat experience. Data is persisted to database, allowing you to scale out when growth demands.
+
+
+### Langgraph
+
+State and graph is core concepts in langgraph
+
+State is dict the data used by agent will be write or read.
+
+In graph each node is agent or tools and the edges connect nodes determine sequence of ops

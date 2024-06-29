@@ -1,5 +1,5 @@
 +++
-title = 'Sherlock Homes: The Case of the Missing Content Length'
+title = 'Sherlock Homes: The Case of the Content Length Mismatch'
 date = 2024-06-28T20:18:56.5656+05:30
 tags =['debugging','webdev','backend','ngnix']
 +++ 
