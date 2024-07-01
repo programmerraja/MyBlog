@@ -236,3 +236,7 @@ Resource
 - https://notesonai.com/bert
 
 https://karpathy.github.io/2015/05/21/rnn-effectiveness/
+
+
+Lama3 from scrath
+https://github.com/naklecha/llama3-from-scratch 

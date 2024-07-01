@@ -127,3 +127,6 @@ They using  [RSocket](https://rsocket.io/) for real-time collaboration. which be
 Panic mode 
 multi cdn
 kafa
+
+
+https://blog.bytebytego.com/p/how-do-we-design-for-high-availability

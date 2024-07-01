@@ -419,6 +419,13 @@ RUN apt-get install
 
 ## Debugging
 
+`docker debug` we can get a debug shell into any container or image, even if they don't contain a shell. we don't need to modify the image to use Docker Debug
+
+they have installed builtin tools like `vim`, `nano`, `htop`, and `curl`
+```
+docker debug my-app
+```
+
 
 ## Resources
 1. [https://medium.com/datamindedbe/how-we-reduced-our-docker-build-times-by-40-afea7b7f5fe7](https://medium.com/datamindedbe/how-we-reduced-our-docker-build-times-by-40-afea7b7f5fe7)

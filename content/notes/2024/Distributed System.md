@@ -25,7 +25,8 @@ The quorum-based protocol is the key to reaching a consensus on a value within a
 
 #### Resources
 
-1. [https://www.allthingsdistributed.com/](https://www.allthingsdistributed.com/) [_Werner Vogels on building scalable and robust distributed systems]_
+1. [https://www.allthingsdistributed.com/](https://www.allthingsdistributed.com/) [_Werner Vogels on building scalable and robust distributed systems]
+2. https://muratbuffalo.blogspot.com/2020/06/learning-about-distributed-systems.html _
 
 #### Tools to monitor
 

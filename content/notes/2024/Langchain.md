@@ -56,6 +56,7 @@ These prompt templates are used to format a list of messages.
 
 ## Chains 
 
+chains has support `invoke`, `ainvoke`, `stream`, `astream`, `batch`, `abatch`, `astream_log` calls
 ### Sequential Chain
 
 A sequential chain is a chain that combines various individual chains, where the output of one chain serves as the input for the next in a continuous sequence. It operates by running a series of chains consecutively.
@@ -254,6 +255,77 @@ print(result)
 
 ```
 
+### internal 
+
+```python
+from abc import ABC, abstractmethod
+
+
+class CRunnable(ABC):
+    def __init__(self):
+        self.next = None
+
+    @abstractmethod
+    def process(self, data):
+        """
+        This method must be implemented by subclasses to define
+        data processing behavior.
+        """
+        pass
+
+    def invoke(self, data):
+        processed_data = self.process(data)
+        if self.next is not None:
+            return self.next.invoke(processed_data)
+        return processed_data
+
+    def __or__(self, other):
+        return CRunnableSequence(self, other)
+
+
+class CRunnableSequence(CRunnable):
+    def __init__(self, first, second):
+        super().__init__()
+        self.first = first
+        self.second = second
+
+    def process(self, data):
+        return data
+
+    def invoke(self, data):
+        first_result = self.first.invoke(data)
+        return self.second.invoke(first_result)
+
+
+class AddTen(CRunnable):
+    def process(self, data):
+        print("AddTen: ", data)
+        return data + 10
+
+
+class MultiplyByTwo(CRunnable):
+    def process(self, data):
+        print("Multiply by 2: ", data)
+        return data * 2
+
+
+class ConvertToString(CRunnable):
+    def process(self, data):
+        print("Convert to string: ", data)
+        return f"Result: {data}"
+
+
+a = AddTen()
+b = MultiplyByTwo()
+c = ConvertToString()
+
+chain = a | b | c
+
+result = chain.invoke(10)
+print(result)
+
+```
+
 
 ## Langgraph
 
@@ -278,27 +350,83 @@ https://github.dev/Codium-ai/cover-agent
 
 ## Agent
 
+Type of agent
+- ChatAgent
+- ConversationalAgent
+- ConversationalChatAgent
+- OpenAIAssistantFinish
+- OpenAIFunctionsAgent
+- create_react_agent
+- LLMAgent
+- RetrievalAgent
+- HybridAgent
+- ChainAgent
+
 ```python
 
-from langchain.llms.openai import OpenAI
-from langchain.agents import load_tools, initialize_agent, AgentType
+from dotenv import load_dotenv
+from langchain import hub
+from langchain.agents import AgentExecutor, create_react_agent
+from langchain_core.tools import Tool
+from langchain_openai import AzureChatOpenAI
 
-llm = OpenAI()
 
-tools = load_tools(["python_repl"])
-agent = initialize_agent(
-			tools, 
-			llm, 
-			agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION, 
-			verbose=True
-		)
+def get_current_time(*args, **kwargs):
+    """Returns the current time in H:MM AM/PM format."""
+    import datetime
 
-result = agent("What are the prime numbers until 20?")
-print(result)
+    now = datetime.datetime.now()
+    return now.strftime("%I:%M %p")
+
+
+tools = [
+    Tool(
+        name="Time",
+        func=get_current_time,
+        description="Useful for when you need to know the current time",
+    ),
+]
+
+# Pull the prompt template from the hub
+# ReAct = Reason and Action
+# https://smith.langchain.com/hub/hwchase17/react
+
+# return the prompt template 
+prompt = hub.pull("hwchase17/react")
+
+llm = AzureChatOpenAI(deployment_name="")
+
+agent = create_react_agent(
+    llm=llm,
+    tools=tools,
+    prompt=prompt,
+    stop_sequence=True,
+)
+
+agent_executor = AgentExecutor.from_agent_and_tools(
+    agent=agent,
+    tools=tools,
+    verbose=True,
+)
+
+response = agent_executor.invoke({"input": "What time is it?"})
+
+print("response:", response)
+
 ```
 
+### AgentExecutor 
+is a component that executes an agent's logic to generate a response to a given input. It's responsible for managing the agent's lifecycle, handling input and output, and providing a way to customize the agent's behavior.
 
+An `AgentExecutor` is typically used to wrap an `Agent` instance and provide additional functionality, such as:
 
+1. **Input processing**: The `AgentExecutor` can preprocess the input data before passing it to the agent.
+2. **Output processing**: The `AgentExecutor` can postprocess the agent's output before returning it to the caller.
+3. **Error handling**: The `AgentExecutor` can catch and handle errors raised by the agent during execution.
+4. **Context management**: The `AgentExecutor` can manage the agent's context, such as maintaining a conversation history or storing intermediate results.
+5. **Customization**: The `AgentExecutor` can provide hooks for customizing the agent's behavior, such as injecting additional data or modifying the agent's parameters
+ AgentExecutor has `_call` function which is called by the `chain` and the call function will be responsible for communicating with agent
+ 
 ## Retrievers 
 
 - **BM25 retriever**: This retriever uses the BM25 algorithm to rank documents based on their relevance to a given query
@@ -361,3 +489,18 @@ State and graph is core concepts in langgraph
 State is dict the data used by agent will be write or read.
 
 In graph each node is agent or tools and the edges connect nodes determine sequence of ops
+
+
+### Output Parser
+
+**PydanticOutputParser**
+
+
+
+
+
+
+
+### Resources
+- https://nanonets.com/blog/langchain/ 
+- https://github.dev/bhancockio/langchain-crash-course 

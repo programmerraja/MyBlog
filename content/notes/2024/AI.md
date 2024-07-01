@@ -462,3 +462,13 @@ LLM evaulation
 
 ## AutoML 
 Frameworks represent a noteworthy leap in the evolution of machine learning. By streamlining the complete model development cycle, including tasks such as data cleaning, feature selection, model training, and hyperparameter tuning, AutoML frameworks significantly economize on the time and effort customarily expended by data scientists.
+
+
+
+
+
+
+### LLM Evaluation Metrics
+
+[G-Eval](https://github.com/nlpyang/geval)
+- using GPT-4 and chain-of-thoughts (CoT) approach to generate detailed evaluation steps for NLG outputs. 
