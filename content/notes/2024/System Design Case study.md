@@ -34,12 +34,12 @@ Migration approach
 5. Reroute query traffic to the new database
 6. Resume activity
 
-`Note`: To fast down the r [logical replication](https://www.postgresql.org/docs/current/logical-replication.html) on they removed the indexing and add the indexing after everythings compeleted
+`Note`: To fast down the  [logical replication](https://www.postgresql.org/docs/current/logical-replication.html) on they removed the indexing and add the indexing after everythings compeleted
 
 They used Log Sequence Number (it is a unique identifier assigned to each transaction log entry, representing the order in which changes were made to the database. LSNs are used to track the state of replication and determine whether two databases are synchronized.)
 
 They created new **`Query Routing service`**  will centralize and simplify routing logic as we scale to more partitions.
- 
+
 #### [Horizontal sharding](https://www.figma.com/blog/how-figmas-databases-team-lived-to-tell-the-scale/) (March 14, 2024)
 
  Our first goal was to shard a relatively simple but very high traffic table in production as soon as possible

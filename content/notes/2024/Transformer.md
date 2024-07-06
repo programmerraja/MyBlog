@@ -68,6 +68,9 @@ tags =[]
 
 - https://www.kaggle.com/code/fareselmenshawii/rnn-from-scratch
 
+####  LSTM
+- http://colah.github.io/posts/2015-08-Understanding-LSTMs/
+
 #### BiLSTM
 
 A Bidirectional Long Short-Term Memory (BiLSTM) is a type of recurrent neural network (RNN) architecture that is used to process sequential data. It extends the standard Long Short-Term Memory (LSTM) model by introducing the concept of bidirectionality, allowing the model to have both forward and backward information about the sequence.

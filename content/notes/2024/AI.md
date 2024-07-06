@@ -472,3 +472,9 @@ Frameworks represent a noteworthy leap in the evolution of machine learning. By 
 
 [G-Eval](https://github.com/nlpyang/geval)
 - using GPT-4 and chain-of-thoughts (CoT) approach to generate detailed evaluation steps for NLG outputs. 
+[SelfcheckGPT](https://github.com/potsawee/selfcheckgpt)
+1. **BERTScore**: Compares the generated text with reference samples using BERT embeddings.
+2. **Question-Answering (QA)**: Generates questions from the text and checks consistency in answers.
+3. **N-gram Analysis**: Uses statistical properties of n-grams for consistency checks.
+4. **Natural Language Inference (NLI)**: Uses entailment and contradiction probabilities.
+5. **LLM Prompting**: Queries LLMs directly to check consistency.

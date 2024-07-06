@@ -457,6 +457,28 @@ proxy_pass http://SERVICE-NAME.YOUR-NAMESPACE.svc.cluster.local:8080;
 ```
 can be accessed  
 
+#### Kube Proxy
+
+installed on every node and runs in our cluster in the form of a **DaemonSet**.
+
+How it works
+After Kube-proxy is installed, it authenticates with the API server. When new Services or endpoints are added or removed, the API server communicates these changes to the Kube-Proxy.
+
+Kube-Proxy then applies these changes as **NAT** rules inside the node. These NAT rules are simply mappings of Service IP to Pod IP. When a request is sent to a Service, it is redirected to a backend Pod based on these rules.
+
+Now let’s get into more details with an example.
+
+Assume we have a Service **SVC01** of type ClusterIP. When this Service is created, the API server will check which Pods to be associated with this Service. So, it will look for Pods with **labels** that match the Service’s **label selector**.
+
+Let’s call these **Pod01** and **Pod02.** Now the API server will create an abstraction called an **endpoint**. Each endpoint represents the IP of one of the Pods. **SVC01** is now tied to 2 endpoints that correspond to our Pods. Let’s call these **EP01** and **EP02**.
+
+Now the API server maps the IP address of **SVC01** to 2 IP addresses, **EP01** and **EP0** and API server advertises the new mapping to the Kube-proxy on each node, which then applies it as an internal rule.
+
+Kube-Proxy can operate in three different modes, **user-space mode**, **IPtables mode**, and **IPVS mode**.
+- **user-space mode** not used now **IPtables** and **IPVS**  are used now where iptables are timeconsuming compared to **IPVS** to lookup o(n)
+By default, Kube-proxy runs on port 10249 and exposes a set of endpoints that you can use to query Kube-proxy for information.
+
+we can use the` /proxyMode` endpoint to check the kube-proxy mode.
 
 ### Types 
 

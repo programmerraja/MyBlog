@@ -286,3 +286,24 @@ SSL/TLS session keys and the server's private key serve different purposes in th
 
 
 SS0
+
+
+`tshark -r 'el (1).cap' -Y "tcp.flags.syn == 1 && tcp.flags.ack == 0" -T fields -e ip.dst | sort | uniq -c | sort -nr `
+
+
+`tshark -r 'el (1).cap' -Y "tcp.flags.syn == 1 && tcp.flags.ack == 0" -T fields -e eth.dst | sort | uniq -c | sort -nr`
+
+
+**How to find syn not followed by a syn+ack**
+
+Use the display filter 'tcp.flags eq 0x02' (only SYN flag set)  
+then: Statistics -> Conversations
+
+Select the option "Limit to display filter" (at the bottom)  
+Select the tab TCP  
+
+Sort the output by "Packets".
+
+Those connections with 1 packet are likely the "good" connections (one SYN only)
+
+Those connections with > 1 packets are most likely the unanswered connections (several packets with SYN as a result of a retry).
