@@ -1,7 +1,7 @@
 +++
 title = 'Langchain'
 date = 2024-05-25T09:42:14.1414+05:30
-draft = true
+draft = false
 tags =[]
 +++ 
 
@@ -47,11 +47,6 @@ prompt.invoke({msg:""})
 ### ChatPromptTemplates
 
 These prompt templates are used to format a list of messages.
-
-
-
-
-
 
 
 ## Chains 
@@ -255,7 +250,7 @@ print(result)
 
 ```
 
-### internal 
+### internal  of chains
 
 ```python
 from abc import ABC, abstractmethod
@@ -325,27 +320,6 @@ result = chain.invoke(10)
 print(result)
 
 ```
-
-
-## Langgraph
-
-https://github.dev/emarco177/langgaph-course
-
-
-
-
-
-
-
-lamaindex
-
-
-
-
-
-
-
-https://github.dev/Codium-ai/cover-agent
 
 
 ## Agent
@@ -482,6 +456,11 @@ print(memory.chat_memory.messages)
 [Zep](https://github.com/getzep/zep) persists and recalls chat histories, and automatically generates summaries and other artifacts from these chat histories. It also embeds messages and summaries, enabling you to search Zep for relevant context from past conversations. Zep does all of this asyncronously, ensuring these operations don't impact your user's chat experience. Data is persisted to database, allowing you to scale out when growth demands.
 
 
+### Output Parser
+
+**PydanticOutputParser**
+
+
 ### Langgraph
 
 State and graph is core concepts in langgraph
@@ -490,10 +469,14 @@ State is dict the data used by agent will be write or read.
 
 In graph each node is agent or tools and the edges connect nodes determine sequence of ops
 
+```python
 
-### Output Parser
+```
 
-**PydanticOutputParser**
+
+- https://github.dev/emarco177/langgaph-course
+- https://github.com/pinecone-io/examples/blob/master/learn/generation/langchain/langgraph/00-langgraph-intro.ipynb
+
 
 
 
@@ -504,3 +487,4 @@ In graph each node is agent or tools and the edges connect nodes determine seque
 ### Resources
 - https://nanonets.com/blog/langchain/ 
 - https://github.dev/bhancockio/langchain-crash-course 
+- https://github.dev/Codium-ai/cover-agent

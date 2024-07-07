@@ -5,3 +5,7 @@ draft = true
 tags =[]
 +++ 
 
+
+
+## Resources
+- https://eugeneyan.com/writing/prompting/

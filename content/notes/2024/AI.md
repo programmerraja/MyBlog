@@ -470,11 +470,53 @@ Frameworks represent a noteworthy leap in the evolution of machine learning. By 
 
 ### LLM Evaluation Metrics
 
+#### Types
+
+**Intrinsic metrics**: evaluate the model's internal workings, such as perplexity and fluency.
+- **Perplexity**: measures how well the model predicts a test dataset. Lower perplexity indicates better performance.
+- **Fluency**: measures the coherence and naturalness of the generated text.
+- **BLEU (Bilingual Evaluation Understudy) Score**: measures the similarity between the generated text and a reference text.
+
+**Extrinsic metrics**: evaluate the model's performance on specific tasks, such as question-answering and text classification.
+- **Accuracy**: measures the proportion of correct predictions or answers.
+- **F1 Score**: measures the balance between precision and recall.
+- **ROUGE (Recall-Oriented Understudy for Gisting Evaluation) Score**: measures the quality of generated summaries.
+
+ **Hybrid metrics**: combine intrinsic and extrinsic metrics to provide a more comprehensive evaluation.
+ - **METEOR (Metric for Evaluation of Translation with Explicit ORdering) Score**: measures the similarity between generated and reference translations, taking into account the order of the words.
+- GEVAL  
+
 [G-Eval](https://github.com/nlpyang/geval)
 - using GPT-4 and chain-of-thoughts (CoT) approach to generate detailed evaluation steps for NLG outputs. 
+
 [SelfcheckGPT](https://github.com/potsawee/selfcheckgpt)
 1. **BERTScore**: Compares the generated text with reference samples using BERT embeddings.
 2. **Question-Answering (QA)**: Generates questions from the text and checks consistency in answers.
 3. **N-gram Analysis**: Uses statistical properties of n-grams for consistency checks.
 4. **Natural Language Inference (NLI)**: Uses entailment and contradiction probabilities.
 5. **LLM Prompting**: Queries LLMs directly to check consistency.
+
+[DeepEval, an open-source LLM evaluation framework](https://github.com/confident-ai/deepeval)
+- G-Eval
+- Summarization
+- Answer Relevancy
+- Faithfulness
+- Contextual Recall
+- Contextual Precision
+- RAGAS
+- Hallucination
+- Toxicity
+- Bias
+- etc.
+### LLM-as-Judge
+- Use pairwise comparisons: Instead of asking the LLM to score a single output on a [Likert](https://en.wikipedia.org/wiki/Likert_scale) scale, present it with two options and ask it to select the better one. This tends to lead to more stable results.
+- Control for position bias: The order of options presented can bias the LLM’s decision. To mitigate this, do each pairwise comparison twice, swapping the order of pairs each time. Just be sure to attribute wins to the right option after swapping!
+- Allow for ties: In some cases, both options may be equally good. Thus, allow the LLM to declare a tie so it doesn’t have to arbitrarily pick a winner.
+- Use Chain-of-Thought: Asking the LLM to explain its decision before giving a final answer can increase eval reliability. As a bonus, this lets you to use a weaker but faster LLM and still achieve similar results. Because this part of the pipeline is typically run in batch, the extra latency from CoT isn’t a problem.
+- Control for response length: LLMs tend to bias toward longer responses. To mitigate this, ensure response pairs are similar in length.
+
+
+use YAML because it is less verbose, and hence consumes fewer tokens than JSON. when getting output from LLM
+
+
+https://applied-llms.org/
