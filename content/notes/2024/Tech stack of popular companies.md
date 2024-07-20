@@ -106,3 +106,7 @@ draft = true
 ## Notion
 - PostgreSQL
 - AWS
+
+Zerodha
+- Postgres
+- Nomad (alternative to kubernetes by hasicrop)

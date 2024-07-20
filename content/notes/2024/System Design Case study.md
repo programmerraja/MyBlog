@@ -1,4 +1,4 @@
-+++
+	+++
 title = 'System Design Case study'
 date = 2024-04-20T16:45:15.1515+05:30
 draft = false
@@ -68,7 +68,7 @@ Then after sucess of logical they implement **Physical Sharding** that involves 
 - If they running query that join two table in different shard they will reject it
 
 
-## Notion
+### Notion
 
 check [here](https://www.notion.so/blog/sharding-postgres-at-notion) 
 
@@ -82,6 +82,17 @@ Migratio process
 2. **Backfill:** Once double-writing has begun, migrate the old data to the new database.
 3. **Verification:** Ensure the integrity of data in the new database.
 4. **Switch-over:** Actually switch to the new database. This can be done incrementally, e.g. double-reads, then migrate all reads.
+
+### Zerodha
+
+They have only one database no replica set and split the database based on financial year. they doing backup in s3
+
+they using postgres as caching layer where they stored one day of data in this postgres caching layer after one day they drop the database and again move one day data to caching layer. the tool they used  is [dungbeetle](https://github.com/zerodha/dungbeetle)
+spec : 16core 32GB ram
+
+Learning: we can do wired thing if it work for us :)
+
+
 
 ## Caching
 

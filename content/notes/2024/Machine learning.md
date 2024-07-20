@@ -73,3 +73,22 @@ Recall=TP / TP + FN
 ```
 F1_score = 2* Precision * recall / Precision + recall 
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Resources
+- [ML system design: 450 case studies to learn from](https://www.evidentlyai.com/ml-system-design)
+- 

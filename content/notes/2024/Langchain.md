@@ -476,6 +476,7 @@ In graph each node is agent or tools and the edges connect nodes determine seque
 
 - https://github.dev/emarco177/langgaph-course
 - https://github.com/pinecone-io/examples/blob/master/learn/generation/langchain/langgraph/00-langgraph-intro.ipynb
+- https://colab.research.google.com/drive/1WemHvycYcoNTDr33w7p2HL3FF72Nj88i?usp=sharing [check this]
 
 
 

@@ -1,7 +1,7 @@
 +++
 title = 'Databases'
 date = 2024-03-03T07:34:21.2121+05:30
-draft = false
+draft = true
 tags =[]
 +++ 
 
@@ -45,7 +45,7 @@ Scalable Postgres for stream processing, analytics, and management. KsqlDB and A
 - JunoDB is a distributed key-value store. highly concurrent architecture implemented in Go to efficiently handle hundreds of thousands of connections.
 - JunoDB uses a proxy-based architecture.
 - JunoDB uses RocksDB as the storage engine.
-- use quorum protocol[[Distributed System#quorum-based protocol]]  for read and write among region
+- use quorum protocol [[Distributed System#quorum-based protocol]]  for read and write among region
 
 ## Redis
 
@@ -124,6 +124,8 @@ LSM  delete are expensive
 - [Postgres Sharding](https://www.citusdata.com/) 
 - [Change Data Capture Tool ](https://debezium.io/)
 - https://github.com/mongodb/mongo-snippets
+- [Database strees testing tool](https://github.com/adaptive-scale/dbchaos)
+- https://www.uber.com/en-IN/blog/schemaless-sql-database
 
 
 **Sharding** -involves distributing Partitioning data across multiple independent databases or shards. replica are also called sharding because the shard the same data in both server

@@ -1189,7 +1189,9 @@ Need to study
 #### Tools
 1. https://k9scli.io/ [Kubectl alternative]
 2. https://monokle.io/ [Monokle's integrated open-source tools and cloud platform make it easy to define, manage, and enforce Kubernetes YAML configuration policies in minutes]
-
+3. [Reloader](https://docs.stakater.com/reloader/ ) can watch changes in `ConfigMap` and `Secret` and do rolling upgrades on Pods 
+4. [karpenter](https://karpenter.sh/ ) Just-in-time Nodes for Any Kubernetes Cluster 
+5. **[cdk8s](https://cdk8s.io/)** is an open-source software development framework for defining Kubernetes applications and reusable abstractions using familiar programming languages and rich object-oriented APIs 
 
 
 

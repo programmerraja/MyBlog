@@ -68,6 +68,8 @@ if we have 2 index one for a and b if search of a and b mongodb will merges the 
 
 The **AND_SORTED** step indicates that an index intersection has been performed.
 Index intersections for $and conditions are unusual
+
+But this not efficient as compound index and very rarely this will be used this approach need to scan more doc compared to compound index
 #### Type of index
 
 1. **Compound**: A compound index is simply an index comprising more than one attribute. The most significant advantage of a compound index is that it is usually more selective than a single key index. The combination of multiple attributes will point to a smaller number of documents than indexes composed of singular attributes. A compound index that contains all of the attributes contained within the find() or $match clauses will be particularly effective  `createIndex({key1:1,key2:1})`
@@ -224,9 +226,16 @@ print('WiredTiger cache size',
 ...     )
 ...   );
 ```
-- virtual -> virtual memory allocated for monogdb
-- resident -> Memory that used so far including cache
-- the Wired Tiger cache will be set to either 50% of total memory minus 1GB or to 256MB
+
+**Virtual Memory** 
+ - This value includes all memory that the MongoDB process can access, including both physical RAM and swap space.
+  - Virtual memory represents the total memory space allocated by the operating system to the process. It includes not only the resident memory but also any memory that may have been swapped out to disk or is reserved but not currently in use.
+  - Virtual memory can be much larger than physical memory, as it represents the total address space allocated to the process.
+  
+ **Resident Memory** 
+ - is the amount of physical RAM, in mebibytes (MiB), that the MongoDB process is currently using.
+  
+  **Note :** The Wired Tiger cache will be set to either 50% of total memory minus 1GB or to 256MB
 
 #### The Database Cache "Hit" Ratio
 
@@ -305,13 +314,13 @@ A replica set following best practice consists of a primary node together with t
 
  **Read Preference** → By default, all reads are directed to the primary node. However, we can set a read preference which directs the MongoDB drivers to direct read requests to secondary nodes.
 
- | Read Preference   | Effect                                                                                                    |
-|-------------------|-----------------------------------------------------------------------------------------------------------|
-| primary           | This is the default. All reads are directed to the replica set primary.                                    |
-| primaryPreferred  | Direct reads to the primary, but if no primary is available, direct reads to a secondary.                   |
-| secondary         | Direct reads to a secondary.                                                                              |
-| secondaryPreferred| Direct reads to a secondary, but if no secondary is available, direct reads to the primary.                 |
-| nearest           | Direct reads to the replica set member with the lowest network round trip time to the calling program.     |
+|                    | Read Preference                                                                                        |
+| ------------------ | ------------------------------------------------------------------------------------------------------ |
+| primary            | This is the default. All reads are directed to the replica set primary.                                |
+| primaryPreferred   | Direct reads to the primary, but if no primary is available, direct reads to a secondary.              |
+| secondary          | Direct reads to a secondary.                                                                           |
+| secondaryPreferred | Direct reads to a secondary, but if no secondary is available, direct reads to the primary.            |
+| nearest            | Direct reads to the replica set member with the lowest network round trip time to the calling program. |
 
 **maxStalenessSeconds** : can be added to a read preference to control the tolerable lag in data. When picking a secondary node, the MongoDB driver will only consider those nodes who have data within `maxStalenessSeconds` seconds of the primary. The minimum value is 90 seconds. For instance, this URL specified a preference for secondary nodes, but only if their data timestamps are within 5 minutes (300 seconds) of the primary:
 
