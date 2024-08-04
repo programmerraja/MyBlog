@@ -22,3 +22,14 @@ Hi, I'm an infra developer. My daily work involves fixing or investigating issue
 
 
 > If you enjoyed this digital detective adventure and want to support more investigations like this, consider [**_buy me a coffee_**](https://buymeacoffee.com/programmerraja) . Your support fuels my curiosity and helps me keep digging into the unseen threats!
+
+
+>If you found these notes on "A Philosophy of Software Design" insightful and want to support more content like this, consider [**_buying me a coffee_**](https://buymeacoffee.com/programmerraja). Your support fuels my passion for exploring and sharing software design principles, helping us all become better developers! 
+
+### Enjoyed This Story?
+
+_[Subscribe for free](https://medium.com/subscribe/@programmerraja) to get notified when I publish a new story._
+
+_Find me on_ [LinkedIn](https://www.linkedin.com/in/programmerraja/), [Twitter](https://twitter.com/programmerraja)_, and_ github_!_
+
+https://giscus.app/ -> to add comments feature

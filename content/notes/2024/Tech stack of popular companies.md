@@ -110,3 +110,6 @@ draft = true
 Zerodha
 - Postgres
 - Nomad (alternative to kubernetes by hasicrop)
+
+Twitter
+- Elastic search

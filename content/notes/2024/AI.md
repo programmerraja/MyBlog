@@ -1,4 +1,4 @@
-**+++
++++
 title = 'AI'
 date = 2024-05-18T18:29:19.1919+05:30
 draft = true
@@ -307,21 +307,7 @@ https://github.com/vercel/ai
 
 
 
-RAG
 
-
-https://github.com/zahaby/intro-llm-rag
-
-https://github.dev/pinecone-io/canopy -> Framework build by pinecone 
-
-https://github.com/truera/trulens Evaluation and Tracking for LLM Experiments
-
-https://microsoft.github.io/autogen/
-https://github.com/decodingml/llm-twin-course 
-
-##  CRAG
-
-Corrective Retrieval Augmented Generation.The strategy we followed for this let’s say for each topic, we consult the book and identify relevant sections. Before forming an opinion, categorize the gathered information into three groups: `**Correct**`, `**Incorrect**`, and `**Ambiguous**`. Process each type of information separately. Then, based on this processed information, compile and summarize it mentally
 
 
 
@@ -520,3 +506,9 @@ use YAML because it is less verbose, and hence consumes fewer tokens than JSON. 
 
 
 https://applied-llms.org/
+
+
+
+
+## 1 Bit LLM 
+ BitNet b1.58 where every weight in a Transformer can be represented as a {-1, 0, 1} instead of a floating point number. 

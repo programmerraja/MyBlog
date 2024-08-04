@@ -36,8 +36,6 @@ https://quoraengineering.quora.com/Building-a-Service-Mesh-in-a-Hybrid-Environme
 example -> envoy(sidecar),istio(control tower)
 
 
-
-
 Envoy -> are used ton communication between service it have features like circuit breaker,load balancing,retires,...etc
 - it run as sidecar in container
 
@@ -58,7 +56,7 @@ API gateway
 2. TAG (Tinder API Gateway)
 3. Krakend
 
-james lewis head ->microservice []()
+james lewis head ->microservice [
 
 Antipatterns
 

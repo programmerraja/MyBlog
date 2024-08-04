@@ -496,8 +496,56 @@ const SomeOutsideComponent = () => {
 ```
 
 
+## Memory leak
 
+When using memoization techniques like `useCallback` to avoid unnecessary re-renders, there are some things to watch out for. `useCallback` will hold a reference to a function as long as the dependencies don't change. Here's an example:
 
+```js
+import { useState, useCallback } from "react";
+
+class BigObject {
+  public readonly data = new Uint8Array(1024 * 1024 * 10);
+}
+
+export const App = () => {
+  const [countA, setCountA] = useState(0);
+  const [countB, setCountB] = useState(0);
+  const bigData = new BigObject(); // 10MB of data
+
+  const handleClickA = useCallback(() => {
+    setCountA(countA + 1);
+  }, [countA]);
+
+  const handleClickB = useCallback(() => {
+    setCountB(countB + 1);
+  }, [countB]);
+
+  // This only exists to demonstrate the problem
+  const handleClickBoth = () => {
+    handleClickA();
+    handleClickB();
+    console.log(bigData.data.length);
+  };
+
+  return (
+    <div>
+      <button onClick={handleClickA}>Increment A</button>
+      <button onClick={handleClickB}>Increment B</button>
+      <button onClick={handleClickBoth}>Increment Both</button>
+      <p>
+        A: {countA}, B: {countB}
+      </p>
+    </div>
+  );
+};
+```
+
+- The first click on “Increment A” will cause `handleClickA()` to be recreated since we change `countA` - let’s call the new one `handleClickA()#1`.
+- `handleClickB()#0` will _not_ get recreated since `countB` didn’t change.
+- This means, however, that `handleClickB()#0` will still hold a reference to the previous `AppScope#0`.
+- The new `handleClickA()#1` will hold a reference to `AppScope#1`, which holds a reference to `handleClickB()#0`.
+
+The general problem is that different `useCallback` hooks in a single component might reference each other and other expensive data through the closure scopes. The closures are then held in memory until the `useCallback` hooks are recreated. Having more than one `useCallback` hook in a component makes it super hard to reason about what’s being held in memory and when it’s being released. The more callbacks you have, the more likely it is that you’ll encounter this issue.
 
 ## Resources
 1. [React re-renders guide: everything, all at once]([https://www.developerway.com/posts/react-re-renders-guide](https://www.developerway.com/posts/react-re-renders-guide)

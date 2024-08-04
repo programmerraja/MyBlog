@@ -46,3 +46,11 @@ why we grouped the page table because if we map single byte for each byte in RAM
 - To calculate the offset, we create a bitmask with 12 bits set to 1 (0b00000000000000000000111111111111 in binary) and perform a bitwise AND operation with the virtual address.
 
 Paging divides memory into sections or paging files. When the computer runs out of available memory, unused pages are flushed to disk using the paging file. when we try to access the page that in disk it will throw page fault os will handle and move the page from disk to memory
+
+A **virtual memory buffer** is a region of virtual memory that is used to temporarily store data that is being transferred between different parts of a system, such as between a process and a device, or between a process and the operating system.
+
+Note:the virtual address space dedicated to a process by the OS is [128TB on Linux](https://www.kernel.org/doc/html/latest/x86/x86_64/mm.html?ref=blog.meilisearch.com) and [8TB on Windows](https://techcommunity.microsoft.com/t5/windows-blog-archive/pushing-the-limits-of-windows-virtual-memory/ba-p/723750?ref=blog.meilisearch.com).
+
+
+
+TIP: IF you want to cache some file on RAM and move all other from cache cat the huge file it will be moved cache 

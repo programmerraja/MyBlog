@@ -213,6 +213,7 @@ The WiredTiger storage engine maintains lists of empty records in data files as 
 The amount of empty space available for reuse by WiredTiger is reflected in the output of [db.collection.stats()](https://www.mongodb.com/docs/manual/reference/method/db.collection.stats/#mongodb-method-db.collection.stats) under the heading `wiredTiger.block-manager.file bytes available for reuse`.
 
  To allow the WiredTiger storage engine to release this empty space to the operating system, you can de-fragment your data file. This can be achieved using the [compact](https://www.mongodb.com/docs/manual/reference/command/compact/#mongodb-dbcommand-dbcmd.compact) command. For more information on its behavior and other considerations, see [compact](https://www.mongodb.com/docs/manual/reference/command/compact/#mongodb-dbcommand-dbcmd.compact)[.](https://www.mongodb.com/docs/manual/reference/command/compact/#mongodb-dbcommand-dbcmd.compact)``
+ 
 The `db.serverStatus()` command provides details of how much memory MongoDB is using. The following script prints out a top-level summary of memory utilization.
 
 ```js

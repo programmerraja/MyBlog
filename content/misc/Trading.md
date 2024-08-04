@@ -310,3 +310,7 @@ Health insurance to avoid
 - pre and post hospitalization care did they covring this and how long
 - opt for low waiting period
 - restoration benefit & day care cover
+
+
+
+![[Pasted image 20240721092914.png]]

@@ -140,3 +140,17 @@ Used in distributed shared database where the indexing is in global so when ever
 
 
 
+
+
+
+
+SQL
+
+CLient -> Query enging (thread/process per client) -> storage/engine (io/treads) -> Disk 
+
+they have thread and locks and shared memory  for communication
+
+Cassandra 
+client -> MainThread pool(threads per client) ->MMapedFile (kernel task) - > Storage
+
+Locks moved to kernel

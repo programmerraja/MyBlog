@@ -8,7 +8,7 @@ draft = false
 
 ## The Nature of Complexity
 
-`Complexity is anything related to the structure of a software systemthat makes it hard to understand and modify the system.`
+Complexity is anything related to the structure of a software systemthat makes it hard to understand and modify the system.
 
 #### Symptoms of complexity
 

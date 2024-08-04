@@ -53,7 +53,7 @@ ignoreFiles = ["content/template","template","misc/*"]
     avatar = "myself.jpeg"
     intro = "K.Boopathi"
     name = "K.Boopathi"
-    description = "Exploring diverse tech realms, I'm a curious programmer crafting blogs on web dev and sharing learning resources! 🚀 Dive into my world of code exploration and innovation!"
+    description = "Curious software developer exploring MERN stack and tech trends, blogging about web development, and sharing insights through a personal knowledge base. 🚀"
 
 [[params.socialIcons]]
     name = "github"

@@ -1,4 +1,3 @@
-
 +++
 title = 'Hacking'
 date = 2024-01-25T07:41:37.3737+05:30
@@ -20,7 +19,8 @@ air crack ng airodump ng  -> capture the password send by other device and try t
 deauth -> make already connected one to disconnect and listen for the password
 
 cewl ,pipal ->  tool to guess password from there website and so on 
-
+Tool
+- https://github.com/FLOCK4H/Freeway
 
 Burpsuite toutorial
 1. https://hacklido.com/blog/628-burpsuite-101-exploring-burp-repeater-and-burp-comparer
@@ -148,3 +148,6 @@ sdptool browse mac address of bluethhod device
 https://github.com/pentestfunctions/BlueDucky
 
 https://urlhaus.abuse.ch/ URLhaus is a project from abuse.ch with the goal of sharing malicious URLs that are being used for malware distribution.
+
+
+https://github.com/blacklanternsecurity/bbot?utm_source=tldrinfosec

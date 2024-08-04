@@ -7,7 +7,7 @@
 - [ ] Read book twice which give more idea
 - [ ]  how to get more follower tiwtter / linkdein
 - [ ] chrome tracing look for Garbage collector time in klenty
-- [ ] IRCT remainder app -> singn with google and create event in calendar 
+- [x] IRCT remainder app -> singn with google and create event in calendar 
 - [ ] Write shell script to parse proc and print need info
 - [ ] Build AI for suggest tax saving
 
@@ -22,3 +22,12 @@ office
 1. PR extn
 2. Interveiw helper revamp
 4. write a chrome extension or vscode extension to show the no of time each component is get rendering
+
+
+
+IDEAS
+[ ] Mongodb script anlaysis collection ram usaga cache hit and unused index 
+
+
+
+https://github.com/devidw/obsidian-to-hugo

@@ -1,12 +1,7 @@
 
 
-- Cache hit ngnix
-- ip cmd inside pod
-- https://minikube.sigs.k8s.io/docs/tutorials/multi_node/
 
 
-
-kubectl get pods --namespace=kube-system -l k8s-app=kube-dns
 
 kube builtin pods runs on kube-system namspace
 https://depot.dev/blog/buildkit-in-depth
@@ -14,9 +9,6 @@ https://depot.dev/blog/buildkit-in-depth
 https://kubernetes.io/docs/concepts/workloads/pods/ephemeral-containers/
 
 git@github.com:open-source-labs/Reactime.git
-
-Learn crypto
-
 
 
 kubctl debug

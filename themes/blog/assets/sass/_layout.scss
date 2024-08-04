@@ -253,9 +253,7 @@ mark {
 }
 
 
-.bio{
-  display: flex;
-}
+
 .bio-img img{
   height: 100px;
   width: 100px;
@@ -263,4 +261,76 @@ mark {
 }
 .bio-text{
   padding:0 1rem;
+}
+.skills-container {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+}
+.skills-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+.skill-item {
+  background: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition:
+  background 0.3s,
+  transform 0.3s;
+}
+.skill-item:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+.skill-item:nth-child(odd) {
+  background: #28a745;
+}
+.skill-item:nth-child(even) {
+  background: #dc3545;
+}
+@media (max-width: 600px) {
+  .skill-item {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+}
+
+.about-container {
+  background-color: #babdc4;
+  color: #333;
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.about-container h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+.about-container p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0 0 10px;
+}
+.about-container a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+.about-container a:hover {
+  text-decoration: underline;
 }

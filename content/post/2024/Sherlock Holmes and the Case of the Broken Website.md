@@ -2,7 +2,7 @@
 title = 'Sherlock Holmes and the Case of the Broken Website'
 date = 2024-07-11T05:15:01.011+05:30
 draft = false
-tags =[]
+tags =['nginx','debugging']
 +++ 
 
 
@@ -43,7 +43,5 @@ With the culprit identified, the solution was straightforward: purge the cache o
 ### The Conclusion: A Lesson Learned
 
 This case taught us the importance of considering caching layers when troubleshooting routing issues. A seemingly perfect server configuration can be undermined by an overlooked cache.
-
-Stay tuned for our next adventure, where we'll dive into another thrilling mystery of the infrastructure world. Until then, keep your detective hats on and your configurations tight!
 
 Stay tuned for the next adventure in our Sherlock Holmes series, where we continue to unearth and solve the mysteries.

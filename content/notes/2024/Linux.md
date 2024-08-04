@@ -264,3 +264,97 @@ list open files
 
 The first step in the USE method is to create a list of resources. in the system like cpu,memory, etc 
 https://queue.acm.org/detail.cfm?id=2413037
+
+
+
+
+
+
+
+
+The command `sync; echo 1 > /proc/sys/vm/drop_caches` is used to clear the cache in Linux.
+
+Here's a breakdown of what each part of the command does:
+
+- `sync`: This command flushes the file system buffer, ensuring that all data is written to disk.
+- `echo 1 > /proc/sys/vm/drop_caches`: This command writes the value `1` to the file `/proc/sys/vm/drop_caches`, which is a special file in Linux that controls the cache behavior.
+
+
+
+
+
+## Storage
+
+Linux makes it easy to see the actual storage disks by representing them as files in the **/dev** directory. Each disk is identified by a series of letters.
+
+- sd = storage disk
+- a or b = first or second disk (it also counts c, d, etc.)
+- 1 or 2 = partitions on the disk (it also counts higher)
+
+The result is that /dev/sdb1 is storage device ( sd), second device ( b), first partition ( 1), or the first partition on the second storage device.
+
+Use the ls command to display the contents of the /dev/disk directory. In Ubuntu, you can view storage devices by-id, by-path, etc. You should see at least one entry that reads sda. That’s the first storage disk in the system. When you add a second disk, it will be labeled as sdb. Other identifiers include the disk’s Universally Unique ID (UUID).
+
+Partition
+A partition is a defined storage area on a hard drive. Essentially, it's a way of dividing a physical disk into separate, distinct sections. Each partition can be treated as an **independent disk by the operating system.**
+
+### isstat
+
+
+
+## System performance steps
+
+### Uptime
+look for the load average field.  It represents the average number of processes that are waiting to be executed by the CPU over a certain period.
+
+```
+>uptime
+09:37:45 up 13:09,  1 user,  load average: 0.13, 0.40, 0.50
+```
+1. **First number (0.13)**: The load average over the last 1 minute.
+2. **Second number (0.40)**: The load average over the last 5 minutes.
+3. **Third number (0.50)**: The load average over the last 15 minutes.
+
+**Interpretation:**
+- **0.0-0.5**: The system is idle or lightly loaded.
+- **0.5-1.0**: The system is moderately loaded, with some processes waiting for CPU time.
+- **1.0-2.0**: The system is heavily loaded, with many processes waiting for CPU time.
+- **Above 2.0**: The system is extremely loaded, with a high risk of performance issues or crashes.
+
+### vmstat
+
+ provides a snapshot of the system's memory, swap, I/O, and CPU usage.
+```
+>vmstat
+procs -----memory---------- ---swap-- -----io---- -system----cpu-----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
+ 1  0      0 20291856 747012 5818664    0    0    36    50  234  224  7  2 91  0  0
+
+CMD to print in proper table format
+vmstat  | tail -n 1 | awk '{print "| procs | r (run queue) | "$1" |\n| procs | b (uninterruptible sleep) | "$2" |\n| memory | swpd (swap used) | "$3" |\n| memory | free (free memory) | "$4" |\n| memory | buff (buffer memory) | "$5" |\n| memory | cache (cache memory) | "$6" |\n| swap | si (swap in) | "$7" |\n| swap | so (swap out) | "$8" |\n| io | bi (blocks read) | "$9" |\n| io | bo (blocks written) | "$10" |\n| system | in (interrupts) | "$11" |\n| system | cs (context switches) | "$12" |\n| cpu | us (user mode) | "$13"% |\n| cpu | sy (system mode) | "$14"% |\n| cpu | id (idle) | "$15"% |\n| cpu | wa (waiting for I/O) | "$16"% |\n| cpu | st (steal mode) | "$17"% |"}'
+
+```
+
+**procs**
+- `r`: The number of processes waiting for CPU time (run queue).
+- `b`: The number of processes in uninterruptible sleep (usually waiting for I/O). 
+**memory**
+- `swpd`: The amount of swap space used (in kilobytes). 
+- `free`: The amount of free memory available (in kilobytes).
+- `buff`: The amount of memory used for buffers (in kilobytes).
+- `cache`: The amount of memory used for caching (in kilobytes). 
+**swap**
+- `si`: The number of kilobytes swapped in from disk per second. 
+- `so`: The number of kilobytes swapped out to disk per second. 
+**io**
+- `bi`: The number of blocks read from disk per second. 
+- `bo`: The number of blocks written to disk per second.
+**system**
+- `in`: The number of interrupts per second.
+- `cs`: The number of context switches per second. 
+**cpu**
+- `us`: The percentage of CPU time spent in user mode. 
+- `sy`: The percentage of CPU time spent in system mode.
+- `id`: The percentage of CPU time spent idle. 
+- `wa`: The percentage of CPU time spent waiting for I/O. 
+- `st`: The percentage of CPU time spent in steal mode (usually due to virtualization).

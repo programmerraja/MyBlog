@@ -1,4 +1,4 @@
-[]()+++
++++
 title = 'Software Architecture'
 date = 2024-03-10T07:39:59.5959+05:30
 draft = true

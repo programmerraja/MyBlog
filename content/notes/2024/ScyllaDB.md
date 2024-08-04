@@ -149,3 +149,74 @@ ScyllaDB is a high-performance, highly available NoSQL database that is compatib
   FINALFUNC finalFunc;
   ```
 
+
+
+## Internals
+- All nodes are read and write 
+
+
+Write will be written in commit log like journal in mongodb and it using memtable (lsm tree)
+
+
+built with c++ seastar framework follows shard per core architecture
+
+schedulling groups  
+Io schduler -> build there own IO  schduler
+custom cache instead of linux
+leader less architecure
+
+each shard has independent scheduler 
+
+casandra cannot specify timeout for per query
+
+in sycalldb we can control does we need to put this data in caching or not
+
+
+
+
+You was mongodb architecture i want to you to help me solve the problem my problem is i have a mongodb database with 16Gb Ram and 2Tb of storage and 4 core processor i want to calulate how much spec ram,cpu and storage used by the cuurent mongodb how i can calculate this and i want to bring new collection from different database to this database how can i caluculation that this current resources is good enough for the new collection and how i can find this
+
+
+**ScyllaDB Overview**
+
+- ScyllaDB is compatible with Apache Cassandra and DynamoDB
+- It supports multiple consistency models, including eventual consistency and lightweight transactions
+- It is designed for multi-terabyte or petabyte workloads and high-performance applications
+
+**Architecture**
+
+- ScyllaDB has a symmetric architecture, with each node divided into two layers: coordination and storage
+- Each node has a full connection mesh, allowing for efficient communication between nodes
+- The database uses a thread-per-core architecture, with each thread having its own scheduler
+
+**Performance**
+
+- ScyllaDB is designed to be highly efficient, with a focus on minimizing coordination and locking overhead
+- It uses asynchronous I/O and networking to improve performance
+- The database is self-tuning, with a feedback loop that adjusts the scheduler to optimize performance
+
+**Concurrency**
+
+- ScyllaDB is designed to handle high concurrency, with a focus on minimizing latency
+- It uses a scheduling algorithm to manage concurrency and prioritize requests
+- The database tracks metadata about each request, including the originating process and priority
+
+**I/O and Networking**
+
+- ScyllaDB uses Linux AIO and epoll for I/O and networking
+- It has a custom TCP/IP stack, but it is not currently used due to deployment issues
+- The database is designed to work with iouring, but it is not currently supported
+
+**Cooperative Scheduling**
+
+- ScyllaDB uses a cooperative scheduling model, where tasks yield control back to the scheduler voluntarily
+- This approach allows for efficient scheduling and minimizes latency
+- The database uses a preemption timer to ensure that tasks do not run for too long without yielding control
+
+
+
+there is primary seconday nodes all are master when the write request send to one node it will replicate quorum 
+
+partion key -> convert to number
+cluster key
+Tablets

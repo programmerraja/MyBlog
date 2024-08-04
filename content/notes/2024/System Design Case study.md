@@ -1,4 +1,4 @@
-	+++
++++
 title = 'System Design Case study'
 date = 2024-04-20T16:45:15.1515+05:30
 draft = false
@@ -93,6 +93,21 @@ spec : 16core 32GB ram
 Learning: we can do wired thing if it work for us :)
 
 
+### Stripe
+
+[Stripe’s](https://stripe.com/blog/how-stripes-document-databases-supported-99.999-uptime-with-zero-downtime-data-migrations) database infrastructure team built an internal database-as-a-service (DBaaS) offering called DocDB.
+#### How Applications Access DocDB?
+
+DocDB leverages sharding to achieve horizontal scalability for its database infrastructure. With thousands of database shards distributed across Stripe’s product applications, sharding enables efficient data distribution and parallel processing.
+
+Stripe’s database infrastructure team developed a fleet of database proxy servers implemented in Golang. These proxy servers handle the task of routing queries to the correct shard.
+
+When an application sends a query to a database proxy server, it performs the following steps:
+
+- Parsing the query
+- Routing it to one or more shards
+- Combining the results received from the shards
+- Returning the final result to the application
 
 ## Caching
 
@@ -171,7 +186,31 @@ To achieve this, we use a sliding window circuit breaker. We count the number of
 
 Avoiding DB overload on cache down: let say the redis node is down then suddenly all request will forward to DB. db will be overloaded to avoid that they dynamically adjust the db timeout of the query
 
+### Facebook
+**How Meta Achieves 99.99999999% Cache Consistency:**
 
+common race condition for inconsistency:
+1. The client queries the cache for a value not present in it
+2. So the cache queries the database for the value: x = 0
+3. In the meantime, the value in the database gets changed: x = 1
+4. But the cache invalidation event reaches the cache first: x = 1
+5. Then the value from cache fill reaches the cache: x = 0
+
+To solve this  they created  _observability_ solution.
+
+**Monitoring**
+They created a separate service to monitor cache inconsistency & called it **Polaris**
+- It acts like a cache server & receives cache invalidation events
+- Then it queries cache servers to find data inconsistency
+- It queues inconsistent cache servers & checks again later
+- It checks data correctness during writes, so finding cache inconsistency is faster
+- Simply put, it measures cache inconsistency
+- Polaris queries the database at timescales of 1, 5, or 10 minutes. It lets them back off efficiently & improve accuracy.
+
+**Tracing**
+- It logs only data changes that occur during the race condition time window. Thus log storage becomes cheaper
+- It keeps an index of recently modified data to determine if the next data change must be logged
+- Polaris reads logs if cache inconsistency is found & then sends notifications
 ## Logging
 
 ### **Pinterest**
@@ -180,4 +219,14 @@ Avoiding DB overload on cache down: let say the redis node is down then suddenly
 
 
 
+
+
+## Search
+
+### Twitter
+To achieve stability and scalability, they used Open Distro for Elasticsearch, but added a proxy and two services: Ingestion Service and Backfill Service.
+
+The proxy separates read and write traffic from clients, handles client authentication, and provides additional metrics and flexible routing and throttling. This design creates a single entry point for all requests and makes it easier for customers to build solutions.
+
+The Ingestion Service was introduced to handle large traffic spikes. It queues requests from clients into a Kafka topic, and worker clients then send the requests to the Elasticsearch cluster. The service batches requests, listens to back-pressure, auto-throttles, and retries with backoff, smoothing out traffic to the cluster and preventing overload.
 

@@ -69,6 +69,82 @@ tags =[]
 - https://www.kaggle.com/code/fareselmenshawii/rnn-from-scratch
 
 ####  LSTM
+
+LSTMs have been the most effective architecture to process long sequences of data, until our world was taken over by the Transformers.
+
+LSTMs belong to the broader family of recurrent neural network (RNNs) that process data sequentially in a recurrent manner.
+
+Transformers, on the other hand, abandon recurrence and use self-attention instead to process data concurrently in parallel.
+
+Recently, there is renewed interest in recurrence as people realized self-attention doesn’t scale to extremely long sequences, like hundreds of thousands of tokens. Mamba is a good example to bring back recurrence.
+
+How do LSTMs work?
+
+1.Given
+↳ 🟨 Input sequence X1, X2, X3 (d = 3)
+↳ 🟩 Hidden state h (d = 2)
+↳ 🟦 Memory C (d = 2)
+↳ Weight matrices Wf, Wc, Wi, Wo
+
+Process t = 1
+
+2.Initialize
+↳ Randomly set the previous hidden state h0 to [1, 1] and memory cells C0 to [0.3, -0.5]
+
+3.Linear Transform
+↳ Multiply the four weight matrices with the concatenation of current input (X1) and the previous hidden state (h0).
+↳ The results are feature values, each is a linear combination of the current input and hidden state.
+
+4.Non-linear Transform
+↳ Apply sigmoid σ to obtain gate values (between 0 and 1).
+• Forget gate (f1): [-4, -6] → [0, 0]
+• Input gate (i1): [6, 4] → [1, 1]
+• Output gate (o1): [4, -5] → [1, 0]
+↳ Apply tanh to obtain candidate memory values (between -1 and 1)
+• Candidate memory (C’1): [1, -6] → [0.8, -1]
+
+5.Update Memory
+↳ Forget (C0 .* f1): Element-wise multiply the current memory with forget gate values.
+↳ Input (C’1 .* o1): Element-wise multiply the “candidate” memory with input gate values.
+↳ Update the memory to C1 by adding the two terms above: C0 .* f1 + C’1 .* o1 = C1
+
+6.Candiate Output
+↳ Apply tanh to the new memory C1 to obtain candidate output o’1.
+[0.8, -1] → [0.7, -0.8]
+
+7.Update Hidden State
+↳ Output (o’1 .* o1 → h1): Element-wise multiply the candidate output with the output gate.
+↳ The result is updated hidden state h1
+↳ Also, it is the first output.
+
+Process t = 2
+
+8.Initialize
+↳ Copy previous hidden state h1 and memory C1
+
+9.Linear Transform
+↳ Repeat [3]
+
+10.Update Memory (C2)
+↳ Repeat [4] and [5]
+
+11.Update Hidden State (h2)
+↳ Repeat [6] and [7]
+
+Process t = 3
+
+12.Initialize
+↳ Copy previous hidden state h2 and memory C2
+
+13.Linear Transform
+↳ Repeat [3]
+
+14.Update Memory (C3)
+↳ Repeat [4] and [5]
+
+15.Update Hidden State (h3)
+↳ Repeat [6] and [7]
+
 - http://colah.github.io/posts/2015-08-Understanding-LSTMs/
 
 #### BiLSTM
@@ -110,6 +186,87 @@ encoder and a decoder, the BART and T5 models belong to this class.
 - **value** — giving the information
 
 
+## Attention
+
+The self-attention mechanism involves three main components:
+
+1. **Query (Q)**: The query is the token that is being processed.
+2. **Key (K)**: The key is the token to which we are checking compatibility with the query.
+3. **Value (V)**: The value is the actual representation vector of the token.
+
+ For each word embedding we create a Query vector, a Key vector, and a Value vector. These new vectors are smaller in dimension than the embedding vector. Their dimensionality is 64, while the embedding and encoder input/output vectors have dimensionality of 512.
+
+**Step 1: Calculate Query, Key, and Value Vectors**
+
+The first step is to multiply each of the input vectors with three weights matrices (W(Q), W(K), W(V)) that are trained during the training process. This matrix multiplication will give us three vectors for each of the input vectors: the query vector, the key vector, and the value vector.
+
+```python
+import numpy as np
+
+# Input vectors
+input_vectors = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+
+# Weights matrices
+W_Q = np.array([[0.1, 0.2, 0.3], [0.4, 0.5, 0.6], [0.7, 0.8, 0.9]])
+W_K = np.array([[0.9, 0.8, 0.7], [0.6, 0.5, 0.4], [0.3, 0.2, 0.1]])
+W_V = np.array([[0.5, 0.6, 0.7], [0.8, 0.9, 0.1], [0.2, 0.3, 0.4]])
+
+# Calculate query, key, and value vectors
+query_vectors = np.dot(input_vectors, W_Q)
+key_vectors = np.dot(input_vectors, W_K)
+value_vectors = np.dot(input_vectors, W_V)
+
+# Calculate attention scores
+attention_scores = np.dot(query_vectors, key_vectors.T)
+
+#The third step is to divide the attention scores by the square root of the dimensions of the key vector
+
+scaled_attention_scores = attention_scores / np.sqrt(key_vectors.shape[1])
+```
+
+Example
+```python
+# Input vectors for the sentence "I am going to play"
+input_vectors = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12], [13, 14, 15]])
+
+# Calculate query, key, and value vectors
+query_vectors = np.dot(input_vectors, W_Q)
+key_vectors = np.dot(input_vectors, W_K)
+value_vectors = np.dot(input_vectors, W_V)
+
+# Calculate attention scores for the word "going" 
+#key_vectors.T -> transpose matrics
+attention_scores = np.dot(query_vectors[2], key_vectors.T)
+
+# Scale attention scores
+scaled_attention_scores = attention_scores / np.sqrt(key_vectors.shape[1])
+
+# Apply softmax
+attention_weights = np.exp(scaled_attention_scores) / np.sum(np.exp(scaled_attention_scores), axis=-1, keepdims=True) 17
+
+# Calculate final representation of the word "going"
+final_representation = np.dot(attention_weights, value_vectors)
+```
+
+
+Single formula for repersentating above
+
+`Attention(Q, K, V) = softmax(Q * K^T / sqrt(d)) * V`
+
+where:
+
+- `Q` is the query vector
+- `K` is the key vector
+- `V` is the value vector
+- `d` is the dimensionality of the key vector
+- `^T` denotes the transpose operation
+- `softmax` is the softmax function
+- `*` denotes the matrix multiplication operation
+
+1. Each word in the input sequence is embedded into a vector space using a learned embedding matrix.
+2. For each word, three vectors are computed: `Q`, `K`, and `V`. These vectors are computed by applying three separate linear transformations to the word's embedding vector.
+3. The `Q` vector is used as a query to compute attention weights with respect to all other words in the sequence. This is done by taking the dot product of the `Q` vector with the `K` vectors of all other words, and applying a softmax function to obtain a set of attention weights.
+4. The attention weights are then used to compute a weighted sum of the `V` vectors of all other words, which produces the output of the self-attention mechanism.
 ## Optimizer and loss function
 
 **Optimizer:** The optimizer in a Transformer model refers to the algorithm used to update the model parameters during training in order to minimize the loss function. Some common optimizers used in Transformer models include:
@@ -226,6 +383,8 @@ for sent in sentences:
 - https://peterbloem.nl/blog/transformers
 - https://github.com/jessevig/bertviz
 
+Visulizer 
+- https://github.com/labmlai/inspectus
 
 
 
@@ -243,3 +402,9 @@ https://karpathy.github.io/2015/05/21/rnn-effectiveness/
 
 Lama3 from scrath
 https://github.com/naklecha/llama3-from-scratch 
+
+finetuned-spam-classifier
+https://colab.research.google.com/gist/virattt/ddb43fc3d6c0c66abe29a158fe79aa85/finetuned-spam-classifier.ipynb
+
+
+https://github.com/jalammar/ecco?tab=readme-ov-file
