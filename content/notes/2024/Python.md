@@ -788,6 +788,31 @@ print(m.dimensions)
 ```
 
 
+
+
+## Docstrings
+A docstring is a string literal that occurs as the first statement in a module, function, class, or method definition. It is used to document the code and provide information about what the code does, its parameters, return values, and any other relevant details.
+
+A docstring is typically enclosed in triple quotes `"""..."""` or `'''...'''`, and it can span multiple lines.
+
+```python
+def greet(name: str) -> None:
+    """Print a personalized greeting message.
+
+    Args:
+        name (str): The name of the person to greet.
+
+    Returns:
+        None
+    """
+    print(f"Hello, {name}!")
+
+print(greet.__doc__) 
+help(greet)
+```
+
+
+
 new tools
 - pydantic
 - Ruff [ linting and formating]

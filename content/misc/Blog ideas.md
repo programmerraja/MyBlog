@@ -33,3 +33,24 @@ _[Subscribe for free](https://medium.com/subscribe/@programmerraja) to get noti
 _Find me on_ [LinkedIn](https://www.linkedin.com/in/programmerraja/), [Twitter](https://twitter.com/programmerraja)_, and_ github_!_
 
 https://giscus.app/ -> to add comments feature
+
+
+
+
+
+
+
+
+```
+#16 132.3 npm ERR! ../../undici-types/balanced-pool.d.ts(22,12): error TS1005: ';' expected.
+
+[7390](https://github.com/klenty/kl-ms/actions/runs/10296685313/job/28498445106#step:4:7391)#16 132.3 npm ERR! ../../undici-types/balanced-pool.d.ts(25,12): error TS1005: ';' expected.
+
+[7391](https://github.com/klenty/kl-ms/actions/runs/10296685313/job/28498445106#step:4:7392)#16 132.3 npm ERR! ../../undici-types/client.d.ts(21,12): error TS1005: ';' expected.
+
+[7392](https://github.com/klenty/kl-ms/actions/runs/10296685313/job/28498445106#step:4:7393)#16 132.3 npm ERR! ../../undici-types/client.d.ts(24,12): error TS1005: ';' expected.
+
+[7393](https://github.com/klenty/kl-ms/actions/runs/10296685313/job/28498445106#step:4:7394)#16 132.3 npm ERR! ../../undici-types/pool.d.ts(20,12): error TS1005: ';' expected.
+
+[7394](https://github.com/klenty/kl-ms/actions/runs/10296685313/job/28498445106#step:4:7395)#16 132.3 npm ERR! ../../undici-types/pool.d.ts(23,12): error TS1005: ';' expected.
+```

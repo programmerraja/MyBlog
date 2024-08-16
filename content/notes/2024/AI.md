@@ -442,9 +442,6 @@ Langchain alternative
 
 
 
-LLM evaulation
-- [truelens](https://www.trulens.org/) 
-
 
 ## AutoML 
 Frameworks represent a noteworthy leap in the evolution of machine learning. By streamlining the complete model development cycle, including tasks such as data cleaning, feature selection, model training, and hyperparameter tuning, AutoML frameworks significantly economize on the time and effort customarily expended by data scientists.
@@ -508,7 +505,7 @@ use YAML because it is less verbose, and hence consumes fewer tokens than JSON. 
 https://applied-llms.org/
 
 
-
+**DeepEval** is an open-source evaluation framework for LLMs. DeepEval makes it extremely easy to build and iterate on LLM (applications) and was built with the following principles in mind:
 
 ## 1 Bit LLM 
  BitNet b1.58 where every weight in a Transformer can be represented as a {-1, 0, 1} instead of a floating point number. 

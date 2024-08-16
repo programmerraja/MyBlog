@@ -67,6 +67,10 @@ By providing the LLM with a graph representation of the task, we can help it rea
 | Interaction           | Flipped Interaction<br> Game Play <br>Infinite Generation                                |
 | Context Control       | Context Manager                                                                          |
 
+## Claude Meta Prompt
+
+Claude have written a prompt that will help to get perfect prompt in XML
+check [here](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/prompt-generator)
 
 
 ## Dspy
@@ -112,8 +116,36 @@ class GenerateAnswer(dspy.Signature):
 	question = dspy.InputField() 
 	answer = dspy.OutputField(desc="often between 1 and 5 words")
 
+predict = dspy.predict(GenerateAnswer)
+prediction = predict(question="how many hydrogent present in water",context="")
+
+print(predict.answer)
+
+turbo.inspect_history(n=10) #"Prints the last n prompts and their completions
 ```
 
+below data will send to LLM and context,question and answer to get by using `pydantic` 
+
+```txt
+Answer questions with short factoid answers. #->  using signature doc string
+
+---
+
+Follow the following format.
+
+Context: may contain relevant facts
+Question: ${question}
+Answer: often between 1 and 5 words
+
+---
+
+Context: 
+Question: how many hydrogent present in water
+Answer:Context: 
+Question: how many hydrogent present in water
+Answer: Two  #answer from chat gpt
+
+```
 
 ###  Modules: Abstracting prompting techniques
 
@@ -128,6 +160,41 @@ generate_answer = dspy.ChainOfThought(GenerateAnswer)
 
 # Call the module on a particular input. 
 pred = generate_answer(context = "Which meant learning Lisp, since in those days Lisp was regarded as the language of AI.", question = "What programming language did the author learn in college?")
+
+print(pred.answer)
+```
+
+Below prompt will send to LLM for above code
+```txt
+Given the fields `context`, `question`, produce the fields `answer`.
+
+---
+
+Follow the following format.
+
+Context: ${context}
+
+Question: ${question}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: ${answer}
+
+---
+
+Context: Which meant learning Lisp, since in those days Lisp was regarded as the language of AI.
+
+Question: What programming language did the author learn in college?
+
+Reasoning: Let's think step by step in order to
+
+Context: Which meant learning Lisp, since in those days Lisp was regarded as the language of AI.
+
+Question: What programming language did the author learn in college?
+
+Reasoning: Let's think step by step in order to find the answer to the question. The context states that the author learned Lisp in college. 
+
+Answer: Lisp 
 ```
 
 - `dspy.Predict`: Processes the input and output fields, generates instructions, and creates a template for the specified `signature`.
@@ -158,3 +225,17 @@ def forward(self, question):
 	  prediction = self.generate_answer(context=context, question=question) 
 	  return dspy.Prediction(context=context, answer=prediction.answer)
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+## Summarization
+- https://towardsdatascience.com/summarize-podcast-transcripts-and-long-texts-better-with-nlp-and-ai-e04c89d3b2cb
