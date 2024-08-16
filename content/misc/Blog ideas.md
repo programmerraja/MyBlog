@@ -5,6 +5,14 @@
 - [ ] Reverse eng techinuque to debug
 - [ ] How i find eslint affecting our dev productivity
 - [ ] Best practice that i follow on node and react
+- [ ] How i get my facebook password using c
+- [ ] A series of blog how i automate the boring task
+	- [ ] Mobile script
+	- [ ] keka
+	- [ ] class hunter
+	- [ ] interview helper
+	- [ ] Money making machine
+	- [ ] expense tracker
 
 
 ```
@@ -41,16 +49,5 @@ https://giscus.app/ -> to add comments feature
 
 
 
-```
-#16 132.3 npm ERR! ../../undici-types/balanced-pool.d.ts(22,12): error TS1005: ';' expected.
-
-[7390](https://github.com/klenty/kl-ms/actions/runs/10296685313/job/28498445106#step:4:7391)#16 132.3 npm ERR! ../../undici-types/balanced-pool.d.ts(25,12): error TS1005: ';' expected.
-
-[7391](https://github.com/klenty/kl-ms/actions/runs/10296685313/job/28498445106#step:4:7392)#16 132.3 npm ERR! ../../undici-types/client.d.ts(21,12): error TS1005: ';' expected.
-
-[7392](https://github.com/klenty/kl-ms/actions/runs/10296685313/job/28498445106#step:4:7393)#16 132.3 npm ERR! ../../undici-types/client.d.ts(24,12): error TS1005: ';' expected.
-
-[7393](https://github.com/klenty/kl-ms/actions/runs/10296685313/job/28498445106#step:4:7394)#16 132.3 npm ERR! ../../undici-types/pool.d.ts(20,12): error TS1005: ';' expected.
-
-[7394](https://github.com/klenty/kl-ms/actions/runs/10296685313/job/28498445106#step:4:7395)#16 132.3 npm ERR! ../../undici-types/pool.d.ts(23,12): error TS1005: ';' expected.
-```
+AI BLOG IDEAs
+[ ] EVAL in AI

@@ -228,6 +228,8 @@ def forward(self, question):
 
 
 
+## EvalLM
+Interactive Evaluation of Large Language Model Prompts on User-Defined Criteria
 
 
 
@@ -239,3 +241,22 @@ def forward(self, question):
 
 ## Summarization
 - https://towardsdatascience.com/summarize-podcast-transcripts-and-long-texts-better-with-nlp-and-ai-e04c89d3b2cb
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Prompt Hacking
+
+### output2prompt
+The core idea behind output2prompt is clever in its simplicity. By analyzing patterns in the AI’s responses, another AI can infer the instructions that produced those responses.

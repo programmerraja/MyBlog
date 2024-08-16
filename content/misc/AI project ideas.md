@@ -3,6 +3,8 @@
 - [ ] Agent to chat with my second brain and daily pick some topic and revise me about the topic give quick summary
 - [ ] 30 Day twitter post agent based on user given topic
 - [ ] Code agent which will help me to improve my expense tracker 
+- [ ] Using my notes convert to blog using AI
+- [ ] AI reaseach paper to blog
 
 
 

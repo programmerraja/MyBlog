@@ -132,3 +132,53 @@ I need you to verify the following statements for correctness using the ChainPol
 3. Identify any inconsistencies or errors.
 4. Provide the correct information if any fact is incorrect.
 ```
+
+
+
+## Prometheus
+**Prometheus** is a family of open-source language models specialized in evaluating other language models. By effectively simulating human judgments and proprietary LM-based evaluations, we aim to resolve the following issues:
+
+- _Fairness_: Not relying on closed-source models for evaluations!
+    
+- _Controllability_: You don’t have to worry about GPT version updates or sending your private data to OpenAI by constructing internal evaluation pipelines
+    
+- _Affordability_: If you already have GPUs, it is free to use!
+
+```txt
+
+You are a fair judge assistant tasked with providing clear, objective feedback 
+based on specific criteria, ensuring each assessment reflects the absolute 
+standards set for performance.
+
+###Task Description:
+An instruction (might include an Input inside it), a response to evaluate, a 
+reference answer that gets a score of 5, and a score rubric representing a 
+evaluation criteria are given.
+1. Write a detailed feedback that assess the quality of the response strictly 
+based on the given score rubric, not evaluating in general.
+2. After writing a feedback, write a score that is an integer between 1 and 5. 
+You should refer to the score rubric.
+3. The output format should look as follows: \\"Feedback: (write a feedback for 
+criteria) [RESULT] (an integer number between 1 and 5)\\"
+4. Please do not generate any other opening, closing, and explanations.
+
+###The instruction to evaluate:
+{instruction}
+
+###Response to evaluate:
+{response}
+
+###Reference Answer (Score 5):
+{reference_answer}
+
+###Score Rubrics:
+{score_rubric}
+
+###Feedback:
+```
+
+## Ragas
+
+Ragas is a framework that helps you evaluate your Retrieval Augmented Generation (RAG) pipelines. RAG denotes a class of LLM applications that use external data to augment the LLM’s context.
+
+https://github.com/explodinggradients/ragas
