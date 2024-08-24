@@ -40,7 +40,7 @@ The investigation took a new turn when I remembered that we use Cloudflare. Coul
 
 With the culprit identified, the solution was straightforward: purge the cache on Cloudflare. Once the cache was cleared, the requests were correctly routed to the new server, and the website UI was restored to its former glory.
 
-### The Conclusion: A Lesson Learned
+### The Conclusion
 
 This case taught us the importance of considering caching layers when troubleshooting routing issues. A seemingly perfect server configuration can be undermined by an overlooked cache.
 

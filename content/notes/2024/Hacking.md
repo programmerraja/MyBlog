@@ -113,6 +113,7 @@ Zenmap is GUI for nmap
 - https://epieos.com/  tool for email and phone reverse lookup
 - [SpiderFoot](https://github.com/smicallef/spiderfoot ) automates OSINT for threat intelligence and mapping your attack surface.
 - https://www.osintcombine.com/
+- https://tools.myosint.training/
 - 
 #### Resources
 1. https://www.myosint.training/ free course
@@ -151,3 +152,12 @@ https://urlhaus.abuse.ch/ URLhaus is a project from abuse.ch with the goal of sh
 
 
 https://github.com/blacklanternsecurity/bbot?utm_source=tldrinfosec
+
+
+
+
+
+
+
+
+https://fingerprint.com/

@@ -253,7 +253,11 @@ Interactive Evaluation of Large Language Model Prompts on User-Defined Criteria
 
 
 
+```
+I need to write a blog post on the topic of [integrating enterprise data with an LLM] for my AI solutions company, AI Disruptor.
 
+Begin in <scratchpad> tags and write out and brainstorm in a couple paragraphs your plan for how you will create an informative and engaging blog. Also brainstorm how you will create a CTA at the end for our company, AI Disruptor.
+```
 
 
 ## Prompt Hacking

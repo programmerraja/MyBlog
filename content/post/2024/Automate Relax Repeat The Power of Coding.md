@@ -44,4 +44,4 @@ Have you ever automated a task using code? Share your experiences and tips in th
 
 Thanks for joining me on this automation adventure, and until the next time around these pages!
 
-you can find the code [here](https://github.com/programmerraja/ClassHunter)
+You can find the code [here](https://github.com/programmerraja/ClassHunter)

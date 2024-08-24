@@ -1,18 +1,30 @@
 
-- [ ] AWS lambad
-- [ ] Memory leak in twilio
-- [ ] Weekend projects serires interview helper jira ticker,etc
-- [ ] Reverse eng techinuque to debug
-- [ ] How i find eslint affecting our dev productivity
+- [x] AWS lambad
+- [x] Memory leak in twilio
+- [x] Weekend projects serires interview helper jira ticker,etc
+- [x] Reverse eng techinuque to debug
+- [x] How i find eslint affecting our dev productivity
 - [ ] Best practice that i follow on node and react
-- [ ] How i get my facebook password using c
+- [x] How i get my facebook password using c
 - [ ] A series of blog how i automate the boring task
-	- [ ] Mobile script
+	- [x] Mobile script
 	- [ ] keka
-	- [ ] class hunter
+	- [x] class hunter
 	- [ ] interview helper
-	- [ ] Money making machine
+	- [x] Money making machine
 	- [ ] expense tracker
+- [ ] Folder exposing
+- [ ] Two if check cost (learn by doing series)
+- [x] How i earn my first 100 using MERN stack
+- [ ] Weekend learning 
+- [ ] Unsolved mysteries (ip timeout vault etc.)
+- [ ] Crazy debugging story (Welcome to the first post of my new miniseries, where I’ll be sharing some of the most intricate and entertaining bug investigations I’ve done throughout my career. I hope you find these stories enjoyable!)
+- [ ] How i make our webiste to server hello world
+- [ ] logstash shotdown on update
+- [ ] Leason learned from 2 year dev
+	- [ ] Final advice no push on friday
+
+
 
 
 ```
@@ -45,7 +57,9 @@ https://giscus.app/ -> to add comments feature
 
 
 
-
+```
+“Summarize the key points from the provided content, whether it’s a video, blog post, or article. Include details about the main topics and themes discussed. Summarize the key insights and findings, highlighting any significant advantages, limitations, or implications. Include any practical recommendations or advice for applying the discussed concepts or methods. Add any notable quotes that capture key points or significant perspectives. What is the one-sentence takeaway or central message from the content? List any references, tools, or additional resources mentioned that support the discussion.”
+```
 
 
 

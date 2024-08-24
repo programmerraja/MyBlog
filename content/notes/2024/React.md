@@ -633,3 +633,7 @@ Need to cover
 Memory leak
 - Avoid using usecallback if you have a big object or varible it will be hold on reference by the callback
 - https://schiener.io/2024-03-03/react-closures
+
+
+Internal of react 6hour
+- https://www.youtube.com/watch?v=-XKvVyC6si0

@@ -669,6 +669,14 @@ db.runCommand({
 
 
 
+Vertical sharding
+- split by table 
+
+Horzontal sharding
+- split by collection level
+- mongos
+- config server
+- shards
 
 
 

@@ -182,3 +182,96 @@ criteria) [RESULT] (an integer number between 1 and 5)\\"
 Ragas is a framework that helps you evaluate your Retrieval Augmented Generation (RAG) pipelines. RAG denotes a class of LLM applications that use external data to augment the LLM’s context.
 
 https://github.com/explodinggradients/ragas
+https://www.comet.com/site/blog/rag-evaluation-framework-ragas/
+
+https://github.com/sachink1729/DSPy-Multi-Hop-Chain-of-Thought-RAG
+
+
+
+## EvalLM
+
+Interactive Evaluation of Large Language Model Prompts on User-Defined Criteria it a website where we can enter prompt and do eval using perdefind criteria and user defined criteria
+
+
+
+
+## Resources
+- A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions [here](https://github.com/LuckyyySTA/Awesome-LLM-hallucination?tab=readme-ov-file)
+
+
+
+Fabric AI summary:
+
+SUMMARY:
+HL, Dan, and guests discussed evaluation methods for large language models, including unit tests, using LMs as judges, human evaluation, and various metrics.
+
+IDEAS:
+- Unit tests are a first line of defense for catching obvious failures.
+- Look at your data rigorously to find failure modes to test for.
+- LM as judge can help scale evaluations but requires human alignment periodically.
+- Human evaluation is important but doesn't scale well for large datasets.
+- Metrics like recall, ranking, and ability to return zero results are important.
+- Evaluations should evolve as you learn more about failure modes.
+- Code-based and LM-based evaluations have different use cases.
+- Iterative grading of outputs can help refine evaluation criteria over time.
+- Evaluation criteria may drift as you see more outputs from the LM.
+- Avoiding contamination of test data in base model training is challenging.
+
+INSIGHTS:
+- Evaluations enable fast iteration and feedback for improving LLM applications.
+- Different evaluation methods suit different use cases and stages of development.
+- Evaluations are an iterative process of discovering and codifying desired behavior.
+- Human judgment is crucial for aligning evaluations with true goals.
+- Evaluation criteria and implementations should evolve with increased understanding.
+- Logging outputs and revisiting evaluations is important for production systems.
+- A combination of methods is often needed for comprehensive evaluation.
+- Evaluation frameworks can help but the hard part is understanding requirements.
+
+QUOTES:
+"If you don't have really dumb failure modes like things that can trigger an assertion often times like is it's natural to think that hey like I can't write any unit tests for my AI because it's spitting out natural language and it's kind of fuzzy."
+"We want to make sure that the more relevant ones are closer to top personally for me what I find to be quite important uh for rag is this metric that I've never had to considered before."
+"I don't think an evaluation interface we learned no evaluation assistant can just be a One-Stop uh thing where you grade your examples come up with evals and then push it to your Ci or push it to your production workflow no you've got to always be looking."
+"Grading has to be continual you've always got to be looking at your production data you've always got to be learning from that."
+
+HABITS:
+- Look at data rigorously to find failure modes to test for.
+- Use LM as judge but periodically check human alignment.
+- Conduct human evaluation regularly, especially for evolving criteria.
+- Log outputs and revisit evaluations for production systems.
+- Iterate on evaluation criteria as understanding of requirements increases.
+- Grade outputs continually to refine evaluation criteria and implementations.
+- Check for contamination of test data in base model training.
+- Use a combination of unit tests, LM judges, metrics for comprehensive evaluation.
+
+FACTS:
+- Unit tests are limited for open-ended language model outputs.
+- LM as judge can provide directional signal but requires human alignment.
+- Human evaluation doesn't scale well for large datasets.
+- Metrics like recall, ranking, zero-result ability are important for retrievers.
+- Evaluation criteria may drift as more outputs are seen.
+- Code-based and LM-based evaluations suit different use cases.
+- Avoiding test data contamination in base models is challenging.
+
+REFERENCES:
+- Hamil's blog post on the iteration cycle
+- Spade paper on generating assertion criteria
+- Shrea Shankar's work on systematic LM judging
+- Langs Smith for logging, testing, datasets
+- BrainTrust, Weights &amp; Biases tools mentioned
+- Instruct library for honeycomb example
+- Eugene's writeups on LM evals, hallucination detection, domain fine-tuning
+
+ONE-SENTENCE TAKEAWAY:
+Comprehensive evaluation of large language models requires an iterative process combining multiple methods like unit tests, LM judges, metrics, and human evaluation to continuously align with evolving goals.
+
+RECOMMENDATIONS:
+- Write unit tests to catch obvious failures as a first line of defense.
+- Look at data rigorously to find and test for different failure modes.
+- Use LM as judge but periodically check alignment with human judgments.
+- Conduct regular human evaluation, especially when criteria are evolving.
+- Log outputs and revisit evaluations for production systems to refine criteria.
+- Iterate on evaluation criteria as understanding of requirements increases through grading.
+- Use a combination of methods like unit tests, LM judges, metrics.
+- Consider evaluation frameworks but focus on understanding requirements first.
+- Check for contamination of test data in base model training data.
+- Evaluate agents by breaking down into steps and evaluating each component.

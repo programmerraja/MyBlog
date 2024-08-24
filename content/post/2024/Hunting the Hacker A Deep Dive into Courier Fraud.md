@@ -14,7 +14,7 @@ It all began when one of our colleagues received a phone call from someone claim
 
 ### The APK
 
-Suspicious of the request, our colleague forwarded the APK to me, knowing my expertise in software development and cybersecurity. My investigation began by downloading and extracting the contents of the APK. Inside, I found several dex files, which I knew contained the app's compiled source code. Using a tool called [jadx](https://github.com/skylot/jadx), (`jadx -d extractedapkfile`) I decompiled the APK to inspect its source code.
+Suspicious of the request, our colleague forwarded the APK to me, knowing my expertise in software development and cybersecurity. My investigation began by downloading and extracting the contents of the APK. Inside, I found several dex files, which I knew contained the app's compiled source code. Using a tool called [jadx](https://github.com/skylot/jadx), (`jadx -d outputDirName extractedapkfile`) I decompiled the APK to inspect its source code.
 
 ### The Investigation
 

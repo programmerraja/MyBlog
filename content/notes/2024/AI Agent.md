@@ -30,3 +30,17 @@ https://parlance-labs.com/education/rag/ben.html
 ##  CRAG
 
 Corrective Retrieval Augmented Generation.The strategy we followed for this let’s say for each topic, we consult the book and identify relevant sections. Before forming an opinion, categorize the gathered information into three groups: `**Correct**`, `**Incorrect**`, and `**Ambiguous**`. Process each type of information separately. Then, based on this processed information, compile and summarize it mentally
+
+
+## Micro Agent
+
+AI agents are cool, but general-purpose coding agents rarely work as hoped or promised. They tend to go haywire with compounding errors. Think of your Roomba getting stuck under a table, x1000.
+
+https://github.com/BuilderIO/micro-agent 
+
+
+
+
+## Crew AI
+
+Alternative to auto gen

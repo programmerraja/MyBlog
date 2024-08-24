@@ -146,6 +146,7 @@ Process t = 3
 ↳ Repeat [6] and [7]
 
 - http://colah.github.io/posts/2015-08-Understanding-LSTMs/
+- 
 
 #### BiLSTM
 
@@ -408,3 +409,5 @@ https://colab.research.google.com/gist/virattt/ddb43fc3d6c0c66abe29a158fe79aa85/
 
 
 https://github.com/jalammar/ecco?tab=readme-ov-file
+
+https://aigents.co/data-science-blog/publication/the-transformers-architecture-in-detail-whats-the-magic-behind-llms

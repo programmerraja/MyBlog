@@ -46,3 +46,7 @@ Most write-optimized databases will store your writes in memory before persistin
 item type has a large impact on compression.if you need to frequently process JSON data that you can’t easily transform, a document database like `MongoDB might be a better option than a Cassandra-compatible database.`
 
 Some databases also support user created fields, such as` User-Defined Types `(UDTs) in Cassandra. UDTs can be a great ally for reducing the de-serialization overhead when you combine several columns into one.
+
+
+
+https://raymondjones.dev/en/system-design-notes/
