@@ -684,3 +684,44 @@ Horzontal sharding
 
 Idea 
 - Try to convert index.wt file and print as json
+
+
+
+
+## SRV
+
+ SRV (Service) record is a type of DNS (Domain Name System) record that specifies the location of a server or service.
+
+**SRV Record Format:**
+
+An SRV record provides information about the hostnames and ports where the MongoDB instances are running. The format generally looks like this:
+
+`_service._proto.name. TTL class SRV priority weight port target.`
+
+For MongoDB, the connection string might look like this:
+`mongodb+srv://<username>:<password>@cluster0.mongodb.net/<dbname>?retryWrites=true&w=majority`
+
+**How SRV Works in MongoDB**
+
+- **`mongodb+srv://`**: The `+srv` part in the connection string indicates that the driver should look for an SRV record to find the list of servers in the cluster.
+- **Cluster Discovery**: When you use an SRV record in the connection string, MongoDB automatically discovers the primary and secondary nodes in your cluster, making it easier to manage connections, especially in a sharded or replicated environment.
+- **Port Management**: SRV records include the port number, so you don’t need to specify it separately in the connection string.
+
+
+## Full Time Diagnostic Data Capture
+
+To help MongoDB engineers analyze server behavior, [`mongod`](https://www.mongodb.com/docs/manual/reference/program/mongod/#mongodb-binary-bin.mongod) and [`mongos`](https://www.mongodb.com/docs/manual/reference/program/mongos/#mongodb-binary-bin.mongos) processes include a Full Time Diagnostic Data Capture (FTDC) mechanism. FTDC is enabled by default.
+FTDC collects statistics produced by the following commands on file rotation or startup:
+- [`getCmdLineOpts`](https://www.mongodb.com/docs/manual/reference/command/getCmdLineOpts/#mongodb-dbcommand-dbcmd.getCmdLineOpts)
+- [`buildInfo`](https://www.mongodb.com/docs/manual/reference/command/buildInfo/#mongodb-dbcommand-dbcmd.buildInfo)
+- [`hostInfo`](https://www.mongodb.com/docs/manual/reference/command/hostInfo/#mongodb-dbcommand-dbcmd.hostInfo)
+
+`mongod` processes store FTDC data files in a `diagnostic.data` directory under the instances `storage.dbPath`
+
+FTDC runs with the following defaults:
+- Data capture every 1 second
+- 200MB maximum `diagnostic.data` folder size.
+
+
+## Keyhole
+A [tool](https://github.com/simagix/keyhole) to quickly collect statistics from a MongoDB cluster and to produce performance analytics summaries in a few minutes.

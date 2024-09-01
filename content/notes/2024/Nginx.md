@@ -390,14 +390,14 @@ it is layer 7 proxy and use Yaml extension for config
 
 #### Pingora [cloudfare]
 
-## Resources
+### Resources
 
-1. [https://www.nginx.com/blog/inside-nginx-how-we-designed-for-performance-scale/](https://www.nginx.com/blog/inside-nginx-how-we-designed-for-performance-scale/)
-2. [https://www.nginx.com/blog/tuning-nginx/](https://www.nginx.com/blog/tuning-nginx/)
-3. [https://aosabook.org/en/v2/nginx.html](https://aosabook.org/en/v2/nginx.html)
-4. [https://blog.cloudflare.com/how-we-built-pingora-the-proxy-that-connects-cloudflare-to-the-internet/](https://blog.cloudflare.com/how-we-built-pingora-the-proxy-that-connects-cloudflare-to-the-internet/)
-5. [https://nginx.org/en/docs/](https://nginx.org/en/docs/)
-6. [https://blog.martinfjordvald.com/optimizing-nginx-for-high-traffic-loads/](https://blog.martinfjordvald.com/optimizing-nginx-for-high-traffic-loads/)
+1. [Inside NGINX: How We Designed for Performance & Scale](https://www.nginx.com/blog/inside-nginx-how-we-designed-for-performance-scale/)
+2. [Tuning NGINX](https://www.nginx.com/blog/tuning-nginx/)
+3. [AOSA Book on NGINX](https://aosabook.org/en/v2/nginx.html)
+4. [Cloudflare’s Pingora Proxy](https://blog.cloudflare.com/how-we-built-pingora-the-proxy-that-connects-cloudflare-to-the-internet/)
+5. [NGINX Documentation](https://nginx.org/en/docs/)
+6. [Optimizing NGINX for High Traffic Loads](https://blog.martinfjordvald.com/optimizing-nginx-for-high-traffic-load)
 
 ## Tool
 

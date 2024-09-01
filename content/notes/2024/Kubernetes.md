@@ -303,6 +303,7 @@ spec:
 - `kubectl get deploy hello-deploy`
 
 ## Affinity and Anti-Affinity
+
 Affinity and Anti-Affinity are concepts used to control how pods are scheduled onto nodes in a cluster. They help define rules for pod placement based on characteristics of the nodes or other pods in the cluster.
 
 **Affinity**: Affinity rules specify conditions that pods prefer for their placement. Pods with affinity rules tend to be scheduled onto nodes that meet those conditions
@@ -409,7 +410,6 @@ spec:
 - Then replica will be created to monitor the pod status does is have 2 active pod by using selector
 - Then depolyment will be created 
 
-![[art-2024-04-28 14.38.57.excalidraw]]
 ### What happend when we apply yml file
 when we run `kubctl apply -f name.yml`
 - The `kubectl` command communicates with the Kubernetes API server.The API server performs several tasks, including authentication, authorization, validation, and admission control. Once the YAML file has passed validation and admission control, the API server persists the resource information in **etcd**.
@@ -461,7 +461,8 @@ can be accessed
 
 installed on every node and runs in our cluster in the form of a **DaemonSet**.
 
-How it works
+**How it works**
+
 After Kube-proxy is installed, it authenticates with the API server. When new Services or endpoints are added or removed, the API server communicates these changes to the Kube-Proxy.
 
 Kube-Proxy then applies these changes as **NAT** rules inside the node. These NAT rules are simply mappings of Service IP to Pod IP. When a request is sent to a Service, it is redirected to a backend Pod based on these rules.
@@ -476,6 +477,7 @@ Now the API server maps the IP address of **SVC01** to 2 IP addresses, **EP01
 
 Kube-Proxy can operate in three different modes, **user-space mode**, **IPtables mode**, and **IPVS mode**.
 - **user-space mode** not used now **IPtables** and **IPVS**  are used now where iptables are timeconsuming compared to **IPVS** to lookup o(n)
+
 By default, Kube-proxy runs on port 10249 and exposes a set of endpoints that you can use to query Kube-proxy for information.
 
 we can use the` /proxyMode` endpoint to check the kube-proxy mode.
@@ -1180,6 +1182,7 @@ Need to study
 ## Internal Resources
 - [Collection of resources for inner workings of Kubernetes](https://github.com/shubheksha/kubernetes-internals )
 - https://ronaknathani.com/blog/2020/08/how-a-kubernetes-pod-gets-an-ip-address/
+- https://itnext.io/deciphering-the-kubernetes-networking-maze-navigating-load-balance-bgp-ipvs-and-beyond-7123ef428572
 - 
 ### Products
 

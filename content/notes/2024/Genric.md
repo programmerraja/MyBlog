@@ -72,3 +72,6 @@ register is 32 bit so it can only store 2gb of ram address
 
 memory fragmention
 page table
+
+
+

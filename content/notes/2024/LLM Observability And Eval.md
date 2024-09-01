@@ -5,12 +5,6 @@ draft = true
 tags =[]
 +++ 
 
-
-## Tools
-- Port key
-- 
-
-
 ## Eval
 
 ### LLM Evaluation Metrics Types
@@ -29,8 +23,7 @@ tags =[]
  - **METEOR (Metric for Evaluation of Translation with Explicit ORdering) Score**: measures the similarity between generated and reference translations, taking into account the order of the words.
 - GEVAL  
 
-
-[G-Eval](https://github.com/nlpyang/geval)
+## G-Eval
  
  Using GPT-4 and chain-of-thoughts (CoT) approach to generate detailed evaluation steps for NLG outputs. 
 
@@ -67,14 +60,21 @@ Evaluation Form (scores ONLY):
 - Coherence:
 ```
 
-[SelfcheckGPT](https://github.com/potsawee/selfcheckgpt)
+checkout [here](https://github.com/nlpyang/geval) 
+
+## SelfcheckGPT
+
 1. **BERTScore**: Compares the generated text with reference samples using BERT embeddings.
 2. **Question-Answering (QA)**: Generates questions from the text and checks consistency in answers.
 3. **N-gram Analysis**: Uses statistical properties of n-grams for consistency checks.
 4. **Natural Language Inference (NLI)**: Uses entailment and contradiction probabilities.
 5. **LLM Prompting**: Queries LLMs directly to check consistency.
 
-[DeepEval, an open-source LLM evaluation framework](https://github.com/confident-ai/deepeval)
+[SelfcheckGPT](https://github.com/potsawee/selfcheckgpt)
+
+## DeepEval
+An open-source LLM evaluation framework that includes:
+
 - G-Eval
 - Summarization
 - Answer Relevancy
@@ -85,9 +85,8 @@ Evaluation Form (scores ONLY):
 - Hallucination
 - Toxicity
 - Bias
-- etc.
-
-### LLM-as-Judge
+- and more. [GitHub](https://github.com/confident-ai/deepeval)
+## LLM-as-Judge
 
 - Use pairwise comparisons: Instead of asking the LLM to score a single output on a [Likert](https://en.wikipedia.org/wiki/Likert_scale) scale, present it with two options and ask it to select the better one. This tends to lead to more stable results.
 - Control for position bias: The order of options presented can bias the LLM’s decision. To mitigate this, do each pairwise comparison twice, swapping the order of pairs each time. Just be sure to attribute wins to the right option after swapping!
@@ -98,17 +97,12 @@ Evaluation Form (scores ONLY):
 
 use YAML because it is less verbose, and hence consumes fewer tokens than JSON. when getting output from LLM
 
- ### Tools
- 
- - [truelens](https://www.trulens.org/) 
- - https://github.com/UKGovernmentBEIS/inspect_ai
+**Metrics for N-Gram Matching**
+- **BLEU**: Compares the generated text with reference completions, scoring between 0 (no match) and 1 (perfect match).
+- **ROUGE-N**: Measures n-gram overlap between generated text and references.
 
 
-Metrics that use N-Gram matching
-- BLEU | ROUGE-N compare to one or more reference cmpletions A score between zero and one indicating similarity to the reference once indicating a prefect match
-
-
-### Chain poll
+## Chain poll
 
  A HIGH EFFICACY METHOD FOR LLM HALLUCINATION DETECTION
 
@@ -133,9 +127,8 @@ I need you to verify the following statements for correctness using the ChainPol
 4. Provide the correct information if any fact is incorrect.
 ```
 
-
-
 ## Prometheus
+
 **Prometheus** is a family of open-source language models specialized in evaluating other language models. By effectively simulating human judgments and proprietary LM-based evaluations, we aim to resolve the following issues:
 
 - _Fairness_: Not relying on closed-source models for evaluations!
@@ -181,97 +174,225 @@ criteria) [RESULT] (an integer number between 1 and 5)\\"
 
 Ragas is a framework that helps you evaluate your Retrieval Augmented Generation (RAG) pipelines. RAG denotes a class of LLM applications that use external data to augment the LLM’s context.
 
-https://github.com/explodinggradients/ragas
-https://www.comet.com/site/blog/rag-evaluation-framework-ragas/
+**Ragas Framework**
+- [GitHub Repository](https://github.com/explodinggradients/ragas)
+- [Comet Blog](https://www.comet.com/site/blog/rag-evaluation-framework-ragas/)
 
-https://github.com/sachink1729/DSPy-Multi-Hop-Chain-of-Thought-RAG
-
-
+### Resources
+- [DSPy Multi-Hop Chain-of-Thought RAG](https://github.com/sachink1729/DSPy-Multi-Hop-Chain-of-Thought-RAG)
 
 ## EvalLM
 
 Interactive Evaluation of Large Language Model Prompts on User-Defined Criteria it a website where we can enter prompt and do eval using perdefind criteria and user defined criteria
+
+## ChainForge
+
+ChainForge is an open-source visual programming environment for prompt engineering, LLM evaluation and experimentation
+
+## SPADE
+
+System for Prompt Analysis and Delta-Based Evaluation ([SPADE](https://github.com/shreyashankar/spade-experiments)) A method for automatically synthesizing data quality assertions that identify bad LLM outputs
+
+**How it works**
+- **Prompt Tracking**
+    - SPADE monitors and logs changes made to prompts over time. Each modification in the prompt is recorded, capturing the original prompt and all subsequent variations.
+- **Prompt Changes Evaluation**
+    - After a prompt change is detected, SPADE sends the revised prompt to the LLM. The system then generates the LLM’s response based on the updated prompt.
+- **Automated Unit Test Generation**
+    - SPADE automatically synthesizes a unit test (UT) for each modified prompt. This unit test assesses the correctness and relevance of the LLM’s output in response to the prompt change.
+- **Delta-Based Analysis**
+    - The system performs a delta-based evaluation, comparing the outputs generated by the LLM before and after the prompt change. This comparison helps in identifying any discrepancies or issues introduced by the modification.
+- **Quality Assertion Creation**
+    - Based on the delta-based analysis, SPADE formulates quality assertions. These assertions specify what constitutes acceptable and unacceptable output for given prompts, enabling automated detection of bad outputs.
 
 
 
 
 ## Resources
 - A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions [here](https://github.com/LuckyyySTA/Awesome-LLM-hallucination?tab=readme-ov-file)
+- [Evaluating the Effectiveness of LLM-Evaluators ](https://eugeneyan.com/writing/llm-evaluators/)
+
+
+## Giskard
+
+[Giskard](https://github.com/Giskard-AI/giskard) is an open-source Python library that **automatically detects performance, bias & security issues in AI applications**. The library covers LLM-based applications such as RAG agents, all the way to traditional ML models for tabular data
+
+ The Giskard LLM scan comprises two main types of detectors:
+- **Traditional detectors**: which exploit known techniques or heuristics to detect vulnerabilities Example : LLMCharsInjectionDetector
+- **LLM assisted detectors**: which use another LLM model to probe the model under analysis. Example:LLMBasicSycophancyDetector
+
+## Snorkel
+
+Create custom trained model with custom data and use it for eval
+Steps
+- Create golden dataset
+- Encode acceptance criteria into custom quality model
+- Slice your prompts to evaluate what matters
+- Review fine grainded benchmarks
 
 
 
-Fabric AI summary:
 
-SUMMARY:
-HL, Dan, and guests discussed evaluation methods for large language models, including unit tests, using LMs as judges, human evaluation, and various metrics.
 
-IDEAS:
-- Unit tests are a first line of defense for catching obvious failures.
-- Look at your data rigorously to find failure modes to test for.
-- LM as judge can help scale evaluations but requires human alignment periodically.
-- Human evaluation is important but doesn't scale well for large datasets.
-- Metrics like recall, ranking, and ability to return zero results are important.
-- Evaluations should evolve as you learn more about failure modes.
-- Code-based and LM-based evaluations have different use cases.
-- Iterative grading of outputs can help refine evaluation criteria over time.
-- Evaluation criteria may drift as you see more outputs from the LM.
-- Avoiding contamination of test data in base model training is challenging.
 
-INSIGHTS:
-- Evaluations enable fast iteration and feedback for improving LLM applications.
-- Different evaluation methods suit different use cases and stages of development.
-- Evaluations are an iterative process of discovering and codifying desired behavior.
-- Human judgment is crucial for aligning evaluations with true goals.
-- Evaluation criteria and implementations should evolve with increased understanding.
-- Logging outputs and revisiting evaluations is important for production systems.
-- A combination of methods is often needed for comprehensive evaluation.
-- Evaluation frameworks can help but the hard part is understanding requirements.
 
-QUOTES:
-"If you don't have really dumb failure modes like things that can trigger an assertion often times like is it's natural to think that hey like I can't write any unit tests for my AI because it's spitting out natural language and it's kind of fuzzy."
-"We want to make sure that the more relevant ones are closer to top personally for me what I find to be quite important uh for rag is this metric that I've never had to considered before."
-"I don't think an evaluation interface we learned no evaluation assistant can just be a One-Stop uh thing where you grade your examples come up with evals and then push it to your Ci or push it to your production workflow no you've got to always be looking."
-"Grading has to be continual you've always got to be looking at your production data you've always got to be learning from that."
 
-HABITS:
-- Look at data rigorously to find failure modes to test for.
-- Use LM as judge but periodically check human alignment.
-- Conduct human evaluation regularly, especially for evolving criteria.
-- Log outputs and revisit evaluations for production systems.
-- Iterate on evaluation criteria as understanding of requirements increases.
-- Grade outputs continually to refine evaluation criteria and implementations.
-- Check for contamination of test data in base model training.
-- Use a combination of unit tests, LM judges, metrics for comprehensive evaluation.
 
-FACTS:
-- Unit tests are limited for open-ended language model outputs.
-- LM as judge can provide directional signal but requires human alignment.
-- Human evaluation doesn't scale well for large datasets.
-- Metrics like recall, ranking, zero-result ability are important for retrievers.
-- Evaluation criteria may drift as more outputs are seen.
-- Code-based and LM-based evaluations suit different use cases.
-- Avoiding test data contamination in base models is challenging.
 
-REFERENCES:
-- Hamil's blog post on the iteration cycle
-- Spade paper on generating assertion criteria
-- Shrea Shankar's work on systematic LM judging
-- Langs Smith for logging, testing, datasets
-- BrainTrust, Weights &amp; Biases tools mentioned
-- Instruct library for honeycomb example
-- Eugene's writeups on LM evals, hallucination detection, domain fine-tuning
+## Evaluation
 
-ONE-SENTENCE TAKEAWAY:
-Comprehensive evaluation of large language models requires an iterative process combining multiple methods like unit tests, LM judges, metrics, and human evaluation to continuously align with evolving goals.
+### LLM Evaluation Metrics
 
-RECOMMENDATIONS:
-- Write unit tests to catch obvious failures as a first line of defense.
-- Look at data rigorously to find and test for different failure modes.
-- Use LM as judge but periodically check alignment with human judgments.
-- Conduct regular human evaluation, especially when criteria are evolving.
-- Log outputs and revisit evaluations for production systems to refine criteria.
-- Iterate on evaluation criteria as understanding of requirements increases through grading.
-- Use a combination of methods like unit tests, LM judges, metrics.
-- Consider evaluation frameworks but focus on understanding requirements first.
-- Check for contamination of test data in base model training data.
-- Evaluate agents by breaking down into steps and evaluating each component.
+**Intrinsic Metrics**: Evaluate the model's internal workings.
+- **Perplexity**: Measures how well the model predicts a test dataset. Lower perplexity indicates better performance.
+- **Fluency**: Measures the coherence and naturalness of the generated text.
+- **BLEU Score**: Measures the similarity between the generated text and a reference text.
+
+**Extrinsic Metrics**: Evaluate the model's performance on specific tasks.
+- **Accuracy**: Measures the proportion of correct predictions or answers.
+- **F1 Score**: Measures the balance between precision and recall.
+- **ROUGE Score**: Measures the quality of generated summaries.
+
+**Hybrid Metrics**: Combine intrinsic and extrinsic metrics for comprehensive evaluation.
+- **METEOR Score**: Measures the similarity between generated and reference translations, considering word order.
+- **GEVAL**: [G-Eval GitHub](https://github.com/nlpyang/geval)
+
+### G-Eval
+
+**How G-EVAL Works**
+1. **Text Embeddings**: GPT-4 generates embeddings for both the generated and reference texts.
+2. **Similarity Computation**: Uses metrics like cosine similarity to compute text similarity.
+3. **Score Computation**: Aggregates similarity scores to compute a final score reflecting overall text quality.
+
+**Coherence Evaluation Example**
+```txt
+Coherence (1-5): Measures the overall quality of all sentences. The summary should be well-structured, presenting information in a clear and logical order.
+
+Evaluation Steps:
+1. Read the news article carefully to identify the main topic and key points.
+2. Read the summary and compare it to the article, checking if it covers the main points and presents them logically.
+3. Assign a coherence score from 1 (lowest) to 5 (highest) based on these criteria.
+
+Example:
+Source Text: {{Document}}
+Summary: {{Summary}}
+
+Evaluation Form (scores ONLY):
+- Coherence:
+```
+
+### SelfcheckGPT
+
+**Features**
+1. **BERTScore**: Compares generated text with reference samples using BERT embeddings.
+2. **Question-Answering (QA)**: Generates questions from text and checks consistency in answers.
+3. **N-gram Analysis**: Uses statistical properties of n-grams for consistency checks.
+4. **Natural Language Inference (NLI)**: Uses entailment and contradiction probabilities.
+5. **LLM Prompting**: Queries LLMs directly to check consistency.
+
+### DeepEval
+
+An open-source LLM evaluation framework that includes:
+- G-Eval
+- Summarization
+- Answer Relevancy
+- Faithfulness
+- Contextual Recall
+- Contextual Precision
+- RAGAS
+- Hallucination
+- Toxicity
+- Bias
+- and more. [GitHub](https://github.com/confident-ai/deepeval)
+
+### LLM-as-Judge
+
+**Best Practices**
+- **Pairwise Comparisons**: Present two options and ask the LLM to select the better one to get more stable results.
+- **Control for Position Bias**: Swap the order of options to mitigate bias. Attribute wins correctly after swapping.
+- **Allow for Ties**: Allow the LLM to declare a tie when both options are equally good.
+- **Chain-of-Thought (CoT)**: Use CoT to explain decisions, which can improve evaluation reliability. Ensure responses are of similar length to avoid bias towards longer answers.
+
+### Metrics for N-Gram Matching
+
+- **BLEU**: Compares the generated text with reference completions, scoring between 0 (no match) and 1 (perfect match).
+- **ROUGE-N**: Measures n-gram overlap between generated text and references.
+
+### ChainPoll
+
+A method for detecting LLM hallucinations using:
+- **ChainPoll-Correctness**: Detects open-domain hallucinations.
+- **ChainPoll-Adherence**: Checks adherence to factual correctness.
+
+**Steps**
+1. Ask GPT-3.5-turbo whether the completion contains hallucinations using a detailed prompt.
+2. Repeat the query multiple times (typically 5) for batch inference.
+3. Calculate the score based on the number of affirmative responses.
+
+**Prompt Example**
+```txt
+I need you to verify the following statements for correctness using the ChainPoll method:
+
+1. Break down the response into individual facts.
+2. Verify each fact using reliable sources.
+3. Identify any inconsistencies or errors.
+4. Provide the correct information if any fact is incorrect.
+```
+
+### Prometheus
+
+**Prometheus** is an open-source family of language models specialized in evaluating other language models. It addresses:
+- **Fairness**: Avoids reliance on closed-source models.
+- **Controllability**: No dependency on GPT updates or private data sharing.
+- **Affordability**: Free to use if you have GPUs.
+
+**Task Description Example**
+```txt
+You are a fair judge assistant tasked with providing clear, objective feedback based on specific criteria. 
+1. Write detailed feedback assessing the quality of the response based on the given rubric.
+2. Provide a score between 1 and 5.
+3. Output format: "Feedback: (write feedback) [RESULT] (integer between 1 and 5)"
+
+Instruction: {instruction}
+Response: {response}
+Reference Answer (Score 5): {reference_answer}
+Score Rubrics: {score_rubric}
+Feedback:
+```
+
+### RAGAS
+
+**RAGAS**: Framework for evaluating Retrieval Augmented Generation (RAG) pipelines. [GitHub](https://github.com/explodinggradients/ragas) [Comet Blog](https://www.comet.com/site/blog/rag-evaluation-framework-ragas/)
+
+### EvalLM
+
+Interactive evaluation of LLM prompts based on predefined and user-defined criteria.
+
+### ChainForge
+
+**ChainForge**: An open-source visual programming environment for prompt engineering, LLM evaluation, and experimentation.
+
+### SPADE
+
+**SPADE**: System for Prompt Analysis and Delta-Based Evaluation. [GitHub](https://github.com/shreyashankar/spade-experiments)
+
+**How it Works**
+- **Prompt Tracking**: Logs prompt changes over time.
+- **Prompt Changes Evaluation**: Generates responses based on updated prompts.
+- **Automated Unit Test Generation**: Creates unit tests for each prompt variation.
+- **Delta-Based Analysis**: Compares outputs before and after prompt changes.
+- **Quality Assertion Creation**: Forms assertions to detect bad outputs.
+
+
+## Tools
+
+- **Port Key**
+- **TrueLens**: [Website](https://www.trulens.org/)
+- **Inspect AI**: [GitHub](https://github.com/UKGovernmentBEIS/inspect_ai)
+- **Giskard**: [GitHub](https://github.com/Giskard-AI/giskard)%%  %%
+
+## Resources
+- [A Survey on Hallucination in Large Language Models](https://github.com/LuckyyySTA/Awesome-LLM-hallucination?tab=readme-ov-file)
+- [Evaluating the Effectiveness of LLM-Evaluators](https://eugeneyan.com/writing/llm-evaluators/)
+
+---

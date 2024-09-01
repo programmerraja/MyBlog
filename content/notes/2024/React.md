@@ -572,12 +572,12 @@ The general problem is that different `useCallback` hooks in a single componen
 Advanced
 1. https://medium.com/the-guild/under-the-hood-of-reacts-hooks-system-eb59638c9dba How hooks works under the hood
 2. https://stackoverflow.com/questions/53974865/how-do-react-hooks-determine-the-component-that-they-are-for
+3. https://webdeveloper.beehiiv.com/p/build-react-400-lines-code
 
 Pkg
 1. [State mangement like context but re-render only when actual val change](https://github.com/dai-shi/react-tracked)
 2. [A collection of modern, server-safe React hooks](https://usehooks.com/)
 3. 
-
 
 
 
@@ -637,3 +637,7 @@ Memory leak
 
 Internal of react 6hour
 - https://www.youtube.com/watch?v=-XKvVyC6si0
+
+
+Tool 
+- https://www.fuzzmap.io/

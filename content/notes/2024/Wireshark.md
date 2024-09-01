@@ -5,147 +5,177 @@ draft = true
 +++
 
 
-Wireshark
-- help -> content have doc for all feature
+## Wireshark Overview
+
+- **Help Documentation**: Access comprehensive documentation for all features via `Help` in Wireshark.
+
+## TCP Analysis
+
+### Stream Index
+
+- **Purpose**: Wireshark calculates this to track individual streams.
+- **Adjustments**: To view the original sequence numbers instead of relative ones, right-click -> Protocol Preferences -> uncheck "Relative Sequence Numbers".
+
+### Flags
+
+- **Common Flags**: ACK, RST, etc.
+
+### Window Size
+
+- **Displayed Value**: Shows the host window size.
+- **Calculated Window Size**: Represents the effective window size.
+
+### Checksum
+
+- **Validation**: Wireshark does not automatically validate checksums. To enable, right-click -> Protocol Preferences -> check "Validate TCP Checksum if Possible".
+
+### Options
+
+- **Max Segment Size (MSS)**: Configurable TCP option.
+
+### Sync/Ack Flow Graph
+
+- **View**: Navigate to `Statistics` -> `Flow Graph`.
+
+### TCP Options
+
+- **Common Options**:
+    - Timestamps
+    - Maximum Segment Size (MSS)
+    - Selective Acknowledgment (SACK)
+    - No-Operation (NOP)
+
+- **Data Wrap**: Data added by Wireshark is enclosed in brackets `[]`.
 
 
-Analysis TCP
+### Handling Missing Segments
 
-Stream index : calculate by wireshark to keep track of stream 
-Sequence number Will show relative sequence number 1,2 to see the original right click -> protocol prefrences -> uncheck relative sequence number.
-flags  ack,reset,etc.
-window size value
-calculated window size -> host window size
-checksum : wireshark not validate the check if we want ight click -> protocol prefrences -> check validate TCP check sum ifpossible
-options max segement size
+- **Initial Transmission**: Example segments sent: 1-2, 4-6, 6-8, 8-10.
+- **Missing Segment**: Missing segment 2-4 results in duplicate ACK for the last received segment.
+- **Retransmission**: Sender retransmits the missing segment upon receiving a duplicate ACK.
+- **Acknowledgment**: Receiver acknowledges the retransmitted segment.
 
-to see the sync ack flow graph
+## UDP Analysis
 
-statistics ->flow graph
+- **Display**: Shown in a format diagram.
 
+## IPv6
 
-Analysis UDP
+- **Differences**:
+    - No broadcast support.
+    - No fragmentation.
+    - TTL (Time to Live) is known as Hop Limit.
 
-It just show as in format digram
+## ICMP
 
+- **Usage**: Primarily for error reporting and querying.
 
-IPV6
+## DNS
 
-No broadcast
-no fragment
-ttl -> hop limit
+### Query
 
-ICMP
-used for error reporting and query
+- **Transaction ID**: Unique identifier for each query.
+- **Flags**: Various DNS flags.
+- **Questions**: Number of questions in the query.
+- **Queries**: Contains the DNS queries made.
 
+### Response
 
-DNS
-transaction id unique id for each query
-flags 
-questions : 1 (no of questions)
-queries  hold the queries that we ask to DNS
+- **Answer PRS**: Number of answers.
+- **Answers**: Contains answers to the questions.
 
-in response
+## DHCP
 
-Answer PRS  : 2 ->no of answer
+- **DORA Process**:
+    - **Discover**: Client sends a discover message.
+    - **Offer**: Server sends an offer message.
+    - **Request**: Client requests an IP.
+    - **ACK**: Server acknowledges the request.
 
-answers -> hold the answers for the questions
+## Expert System
 
-DHCP:
-(DORA)
-Discover
-offer
-request 
-ACK
+- **Alerts**: Provides color-coded alerts:
+    - **Red**: Error
+    - **Yellow**: Possible problem
+    - **Green**: Note-worthy
+    - **Blue**: Typical workflow
+- **Issues**:
+    - **Zero Window**: Indicates the buffer is full.
+    - **Duplicate ACK**: Identifies duplicate acknowledgments.
 
+## Wi-Fi Frames
 
-Expert system
-- help to alert the admin on possible issue (will show the color on bottom left corner )
-- Red  Error
-- yellow possible problem
-- green need to be noted
-- Blue typical workflow
+- **Types of Frames**:
+    1. **Management Frame**: e.g., Beacon
+    2. **Control Frame**
+    3. **Data Frame**
 
+## Command Line Tools (Windows)
 
-- zero window -> buffer is full 
-- dupicate ACK
+1. **Netsh Trace**
+2. **Dumpcap**
+3. **Tshark**
 
-TCP stream graph
+## IO Graph
 
-export object from the packet data file -> export -> choose the item
+- **View**: Go to `Statistics` -> `IO Graphs`. Customize filters, x-axis, and y-axis for visual representation.
 
-Tshark cmd line tool
+## Conversation Analysis
 
-how decode ssl
+- **Endpoints**: Analyze conversations between two IP addresses.
+- **Graph Options**: View metrics like round-trip time, throughput, and window scaling.
 
-congestion 
+## Voice Over IP (VoIP)
 
-WIFI
+- **Protocol**: Real-Time Transport Protocol (RTP) is used for media streaming.
 
-3 type of frame
-1. management frame (beacon)
-2. COntrol frrame
-3. data frame
+## Filters
 
-window cmd line tool
-1. netsh trace 
-2. dumpcap 
-3. tshark
+- **Retransmissions and Duplicates**: `tcp.analysis.flags && !tcp.analysis.window_update`
+- **Reset Packets**: `tcp.flags.reset`
+- **HTTP Response Time**: `http.time > 0.25`
 
-Io graph
-1. Statistsc -> Io graph choose the filter,x axis,y axis and see in visula manner we can add our own filter and x axis and y axis
+## TCP SACK (Selective Acknowledgment)
 
-converstation
- 1. between 2 endpoints
- 2. we can choose graph to see round trip time, throughput, window scaling
+- **Scenario**: If segments 1-100, 100-200, and 200-300 are sent, and 100-200 is missing, the client sends an ACK for 100 with SACK indicating the missing range.
 
-TCP stream graph
-1. Stevens graph tcp sequence number over time
-2. tcptrace visulaize TCP metrics
-3. throughput average through
-4. round tripe time
-5. window scalling window size and outstanding bytes 
+## MTU (Maximum Transmission Unit)
 
-TCP options
-timestamps 
-max segement size
-selective ack
-nop
+- **Definition**: Maximum size of an IP packet that can be sent over a network link.
+- **Fragmentation**: If a packet exceeds the MTU, it is split into smaller fragments.
 
-[] -> data wrap with this add by wireshark
+## MSS (Maximum Segment Size)
 
-Delta time -> preferejnce -> column add (will tell sec between tow packet)
+- **Definition**: Maximum amount of data that can be sent in a single TCP segment.
+- **Negotiation**: Reported in TCP SYN segments but not negotiated.
 
-voice over ip
+## Delta Time
 
-Real time transport protocol for media
+- **Setting**: Add `Delta Time` to columns to show the time difference between packets.
 
+### IO Graph
 
-Right click -> conversation filter -> give the converstion between the IP in order
+1. **Access**: Go to `Statistics` -> `IO Graphs`.
+2. **Customization**:
+    - **Filters**: Choose filters to apply to the graph.
+    - **Axes**: Set the x-axis and y-axis parameters.
+    - **Visualization**: View traffic data visually. Customize filters and axis settings to tailor the graph to your needs.
 
+### Conversation Analysis
 
-Duplicate ACKS
+1. **Endpoints**: Analyze conversations between two specific IP addresses.
+2. **Graph Metrics**: Choose graphs to view:
+    - **Round-Trip Time (RTT)**
+    - **Throughput**
+    - **Window Scaling**
 
+### TCP Stream Graph
 
-client
-Seq = 0 
-ack = -
-
-server
-Ack =client seq+1
-seq = 0 (his seq number)
-
-server (sending data)
-seq = 0 
-ack = seq+1
-
-client
-ack = server_seq+len
-seq = 0 (when ever client send data only the client seq get increased)
-
-
-
-
+1. **Stevens Graph**: Displays TCP sequence numbers over time.
+2. **Tcptrace**: Visualizes TCP metrics.
+3. **Throughput**: Shows average throughput.
+4. **Round-Trip Time (RTT)**: Measures the time taken for packets to travel to the destination and back.
+5. **Window Scaling**: Visualizes window size and outstanding bytes.
 
 
 Time to live ->  (when server or client sent it start with 64 or 128 or255 ) so on reveceive pakcet check what is the TTL to find how may routes it taked.
@@ -220,43 +250,54 @@ A TCP option called MSS is negotiated as part of the handshake. The IP header an
 Max can be 1460
 
 
+## TCP SACK (Selective Acknowledgment)
 
+Selective Acknowledgment (SACK) allows a receiver to acknowledge non-contiguous blocks of data. This helps in efficiently managing data loss and retransmissions.
 
+### Example Scenario
 
+1. **Initial Transmission**:
+   - **Data Sent**:
+     - Segment 1-100
+     - Segment 100-200
+     - Segment 200-300
 
+2. **Issue**:
+   - Assume the client did not receive Segment 100-200.
 
-TCP Sack (selective ack)
+3. **Client Behavior**:
+   - **Acknowledgment (ACK)**: The client sends an ACK for the last successfully received segment, which is 100.
+   - **SACK Option**: The SACK option will indicate that the client received data up to 100 and is missing data in the range 100-200.
+   - **SACK Block**: The SACK block specifies:
+     - **Left Edge**: 100 (starting point of the missing data)
+     - **Right Edge**: 200 (end point of the missing data)
 
-let say we have send 1 to 100 100 to 200  and then 200 to 300 . 
-let say client not receview the 100 to 200 client sent ACK for 100 with sak having left edge 100 and right edge as 200 (where it marked as dup ack)
+   ```
+   Client's ACK: 100
+   SACK Block: [100, 200)
+   ```
 
+4. **Server Action**:
+   - Upon receiving the SACK block, the server understands that Segment 100-200 is missing and needs retransmission.
 
-filters
+---
 
-- `tcp.analysis.flags && !tcp.analysis.window_update` -> wil list all retransmit tcp ,duplicate and window update packet
-- `tcp.flags.reset` -> the packet from server where server is not listening on the port
-- `http.time > 0.25` -> the http that take more then 25 milisec
-- 
+## Filters
 
+Filters in Wireshark help isolate and analyze specific packets or types of traffic. Here are some useful filters:
 
+1. **Retransmissions, Duplicates, and Window Updates**:
+   - **Filter**: `tcp.analysis.flags && !tcp.analysis.window_update`
+   - **Purpose**: Lists all retransmitted TCP packets, duplicate acknowledgments, and window update packets.
 
+2. **TCP Reset Packets**:
+   - **Filter**: `tcp.flags.reset`
+   - **Purpose**: Shows packets where the server has reset the connection, indicating that the server is not listening on the port.
 
-Give OSII 
+3. **HTTP Response Time**:
+   - **Filter**: `http.time > 0.25`
+   - **Purpose**: Lists HTTP responses that take longer than 25 milliseconds to process.
 
-Any idea about OSII layer
-
-
-![[Pasted image 20240303172632.png]]
-
-
-RFC
-
-ip.dst == 104.22.71.140  or ip.src == 104.22.71.140 and ssl
-TLS between http and TCP
-
-ip.dst == 104.22.71.140 or ip.src ==  104.22.71.140 or ip.src == 172.67.42.249 or ip.dst == 172.67.42.249
-
- ip.src == 172.67.42.249 or ip.dst == 172.67.42.249
 
 
 # TLS 1.2 Handshake
@@ -293,17 +334,26 @@ SS0
 
 `tshark -r 'el (1).cap' -Y "tcp.flags.syn == 1 && tcp.flags.ack == 0" -T fields -e eth.dst | sort | uniq -c | sort -nr`
 
+## Finding SYN Packets Not Followed by SYN+ACK
 
-**How to find syn not followed by a syn+ack**
+### 1. Apply Display Filter
 
-Use the display filter 'tcp.flags eq 0x02' (only SYN flag set)  
-then: Statistics -> Conversations
+- **Filter**: Use the display filter `tcp.flags eq 0x02` to show only packets where the SYN flag is set.
+    - This filter isolates SYN packets, which are the initial packets in the TCP handshake.
 
-Select the option "Limit to display filter" (at the bottom)  
-Select the tab TCP  
+### 2. Analyze Conversations
 
-Sort the output by "Packets".
+1. **Navigate to Conversations**:
+    - Go to `Statistics` -> `Conversations` in the Wireshark menu.
+2. **Apply Filter to Conversations**:
+    - At the bottom of the Conversations window, check the option **"Limit to display filter"**. This ensures that only the filtered packets (SYN packets) are considered in the analysis.
+3. **Select the TCP Tab**:
+    - Click on the **TCP** tab to view only TCP conversations.
+4. **Sort by Packet Count**:
+    - Click on the **"Packets"** column header to sort the conversations by the number of packets.
 
-Those connections with 1 packet are likely the "good" connections (one SYN only)
-
-Those connections with > 1 packets are most likely the unanswered connections (several packets with SYN as a result of a retry).
+### 3. Identify Connection Types
+- **Connections with 1 Packet**:
+    - These are likely "good" connections where only a single SYN packet was sent. This could indicate that the connection was successfully established or that no response was received but no retries were made.
+- **Connections with More Than 1 Packet**:
+    - These are most likely "unanswered" connections where the SYN packet was retried multiple times due to no SYN+ACK response. The presence of multiple packets typically indicates retries.

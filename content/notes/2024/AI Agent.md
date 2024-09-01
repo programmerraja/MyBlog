@@ -27,6 +27,10 @@ A Python Toolkit for Efficient RAG Research https://github.com/ruc-nlpir/flashra
  Beyond the Basics of RAG
 https://parlance-labs.com/education/rag/ben.html
 
+https://github.com/NirDiamant/RAG_Techniques
+
+https://github.com/ruc-nlpir/flashrag
+
 ##  CRAG
 
 Corrective Retrieval Augmented Generation.The strategy we followed for this let’s say for each topic, we consult the book and identify relevant sections. Before forming an opinion, categorize the gathered information into three groups: `**Correct**`, `**Incorrect**`, and `**Ambiguous**`. Process each type of information separately. Then, based on this processed information, compile and summarize it mentally
@@ -44,3 +48,10 @@ https://github.com/BuilderIO/micro-agent
 ## Crew AI
 
 Alternative to auto gen
+
+
+
+
+## Nerve
+ Red team with AI
+**[Nerve](https://github.com/evilsocket/nerve) is a tool that creates stateful agents with any LLM — without writing a single line of code.** Agents created with Nerve are capable of both planning and enacting step-by-step whatever actions are required to complete a user-defined task.

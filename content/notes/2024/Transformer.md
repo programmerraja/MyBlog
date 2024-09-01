@@ -379,35 +379,26 @@ for sent in sentences:
     print(encoded_sent)
 ```
 
-### Resources
-- https://towardsdatascience.com/deconstructing-bert-part-2-visualizing-the-inner-workings-of-attention-60a16d86b5c1
-- https://peterbloem.nl/blog/transformers
-- https://github.com/jessevig/bertviz
-
-Visulizer 
-- https://github.com/labmlai/inspectus
 
 
 
+## Resources
 
-Resource
-- https://machinelearningmastery.com/a-gentle-introduction-to-positional-encoding-in-transformer-models-part-1/ [need to cehck]
--  https://jalammar.github.io/illustrated-transformer/
-- https://daleonai.com/transformers-explained
--  https://www.philschmid.de/getting-started-pytorch-2-0-transformers
-- https://www.borealisai.com/research-blogs/tutorial-14-transformers-i-introduction/
-- https://notesonai.com/bert
+- [Deconstructing BERT Part 2: Visualizing the Inner Workings of Attention](https://towardsdatascience.com/deconstructing-bert-part-2-visualizing-the-inner-workings-of-attention-60a16d86b5c1)
+- [Transformers: The Architecture](https://peterbloem.nl/blog/transformers)
+- [BERTViz GitHub Repository](https://github.com/jessevig/bertviz)
+- [A Gentle Introduction to Positional Encoding in Transformer Models](https://machinelearningmastery.com/a-gentle-introduction-to-positional-encoding-in-transformer-models-part-1/) _(Check)_
+- [Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
+- [Transformers Explained](https://daleonai.com/transformers-explained)
+- [Getting Started with PyTorch 2.0 Transformers](https://www.philschmid.de/getting-started-pytorch-2-0-transformers)
+- [Tutorial 14: Transformers I - Introduction](https://www.borealisai.com/research-blogs/tutorial-14-transformers-i-introduction/)
+- [BERT Notes](https://notesonai.com/bert)
+- [The Effectiveness of Recurrent Neural Networks](https://karpathy.github.io/2015/05/21/rnn-effectiveness/)
+- [Llama3 from Scratch](https://github.com/naklecha/llama3-from-scratch)
+- [Finetuned Spam Classifier](https://colab.research.google.com/gist/virattt/ddb43fc3d6c0c66abe29a158fe79aa85/finetuned-spam-classifier.ipynb)
+- [Ecco GitHub Repository](https://github.com/jalammar/ecco?tab=readme-ov-file)
+- [The Transformers Architecture in Detail: What's the Magic Behind LLMs](https://aigents.co/data-science-blog/publication/the-transformers-architecture-in-detail-whats-the-magic-behind-llms)
 
-https://karpathy.github.io/2015/05/21/rnn-effectiveness/
+#### Visualizer
+- [Inspectus GitHub Repository](https://github.com/labmlai/inspectus)
 
-
-Lama3 from scrath
-https://github.com/naklecha/llama3-from-scratch 
-
-finetuned-spam-classifier
-https://colab.research.google.com/gist/virattt/ddb43fc3d6c0c66abe29a158fe79aa85/finetuned-spam-classifier.ipynb
-
-
-https://github.com/jalammar/ecco?tab=readme-ov-file
-
-https://aigents.co/data-science-blog/publication/the-transformers-architecture-in-detail-whats-the-magic-behind-llms

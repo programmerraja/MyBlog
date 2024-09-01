@@ -1077,7 +1077,7 @@ Returns documents that contain terms similar to the search term,
 **IDs quey**
 
 - query
-    
+
     ```jsx
     GET /_search
     {

@@ -45,3 +45,14 @@ Postgres stores all its data in a directory sensibly called `/var/lib/postgresq
 |`  postmaster.opts`|This simple file contains the full CLI command used to invoke Postgres the last time that it was run.|
 
 Source https://drew.silcock.dev/blog/how-postgres-stores-data-on-disk/
+
+
+
+## Search
+
+Postgres to create a robust search engine. We’ll combine three techniques:
+
+1. Full-text search with `tsvector`
+2. Semantic search with `pgvector`
+3. Fuzzy matching with `pg_trgm`
+4. Bonus: BM25

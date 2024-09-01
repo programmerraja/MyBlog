@@ -256,3 +256,30 @@ TL;DR:
 
 
 https://moritzkremb.notion.site/The-AI-Content-System-Worksheet-71c34857d7374cec9f7a9ac65e99547c
+
+
+Subject
+
+```
+I need help generating compelling email subject lines and preview text for my newsletter.
+
+Here is my newsletter:
+
+[INSERT ENTIRE NEWSLETTER]
+
+Please generate:
+
+10 attention-grabbing subject lines (40 characters or less) that spark curiosity and make people want to open the email immediately. 
+Use power words, numbers, open psychological loops, or create a sense of urgency/scarcity where appropriate.
+For each subject line, provide a corresponding preview text (50 characters or less) that complements and expands on the subject line, giving just enough additional info to further entice the reader to open.
+Aim to be clear, not clever.
+Really emphasize the benefit and main topic of the newsletter.
+
+The subject lines and preview text should:
+
+Be relevant to the newsletter topic and audience
+Highlight the value or benefit to the reader
+Use language that resonates with the target audience
+Avoid clickbait or misleading tactics
+Vary in style (e.g. questions, statements, numbers, How-to's)
+```

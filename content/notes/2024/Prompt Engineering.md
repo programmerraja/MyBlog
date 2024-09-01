@@ -227,6 +227,10 @@ def forward(self, question):
 ```
 
 
+## Zenbase
+
+Developer tools and cloud infrastructure for perfectionists using LLMs. [Zenbase](https://zenbase.ai) takes care of the hassle of prompt engineering and model selection.
+
 
 ## EvalLM
 Interactive Evaluation of Large Language Model Prompts on User-Defined Criteria
@@ -263,4 +267,5 @@ Begin in <scratchpad> tags and write out and brainstorm in a couple paragraphs y
 ## Prompt Hacking
 
 ### output2prompt
+
 The core idea behind output2prompt is clever in its simplicity. By analyzing patterns in the AI’s responses, another AI can infer the instructions that produced those responses.

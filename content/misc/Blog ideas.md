@@ -12,20 +12,24 @@
 	- [x] class hunter
 	- [ ] interview helper
 	- [x] Money making machine
-	- [ ] expense tracker
+	- [x] How i save my Pm time by automating JIRA
+	- [x] How i save our Markting team time by webscraping
 - [ ] Folder exposing
 - [ ] Two if check cost (learn by doing series)
 - [x] How i earn my first 100 using MERN stack
 - [ ] Weekend learning 
-- [ ] Unsolved mysteries (ip timeout vault etc.)
-- [ ] Crazy debugging story (Welcome to the first post of my new miniseries, where I’ll be sharing some of the most intricate and entertaining bug investigations I’ve done throughout my career. I hope you find these stories enjoyable!)
-- [ ] How i make our webiste to server hello world
-- [ ] logstash shotdown on update
+- [ ] Unsolved mysteries (ip timeout vault etc.,Meilisearch permission deined)
+- [x] Crazy debugging story (Welcome to the first post of my new miniseries, where I’ll be sharing some of the most intricate and entertaining bug investigations I’ve done throughout my career. I hope you find these stories enjoyable!)
+- [x] How i make our webiste to server hello world
 - [ ] Leason learned from 2 year dev
 	- [ ] Final advice no push on friday
 
+- [ ] My Bashrc setup 
+- [ ] List of questions need to ask before deisgn some thing
+	- [ ] Can i use any design pattern
+	- [ ] Alwasys create a wrapper when using thirdparty such that it easy to swap
 
-
+- [ ] How make our website to hello world  
 
 ```
 Hi, I'm an infra developer. My daily work involves fixing or investigating issues at the infrastructure level. I plan to write about these investigations in a blog series with a Sherlock Holmes detective theme. I need your help to write these blogs. I'll share the story, and you convert it into a perfect detective-themed blog. The blog should include:
@@ -65,3 +69,45 @@ https://giscus.app/ -> to add comments feature
 
 AI BLOG IDEAs
 [ ] EVAL in AI
+
+
+
+
+Sherlock sheires
+- [ ] After moving to pod user is unable to login because of set cookie and http 
+- [ ] How migrting to cloudfare affect our api rate lmit and other things 
+- [ ] logstash shotdown on update
+
+
+How to 
+
+- [ ] How to use wireshark
+- [ ] How to use zap scan
+- [ ] How to use lets encrypt
+
+
+Learn from mistakes or from expereinces
+- [ ]  
+
+Unsolved mysteries
+- [ ] Vault timeout 
+- [ ] Meilisearch issue
+
+
+A series of internal wokring
+- [ ] Mongodb
+- [ ] 
+
+
+Converting my automation all script in single repo
+
+
+```
+write a youtube comments for prompting by subtack https://programmerraja.substack.com/ 
+where i share my programming experenince and debugging story teac etc
+```
+
+
+
+Note
+- Attach screenshot and other thing for better reach

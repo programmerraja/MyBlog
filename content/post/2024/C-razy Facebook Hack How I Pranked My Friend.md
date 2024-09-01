@@ -2,7 +2,7 @@
 title = 'C-razy Facebook Hack: How I Pranked My Friend'
 date = 2024-08-18T09:45:17.1717+05:30
 draft = false
-tags =[]
+tags =['hacking','prank']
 +++ 
 
 

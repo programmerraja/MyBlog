@@ -82,3 +82,6 @@ https://read.engineerscodex.com/p/how-apple-built-icloud-to-store-billions
 
 ## Backoff technique to heavy load of db write
 - Canva implemented the backoff in there autosave feature where they write custom monitor which will monitor each update query in db and check does it corssing the limit if so it will inform the front end to backoff the auto save time by sending in header `Canva-Throttle: true`
+
+
+

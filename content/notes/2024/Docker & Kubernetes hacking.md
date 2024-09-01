@@ -145,4 +145,9 @@ https://security.googleblog.com/2022/05/privileged-pod-escalations-in.html
 
 #### Tool
 - [A Kubernetes attack graph tool allowing automated calculation of attack paths between assets in a cluster ](https://github.com/DataDog/KubeHound?tab=readme-ov-file)
+- [Kubernetes tool for scanning clusters for network policies and identifying unprotected workloads.](https://github.com/deggja/netfetch) 
+
+
+## Resources
+- https://www.armosec.io/blog/
 - 

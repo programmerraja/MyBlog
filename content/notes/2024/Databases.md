@@ -47,6 +47,10 @@ Scalable Postgres for stream processing, analytics, and management. KsqlDB and A
 - JunoDB uses RocksDB as the storage engine.
 - use quorum protocol [[Distributed System#quorum-based protocol]]  for read and write among region
 
+
+## Triplit
+[Triplit](https://www.triplit.dev/) is an open-source database that syncs data between server and browser in real-time.
+
 ## Redis
 
 

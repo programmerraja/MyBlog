@@ -405,26 +405,25 @@ Neural network
 
 
 Resources
-- https://arxiv.org/abs/2010.06467 # Pretrained Transformers for Text Ranking: BERT and Beyond
-- principal component analysis 
-- https://www.deeplearning.ai/short-courses/
-- https://www.datacamp.com/tutorial/chromadb-tutorial-step-by-step-guide
-- https://medium.com/@sarmadafzalj/visualize-vector-embeddings-in-a-rag-system-89d0c44a3be4
-- https://www.coursera.org/specializations/natural-language-processing#courses [# Natural Language Processing Specialization]
-- https://arxiv.org/abs/1405.4053  Distributed Representations of Sentences and Documents
-- https://medium.com/wisio/a-gentle-introduction-to-doc2vec-db3e8c0cce5e 
-- https://code.google.com/archive/p/word2vec/
-- https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/
-- https://docs.likejazz.com/llama3.np/
-- https://radimrehurek.com/gensim/auto_examples/core/run_core_concepts.html#sphx-glr-auto-examples-core-run-core-concepts-py
-- https://www.tensorflow.org/tensorboard
-- https://weaviate.io/blog/rag-evaluation
-- https://www.sbert.net/docs/quickstart.html ## Sentence Transformer hugging face
-- https://weaviate.io/blog/local-rag-with-ollama-and-weaviate
-- https://videolectures.net/eswc2016_fortuna_machine_learning/
+- **[Pretrained Transformers for Text Ranking: BERT and Beyond](https://arxiv.org/abs/2010.06467)**
+- **[Principal Component Analysis](https://en.wikipedia.org/wiki/Principal_component_analysis)**
+- **[Deep Learning AI Short Courses](https://www.deeplearning.ai/short-courses/)**
+- **[ChromaDB Tutorial on DataCamp](https://www.datacamp.com/tutorial/chromadb-tutorial-step-by-step-guide)**
+- **[Visualize Vector Embeddings in a RAG System](https://medium.com/@sarmadafzalj/visualize-vector-embeddings-in-a-rag-system-89d0c44a3be4)**
+- **[Natural Language Processing Specialization on Coursera](https://www.coursera.org/specializations/natural-language-processing#courses)**
+- **[Distributed Representations of Sentences and Documents](https://arxiv.org/abs/1405.4053)**
+- **[A Gentle Introduction to Doc2Vec](https://medium.com/wisio/a-gentle-introduction-to-doc2vec-db3e8c0cce5e)**
+- **[Word2Vec Archive](https://code.google.com/archive/p/word2vec/)**
+- **[Mastering LLM Techniques: Inference and Optimization](https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/)**
+- **[LLAMA3 Documentation](https://docs.likejazz.com/llama3.np/)**
+- **[Gensim Documentation and Examples](https://radimrehurek.com/gensim/auto_examples/core/run_core_concepts.html#sphx-glr-auto-examples-core-run-core-concepts-py)**
+- **[TensorBoard Documentation](https://www.tensorflow.org/tensorboard)**
+- **[Evaluation of RAG Systems](https://weaviate.io/blog/rag-evaluation)**
+- **[Sentence Transformers on Hugging Face](https://www.sbert.net/docs/quickstart.html)**
+- **[Local RAG with Ollama and Weaviate](https://weaviate.io/blog/local-rag-with-ollama-and-weaviate)**
+- **[Video Lectures from ESWC 2016 on Machine Learning](https://videolectures.net/eswc2016_fortuna_machine_learning/)**
 
-To avoid halucination
-- https://arxiv.org/pdf/2303.08896 SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models
+
 
 emdeding
 - https://arxiv.org/pdf/1411.2738  need ot read

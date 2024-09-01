@@ -427,27 +427,75 @@ docker debug my-app
 ```
 
 
+Here’s a formatted summary of the resources and tools related to Docker, containers, and related technologies:
+
+---
 ## Resources
-1. [https://medium.com/datamindedbe/how-we-reduced-our-docker-build-times-by-40-afea7b7f5fe7](https://medium.com/datamindedbe/how-we-reduced-our-docker-build-times-by-40-afea7b7f5fe7)
-2. https://btholt.github.io/complete-intro-to-containers/
+
+1. **Reducing Docker Build Times**
+   - Article: [How We Reduced Our Docker Build Times by 40%](https://medium.com/datamindedbe/how-we-reduced-our-docker-build-times-by-40-afea7b7f5fe7)
+   - Summary: This article discusses strategies and techniques to optimize Docker build times, achieving a 40% reduction in build duration.
+
+2. **Complete Intro to Containers**
+   - Guide: [Complete Intro to Containers](https://btholt.github.io/complete-intro-to-containers/)
+   - Summary: A comprehensive guide on the basics of containers, their use cases, and practical applications.
 
 ## Tools
-- [A Docker + Kubernetes network trouble-shooting swiss-army container](https://github.com/nicolaka/netshoot)
-- https://github.com/serversideup/spin [Replicate your production environment locally using Docker.]
 
-## internal 
--  Cgroups, namespaces, and beyond: what are containers made from? By Jérôme Petazzoni - [https://youtube.com/watch?v=sK5i-N34im8…](https://t.co/6hJyVqYHGA) Watch: Containers From Scratch by
-- [https://youtube.com/watch?v=oSlheqvaRso…](https://t.co/KG4UWJbROE) Watch: Rootless Containers from Scratch by
-- [https://youtube.com/watch?v=jeTKgAEyhsA…](https://t.co/6TANRehH6u) Code: Build your own Docker at
-- [https://app.codecrafters.io/join?via=JohnCrickett…](https://t.co/wWWJGAH4mO) Watch: Build your own Container Runtime with chroot by Adam Gordon Bell - 
-- [https://youtu.be/89ESCBzM-3Q?si=D6S3V1cyJ1K_QKO4…](https://t.co/BR2y3MnNyC) and another version of the same presentation - [https://youtube.com/watch?v=JOsWB50LmwQ…](https://t.co/ELxy4PWRNG) 
-- Watch: Building Containers From Scratch by Vinesh Agrawal - [https://youtube.com/watch?v=GFUpXhft8zA…](https://t.co/G8eLXeoMZG) 
-- Code: Linux namespace Golang experiments by Songrong Jiang - [https://github.com/songrgg/namespace-demo…](https://t.co/j6jdIC9iYX) 
-- Read: Building a Container in Go - [https://infoq.com/articles/build-a-container-golang/…](https://t.co/8Mo122PK0n)
-- [Containers from Scratch - Eric Chiang, CoreOS](https://www.youtube.com/watch?v=wyqoi52k5jM) 
-- [Deep Dive in Docker Overlay Networks](https://www.youtube.com/watch?v=b3XDl0YsVsg)
-- https://blog.mbrt.dev/posts/container-network/
--   [Writing a container in rust ](https://litchipi.site/serie/containers_in_rust)
+1. **Network Troubleshooting Tool**
+   - Tool: [Netshoot](https://github.com/nicolaka/netshoot)
+   - Description: A versatile container for diagnosing network issues in Docker and Kubernetes environments.
+
+2. **Local Production Environment Replication**
+   - Tool: [Spin](https://github.com/serversideup/spin)
+   - Description: Tool for replicating production environments locally using Docker to ensure consistency and easier testing.
+
+## Internal
+
+1. **Containers and Cgroups**
+   - Video: [Cgroups, Namespaces, and Beyond: What Are Containers Made From?](https://youtube.com/watch?v=sK5i-N34im8) by Jérôme Petazzoni
+   - Summary: An in-depth look at the components and mechanisms that form the basis of container technology.
+
+2. **Rootless Containers**
+   - Video: [Rootless Containers from Scratch](https://youtube.com/watch?v=oSlheqvaRso)
+   - Summary: Explores the concept and implementation of rootless containers, which enhance security by running containers without root privileges.
+
+3. **Building Docker from Scratch**
+   - Video: [Build Your Own Docker](https://youtube.com/watch?v=jeTKgAEyhsA)
+   - Summary: A tutorial on constructing a Docker-like container system from scratch.
+
+4. **Build Your Own Container Runtime**
+   - Video: [Build Your Own Container Runtime with chroot](https://app.codecrafters.io/join?via=JohnCrickett)
+   - Summary: A guided approach to creating a basic container runtime using chroot.
+
+5. **Building Containers: Two Versions**
+   - Video: [Building Containers From Scratch - Vinesh Agrawal](https://youtube.com/watch?v=GFUpXhft8zA)
+   - Additional Video: [Another Version of the Same Presentation](https://youtube.com/watch?v=JOsWB50LmwQ)
+   - Summary: Two presentations that delve into the process of building containers from the ground up.
+
+6. **Linux Namespace Golang Experiments**
+   - Code: [Linux Namespace Golang Experiments](https://github.com/songrgg/namespace-demo)
+   - Summary: A collection of Golang experiments showcasing the use of Linux namespaces.
+
+7. **Building a Container in Go**
+   - Article: [Building a Container in Go](https://infoq.com/articles/build-a-container-golang/)
+   - Summary: An informative article on creating a container implementation using the Go programming language.
+
+8. **Containers from Scratch - Eric Chiang**
+   - Video: [Containers from Scratch - Eric Chiang](https://www.youtube.com/watch?v=wyqoi52k5jM)
+   - Summary: A detailed explanation of building containers from scratch by Eric Chiang.
+
+9. **Deep Dive into Docker Overlay Networks**
+   - Video: [Deep Dive in Docker Overlay Networks](https://www.youtube.com/watch?v=b3XDl0YsVsg)
+   - Summary: An in-depth look at Docker overlay networks, exploring their architecture and functionality.
+
+10. **Container Networking**
+    - Blog: [Container Network Overview](https://blog.mbrt.dev/posts/container-network/)
+    - Summary: A blog post covering various aspects of container networking.
+
+11. **Writing a Container in Rust**
+    - Article: [Writing a Container in Rust](https://litchipi.site/serie/containers_in_rust)
+    - Summary: An article on implementing a container using the Rust programming language.
 
 
 
@@ -467,3 +515,7 @@ docker images are just tar file and json meta data
 
 
 if you create file inside container we can see inside proc file of the docker process id ls `/proc/procoid/root`
+
+
+## Performance analysis
+
