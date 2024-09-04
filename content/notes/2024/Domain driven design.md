@@ -26,8 +26,6 @@ Chapter 3
 vaule objects
 tell dont ask -> if u have module that u want to do some validation u write a function that get required data from module and do the validation in here we just getting the data so  instead put the validation inside module
 
-
-
 ### **Bounded Contexts**
 
 Bounded Contexts are explicit boundaries within which a particular domain model is defined and applicable. They help prevent conflicts and misunderstandings when working on large, complex systems.

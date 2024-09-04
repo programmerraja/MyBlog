@@ -74,9 +74,10 @@ AI BLOG IDEAs
 
 
 Sherlock sheires
-- [ ] After moving to pod user is unable to login because of set cookie and http 
+- [x] After moving to pod user is unable to login because of set cookie and http 
 - [ ] How migrting to cloudfare affect our api rate lmit and other things 
-- [ ] logstash shotdown on update
+- [x] logstash shotdown on update
+- [ ] Heroku app not found nginx host header
 
 
 How to 
@@ -111,3 +112,19 @@ where i share my programming experenince and debugging story teac etc
 
 Note
 - Attach screenshot and other thing for better reach
+
+
+
+
+
+
+
+
+
+```
+help me create a cover image prompt for below blog post in cartoon version and make the devloper in very smart and under 18 without beard and the blog is
+```
+
+```
+do you think the blog is good and can be read by everyone does it lack of content if you can add the revlavent content think step by step and follow all industrial standard for tech blog
+```

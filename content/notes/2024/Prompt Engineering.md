@@ -7,9 +7,6 @@ tags =[]
 
 
 
-## Resources
-- https://eugeneyan.com/writing/prompting/
-
 ![[Pasted image 20240720193516.png]]
 
 
@@ -53,9 +50,6 @@ Use the following graph to reason about the task and determine the shortest poss
 
 By providing the LLM with a graph representation of the task, we can help it reason more effectively about the constraints and time durations involved, leading to more accurate predictions about the shortest possible time needed to complete the task.
 ```
-
-
-
 
 
 | Pattern Category      | Prompt Pattern                                                                           |
@@ -242,15 +236,8 @@ Interactive Evaluation of Large Language Model Prompts on User-Defined Criteria
 
 
 
-
 ## Summarization
 - https://towardsdatascience.com/summarize-podcast-transcripts-and-long-texts-better-with-nlp-and-ai-e04c89d3b2cb
-
-
-
-
-
-
 
 
 
@@ -269,3 +256,15 @@ Begin in <scratchpad> tags and write out and brainstorm in a couple paragraphs y
 ### output2prompt
 
 The core idea behind output2prompt is clever in its simplicity. By analyzing patterns in the AI’s responses, another AI can infer the instructions that produced those responses.
+
+
+## My Thoughts
+
+- When you write a prompt think how it process and response by yourself it will give you a idea how your prompt will work and where to improve
+- Provide important thing at start of the prompt
+- Think as it just next word predictor not more then that so think in the way when writing prompt
+- Visulize attention mechnaism on the prompt
+
+## Resourceses
+
+- https://eugeneyan.com/writing/prompting/

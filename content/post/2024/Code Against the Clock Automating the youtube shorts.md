@@ -69,7 +69,7 @@ Finally, I need to upload the processed video back to the Android device using t
 
 After following the steps outlined in the algorithm, I was able to automate the creation of YouTube Shorts with impressive results. The automation process not only streamlined content creation but also ensured a consistent quality across videos. The background music and animations added a professional touch, making the content engaging and visually appealing.
 
-You can find the code [here](https://github.com/programmerraja/ClassHunter)
+Note: If you want the source code feel free to ping me :)
 ### **Your Turn!**
 
 Have you ever automated a task using code? Share your experiences and tips in the comments below! What tasks do you wish you could automate? Let's discuss!

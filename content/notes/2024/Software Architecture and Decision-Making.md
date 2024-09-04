@@ -9,45 +9,59 @@ draft = false
 
 It explains principles and concepts I believe a senior architect must understand deeply and discusses how to employ those principles to manage uncertainty
 
-## Books for leadership
+ Books for Leadership
 
-- The Hard Things About Hard Things by Ben Horowitz, 
-- Trillion Dollar Coach by Eric Schmidt et al., 
-- Team of Teams: 
-- New Rules of Engagement for a Complex World by Stanley McChrystal
-- Good Strategy, Bad Strategy by Richard Rumel
+1. **The Hard Thing About Hard Things** by Ben Horowitz
+2. **Trillion Dollar Coach** by Eric Schmidt et al.
+3. **Team of Teams: New Rules of Engagement for a Complex World** by Stanley McChrystal
+4. **Good Strategy, Bad Strategy** by Richard Rumelt
 
-Three layers of architecture of The Open Group Architecture Framework (TOGAF)
+## System Architecture Approaches
 
-**Two prominent approaches to system architecture:**
-1.  **Waterfall** ->identify the system’s requirements in full detail beforehand and start building
-2. **Agile** -> Iterative way (collaborating with users to refine requirements and construct a system that can genuinely benefit the user)
+**Two Prominent Approaches**
+1. **Waterfall**: Identify the system’s requirements in full detail beforehand and start building.
+2. **Agile**: Iterative approach, collaborating with users to refine requirements and construct a system that genuinely benefits the user.
+
+### TOGAF Architecture Layers
+
+**Three Layers of TOGAF Architecture**:
+- **Business Architecture**
+- **Information Systems Architecture**
+- **Technology Architecture**
 
 ## Understanding Systems, Design, and Architecture
 
-When writing a cloud app, we have two choices: We can choose a single cloud, taking advantage of its unique strengths for our application, or we can make the application portable across several cloud providers
+### Cloud App Design Choices
 
-#### How to Design a System
+- **Single Cloud**: Leverage the unique strengths of one cloud provider.
+- **Multi-Cloud**: Make the application portable across several cloud providers.
 
-Five questions and 7 Principles to understand the context of system we building
+### How to Design a System
 
-1. When is the best time to market?
-	- If the feature need to go urgent becasue of market urgent. we can design the way simple and fast. and we also ready to re-write it.
-2. What is the skill level of the team?
-3. What is our system’s performance sensitivity?
-4. When can we rewrite the system?
-5. What are the hard problems?
+**Five Questions to Consider:**
+1. **When is the best time to market?**
+   - If a feature needs to go to market urgently, design it simply and quickly, with readiness to revise it later.
+2. **What is the skill level of the team?**
+3. **What is our system’s performance sensitivity?**
+4. **When can we rewrite the system?**
+5. **What are the hard problems?**
 
-Seven principles
+**Seven Principles of System Design:**
 
-1. Drive everything from the user’s journey.
-2. Use an iterative thin slice strategy
-      - Unless you have a specific reason, always start with simple architectural choices. Measure the system, find the bottlenecks, and improve the system later.
-4. On each iteration, add the most value for the least effort to support more users
-5. Make decisions and absorb the risks
-6. Design deeply things that are hard to change but implement them slowly
-7. Eliminate the unknowns and learn from the evidence by working on hard problems early and in parallel
-8. Understand the trade-offs between cohesion and flexibility in the software architecture
+1. **Drive Everything from the User’s Journey**: Focus on the user experience.
+2. **Use an Iterative Thin Slice Strategy**:
+   - Start with simple architectural choices.
+   - Measure the system, find bottlenecks, and refine later.
+3. **Add the Most Value for the Least Effort**:
+   - On each iteration, prioritize actions that offer the most value with minimal effort.
+4. **Make Decisions and Absorb Risks**: Be prepared to make informed decisions and accept associated risks.
+5. **Design Deeply for Hard-to-Change Aspects**:
+   - Implement slowly and carefully for components that are difficult to alter.
+6. **Eliminate Unknowns and Learn from Evidence**:
+   - Tackle hard problems early and work in parallel to gain insights.
+7. **Understand Trade-Offs**:
+   - Balance between cohesion and flexibility in software architecture.
+
 
 
 ## Mental Models for Understanding and Explaining System Performance
@@ -93,31 +107,37 @@ Eight mental models that help us think about and understand performance
 7. Designing for Throughput with the Maximal Useful  Utilization (MUU) Model
 8. Adding Latency Limits
 
-#### Optimization Techniques
+---
+## Optimization Techniques
 
-To optimize, we need to decide where the bottlenecks are. Bottlenecks usually come in one of three forms:
+To effectively optimize, it's crucial to identify where the bottlenecks occur. Bottlenecks typically manifest in one of three forms:
 
-- One of the resources (e.g., CPU, I/O, or memory) is the
-bottleneck.
-- Thread models are causing critical resources to be idle.
-- Resources are wasted on nonessential tasks (e.g., context
-switches, GC).
+1. **Resource Bottleneck**: One of the resources (e.g., CPU, I/O, or memory) is the limiting factor.
+2. **Thread Model Bottleneck**: Thread models are causing critical resources to be idle.
+3. **Resource Waste**: Resources are being wasted on nonessential tasks (e.g., context switches, garbage collection).
 
-##### CPU Optimization Techniques
-- Optimize Individual Tasks
-- Optimize Memory
-- Maximize CPU Utilization
-##### I/O Optimization Techniques
-- Avoid I/O (use a cache)
-- Buffering
-- Send Early, Receive Late, Don’t Ask but Tell
-- Prefetching
-- Append-Only Processing (Kafka)
-#### Memory Optimization Techniques
-- Too Many Cache Misses
-#### Latency Optimization Techniques
-- Do Work in Parallel
-- Reduce I/O
+### CPU Optimization Techniques
+
+- **Optimize Individual Tasks**: Improve the efficiency of specific tasks that use CPU resources.
+- **Optimize Memory**: Ensure that memory usage is efficient to reduce the CPU's burden.
+- **Maximize CPU Utilization**: Ensure that the CPU is used to its fullest potential without unnecessary idling.
+
+### I/O Optimization Techniques
+
+- **Avoid I/O**: Use caching to minimize direct I/O operations.
+- **Buffering**: Implement buffering to handle I/O operations more efficiently.
+- **Send Early, Receive Late, Don’t Ask but Tell**: Design systems to send data early and receive it late, and use push-based communication rather than pull-based.
+- **Prefetching**: Load data before it’s needed to reduce wait times.
+- **Append-Only Processing**: Use append-only structures (e.g., Kafka) to improve I/O performance.
+
+### Memory Optimization Techniques
+
+- **Reduce Cache Misses**: Minimize the number of cache misses to improve memory access efficiency.
+
+### Latency Optimization Techniques
+
+- **Do Work in Parallel**: Utilize parallel processing to reduce overall latency.
+- **Reduce I/O**: Minimize I/O operations to lower latency.
 
 #### CPU Utilization is Wrong 
 
@@ -126,38 +146,42 @@ switches, GC).
 - So  high %CPU to mean that the processing unit is the bottleneck, which is wrong because CPU is capable of doing the process it may wait for I/O or something .
 - `Source: https://opensource.com/article/18/4/cpu-utilization-wrong`
 
-####  The USE Method
+## The USE Method
 
-The Utilization Saturation and Errors (USE) Method is a methodology for analyzing the performance of any system
+The **Utilization Saturation and Errors (USE) Method** is a methodology for analyzing the performance of any system.
 
-`For every resource, check utilization, saturation, and errors.`
-- **resource**: all physical server functional components (CPUs, disks, busses, ...) 
-- **utilization**: the average time that the resource was busy servicing work 
-- **saturation**: the degree to which the resource has extra work which it can't service, often queued
-- **errors**: the count of error events
-Refer
-1. https://fs.blog/mental-models/ 
-2. http://highscalability.com/blog/2012/5/16/big-list-of-20-common-bottlenecks.html
-3. https://opensource.com/article/18/4/cpu-utilization-wrong
-5. https://en.wikipedia.org/wiki/Queueing_theory
-6. https://www.brendangregg.com/usemethod.html [bottleneck]
-7. https://medium.freecodecamp.org/what-makes-apache-kafka-so-fast-a8d4f94ab145
-8. An Analysis of Web Servers Architectures Performances on Commodity Multicore https://hal.inria.fr/hal-00674475/document 
-9. https://ocw.mit.edu/courses/6-851-advanced-data-structures-spring-2012/video_galleries/lecture-videos/
+**For every resource, check the following:**
+
+- **Utilization**: The average time that the resource was busy servicing work.
+- **Saturation**: The degree to which the resource has extra work it can't service, often resulting in a queue.
+- **Errors**: The count of error events associated with the resource.
+
+**Resources**: This includes all physical server functional components, such as CPUs, disks, buses, etc.
+
+### References
+
+1. [Farnam Street: Mental Models](https://fs.blog/mental-models/)
+2. [High Scalability: Big List of 20 Common Bottlenecks](http://highscalability.com/blog/2012/5/16/big-list-of-20-common-bottlenecks.html)
+3. [OpenSource.com: CPU Utilization Misconceptions](https://opensource.com/article/18/4/cpu-utilization-wrong)
+4. [Wikipedia: Queueing Theory](https://en.wikipedia.org/wiki/Queueing_theory)
+5. [Brendan Gregg: USE Method](https://www.brendangregg.com/usemethod.html)
+6. [Medium: What Makes Apache Kafka So Fast](https://medium.freecodecamp.org/what-makes-apache-kafka-so-fast-a8d4f94ab145)
+7. [An Analysis of Web Servers Architectures Performances on Commodity Multicore](https://hal.inria.fr/hal-00674475/document)
+8. [MIT OpenCourseWare: Advanced Data Structures](https://ocw.mit.edu/courses/6-851-advanced-data-structures-spring-2012/video_galleries/lecture-videos/)
 
 ## Understanding User Experience (UX)
 
-Few concepts or principles that help us to design a good UX.
+Few concepts or principles that help us to design a good UX:
 
 - Understand the Users
 - Do as Little as Possible
 - Good Products Do Not Need a Manual: Its Use Is Self-Evident
-- Think in Terms of Information Exchange 
-	- Users come to our system to get something done. The faster they can find what they need to do and do it, the happier they will be. If we can provide that UX without asking them anything, that’s even better.
+- Think in Terms of Information Exchange
+    - Users come to our system to get something done. The faster they can find what they need to do and do it, the happier they will be. If we can provide that UX without asking them anything, that’s even better.
 - Make Simple Things Simple
 - Design UX Before Implementation
 
-`Note:` having UX expertise on the team is a must
+`Note:` Having UX expertise on the team is a must
 
 ## Macro Architecture
 
@@ -172,45 +196,40 @@ Macro Architectural Building Blocks are
 
 ## Macro Architecture: Coordination
 
-#### Drive flow from the client
-
-Call All API calls to service from client
-
-#### Another service
-
-Have seprate service which will cordinate with other and return the result.
+#### Drive Flow from the Client
+- Call all API calls to the service from the client.
+#### Another Service
+- Have a separate service that coordinates with others and returns the result.
 #### Implement Choreography
+- Event-driven system where each participant listens to different events and carries out their individual part. Each action generates asynchronous events, triggering participants downstream.
 
-Event driven system, where each participant in the process listens to different events and carries out their individual part. Each action generates asynchronous events, which trigger participants downstream
+Refer:
+1. [Scaling Microservices with Event Streams](https://www.thoughtworks.com/insights/blog/scaling-microservices-event-stream)
 
-Refer
-1. https://www.thoughtworks.com/insights/blog/scaling-microservices-event-stream
-
+---
 ## Macro Architecture: Preserving Consistency of State
 
-#### Two-phase commit protocol
+#### Two-Phase Commit Protocol
 
-#### Approaches to going beyond transactions
+#### Approaches to Going Beyond Transactions
 
-1. Redefining the Problem to Require Lesser Guarantees
-    - Figure out a way to resolve complex situations.
-    - Provide a button for users to forcefully refresh the page if they can tell that it is outdated
+1. **Redefining the Problem to Require Lesser Guarantees**
+    - Resolve complex situations with reduced guarantees.
+    - Provide a button for users to forcefully refresh the page if it appears outdated.
+2. **Using Compensations**
+    - Starbucks `Does Not Use Two-Phase Commit`
+    - The key idea is to compensate if an action fails.
+    - Use compensations if the following are satisfied:
+        1. Each individual operation can be verified.
+        2. The operation is idempotent (repeating it with the same data has no additional side effects).
+        3. Failure can be handled or compensatory actions can be taken.
 
-2. Using Compensations
-     - Starbucks `Does Not Use Two-Phase Commit`
-     - The key idea is that if an action fails, you can compensate.
-     - Use compenstations if below 3 have statisfy
-         1. Each individual operation can be verified.
-         2. The operation is idempotent. If we repeat the operation with the same data, no additional side effects occur.
-         3. We can handle the failure or take compensative actions
-
-Refer
-1. https://en.wikipedia.org/wiki/Consistency_model#Client-centric_consistency_models
-2. http://www.allthingsdistributed.com/2007/12/eventually_consistent.html
-3. https://www.enterpriseintegrationpatterns.com/ramblings/18_starbucks.html [Must need to check and he suggest one book need to check]
-4. [Life Beyond Distributed Transactions: An Apostate’s Opinion] https://queue.acm.org/detail.cfm?id=3025012
-5. https://etcd.io/  []
-
+**Resources**
+1. [Consistency Models](https://en.wikipedia.org/wiki/Consistency_model#Client-centric_consistency_models)
+2. [Eventually Consistent Systems](http://www.allthingsdistributed.com/2007/12/eventually_consistent.html)
+3. [Starbucks and Two-Phase Commit](https://www.enterpriseintegrationpatterns.com/ramblings/18_starbucks.html)
+4. [Life Beyond Distributed Transactions: An Apostate’s Opinion](https://queue.acm.org/detail.cfm?id=3025012)
+5. [etcd](https://etcd.io/)
 ## Macro Architecture: Handling Security
 
 #### Interaction Security
@@ -229,65 +248,58 @@ There are four tactics (techniques) to keep communication low, and they help us 
 3. Caching
 4. Async Processing
 
-
-Refer
+**Resources**
 1. Scalability! But at What COST? (https://www.usenix.org/system/files/conference/hotos15/hotos15-paper-mcsherry.pdf)
 
 ## Macro Architecture: Microservices Considerations
 
-Microservices let us split the structure into many loosely connected parts that can be developed, released, improved, and managed independently.
+Microservices allow us to split the structure into many loosely connected parts that can be developed, released, improved, and managed independently.
 
-The decisions to make before going microservice
-1. Handling Shared Database(s)
-    - Each microservice should have its own database, and two microservices must not share data via the same database. This rule removes a common cause that leads to tight coupling between services
-    - If we want to share then make sure only one Service do update to avoid data reduntency 
-    - Use transaction if we want both service to update
+### Decisions to Make Before Adopting Microservices
 
-2. Securing Microservices
+1. **Handling Shared Database(s)**
+    - Each microservice should have its own database; avoid sharing databases to reduce tight coupling between services.
+    - If sharing is necessary, ensure only one service performs updates to prevent data redundancy.
+    - Use transactions if both services need to perform updates.
+2. **Securing Microservices**
+3. **Coordinating Microservices**
+4. **Avoiding Dependency Hell**
+    - Ensure that one service deployment does not break others. Use **Backward Compatibility** or **Forward Compatibility** to manage dependencies.
+        - **Backward Compatibility**: If updating the API to v2, it should still support the previous version’s functionality without query params.
+        - **Forward Compatibility**: If V2 fails, fall back to V1 as a temporary solution.
+    - Avoid dependency hell by being conservative in what you do and liberal in what you accept from others.
 
-3. Coordinating Microservices
-
-4. Avoiding Dependency Hell
-     - One service depolyment not to break other service if we have dependency use **Backward Compatibility** or **Forward Compatibility**
-     - **Backward Compatibility:** If we have updated the API to v2 which will accpet query params but make sure that API support without query params that's how before it work's.
-     - **Forward Compatibility:** If V2 not working try V1 (it just temporary solution)
-     - Avoid dependency hell by `Be conservative in what you do, be liberal in what you accept from others`
-
-Refer
-1. http://martinfowler.com/articles/microservices.html
-2. http://martinfowler.com/articles/microservice-trade-offs.html
-3. http://martinfowler.com/bliki/MicroservicePremium.html
-4. https://cramonblog.wordpress.com/2014/02/25/micro-services-its-not-only-the-size-that-matters-its-also-how-you-use-them-part-1/
-5. https://www.infoq.com/news/2015/06/taming-dependency-hell/
-6. https://news.ycombinator.com/item?id=9705098
+**Resources**
+1. [Microservices](http://martinfowler.com/articles/microservices.html)
+2. [Microservice Trade-Offs](http://martinfowler.com/articles/microservice-trade-offs.html)
+3. [Microservice Premium](http://martinfowler.com/bliki/MicroservicePremium.html)
+4. [Microservices: Size and Use](https://cramonblog.wordpress.com/2014/02/25/micro-services-its-not-only-the-size-that-matters-its-also-how-you-use-them-part-1/)
+5. [Taming Dependency Hell](https://www.infoq.com/news/2015/06/taming-dependency-hell/)
+6. [Hacker News Discussion](https://news.ycombinator.com/item?id=9705098)
 
 ## Server Architectures
 
-some guidelines for writing efficient and simple services
+Some guidelines for writing efficient and simple services
 - Do not reinvent the wheel
 - Use pools to reuse complex objects (need to see how moongose have pool of connections what they doing)
 - Make service operations idempotent whenever possible
-
 #### Service Architecture
 - Thread-per-Request Architecture
 - Event-Driven (Nonblocking) Architecture
 - Staged Event-Driven Architecture (SEDA)
 
 classification of applications based on their resource usage
-
 - CPU-bound applications (CPU >> Memory and no I/O)
 - Memory-bound applications (CPU + Bound Memory and no I/O)
 - Balanced applications (CPU + Memory + I/O)
 - I/O-bound applications (I/O > CPU)
 
-
-
-Refer
-1. https://stackoverflow.com/questions/3570610/what-is-seda-staged-event-driven-architecture.
-2. https://berb.github.io/diploma-thesis/
-3. https://mechanical-sympathy.blogspot.com/2011/09/single-writer-principle.html.
-4. https://mechanical-sympathy.blogspot.com/2011/07/memory-barriersfences.html.
-5. https://martinfowler.com/bliki/CQRS.html
+**Resources**
+- [What is SEDA (Staged Event-Driven Architecture)?](https://stackoverflow.com/questions/3570610/what-is-seda-staged-event-driven-architecture)
+- [Diploma Thesis by Berb](https://berb.github.io/diploma-thesis/)
+- [Single Writer Principle](https://mechanical-sympathy.blogspot.com/2011/09/single-writer-principle.html)
+- [Memory Barriers/Fences](https://mechanical-sympathy.blogspot.com/2011/07/memory-barriersfences.html)
+- [CQRS (Command Query Responsibility Segregation)](https://martinfowler.com/bliki/CQRS.html)
 
 ## Building Stable Systems
 
@@ -321,9 +333,10 @@ Refer
 - Communicating the Design
 - Growth hacking funnel (find where we stuck does in user side or in development are we not pusing not much feature etc..)
 
+**Resources**
+- [Always Be Hacking](https://blog.thinkst.com/2022/08/always-be-hacking.html)
 
-Refer
-- https://blog.thinkst.com/2022/08/always-be-hacking.html.
+---
 
 Book
 - The Coaching Habit: Say Less, Ask More & Change the Way You Lead Forever

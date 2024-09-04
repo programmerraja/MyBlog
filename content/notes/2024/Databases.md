@@ -53,7 +53,8 @@ Scalable Postgres for stream processing, analytics, and management. KsqlDB and A
 
 ## Redis
 
-
+## StarRocks
+[StarRocks](https://www.starrocks.io/) is an open-source, OLAP (_analytics-focused_) database that’s designed for running low-latency queries on data in real-time
 ## Influx DB
   
 InfluxDB is an open-source time-series database designed to handle high write and query loads for time-stamped data it uses column oriented

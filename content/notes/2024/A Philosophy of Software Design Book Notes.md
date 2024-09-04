@@ -61,7 +61,7 @@ Don't expose the thing that no need for user. try to abstract the things as much
 
 The basic idea is that each module should encapsulate a few pieces of knowledge, which represent design decisions. The knowledge is embedded in the module’s implementation but does not appear in its interface, so it is not visible to other modules.
 
-examples of information that might be hidden within a module (it nit about using private method .it is about hiding the hard implementation from user)
+examples of information that might be hidden within a module (it not about using private method .it is about hiding the hard implementation from user)
 
 - How to store information in a B-tree, and how to access it efficiently.
 - How to identify the physical disk block corresponding to each logical block within a file.

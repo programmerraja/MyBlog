@@ -49,6 +49,18 @@ rather than let the DNS server decide. As a hacker, this can be useful for
 hijacking a TCP connection on your local area network to direct traffic to a
 malicious web server with a tool such as dnsspoof .
 
+`ip -s link show dev interfaceaname` 
+display detailed information about the network interface
+- **mtu 1500**: The Maximum Transmission Unit, which is the largest size of a packet that can be transmitted over the network (1500 bytes in this case).
+    
+- **qdisc noqueue**: The queuing discipline used for packet scheduling. `noqueue` means there's no queueing discipline applied.
+    
+- **state UP**: The operational state of the interface is "UP," indicating it is active and ready to transmit and receive data.
+- 
+- **RX (Receive) Statistics**: Information about packets received by the interface, such as the number of packets, bytes received, and any errors.
+- **TX (Transmit) Statistics**: Information about packets transmitted by the interface, including the number of packets, bytes sent, and any error
+
+
 
 Advanced Packaging Tool
 - apt-cache search pkg-name

@@ -111,4 +111,7 @@ draft = true
 ## Stripe
 - **Database**: MongoDB and  DocDB [[System Design Case study#Stripe]]  on top of MongoDB.
 
+## **Pinterest**
+- **Analaytics**: StarRocks [[Databases#StarRocks]] is an open-source, OLAP (_analytics-focused_) database that’s designed for running low-latency queries on data in real-time
+- 
 
