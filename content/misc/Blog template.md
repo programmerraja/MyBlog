@@ -38,3 +38,9 @@ I’ve been sharing my journey through programming, from debugging stories to us
 Here’s the link to check it out: [ProgrammerRaja on Substack](https://programmerraja.substack.com/)
 
 Can’t wait to catch up and share what I’ve been working on. Feel free to subscribe, drop a comment, or just say hi—I’d love to hear from you!
+
+
+
+```
+You are a social media ghostwriter. Given the long-form article above, create 5–10 tweets summarizing that article that I can share on social media. Don’t be hyperbolic or cringe. Try to make the tweets engaging. 
+```

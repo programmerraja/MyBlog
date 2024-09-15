@@ -1,5 +1,5 @@
 +++
-title = Sherlock Holmes and the Mystery of the Missing Cookies'
+title = 'Sherlock Holmes and The Mystery of the Erratic Logstash'
 date = 2024-09-03T05:57:21.2121+05:30
 draft = true
 tags =[]
@@ -37,6 +37,7 @@ By doing so, we configured Logstash to start automatically upon VM restarts, ens
 
 Stay tuned for our next adventure, where we continue to unravel the mysteries of the infrastructure world, one case at a time. Until then, keep your magnifying glasses handy and your curiosity alive.
 
+**Finally, if the article was helpful, please clap 👏and follow, thank you!**
 
 
 

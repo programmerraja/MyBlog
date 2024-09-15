@@ -8,7 +8,7 @@
 - [x] How i get my facebook password using c
 - [ ] A series of blog how i automate the boring task
 	- [x] Mobile script
-	- [ ] keka
+	- [x] keka
 	- [x] class hunter
 	- [ ] interview helper
 	- [x] Money making machine
@@ -73,11 +73,19 @@ AI BLOG IDEAs
 
 
 
-Sherlock sheires
+Sherlock Holmes
 - [x] After moving to pod user is unable to login because of set cookie and http 
-- [ ] How migrting to cloudfare affect our api rate lmit and other things 
+- [x] How migrting to cloudfare affect our api rate lmit and other things 
 - [x] logstash shotdown on update
-- [ ] Heroku app not found nginx host header
+- [x] Heroku app not found nginx host header
+- [x] Health enpoint (app is down when we deploy user is complice user are seeing)
+- [ ] How connect sid fill the redis on ddos and cleared using saveUninitialized
+
+
+SYStem design docs
+- link server
+- PASS
+- etc
 
 
 How to 
@@ -88,17 +96,20 @@ How to
 
 
 Learn from mistakes or from expereinces
-- [ ]  
+- [ ]  Migration to 
 
 Unsolved mysteries
 - [ ] Vault timeout 
-- [ ] Meilisearch issue
+- [ ] Meilisearch issue `Permission denied (os error 13)`
 
 
 A series of internal wokring
 - [ ] Mongodb
 - [ ] 
 
+Funny story
+- [ ]  Hello world
+- [ ] 
 
 Converting my automation all script in single repo
 
@@ -128,3 +139,13 @@ help me create a cover image prompt for below blog post in cartoon version and m
 ```
 do you think the blog is good and can be read by everyone does it lack of content if you can add the revlavent content think step by step and follow all industrial standard for tech blog
 ```
+
+
+```
+**Finally, if the article was helpful, please clap 👏and follow, thank you!**
+
+
+```
+
+
+https://funkbytetech.substack.com/p/i-fought-a-ddos-and-lived-to-tell?ref=dailydev

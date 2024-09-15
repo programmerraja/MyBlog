@@ -232,9 +232,29 @@ Interactive Evaluation of Large Language Model Prompts on User-Defined Criteria
 
 
 
+## Reflection Fine-Tuning
 
+Reflection is the new fine-tuning technique where the fine-tuning prompt is changed a bit to incorporate self reflection while training the LLM, improving the results by a big margin.
+Prompt
 
+```
+You are a world-class AI system, capable of complex reasoning and reflection.  
+Reason through the query inside <thinking> tags, and  
+then provide your final response inside <output> tags.  
+If you detect that you made a mistake in your reasoning at any point,  
+correct yourself inside <reflection> tags.
+```
 
+- The model begins by generating its reasoning within `<thinking>` tags. This section contains the model's internal thought process as it analyzes the input query.
+- Within the `<thinking>` section, the model may include `<reflection>` tags if it identifies any mistakes in its reasoning. This indicates that the model is capable of recognizing errors and will attempt to correct them before finalizing its answer.
+
+## Chain-of-thought (CoT)
+
+ By leveraging in-context learning abilities, CoT prompting encourages a language model to more effectively solve complex problems by outputting along with its solution a corresponding “chain of thought” (i.e., a step-by-step explanation for how the problem was solved). The model can be prompted to generate a chain of thought via a few-shot learning approach that provides several chain of thought exemplars; see above. The CoT technique is most effective when the map from input to output is highly non-trivial; e.g., math or multi-step reasoning problems.
+## Self-consistency with (CoT)
+## Tree of Thoughts
+
+Tree of Thoughts is an innovative approach to AI reasoning that expands upon the Chain of Thought (CoT) methodology. While CoT prompts an AI to explain its thinking in a linear fashion, ToT takes this a step further by encouraging the AI to explore multiple paths of reasoning simultaneously, much like a tree branching out in various directions.
 
 ## Summarization
 - https://towardsdatascience.com/summarize-podcast-transcripts-and-long-texts-better-with-nlp-and-ai-e04c89d3b2cb
