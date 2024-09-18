@@ -787,10 +787,8 @@ print(m.dimensions)
 
 ```
 
-
-
-
 ## Docstrings
+
 A docstring is a string literal that occurs as the first statement in a module, function, class, or method definition. It is used to document the code and provide information about what the code does, its parameters, return values, and any other relevant details.
 
 A docstring is typically enclosed in triple quotes `"""..."""` or `'''...'''`, and it can span multiple lines.

@@ -167,3 +167,9 @@ resources
 
 
 - you should talk with the subject matter or domain experts to gain a good understanding of the domain
+
+
+
+How Soundcloud moved from BFF to DDD 
+- https://developers.soundcloud.com/blog/service-architecture-1
+- 

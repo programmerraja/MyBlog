@@ -7,11 +7,11 @@ tags =[]
 
 ## Indexing
 
-it is like collection name in databse
+Indexing in Elasticsearch is like a collection name in a database.
 
-#### **Index-level shard allocation filtering**
+### Index-Level Shard Allocation Filtering
 
-Index-level shard allocation filtering in Elasticsearch is a feature that allows you to control which nodes in your Elasticsearch cluster are eligible to store the primary and replica shards of specific indices. This feature gives you fine-grained control over shard placement based on node attributes and conditions, helping you optimize data distribution, resource utilization, and cluster stability.
+Index-level shard allocation filtering in Elasticsearch allows you to control which nodes in your Elasticsearch cluster are eligible to store the primary and replica shards of specific indices. This feature gives you fine-grained control over shard placement based on node attributes and conditions, helping you optimize data distribution, resource utilization, and cluster stability.
 
 Here's an explanation of index-level shard allocation filtering:
 

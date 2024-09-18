@@ -31,3 +31,4 @@ word by word in one line, so it can be used in the C application, nothing else
 
 ## Blog
 - https://embracethered.com/blog/posts/2024/chatgpt-hacking-memories/
+- 
