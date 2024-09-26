@@ -422,6 +422,8 @@ Resources
 - **[Sentence Transformers on Hugging Face](https://www.sbert.net/docs/quickstart.html)**
 - **[Local RAG with Ollama and Weaviate](https://weaviate.io/blog/local-rag-with-ollama-and-weaviate)**
 - **[Video Lectures from ESWC 2016 on Machine Learning](https://videolectures.net/eswc2016_fortuna_machine_learning/)**
+- https://huyenchip.com/2023/04/11/llm-engineering.html
+- https://github.com/rasbt/LLMs-from-scratch 
 
 
 
@@ -508,3 +510,42 @@ https://applied-llms.org/
 
 ## 1 Bit LLM 
  BitNet b1.58 where every weight in a Transformer can be represented as a {-1, 0, 1} instead of a floating point number. 
+
+
+
+
+
+
+LAMA 2 All are instruction tunned model
+ - lama2 7B instruction
+ - lama2 13B instruction
+ - lama2 70B instruction
+ -  lama2 7B Chat
+ - lama2 13B Chat
+ - lama2 70B Chat
+ 
+ Code lama
+ - 7B/13B/34B has both base model and instruct model
+
+Purpel lama
+- Generative AI safety model wil take care of check does the genreated code is safe 
+- CybersecEval dataset to test
+- lama Gaurd -> check input and output 
+
+
+```
+[INST] -> addd by lama to identify the inst tag base model dont undertstand
+</s> -> ending tag
+```
+- Lama we need to manully add INST and end tag with 
+
+
+GEMINI
+- ultra 
+- pro -> performance and speed
+- flash -> fastest and low cost
+- nano ->
+
+
+
+Large multimodal model -> can handel both image and other input type

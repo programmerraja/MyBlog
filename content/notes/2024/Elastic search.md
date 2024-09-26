@@ -7,9 +7,9 @@ tags =[]
 
 ## Indexing
 
-it is like collection name in databse
+It is like a collection name in a database.
 
-#### **Index-level shard allocation filtering**
+### **Index-level shard allocation filtering**
 
 Index-level shard allocation filtering in Elasticsearch is a feature that allows you to control which nodes in your Elasticsearch cluster are eligible to store the primary and replica shards of specific indices. This feature gives you fine-grained control over shard placement based on node attributes and conditions, helping you optimize data distribution, resource utilization, and cluster stability.
 
@@ -17,11 +17,13 @@ Here's an explanation of index-level shard allocation filtering:
 
 **Scenario:** Consider a multi-node Elasticsearch cluster where each node has different hardware specifications or specific roles, such as hot, warm, or cold data nodes. You want to ensure that certain indices are allocated only to nodes that meet specific criteria.
 
-#### **Index-Level Shard Allocation Filtering:**
+#### **Node Attributes:**
 
-**Node Attributes:** Elasticsearch allows you to assign custom attributes to nodes in your cluster. These attributes can describe node characteristics such as hardware capabilities, roles, geographic location, or any other relevant information.
+Elasticsearch allows you to assign custom attributes to nodes in your cluster. These attributes can describe node characteristics such as hardware capabilities, roles, geographic location, or any other relevant information.
 
-**Index Settings:** You can define shard allocation rules at the index level using index settings. Specifically, you can use the `index.routing.allocation.include` and `index.routing.allocation.exclude` settings to specify conditions that nodes must meet or avoid in order to be eligible for storing the shards of a particular index.
+#### **Index Settings:**
+
+You can define shard allocation rules at the index level using index settings. Specifically, you can use the `index.routing.allocation.include` and `index.routing.allocation.exclude` settings to specify conditions that nodes must meet or avoid in order to be eligible for storing the shards of a particular index.
 
 - `index.routing.allocation.include`: This setting specifies conditions that nodes must meet to be eligible for shard allocation. For example, you can include nodes with specific attributes, roles, or other criteria.
 - `index.routing.allocation.exclude`: This setting specifies conditions that nodes must avoid to be eligible for shard allocation. It allows you to exclude nodes based on attributes, roles, or other criteria.

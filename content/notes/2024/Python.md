@@ -124,7 +124,6 @@ print("Name: {}, Age: {}".format(name, age))
 print(f"Name: {name}, Age: {age}")
 ```
 
-In Python, conditional statements and loops are fundamental control structures used for decision-making and iteration. Let's go through each of them:
 
 ### Conditional Statements:
 
@@ -512,6 +511,7 @@ class Dog:
 	@staticmethod 
 	def static_method(): 
 		print("This is a static method")
+	
 	@classmethod 
 	def class_method(cls): 
 		print("Class method called")

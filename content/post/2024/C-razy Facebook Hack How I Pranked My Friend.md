@@ -8,6 +8,7 @@ tags =['hacking','prank']
 
 It was my first year of college, and we were all working in the Python lab. My friends, who didn’t really know much about computers, seemed like the perfect targets for a harmless prank. They were excited but didn’t have a clue about the technical stuff I was up to. I saw an opportunity to have a little fun, knowing they’d fall for it because they didn’t know much about programming.
 
+
 ### The Master Plan
 
 I wanted to play a trick on my friends to show them how powerful C programming is. But it was all just a joke! Here’s how I did it:

@@ -44,3 +44,28 @@ Can’t wait to catch up and share what I’ve been working on. Feel free to sub
 ```
 You are a social media ghostwriter. Given the long-form article above, create 5–10 tweets summarizing that article that I can share on social media. Don’t be hyperbolic or cringe. Try to make the tweets engaging. 
 ```
+
+```
+
+Here's a summary of your brand voice:
+
+**Brand Voice Summary**: Your brand voice is approachable, energetic, and straightforward, aimed at a broad tech audience. You lean towards a conversational tone, making content accessible without assuming deep technical knowledge. Lighthearted humor complements the content, which focuses primarily on your journey as a software engineer and the real-world problems you solve. You value balance between shorter, snappy content and more in-depth explorations, especially when sharing notes or deeper insights.
+
+**Guidelines for Consistency**:
+
+1. **Tone**:
+    
+    - **Blogs**: Conversational with a focus on sharing problem-solving journeys. Use lighthearted humor to keep the reader engaged but maintain clarity on technical points.
+    - **Social Media**: Short, snappy, and engaging. Encourage curiosity while keeping posts light and approachable.
+    - **Emails**: Friendly but professional. Personalize the emails by incorporating anecdotes and experiences, keeping the length appropriate for the message.
+2. **Formality**: Stay informal and conversational, using straightforward language without unnecessary jargon. If jargon is needed, explain it in simple terms.
+    
+3. **Humor**: Use lighthearted humor that aligns with your personal energy. Avoid overdoing it, as the focus should remain on delivering valuable content.
+    
+4. **Personal Stories**: Incorporate stories about challenges you’ve faced and solved in your career. This should form the backbone of your content, especially in blogs and emails.
+    
+5. **Length**:
+    
+    - **Short pieces**: Use for social media and quick blog posts (updates, tips, etc.).
+    - **In-depth content**: Reserve for detailed problem-solving notes, where you explore solutions at a deeper level.
+```

@@ -60,6 +60,7 @@ Raft works by electing a leader node, which is responsible for managing the repl
 
 1. [https://www.allthingsdistributed.com/](https://www.allthingsdistributed.com/) [_Werner Vogels on building scalable and robust distributed systems]
 2. https://muratbuffalo.blogspot.com/2020/06/learning-about-distributed-systems.html _
+3. https://www.somethingsimilar.com/2013/01/14/notes-on-distributed-systems-for-young-bloods/
 
 #### Tools to monitor
 

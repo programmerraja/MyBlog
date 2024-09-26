@@ -53,8 +53,32 @@ Scalable Postgres for stream processing, analytics, and management. KsqlDB and A
 
 ## Redis
 
+**Redis is based on Master-Slave Architecture,**
+
+Redis server can be run in two modes:
+- Master Mode (Redis Master)
+- Slave Mode (Redis Slave or Redis Replica)
+
+We can configure which mode to write and read from. It is recommend to serves writes through Redis Master and reads through Redis Slaves.
+
+Redis Master does replicate writes to one or more Redis Slaves. The master-slave replication is done asynchronously.
+
+Redis is **AP** ( Availability and Partition Tolerance.) system. 
+
+What happens when Redis Master receives write request from Client:
+
+- It does acknowledge to Client.
+- Redis Master replicates the write request to 1 or more slaves. (Depends on Replication factor).
+
+Here you can see, Redis Master does not wait for replication to be completed on slaves and does acknowledgment to client immediately.
+
+Now lets us assume, Redis Master acknowledged to client and then got crashed. Now one of the Redis Slave (that did not receive the write) will get promoted to Redis Master, loosing the write forever.
+
+In Redis, the automatic promotion of a slave (now called a _replica_) to master upon the master's failure does **not** happen automatically by default. However, you can achieve automatic failover using **Redis Sentinel**, which is designed to monitor your Redis servers and handle automatic promotion when the master fails.
+
 ## StarRocks
 [StarRocks](https://www.starrocks.io/) is an open-source, OLAP (_analytics-focused_) database that’s designed for running low-latency queries on data in real-time
+
 ## Influx DB
   
 InfluxDB is an open-source time-series database designed to handle high write and query loads for time-stamped data it uses column oriented

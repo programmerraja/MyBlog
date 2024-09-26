@@ -250,38 +250,33 @@ In the charming town of Toyland, where toys came to life, there was an ingenious
    }
    ```
 
-5. **Proxy Pattern: The Guardian Toy Sentinel**
+5. **Proxy Pattern** 
+	The proxy pattern provides a surrogate or placeholder for another object to control access to it. For instance, managing access to an object that is expensive to instantiate.
 
-   Toyland had a cherished collection of rare and delicate toys housed in the Precious Toy Vault. To safeguard these treasures, StructureBuilder employed the Proxy pattern. The Guardian Toy Sentinel acted as a protective proxy, ensuring that only those with special permissions could access the precious toys.
+  ```
+class AuthProxy {
+    constructor(user, service) {
+        this.user = user;
+        this.service = service;
+    }
 
-   ```javascript
-   class PreciousToyVault {
-       open() {
-           // Open the vault
-       }
-   }
+    performAction() {
+        if (this.user.hasAccess) {
+            this.service.performAction();
+        } else {
+            console.log("Access denied: You do not have permission to perform this action.");
+        }
+    }
+}
+```
 
-   class GuardianToySentinel {
-       constructor(vault) {
-           this.vault = vault;
-           this.accessGranted = false;
-       }
+```
+const user = { name: "John", hasAccess: false };
+const realService = new RealService();
+const proxy = new AuthProxy(user, realService);
 
-       grantAccess() {
-           // Check permissions and grant access
-           this.accessGranted = true;
-       }
-
-       openVault() {
-           if (this.accessGranted) {
-               this.vault.open();
-           } else {
-               console.log("Access denied. Seek permission from the Guardian Toy Sentinel.");
-           }
-       }
-   }
-   ```
-
+proxy.performAction();
+```
 6. **Facade Pattern: The Magic Toy Workshop**
 
    In the heart of Toyland, StructureBuilder established the Magic Toy Workshop, a place of enchantment where various toys were crafted. To simplify the complexity of the toy-making process, StructureBuilder implemented the Facade pattern. The Magic Toy Workshop acted as a facade, providing a single entry point for creating different types of toys.
@@ -302,34 +297,44 @@ In the charming town of Toyland, where toys came to life, there was an ingenious
    }
    ```
 
-7. **Flyweight Pattern: The Whirling Windmill Factory**
+7. **Flyweight Pattern** 
 
-   In the playful outskirts of Toyland, there stood the Whirling Windmill Factory, a place where windmills of various shapes and colors were crafted. StructureBuilder, mindful of efficiency, implemented the Flyweight pattern. The shared intrinsic properties of the windmills were stored externally, allowing the factory to create a multitude of windmills without duplicating common features.
+   The **Flyweight Pattern** is useful because it helps reduce memory consumption and improve performance by sharing common parts of objects across multiple instances.
+   
+   A text editor might contain millions of characters with different fonts, styles, and sizes. By using the Flyweight Pattern, the editor can share common glyphs and styles across characters, reducing memory usage.
+   
+```
+class FontStyle {
+    constructor(font, size, color) {
+        this.font = font;
+        this.size = size;
+        this.color = color;
+    }
+}
+```
 
-   ```javascript
-   class WhirlingWindmill {
-       constructor(color, shape) {
-           this.color = color;
-           this.shape = shape;
-       }
+```
+class FontFactory {
+    constructor() {
+        this.styles = {};
+    }
 
-       whirl() {
-           // Whirl the windmill
-       }
-   }
+    getFontStyle(font, size, color) {
+        const key = `${font}-${size}-${color}`;
+        if (!this.styles[key]) {
+            this.styles[key] = new FontStyle(font, size, color);
+        }
+        return this.styles[key];
+    }
+}
+```
 
-   class WindmillFactory {
-       constructor() {
-           this.windmills = {};
-       }
+```
+// Client code
+const factory = new FontFactory();
 
-       createWindmill(color, shape) {
-           const key = `${color}_${shape}`;
-           if (!this.windmills[key]) {
-               this.windmills[key] = new WhirlingWindmill(color, shape);
-           }
-           return this.windmills[key];
-       }
-   }
-   ```
+const style1 = factory.getFontStyle('Arial', 12, 'Black');
+const style2 = factory.getFontStyle('Arial', 12, 'Black');  // Reused
 
+console.log(style1 === style2);
+```

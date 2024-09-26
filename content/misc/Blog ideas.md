@@ -79,10 +79,10 @@ Sherlock Holmes
 - [x] logstash shotdown on update
 - [x] Heroku app not found nginx host header
 - [x] Health enpoint (app is down when we deploy user is complice user are seeing)
-- [ ] How connect sid fill the redis on ddos and cleared using saveUninitialized
+- [ ] How connect sid fill the redis on ddos and cleared using saveUninitialized and connect flash
 
 
-SYStem design docs
+System design docs
 - link server
 - PASS
 - etc
@@ -93,6 +93,10 @@ How to
 - [ ] How to use wireshark
 - [ ] How to use zap scan
 - [ ] How to use lets encrypt
+- [ ] how to stream mongodb requesr 
+- [ ] Post about klenty dns
+
+AI research paper series
 
 
 Learn from mistakes or from expereinces
@@ -148,4 +152,9 @@ do you think the blog is good and can be read by everyone does it lack of conten
 ```
 
 
+Write a blog like this
+
 https://funkbytetech.substack.com/p/i-fought-a-ddos-and-lived-to-tell?ref=dailydev
+
+
+

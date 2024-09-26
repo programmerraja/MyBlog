@@ -370,3 +370,8 @@ vmstat  | tail -n 1 | awk '{print "| procs | r (run queue) | "$1" |\n| procs | b
 - `id`: The percentage of CPU time spent idle. 
 - `wa`: The percentage of CPU time spent waiting for I/O. 
 - `st`: The percentage of CPU time spent in steal mode (usually due to virtualization).
+
+
+TO get no of system call used by the program
+
+`sudo strace  -c  node filename.js` -> will print all sys call and time it take

@@ -268,6 +268,13 @@ correct yourself inside <reflection> tags.
 ## Chain-of-thought (CoT)
 
  By leveraging in-context learning abilities, CoT prompting encourages a language model to more effectively solve complex problems by outputting along with its solution a corresponding “chain of thought” (i.e., a step-by-step explanation for how the problem was solved). The model can be prompted to generate a chain of thought via a few-shot learning approach that provides several chain of thought exemplars; see above. The CoT technique is most effective when the map from input to output is highly non-trivial; e.g., math or multi-step reasoning problems.
+
+Note: use COT for mathematical and reasoning where the perform good check out [here](https://arxiv.org/pdf/2409.12183) for more
+
+## Auto COT
+
+Auto-CoT paradigm to automatically construct demonstrations with questions and reasoning chains. Specifically, Auto-CoT leverages LLMs with the “Let’s think step by step” prompt to generate reasoning chains for demonstrations one by one, and sending that COT with question to LLM as few shot prompting
+
 ## Self-consistency with (CoT)
 
 ## ReAct
@@ -333,6 +340,26 @@ Envision a group of three experts working in unison to tackle a question by empl
 
 "Three experts with exceptional logical thinking skills are collaboratively answering a question using the tree of thoughts method. Each expert will share their thought process in detail, taking into account the previous thoughts of others and admitting any errors. They will iteratively refine and expand upon each other's ideas, giving credit where it's due. The process continues until a conclusive answer is found. Organize the entire response in a markdown table format. The task is:
 ```
+
+
+## Re-Reading Improves Reasoning in Large Language Models
+
+The core concept of the paper "Re-Reading Improves Reasoning in Large Language Models" is that repeating the input question can enhance the reasoning capabilities of Large Language Models (LLMs),
+
+Unlike many thought-eliciting prompting methods (e.g., Chain-of-Thought) that focus on structuring the output, RE2 focuses on improving how the LLM processes the input This is analogous to how understanding the question is paramount to solving a problem for humans.
+
+Re-Reading + COT
+
+```
+Q: Roger has 5 tennis balls. He buys 2 more cans of tennis balls. Each can has 3 tennis balls. How many tennis balls does he have now? 
+
+Read the question again: Roger has 5 tennis balls. He buys 2 more cans of tennis balls. Each can has 3 tennis balls. How many tennis balls does he have now? A:
+
+Let’s think step by step.
+```
+
+- potentially improve the reasoning performance of Large Language Models (LLMs).
+
 
 ## Summarization
 - https://towardsdatascience.com/summarize-podcast-transcripts-and-long-texts-better-with-nlp-and-ai-e04c89d3b2cb
@@ -455,6 +482,8 @@ Here are 5 papers you want to read to understand better how [OpenAI](https://www
 
 1. [Eugene Yan's Prompting Guide](https://eugeneyan.com/writing/prompting/)
 2. [Leaked Prompts of GPTs on GitHub](https://github.com/linexjlin/GPTs?tab=readme-ov-file)
+3. https://substack.com/@cwolferesearch/p-143156742 
+4. https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/
 
 ## Tools
 
