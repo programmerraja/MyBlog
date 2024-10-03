@@ -80,6 +80,7 @@ Sherlock Holmes
 - [x] Heroku app not found nginx host header
 - [x] Health enpoint (app is down when we deploy user is complice user are seeing)
 - [ ] How connect sid fill the redis on ddos and cleared using saveUninitialized and connect flash
+- [ ] Econnreset
 
 
 System design docs
@@ -112,8 +113,8 @@ A series of internal wokring
 - [ ] 
 
 Funny story
-- [ ]  Hello world
-- [ ] 
+- [x]  Hello world
+- [x] How i contributed to meiliseseach a typo mistake 
 
 Converting my automation all script in single repo
 
@@ -158,3 +159,91 @@ https://funkbytetech.substack.com/p/i-fought-a-ddos-and-lived-to-tell?ref=dailyd
 
 
 
+You was tech blogger who have expereinced in writing the blog in techy way and interactive funny way to attract all type of audience today i wll share by rough work of the blog help me to enhance the blog with proper title and try add more humor Answer a question given in a natural, human-like manner
+
+
+
+## Intro to share the notes
+
+I decided to have a poke around and see if I could figure out how the HTTP streaming APIs from the various hosted LLM providers actually worked. Here are my notes so far.
+
+
+
+## Prompt for blog writting 
+
+```
+> # CONTEXT # I want to advertise my company's new product. My company's name is Alpha and the product is called Beta, which is a new ultra-fast hairdryer.
+
+> # OBJECTIVE # Create a Facebook post for me, which aims to get people to click on the product link to purchase it.
+
+> # STYLE # Follow the writing style of successful companies that advertise similar products, such as Dyson.
+
+> # TONE # Persuasive
+
+> # AUDIENCE # My company's audience profile on Facebook is typically the older generation. Tailor your post to target what this audience typically looks out for in hair products.
+
+> # RESPONSE # The Facebook post, kept concise yet impactful.
+```
+
+
+
+## Prompt for creating book
+
+1. _**Introduction (about 500 words long)**_
+
+- _**Hook**__: Start with an engaging story, anecdote, or interesting fact._
+- _**Context**__: Provide context for why this story or fact is relevant to the chapter's main theme._
+- _**Thesis Statement**__: Clearly state the main point or rule that the chapter will cover._
+
+_**2. Background Information (about 500 words long)**_
+
+- _**Historical/Social Context**__: Explain the background related to the chapter's theme. This might include scientific explanations, historical context, or social implications._
+
+_**3. Main Arguments (about 1000 words long)**_
+
+- _**Argument 1**__: Introduce the first major argument or point._
+- _**Explanation**__: Elaborate on the point with details and examples._
+- _**Evidence**__: Provide supporting evidence, such as studies, quotes, or case studies._
+- _**Argument 2**__: Introduce the second major argument or point._
+- _**Explanation**__: Elaborate on the point with details and examples._
+- _**Evidence**__: Provide supporting evidence, such as studies, quotes, or case studies._
+- _**Argument 3**__: Introduce the third major argument or point._
+- _**Explanation**__: Elaborate on the point with details and examples._
+- _**Evidence**__: Provide supporting evidence, such as studies, quotes, or case studies._
+
+_**4. Practical Advice (about 1000 words long)**_
+
+- _**Guidance**__: Offer practical advice or steps that the reader can take to apply the chapter's main point in their own life._
+- _**Examples**__: Include real-life examples or scenarios where the advice has been successfully applied._
+
+_**5. Conclusion (about 300 words long)**_
+
+- _**Summary**__: Summarize the key points discussed in the chapter._
+- _**Final Thoughts**__: Provide a closing thought or call to action that reinforces the chapter's theme._
+- _**Transition**__: (If applicable), provide a hint or transition to the next chapter._
+
+
+
+
+
+## Prompt for summary using COSTAR framework
+
+**Context**: I have a research paper that I would like summarized. The paper is on a technical topic and contains various findings, methods, and conclusions. I need the summary to focus on the main ideas without losing important details.
+
+**Objective**: Summarize the research paper, focusing on the key findings, methods used, and conclusions drawn. Please make sure to include any relevant statistics or key terms that were pivotal in the research.
+
+**Style**: Write in a clear, concise style similar to that used by an academic researcher when explaining findings to non-experts.
+
+**Tone**: Use a neutral, informative, and professional tone, suitable for readers who are interested but not deeply familiar with the topic.
+
+**Audience**: The summary is for a general audience of professionals and students who are not experts in the field but are interested in the subject matter.
+
+**Response**: Provide the summary in a structured paragraph format, clearly separated into sections for methods, findings, and conclusions. If necessary, include short bullet points to emphasize important details.
+
+
+
+
+
+
+
+what are the core concpets discussed and what they teaching explain all thing discussed in the video such that i can learn all things

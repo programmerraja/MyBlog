@@ -142,3 +142,9 @@ TestPilot takes the pain out of writing unit tests. It uses GitHub Copilot's AI 
 
 
 https://github.com/Storia-AI/repo2vec
+
+
+
+## LLM
+- [DeepSeek](https://www.deepseek.com/) Coder comprises a series of code language models trained from scratch on both 87% code and 13% natural language in English and Chinese Open sources and free to use
+- https://github.com/huybery/Awesome-Code-LLM 

@@ -223,3 +223,22 @@ This paper introduces 26 guiding principles designed to streamline the process o
 - HumanEval: Evaluating Large Language Models Trained on Code
 
 - Mostly Basic Python Problems (MBPP): The benchmark consists of around 1,000 crowd-sourced Python programming problems, designed to be solvable by entry level programmers
+- CoderEval , ClassEval  and EvoCodeBench
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

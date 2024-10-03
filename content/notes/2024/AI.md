@@ -29,6 +29,7 @@ Deep learning models
 Computational linguistics: strudy of language grammer,syntax and phonetics
 
 ## Embedding
+
 https://huggingface.co/blog/how-to-generate
 Word embedding algo
 1. Wrord2Vec (CBOW and Skip grammer)
@@ -279,21 +280,8 @@ Training at scale
 
 
 
-## Langchain
 
-
-
-
-
-
-
-
-
-
-
-
-
-ollama
+ollama Notes
 
 uses docker to run all model
 Model stored in  /user/share/ollama/.ollama/models
@@ -302,27 +290,7 @@ which has blobs and manifests/registry.ollama.ai
 
 blobs contain actula model code 
 
-https://github.com/vercel/ai
 
-
-
-
-
-
-
-
-Rank GPT
-- instead of just querying in vector and sending to LLM after querying ask LLM can you rank the doc that fetched from vecotr db based relvant to the query and again send to LLM with re ranked doc
-
-
-Multi query retrieval 
-- Send the user query to LLM and ask can you suggest revelant query to this query get that and use that query to get from db
-
-Contextual compression
-- Ask the LLM can you give relavant part that required for the doc by asking this we reducing the context then again send to LLM
-
-Hypothetical document embedding
-- ask LLM to suggest Hypothetical document for query and use that to fetch from DB
 
 ## Vector database
 
@@ -381,26 +349,14 @@ https://aibyhand.substack.com/ -> AI by hand
 
 
 
-
-
-
-
-
-
-
 ## Resources
 - LLORA  for finetuning ->https://lightning.ai/lightning-ai/studios/code-lora-from-scratch
 - https://www.philschmid.de/fine-tune-llms-in-2024-with-trl
 
 
 
-
-
-
 Neural network 
 - https://nnfs.io/ Neural Networks From Scratch
-
-
 
 
 
@@ -424,7 +380,8 @@ Resources
 - **[Video Lectures from ESWC 2016 on Machine Learning](https://videolectures.net/eswc2016_fortuna_machine_learning/)**
 - https://huyenchip.com/2023/04/11/llm-engineering.html
 - https://github.com/rasbt/LLMs-from-scratch 
-
+- [ reasonable and good explanations of how stuff works. No hype and no vendor content ](https://gist.github.com/veekaybee/be375ab33085102f9027853128dc5f0e)
+	
 
 
 emdeding

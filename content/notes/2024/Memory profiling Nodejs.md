@@ -117,3 +117,42 @@ export const eventLoopMonitor = singleton("eventLoopMonitor", () => {
   };
 });
 ```
+
+
+I used the basic "collectDefaultMetrics" of the prom-client package. We use Prometheus to gather metrics from instances, and Grafana to display Graphs.
+
+About the ELU, I'm not aware of any "standard" prometheus ways to compute and report it. We do it manually via a small snippet of code like this
+
+```
+
+let lastELU = performance.eventLoopUtilization();
+
+this._intervalRef = setInterval(() => {
+
+// Store the current ELU so it can be assigned later.
+
+const tmpELU = performance.eventLoopUtilization();
+
+// Calculate the diff between the current and last before sending.
+
+const report = performance.eventLoopUtilization(tmpELU, lastELU);
+
+this._idleGauge.set(report.idle);
+
+this._activeGauge.set(report.active);
+
+this._utilizationGauge.set(report.utilization);
+
+// Assign over the last value to report the next interval.
+
+lastELU = tmpELU;
+
+}, this._interval);
+
+```
+
+[https://www.npmjs.com/package/prom-client](https://www.npmjs.com/package/prom-client)
+
+[https://prometheus.io/](https://prometheus.io/)
+
+[https://grafana.com/](https://grafana.com/)

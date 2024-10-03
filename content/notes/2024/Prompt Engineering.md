@@ -397,6 +397,14 @@ I need to write a blog post on the topic of [integrating enterprise data with an
 Begin in <scratchpad> tags and write out and brainstorm in a couple paragraphs your plan for how you will create an informative and engaging blog. Also brainstorm how you will create a CTA at the end for our company, AI Disruptor.
 ```
 
+- To get json response start the conversion for assistant with `{` like below
+```
+
+user : "prompt"
+asssistant: "{" -> which tell the model to start with { need to return as json 
+```
+
+- if claude saying text after json we can use stop_sequences ask the model to wrap a json with json tag like `<json></json>` and we can give stop_sequences as `</json>`
 
 ## Prompt Hacking
 
@@ -447,6 +455,60 @@ Example: [from Claude 3.5 Sonnet to GPT-4o-mini -- reducing costs massively whil
 
 check out [here](https://github.com/microsoft/LLMLingua)
 
+## CO-STAR framework
+
+#### **(C) Context: Provide background information on the task**
+
+This helps the LLM understand the specific scenario being discussed, ensuring its response is relevant.
+
+#### **(O) Objective: Define what the task is that you want the LLM to perform**
+
+Being clear about your objective helps the LLM to focus its response on meeting that specific goal.
+
+#### **(S) Style: Specify the writing style you want the LLM to use**
+
+This could be a particular famous person's style of writing, or a particular expert in a profession, like a business analyst expert or CEO. This **g**uides the LLM to respond with the manner and choice of words aligned with your needs.
+
+#### **(T) Tone: Set the attitude of the response**
+
+This ensures the LLM's response resonates with the intended sentiment or emotional context required. Examples are formal, humorous, empathetic, among others.
+
+#### **(A) Audience: Identify who the response is intended for**
+
+Tailoring the LLM's response to an audience, such as experts in a field, beginners, children, and so on, ensures that it is appropriate and understandable in your required context.
+
+#### **(R) Response: Provide the response format**
+
+This ensures that the LLM outputs in the exact format that you require for downstream tasks. Examples include a list, a JSON, a professional report, and so on. For most LLM applications which work on the LLM responses programmatically for downstream manipulations, a JSON output format would be ideal.
+
+```
+> # CONTEXT # I want to advertise my company's new product. My company's name is Alpha and the product is called Beta, which is a new ultra-fast hairdryer.
+
+> # OBJECTIVE # Create a Facebook post for me, which aims to get people to click on the product link to purchase it.
+
+> # STYLE # Follow the writing style of successful companies that advertise similar products, such as Dyson.
+
+> # TONE # Persuasive
+
+> # AUDIENCE # My company's audience profile on Facebook is typically the older generation. Tailor your post to target what this audience typically looks out for in hair products.
+
+> # RESPONSE # The Facebook post, kept concise yet impactful.
+```
+
+
+## Instance-Adaptive prompting strategy
+
+A prompt can vary depending on the specific instance we cannot use a same prompt for all use case 
+
+To overcome this limitation,  Instance-Adaptive Prompting (IAP), was suggest which aims to select the most suitable prompt for each individual question, rather than relying on a single prompt for an entire task
+
+**How IAP Works:**
+
+The IAP strategy uses these insights to select an appropriate prompt for each question from a pool of candidate prompts. They propose two methods
+
+- Sequential Substitution (IAP-ss): The system tries prompts one by one, stopping when a prompt leads to good reasoning or all prompts are exhausted. for that they use **Saliency Score** 
+
+- Majority Vote (IAP-mv): The system evaluates all candidate prompts and selects the one that consistently produces the best reasoning
 
 ###  LLM Approximation
 
@@ -454,6 +516,132 @@ check out [here](https://github.com/microsoft/LLMLingua)
 
 **Fine-tune a smaller model in parallel** : In a production environment, it can be massively beneficial to keep serving requests through a bigger model while continuously logging and fine-tuning a smaller model on those responses. We can then evaluate the results from the fine-tuned model and the larger model to determine when it make sense to switch.
 
+
+## Meta Prompting
+
+It involves constructing a high-level “meta” prompt that instructs an LLM
+
+prompt
+```
+You are Meta-Expert, an extremely clever expert with the unique ability to collaborate with multiple experts (such as Expert
+
+Problem Solver, Expert Mathematician, Expert Essayist, etc.) to tackle any task and solve any complex problems. Some
+
+experts are adept at generating solutions, while others excel in verifying answers and providing valuable feedback.
+
+Note that you also have special access to Expert Python, which has the unique ability to generate and execute Python code
+
+given natural-language instructions. Expert Python is highly capable of crafting code to perform complex calculations when
+
+given clear and precise directions. You might therefore want to use it especially for computational tasks.
+
+As Meta-Expert, your role is to oversee the communication between the experts, effectively using their skills to answer a
+
+given question while applying your own critical thinking and verification abilities.
+
+To communicate with a expert, type its name (e.g., "Expert Linguist" or "Expert Puzzle Solver"), followed by a colon ":", and
+
+then provide a detailed instruction enclosed within triple quotes. For example:
+
+Expert Mathematician:
+
+"""
+
+You are a mathematics expert, specializing in the fields of geometry and algebra.
+
+Compute the Euclidean distance between the points (-2, 5) and (3, 7).
+
+"""
+
+Ensure that your instructions are clear and unambiguous, and include all necessary information within the triple quotes. You
+
+can also assign personas to the experts (e.g., "You are a physicist specialized in...").
+
+Interact with only one expert at a time, and break complex problems into smaller, solvable tasks if needed. Each interaction
+
+is treated as an isolated event, so include all relevant details in every call.
+
+If you or an expert finds a mistake in another expert's solution, ask a new expert to review the details, compare both
+
+solutions, and give feedback. You can request an expert to redo their calculations or work, using input from other experts.
+
+Keep in mind that all experts, except yourself, have no memory! Therefore, always provide complete information in your
+
+instructions when contacting them. Since experts can sometimes make errors, seek multiple opinions or independently
+
+verify the solution if uncertain. Before providing a final answer, always consult an expert for confirmation. Ideally, obtain or
+
+verify the final solution with two independent experts. However, aim to present your final answer within 15 rounds or fewer.
+
+Refrain from repeating the very same questions to experts. Examine their responses carefully and seek clarification if
+
+required, keeping in mind they don't recall past interactions.
+
+Present the final answer as follows:
+
+>> FINAL ANSWER:
+
+"""
+
+[final answer]
+
+"""
+
+For multiple-choice questions, select only one option. Each question has a unique answer, so analyze the provided
+
+information carefully to determine the most accurate and appropriate response. Please present only one solution if you
+
+come across multiple options.
+```
+
+
+
+
+
+
+
+Prompt for generating system prompts 
+```
+Understand the Task: Grasp the main objective, goals, requirements, constraints, and expected output.
+- Minimal Changes: If an existing prompt is provided, improve it only if it's simple. For complex prompts, enhance clarity and add missing elements without altering the original structure.
+- Reasoning Before Conclusions: Encourage reasoning steps before any conclusions are reached. ATTENTION! If the user provides examples where the reasoning happens afterward, REVERSE the order! NEVER START EXAMPLES WITH CONCLUSIONS!
+    - Reasoning Order: Call out reasoning portions of the prompt and conclusion parts (specific fields by name). For each, determine the ORDER in which this is done, and whether it needs to be reversed.
+    - Conclusion, classifications, or results should ALWAYS appear last.
+- Examples: Include high-quality examples if helpful, using placeholders [in brackets] for complex elements.
+   - What kinds of examples may need to be included, how many, and whether they are complex enough to benefit from placeholders.
+- Clarity and Conciseness: Use clear, specific language. Avoid unnecessary instructions or bland statements.
+- Formatting: Use markdown features for readability. DO NOT USE ``` CODE BLOCKS UNLESS SPECIFICALLY REQUESTED.
+- Preserve User Content: If the input task or prompt includes extensive guidelines or examples, preserve them entirely, or as closely as possible. If they are vague, consider breaking down into sub-steps. Keep any details, guidelines, examples, variables, or placeholders provided by the user.
+- Constants: DO include constants in the prompt, as they are not susceptible to prompt injection. Such as guides, rubrics, and examples.
+- Output Format: Explicitly the most appropriate output format, in detail. This should include length and syntax (e.g. short sentence, paragraph, JSON, etc.)
+    - For tasks outputting well-defined or structured data (classification, JSON, etc.) bias toward outputting a JSON.
+    - JSON should never be wrapped in code blocks (```) unless explicitly requested.
+
+The final prompt you output should adhere to the following structure below. Do not include any additional commentary, only output the completed system prompt. SPECIFICALLY, do not include any additional messages at the start or end of the prompt. (e.g. no "---")
+
+[Concise instruction describing the task - this should be the first line in the prompt, no section header]
+
+[Additional details as needed.]
+
+[Optional sections with headings or bullet points for detailed steps.]
+
+# Steps [optional]
+
+[optional: a detailed breakdown of the steps necessary to accomplish the task]
+
+# Output Format
+
+[Specifically call out how the output should be formatted, be it response length, structure e.g. JSON, markdown, etc]
+
+# Examples [optional]
+
+[Optional: 1-3 well-defined examples with placeholders if necessary. Clearly mark where examples start and end, and what the input and output are. User placeholders as necessary.]
+[If the examples are shorter than what a realistic example is expected to be, make a reference with () explaining how real examples should be longer / shorter / different. AND USE PLACEHOLDERS! ]
+
+# Notes [optional]
+
+[optional: edge cases, details, and an area to call or repeat out specific important considerations]
+```
 
 ### LLM Cascade
 
@@ -484,6 +672,7 @@ Here are 5 papers you want to read to understand better how [OpenAI](https://www
 2. [Leaked Prompts of GPTs on GitHub](https://github.com/linexjlin/GPTs?tab=readme-ov-file)
 3. https://substack.com/@cwolferesearch/p-143156742 
 4. https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/
+5. [A collection of prompts, system prompts and LLM instructions]( https://github.com/0xeb/TheBigPromptLibrary )
 
 ## Tools
 

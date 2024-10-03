@@ -53,7 +53,22 @@ Scalable Postgres for stream processing, analytics, and management. KsqlDB and A
 
 ## Redis
 
-**Redis is based on Master-Slave Architecture,**
+It is single threaded
+#### Types of Redis Architecture
+
+The three main types of Redis Architecture are
+
+- Redis Standalone
+- Redis Sentinel
+- Redis Cluster (Clustering is a way to share data automatically across multiple cluster nodes (Horizontal Scaling). The cluster will be able to continue operations when some nodes fail or not able to communicate with each other.)
+
+####  Redis Sentinel
+The Redis Sentinel comes up with a master-slave architecture. With this architecture, we will be able to avoid the Single point of failure which was a major concern with the Redis Standalone. Additionally, it comes up with other sets of features, which are
+
+- **Monitoring** — constantly checking whether the Master and slave instances are working properly or not.
+- **Notification** — Notify systems in case of failure of instances.
+- **Automatic Failover** — In case of a master node failure, the slave node will be promoted to master.
+- **Configuration Provider** — Sentinel nodes also serve as a point of discovery of the current main Redis instance.
 
 Redis server can be run in two modes:
 - Master Mode (Redis Master)
@@ -75,6 +90,17 @@ Here you can see, Redis Master does not wait for replication to be completed on 
 Now lets us assume, Redis Master acknowledged to client and then got crashed. Now one of the Redis Slave (that did not receive the write) will get promoted to Redis Master, loosing the write forever.
 
 In Redis, the automatic promotion of a slave (now called a _replica_) to master upon the master's failure does **not** happen automatically by default. However, you can achieve automatic failover using **Redis Sentinel**, which is designed to monitor your Redis servers and handle automatic promotion when the master fails.
+
+**Redis Persistence Models**
+- No persistence
+- RDB Files: The RDB persistence performs point-in-time snapshots of your dataset at specified intervals.
+- **AOF** (Append Only File):The AOF persistence logs every write operation the server receives that will be played again at server startup, reconstructing the original dataset.
+
+**How redis doing snapshot with single thread**
+
+Redis leverages forking and copy-on-write to enable efficient data persistence. Forking creates a new process (child) that shares memory with the original (parent) process. Redis, which manages large amounts of memory, uses this mechanism to snapshot data without consuming additional memory unless changes are made. Through copy-on-write, memory pages are only duplicated when modified, allowing the child process to work with a consistent snapshot while keeping memory usage low. This approach enables Redis to capture snapshots of gigabytes of memory quickly and efficiently.
+
+
 
 ## StarRocks
 [StarRocks](https://www.starrocks.io/) is an open-source, OLAP (_analytics-focused_) database that’s designed for running low-latency queries on data in real-time

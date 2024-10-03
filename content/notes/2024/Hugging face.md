@@ -66,3 +66,9 @@ print(encoded_text)
 from transformers import DistilBertTokenizer
 distilbert_tokenizer = DistilBertTokenizer.from_pretrained(model_ckpt)
 ```
+
+
+
+## Resources
+- [Huggingface 🤗 is all you need for NLP and beyond ](https://jarvislabs.ai/blogs/hf-getting-started )
+- 

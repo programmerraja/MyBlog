@@ -60,6 +60,149 @@ display detailed information about the network interface
 - **RX (Receive) Statistics**: Information about packets received by the interface, such as the number of packets, bytes received, and any errors.
 - **TX (Transmit) Statistics**: Information about packets transmitted by the interface, including the number of packets, bytes sent, and any error
 
+#### SS
+The `ss` command is a powerful utility for investigating and debugging network connections in Linux
+- ss -a  (View All Connections)
+- ss -t state established
+- ss -l (see all the listening ports on the system)
+
+- ss -s  (show stats)
+```
+ss -s
+Total: 2050            <-- Total number of sockets (across all protocols)
+TCP:   142 (estab 114, closed 12, orphaned 0, timewait 8)  <-- TCP breakdown
+
+Transport Total     IP        IPv6
+RAW	  1         0         1        <-- 1 RAW socket (only 1 on IPv6)
+UDP	  15        12        3        <-- 15 UDP sockets (12 IPv4, 3 IPv6)
+TCP	  130       124       6        <-- 130 TCP sockets (124 IPv4, 6 IPv6)
+INET	  146       136       10       <-- 146 INET sockets (136 IPv4, 10 IPv6) `INET` refers to both **TCP** and **UDP** sockets
+FRAG	  0         0         0        <-- 0 IP fragments being reassembled FRAG refers to fragmented packets. It shows the number of IP fragments currently being reassembled.
+
+```
+
+- ss -p (connection with pid)
+
+
+
+- somaxconn is a kernel parameter in Linux that determines the maximum number of connections that can be queued in the TCP/IP stack backlog per socket.
+
+
+apt install net-tools -> to install netstat
+apt install iproute2 to -> to install ss
+
+netstat -s
+Ip:
+    Forwarding: 1
+    12425641 total packets received
+    0 forwarded
+    0 incoming packets discarded
+    12425641 incoming packets delivered
+    13180851 requests sent out
+Icmp:
+    11 ICMP messages received
+    0 input ICMP message failed
+    ICMP input histogram:
+        destination unreachable: 11
+    0 ICMP messages sent
+    0 ICMP messages failed
+    ICMP output histogram:
+IcmpMsg:
+        InType3: 11
+Tcp:
+    87122 active connection openings (This indicates the system has sent a SYN to initiate a TCP connection with a remote system. T)
+    277692 passive connection openings
+    291 failed connection attempts (This occurs when a socket in SYN_RECV or SYN_SENT states enters an unexpected or error path due to traffic received or sent. The most common reason for this is a TCP Reset was received into a SYN_SENT socket, indicating the other end was not listening on the destination port.)
+    7328 connection resets received
+    1432 connections established
+    11678121 segments received
+    14512365 segments sent out
+    2154 segments retransmitted
+    0 bad segments received
+    14311 resets sent
+Udp:
+    747509 packets received
+    0 packets to unknown port received
+    0 packet receive errors
+    747509 packets sent
+    0 receive buffer errors
+    0 send buffer errors
+UdpLite:
+TcpExt:
+    271 resets received for embryonic SYN_RECV sockets
+    11 ICMP packets dropped because socket was locked
+    135101 TCP sockets finished time wait in fast timer
+    3 packetes rejected in established connections because of timestamp
+    451984 delayed acks sent
+    157 delayed acks further delayed because of locked socket
+    Quick ack mode was activated 3261 times
+    3723294 packet headers predicted
+    3734390 acknowledgments not containing data payload received
+    2758313 predicted acknowledgments
+    TCPSackRecovery: 23
+    Detected reordering 140 times using SACK
+    Detected reordering 9 times using reno fast retransmit
+    Detected reordering 6 times using time stamp
+    3 congestion windows partially recovered using Hoe heuristic
+    TCPDSACKUndo: 3
+    3 congestion windows recovered without slow start after partial ack
+    TCPLostRetransmit: 862
+    3 timeouts after reno fast retransmit
+    9 timeouts in loss state
+    139 fast retransmits
+    46 retransmits in slow start
+    TCPTimeouts: 1882
+    TCPLossProbes: 403
+    TCPLossProbeRecovery: 11
+    TCPSackRecoveryFail: 2
+    TCPBacklogCoalesce: 35388
+    TCPDSACKOldSent: 3261
+    TCPDSACKOfoSent: 4
+    TCPDSACKRecv: 64
+    7137 connections reset due to unexpected data
+    1 connections reset due to early user close
+    80 connections aborted due to timeout
+    TCPSACKDiscard: 2
+    TCPDSACKIgnoredNoUndo: 44
+    TCPSackShifted: 51
+    TCPSackMerged: 21
+    TCPSackShiftFallback: 127
+    TCPRcvCoalesce: 937376
+    TCPOFOQueue: 1243
+    TCPOFOMerge: 4
+    TCPChallengeACK: 28
+    TCPSpuriousRtxHostQueues: 2
+    TCPAutoCorking: 314
+    TCPFromZeroWindowAdv: 1
+    TCPToZeroWindowAdv: 1
+    TCPSynRetrans: 1299
+    TCPOrigDataSent: 7043735
+    TCPHystartTrainDetect: 1434
+    TCPHystartTrainCwnd: 35371
+    TCPHystartDelayDetect: 9
+    TCPHystartDelayCwnd: 315
+    TCPACKSkippedSynRecv: 1
+    TCPKeepAlive: 2203135
+    TCPDelivered: 7110864
+    TCPAckCompressed: 95
+    TcpTimeoutRehash: 1119
+    TcpDuplicateDataRehash: 3
+    TCPDSACKRecvSegs: 147
+    TCPDSACKIgnoredDubious: 2
+IpExt:
+    InOctets: 23121472147
+    OutOctets: 6418635527
+    InNoECTPkts: 25347197
+    InECT0Pkts: 35807
+MPTcpExt:
+
+
+
+- **ECONNREFUSED**: Connection was not accepted (server not available).
+- **ECONNRESET**: Connection was reset (server dropped the connection).
+
+
+
 
 
 Advanced Packaging Tool
@@ -67,6 +210,7 @@ Advanced Packaging Tool
 - apt-get install packagename
 - apt-get remove snort
 - apt-get purge snort :remove config file
+
 
 The servers that hold the software for particular distributions of Linux are
 known as repositories

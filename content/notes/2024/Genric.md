@@ -75,3 +75,12 @@ page table
 
 
 
+##  Goodhart's Law
+
+"When a measure becomes a target, it ceases to be a good measure."
+
+Example:
+
+Sometimes, companies track the number of bugs fixed as a measure of progress. If developers are incentivized to fix as many bugs as possible, they might focus on fixing **easy, minor bugs** rather than addressing **critical or difficult bugs**. This distorts the original intent of improving software quality, as fixing more bugs may not always lead to better software.
+
+In these cases, the original intent (improving software quality or development efficiency) is overshadowed by the narrow focus on hitting certain metrics, which leads to behaviors that don't actually solve the underlying problems.

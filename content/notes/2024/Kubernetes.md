@@ -304,7 +304,7 @@ spec:
 
 ## Affinity and Anti-Affinity
 
-Affinity and Anti-Affinity are concepts used to control how pods are scheduled onto nodes in a cluster. They help define rules for pod placement based on characteristics of the nodes or other pods in the cluster.
+Affinity and Anti-Affinity are concepts used to control how pods are scheduled on to nodes in a cluster. They help define rules for pod placement based on characteristics of the nodes or other pods in the cluster.
 
 **Affinity**: Affinity rules specify conditions that pods prefer for their placement. Pods with affinity rules tend to be scheduled onto nodes that meet those conditions
 
@@ -539,7 +539,7 @@ template:
 
 **Headless service:**  
 - Sometimes you don't need load-balancing and a single Service IP. In this case, you can create what are termed _headless Services_, by explicitly specifying `"None"` for the  cluster IP address
-    
+- This also help us if we want to pod to pod communication
 **NodePort service:** 
 - This builds on top of ClusterIP and enables access from outside of the cluster (static ip). Port range can be only between 30000 to 32767
 
@@ -1151,6 +1151,17 @@ webhooks:
 
 ```
 
+
+
+## Helm
+
+Helm is a package manager for Kubernetes, which helps you define, install, and upgrade applications running in a Kubernetes cluster. Helm uses charts, which are packages of pre-configured Kubernetes resources, to deploy and manage complex applications easily.
+
+Key components of Helm include:
+
+1. **Charts**: Helm packages, which contain all the configuration files and templates required to set up a Kubernetes application.
+2. **Releases**: A deployed instance of a chart. Each time you install a chart into your Kubernetes cluster, it creates a release.
+3. **Repositories**: Places where charts are stored and shared.
 
 
 

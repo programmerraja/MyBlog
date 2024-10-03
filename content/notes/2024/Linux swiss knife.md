@@ -44,6 +44,7 @@ vmstat  | tail -n 1 | awk '{print "| procs | r (run queue) | "$1" |\n| procs | b
 
 
 Tell which process waiting for DISK IO
+
 ```
 watch -n1 -d "ps axu | awk '{if (\$8==\"D\") {print \$0}}'"
 ```
