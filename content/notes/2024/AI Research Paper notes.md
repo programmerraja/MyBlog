@@ -1,7 +1,7 @@
 +++
 title = 'AI Research Paper notes'
 date = 2024-09-19T06:01:47.4747+05:30
-draft = true
+draft = false
 tags =[]
 +++ 
 
@@ -25,24 +25,6 @@ tags =[]
 
     - Even after the retrieval step, the model might still produce code that's partially incorrect or "hallucinated" (wrong). So, De-Hallucinator uses the generated code itself as a clue and refines the next prompt. This iterative process continues, narrowing down on the correct API or function.
     - **Example**: If the model produces code using an API that looks similar but isn't quite right, De-Hallucinator refines the query using that generated code to search for project-specific APIs. In the next round, the model will generate code that is much more accurate.
-
-
-## AGENT WORKFLOW MEMORY
-
-### Problem statement
-build an AI assistant that can navigate the web like a pro
-
-### Solution
-
-creating workflows from agents' past actions (trajectories) by identifying routines that can be reused. These workflows are then incorporated into the agent's memory to help solve future tasks more efficiently.
-
-### Proof
-
-Dataset used : Mind2Web (Mind2Web is a dataset for developing and evaluating generalist agents for the web that can follow language instructions to complete complex tasks on any website.)
-
-
-### conclusion
-
 
 
 ## Promptriever: Instruction-Trained Retrievers Can Be Prompted Like Language Models
@@ -207,10 +189,6 @@ This paper introduces 26 guiding principles designed to streamline the process o
 | 24            | When you want to initiate or continue a text using specific words, phrases, or sentences, utilize the following prompt: <br> • I’m providing you with the beginning [song lyrics/story/paragraph/essay...]: [Insert lyrics/words/sentence]’. Finish it based on the words provided. Keep the flow consistent.                                                                                          |
 | 25            | Clearly state the requirements that the model must follow in order to produce content, in the form of the keywords, regulations, hints, or instructions.                                                                                                                                                                                                                                               |
 | 26            | To write any text, such as an essay or paragraph, that is intended to be similar to a provided sample, include the following instructions: <br> • Please use the same language based on the provided paragraph/title/text/essay/answer.                                                                                                                                                                |
-
-
-
-
 
 ## Unsupervised Evaluation of Code LLMs with Round-Trip Correctness
 

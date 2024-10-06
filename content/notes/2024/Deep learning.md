@@ -26,3 +26,4 @@ The two most popular neural frameworks are: [TensorFlow](http://tensorflow.org/
 - https://medium.com/fintechexplained/neural-networks-bias-and-weights-10b53e6285da
 - https://medium.com/the-theory-of-everything/understanding-activation-functions-in-neural-networks-9491262884e0
 - https://towardsdatascience.com/activation-functions-neural-networks-1cbd9f8d91d6
+- Deep Learning Interviews is home to hundreds of fully-solved problems, from a wide range of key topics in AI. It is designed to both rehearse interview or exam-specific topics and provide machine learning M.Sc./Ph.D. https://arxiv.org/pdf/2201.00650

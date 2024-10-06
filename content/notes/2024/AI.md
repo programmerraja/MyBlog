@@ -252,43 +252,18 @@ Types
 
 **Max new tokens:** No of tokens that will generate
 
-LLM evalution metrics
-- Recall-Oriented Understudy for Gisting Evaluation(ROUGE)
-- Bilingual Evaluation Understudy (BLEU)
-- Perplexity
-
-
-
-
 
 Natural language model
 
 LoRA (Low-Rank Adaptation) and PEFT (Parameter-Efficient Fine-Tuning) are techniques used in the field of natural language processing and machine learning to fine-tune large pre-trained models in a more computationally and memory-efficient manner.
 
 
+## ollama Notes
 
-LLM 
-
-Model architecture
-
-Transformers -> Attention mechnaism
-
-Training at scale
-- Mixed precision traning uses both 32bit and 16bit float point 
-- 3d parallelism 
-- Zero redundancy optimizer
-
-
-
-
-ollama Notes
-
-uses docker to run all model
-Model stored in  /user/share/ollama/.ollama/models
-
-which has blobs and manifests/registry.ollama.ai
-
-blobs contain actula model code 
+- uses docker to run all model
+- Model stored in  /user/share/ollama/.ollama/models
+- which has blobs and manifests/registry.ollama.ai
+- blobs contain actula model code 
 
 
 
@@ -348,16 +323,8 @@ https://aibyhand.substack.com/ -> AI by hand
 
 
 
-
-## Resources
-- LLORA  for finetuning ->https://lightning.ai/lightning-ai/studios/code-lora-from-scratch
-- https://www.philschmid.de/fine-tune-llms-in-2024-with-trl
-
-
-
 Neural network 
 - https://nnfs.io/ Neural Networks From Scratch
-
 
 
 Resources
@@ -389,14 +356,11 @@ emdeding
 - https://ronxin.github.io/wevi/# word embedding visual inspector
 
 
-
-
 books
 - https://shepherd.com/best-books/machine-learning-and-deep-neural-networks
 
 
-Langchain alternative
-- https://haystack.deepset.ai/tutorials
+
 
 
 
@@ -431,6 +395,9 @@ Frameworks represent a noteworthy leap in the evolution of machine learning. By 
 - An optimized variant of LoRA where matrix B gets a higher learning rate.
 This tweak leads to faster and more effective learning.
 
+#### Resources
+ - [LLORA  for finetuning](https://lightning.ai/lightning-ai/studios/code-lora-from-scratch)
+- [Fine tune LLMs 2024](https://www.philschmid.de/fine-tune-llms-in-2024-with-trl)
 
 ## 1 Bit LLM 
  BitNet b1.58 where every weight in a Transformer can be represented as a {-1, 0, 1} instead of a floating point number. 
@@ -438,7 +405,7 @@ This tweak leads to faster and more effective learning.
 
 
 
-
+## LAMA Notes
 
 LAMA 2 All are instruction tunned model
  - lama2 7B instruction
@@ -464,7 +431,7 @@ Purpel lama
 - Lama we need to manully add INST and end tag with 
 
 
-GEMINI
+## GEMINI Notes
 - ultra 
 - pro -> performance and speed
 - flash -> fastest and low cost

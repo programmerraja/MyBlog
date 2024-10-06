@@ -6,11 +6,13 @@ tags =[]
 +++ 
 
 
+## Prompt classification 
 
 ![[Pasted image 20240720193516.png]]
 
 
 ## Plan Like a Graph
+
 Plan Like a Graph (PLaG) that converts naturalistic questions to equivalent graph problems, which significantly improves the performance of LLMs in asynchronous planning tasks.
 
 ```
@@ -52,6 +54,16 @@ By providing the LLM with a graph representation of the task, we can help it rea
 ```
 
 
+## Prompt Pattern
+
+A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT
+
+* **Input Semantics:** Changing how the LLM understands input.
+* **Output Customization:** Controlling the format, structure, or other aspects of the LLM's output.
+* **Error Identification:** Helping users identify and correct errors in the LLM's output.
+* **Prompt Improvement:** Enhancing the quality of both the user's prompts and the LLM's responses.
+* **Interaction:** Changing how the user interacts with the LLM.
+
 | Pattern Category      | Prompt Pattern                                                                           |
 | --------------------- | ---------------------------------------------------------------------------------------- |
 | Input Semantics       | Meta Language Creation                                                                   |
@@ -60,12 +72,6 @@ By providing the LLM with a graph representation of the task, we can help it rea
 | Prompt  Improvement   | Question Refinement <br>Alternative Approaches<br>Cognitive Verifier <br>Refusal Breaker |
 | Interaction           | Flipped Interaction<br> Game Play <br>Infinite Generation                                |
 | Context Control       | Context Manager                                                                          |
-
-## Claude Meta Prompt
-
-Claude have written a prompt that will help to get perfect prompt in XML
-check [here](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/prompt-generator)
-
 
 ## Dspy
 
@@ -236,16 +242,7 @@ Automatic Few-Shot Learning
 - **`KNNFewShot`**
 
 ### Internal of DSPY
-Dspy uses pydantic [[Python#Pydantic]]  for `dspy.InputField` and other things 
-
-
-## Zenbase
-
-Developer tools and cloud infrastructure for perfectionists using LLMs. [Zenbase](https://zenbase.ai) takes care of the hassle of prompt engineering and model selection.
-
-
-## EvalLM
-Interactive Evaluation of Large Language Model Prompts on User-Defined Criteria
+- Dspy uses pydantic [[Python#Pydantic]]  for `dspy.InputField` and other things 
 
 
 ## Reflection Fine-Tuning
@@ -269,7 +266,8 @@ correct yourself inside <reflection> tags.
 
  By leveraging in-context learning abilities, CoT prompting encourages a language model to more effectively solve complex problems by outputting along with its solution a corresponding “chain of thought” (i.e., a step-by-step explanation for how the problem was solved). The model can be prompted to generate a chain of thought via a few-shot learning approach that provides several chain of thought exemplars; see above. The CoT technique is most effective when the map from input to output is highly non-trivial; e.g., math or multi-step reasoning problems.
 
-Note: use COT for mathematical and reasoning where the perform good check out [here](https://arxiv.org/pdf/2409.12183) for more
+Note: use COT for mathematical and reasoning where the perform good.
+check out [here](https://arxiv.org/pdf/2409.12183) for more
 
 Prompt
 ```
@@ -302,12 +300,14 @@ Prompt
 Auto-CoT paradigm to automatically construct demonstrations with questions and reasoning chains. Specifically, Auto-CoT leverages LLMs with the “Let’s think step by step” prompt to generate reasoning chains for demonstrations one by one, and sending that COT with question to LLM as few shot prompting
 
 ## Self-consistency with (CoT)
+- Need to add notes
 
 ## ReAct
 
 ReAct is a general paradigm that combines reasoning and acting with LLMs. ReAct prompts LLMs to generate verbal reasoning traces and actions for a task.
 
  it to be better than chain-of-thought prompting
+ 
 ```
 - Thought 1: I need to search for “Colorado orogeny,” identify the area covered by the eastern sector, and then determine the elevation range of that area.
 - 
@@ -330,41 +330,46 @@ ReAct is a general paradigm that combines reasoning and acting with LLMs. ReAct 
 - Thought 5: The elevation range of the High Plains is 1,800 to 7,000 ft, so that’s the answer.
 - Action 5: Finish [1,800 to 7,000 ft]
 ```
+
 ## Tree of Thoughts
 
 Tree of Thoughts is an innovative approach to AI reasoning that expands upon the Chain of Thought (CoT) methodology. While CoT prompts an AI to explain its thinking in a linear fashion, ToT takes this a step further by encouraging the AI to explore multiple paths of reasoning simultaneously, much like a tree branching out in various directions.
 
 check out implementation [here](https://github.com/kyegomez/tree-of-thoughts) 
+
 Prompt
 
 ```
 
-Imagine three different experts are answering this question. All experts will write down 1 step of their thinking, then share it with the group. Then all experts will go on to the next step, etc. If any expert realises they're wrong at any point then they leave. The question is...
+**You are an expert problem-solving agent** designed to not only solve complex problems but also critically evaluate the quality of your thought process and final answers. 
 
+Your task is to follow a structured approach to generate solutions, assess your thoughts, and provide a rating for each on a scale of 0.1 to 1.0. This rating should reflect the accuracy and quality of your reasoning and final answer.
 
+### Instructions:
 
-################ 2nd ################
+1. **Understand the Problem:**  
+   - Carefully analyze the problem provided by the user.  
+   - Break down the problem into smaller, manageable parts if necessary.  
+   - Formulate a clear understanding of the problem before proceeding.
 
-Simulate three brilliant, logical experts collaboratively answering a question. Each one verbosely explains their thought process in real-time, considering the prior explanations of others and openly acknowledging mistakes. At each step, whenever possible, each expert refines and builds upon the thoughts of others, acknowledging their contributions. They continue until there is a definitive answer to the question. For clarity, your entire response should be in a markdown table. The question is...
+2. **Generate Thoughts:**  
+   - Create multiple thoughts or steps toward solving the problem.  
+   - For each thought, document your reasoning, ensuring that it is logical and well-founded.
 
+3. **Self-Evaluation:**  
+   - After generating each thought, evaluate its accuracy and quality.  
+   - Assign an evaluation score between 0.1 and 1.0. Use the following guidelines:  
+     - **0.1 to 0.4:** The thought is flawed, inaccurate, or incomplete.  
+     - **0.5 to 0.7:** The thought is partially correct but may lack detail or full accuracy.  
+     - **0.8 to 1.0:** The thought is accurate, complete, and well-reasoned.
 
-################ ################
+4. **Generate Final Answer:**  
+   - Based on your thoughts, synthesize a final answer to the problem.  
+   - Ensure the final answer is comprehensive and addresses all aspects of the problem.
 
-Imagine three highly intelligent experts working together to answer a question. They will follow a tree of thoughts approach, where each expert shares their thought process step by step. They will consider the input from others, refine their thoughts, and build upon the group's collective knowledge. If an expert realizes their thought is incorrect, they will acknowledge it and withdraw from the discussion. Continue this process until a definitive answer is reached. Present the entire response in a markdown table. The question is...
-
-
-################ 2nd ################
-
-Three experts with exceptional logical thinking skills are collaboratively answering a question using a tree of thoughts method. Each expert will share their thought process in detail, taking into account the previous thoughts of others and admitting any errors. They will iteratively refine and expand upon each other's ideas, giving credit where it's due. The process continues until a conclusive answer is found. Organize the entire response in a markdown table format. The question is...
-################ 2nd ################
-
-
-Envision a group of three experts working in unison to tackle a question by employing a tree of thoughts strategy. Each expert will thoroughly explain their line of thinking at every step, while also considering the insights provided by their peers. They will openly recognize any mistakes and build upon the group's shared understanding. This iterative process will continue until a definitive solution is reached. Structure the entire response as a markdown table. The question is...
-
-
-################ 2nd ################
-
-"Three experts with exceptional logical thinking skills are collaboratively answering a question using the tree of thoughts method. Each expert will share their thought process in detail, taking into account the previous thoughts of others and admitting any errors. They will iteratively refine and expand upon each other's ideas, giving credit where it's due. The process continues until a conclusive answer is found. Organize the entire response in a markdown table format. The task is:
+5. **Final Evaluation:**  
+   - Evaluate the overall quality and accuracy of your final answer.  
+   - Provide a final evaluation score based on the same 0.1 to 1.0 scale.
 ```
 
 
@@ -390,24 +395,12 @@ Let’s think step by step.
 ## Summarization
 - https://towardsdatascience.com/summarize-podcast-transcripts-and-long-texts-better-with-nlp-and-ai-e04c89d3b2cb
 
+## Claude Meta Prompt
 
+Claude have written a prompt that will help to get perfect prompt in XML
+check [here](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/prompt-generator)
 
-## ChatML
-
-ChatML (Chat Markup Language) is a lightweight markup format used by OpenAI to structure conversations between users and models, especially in chatbot-like environments. It is designed to define roles and organize the flow of conversation between different participants, such as system instructions, user inputs, and model responses.
-
-In a typical ChatML format, the message blocks are defined by tags such as:
-
-- `<|system|>`: Instructions or setup given to the model (usually hidden from the user).
-- `<|user|>`: Represents what the user says.
-- `<|assistant|>`: Represents the assistant’s responses.
-- `<im_start|>` : the start of an interactive mode where messages will alternate between participants. It’s generally used to transition into the back-and-forth of a conversation.
-- `<im_end|>`
-
-
-
-
-## Claude 
+## Claude Prompt Tips
 
 Some takeaways you can use for writing your long-context Q&A prompts:
 
@@ -440,26 +433,6 @@ Prompt compression is a technique used in natural language processing (NLP) to o
 - LLMLingua (A LLM developed by microsoft open source which will help to reduce the prompt)
 
 
-## Prompt Hacking
-
-### output2prompt
-
-The core idea behind output2prompt is clever in its simplicity. By analyzing patterns in the AI’s responses, another AI can infer the instructions that produced those responses.
-
-
-## My Thoughts
-
-- When you write a prompt think how it process and response by yourself it will give you a idea how your prompt will work and where to improve
-- Provide important thing at start of the prompt
-- Think as it just next word predictor not more then that so think in the way when writing prompt
-- Visulize attention mechnaism on the prompt
-- Tell how to handle negative else it will hallucinate
-- If you using too much example the response will be more genric based on the example so keep that in mind
-- use stop sequence if you want avoid unwanted text
-
-
-
-
 ## FrugalGPT
 
 **FrugalGPT** is a framework proposed by Lingjiao Chen, Matei Zaharia and James Zou from Stanford University in their 2023 [paper](https://portkey.ai/blog/frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-improving-performance-summary/) "_FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance_". The paper outlines strategies for more cost-effective and performant usage of large language model (LLM) APIs.
@@ -488,29 +461,34 @@ Example: [from Claude 3.5 Sonnet to GPT-4o-mini -- reducing costs massively whil
     - After selecting the tokens to preserve, the original order of the tokens is maintained to ensure that the compressed prompt remains coherent and grammatically correct.
 
 check out [here](https://github.com/microsoft/LLMLingua)
+###  LLM Approximation
+
+**Cache LLM Requests** : When the prompt is exactly the same, we can save the inference time and cost by serving the request from cache.
+
+**Fine-tune a smaller model in parallel** : In a production environment, it can be massively beneficial to keep serving requests through a bigger model while continuously logging and fine-tuning a smaller model on those responses. We can then evaluate the results from the fine-tuned model and the larger model to determine when it make sense to switch.
+### LLM Cascade
+
+The key idea is to sequentially query different LLMs based on the confidence of the previous LLM's response. If a cheaper LLM can provide a satisfactory answer, there's no need to query the more expensive models, thus saving costs.
+
+In essence, the LLM cascade makes a request to the smallest model first, evaluates the response, and returns it if it's good enough. Otherwise, it requests the next larger model and so on until a satisfactory response is obtained or the largest model is reached.
 
 ## CO-STAR framework
 
 #### **(C) Context: Provide background information on the task**
 
 This helps the LLM understand the specific scenario being discussed, ensuring its response is relevant.
-
 #### **(O) Objective: Define what the task is that you want the LLM to perform**
 
 Being clear about your objective helps the LLM to focus its response on meeting that specific goal.
-
 #### **(S) Style: Specify the writing style you want the LLM to use**
 
 This could be a particular famous person's style of writing, or a particular expert in a profession, like a business analyst expert or CEO. This **g**uides the LLM to respond with the manner and choice of words aligned with your needs.
-
 #### **(T) Tone: Set the attitude of the response**
 
 This ensures the LLM's response resonates with the intended sentiment or emotional context required. Examples are formal, humorous, empathetic, among others.
-
 #### **(A) Audience: Identify who the response is intended for**
 
 Tailoring the LLM's response to an audience, such as experts in a field, beginners, children, and so on, ensures that it is appropriate and understandable in your required context.
-
 #### **(R) Response: Provide the response format**
 
 This ensures that the LLM outputs in the exact format that you require for downstream tasks. Examples include a list, a JSON, a professional report, and so on. For most LLM applications which work on the LLM responses programmatically for downstream manipulations, a JSON output format would be ideal.
@@ -543,13 +521,6 @@ The IAP strategy uses these insights to select an appropriate prompt for each qu
 - Sequential Substitution (IAP-ss): The system tries prompts one by one, stopping when a prompt leads to good reasoning or all prompts are exhausted. for that they use **Saliency Score** 
 
 - Majority Vote (IAP-mv): The system evaluates all candidate prompts and selects the one that consistently produces the best reasoning
-
-###  LLM Approximation
-
-**Cache LLM Requests** : When the prompt is exactly the same, we can save the inference time and cost by serving the request from cache.
-
-**Fine-tune a smaller model in parallel** : In a production environment, it can be massively beneficial to keep serving requests through a bigger model while continuously logging and fine-tuning a smaller model on those responses. We can then evaluate the results from the fine-tuned model and the larger model to determine when it make sense to switch.
-
 
 ## Meta Prompting
 
@@ -630,11 +601,8 @@ come across multiple options.
 
 
 
+## Prompt for generate System Prompt
 
-
-
-
-Prompt for generating system prompts 
 ```
 Understand the Task: Grasp the main objective, goals, requirements, constraints, and expected output.
 - Minimal Changes: If an existing prompt is provided, improve it only if it's simple. For complex prompts, enhance clarity and add missing elements without altering the original structure.
@@ -677,11 +645,48 @@ The final prompt you output should adhere to the following structure below. Do n
 [optional: edge cases, details, and an area to call or repeat out specific important considerations]
 ```
 
-### LLM Cascade
 
-The key idea is to sequentially query different LLMs based on the confidence of the previous LLM's response. If a cheaper LLM can provide a satisfactory answer, there's no need to query the more expensive models, thus saving costs.
+## ChatML
 
-In essence, the LLM cascade makes a request to the smallest model first, evaluates the response, and returns it if it's good enough. Otherwise, it requests the next larger model and so on until a satisfactory response is obtained or the largest model is reached.
+ChatML (Chat Markup Language) is a lightweight markup format used by OpenAI to structure conversations between users and models, especially in chatbot-like environments. It is designed to define roles and organize the flow of conversation between different participants, such as system instructions, user inputs, and model responses.
+
+In a typical ChatML format, the message blocks are defined by tags such as:
+
+- `<|system|>`: Instructions or setup given to the model (usually hidden from the user).
+- `<|user|>`: Represents what the user says.
+- `<|assistant|>`: Represents the assistant’s responses.
+- `<im_start|>` : the start of an interactive mode where messages will alternate between participants. It’s generally used to transition into the back-and-forth of a conversation.
+- `<im_end|>`
+
+## Tools 
+### Zenbase
+
+Developer tools and cloud infrastructure for perfectionists using LLMs. [Zenbase](https://zenbase.ai) takes care of the hassle of prompt engineering and model selection.
+
+### EvalLM
+Interactive Evaluation of Large Language Model Prompts on User-Defined Criteria
+## Prompt Hacking
+
+### output2prompt
+
+The core idea behind output2prompt is clever in its simplicity. By analyzing patterns in the AI’s responses, another AI can infer the instructions that produced those responses.
+
+
+## My Thoughts
+
+- When you write a prompt think how it process and response by yourself it will give you a idea how your prompt will work and where to improve
+- Provide important thing at start of the prompt
+- Think as it just next word predictor not more then that so think in the way when writing prompt
+- Visulize attention mechnaism on the prompt
+- Tell how to handle negative else it will hallucinate
+- If you using too much example the response will be more genric based on the example so keep that in mind
+- use stop sequence if you want avoid unwanted text
+
+
+
+
+
+
 
 
 Here are 5 papers you want to read to understand better how [OpenAI](https://www.linkedin.com/company/openai/) o1 might work. Focusing on Improving LLM reasoning capabilities for complex tasks via training/RLHF, not prompting. 👀  
