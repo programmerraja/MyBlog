@@ -212,10 +212,46 @@ This paper introduces 26 guiding principles designed to streamline the process o
 
 
 
+## Unsupervised Evaluation of Code LLMs with Round-Trip Correctness
 
+To evaluate large language models of code they introduced a new approach 
 
+ **Round-Trip Correctness (RTC)** method for evaluating code LLMs:
 
+1. **Forward Pass**: The LLM performs a coding task, such as converting code to text or applying edits to code based on natural language instructions.
+  
+2. **Backward Pass**: The LLM is then asked to reverse the task, generating code from the text description or reconstructing the original code before edits.
 
+3. **Semantic Equivalence Check**: The final step involves comparing the original input with the output of the backward pass to ensure they are semantically equivalent. This can be done using:
+   - **Discrete metrics** (e.g., exact match).
+   - **Continuous metrics** (e.g., CodeBLEU, CodeBERTScore).
+   - **Execution-based oracles** (e.g., unit test execution, if available).
+
+## Planning In Natural Language Improves LLM Search For Code Generation
+
+Suggest a  `PLANSEARCH`, a novel search algorithm that explicitly searches for a diverse set of plans, expressed in natural language, before generating code
+
+**How it works**
+
+Imagine a coding problem where the user needs to find the longest increasing subsequence within a given array.
+
+Here's how PLANSEARCH would approach it:
+
+- Prompting for First-Order Observations: PLANSEARCH starts by prompting the LLM with the problem and asking for general observations, not code. This encourages exploration of diverse solution avenues.
+	- Example Prompt: "You are an expert Python programmer. Given the task of finding the longest increasing subsequence within an array, what are some useful observations or hints about this problem? Do not provide any code yet."
+
+	- Possible LLM Observations: * "The order of elements in the subsequence matters." * "We need to keep track of previously encountered elements." * "The longest increasing subsequence might not be unique."
+
+- Deriving Second-Order Observations: PLANSEARCH takes subsets of the first-order observations and feeds them back to the LLM, along with the original problem, to derive deeper insights.
+	- Example Prompt (using a subset of observations from step 1): "You are an expert Python programmer. Here's a problem: find the longest increasing subsequence in an array. Consider these observations: 1) 'The order of elements in the subsequence matters.' 2) 'We need to keep track of previously encountered elements.' Building upon these, can you provide additional, more specific observations relevant to solving this problem? Remember, no code yet."
+	- Possible LLM Observations (O2): * "We could use dynamic programming to store and update the length of the longest increasing subsequence ending at each element." * "Binary search could be used to efficiently find the position to insert a new element while maintaining the increasing order."
+
+- From Observations to Code: PLANSEARCH prompts the LLM to generate a natural language solution, drawing upon the generated observations.
+	- Example Prompt (using observations from steps 1 & 2): "Here's the problem: find the longest increasing subsequence within an array. Here are some helpful observations: [... list of observations from O1 and O2... ] Based on these observations, describe in natural language a strategy to solve this problem. Be clear and specific."
+	- Possible LLM Solution Sketch: "We can iterate through the array, and for each element, use binary search to find the position in the previously computed subsequence where it can be inserted while maintaining the sorted order. We keep track of the longest subsequence length encountered."
+
+- Implementation: The natural language solution is translated to pseudocode and finally into Python.5 This granular approach minimizes errors that might arise from directly generating code from complex observations.
+	- Example: The LLM's solution sketch from step 3 would be translated first into pseudocode and then into functioning Python code.
 
 
 ## Dataset

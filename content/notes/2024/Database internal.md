@@ -137,7 +137,10 @@ Used in distributed shared database where the indexing is in global so when ever
 
 ## Resources
 1. https://medium.com/@hnasr/following-a-database-read-to-the-metal-a187541333c2
-
+2. [Build your own Database Index: part 1](https://dx13.co.uk/articles/2023/12/02/byo-index-pt1/ )
+3. [Database Fundamentals](https://tontinton.com/posts/database-fundementals/)
+4. https://www.geeknarrator.com/blog/social-posts/ten-things-about-your-database
+5. [Advanced Database Systems 2024 ](https://davidgomes.com/advanced-database-systems-part-1/)
 
 
 

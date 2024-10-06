@@ -96,6 +96,7 @@ How to
 - [ ] How to use lets encrypt
 - [ ] how to stream mongodb requesr 
 - [ ] Post about klenty dns
+- [ ] Rabbitmq load test
 
 AI research paper series
 

@@ -409,61 +409,28 @@ Frameworks represent a noteworthy leap in the evolution of machine learning. By 
 
 
 
-### LLM Evaluation Metrics
+###  Finetune
 
-#### Types
+**LoRA**:
+- Introduce two low-rank matrices, A and B, to work alongside the weight matrix W.
+- Adjust these matrices instead of the behemoth W, making updates manageable.
 
-**Intrinsic metrics**: evaluate the model's internal workings, such as perplexity and fluency.
-- **Perplexity**: measures how well the model predicts a test dataset. Lower perplexity indicates better performance.
-- **Fluency**: measures the coherence and naturalness of the generated text.
-- **BLEU (Bilingual Evaluation Understudy) Score**: measures the similarity between the generated text and a reference text.
+**LoRA-FA (Frozen-A):**
+- Takes LoRA a step further by freezing matrix A.
+- Only matrix B is tweaked, reducing the activation memory needed.
 
-**Extrinsic metrics**: evaluate the model's performance on specific tasks, such as question-answering and text classification.
-- **Accuracy**: measures the proportion of correct predictions or answers.
-- **F1 Score**: measures the balance between precision and recall.
-- **ROUGE (Recall-Oriented Understudy for Gisting Evaluation) Score**: measures the quality of generated summaries.
+**VeRA:**
+- All about efficiency: matrices A and B are fixed and shared across all layers.
+- Focuses on tiny, trainable scaling vectors in each layer, making it super memory-friendly.
 
- **Hybrid metrics**: combine intrinsic and extrinsic metrics to provide a more comprehensive evaluation.
- - **METEOR (Metric for Evaluation of Translation with Explicit ORdering) Score**: measures the similarity between generated and reference translations, taking into account the order of the words.
-- GEVAL  
+**Delta-LoRA:**
+- A twist on LoRA: adds the difference (delta) between products of matrices A and B across training steps to the main weight matrix W.
+- Offers a dynamic yet controlled approach to parameter updates.
 
-[G-Eval](https://github.com/nlpyang/geval)
-- using GPT-4 and chain-of-thoughts (CoT) approach to generate detailed evaluation steps for NLG outputs. 
+**LoRA+:**
+- An optimized variant of LoRA where matrix B gets a higher learning rate.
+This tweak leads to faster and more effective learning.
 
-[SelfcheckGPT](https://github.com/potsawee/selfcheckgpt)
-1. **BERTScore**: Compares the generated text with reference samples using BERT embeddings.
-2. **Question-Answering (QA)**: Generates questions from the text and checks consistency in answers.
-3. **N-gram Analysis**: Uses statistical properties of n-grams for consistency checks.
-4. **Natural Language Inference (NLI)**: Uses entailment and contradiction probabilities.
-5. **LLM Prompting**: Queries LLMs directly to check consistency.
-
-[DeepEval, an open-source LLM evaluation framework](https://github.com/confident-ai/deepeval)
-- G-Eval
-- Summarization
-- Answer Relevancy
-- Faithfulness
-- Contextual Recall
-- Contextual Precision
-- RAGAS
-- Hallucination
-- Toxicity
-- Bias
-- etc.
-### LLM-as-Judge
-- Use pairwise comparisons: Instead of asking the LLM to score a single output on a [Likert](https://en.wikipedia.org/wiki/Likert_scale) scale, present it with two options and ask it to select the better one. This tends to lead to more stable results.
-- Control for position bias: The order of options presented can bias the LLM’s decision. To mitigate this, do each pairwise comparison twice, swapping the order of pairs each time. Just be sure to attribute wins to the right option after swapping!
-- Allow for ties: In some cases, both options may be equally good. Thus, allow the LLM to declare a tie so it doesn’t have to arbitrarily pick a winner.
-- Use Chain-of-Thought: Asking the LLM to explain its decision before giving a final answer can increase eval reliability. As a bonus, this lets you to use a weaker but faster LLM and still achieve similar results. Because this part of the pipeline is typically run in batch, the extra latency from CoT isn’t a problem.
-- Control for response length: LLMs tend to bias toward longer responses. To mitigate this, ensure response pairs are similar in length.
-
-
-use YAML because it is less verbose, and hence consumes fewer tokens than JSON. when getting output from LLM
-
-
-https://applied-llms.org/
-
-
-**DeepEval** is an open-source evaluation framework for LLMs. DeepEval makes it extremely easy to build and iterate on LLM (applications) and was built with the following principles in mind:
 
 ## 1 Bit LLM 
  BitNet b1.58 where every weight in a Transformer can be represented as a {-1, 0, 1} instead of a floating point number. 

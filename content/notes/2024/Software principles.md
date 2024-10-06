@@ -28,7 +28,7 @@ Start with a requirement (functional or non-functional), convert it into respon
 TODO
 1. https://khalilstemmler.com/letters/3-steps-to-solve-most-design-problems/
 2. https://khalilstemmler.com/articles/the-phases-of-craftship/code-first/
-
+3. [A collection of learning resources for curious software engineers ](https://github.com/charlax/professional-programming)
 
 
 

@@ -9,7 +9,7 @@ Hey everyone, grab a coffee because I’ve got a funny (and slightly embarrassin
 
 It was a perfectly normal afternoon until *BAM!* Our marketing team burst into our Slack like they’d just seen a ghost: **“The landing page is down!”**
 
-Naturally, I did what any developer does in this situation—internally panicked while pretending to stay calm.
+Naturally, I did what any developer does in this situation internally panicked while pretending to stay calm.
 
 #### **Cue the investigation montage:**  
 

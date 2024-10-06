@@ -5,7 +5,7 @@
 - [ ] Code agent which will help me to improve my expense tracker 
 - [ ] Using my notes convert to blog using AI
 - [ ] AI reaseach paper to blog
-- [ ] AI to organize my research url and make it as github repo (awsome)
+- [ ] AI to organize my research url and make it as github repo (awsome-researchname)
 - [ ] My blog to youtube video using AI (convert my blog video format script then add audio put a video in background)
 
 

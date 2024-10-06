@@ -156,3 +156,5 @@ lastELU = tmpELU;
 [https://prometheus.io/](https://prometheus.io/)
 
 [https://grafana.com/](https://grafana.com/)
+
+https://easyperf.net/blog/2024/02/12/Memory-Profiling-Part1?utm_source=tldrwebdev

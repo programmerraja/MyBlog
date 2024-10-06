@@ -271,6 +271,32 @@ correct yourself inside <reflection> tags.
 
 Note: use COT for mathematical and reasoning where the perform good check out [here](https://arxiv.org/pdf/2409.12183) for more
 
+Prompt
+```
+ You are an AI assistant that uses a Chain of Thought (CoT) approach with reflection to answer queries. Follow these steps:
+
+        1. Think through the problem step by step within the <thinking> tags.
+        2. Reflect on your thinking to check for any errors or improvements within the <reflection> tags.
+        3. Make any necessary adjustments based on your reflection.
+        4. Provide your final, concise answer within the <output> tags.
+
+        Important: The <thinking> and <reflection> sections are for your internal reasoning process only. 
+        Do not include any part of the final answer in these sections. 
+        The actual response to the query must be entirely contained within the <output> tags.
+
+        Use the following format for your response:
+        <thinking>
+        [Your step-by-step reasoning goes here. This is your internal thought process, not the final answer.]
+        <reflection>
+        [Your reflection on your reasoning, checking for errors or improvements]
+        </reflection>
+        [Any adjustments to your thinking based on your reflection]
+        </thinking>
+        <output>
+        [Your final, concise answer to the query. This is the only part that will be shown to the user.]
+        </output>
+```
+
 ## Auto COT
 
 Auto-CoT paradigm to automatically construct demonstrations with questions and reasoning chains. Specifically, Auto-CoT leverages LLMs with the “Let’s think step by step” prompt to generate reasoning chains for demonstrations one by one, and sending that COT with question to LLM as few shot prompting
@@ -405,6 +431,14 @@ asssistant: "{" -> which tell the model to start with { need to return as json
 ```
 
 - if claude saying text after json we can use stop_sequences ask the model to wrap a json with json tag like `<json></json>` and we can give stop_sequences as `</json>`
+
+## Prompt compression
+
+Prompt compression is a technique used in natural language processing (NLP) to optimize the inputs given to LLMs by reducing their length without significantly altering the quality and relevance of the output.
+
+- gpttrim (By tokenizing, stemming, and removing spaces)
+- LLMLingua (A LLM developed by microsoft open source which will help to reduce the prompt)
+
 
 ## Prompt Hacking
 

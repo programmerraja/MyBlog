@@ -69,8 +69,9 @@ checkout [here](https://github.com/nlpyang/geval)
 3. **N-gram Analysis**: Uses statistical properties of n-grams for consistency checks.
 4. **Natural Language Inference (NLI)**: Uses entailment and contradiction probabilities.
 5. **LLM Prompting**: Queries LLMs directly to check consistency.
-https://github.com/EleutherAI/lm-evaluation-harness
-[SelfcheckGPT](https://github.com/potsawee/selfcheckgpt)
+
+
+Check out more [SelfcheckGPT](https://github.com/potsawee/selfcheckgpt)
 
 ## DeepEval
 An open-source LLM evaluation framework that includes:
@@ -234,5 +235,6 @@ Steps
 ## Resources
 - [A Survey on Hallucination in Large Language Models](https://github.com/LuckyyySTA/Awesome-LLM-hallucination?tab=readme-ov-file)
 - [Evaluating the Effectiveness of LLM-Evaluators](https://eugeneyan.com/writing/llm-evaluators/)
+- [A framework for few-shot evaluation of language models. ](https://github.com/EleutherAI/lm-evaluation-harness) 
 
 ---

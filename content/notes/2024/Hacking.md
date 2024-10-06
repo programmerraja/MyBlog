@@ -161,3 +161,7 @@ https://github.com/blacklanternsecurity/bbot?utm_source=tldrinfosec
 
 
 https://fingerprint.com/
+
+
+https://escape.tech/blog/how-we-discovered-over-18-000-api-secret-tokens
+https://github.com/Escape-Technologies/awesome-api-security

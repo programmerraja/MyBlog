@@ -57,7 +57,7 @@ draft = true
 ## Event-Driven Architecture
 
 - An architectural pattern where services communicate through events rather than direct calls.
-
+- https://hookdeck.com/blog/event-driven-architectrure-fundamentals-*pitfalls*
 ## Caching
 
 - **ReadySet**: Real-time SQL caching for Postgres and MySQL that manages everything internally.
