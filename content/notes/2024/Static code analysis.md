@@ -87,6 +87,8 @@ codeql query run custom-query.ql --database=codeql-db
 
 ## Semgrep
 
+Lightweight static analysis for many languages. Find bug variants with patterns that look like source code.
+https://github.com/semgrep/semgrep
 
 
 
@@ -106,3 +108,7 @@ jorens cpg --language <language> --input <path_to_source_code>
 jorens analyze --cpg <path_to_cpg> --rules <path_to_rules>
 ```
 
+
+
+## Resources
+- https://github.com/analysis-tools-dev/static-analysis?tab=readme-ov-file 

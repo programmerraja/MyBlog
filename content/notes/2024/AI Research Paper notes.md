@@ -232,6 +232,7 @@ Here's how PLANSEARCH would approach it:
 	- Example: The LLM's solution sketch from step 3 would be translated first into pseudocode and then into functioning Python code.
 
 
+## LLMS KNOW MORE THAN THEY SHOW: ON THE INTRINSIC REPRESENTATION OF LLM HALLUCINATIONS
 ## Dataset
 
 - HumanEval: Evaluating Large Language Models Trained on Code

@@ -284,7 +284,30 @@ Avoid clickbait or misleading tactics
 Vary in style (e.g. questions, statements, numbers, How-to's)
 ```
 
+```
+I'm a content creator in looking to create engaging weekly recurring content for my social media.
 
+I want you to help me generate 15 ideas for weekly recurring posts in my niche.
+
+Here's a description of my brand for context:
+
+[BRAND DESCRIPTION]
+
+My target audience is [DESCRIBE YOUR IDEAL FOLLOWER].
+
+I want to create content that provides value, entertains, and keeps my audience coming back for more each week.
+
+Include:
+
+A catchy name for the recurring series (bonus points for alliteration or wordplay)
+A brief description of the content format
+Why this type of post would be valuable or entertaining for my audience
+An example of what the post might look like
+
+For inspiration, here's an example of a great weekly recurring post:
+
+"Weekly Product Spotlight: Every Monday, highlight 4 exciting new product launches in the consumer tech space. This keeps the audience informed about the latest innovations and generates discussion about new gadgets."
+```
 
 # AI Text Wizard prompt
 

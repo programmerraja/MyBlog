@@ -29,7 +29,7 @@
 	- [ ] Can i use any design pattern
 	- [ ] Alwasys create a wrapper when using thirdparty such that it easy to swap
 
-- [ ] How make our website to hello world  
+- [x] How make our website to hello world  
 
 ```
 Hi, I'm an infra developer. My daily work involves fixing or investigating issues at the infrastructure level. I plan to write about these investigations in a blog series with a Sherlock Holmes detective theme. I need your help to write these blogs. I'll share the story, and you convert it into a perfect detective-themed blog. The blog should include:
@@ -79,8 +79,11 @@ Sherlock Holmes
 - [x] logstash shotdown on update
 - [x] Heroku app not found nginx host header
 - [x] Health enpoint (app is down when we deploy user is complice user are seeing)
-- [ ] How connect sid fill the redis on ddos and cleared using saveUninitialized and connect flash
+- [x] How connect sid fill the redis on ddos and cleared using saveUninitialized and connect flash
 - [ ] Econnreset
+- [ ] HOw nodejs update 18 restart the pod unhabled rejection
+- [ ] Links server slow nginx multiple ssl
+- [ ] debug ecconreset
 
 
 System design docs
@@ -94,7 +97,7 @@ How to
 - [ ] How to use wireshark
 - [ ] How to use zap scan
 - [ ] How to use lets encrypt
-- [ ] how to stream mongodb requesr 
+- [ ] how to stream mongodb request 
 - [ ] Post about klenty dns
 - [ ] Rabbitmq load test
 
@@ -111,6 +114,10 @@ Unsolved mysteries
 
 A series of internal wokring
 - [ ] Mongodb
+
+
+How i solve X problem
+- [ ] POd to pod communication
 - [ ] 
 
 Funny story
@@ -248,3 +255,201 @@ _**5. Conclusion (about 300 words long)**_
 
 
 what are the core concpets discussed and what they teaching explain all thing discussed in the video such that i can learn all things
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+|     |
+| --- |
+|     |
+Compromised Server
+Performing attacks possibly on our honeypot network. (Email Spam, Automated Signups, Comment and Forum spamming, Login Attempts).
+
+```
+{
+    "status": "ok",
+    "178.20.45.182": {
+        "asn": "AS48282",
+        "range": "178.20.45.0/23",
+        "hostname": "host-178-20-45-182.hosted-by-vdsina.ru",
+        "provider": "Hosting technology LTD",
+        "organisation": "Hosting technology LTD",
+        "continent": "Europe",
+        "continentcode": "EU",
+        "country": "Russia",
+        "isocode": "RU",
+        "region": "Moscow",
+        "regioncode": "MOW",
+        "timezone": "Europe/Moscow",
+        "city": "Moscow",
+        "latitude": 55.7558,
+        "longitude": 37.6173,
+        "currency": {
+            "code": "RUB",
+            "name": "Ruble",
+            "symbol": "RUB"
+        },
+        "proxy": "yes",
+        "type": "Compromised Server"
+    }
+}
+```
+
+- https://www.blackhatworld.com/seo/bot-attack-flooding-my-website-with-requests-need-advice.1639835/ 
+- https://hosting.kitchen/vdsina/ddos-ataka-cherez-socialnuyu-inzheneriyu.html
+- https://proxycheck.io/api/
+
+https://studentalcare.com/?hal=visitor
+
+
+
+
+```
+curl 'https://app-prod.5050cricket.co.in/v1/users/66a0d32ef773a0502d63038e/points' \
+
+-H 'accept: */*' \
+
+-H 'accept-language: en-US,en;q=0.9,ta-IN;q=0.8,ta;q=0.7' \
+
+-H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NzBiYTE2MTVhNmVhYzkyODg5MzAyNDUiLCJpYXQiOjE3Mjg4MTcyOTMsImV4cCI6MTcyODgxOTA5MywidHlwZSI6ImFjY2VzcyJ9.522521oX80yaCD-cTIj9UFxo6hDF1ZA8GYr5VvhCj8c' \
+
+-H 'cache-control: no-cache' \
+
+-H 'content-type: application/json' \
+
+-H 'dnt: 1' \
+
+-H 'origin: https://5050cricket.co.in' \
+
+-H 'pragma: no-cache' \
+
+-H 'priority: u=1, i' \
+
+-H 'referer: https://5050cricket.co.in/' \
+
+-H 'sec-fetch-dest: empty' \
+
+-H 'sec-fetch-mode: cors' \
+
+-H 'sec-fetch-site: same-site' \
+
+-H 'user-agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1'
+
+```
+
+
+```
+
+curl 'https://app-prod.5050cricket.co.in/v1/auth/register' \
+  -H 'accept: */*' \
+  -H 'accept-language: en-US,en;q=0.9,ta-IN;q=0.8,ta;q=0.7' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'dnt: 1' \
+  -H 'origin: https://5050cricket.co.in' \
+  -H 'pragma: no-cache' \
+  -H 'priority: u=1, i' \
+  -H 'referer: https://5050cricket.co.in/' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-site' \
+  -H 'user-agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1' \
+  --data-raw '{"name":"boopathi","mobileNumber":"8072638765"}' ;
+
+curl 'https://app-prod.5050cricket.co.in/v1/auth/verify-otp' \
+  -H 'accept: */*' \
+  -H 'accept-language: en-US,en;q=0.9,ta-IN;q=0.8,ta;q=0.7' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'dnt: 1' \
+  -H 'origin: https://5050cricket.co.in' \
+  -H 'pragma: no-cache' \
+  -H 'priority: u=1, i' \
+  -H 'referer: https://5050cricket.co.in/' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-site' \
+  -H 'user-agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1' \
+  --data-raw '{"otp":"1180","mobileNumber":"8072638765"}' ;
+
+
+curl 'https://app-prod.5050cricket.co.in/v1/users/leaderboard' \
+  -H 'accept: */*' \
+  -H 'accept-language: en-US,en;q=0.9,ta-IN;q=0.8,ta;q=0.7' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'dnt: 1' \
+  -H 'origin: https://5050cricket.co.in' \
+  -H 'pragma: no-cache' \
+  -H 'priority: u=1, i' \
+  -H 'referer: https://5050cricket.co.in/' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-site' \
+  -H 'user-agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1' ;
+curl 'https://app-prod.5050cricket.co.in/v1/users/670ba1615a6eac9288930245/points' \
+  -H 'accept: */*' \
+  -H 'accept-language: en-US,en;q=0.9,ta-IN;q=0.8,ta;q=0.7' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NzBiYTE2MTVhNmVhYzkyODg5MzAyNDUiLCJpYXQiOjE3Mjg4MTcyOTMsImV4cCI6MTcyODgxOTA5MywidHlwZSI6ImFjY2VzcyJ9.522521oX80yaCD-cTIj9UFxo6hDF1ZA8GYr5VvhCj8c' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'dnt: 1' \
+  -H 'origin: https://5050cricket.co.in' \
+  -H 'pragma: no-cache' \
+  -H 'priority: u=1, i' \
+  -H 'referer: https://5050cricket.co.in/' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-site' \
+  -H 'user-agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1' ;
+
+
+curl 'https://app-prod.5050cricket.co.in/v1/users/670ba1615a6eac9288930245/activate-code' \
+  -H 'accept: */*' \
+  -H 'accept-language: en-US,en;q=0.9,ta-IN;q=0.8,ta;q=0.7' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NzBiYTE2MTVhNmVhYzkyODg5MzAyNDUiLCJpYXQiOjE3Mjg4MTcyOTMsImV4cCI6MTcyODgxOTA5MywidHlwZSI6ImFjY2VzcyJ9.522521oX80yaCD-cTIj9UFxo6hDF1ZA8GYr5VvhCj8c' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'dnt: 1' \
+  -H 'origin: https://5050cricket.co.in' \
+  -H 'pragma: no-cache' \
+  -H 'priority: u=1, i' \
+  -H 'referer: https://5050cricket.co.in/' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-site' \
+  -H 'user-agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1' \
+  --data-raw '{"activationS3Url":"https://d21hptw77rmcdp.cloudfront.net/activation-code/uploaded-images/1728817892947.jpeg","meta_data":{"os":"iOS","browser":"Mobile Safari","lat":"0.00000","lng":"0.00000"},"ref_id":"britaca05429-43e7-4405-8ab2-261c04b6191d","type":"third_party"}'
+```
+
+
+
+```
+
+Hey everyone! 🌟
+
+I hope you’re all doing well! I wanted to reach out and ask for your feedback on my blog series. I’ve been working on two main themes:
+
+1. Sherlock Holmes Detective Series - where I share my debugging stories and how I solved various tech problems.
+
+You can check out here 
+https://dev.to/programmerraja/sherlock-holmes-the-case-of-the-content-length-mismatch-4i2b
+
+2. Code Against the Clock - focusing on how I automate the boring stuff using coding.
+
+you can check our here https://dev.to/programmerraja/automate-relax-repeat-the-power-of-coding-1-1egh
+
+I’m really passionate about these topics, but I’m not getting as much audience interaction as I’d hoped. If you have a moment, I’d love your thoughts on what you think could improve or what you’d like to see more of! Any suggestions are welcome, and I truly appreciate your support!
+
+Thanks so much! 🙏
+```

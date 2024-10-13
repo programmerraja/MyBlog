@@ -1219,3 +1219,52 @@ to get the deployment file that match the selector
 
 network namespace are stored in /var/run/nets
 
+
+
+## Resources Mangement
+
+The lifecycle of resource management in Kubernetes begins with defining resource requests and limits in the pod specification, which are then subjected to admission control checks by the API server to ensure adherence to resource quotas and limit ranges set by cluster administrators. Next, the Kubernetes scheduler evaluates node resources and schedules the pod to a suitable node based on its resource requests, ensuring it has sufficient allocatable resources. Finally, the kubelet on the designated node enforces resource requests and limits using Linux cgroups, controlling CPU and memory allocation, and potentially evicting pods if resource contention occurs.
+
+While Kubernetes effectively manages resources like CPU and memory, other resources like open file descriptors, TCP connections, and process IDs (PIDs) are not directly managed by Kubernetes
+
+- Allocating more is bad it will use other who required may not get the required resources
+- vertical pod auto scaller
+
+https://karpenter.sh/
+https://github.com/kubernetes/autoscaler
+https://stormforge.io/pricing/
+
+
+In Kubernetes, QoS classes help manage resources and ensure predictable application behavior. These classes provide a way to isolate, prioritize, and apply resource quotas to different workloads within a cluster.
+There are three main QoS classes in Kubernetes:
+
+1.Guaranteed: This class offers the highest level of resource assurance. Pods in this class have their CPU and memory requests equal to their limits. Kubernetes guarantees these pods will receive the requested resources.35
+
+2.Burstable: Pods in this class have their CPU and memory requests lower than their limits. These pods are guaranteed to receive the resources specified in their requests but can burst up to their limits if resources are available.35
+
+3.BestEffort: Pods in this class do not specify any resource requests or limits. They run with the lowest priority and utilize leftover resources.
+
+
+node reserver some cpu for himslef
+
+
+- **1 CPU** = 1 core.
+- **1 CPU** = **1,000,000 micro-CPUs (μCPU)**.
+
+
+- `1` CPU means 1 whole CPU core.
+- `500m` CPU means 0.5 of a CPU core (500 millicores).
+
+- restart policy 
+- when pod uses more memory we allocated it will will killed but for cpu it will throtled
+
+we have  a node with 8Gb two pod with 3Gb and 2Gb using but we set request as 3 for both if new pod we put 3GB kube dont allocate eventhough it is free because it look for unscheduled memory
+
+now if we put 6Gi and 6G for both request resour pod it will allow becuase it will look for request size 
+
+- How pod killed when memory fulled?
+
+
+if ten containers are set to use one CPU each (--cpus=1) on a machine with only one CPU, they will all share that single CPU. None of the containers are guaranteed a full CPU. They each get a share of it.
+
+Similarly, setting a memory limit doesn't reserve a specific amount of memory. Instead, it acts as a cap, preventing the container from exceeding the defined limit.

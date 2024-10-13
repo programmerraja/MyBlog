@@ -150,4 +150,4 @@ https://security.googleblog.com/2022/05/privileged-pod-escalations-in.html
 
 ## Resources
 - https://www.armosec.io/blog/
-- 
+- https://cloud.hacktricks.xyz/pentesting-cloud/kubernetes-security

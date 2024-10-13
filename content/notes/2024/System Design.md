@@ -130,3 +130,7 @@ kafa
 
 
 https://blog.bytebytego.com/p/how-do-we-design-for-high-availability
+
+
+ Never fail a system design interview again. A collection of [Quiz](https://www.swequiz.com/)
+ 

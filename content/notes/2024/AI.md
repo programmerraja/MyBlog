@@ -399,6 +399,22 @@ This tweak leads to faster and more effective learning.
  - [LLORA  for finetuning](https://lightning.ai/lightning-ai/studios/code-lora-from-scratch)
 - [Fine tune LLMs 2024](https://www.philschmid.de/fine-tune-llms-in-2024-with-trl)
 
+## Model Merging
+
+Model merging is an efficient alternative to fine-tuning that leverages the work of the open-source community. It involves combining the weights of different fine-tuned models to create a new model with enhanced capabilities. This technique has proven highly effective, as demonstrated by the dominance of merged models in performance benchmarks.
+
+#### Merging Techniques
+
+- **SLURP (Spherical Linear Interpolation):** Interpolates the weights of two models using spherical linear interpolation. Different interpolation factors can be applied to various layers, allowing for fine-grained control.
+- **Decomposed Redundancy Addition (DeRA):** Reduces redundancy in model parameters through pruning and rescaling of weights. This technique allows merging multiple models simultaneously.
+- **Pass-Through:** Concatenates layers from different LLMs, including the possibility of concatenating layers from the same model (self-merging).
+- **Mixture of Experts (MoE):** Combines feed-forward network layers from different fine-tuned models, using a router to select the appropriate layer for each token and layer. This technique can be implemented without fine-tuning by initializing the router using embeddings calculated from positive prompts.
+
+**Advantages of Model Merging:**
+- No GPU requirement, making it highly efficient.
+- Ability to leverage existing fine-tuned models from the open-source community.
+- Proven effectiveness in producing high-quality models.
+
 ## 1 Bit LLM 
  BitNet b1.58 where every weight in a Transformer can be represented as a {-1, 0, 1} instead of a floating point number. 
 

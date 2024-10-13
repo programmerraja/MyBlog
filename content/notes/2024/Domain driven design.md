@@ -172,4 +172,6 @@ resources
 
 How Soundcloud moved from BFF to DDD 
 - https://developers.soundcloud.com/blog/service-architecture-1
-- 
+
+
+https://medium.com/navalia/the-most-common-domain-driven-design-mistake-6c3f90e0ec2b

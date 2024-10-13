@@ -165,3 +165,35 @@ https://fingerprint.com/
 
 https://escape.tech/blog/how-we-discovered-over-18-000-api-secret-tokens
 https://github.com/Escape-Technologies/awesome-api-security
+
+
+
+## Ip Spoofing
+
+Here's how to check if a hosting provider is vulnerable to an attack where someone spoofs an IP address to generate abuse reports:
+
+- **Use two servers**: You'll need one server to receive traffic and another to send it.
+- **Start logging incoming traffic**: On the receiving server, run the following command, replacing "9912" with a rarely used port number: `tcpdump -i any port 9912`
+- **Generate a packet with a spoofed IP address**: On the other server, use the `nping` command to send a packet with a spoofed source IP address to the receiving server's port that you chose in the previous step. Use the following command, replacing "1.1.1.1" with the spoofed IP address, "9912" with your chosen port, and "receiver-server.com" with the receiving server's address: `nping --tcp -p 9912 -S 1.1.1.1 receiver-server.com`
+- **Check the receiving server's logs**: If you see a packet from the spoofed IP address (1.1.1.1 in the example command) in the receiving server's logs, your hosting provider allows IP address spoofing.
+
+**Why This Matters:** If a hosting provider allows IP address spoofing, attackers can launch denial-of-service attacks that trigger automatic abuse reports. These reports will appear to come from your server, even though you aren't responsible for the malicious traffic.
+
+Let me know if you need more information about this type of attack or how to protect against it.
+
+
+
+
+
+## Email vulenrablity
+### HTML Emails
+- Attackers craft an HTML email with specific CSS rules that target the structural changes introduced when an email is forwarded.
+- These CSS rules dictate that certain elements, referred to as "kobold letters", remain hidden in the original email but become visible only after forwarding.
+- When the recipient forwards the email, the DOM structure changes, triggering the CSS rules and revealing the hidden content, such as a phishing request.
+- The original sender of the forwarded email remains unaware of the change in content.
+**Examples in Different Email Clients:**
+
+- **Thunderbird:** This email client wraps emails in a specific `<div>` tag, allowing attackers to exploit predictable DOM changes upon forwarding.
+- **Outlook on the web (OWA):** While OWA modifies email content and CSS to prevent styling conflicts, attackers can still exploit predictable changes in the DOM structure after forwarding.
+- **Gmail:** Although Gmail strips styling when forwarding emails, attackers can still exploit this by hiding content in the original email, which becomes visible after forwarding due to the removal of CSS.
+Source [here](https://lutrasecurity.com/en/articles/kobold-letters/?utm_source=tldrinfosec)

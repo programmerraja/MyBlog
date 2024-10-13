@@ -9,3 +9,7 @@ tags =[]
 Hidden class- >https://blog.frontend-almanac.com/js-object-structure
 https://mathiasbynens.be/notes/shapes-ics
 https://medium.com/@bmeurer/surprising-polymorphism-in-react-applications-63015b50abc
+
+https://blog.frontend-almanac.com/js-object-structure
+
+https://mathiasbynens.be/notes/shapes-ics

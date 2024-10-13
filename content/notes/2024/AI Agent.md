@@ -10,13 +10,12 @@ Flexible and powerful framework for managing multiple AI agents and handling com
 
 
 
-### RAG
+## RAG
 
-## Retrevial types
+### Retrevial types
 
-Rank GPT
+	Rank GPT
 - instead of just querying in vector and sending to LLM after querying ask LLM can you rank the doc that fetched from vecotr db based relvant to the query and again send to LLM with re ranked doc
-
 
 Multi query retrieval 
 - Send the user query to LLM and ask can you suggest revelant query to this query get that and use that query to get from db
@@ -45,12 +44,28 @@ How it works
 
 Corrective Retrieval Augmented Generation.The strategy we followed for this let’s say for each topic, we consult the book and identify relevant sections. Before forming an opinion, categorize the gathered information into three groups: `**Correct**`, `**Incorrect**`, and `**Ambiguous**`. Process each type of information separately. Then, based on this processed information, compile and summarize it mentally
 
+**How it works**
+- **Retrieval Evaluator:** A lightweight model assesses the relevance of retrieved documents to the input query, assigning a confidence score to each document. This evaluator is fine-tuned on datasets with relevance signals, allowing it to distinguish relevant documents from irrelevant ones, even if they share surface-level similarities with the query.
+- **Action Trigger:** Based on the confidence scores, CRAG triggers one of three actions:
+    - **Correct:** If at least one document has a high confidence score, CRAG assumes the retrieval is correct and refines the retrieved documents to extract the most relevant knowledge strips.
+        - **Example:** If the query is "What is Henry Feilden's occupation?" and a retrieved document mentions Henry Feilden's political affiliation, CRAG would identify this as relevant and refine the document to focus on the information about his occupation.
+    - **Incorrect:** If all documents have low confidence scores, CRAG assumes the retrieval is incorrect and resorts to web search for additional knowledge sources.
+        - **Example:** If the query is "Who was the screenwriter for Death of a Batman?" and the retrieved documents do not contain the correct information, CRAG would initiate a web search using keywords like "Death of a Batman, screenwriter, Wikipedia" to find more reliable sources.
+    - **Ambiguous:** If the confidence scores are neither high nor low, CRAG combines both refined retrieved knowledge and web search results.
+- **Knowledge Refinement:** For relevant documents, CRAG employs a decompose-then-recompose approach:
+    - It breaks documents into smaller knowledge strips, filters out irrelevant strips based on their relevance scores, and then recomposes the remaining relevant strips into a concise knowledge representation.
+- **Web Search:** When the initial retrieval fails, CRAG utilizes web search to find complementary information.
+    - It rewrites the input query into keyword-based search queries and prioritizes results from authoritative sources like Wikipedia to mitigate the risk of biases and unreliable information from the open web.
+    - The retrieved web content is then refined using the same knowledge refinement method.
+
+Check out implementation from langchain [here](https://langchain-ai.github.io/langgraph/tutorials/rag/langgraph_crag/#use-the-graph)
 ### Contextual Retrieval
 
 Contextual Retrieval is a technique that enhances the accuracy of retrieving relevant information from a knowledge base, especially when used in Retrieval-Augmented Generation (RAG) systems. It addresses the limitations of traditional RAG, which often disregards context, by adding relevant context to the individual chunks of information before they are embedded and indexed. This process significantly improves the system's ability to locate the most pertinent information.
 
 - This technique applies the BM25 ranking function, which relies on lexical matching for finding specific terms or phrases, to the contextualized chunks.
 - Contextual Retrieval leverages AI models like Claude to generate the contextual text for each chunk
+- It required more window context model and space
 
 
 ## Retrieval Interleaved Generation (RIG)
@@ -67,6 +82,18 @@ A technique devloped by google that enhances the factual accuracy of large langu
 
 4. **Providing a Verified Answer**: The LLM uses the retrieved data to give a reliable, data-backed answer, reducing the risk of hallucinations and improving the trustworthiness of its output.
 
+### Late Chunking
+- Let say we have doc as `Berin is captial of germany it is more then 3M population` if we chunk as `Berin is captial of germany` and `it is more then 3M population` in second chunk we loose the context to avoid that 
+- We first applies the transformer layer of the embedding model to _the entire text_ or as much of it as possible. This generates a sequence of vector representations for each token that encompasses textual information from the entire text. Subsequently, mean pooling is applied to each chunk of this sequence of token vectors, yielding embeddings for each chunk that consider the entire text's contex
+- It required large context window model 
+
+`The process of converting a sequence of embeddings into a sentence embedding is called pooling`
+
+Mean pooling in Natural Language Processing (NLP) is a technique used to create a fixed-size vector representation from a variable-length input sequence, such as a sentence or document. It works by averaging the vectors of all tokens (words or subwords) in the sequence
+
+1. **Tokenization**: The input text is split into tokens (words, subwords, or characters).
+2. **Embedding**: Each token is mapped to a corresponding vector using an embedding layer (e.g., pre-trained embeddings like Word2Vec, GloVe, or BERT embeddings).
+3. **Mean Pooling**: The vectors of all the tokens in the sequence are averaged to produce a single vector. This can be done by summing the vectors and then dividing by the total number of tokens.
 ### Resources
 
 **Frameworks and Toolkits for RAG (Retrieval-Augmented Generation)**:
@@ -125,3 +152,8 @@ Tools
 - [dify](https://github.com/langgenius/dify) 
 - https://mindpal.space/
 
+
+
+Agent flow
+- graph based 
+- event based

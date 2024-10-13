@@ -33,3 +33,6 @@ IDEAS
 https://github.com/devidw/obsidian-to-hugo
 
 
+personal branding 
+- Making my website more interactive 
+
