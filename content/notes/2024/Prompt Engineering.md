@@ -474,22 +474,27 @@ In essence, the LLM cascade makes a request to the smallest model first, evaluat
 
 ## CO-STAR framework
 
-#### **(C) Context: Provide background information on the task**
+ **(C) Context: Provide background information on the task**
 
 This helps the LLM understand the specific scenario being discussed, ensuring its response is relevant.
-#### **(O) Objective: Define what the task is that you want the LLM to perform**
+
+ **(O) Objective: Define what the task is that you want the LLM to perform**
 
 Being clear about your objective helps the LLM to focus its response on meeting that specific goal.
-#### **(S) Style: Specify the writing style you want the LLM to use**
+
+ **(S) Style: Specify the writing style you want the LLM to use**
 
 This could be a particular famous person's style of writing, or a particular expert in a profession, like a business analyst expert or CEO. This **g**uides the LLM to respond with the manner and choice of words aligned with your needs.
-#### **(T) Tone: Set the attitude of the response**
+
+**(T) Tone: Set the attitude of the response**
 
 This ensures the LLM's response resonates with the intended sentiment or emotional context required. Examples are formal, humorous, empathetic, among others.
-#### **(A) Audience: Identify who the response is intended for**
+
+ **(A) Audience: Identify who the response is intended for**
 
 Tailoring the LLM's response to an audience, such as experts in a field, beginners, children, and so on, ensures that it is appropriate and understandable in your required context.
-#### **(R) Response: Provide the response format**
+
+**(R) Response: Provide the response format**
 
 This ensures that the LLM outputs in the exact format that you require for downstream tasks. Examples include a list, a JSON, a professional report, and so on. For most LLM applications which work on the LLM responses programmatically for downstream manipulations, a JSON output format would be ideal.
 

@@ -110,5 +110,7 @@ jorens analyze --cpg <path_to_cpg> --rules <path_to_rules>
 
 
 
+## espree
+
 ## Resources
 - https://github.com/analysis-tools-dev/static-analysis?tab=readme-ov-file 

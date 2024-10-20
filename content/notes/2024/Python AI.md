@@ -5,9 +5,6 @@ draft = true
 tags =[]
 +++ 
 
-## LLM Output parser
-- https://github.com/jxnl/instructor 
-- https://github.com/outlines-dev/outlines
 
 
 

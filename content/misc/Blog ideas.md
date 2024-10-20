@@ -83,7 +83,7 @@ Sherlock Holmes
 - [ ] Econnreset
 - [ ] HOw nodejs update 18 restart the pod unhabled rejection
 - [ ] Links server slow nginx multiple ssl
-- [ ] debug ecconreset
+- [ ] debug ecconreset 15sec to update
 
 
 System design docs
@@ -119,6 +119,13 @@ A series of internal wokring
 How i solve X problem
 - [ ] POd to pod communication
 - [ ] 
+
+Generative AI series of what i know
+- [ ] https://ullyer.medium.com/outlines-make-llm-structured-outputs-controllable-and-improve-the-stability-of-llm-applications-584ae9db3789 
+- [ ] How to get structure output
+- [ ] EVAl and Observation
+
+Build AI that will convery my notes to blog
 
 Funny story
 - [x]  Hello world
@@ -249,7 +256,32 @@ _**5. Conclusion (about 300 words long)**_
 **Response**: Provide the summary in a structured paragraph format, clearly separated into sections for methods, findings, and conclusions. If necessary, include short bullet points to emphasize important details.
 
 
+## 1 3 1 technique
 
+
+1. Start with one declarative sentence
+    
+2. Follow it with three sentences that explain or build on the idea.
+    
+3. End with another declarative sentence that wraps it up neatly.
+
+Prompt
+```
+Write a short post about {insert your topic}.
+
+Use an opinionated, casual, and informative tone.
+
+Follow this template:
+
+<TEMPLATE>
+# Subhead
+[1 declarative sentence.]
+2 line feeds.
+[3 sentences of explanation.]
+2 line feeds.
+[1 declarative sentence.]
+</TEMPLATE>
+```
 
 
 
@@ -453,3 +485,33 @@ I’m really passionate about these topics, but I’m not getting as much audien
 
 Thanks so much! 🙏
 ```
+
+
+
+
+
+
+
+
+
+https://reward-box.com/rc_ps_otp_sms_1/
+
+
+
+The URL you shared appears to be a tracking or affiliate link, commonly used in digital marketing campaigns to monitor clicks and conversions. Here's a breakdown of the URL structure:
+
+- **`https://trkr.1kx.in`**: This is the domain of the tracking service, likely set up by a company or an affiliate network to track user behavior.
+  
+- **`/click?campaign_id=156&pub_id=7220&url_id=109&source=DRSPS1&p3=1234567890`**:
+   - **`campaign_id=156`**: Identifies the specific campaign being tracked.
+   - **`pub_id=7220`**: Likely the publisher or affiliate ID, showing who is promoting the campaign.
+   - **`url_id=109`**: Identifies the specific URL or landing page.
+   - **`source=DRSPS1`**: Could indicate the traffic source or ad placement.
+   - **`p3=1234567890`**: Additional tracking parameter, possibly used to track specific users or devices.
+
+When you click on such links, your interaction is logged by the tracking service to attribute clicks, views, or conversions to a particular source or campaign. This is typical in affiliate marketing, where affiliates earn commissions based on user actions.
+
+Let me know if you need help with something more specific about the URL!
+
+
+Pyhton server ->https://trinket.io/embed/python3/a5bd54189b

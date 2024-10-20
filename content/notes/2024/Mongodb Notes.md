@@ -188,6 +188,8 @@ col.aggregate([{$indexStats: {}}])
     }
 }
 ```
+
+NOTE: maximum number of indexes per collection (64).
 ## Query Plans
 
 For any given query, the MongoDB query planner chooses and caches the most efficient query plan given the available indexes. To evaluate the efficiency of query plans, the query planner runs all candidate plans during a trial period. In general, the winning plan is the query plan that produces the most results during the trial period while performing the least amount of work.

@@ -9,5 +9,13 @@ tags =[]
 - https://api.together.xyz/signin
 - The fastest and most efficient inference engine to build production-ready, compound AI systems. https://fireworks.ai/pricing
 
+https://llm.extractum.io/
 
 **inference** is the application phase of the model, where it's used to make predictions or generate content, as opposed to the **training phase**, where the model learns from large datasets.
+
+
+- https://www.baseten.co/
+
+
+
+https://docs.cloud.ploomber.io/en/latest/apps/docker.html

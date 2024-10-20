@@ -1208,6 +1208,8 @@ Need to study
 5. **[cdk8s](https://cdk8s.io/)** is an open-source software development framework for defining Kubernetes applications and reusable abstractions using familiar programming languages and rich object-oriented APIs 
 6. Inspect all internal and external cluster communications, API transactions, and data in transit with cluster-wide monitoring of all traffic going in, out, and across containers, pods, namespaces, nodes, and clusters. https://www.kubeshark.co/ 
 7. A simple [mitmproxy](https://github.com/ofirc/k8s-sniff-https?tab=readme-ov-file) blueprint to intercept HTTPS traffic from app running on Kubernetes 
+8. [Always Encrypted Kubernetes](https://github.com/edgelesssys/constellation ) 
+9. 
 
 
 

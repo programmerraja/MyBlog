@@ -14,7 +14,7 @@ Flexible and powerful framework for managing multiple AI agents and handling com
 
 ### Retrevial types
 
-	Rank GPT
+Rank GPT
 - instead of just querying in vector and sending to LLM after querying ask LLM can you rank the doc that fetched from vecotr db based relvant to the query and again send to LLM with re ranked doc
 
 Multi query retrieval 
@@ -83,6 +83,7 @@ A technique devloped by google that enhances the factual accuracy of large langu
 4. **Providing a Verified Answer**: The LLM uses the retrieved data to give a reliable, data-backed answer, reducing the risk of hallucinations and improving the trustworthiness of its output.
 
 ### Late Chunking
+
 - Let say we have doc as `Berin is captial of germany it is more then 3M population` if we chunk as `Berin is captial of germany` and `it is more then 3M population` in second chunk we loose the context to avoid that 
 - We first applies the transformer layer of the embedding model to _the entire text_ or as much of it as possible. This generates a sequence of vector representations for each token that encompasses textual information from the entire text. Subsequently, mean pooling is applied to each chunk of this sequence of token vectors, yielding embeddings for each chunk that consider the entire text's contex
 - It required large context window model 
@@ -101,9 +102,6 @@ Mean pooling in Natural Language Processing (NLP) is a technique used to create 
 2. **[FlashRAG](https://github.com/ruc-nlpir/flashrag)**: A Python toolkit for efficient RAG research, designed to support retrieval-augmented generation use cases.
 3. **[RAGFlow](https://ragflow.io/)**: An open-source RAG engine focusing on deep document understanding for more advanced RAG applications.
 
-**Evaluation and Experimentation for LLMs**:
-1. **[Trulens](https://github.com/truera/trulens)**: A tool for evaluating and tracking LLM experiments. Useful for monitoring and analyzing the performance of your RAG or LLM models.
-
 **Courses and Learning Resources**:
 1. **[Introduction to RAG by Ben](https://parlance-labs.com/education/rag/ben.html)**: Educational material to help understand the fundamentals and implementation of Retrieval-Augmented Generation (RAG).
 2. **[LLM Twin Course](https://github.com/decodingml/llm-twin-course)**: A course focused on using twin architectures for RAG-based research and projects.
@@ -116,6 +114,10 @@ Mean pooling in Natural Language Processing (NLP) is a technique used to create 
 ---
 
 This structure groups similar resources together and will help streamline your workflow when referencing frameworks, tools, or educational content for RAG-based development.
+
+## Generative Representational Instruction Tuning
+
+
 ## Micro Agent
 
 The idea of a micro agent is to

@@ -1,69 +1,17 @@
-{{ $avatar_img := .Site.Params.author.avatar }} {{ $avatar_img_alt :=
-.Site.Params.author.name }} {{ $image := resources.Get $avatar_img }}
-<div class="author">
-    {{ with $image }} {{ $image := $image.Fill "100x100 webp" }}
-    <img
-        class="author-avatar"
-        src="{{ $image.RelPermalink }}"
-        alt="{{ $avatar_img_alt }}"
-        width="{{ .Width }}"
-        height="{{ .Height }}"
-    />
-    {{ end }}
-    <h2 class="author-name">{{ .Site.Params.author.intro }}</h2>
-    <p class="author-bio">{{ .Site.Params.author.description }}</p>
-</div>
-{{/*
-<div class="about-container">
-    <h3>About Me</h3>
-    <p>
-        Hi there! I’m a software developer with a couple of years under my belt,
-        diving deep into the world of the
-        <span>MERN stack</span> and infrastructure tech. I’m pretty comfortable
-        with tools like <span>Docker</span>, <span>Kubernetes</span>,
-        <span>Elasticsearch</span>, <span>Meilisearch</span>, and
-        <span>Nginx</span>, and I love putting these skills to use in exciting
-        projects.
-    </p>
-    <p>
-        When I’m not coding, you’ll find me
-        <span>blogging</span> about my tech adventures and sharing what I’ve
-        learned with others. I spend my weekends exploring new tech trends and
-        working on my personal knowledge base using <span>Obsidian</span>, which
-        I’ve set up on
-        <a href="https://github.io" target="_blank">GitHub Pages</a> as my
-        digital second brain.
-    </p>
-    <p>
-        I’m always eager to learn and build new things, and I’m excited by the
-        endless possibilities in the tech world. If you’re into tech or just
-        want to chat about the latest in the field, feel free to
-        <a href="mailto:your-email@example.com">get in touch</a>!
-    </p>
-</div>
-<div class="skills">
-    <div class="skills-container">
-        <h3>My Skills</h3>
-        <div class="skills-list">
-            <div class="skill-item">HTML</div>
-            <div class="skill-item">CSS</div>
-            <div class="skill-item">JavaScript</div>
-            <div class="skill-item">React</div>
-            <div class="skill-item">Node.js</div>
-            <div class="skill-item">MongoDB</div>
-            <div class="skill-item">Docker</div>
-            <div class="skill-item">Kubernetes</div>
-            <div class="skill-item">Nginx</div>
-            <div class="skill-item">Elasticsearch</div>
-            <div class="skill-item">Meilisearch</div>
+<div class="top__banner">
+		
+    <div class="profile__img">
+        <img src="./images/hero.jpg"  class="profile__img">
+    </div>
+    <div class="myname__container">
+
+        <div class="myname">
+            <h1>Hi <img class="emoji" alt="wave" src="./images/emoji.png"> I'm <span class="name ">K.Boopathi</span></h1>
+            <small  style="color:#fec938">&ltMERN Stack Developer/&gt</small>
         </div>
+        <div class="text__container">
+            <p >Programmer with curious to learn different technology and develop cool product from that </p>
+        </div>
+        
     </div>
 </div>
-<div>
-    <h3>My Second Brain:</h3>
-</div>
-*/}} {{/* Hey, I’m romgrk, I am a software engineer. I code in Typescript, C/C++
-and Rust. I pretend to know Haskell but I really don’t. I run on Linux and
-neovim. I’m interested in electronics, OS programming, programming languages,
-functional programming, UI/UX and design. I don’t have a tribe, I fit in all 3
-of them. */}}

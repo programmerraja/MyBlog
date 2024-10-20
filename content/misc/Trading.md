@@ -288,8 +288,23 @@ new tax EPF and NPS we can show
 
 SIP 
 1. Direct fund -> put on this
-2. regular fund
+2. regular fund  -> (we buy through agency they get commission)
 
+Direct vs. Regular Plans: 
+
+Mutual funds come in two variants: Direct and Regular. Direct plans have a lower expense ratio as they are purchased directly from the fund house, bypassing distributors or agents. Regular plans have a higher expense ratio because they include commissions for distributors. The video strongly recommends investing in Direct plans to maximize returns
+
+Growth vs. IDCW: 
+
+Investors can choose between Growth and IDCW (Income Distribution cum Capital Withdrawal) options. In Growth plans, profits are reinvested back into the fund, allowing for compounding. IDCW plans distribute profits periodically as income. The video suggests opting for Growth plans for wealth building, while IDCW plans might be suitable for generating regular income, particularly after retirement. However, it cautions that income from IDCW plans is taxable.
+
+CAGR (Compound Annual Growth Rate): Represents the average annualized return of an investment over a specific period.
+
+Expense Ratio: The annual fee charged by the fund house to manage the fund. It is expressed as a percentage of the fund's assets. suggests to that an expense ratio below 1% is generally considered good
+
+Exit Load: 
+A fee charged when you redeem (sell) your mutual fund units within a specified period. The exit load structure varies depending on the fund. For instance, a fund might have a 2% exit load if you sell units within one year of purchase. 
+No exit load after 730 days
 
 ELSS
 - DIvidend are taxable
@@ -314,3 +329,6 @@ Health insurance to avoid
 
 
 ![[Pasted image 20240721092914.png]]
+
+
+

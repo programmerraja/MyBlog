@@ -280,6 +280,12 @@ where:
     
 4. **AdaGrad and RMSProp**: These are older optimizers that adjust the learning rates of model parameters based on the frequency of their updates during training.
 
+### Casual Attention mechanism
+
+Causal attention is a variant of attention mechanism, commonly used in natural language processing, especially in autoregressive models like GPT and Transformer-based models for tasks like language generation. The term "causal" refers to the property that the attention mechanism ensures that the model only attends to past tokens when predicting the next token. This is essential for autoregressive models, which generate tokens sequentially, one at a time, and should not "look ahead" into future tokens.
+
+While causal attention has benefits in sequence generation, it comes at the cost of reduced parallelism during training, especially when compared to bidirectional attention models like BERT, where all tokens attend to each other.
+
 #### SGD
 
 **Batch Gradient Descent**: Computes the gradient of the loss function with respect to the parameters for the entire training dataset and updates the parameters once per iteration. This can be computationally expensive for large datasets.
@@ -295,6 +301,17 @@ where:
 3. **Masked Language Modeling Loss**: Used in models like BERT (which uses Transformer architecture), this loss function helps the model learn to predict masked words within a sentence.
     
 4. **Perplexity**: In language modeling tasks, perplexity is often used as an evaluation metric that correlates with the cross-entropy loss. Lower perplexity indicates a better-performing model.
+
+## Logits
+
+**Logits** are the raw, unnormalized scores or outputs from a machine learning model, often used in classification tasks. In simpler terms, logits represent the values produced by a neural network before applying an activation function like softmax or sigmoid, which converts these raw values into probabilities.
+
+How it used in GPT
+
+- After tokenization, the tokens are passed through the model (like GPT). The model is a neural network that predicts the next token in the sequence based on the previous ones.
+- The model outputs **logits** for each possible token in its vocabulary. If the model has a vocabulary of 50,000 tokens, it will produce 50,000 logits as raw scores for each token after processing the current input sequence.
+-  The logits are then passed through a **softmax function** to convert them into a probability distribution over the vocabulary. The softmax function transforms the logits into probabilities that sum to 1, which indicates how likely each token is to follow the current sequence.
+
 
 ## BERT Model
 

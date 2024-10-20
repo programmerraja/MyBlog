@@ -334,3 +334,102 @@ mark {
 .about-container a:hover {
   text-decoration: underline;
 }
+
+.top__banner {
+  text-align: center;
+  overflow: hidden;
+
+  justify-content: center;
+  display: flex;
+  position: relative;
+  align-items: center
+}
+
+.myname__container {
+  position: absolute;
+  font-size: 2.4rem;
+  z-index: 2;
+}
+
+.myname__container h1 {
+  word-spacing: 6px;
+}
+
+.emoji {
+  font-size: 1em;
+  width: 50px;
+  height: 50px;
+  font-style: normal !important;
+  font-weight: 400;
+  line-height: 1;
+  vertical-align: -.075em;
+  animation-name: emojimove;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.name {
+  font-family: 'Ubuntu', cursive;
+}
+
+.myname__container p,
+.myname__container h1 {
+  color: var(--fontcolor);
+  margin: 0;
+}
+
+.myname {
+  overflow: hidden;
+}
+
+.myname__container h1 {
+  animation-name: fadein;
+  animation-duration: 2s;
+}
+
+.text__container {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.profile__img {
+  height: 100vh;
+  width: 100%;
+}
+
+
+  /* media query for tablets */
+  @media (max-width: 993px) {
+    .myname__container {
+      font-size: 1.5rem;
+    }
+
+    .emoji {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  /* media query for mobile phones */
+  @media (max-width:500px) {
+
+    .myname__container {
+      font-size: 1rem;
+    }
+
+    .profile__img,
+    .banner_wrapper {
+      height: 90vh;
+    }
+
+    .emoji {
+      width: 25px;
+      height: 25px;
+    }
+
+    .text__container {
+      font-size: 10px;
+      font-weight: bold;
+    }
+
+}
