@@ -16,16 +16,8 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "programmerraja.github.io",
-    ignorePatterns: [
-      "private",
-      "template",
-      ".obsidian",
-      "Scripts",
-      "Images",
-      "Excalidraw",
-      "misc",
-    ],
+    baseUrl: "programmerraja.github.io/blog",
+    ignorePatterns: ["private", "template", ".obsidian", "Scripts", "Images", "Excalidraw", "misc"],
     defaultDateType: "created",
     theme: {
       fontOrigin: "googleFonts",
