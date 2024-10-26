@@ -235,6 +235,64 @@ for i, prediction in enumerate(predictions):
 ```
 
 
+## Open Source Embedding models 
+
+ Two key resources for open-source embeddings:
+
+- **Sentence Transformers (expert.net):** This Python framework simplifies loading and using various embedding models, including the popular "all-mpnet-base-v2" and "all-MiniLM-L6-v2".
+- **Hugging Face (huggingface.co):** This platform hosts a vast collection of machine learning models and datasets, including the "Massive Text Embedding Benchmark" (MTEB) project, which ranks and evaluates embedding models.
+
+**Choosing the Right Embedding Model**
+
+- **Task:** Different models specialize in different tasks, like semantic search, clustering, or bitext mining.
+- **Performance:** The MTEB leaderboard offers a valuable resource for comparing model performance across various tasks.
+- **Dimension Size:** Smaller dimensions generally result in faster computation and lower memory requirements, especially for similarity searches.
+- **Sequence Length:** Models have limitations on the input length (measured in tokens), impacting how you process longer documents.
+
+**Optimizing Embedding Generation**
+
+- **Mean Pooling:** This aggregation method combines multiple embeddings into a single representative embedding, essential for sentence-level comparisons.
+
+	Example:
+	Text embedding model will return text the probablity of passed text with the no of vocabulary it has let say we have a text embedding model with dimension of 468 then it have 468 voc so it will return the probablity of passed text with all 468 word but if we want a single probablity we need to use meanpooling 
+
+- **Normalization:** Normalizing embeddings (creating unit vectors) enables accurate comparisons using methods like dot product.
+- **Quantization:** This technique reduces the precision of model weights, shrinking the model size and potentially improving inference speed.
+- **Caching:** Transformers.js automatically caches models in the browser, significantly speeding up subsequent inference operations.
+### Byte Pair Encoding (BPE): A Tokenization Technique
+
+BPE is a data compression algorithm that has been adapted for tokenization. It's a bottom-up approach that starts by treating each character in the training data as a separate token. Then, it iteratively merges the most frequently occurring pairs of tokens into a single new token. This process continues until a predefined vocabulary size or a merging criteria is met.
+
+Let's illustrate with a simplified example. Suppose our training data contains the words "lower," "lowest," "newer," and "newest."
+
+- Initial Tokens: Start with individual characters as tokens: 'l', 'o', 'w', 'e', 'r', 's', 't', 'n', 'ew'.
+
+- Merging: The pair 'e' and 'r' might occur most frequently, so they are merged into a new token 'er'.
+
+### WordPiece
+
+WordPiece tokenization is a subword tokenization algorithm developed by Google,
+### Massive Text Embedding Benchmark 
+
+MTEB, is a project developed by Hugging Face to address the challenge of evaluating and comparing the performance of different text embedding models
+
+MTEB goes beyond a single metric and instead evaluates models across a wide spectrum of tasks1. This ensures a more holistic understanding of a model's capabilities. Some of the tasks covered by MTEB include2:
+
+Bitext Mining: Identifying pairs of sentences in different languages that convey the same meaning.
+
+Classification: Assigning predefined categories to text snippets.
+
+Clustering: Grouping text snippets based on their semantic similarity.
+
+Pair Classification: Determining the relationship between two text snippets (e.g., paraphrase, contradiction).
+
+Re-ranking: Ordering search results based on their relevance to a given query.
+
+Retrieval: Finding the most relevant documents for a specific query (often used in semantic search).
+
+Semantic Textual Similarity (STS): Measuring the degree of semantic overlap between two text snippets.
+
+Summarization: Evaluating how well a short text summarizes a longer document.
 ### Resources
 - https://medium.com/@RobinVetsch/nlp-from-word-embedding-to-transformers-76ae124e6281
 - [Text Embeddings: Comprehensive Guide](https://towardsdatascience.com/text-embeddings-comprehensive-guide-afd97fce8fb5)
@@ -446,7 +504,7 @@ Purpel lama
 ```
 - Lama we need to manully add INST and end tag with 
 
-
+- **Llama Stack** was introduced to address the challenges of integrating Llama models into existing workflows.10 It provides a stable API and CLI, simplifying tasks like downloading models, inspecting their properties, and deploying them.11 Llama Stack also incorporates features like memory, RAG, and safety orchestration using multiple models. https://github.com/meta-llama/llama-stack
 ## GEMINI Notes
 - ultra 
 - pro -> performance and speed

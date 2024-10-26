@@ -6,7 +6,7 @@
 - [x] How i find eslint affecting our dev productivity
 - [ ] Best practice that i follow on node and react
 - [x] How i get my facebook password using c
-- [ ] A series of blog how i automate the boring task
+- [ ] A series of blog how i automate the boring task 
 	- [x] Mobile script
 	- [x] keka
 	- [x] class hunter
@@ -100,6 +100,9 @@ How to
 - [ ] how to stream mongodb request 
 - [ ] Post about klenty dns
 - [ ] Rabbitmq load test
+- [ ] What we learns from migrating heroku to kuberneted
+	- [ ] Probe
+	- [ ] Staing
 
 AI research paper series
 
@@ -305,6 +308,7 @@ what are the core concpets discussed and what they teaching explain all thing di
 | --- |
 |     |
 Compromised Server
+
 Performing attacks possibly on our honeypot network. (Email Spam, Automated Signups, Comment and Forum spamming, Login Attempts).
 
 ```
@@ -515,3 +519,16 @@ Let me know if you need help with something more specific about the URL!
 
 
 Pyhton server ->https://trinket.io/embed/python3/a5bd54189b
+
+
+
+
+Welcome to my **public [Second Brain](https://www.ssp.sh/brain/second-brain)**, a crafted knowledge vault where my **notes, ideas, and insights** are carefully curated, connected, and compounded over time. This vault is modeled as a digital [Zettelkasten](https://www.ssp.sh/brain/zettelkasten) and [Garden](https://www.ssp.sh/brain/digital-garden).
+
+- **Crafted** Narratives: Intentionally shaped notes to educate and inspire—built on strong principles of quality, clarity, and long-term value.
+- **Curated** Knowledge: Insights and listings carefully selected and refined over time, across various topics.
+- **Connected** Ideas: Explore how thoughts are interconnected with the interactive graph and follow the backlinks to uncover unexpected relationships between them; just like in a human brain.
+- **Compounded** Learning: With every note, idea, and insight, my Second Brain grows—compounding in value, just like a money investment, where wisdom deepens and accumulates over time.
+
+[  
+](https://www.ssp.sh/brain/#navigation)

@@ -397,7 +397,72 @@ for sent in sentences:
 ```
 
 
+## Tokenization
 
+Tokenization is the process of breaking down text into smaller units called **tokens**, which are then used as input for the LLM. Tokens can represent individual characters, words, or subwords.
+
+**Byte Pair Encoding (BPE):**
+
+**Training:** BPE starts with a large corpus of text and initially treats each character as a separate token. The algorithm then iteratively merges the most frequent pairs of tokens into new tokens. This process continues until a desired vocabulary size is reached.
+
+**Example:**
+Byte Pair Encoding (BPE) is a simple form of data compression that replaces the most frequent pair of adjacent bytes in a sequence with a single byte. It’s often used in text processing, particularly in natural language processing tasks.
+
+### How Byte Pair Encoding Works
+
+1. **Initialization**: Start with a sequence of bytes (or characters).
+2. **Counting Pairs**: Count all adjacent pairs of bytes in the sequence.
+3. **Replace the Most Frequent Pair**: Identify the most frequent pair and replace it with a new byte (a byte that doesn’t exist in the original sequence).
+4. **Repeat**: Repeat the counting and replacing process until a certain condition is met (like a maximum number of replacements).
+
+### Example
+
+Let’s say we have the following simple sequence of characters:
+
+```
+ABABABA
+```
+
+ Step 1: Count Pairs
+- The pairs are: `AB`, `BA`, `AB`, `BA`, `AB`
+- Frequencies:
+  - `AB`: 3 times
+  - `BA`: 2 times
+
+Step 2: Replace the Most Frequent Pair
+- The most frequent pair is `AB`. Let’s say we replace `AB` with `C` (a new byte).
+- New sequence: `C C A`
+
+Step 3: Update and Repeat
+Now, we have the sequence:
+
+```
+C C A
+```
+
+- Pairs: `C C`, `C A`
+- Frequencies:
+  - `C C`: 1 time
+  - `C A`: 1 time
+
+No pair is more frequent than the others, so we stop here.
+
+**3. Pre-tokenizers:**
+
+- **Function:** Pre-tokenizers handle spaces and punctuation before applying the main tokenizer. They can optimize the tokenization process by treating spaces as boundaries, avoiding merging tokens across spaces.
+
+**4. Tokenization in Practice:**
+
+- **Vocabulary Size:** The number of unique tokens determines the output dimensionality of the language model.
+- **Handling New Tokens:** LLMs generally do not handle new tokens well. Choosing a comprehensive tokenizer and vocabulary is critical.
+- **Choosing the Largest Token:** When applying the tokenizer, the algorithm always selects the largest available token. For instance, it would prioritize "token" over "t" if both are present in the vocabulary.
+- **Computational Considerations:** Tokenization has computational costs. Efficient algorithms and techniques are used to speed up the process.
+- **Future of Tokenizers:** There's debate about the necessity of complex tokenizers. Character-level or byte-level tokenization might become more prevalent as architectures evolve to handle longer sequences efficiently.
+
+**5. Challenges with Tokenization:**
+
+- **Domain-Specific Tokenization:** Specialized domains like math and code often require custom tokenization schemes.
+- **Impact on Evaluation:** Perplexity, a common LLM evaluation metric, is sensitive to the choice of tokenizer, making comparisons between models difficult.
 
 ## Resources
 
@@ -415,6 +480,7 @@ for sent in sentences:
 - [Finetuned Spam Classifier](https://colab.research.google.com/gist/virattt/ddb43fc3d6c0c66abe29a158fe79aa85/finetuned-spam-classifier.ipynb)
 - [Ecco GitHub Repository](https://github.com/jalammar/ecco?tab=readme-ov-file)
 - [The Transformers Architecture in Detail: What's the Magic Behind LLMs](https://aigents.co/data-science-blog/publication/the-transformers-architecture-in-detail-whats-the-magic-behind-llms)
+- https://rbcborealis.com/research-blogs/tutorial-14-transformers-i-introduction/ 
 
 #### Visualizer
 - [Inspectus GitHub Repository](https://github.com/labmlai/inspectus)

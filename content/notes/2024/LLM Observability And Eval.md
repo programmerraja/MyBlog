@@ -171,6 +171,7 @@ criteria) [RESULT] (an integer number between 1 and 5)\\"
 ###Feedback:
 ```
 
+- [prometheus-eval ](https://github.com/prometheus-eval/prometheus-eval)
 ## Ragas
 
 Ragas is a framework that helps you evaluate your Retrieval Augmented Generation (RAG) pipelines. RAG denotes a class of LLM applications that use external data to augment the LLM’s context.
@@ -223,7 +224,13 @@ Steps
 - Slice your prompts to evaluate what matters
 - Review fine grainded benchmarks
 
+## True lens
 
+
+RAG Triad of metrics
+- Context Relevance -> is retervied context relvant to the query?
+- Answer Relevance -> is the response relvant to the query?
+- Groundedness -> is response supported by the context?
 ## Tools
 
 - **Port Key**

@@ -527,6 +527,10 @@ The IAP strategy uses these insights to select an appropriate prompt for each qu
 
 - Majority Vote (IAP-mv): The system evaluates all candidate prompts and selects the one that consistently produces the best reasoning
 
+## Prompt Decomposition
+
+Prompt Decomposition is the process of taking a complicated prompt and breaking it into multiple smaller parts. This is the same idea that is found in design theory and sometimes called task decomposition. Simply put, when we have a large complicated task, we break it down into multiple steps and each step is individually much easier.
+
 ## Meta Prompting
 
 It involves constructing a high-level “meta” prompt that instructs an LLM

@@ -12,6 +12,24 @@ Flexible and powerful framework for managing multiple AI agents and handling com
 
 ## RAG
 
+### Chunking Methods
+
+- **Naive chunking**: A simple method that divides text based on a fixed number of characters, often using the `CharacterTextSplitter` in Langchain. It is fast and efficient but may not be the most intelligent approach as it does not account for document structure.
+- **Sentence splitting**: This method uses natural language processing (NLP) frameworks like NLTK or SpaCy to split text into sentence-sized chunks. It is more accurate than naive chunking and can handle edge cases.
+- **Recursive character text splitting**: This method, implemented using the `RecursiveCharacterTextSplitter` in Langchain, combines character-based splitting with consideration for document structure. It recursively splits chunks based on paragraphs, sentences, and characters, maximizing the information contained within each chunk while adhering to the specified chunk size.
+- **Structural chunkers**: Langchain provides structural chunkers for HTML and Markdown documents that split text based on the document's schema, such as headers and subsections. This method is particularly useful for structured documents and allows for the addition of metadata to each chunk, indicating its source and location within the document.
+- Semantic Chunking: This strategy uses embedding models to analyze the meaning of sentences and group together sentences that are semantically similar. It results in chunks that are more likely to represent coherent concepts, but it requires more computational resources than other methods. check out the nice article to visulize the chunking [here](https://towardsdatascience.com/a-visual-exploration-of-semantic-text-chunking-6bb46f728e30)
+
+Evaluating Chunking Strategies
+Recall is a crucial metric for evaluating the effectiveness of a chunking strategy. It measures the proportion of relevant chunks retrieved in response to a query.
+
+A high recall rate indicates that the chunking strategy is effectively capturing and representing the information in a way that allows for accurate retrieval.
+
+Example:
+Imagine a document has been chunked, and a query results in three relevant chunks. The retriever returns five chunks, but only two of those are the relevant ones. In this case:
+- Relevant elements = 3
+- Retrieved elements that are also relevant = 2
+- Therefore, Recall = (2/3) * 100% = 66%
 ### Retrevial types
 
 Rank GPT
@@ -26,6 +44,16 @@ Contextual compression
 Hypothetical document embedding
 - ask LLM to suggest Hypothetical document for query and use that to fetch from DB
 
+BM25,ADA-002
+
+### RAG Evaluation
+
+RAG Triad of metrics
+- Context Relevance -> is retervied context relvant to the query?
+- Answer Relevance -> is the response relvant to the query?
+- Groundedness -> is response supported by the context?
+
+Framework for eval `trulens_eval`
 ### RAG Fusion
 
 How it works
@@ -112,9 +140,6 @@ Mean pooling in Natural Language Processing (NLP) is a technique used to create 
 3.  [Microsoft AutoGen](https://microsoft.github.io/autogen/)**: A toolkit provided by Microsoft to automate the process of generating language models and leveraging RAG workflows.
 
 ---
-
-This structure groups similar resources together and will help streamline your workflow when referencing frameworks, tools, or educational content for RAG-based development.
-
 ## Generative Representational Instruction Tuning
 
 
@@ -159,3 +184,12 @@ Tools
 Agent flow
 - graph based 
 - event based
+
+
+
+Unstructured Data for LLM
+- https://unstructured.io/ 
+
+
+
+https://github.com/WooooDyy/LLM-Agent-Paper-List

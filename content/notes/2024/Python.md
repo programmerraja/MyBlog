@@ -701,9 +701,10 @@ dis.dis(add)
 ```python
 import asyncio
 
+# every async function return co-routine
 async def hello():
     print("Hello")
-    await asyncio.sleep(1)
+    await asyncio.sleep(1) #do some async operation
     print("World")
 
 async def main():
@@ -711,9 +712,148 @@ async def main():
 
 asyncio.run(main())
 
+# similar to promise.all
+result  = await asyncio.gather(*[hello(),hello()]) 
+# or 
+# await asyncio.gather(hello(),hello()) 
+
+# async iteration
+async for i in async_function():
+	print(i)
+
+#task
+
+# `asyncio.to_thread` to run blocking code in a separate thread without blocking the event loop
+
+
+def blocking_task(n):
+    print(f'Starting blocking task {n}')
+    time.sleep(2)  # Simulate a delay
+    print(f'Finished blocking task {n}')
+    return f'Result from task {n}'
+
+async def main():
+    tasks = []
+    
+    # Use asyncio.to_thread to run blocking tasks concurrently
+    for i in range(5):
+        task = asyncio.to_thread(blocking_task, i)
+        tasks.append(task)
+
+    # Wait for all tasks to complete and gather results
+    #if one failes it won't cancel other task
+    results = await asyncio.gather(*tasks)
+    
+    # Print results
+    for result in results:
+        print(result)
+
+
 ```
 
+**Coroutine**
 
+A **coroutine** is a special type of function in Python (and other programming languages) that allows you to write asynchronous code. Unlike regular functions, coroutines can pause their execution to let other code run, making them ideal for tasks that involve waiting, such as network requests or file I/O.
+
+coroutine starts running when it is awaited or scheduled to run within an event loop.
+
+```python
+async def my_coroutine():
+    print("Coroutine started")
+    await asyncio.sleep(1)  # Simulate an async operation
+    print("Coroutine ended")
+
+async def main():
+     my_coroutine()  # we not put await so the code will not be excuted
+
+asyncio.run(main())
+
+```
+
+**Task**
+
+task is a wrapper for a coroutine that allows it to run concurrently with other coroutines. if we use await it wil run one by one which is same as single thread.
+
+we  can create tasks using `asyncio.create_task()` or `loop.create_task()`
+
+Not like `gather` it will cancel other task on error 
+
+```python
+
+async def my_coroutine(n):
+    print(f'Starting task {n}')
+    await asyncio.sleep(2)  # Simulate a non-blocking delay
+    print(f'Finished task {n}')
+    return f'Result from task {n}'
+
+async def main():
+    # Create a list of tasks
+    tasks = []
+    for i in range(5):
+        task = asyncio.create_task(my_coroutine(i))
+        tasks.append(task)
+
+    # Wait for all tasks to complete and gather results
+    results = await asyncio.gather(*tasks)
+
+    # Print results
+    for result in results:
+        print(result)
+
+# Run the main function in the event loop
+if __name__ == '__main__':
+    asyncio.run(main())
+
+```
+
+Error handling in task and gather
+- `return_exceptions` argument to return exceptions as part of the results instead.
+
+```python
+async def main():
+    tasks = [task_with_error(i) for i in range(5)]
+    results = await asyncio.gather(*tasks, return_exceptions=True)
+
+    for result in results:
+        if isinstance(result, Exception):
+            print(f"Caught an exception: {result}")
+        else:
+            print(result)
+
+# task 
+
+async def main():
+    task = asyncio.create_task(task_with_error(2))  # This will raise an error
+    try:
+        result = await task
+    except Exception as e:
+        print(f"Caught an exception from the task: {e}")
+
+```
+## Nest async io
+
+`nest_asyncio` is a Python library that allows you to run an asyncio event loop within an already running event loop. This is particularly useful in environments like Jupyter notebooks or other interactive environments where an event loop may already be running.
+
+```python
+
+import nest_asyncio
+import asyncio
+
+# Apply the patch to allow nesting of the asyncio event loop
+nest_asyncio.apply()
+
+async def say_hello():
+    print("Hello!")
+    await asyncio.sleep(1)
+    print("Goodbye!")
+
+async def main():
+    await say_hello()
+
+if __name__ == '__main__':
+    asyncio.run(main())
+
+```
 ## Type hints & Annotations
 
 Introduced in python 3.5 above it won't force to strict type we can give any type
@@ -809,6 +949,71 @@ print(greet.__doc__)
 help(greet)
 ```
 
+
+## Package mangement
+
+In Python, package management and package locking are handled using tools that manage dependencies and ensure consistency across environments. The main tools that provide functionality similar to `package.json` and `package-lock.json` in JavaScript are:
+
+### 1. **`requirements.txt` + `pip`**
+   - **`requirements.txt`** is a simple text file used to specify the exact versions of the Python packages your project depends on. 
+   - **`pip`** is the package manager that installs and manages these packages.
+   
+   To create a `requirements.txt` file:
+   ```bash
+   pip freeze > requirements.txt
+   ```
+   To install packages from it:
+   ```bash
+   pip install -r requirements.txt
+   ```
+   However, this setup doesn’t lock exact versions for sub-dependencies (like `package-lock.json` does).
+
+### 2. **`pipenv`** 
+   - **`Pipenv`** is a modern Python packaging tool that creates two files:
+     - `Pipfile`: Defines project dependencies.
+     - `Pipfile.lock`: Locks the exact versions, including transitive dependencies, ensuring consistency across environments.
+   
+   Commands:
+   - Install a package: 
+     ```bash
+     pipenv install <package_name>
+     ```
+   - Generate `Pipfile` and `Pipfile.lock` and install dependencies:
+     ```bash
+     pipenv install
+     ```
+
+### 3. **`poetry`**
+   - **`Poetry`** is another modern package manager that also handles dependency management and version locking.
+     - `pyproject.toml`: Similar to `package.json`, it contains dependency specifications.
+     - `poetry.lock`: Similar to `package-lock.json`, it locks all package versions and their dependencies.
+   
+   Commands:
+   - To install and manage dependencies:
+     ```bash
+     poetry install
+     ```
+   - Add a package:
+     ```bash
+     poetry add <package_name>
+     ```
+
+### 4. **conda (for Anaconda users)**
+   - **`Conda`** is a package manager for Python and other languages, typically used in scientific computing.
+   - `environment.yml`: Similar to `package.json`, this file defines all packages and their versions, along with specific channels.
+   - You can export a lock file using:
+     ```bash
+     conda env export > environment.yml
+     ```
+
+### Comparison:
+
+| Tool         | Dependency File         | Lock File          | Environment Isolation | Notes |
+|--------------|-------------------------|--------------------|-----------------------|-------|
+| `pip`        | `requirements.txt`       | No Lock File       | No                    | Most basic setup |
+| `pipenv`     | `Pipfile`                | `Pipfile.lock`      | Yes                   | Modern solution |
+| `poetry`     | `pyproject.toml`         | `poetry.lock`       | Yes                   | Great for projects with complex dependencies |
+| `conda`      | `environment.yml`        | No Lock File       | Yes                   | Popular for data science projects |
 
 
 new tools

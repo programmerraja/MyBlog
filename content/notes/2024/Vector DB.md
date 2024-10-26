@@ -9,3 +9,12 @@ tags =[]
 ## Pinecone
 
 ## Chroma
+
+## Milvus
+https://milvus.io/
+
+## Qdrant 
+https://qdrant.tech/
+
+## weaviate
+https://weaviate.io/

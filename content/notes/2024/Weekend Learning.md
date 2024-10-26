@@ -40,3 +40,15 @@ https://eieio.games/essays/the-secret-in-one-million-checkboxes/
 https://github.com/orgs/different-ai/repositories
 
 
+
+
+## RAG
+- [$0 Embeddings (OpenAI vs. free & open source)](https://www.youtube.com/watch?v=QdDoFfkVkcw )
+- [Massive Text Embedding Benchmark (MTEB) Leaderboard.](https://huggingface.co/spaces/mteb/leaderboard )
+- https://www.youtube.com/watch?v=U3c0nOT4Cl4&t=305s
+- [Advanced RAG: Chunking, Embeddings, and Vector Databases](https://www.youtube.com/watch?v=tTW3dOfyCpE&t=1026s) 🚀
+- [Dive into Chunking Strategies for RAG with Zain 💚]( https://www.youtube.com/watch?v=LuhBgmwQeqw)
+- [Chunking Best Practices for RAG Applications](https://www.youtube.com/watch?v=uhVMFZjUOJI)
+- [Advanced RAG Concepts: AgenticRAG with Code Walkthrough](https://www.youtube.com/watch?v=TuV0dFxrSh4) 
+- [Advanced RAG Concepts: RAG Optimization](https://www.youtube.com/watch?v=5-l_43wDhUE)
+- [Building Production-Ready RAG Applications: Jerry Liu](https://www.youtube.com/watch?v=TRjq7t2Ms5I)

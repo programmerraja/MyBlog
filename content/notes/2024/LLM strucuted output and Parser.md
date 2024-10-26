@@ -56,6 +56,72 @@ Generate structured JSON using regular expressions (regex) and finite state mach
 **Tokenizers**: A tokenizer is a fundamental component in Natural Language Processing (NLP) that breaks down text into smaller units called tokens. These tokens can be words, subwords, or even characters, depending on the tokenizer's design. Tokenizers are essential for LLMs, as they convert text into a numerical representation that the model can process.
 
 **Logit Generators**: LLMs, at their core, are probabilistic models. They don't deterministically produce a single output but instead assign probabilities to different possible next tokens. These probabilities are represented as logits, which are the raw, unnormalized outputs from the model. A logit generator is the part of the LLM that calculates these logits, reflecting the model's assessment of how likely each token is to appear next, given the preceding context.
+
+OpenAI logbits [here](https://platform.openai.com/docs/api-reference/chat/create#chat-create-logprobs)
+
+```
+import OpenAI from "openai";
+
+const openai = new OpenAI();
+
+async function main() {
+  const completion = await openai.chat.completions.create({
+    messages: [{ role: "user", content: "Hello!" }],
+    model: "gpt-4o",
+    logprobs: true,
+    top_logprobs: 2,
+    logit_bias={2435:-100, 640:-100}
+  });
+
+  console.log(completion.choices[0]);
+}
+
+main();
+
+//output 
+{
+.....
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Hello! How can I assist you today?"
+      },
+      "logprobs": {
+        "content": [
+          {
+            "token": "Hello",
+            "logprob": -0.31725305,
+            "bytes": [72, 101, 108, 108, 111],
+            "top_logprobs": [
+              {
+                "token": "Hello",
+                "logprob": -0.31725305,
+                "bytes": [72, 101, 108, 108, 111]
+              },
+              {
+                "token": "Hi",
+                "logprob": -1.3190403,
+                "bytes": [72, 105]
+              }
+            ]
+          },
+    ..............     
+}
+```
+- 
+- We can use the logit_bias parameter to increase or decrease the likelihood of specific tokens appearing in the model's output
+- Accepts a JSON object that maps tokens (specified by their token ID in the GPT tokenizer) to an associated bias value from -100 to 100.
+- A bias value of -100 will likely block the token from being generated
+- **logprobs** Include the log probabilities on the `logprobs` most likely output tokens, as well the chosen tokens. For example, if `logprobs` is 5, the API will return a list of the 5 most likely tokens
+
+
+
+## Jina AI
+
+- https://jina.ai/reader/
+free for non commerical use
 ### Resources
 - https://blog.dottxt.co/coalescence.html
 - https://www.normalcomputing.com/blog-posts/eliminating-hallucinations-fast-in-large-language-models-with-finite-state-machines-3
