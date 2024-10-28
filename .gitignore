@@ -2,7 +2,6 @@
 content/.obsidian/*
 node_modules
 .DS_Store
-public
 prof
 tsconfig.tsbuildinfo
 .obsidian
