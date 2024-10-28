@@ -1006,6 +1006,7 @@ In Python, package management and package locking are handled using tools that m
      conda env export > environment.yml
      ```
 
+- https://dublog.net/blog/so-many-python-package-managers/
 ### Comparison:
 
 | Tool         | Dependency File         | Lock File          | Environment Isolation | Notes |

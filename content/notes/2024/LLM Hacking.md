@@ -10,6 +10,11 @@ tags =[]
 #### Garak
 
 **[garak](https://reference.garak.ai/en/latest/basic.html)** is an LLM vulnerability scanner, It uses a huge range of probes to examine and query a large language model, simulating attacks, and uses a range of detectors on the model’s outputs to see if the model was vulnerable to any of those attacks.
+
+## Lakera
+
+[Lakera](https://platform.lakera.ai/) Guard mitigates risks such as prompt injections, data leakage, toxic language, phishing links, and harmful experiences, while using your favorite LLM, like OpenAI's ChatGPT or Anthropic's Claude.
+
 ## vulnhuntr
 
 Vulnhuntr leverages the power of LLMs to automatically create and analyze entire code call chains starting from remote user input and ending at server output for detection of complex, multi-step, security-bypassing vulnerabilities that go far beyond what traditional static code analysis tools are capable of performing 
