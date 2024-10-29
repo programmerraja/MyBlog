@@ -1,8 +1,10 @@
 ---
-title : LLM Hacking
-date : 2024-08-31T17:34:06.066+05:30
-draft : true
-tags : 
+title: LLM Hacking
+date: 2024-08-31T17:34:06.066+05:30
+draft: false
+tags:
+  - hacking
+  - AI
 ---
 
 

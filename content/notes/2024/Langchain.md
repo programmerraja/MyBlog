@@ -1,8 +1,9 @@
 ---
-title : Langchain
-date : 2024-05-25T09:42:14.1414+05:30
-draft : false
-tags : 
+title: Langchain
+date: 2024-05-25T09:42:14.1414+05:30
+draft: false
+tags:
+  - genrative_ai
 ---
 
 

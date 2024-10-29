@@ -1,8 +1,10 @@
 ---
-title : Software Architecture and Decision-Making
-date : 2024-01-22T08:19:32.3232+05:30
-tags  : ['book']
-draft : false
+title: Software Architecture and Decision-Making
+date: 2024-01-22T08:19:32.3232+05:30
+tags:
+  - book
+  - software_architecture
+draft: false
 ---
 
 ## Book Core concepts

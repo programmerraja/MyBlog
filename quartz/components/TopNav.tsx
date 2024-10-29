@@ -137,7 +137,6 @@ pre:hover>.clipboard-button {
 }
 
 .off-screen-menu {
-    background-color: var(--light);
     text-align: center;
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;

@@ -1,8 +1,9 @@
 ---
-title : Hacking
-date : 2024-01-25T07:41:37.3737+05:30
-draft : true
-tags : 
+title: Hacking
+date: 2024-01-25T07:41:37.3737+05:30
+draft: false
+tags:
+  - hacking
 ---
 
 

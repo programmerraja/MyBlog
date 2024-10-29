@@ -1,8 +1,11 @@
- ---
-title : React
-date : 2024-01-20T18:57:02.022+05:30
-draft : false
----  
+---
+title: React
+date: 2024-01-20T18:57:02.022+05:30
+draft: false
+tags:
+  - webdev
+  - react
+---
 
 
 ## Notes

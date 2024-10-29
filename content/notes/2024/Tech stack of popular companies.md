@@ -1,7 +1,9 @@
 ---
-title : Tech stack of popular companies
-date : 2024-01-12T08:19:32.3232+05:30
-draft : true
+title: Tech stack of popular companies
+date: 2024-01-12T08:19:32.3232+05:30
+draft: true
+tags:
+  - learning
 ---
 
 ---

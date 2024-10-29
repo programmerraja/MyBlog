@@ -1,8 +1,9 @@
 ---
-title : Memory profiling
-date : 2024-06-16T09:52:33.3333+05:30
-draft : true
-tags : 
+title: Memory profiling
+date: 2024-06-16T09:52:33.3333+05:30
+draft: true
+tags:
+  - javascript
 ---
 
 

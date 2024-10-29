@@ -1,8 +1,10 @@
 ---
-title : Kubernetes hacking
-date : 2024-03-17T06:42:50.5050+05:30
-draft : true
-tags : 
+title: Kubernetes hacking
+date: 2024-03-17T06:42:50.5050+05:30
+draft: false
+tags:
+  - devops
+  - hacking
 ---
 
 

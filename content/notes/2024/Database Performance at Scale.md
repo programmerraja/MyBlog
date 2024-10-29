@@ -1,9 +1,10 @@
 ---
-title : Database Performance at Scale
-date : 2024-03-18T08:27:02.022+05:30
-draft : true
-tags :  
-    - 'books'
+title: Database Performance at Scale
+date: 2024-03-18T08:27:02.022+05:30
+draft: true
+tags:
+  - books
+  - database
 ---
 
 Repo ­ https://github.com/Apress/db-performance-at-scale.

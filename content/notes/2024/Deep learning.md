@@ -1,8 +1,10 @@
 ---
-title : Deep learning
-date : 2024-06-08T05:40:06.066+05:30
-draft : true
-tags : 
+title: Deep learning
+date: 2024-06-08T05:40:06.066+05:30
+draft: true
+tags:
+  - deep_learning
+  - AI
 ---
 
 

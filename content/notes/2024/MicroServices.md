@@ -1,7 +1,10 @@
 ---
-title : MicroServices
-date : 2024-01-12T08:19:32.3232+05:30
-draft : true
+title: MicroServices
+date: 2024-01-12T08:19:32.3232+05:30
+draft: true
+tags:
+  - webdev
+  - microservices
 ---
 
 ## Questions to Be Asked

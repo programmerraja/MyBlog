@@ -25,3 +25,7 @@ Docker commit
 
 
  docker run -p 3005:3000  --name my-node-containers -v $(pwd):/app my-node-app
+
+after diwali nov 1
+- need to create sheet for how much i am investing etc what amount  i need for future does i have 
+- what plan i have for x happens etc.

@@ -30,6 +30,7 @@
 	- [ ] Alwasys create a wrapper when using thirdparty such that it easy to swap
 
 - [x] How make our website to hello world  
+- [ ]  3 Lessons from the Smartest Developers I’ve Worked With
 
 ```
 Hi, I'm an infra developer. My daily work involves fixing or investigating issues at the infrastructure level. I plan to write about these investigations in a blog series with a Sherlock Holmes detective theme. I need your help to write these blogs. I'll share the story, and you convert it into a perfect detective-themed blog. The blog should include:

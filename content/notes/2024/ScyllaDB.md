@@ -1,8 +1,9 @@
 ---
-title : ScyllaDB
-date : 2024-07-08T07:51:40.4040+05:30
-draft : true
-tags : 
+title: ScyllaDB
+date: 2024-07-08T07:51:40.4040+05:30
+draft: true
+tags:
+  - database
 ---
 
 

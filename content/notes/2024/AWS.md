@@ -1,8 +1,10 @@
 ---
-title : AWS
-date : 2024-03-09T11:35:50.5050+05:30
-draft : true
-tags : 
+title: AWS
+date: 2024-03-09T11:35:50.5050+05:30
+draft: false
+tags:
+  - devops
+  - aws
 ---
 
 ## Cell-Based Architecture

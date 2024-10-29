@@ -1,8 +1,11 @@
 ---
-title : Hands-On Machine Learningwith Scikit-Learn, Keras, andTensorFlow
-date : 2024-06-08T16:06:21.2121+05:30
-draft : true
-tags : 
+title: Hands-On Machine Learningwith Scikit-Learn, Keras, andTensorFlow
+date: 2024-06-08T16:06:21.2121+05:30
+draft: true
+tags:
+  - AI
+  - machine_learning
+  - book
 ---
 
 

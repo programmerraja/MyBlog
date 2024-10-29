@@ -290,11 +290,6 @@ pre:hover>.clipboard-button {
   transition: all .2s ease-in-out
 }
 
-.header-link:hover {
-  color: var(--darkblue);
-  background-color: var(--light)
-}
-
 .mobile-header-links {
   flex-direction: column;
   display: flex;
@@ -312,14 +307,13 @@ pre:hover>.clipboard-button {
 }
 
 .off-screen-menu {
-  background-color: var(--light);
   text-align: center;
   border-top-left-radius: 2rem;
   border-bottom-left-radius: 2rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  // width: 100%;
   // max-width: 450px;
   height: 100vh;
   font-size: 3rem;
@@ -334,6 +328,7 @@ pre:hover>.clipboard-button {
 .off-screen-menu.active {
   right: 0;
   background-color:white;
+  width: 100%;
 }
 .off-screen-menu.active .header-link{
   color: black;

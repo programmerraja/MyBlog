@@ -327,6 +327,13 @@ Health insurance to avoid
 - restoration benefit & day care cover
 
 
+NPS
+- 60 years
+- they give 60% lumsum and 40% annunity
+- minium 1k
+- 14% returns 
+- we can choose fund manger
+- 60% (no tax when u buy house etc..)
 
 ![[Pasted image 20240721092914.png]]
 

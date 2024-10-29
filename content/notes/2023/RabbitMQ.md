@@ -1,14 +1,16 @@
 ---
-title : RabbitMQ Notes
-date : 2023-12-08T18:26:15+05:30
-draft : false
+title: RabbitMQ Notes
+date: 2023-12-08T18:26:15+05:30
+draft: false
+tags:
+  - rabbitmq
 ---
-
-
 ## What  is RabbitMQ?
+
 RabbitMQ is a popular open-source message broker that implements the AMQP (Advanced Message Queuing Protocol) standard.
 
 ## Channel
+
 A channel is a separate communication channel within a single connection. Channels allow multiple concurrent exchanges to be executed in parallel, providing a way to separate different parts of your application.
 
 Each channel has its own set of resources, such as queues, exchanges, and bindings, which are independent of the resources used by other channels in the same connection. This allows you to manage concurrency and improve performance by isolating different parts of your application into separate channels.
@@ -16,7 +18,9 @@ Each channel has its own set of resources, such as queues, exchanges, and bindin
 For example, you might create one channel for sending messages and another channel for receiving messages, or create separate channels for different types of messages or different parts of your application. By using multiple channels, you can take advantage of the scalability and performance benefits of AMQP while also making it easier to manage your application.
 
 ## Channel vs connection
-In RabbitMQ, a connection represents a network connection to the RabbitMQ broker. When a client connects to RabbitMQ, it establishes a TCP connection to the broker. This connection remains open until the client explicitly closes it or the broker closes it due to a network error or a timeout. A connection is created using the AMQP protocol, and it is responsible for authentication, connection handling, and connection-level flow control.
+
+In RabbitMQ, a connection represents a network connection to the RabbitMQ 
+broker. When a client connects to RabbitMQ, it establishes a TCP connection to the broker. This connection remains open until the client explicitly closes it or the broker closes it due to a network error or a timeout. A connection is created using the AMQP protocol, and it is responsible for authentication, connection handling, and connection-level flow control.
 
 On the other hand, a channel is a virtual connection inside a connection that allows multiple logical connections to be multiplexed over a single physical connection. When a client establishes a connection to RabbitMQ, it can create one or more channels inside that connection. Each channel is a separate AMQP session that can be used to publish or consume messages, declare queues and exchanges, and bind queues to exchanges.
 
@@ -25,6 +29,7 @@ The main difference between a connection and a channel is that a connection repr
 In summary, a connection in RabbitMQ represents a physical network connection to the broker, while a channel represents a logical connection within that physical connection, allowing multiple AMQP operations to be multiplexed over a single network connection.
 
 ## Exchanges 
+
 In RabbitMQ, an exchange is a message routing agent that receives messages from producers and routes them to queues based on message properties such as the routing key. When a producer sends a message to an exchange, it is up to the exchange to route the message to one or more queues.
 
 There are four types of exchanges in RabbitMQ:
@@ -108,13 +113,17 @@ By using an exchange, you can create a loosely coupled system where microservice
 
 
 ## Durablity
-RabbitMQ provides durability by persisting messages and metadata to disk. This ensures that messages are not lost in case of a server failure.if it durable to true it will presist if we set false it will not until it reach threshold
+
+RabbitMQ provides durability by persisting messages and metadata to disk. This 
+ensures that messages are not lost in case of a server failure.if it durable to true it will presist if we set false it will not until it reach threshold
 
 ## Prefetch
+
 RabbitMQ uses prefetch to control the amount of messages a consumer can consume at once. Prefetch specifies the number of unacknowledged messages that can be in-flight before the broker stops delivering more messages to the consumer. This avoids overloading a consumer with too many messages at once.
 
 
 ## Amqp-connection-manager vs Amqplib
+
 amqp-connection-manager and amqplib are both Node.js libraries for working with RabbitMQ, but they have different purposes and use cases.
 
 amqplib is a low-level RabbitMQ client library that provides a thin wrapper around the RabbitMQ API. It allows you to send and receive messages, create and manage exchanges and queues, and interact with other RabbitMQ features. amqplib provides a direct and flexible interface to RabbitMQ, and is a good choice if you need complete control over your RabbitMQ interactions.
@@ -137,6 +146,7 @@ In general, if you need fine-grained control over your RabbitMQ interactions, or
 
 
 ## How to Handle failures
+
 If we want to retry if the consumer get failed when processing the data we can have 2 way
     1. nack
     2. reject

@@ -1,8 +1,9 @@
 ---
-title : Python
-date : 2024-05-09T12:16:34.3434+05:30
-draft : false
-tags : ['notes']
+title: Python
+date: 2024-05-09T12:16:34.3434+05:30
+draft: false
+tags:
+  - programming
 ---
 
 ## Data types
@@ -87,6 +88,28 @@ A namespace is a mapping from names to objects. It serves as a container for ide
 ```python
 
 print(__builtins__.len([1, 2, 3])) # Output: 3
+
+```
+
+**Vars**
+
+In Python, the `vars()` function is used to return the `__dict__` attribute of an object, which contains all the writable attributes of that object in the form of a dictionary. If you call `vars()` without any arguments, it returns the `__dict__` of the current local scope.
+
+```python
+def example_function():
+    a = 10
+    b = 20
+    print(vars())  # This will show {'a': 10, 'b': 20}
+
+example_function()
+
+class MyClass:
+    def __init__(self):
+        self.x = 5
+        self.y = 10
+
+obj = MyClass()
+print(vars(obj))  # This will show {'x': 5, 'y': 10}
 
 ```
 ## input and output 

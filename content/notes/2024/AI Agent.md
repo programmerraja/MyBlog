@@ -1,8 +1,10 @@
 ---
-title : AI Agent
-date : 2024-07-30T06:27:13.1313+05:30
-draft : false
-tags : 
+title: AI Agent
+date: 2024-07-30T06:27:13.1313+05:30
+draft: false
+tags:
+  - genrative_ai
+  - AI
 ---
 
 ## Multi-Agent Orchestrator

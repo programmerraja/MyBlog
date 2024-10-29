@@ -1,8 +1,9 @@
 ---
-title : Web security
-date : 2024-08-31T08:39:15.1515+05:30
-draft : true
-tags : 
+title: Web security
+date: 2024-08-31T08:39:15.1515+05:30
+draft: true
+tags:
+  - hacking
 ---
 
 ## CORS

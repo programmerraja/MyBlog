@@ -15,7 +15,7 @@ body,
 section {
   margin: 0;
   box-sizing: border-box;
-  background-color: var(--light);
+  background-color: #0d122b;
   font-family: var(--bodyFont);
   color: var(--darkgray);
 }
@@ -618,7 +618,7 @@ body {
 // }
 @media (max-width: 480px) {
   body p {
-      font-size: 0.875rem !important ; /* 14 px */
+      font-size: 1rem !important ; /* 14 px */
   }
   h1 {
       font-size: 1.3rem !important ; /* 24 px */

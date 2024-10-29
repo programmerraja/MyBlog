@@ -1,8 +1,11 @@
 ---
-title : Hugging face
-date : 2024-06-23T04:57:31.3131+05:30
-draft : true
-tags : 
+title: Hugging face
+date: 2024-06-23T04:57:31.3131+05:30
+draft: true
+tags:
+  - AI
+  - genrative_ai
+  - machine_learning
 ---
 
 ## Dataset
@@ -348,6 +351,16 @@ Another method of overriding this issue is padding
 
 The padding token ID can be found in `tokenizer.pad_token_id`
 
+But when we have huge data let say 1TB when we doing Padding it will take max token length and do padding for all which is not efficient so to avoid we can do `batch wise padding` and `DataCollatorWithPadding`
+
+```python
+def tokenize_and_pad(batch):
+    return tokenizer(batch['text'], padding=True, truncation=True, return_tensors="pt")
+
+# Apply the map function
+tokenized_dataset = dataset.map(tokenize_and_pad, batched=True)
+
+```
 
  **Attention masks:** When using padding, it's crucial to use attention masks. Attention masks are tensors that guide the model to focus on the actual tokens and ignore the padding tokens. This ensures accurate results, as attention layers in Transformers models contextualize each token. Without attention masks, padding tokens would be incorrectly considered in the attention mechanism.
 
@@ -396,6 +409,10 @@ print("Input IDs:", input_ids)
 # Decode the input IDs back to text
 decoded_text = tokenizer.decode(input_ids)
 print("Decoded Text:", decoded_text)
+
+print(tokenizer.vocab_size) # print the no of vocab the model have
+
+print(tokenizer.model_max_length) #max len for the model
 ```
 
 - it uses Rust under the hood
@@ -422,6 +439,8 @@ Transformers provides a [Trainer](https://huggingface.co/docs/transformers/v4.4
 The Trainer is built on PyTorch, so it's not suitable for projects that use Keras or TensorFlow
 
 The Trainer may not be the best choice for highly specialized training logic. In such cases, the Accelerate library offers more fine-grained control.
+
+
 ## Hugging Face X Langchain
 
 `langchain-huggingface` 
@@ -494,6 +513,10 @@ There are often creative ways to solve problems within the limit, e.g. condensin
 ## Models
 - https://huggingface.co/myshell-ai/MeloTTS-English
 - [text-to-audio](https://huggingface.co/suno/bark )
+- Bloom
+- openai-community/gpt2
+- https://huggingface.co/1bitLLM 
+- SmolLM models are designed for local deployment and have low memory footprints, making them suitable for devices like smartphones
 
 Here are some interesting and lightweight LLMs available on Hugging Face that you can use for various projects:
 
@@ -518,3 +541,6 @@ Here are some interesting and lightweight LLMs available on Hugging Face that yo
 10. **CodeGen**: A model designed for code generation tasks. If you're interested in building tools related to programming or code assistance, this could be a fun choice.
 
 You can easily find these models on the Hugging Face Model Hub. Depending on your project, consider the trade-offs between model size, performance, and the specific task you want to tackle!
+
+
+

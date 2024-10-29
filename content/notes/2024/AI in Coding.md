@@ -1,8 +1,10 @@
 ---
-title : AI in Coding
-date : 2024-09-19T06:32:53.5353+05:30
-draft : false
-tags : 
+title: AI in Coding
+date: 2024-09-19T06:32:53.5353+05:30
+draft: false
+tags:
+  - genrative_ai
+  - AI
 ---
 
 

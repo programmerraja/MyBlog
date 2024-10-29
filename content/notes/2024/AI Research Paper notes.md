@@ -1,8 +1,10 @@
 ---
-title : AI Research Paper notes
-date : 2024-09-19T06:01:47.4747+05:30
-draft : false
-tags : 
+title: AI Research Paper notes
+date: 2024-09-19T06:01:47.4747+05:30
+draft: false
+tags:
+  - genrative_ai
+  - AI
 ---
 ## De-Hallucinator: Mitigating LLM Hallucinations in Code Generation Tasks via Iterative Grounding
 
@@ -240,7 +242,17 @@ Here's how PLANSEARCH would approach it:
 
 
 
+## TOOLSANDBOX
 
+TOOLSANDBOX, a new benchmark for evaluating large language models' (LLMs) ability to use tools. It is designed to be more comprehensive and realistic than previous benchmarks by incorporating stateful tool execution, implicit state dependencies between tools, a built-in user simulator, and a dynamic evaluation strategy.
+
+TOOLSANDBOX is a Python-based testing environment where a User, an Agent, and an Execution Environment interact to complete a task
+
+TOOLSANDBOX uses a novel evaluation strategy based on Milestones and Minefields.
+- Milestones are key events that must occur in a trajectory to successfully complete a task. They are defined as a directed acyclic graph (DAG) to capture temporal dependencies. Each milestone is associated with a similarity measure that quantifies how well a given turn in the trajectory matches the milestone.
+- Minefields are events that should not occur in a trajectory. They are used to evaluate whether the Agent can recognize when a task is impossible to complete with the given tools and avoid hallucinating tool calls or arguments.18
+
+The overall similarity score for a trajectory combines the scores from matching milestones and ensuring no minefields are violated.
 
 
 

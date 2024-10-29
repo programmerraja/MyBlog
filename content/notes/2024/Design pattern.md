@@ -1,8 +1,10 @@
 ---
-title : Design pattern
-date : 2024-02-12T07:09:05.055+05:30
-draft : false
-tags : 
+title: Design pattern
+date: 2024-02-12T07:09:05.055+05:30
+draft: false
+tags:
+  - design_pattern
+  - webdev
 ---
 to rember the design pattern narrate it as real life story
 

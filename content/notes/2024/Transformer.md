@@ -1,8 +1,10 @@
 ---
-title : Transformer
-date : 2024-06-22T10:48:42.4242+05:30
-draft : true
-tags : 
+title: Transformer
+date: 2024-06-22T10:48:42.4242+05:30
+draft: true
+tags:
+  - machine_learning
+  - AI
 ---
 
 ## RNN
@@ -463,6 +465,85 @@ No pair is more frequent than the others, so we stop here.
 
 - **Domain-Specific Tokenization:** Specialized domains like math and code often require custom tokenization schemes.
 - **Impact on Evaluation:** Perplexity, a common LLM evaluation metric, is sensitive to the choice of tokenizer, making comparisons between models difficult.
+
+
+## Fine tunning
+
+**Quantization** is a technique used to reduce the memory footprint and computational requirements of LLMs, particularly when dealing with limited hardware resources.
+- **Conversion Process**: Quantization involves converting model parameters, typically stored as 32-bit floating point numbers (FP32), to lower precision formats like 8-bit integers (INT8) or 16-bit floating point numbers (FP16).
+
+Overcoming Accuracy Loss: Techniques like quantization-aware training (QAT) help mitigate accuracy loss by fine-tuning the quantized model with additional training data.
+
+Symmetric vs. Asymmetric Quantization:
+- Symmetric quantization, like batch normalization, centers the data distribution around zero (mean the value start from 0 instead of negative)
+- Asymmetric quantization utilizes a zero-point to handle data distributions that are not symmetrical (vaule may have a negative value)
+
+**Process of Symmetric:** 
+
+- **Identify the minimum and maximum values (xmin and xmax) within the weight data.**
+- **Determine the quantization range:** This is the difference between the maximum quantized value (Qmax) and the minimum quantized value (Qmin). For unsigned INT8, the range is 0 to 255.
+- **Calculate the scale factor:** This factor determines how the original floating-point values are mapped onto the quantized integer range. The formula for the scale factor is: `scale = (xmax - xmin) / (Qmax - Qmin)`
+- **Quantize each weight value:**    
+        - Divide the weight by the scale factor.
+        - Round the result to the nearest integer.    
+- **Example:** converting floating-point numbers between 0 and 1000 to unsigned INT8. The scale factor is calculated as 3.92 (1000 / 255). A value of 250 would be quantized to 64 (250 / 3.92, rounded).
+
+- **Process of Asymmetric:**
+    - **Identify xmin and xmax.**
+    - **Determine Qmax and Qmin.**
+    - **Calculate the scale factor:** The formula remains the same as in symmetric quantization.
+    - **Determine the zero-point:** The zero-point represents the quantized value that corresponds to the original floating-point value of zero. The formula is: `zero_point = Qmin - round(xmin / scale)` 
+    - **Quantize each weight value:**
+        - Divide the weight by the scale factor.
+        - Add the zero-point.
+		- Round the result to the nearest integer.
+- **Example:**  asymmetric quantization with a range of -20.0 to 1000. The scale factor is 4.0, and the zero-point is 5. The value of -20.0 is quantized to 0 (-20.0 / 4.0 + 5, rounded).
+
+**Modes of Quantization**
+- post-training quantization (PTQ)
+- quantization-aware training (QAT)
+
+**PTQ**
+- PTQ is applied after a model has been fully trained. It involves calibrating the model weights to determine appropriate scaling factors and zero-points, and then converting the weights from a higher precision format to a lower one
+- Theres is chance for loss of data
+
+**QAT**
+- QAT incorporates quantization during the training process. It modifies the training procedure to make the model aware of the quantization that will occur later. This allows the model to adjust its weights to minimize the impact of quantization on its performance
+
+### LORA
+
+when we train a model with more weights it is time and resources consuming because we need to update the weights by loading on the machine which is  hard so to avoid LORA introduce a **low-rank matrix decomposition** 
+
+Instead of updating all the weights, LoRA focuses on tracking the changes induced by fine-tuning and representing these changes in a compact form. It leverages **low-rank matrix decomposition**, which allows a large matrix to be approximated by the product of two smaller matrices.
+
+Example 
+
+Imagine a 5x5 matrix as a storage unit with 25 spaces. LORA breaks it down into two smaller matrices through matrix decomposition with “r” as rank(the dimension): a 5x1 matrix (5 spaces) and a 1x5 matrix (5 spaces). This reduces the total storage requirement from 25 to just 10, making the model more compact.
+
+### QLORA
+
+In this we just quantization matrix value from 32 bit to 8 Bit
+
+**LoRA**:
+- Introduce two low-rank matrices, A and B, to work alongside the weight matrix W.
+- Adjust these matrices instead of the behemoth W, making updates manageable.
+
+**LoRA-FA (Frozen-A):**
+- Takes LoRA a step further by freezing matrix A.
+- Only matrix B is tweaked, reducing the activation memory needed.
+
+**VeRA:**
+- All about efficiency: matrices A and B are fixed and shared across all layers.
+- Focuses on tiny, trainable scaling vectors in each layer, making it super memory-friendly.
+
+**Delta-LoRA:**
+- A twist on LoRA: adds the difference (delta) between products of matrices A and B across training steps to the main weight matrix W.
+- Offers a dynamic yet controlled approach to parameter updates.
+
+**LoRA+:**
+- An optimized variant of LoRA where matrix B gets a higher learning rate.
+This tweak leads to faster and more effective learning.
+
 
 ## Resources
 

@@ -1,8 +1,10 @@
 ---
-title : Google vertex AI
-date : 2024-10-20T13:28:47.4747+05:30
-draft : true
-tags : 
+title: Google vertex AI
+date: 2024-10-20T13:28:47.4747+05:30
+draft: true
+tags:
+  - genrative_ai
+  - AI
 ---
 ### Vertex AI: A Unified Machine Learning Platform
 

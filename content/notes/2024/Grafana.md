@@ -1,8 +1,9 @@
 ---
-title : Grafana
-date : 2024-05-12T15:20:04.044+05:30
-draft : true
-tags : 
+title: Grafana
+date: 2024-05-12T15:20:04.044+05:30
+draft: true
+tags:
+  - devops
 ---
 
 
