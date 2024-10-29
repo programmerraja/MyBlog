@@ -1,11 +1,13 @@
-+++
-title = 'Code Against the Clock: How I Cut Our Marketing Team’s Daily Chores with Automation'
-date = 2024-08-28T07:02:01.011+05:30
-draft = true
-tags =['code aganist the clock']
-+++ 
+---
+title: "Code Against the Clock:  How I Cut Our Marketing Team’s Daily Chores with Automation"
+date: 2024-08-28T07:02:01.011+05:30
+draft: false
+tags:
+  - code_against_clock
+  - web_scraping
+---
 
-Welcome back to **"Code Against the Clock!"** – the blog series where I transform mundane tasks into streamlined, time-saving marvels. Today, I’m excited to share a project where I turned a repetitive, manual chore into an automated powerhouse. Ready to see how you can save time and add a touch of excitement to your workflow? Let’s dive in!
+Welcome back to **": Code Against the Clock :!"** – the blog series where I transform mundane tasks into streamlined, time-saving marvels. Today, I’m excited to share a project where I turned a repetitive, manual chore into an automated powerhouse. Ready to see how you can save time and add a touch of excitement to your workflow? Let’s dive in!
 
 ## The Backstory
 

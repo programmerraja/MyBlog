@@ -1,9 +1,11 @@
-+++
-title = 'The Curious Case of the $15,000 Spam: My Unexpected Investigation'
-date = 2024-10-19T19:01:59.5959+05:30
-draft = false
-tags =[]
-+++ 
+---
+title: The Curious Case of the $15,000 Spam My Unexpected Investigation
+date: 2024-10-19T19:01:59.5959+05:30
+draft: false
+tags:
+  - hacking
+  - scam
+---
 
 Last Friday started off like any typical day—I was busy with my work in my office when I stumbled upon a suspicious message. My instincts told me it was spam, but my curiosity got the best of me. I clicked the link, and that’s when the adventure began!
 

@@ -1,9 +1,9 @@
-+++
-title = 'Hugging face'
-date = 2024-06-23T04:57:31.3131+05:30
-draft = true
-tags =[]
-+++ 
+---
+title : Hugging face
+date : 2024-06-23T04:57:31.3131+05:30
+draft : true
+tags : 
+---
 
 ## Dataset
 Datasets to download the data from the Hugging Face Hub. We can use the **list_datasets()** function to see what datasets are available on the Hub:

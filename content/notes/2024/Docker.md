@@ -1,9 +1,9 @@
-+++
-title = 'Docker Notes'
-date  = 2024-01-15T08:19:32.3232+05:30
-tags  = ['docker','devops']
-draft = false
-+++
+---
+title : Docker Notes
+date  : 2024-01-15T08:19:32.3232+05:30
+tags  : ['docker','devops']
+draft : false
+---
 
 ## Docker Engine
 

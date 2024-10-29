@@ -1,10 +1,9 @@
-
-+++
-title = 'Low level Tech'
-date = 2024-10-12T17:44:34.3434+05:30
-draft = true
-tags =[]
-+++ 
+---
+title : Low level Tech
+date : 2024-10-12T17:44:34.3434+05:30
+draft : true
+tags : 
+---
 
 
 ## Resources

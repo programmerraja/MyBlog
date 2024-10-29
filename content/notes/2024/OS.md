@@ -1,9 +1,9 @@
-+++
-title = 'OS'
-date = 2024-05-11T08:01:04.044+05:30
-draft = true
-tags =['notes']
-+++ 
+---
+title : OS
+date : 2024-05-11T08:01:04.044+05:30
+draft : true
+tags : ['notes']
+---
 
 
 ## Virtual Memory

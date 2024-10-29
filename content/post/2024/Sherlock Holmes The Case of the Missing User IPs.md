@@ -1,10 +1,13 @@
-
-+++
-title = 'Sherlock Holmes: The Case of the Missing User IPs'
-date = 2024-07-01T21:08:07.077+05:30
-draft = false
-tags =['debugging','ngnix','Kubernetes','Sherlock Holmes']
-+++ 
+---
+title: "Sherlock Holmes:  The Case of the Missing User IP's"
+date: 2024-07-01T21:08:07.077+05:30
+draft: false
+tags:
+  - debugging
+  - ngnix
+  - Kubernetes
+  - Sherlock_holmes
+---
 
 
 Welcome to our series of infrastructure detective stories, where we unravel the mysteries lurking within our systems In this episode, we tackle a perplexing problem: our Nginx server inside Kubernetes was logging an IP address that didn't match the actual user IP. Join me as we unravel the mystery and uncover the truth behind the missing IP.

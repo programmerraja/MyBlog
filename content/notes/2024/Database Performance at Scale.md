@@ -1,9 +1,10 @@
-+++
-title = 'Database Performance at Scale'
-date = 2024-03-18T08:27:02.022+05:30
-draft = true
-tags =['books']
-+++ 
+---
+title : Database Performance at Scale
+date : 2024-03-18T08:27:02.022+05:30
+draft : true
+tags :  
+    - 'books'
+---
 
 Repo ­ https://github.com/Apress/db-performance-at-scale.
 
@@ -14,7 +15,7 @@ https://rust-lang.github.io/mdBook/  mdBook “is a command line tool to create 
 
 #### Write-Heavy Workloads
 
-Write-heavy workload,strongly recommend a database that stores data in immutable files (e.g., Cassandra, ScyllaDB, and others that use LSM trees). These databases optimize write speed because) writes are sequential, which is faster in terms of disk I/O ) writes are performed immediately, without first worrying about reading or updating existing values (like databases that rely on B trees do). As a result, you can typically write a lot of data with very low latencies.
+Write-heavy workload,strongly recommend a database that stores data in immutable files (e.g., Cassandra, ScyllaDB, and others that use LSM trees). These databases optimize write speed because)Database Performance a writes are sequential, which is faster in terms of disk I/O ) writes are performed immediately, without first worrying about reading or updating existing values (like databases that rely on B trees do). As a result, you can typically write a lot of data with very low latencies.
 
 `Compaction is a background process that databases with an LSM tree storage backend use to merge and optimize the shape of the data. Since files are immutable, the process essentially involves picking up two or more pre-existing files, merging their contents, and producing a sorted output file`
 

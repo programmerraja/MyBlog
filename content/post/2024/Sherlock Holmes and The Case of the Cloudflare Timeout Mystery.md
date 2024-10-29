@@ -1,9 +1,12 @@
-+++
-title = 'Sherlock Holmes and The Case of the Cloudflare Timeout Mystery'
-date = 2024-09-14T18:57:23.2323+05:30
-draft = true
-tags =[]
-+++ 
+---
+title: "Sherlock Holmes : The Case of  Cloudflare Timeout Mystery"
+date: 2024-09-14T18:57:23.2323+05:30
+draft: false
+tags:
+  - Sherlock_holmes
+  - cloudfare
+  - kubernetes
+---
 
 Welcome to our Sherlock Holmes-inspired tech adventure Series! Imagine each technical challenge as a thrilling mystery waiting to be solved. Like Sherlock Holmes with his sharp eye for detail, I'll tackle the problem with wit and precision. Let's dive in and crack these cases together!
 

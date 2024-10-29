@@ -1,9 +1,9 @@
-+++
-title = 'Leadership'
-date = 2024-09-04T05:44:13.1313+05:30
-draft = true
-tags =[]
-+++ 
+---
+title : Leadership
+date : 2024-09-04T05:44:13.1313+05:30
+draft : true
+tags : 
+---
 
 
 ### The Accountability Dial steps

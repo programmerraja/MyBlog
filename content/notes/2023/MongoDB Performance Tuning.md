@@ -1,8 +1,9 @@
-+++
-title = 'MongoDB Performance Tuning Book Notes'
-date = 2023-12-03T09:44:50+05:30
-draft = false
-+++
+---
+title: MongoDB Performance Tuning Book Notes
+date: 2023-12-03T09:44:50+05:30
+tags:
+  - mongodb
+---
 
 ## MongoDB Architecture and Concepts
 

@@ -1,11 +1,13 @@
-+++
-title = 'Code Against the Clock: How I Enhanced My PM Productivity'
-date = 2024-08-24T21:05:17.1717+05:30
-draft = true
-tags =['code aganist the clock']
-+++ 
+---
+title: "Code Against the Clock : How I Enhanced My PM Productivity"
+date: 2024-08-24T21:05:17.1717+05:30
+draft: false
+tags:
+  - code_against_clock
+  - jira
+---
 
-Welcome back to **"Code Against the Clock!"** blog series where I’ll reveal how I turned my most boring tasks into streamlined, time-saving machines. I’ll share the exact steps I took to automate these chores and the cool tricks I discovered along the way. Ready to see how you can save time and make life a bit more exciting? Let’s dive in and get your tasks on autopilot!
+Welcome back to **": Code Against the Clock :!"** blog series where I’ll reveal how I turned my most boring tasks into streamlined, time-saving machines. I’ll share the exact steps I took to automate these chores and the cool tricks I discovered along the way. Ready to see how you can save time and make life a bit more exciting? Let’s dive in and get your tasks on autopilot!
 
 ## The backstory
 

@@ -481,7 +481,7 @@ I hope you’re all doing well! I wanted to reach out and ask for your feedback 
 You can check out here 
 https://dev.to/programmerraja/sherlock-holmes-the-case-of-the-content-length-mismatch-4i2b
 
-2. Code Against the Clock - focusing on how I automate the boring stuff using coding.
+2. : Code Against the Clock : - focusing on how I automate the boring stuff using coding.
 
 you can check our here https://dev.to/programmerraja/automate-relax-repeat-the-power-of-coding-1-1egh
 

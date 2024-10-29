@@ -1,9 +1,9 @@
-+++
-title = 'Android internal Notes'
-date  = 2024-01-17T08:19:32.3232+05:30
-tags  = ['android']
-draft = false
-+++
+---
+title : Android internal Notes
+date : 2024-01-17T08:19:32.3232+05:30
+tags  : ['android']
+draft : false
+---
 
 
 ## File system

@@ -1,9 +1,9 @@
-+++
-title = 'Google vertex AI'
-date = 2024-10-20T13:28:47.4747+05:30
-draft = true
-tags =[]
-+++ 
+---
+title : Google vertex AI
+date : 2024-10-20T13:28:47.4747+05:30
+draft : true
+tags : 
+---
 ### Vertex AI: A Unified Machine Learning Platform
 
 - **Vertex AI is a comprehensive machine learning platform developed by Google Cloud.** It offers a unified experience for building, training, deploying, managing, and scaling machine learning workloads.

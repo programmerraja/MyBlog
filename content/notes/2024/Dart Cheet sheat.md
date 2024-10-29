@@ -1,9 +1,9 @@
-+++
-title = 'Dart Cheet sheat'
-date = 2024-07-06T06:55:55.5555+05:30
-draft = true
-tags =[]
-+++ 
+---
+title : Dart Cheet sheat
+date : 2024-07-06T06:55:55.5555+05:30
+draft : true
+tags : 
+---
 
 ### Intro
 - The Dart language itself is implemented in C++ and Dart.

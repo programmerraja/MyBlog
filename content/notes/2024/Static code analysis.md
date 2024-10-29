@@ -1,9 +1,8 @@
-+++
-title = 'CodeQL'
-date = 2024-09-28T06:39:28.2828+05:30
-draft = true
-tags =[]
-+++ 
+---
+title : CodeQL
+date : 2024-09-28T06:39:28.2828+05:30
+draft : true
+---
 
 Static code analysis is the process of examining source code without actually executing it. This type of analysis helps in detecting potential errors, vulnerabilities, coding standard violations, and performance issues early in the development cycle. Static analysis tools automatically review the code to find issues like:
 

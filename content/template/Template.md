@@ -1,6 +1,6 @@
-+++
-title = '{{title}}'
-date = {{date}}
-draft = true
-tags =[]
-+++ 
+---
+title : {{title}}
+date : {{date}}
+draft : true
+tags : 
+--- 

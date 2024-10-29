@@ -1,9 +1,9 @@
-+++
-title = 'Python'
-date = 2024-05-09T12:16:34.3434+05:30
-draft = false
-tags =['notes']
-+++ 
+---
+title : Python
+date : 2024-05-09T12:16:34.3434+05:30
+draft : false
+tags : ['notes']
+---
 
 ## Data types
 

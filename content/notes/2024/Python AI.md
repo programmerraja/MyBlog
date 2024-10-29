@@ -1,9 +1,9 @@
-+++
-title = 'Python AI'
-date = 2024-07-01T07:14:30.3030+05:30
-draft = true
-tags =[]
-+++ 
+---
+title : Python AI
+date : 2024-07-01T07:14:30.3030+05:30
+draft : true
+tags : 
+---
 
 
 

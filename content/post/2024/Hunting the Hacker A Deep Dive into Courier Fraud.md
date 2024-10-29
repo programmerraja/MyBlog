@@ -1,9 +1,11 @@
-+++
-title = 'Hunting the Hacker: A Deep Dive into Courier Fraud'
-date = 2024-07-20T07:26:19.1919+05:30
-draft = false
-tags =['hacking','scam']
-+++ 
+---
+title: "Hunting the Hacker: A Deep Dive into Courier Fraud"
+date: 2024-07-20T07:26:19.1919+05:30
+draft: false
+tags:
+  - hacking
+  - scam
+---
 
 
 In today's digital age, cyber scams are becoming increasingly sophisticated. Recently, one of our colleagues received a suspicious call that led to an attempted scam. This blog post details our investigation into the scam, revealing the techniques used by the fraudsters and how we managed to thwart their efforts.

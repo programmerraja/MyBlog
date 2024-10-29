@@ -1,9 +1,9 @@
-+++
-title = 'Elastic search'
-date = 2024-03-30T20:20:04.044+05:30
-draft = false
-tags =[]
-+++ 
+---
+title : Elastic search
+date : 2024-03-30T20:20:04.044+05:30
+draft : false
+tags : 
+---
 
 ## Indexing
 

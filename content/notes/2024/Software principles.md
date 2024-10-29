@@ -1,9 +1,9 @@
-+++
-title = 'Software principles'
-date = 2024-01-21T10:14:59.5959+05:30
-draft = true
-tags =[]
-+++ 
+---
+title : Software principles
+date : 2024-01-21T10:14:59.5959+05:30
+draft : true
+tags : 
+---
 
 ## Stable Dependency Principle
 

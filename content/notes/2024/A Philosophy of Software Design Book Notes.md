@@ -1,10 +1,10 @@
 
-+++
-title = 'A Philosophy of Software Design Book Notes'
-date  = 2024-01-18T08:19:32.3232+05:30
-tags  = ['book']
-draft = false
-+++
+---
+title : A Philosophy of Software Design Book Notes'
+date  : 2024-01-18T08:19:32.3232+05:30
+tags  : ['book']
+draft : false
+---
 
 ## The Nature of Complexity
 

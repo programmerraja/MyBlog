@@ -1,11 +1,13 @@
-+++
-title = 'Code Against the Clock: From Clicks to Cash'
-date = 2024-08-22T06:19:10.1010+05:30
-draft = false
-tags =['code aganist the clock']
-+++ 
+---
+title: "Code Against the Clock : From Clicks to Cash"
+date: 2024-08-22T06:19:10.1010+05:30
+draft: false
+tags:
+  - code_against_clock
+  - youtube
+---
 
-Welcome back to **"Code Against the Clock!"** blog series where I’ll reveal how I turned my most boring tasks into streamlined, time-saving machines. I’ll share the exact steps I took to automate these chores and the cool tricks I discovered along the way. Ready to see how you can save time and make life a bit more exciting? Let’s dive in and get your tasks on autopilot!
+Welcome back to **": Code Against the Clock :!"** blog series where I’ll reveal how I turned my most boring tasks into streamlined, time-saving machines. I’ll share the exact steps I took to automate these chores and the cool tricks I discovered along the way. Ready to see how you can save time and make life a bit more exciting? Let’s dive in and get your tasks on autopilot!
 ## My Unexpected Online Hustle
 
 Let’s rewind to my college days. I was on a quest to find ways to earn some extra cash online while learning something new. During my research, I stumbled upon a service called Sbitly. The concept was intriguing: it’s a URL shortening platform where you paste a long link, and it gives you a shortened version. The twist? When people click on these shortened links, they first see an ad before being redirected to the original site. You get paid for each click, and it seemed like a neat way to earn money.

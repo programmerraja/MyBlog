@@ -1,8 +1,8 @@
-+++
-title = 'Hello world'
-date = 2023-12-03T09:44:50+05:30
-draft = false
-+++
+---
+title : Hello world
+date : 2023-12-03T09:44:50+05:30
+draft : false
+---
 
 # Hi, I'm K.Boopathi! 👋
 

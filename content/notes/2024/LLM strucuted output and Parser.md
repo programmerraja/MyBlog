@@ -1,9 +1,9 @@
-+++
-title = 'LLM strucuted output'
-date = 2024-10-19T08:15:27.2727+05:30
-draft = true
-tags =[]
-+++ 
+---
+title : LLM strucuted output
+date : 2024-10-19T08:15:27.2727+05:30
+draft : true
+tags : 
+---
 
 ## Pydantic
 

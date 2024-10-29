@@ -1,9 +1,9 @@
-+++
-title = 'Database internal book Notes'
-date  = 2024-01-12T08:19:32.3232+05:30
-tags  = ['database','book']
-draft = false
-+++
+---
+title : Database internal book Notes
+date : 2024-01-12T08:19:32.3232+05:30
+tags  : ['database','book']
+draft : false
+---
 
 ## Storage Engines
 

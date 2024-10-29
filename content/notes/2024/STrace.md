@@ -1,9 +1,9 @@
-+++
-title = 'STracek'
-date = 2024-04-07T09:29:16.1616+05:30
-draft = true
-tags =[]
-+++ 
+---
+title : STracek
+date : 2024-04-07T09:29:16.1616+05:30
+draft : true
+tags : 
+---
 
 `It allows you to trace system calls made by a process. System calls are the fundamental interfaces between user space and the kernel.`
 

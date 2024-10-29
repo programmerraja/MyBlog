@@ -1,9 +1,9 @@
-+++
-title = 'Tmux'
-date = 2024-08-03T15:34:53.5353+05:30
-draft = true
-tags =[]
-+++ 
+---
+title : Tmux
+date : 2024-08-03T15:34:53.5353+05:30
+draft : true
+tags : 
+---
 
 Terminal multiplexer
 

@@ -1,9 +1,9 @@
-+++
-title = 'LLM Observability And Eval'
-date = 2024-08-12T08:35:40.4040+05:30
-draft = false
-tags =[]
-+++ 
+---
+title : LLM Observability And Eval
+date : 2024-08-12T08:35:40.4040+05:30
+draft : false
+tags : 
+---
 
 ## Eval
 

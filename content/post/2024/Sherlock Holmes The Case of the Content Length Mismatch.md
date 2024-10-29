@@ -1,8 +1,13 @@
-+++
-title = 'Sherlock Homes: The Case of the Content Length Mismatch'
-date = 2024-06-28T20:18:56.5656+05:30
-tags =['debugging','webdev','backend','ngnix','Sherlock Holmes']
-+++ 
+---
+title: Sherlock Homes:The Case of the Content Length Mismatch
+date: 2024-06-28T20:18:56.5656+05:30
+tags:
+  - debugging
+  - webdev
+  - backend
+  - ngnix
+  - Sherlock
+---
 
 Welcome to our Sherlock Holmes-inspired tech adventure Series! Imagine each technical challenge as a thrilling mystery waiting to be solved. Like Sherlock Holmes with his sharp eye for detail, I'll tackle the problem with wit and precision. Let's dive in and crack these cases together!
 

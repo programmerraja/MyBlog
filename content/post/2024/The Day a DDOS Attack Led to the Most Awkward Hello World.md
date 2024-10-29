@@ -1,9 +1,12 @@
-+++
-title = "The Day a DDOS Attack Led to the World's Most Awkward 'Hello World'"
-date = 2024-10-02T06:57:18.1818+05:30
-draft = true
-tags =[]
-+++ 
+---
+title: The Day a DDOS Attack Led to the World's Most Awkward 'Hello World'
+date: 2024-10-02T06:57:18.1818+05:30
+draft: true
+tags:
+  - hacking
+  - funny
+  - cloudfare
+---
 
 Hey everyone, grab a coffee because I’ve got a funny (and slightly embarrassing) story to share! It’s all about how I turned our landing page and application into a personal "Hello World" greeting – but not for the world... for our own team.
 

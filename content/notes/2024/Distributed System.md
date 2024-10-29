@@ -1,9 +1,9 @@
-+++
-title = 'Distributed System'
-date = 2024-04-06T18:43:35.3535+05:30
-draft = true
-tags =[]
-+++ 
+---
+title : Distributed System
+date : 2024-04-06T18:43:35.3535+05:30
+draft : true
+tags : 
+---
 
 
 ## CRDT

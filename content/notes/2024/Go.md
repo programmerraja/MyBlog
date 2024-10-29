@@ -1,8 +1,8 @@
-+++
-title = 'Go'
-date = 2024-01-01T11:39:28.2828+05:30
-draft = false
-+++ 
+---
+title : Go
+date : 2024-01-01T11:39:28.2828+05:30
+draft : false
+---
 
 ## Introduction
 

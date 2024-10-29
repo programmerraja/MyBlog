@@ -1,9 +1,9 @@
-+++
-title = 'System Design Case study'
-date = 2024-04-20T16:45:15.1515+05:30
-draft = false
-tags =['system design','learning']
-+++ 
+---
+title : System Design Case study
+date : 2024-04-20T16:45:15.1515+05:30
+draft : false
+tags : ['system design','learning']
+---
 
 
 ## Database Scalling

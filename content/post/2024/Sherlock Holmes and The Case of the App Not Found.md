@@ -1,9 +1,12 @@
-+++
-title = 'Sherlock Holmes and The Case of the App Not Found'
-date = 2024-09-14T09:08:15.1515+05:30
-draft = true
-tags =[]
-+++ 
+---
+title: "Sherlock Holmes : The Case of the App Not Found"
+date: 2024-09-14T09:08:15.1515+05:30
+draft: false
+tags:
+  - Sherlock_holmes
+  - kubernetes
+  - heroku
+---
 
 Welcome to our Sherlock Holmes-inspired tech adventure Series! Imagine each technical challenge as a thrilling mystery waiting to be solved. Like Sherlock Holmes with his sharp eye for detail, I'll tackle the problem with wit and precision. Let's dive in and crack these cases together!
 

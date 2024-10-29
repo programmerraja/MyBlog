@@ -1,9 +1,9 @@
-+++
-title = 'ScyllaDB'
-date = 2024-07-08T07:51:40.4040+05:30
-draft = true
-tags =[]
-+++ 
+---
+title : ScyllaDB
+date : 2024-07-08T07:51:40.4040+05:30
+draft : true
+tags : 
+---
 
 
 ScyllaDB is a high-performance, highly available NoSQL database that is compatible with Apache Cassandra. It is designed to handle large-scale, real-time workloads with minimal latency.

@@ -1,9 +1,9 @@
-+++
-title = 'Design pattern'
-date = 2024-02-12T07:09:05.055+05:30
-draft = false
-tags =[]
-+++ 
+---
+title : Design pattern
+date : 2024-02-12T07:09:05.055+05:30
+draft : false
+tags : 
+---
 to rember the design pattern narrate it as real life story
 
 resources https://youtu.be/taj_inLi-pY?si=2qu_7nqx6YRwX0Co

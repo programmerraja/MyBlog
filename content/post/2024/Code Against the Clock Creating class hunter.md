@@ -1,12 +1,16 @@
-+++
-title = 'Code Against the Clock: Creating the class hunter'
-date = 2024-08-16T20:17:08.088+05:30
-draft = false
-tags =["automation","nodejs","Puppeteer",'code aganist the clock']
-+++ 
+---
+title: "Code Against the Clock : Creating the class hunter"
+date: 2024-08-16T20:17:08.088+05:30
+draft: false
+tags:
+  - automation
+  - nodejs
+  - Puppeteer
+  - code_against_clock
+---
 
 
-Hey there! Welcome to "**Code Against the Clock,"** blog series where I’ll reveal how I turned my most boring tasks into streamlined, time-saving machines. I’ll share the exact steps I took to automate these chores and the cool tricks I discovered along the way. Ready to see how you can save time and make life a bit more exciting? Let’s dive in and get your tasks on autopilot!
+Hey there! Welcome to "**: Code Against the Clock :,"** blog series where I’ll reveal how I turned my most boring tasks into streamlined, time-saving machines. I’ll share the exact steps I took to automate these chores and the cool tricks I discovered along the way. Ready to see how you can save time and make life a bit more exciting? Let’s dive in and get your tasks on autopilot!
 
 ### **The COVID-19 Pandemic: A Turning Point**
 

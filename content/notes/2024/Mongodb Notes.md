@@ -1,9 +1,9 @@
-+++
-title = 'Mongodb Notes'
-date = 2024-07-07T09:06:30.3030+05:30
-draft = true
-tags =[]
-+++ 
+---
+title : Mongodb Notes
+date : 2024-07-07T09:06:30.3030+05:30
+draft : true
+tags : 
+---
 
 
 ## Collection

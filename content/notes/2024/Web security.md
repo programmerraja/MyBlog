@@ -1,9 +1,9 @@
-+++
-title = 'Web security'
-date = 2024-08-31T08:39:15.1515+05:30
-draft = true
-tags =[]
-+++ 
+---
+title : Web security
+date : 2024-08-31T08:39:15.1515+05:30
+draft : true
+tags : 
+---
 
 ## CORS
 Before olden days where browser allow send request from same origin to different origin with creds which is bad and they introduces CORS

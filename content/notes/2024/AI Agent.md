@@ -1,9 +1,9 @@
-+++
-title = 'AI Agent'
-date = 2024-07-30T06:27:13.1313+05:30
-draft = false
-tags =[]
-+++ 
+---
+title : AI Agent
+date : 2024-07-30T06:27:13.1313+05:30
+draft : false
+tags : 
+---
 
 ## Multi-Agent Orchestrator
 Flexible and powerful framework for managing multiple AI agents and handling complex conversations

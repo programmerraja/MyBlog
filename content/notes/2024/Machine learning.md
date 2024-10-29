@@ -1,9 +1,9 @@
-+++
-title = 'Machine learning'
-date = 2024-05-29T05:31:06.066+05:30
-draft = true
-tags =[]
-+++ 
+---
+title : Machine learning
+date : 2024-05-29T05:31:06.066+05:30
+draft : true
+tags : 
+---
 
 
 

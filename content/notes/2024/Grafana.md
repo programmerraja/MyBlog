@@ -1,9 +1,9 @@
-+++
-title = 'Grafana'
-date = 2024-05-12T15:20:04.044+05:30
-draft = true
-tags =[]
-+++ 
+---
+title : Grafana
+date : 2024-05-12T15:20:04.044+05:30
+draft : true
+tags : 
+---
 
 
 **Prometheus Server**: This component is responsible for scraping and storing time-series data. It collects metrics from monitored targets by periodically scraping HTTP endpoints, allowing for flexible querying and visualization.

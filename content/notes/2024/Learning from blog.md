@@ -1,8 +1,10 @@
-+++  
-title = 'Learning from blog'  
-date = 2024-01-01T08:19:32.3232+05:30  
-draft = false  
-+++
+---
+title: Learning from blog
+date: 2024-01-01T08:19:32.3232+05:30
+draft: false
+---
+
+
 
 ## **[How LinkedIn Adopted Protocol Buffers to Reduce Latency by 60%](https://newsletter.systemdesign.one/p/protocol-buffers-vs-json)**
 

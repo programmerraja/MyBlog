@@ -20,6 +20,12 @@ section {
   color: var(--darkgray);
 }
 
+@media (max-width: 768px) {
+  body {
+      font-size: 0.875rem; /* 14 px */
+      line-height: 1.6;
+  }
+}
 .text-highlight {
   background-color: var(--textHighlight);
   padding: 0 0.1rem;
@@ -589,3 +595,24 @@ iframe.pdf {
   width: 100%;
   border-radius: 5px;
 }
+
+
+body {
+  font-size: 1.125rem; /* 18 px */
+  line-height: 1.6; /* 29 px */
+}
+
+// h1 {
+//   font-size: 2.5rem; /* 40 px */
+//   line-height: 1.3; /* 52 px */
+// }
+
+// h2 {
+//   font-size: 2rem; /* 32 px */
+//   line-height: 1.4; /* 45 px */
+// }
+
+// h3 {
+//   font-size: 1.75rem; /* 28 px */
+//   line-height: 1.4; /* 39 px */
+// }

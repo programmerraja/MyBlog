@@ -1,9 +1,9 @@
-+++
-title = 'Linux swiss knife'
-date = 2024-06-21T06:58:14.1414+05:30
-draft = true
-tags =[]
-+++ 
+---
+title : Linux swiss knife
+date : 2024-06-21T06:58:14.1414+05:30
+draft : true
+tags : 
+---
 
 
 

@@ -1,9 +1,9 @@
-+++
-title = 'Documentation'
-date = 2024-06-28T19:48:00.000+05:30
-draft = true
-tags =[]
-+++ 
+---
+title : Documentation
+date : 2024-06-28T19:48:00.000+05:30
+draft : true
+tags : 
+---
 
 
 ## Architectural Decisions Records

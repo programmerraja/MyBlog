@@ -1,9 +1,9 @@
-+++
-title = 'AI'
-date = 2024-05-18T18:29:19.1919+05:30
-draft = true
-tags =[]
-+++ 
+---
+title : AI
+date : 2024-05-18T18:29:19.1919+05:30
+draft : true
+tags : 
+---
 
 
 LLM contain 

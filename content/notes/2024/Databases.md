@@ -1,9 +1,9 @@
-+++
-title = 'Databases'
-date = 2024-03-03T07:34:21.2121+05:30
-draft = true
-tags =[]
-+++ 
+---
+title : Databases
+date : 2024-03-03T07:34:21.2121+05:30
+draft : true
+tags : 
+---
 
 
 ## ZippyDB

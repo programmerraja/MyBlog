@@ -1,9 +1,11 @@
-+++
-title = 'C-razy Facebook Hack: How I Pranked My Friend'
-date = 2024-08-18T09:45:17.1717+05:30
-draft = false
-tags =['hacking','prank']
-+++ 
+---
+title: C-razy Facebook Hack How I Pranked My Friend
+date: 2024-08-18T09:45:17.1717+05:30
+draft: false
+tags:
+  - hacking
+  - prank
+---
 
 
 It was my first year of college, and we were all working in the Python lab. My friends, who didn’t really know much about computers, seemed like the perfect targets for a harmless prank. They were excited but didn’t have a clue about the technical stuff I was up to. I saw an opportunity to have a little fun, knowing they’d fall for it because they didn’t know much about programming.

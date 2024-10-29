@@ -1,9 +1,9 @@
-+++
-title = 'How to capture mongodb protocol in  wireshark'
-date = 2024-02-12T08:28:27.2727+05:30
-draft = false
-tags =[]
-+++ 
+---
+title : How to capture mongodb protocol in  wireshark
+date : 2024-02-12T08:28:27.2727+05:30
+draft : false
+tags : 
+---
 
 `export SSLKEYLOGFILE=/tmp/tlskey.log`
 Run a nodejs program as `node --tls-keylog=/tmp/tlskey index.js` where the tls key will be stored on that path and add this tlskey path to wire shark to decrypt the msg by doing following

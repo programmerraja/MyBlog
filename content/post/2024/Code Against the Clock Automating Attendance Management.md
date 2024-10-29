@@ -1,11 +1,14 @@
-+++
-title = 'Code Against the Clock: Automating Attendance Management'
-date = 2024-08-31T12:13:53.5353+05:30
-draft = true
-tags =[]
-+++ 
+---
+title: "Code Against the Clock : Automating Attendance Management"
+date: 2024-08-31T12:13:53.5353+05:30
+draft: false
+tags:
+  - code_against_clock
+  - keka
+  - chrome_extension
+---
 
-Welcome back to **"Code Against the Clock!"** – the blog series where I transform mundane tasks into streamlined, time-saving marvels. Today, I'm thrilled to share a project where I turned a repetitive, manual chore into an automated powerhouse. Ready to see how you can save time and add a touch of excitement to your workflow? Let’s dive in!
+Welcome back to **": Code Against the Clock :!"** – the blog series where I transform mundane tasks into streamlined, time-saving marvels. Today, I'm thrilled to share a project where I turned a repetitive, manual chore into an automated powerhouse. Ready to see how you can save time and add a touch of excitement to your workflow? Let’s dive in!
 
 ## The Backstory
 

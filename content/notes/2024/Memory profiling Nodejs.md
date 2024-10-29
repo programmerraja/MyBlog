@@ -1,9 +1,9 @@
-+++
-title = 'Memory profiling'
-date = 2024-06-16T09:52:33.3333+05:30
-draft = true
-tags =[]
-+++ 
+---
+title : Memory profiling
+date : 2024-06-16T09:52:33.3333+05:30
+draft : true
+tags : 
+---
 
 
 A core dump is generated when a Node.js process encounters a critical error that it cannot recover from, such as segmentation faults, accessing invalid memory, or other fatal errors.

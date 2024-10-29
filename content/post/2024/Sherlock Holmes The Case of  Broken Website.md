@@ -1,11 +1,12 @@
-+++
-title = 'Sherlock Holmes and the Case of the Broken Website'
-date = 2024-07-11T05:15:01.011+05:30
-draft = false
-tags =['nginx','debugging']
-+++ 
-
-
+---
+title: "Sherlock Holmes: The Case of Broken Website"
+date: 2024-07-11T05:15:01.011+05:30
+draft: false
+tags:
+  - nginx
+  - debugging
+  - Sherlock_holmes
+---
 Welcome back to our series, where we unravel the mysteries of infrastructure issues with a touch of Sherlock Holmes flair. Today, we tackle a perplexing case involving our trusty web server, Nginx. The problem at hand? A broken website UI after a seemingly simple routing change.
 
 ### The Initial Clue: A Broken UI

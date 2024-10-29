@@ -1,9 +1,9 @@
-+++
-title = 'Data structure'
-date = 2024-10-12T13:48:34.3434+05:30
-draft = true
-tags =[]
-+++ 
+---
+title : Data structure
+date : 2024-10-12T13:48:34.3434+05:30
+draft : true
+tags : 
+---
 
 ## Patterns
 

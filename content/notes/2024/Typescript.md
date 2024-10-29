@@ -1,9 +1,9 @@
-+++
-title = 'Typescript'
-date = 2024-03-29T10:46:25.2525+05:30
-draft = true
-tags =[]
-+++ 
+---
+title : Typescript
+date : 2024-03-29T10:46:25.2525+05:30
+draft : true
+tags : 
+---
 
 String literal
 

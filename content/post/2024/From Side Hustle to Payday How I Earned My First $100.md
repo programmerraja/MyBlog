@@ -1,9 +1,11 @@
-+++
-title = 'From Side Hustle to Payday: How I Earned My First $100 with a MERN Stack Project'
-date = 2024-08-21T06:40:04.044+05:30
-draft = false
-tags =['projects','sidehustle']
-+++ 
+---
+title: "From Side Hustle to Payday: How I Earned My First $100 with a MERN Stack Project"
+date: 2024-08-21T06:40:04.044+05:30
+draft: false
+tags:
+  - projects
+  - sidehustle
+---
 
 ## **Turning Lockdown into Learning**
 

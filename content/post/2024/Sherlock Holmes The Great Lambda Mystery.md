@@ -1,8 +1,13 @@
-+++
-title = 'Sherlock Holmes: The Great Lambda Mystery'
-date = 2024-07-02T12:27:32.3232+05:30
-tags =['lambda','sherlock holmes','npm']
-+++ 
+---
+title: "Sherlock Holmes: The Great Lambda Mystery"
+date: 2024-07-02T12:27:32.3232+05:30
+tags:
+  - lambda
+  - sherlock
+  - holmes
+  - npm
+  - Sherlock_holmes
+---
 
 Welcome to our Sherlock Holmes-inspired tech adventure Series! Imagine each technical challenge as a thrilling mystery waiting to be solved. Like Sherlock Holmes with his sharp eye for detail, I'll tackle the problem with wit and precision. Let's dive in and crack these cases together!
 

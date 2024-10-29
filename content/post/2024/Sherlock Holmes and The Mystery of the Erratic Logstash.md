@@ -1,9 +1,11 @@
-+++
-title = 'Sherlock Holmes and The Mystery of the Erratic Logstash'
-date = 2024-09-03T05:57:21.2121+05:30
-draft = true
-tags =[]
-+++ 
+---
+title: "Sherlock Holmes : The Mystery of the Erratic Logstash"
+date: 2024-09-03T05:57:21.2121+05:30
+draft: false
+tags:
+  - Sherlock_holmes
+  - logstash
+---
 
 Welcome to our Sherlock Holmes-inspired tech adventure Series! Imagine each technical challenge as a thrilling mystery waiting to be solved. Like Sherlock Holmes with his sharp eye for detail, I'll tackle the problem with wit and precision. Let's dive in and crack these cases together!
 

@@ -1,9 +1,9 @@
-+++
-title = 'PostgreSQL'
-date = 2024-07-08T06:39:04.044+05:30
-draft = true
-tags =[]
-+++ 
+---
+title : PostgreSQL
+date : 2024-07-08T06:39:04.044+05:30
+draft : true
+tags : 
+---
 
 
 ## Internal

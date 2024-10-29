@@ -1,9 +1,9 @@
-+++
-title = 'Rust'
-date = 2024-07-31T06:33:42.4242+05:30
-draft = false
-tags =[]
-+++ 
+---
+title : Rust
+date : 2024-07-31T06:33:42.4242+05:30
+draft : false
+tags : 
+---
 
 
 Rust is static types language

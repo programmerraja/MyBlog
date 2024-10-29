@@ -1,8 +1,8 @@
-+++
-title = 'Networking Notes'
-date  = 2024-01-12T08:19:32.3232+05:30
-draft = false
-+++
+---
+title : Networking Notes
+date : 2024-01-12T08:19:32.3232+05:30
+draft : false
+---
 
 ## OSI Model
 

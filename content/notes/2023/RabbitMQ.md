@@ -1,8 +1,8 @@
-+++
-title = 'RabbitMQ Notes'
-date = 2023-12-08T18:26:15+05:30
-draft = false
-+++
+---
+title : RabbitMQ Notes
+date : 2023-12-08T18:26:15+05:30
+draft : false
+---
 
 
 ## What  is RabbitMQ?

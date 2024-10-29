@@ -1,9 +1,9 @@
-+++
-title = 'Weekend Learning'
-date = 2024-08-31T11:24:52.5252+05:30
-draft = true
-tags =[]
-+++ 
+---
+title : Weekend Learning
+date : 2024-08-31T11:24:52.5252+05:30
+draft : true
+tags : 
+---
 
 
 AUG 31- Sep 1

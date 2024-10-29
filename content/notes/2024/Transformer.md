@@ -1,9 +1,9 @@
-+++
-title = 'Transformer'
-date = 2024-06-22T10:48:42.4242+05:30
-draft = true
-tags =[]
-+++ 
+---
+title : Transformer
+date : 2024-06-22T10:48:42.4242+05:30
+draft : true
+tags : 
+---
 
 ## RNN
 

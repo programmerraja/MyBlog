@@ -1,9 +1,9 @@
-+++
-title = 'MeiliSearch'
-date = 2024-02-20T07:17:12.1212+05:30
-draft = true
-tags =[]
-+++ 
+---
+title : MeiliSearch
+date : 2024-02-20T07:17:12.1212+05:30
+draft : true
+tags : 
+---
 
 
 Documents in Meilisearch are loosely typed one field can have multiple data type
