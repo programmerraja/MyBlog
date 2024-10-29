@@ -8,8 +8,6 @@ tags:
   - Kubernetes
   - Sherlock_holmes
 ---
-
-
 Welcome to our series of infrastructure detective stories, where we unravel the mysteries lurking within our systems In this episode, we tackle a perplexing problem: our Nginx server inside Kubernetes was logging an IP address that didn't match the actual user IP. Join me as we unravel the mystery and uncover the truth behind the missing IP.
 
 ### The Mysterious IP

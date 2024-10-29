@@ -7,7 +7,6 @@ tags:
   - scam
 ---
 
-
 In today's digital age, cyber scams are becoming increasingly sophisticated. Recently, one of our colleagues received a suspicious call that led to an attempted scam. This blog post details our investigation into the scam, revealing the techniques used by the fraudsters and how we managed to thwart their efforts.
 
 ### The Call
@@ -24,9 +23,14 @@ As I delved into the code, I searched for URLs that might indicate where the app
 
 Continuing my investigation, I found a suspicious line of code: `this.webView.loadUrl("file:///android_asset/index.html");`. This indicated that the app was loading a local HTML file. I examined the contents of `index.html` and found two images of parcels and a form requesting an address and payment amount. Clicking 'Next' on the form led to another page asking for UPI payment details, including phone number, bank name, and UPI ID.
 
+![[Pasted image 20241029075644.png]]
+
+![[Pasted image 20241029075654.png]]
 ### The Scam Unveiled
 
 The final piece of the puzzle was found in the source code of the payment page. It showed that the form was sending a payload containing the UPI ID and other details to a server at `https://sonuv.parceltracing.com/%24Gh3_%402%26E*(b%5E%409%23L6K%40/success.php`. This was how the scammers were attempting to steal UPI IDs and potentially siphon money from unsuspecting victims.
+
+![[Pasted image 20241029075705.png]]
 
 ### The Counterattack
 

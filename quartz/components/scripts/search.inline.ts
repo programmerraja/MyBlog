@@ -532,4 +532,6 @@ document.addEventListener("nav", () => {
 
 document.querySelector(".hamburger")?.addEventListener("click", () => {
   document.querySelector("#mobile-links")?.classList.toggle("active")
+
+  document.querySelector(".hamburger")?.classList.toggle("active")
 })

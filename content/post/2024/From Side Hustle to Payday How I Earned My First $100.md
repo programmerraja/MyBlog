@@ -6,7 +6,6 @@ tags:
   - projects
   - sidehustle
 ---
-
 ## **Turning Lockdown into Learning**
 
 During the lockdown—a period when the world seemed to hit pause—many of us found ourselves with more time than ever before. As classes shifted online and social media became a black hole of endless scrolling, I decided to use this time productively. My choice? To dive into the MERN stack, a powerful web development suite consisting of MongoDB, Express.js, React, and Node.js.

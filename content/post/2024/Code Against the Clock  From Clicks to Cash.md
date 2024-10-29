@@ -6,7 +6,6 @@ tags:
   - code_against_clock
   - youtube
 ---
-
 Welcome back to **": Code Against the Clock :!"** blog series where I’ll reveal how I turned my most boring tasks into streamlined, time-saving machines. I’ll share the exact steps I took to automate these chores and the cool tricks I discovered along the way. Ready to see how you can save time and make life a bit more exciting? Let’s dive in and get your tasks on autopilot!
 ## My Unexpected Online Hustle
 
@@ -39,15 +38,3 @@ You can find the code for this project [here](https://github.com/programmerraja/
 Have you ever automated a task using code? Share your experiences and tips in the comments below! What tasks do you wish you could automate? Let's discuss!
 
 Thanks for joining me on this automation journey. Don’t forget to subscribe to my blog for more tips and updates. Happy coding!
-
-
-
-
-
-
-
-```
-#### **1. Background:** - **Setting:** A lively digital workspace or a tech-themed room filled with elements like computers, code snippets, and browser windows. The background can have a vibrant mix of colors to reflect excitement and innovation. #### **2. Main Characters:** - **Automator Character:** - **Appearance:** A cartoon character representing you, dressed as a tech wizard or automation guru. and a lab coat to emphasize the “techie” aspect and he was a college studuent - **Expression:** Focused and enthusiastic, interacting with multiple screens or devices. - **Selenium Browser Bot:** - **Appearance:** A friendly robot or an assistant character, perhaps with a selenium logo or gear symbol, assisting in the automation process. - **Expression:** Helpful and cheerful, working alongside the main character. #### **3. Key Visual Elements:** - **Python Code:** Show snippets of Python code or a Python logo in the background or on a computer screen, highlighting the tool used for automation. - **Selenium Browser Window:** Display a browser window with elements like URL fields and buttons being clicked or filled in, emphasizing the automation of web interactions. - **URL Shortening:** Illustrate the process of pasting and shortening a URL, maybe with a URL shrinking into a short form with a “click” animation effect. - **Facebook Integration:** Show a cartoon Facebook post being created with the shortened URL, with likes and shares popping up to signify the social media aspect. #### **4. Title Text:** - **Text:** "Automating Money earning: Python & Selenium Magic!" - **Font:** Bold and modern font, with playful accents to match the cartoon theme. Consider using tech-inspired fonts or styles. #### **5. Additional Details:** - **Exciting Colors:** Use a bright color palette with blues, greens, and oranges to make the image eye-catching and dynamic. #### **Visual Composition:** - **Foreground:** Place the main characters prominently in the center, actively engaging with the automation tasks. - **Background:** Incorporate elements related to code, web automation, and social media in a way that adds context without cluttering the image. - **Title Placement:** Position the title text at the top or bottom of the image, ensuring it stands out against the background. 
-
-NOTE: image size need to be in 1200px width and 630 height
-```

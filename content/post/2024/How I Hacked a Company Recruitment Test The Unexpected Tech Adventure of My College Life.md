@@ -5,8 +5,6 @@ draft: false
 tags:
   - hacking
 ---
-
-
 Ah, college life! The thrill of final year comes with the excitement of job placements. We all know the drill: companies come to campus, conduct aptitude tests, coding challenges, and sometimes, we get to showcase our skills in a high-stakes interview. But what if I told you that one of those tests turned into an unexpected adventure involving a bit of hacking? Buckle up as I share how I turned a routine exam into an impromptu tech experiment—and how it all unfolded.
 
 ### The Recruitment Challenge

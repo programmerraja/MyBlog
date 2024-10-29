@@ -320,7 +320,7 @@ pre:hover>.clipboard-button {
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 450px;
+  // max-width: 450px;
   height: 100vh;
   font-size: 3rem;
   transition: all .3s;
@@ -339,7 +339,7 @@ pre:hover>.clipboard-button {
   color: black;
 }
 .top-nav {
-  background-color: var(--darkblue);
+  background-color: #511ac7b0;
   z-index: 900;
   padding: 1rem;
   display: flex;
@@ -355,6 +355,7 @@ pre:hover>.clipboard-button {
   width: 40px;
   height: 50px;
   margin-left: auto;
+  margin-right: 10px;
   position: relative
 }
 
@@ -378,8 +379,13 @@ pre:hover>.clipboard-button {
   top: 75%
 }
 
+.hamburger.active span{
+  background-color: black;
+}
+
 .hamburger.active span {
-  background-color: var(--darkblue)
+  background-color: black;
+
 }
 
 .hamburger.active span:first-child {

@@ -8,7 +8,6 @@ tags:
   - ngnix
   - Sherlock
 ---
-
 Welcome to our Sherlock Holmes-inspired tech adventure Series! Imagine each technical challenge as a thrilling mystery waiting to be solved. Like Sherlock Holmes with his sharp eye for detail, I'll tackle the problem with wit and precision. Let's dive in and crack these cases together!
 
 Running a website smoothly is akin to maintaining a finely-tuned machine. Yet, like any mystery tale, unexpected twists can disrupt the flow. Recently, our team faced a perplexing error while serving our website: `Failed to load resource: net::ERR_CONTENT_LENGTH_MISMATCH` in Chrome. Join us as we unravel this digital whodunit and uncover how we cracked the case, restoring our site's seamless operation.
@@ -17,6 +16,7 @@ Running a website smoothly is akin to maintaining a finely-tuned machine. Yet, l
 
 It all started with user reports of intermittent loading issues on our website. I  quickly jumped into action, opening Chrome's developer console to gather more clues. There it was, staring back at me: `Failed to load resource: net::ERR_CONTENT_LENGTH_MISMATCH`. This error suggested that the content length specified in the response header did not match the actual length of the content served. But why?
 
+![[Pasted image 20241029075441.png]]
 ## Considering the Usual Suspects 
 
 With the error in hand, we began to consider the usual suspects:

@@ -28,13 +28,13 @@ export default ((userOpts?: Partial<SearchOptions>) => {
           </div>
           <div className="desktop-only">
             <div className="flex header-links">
-              <a className="header-link" href="/blog/post">
+              <a className="header-link" href="/post">
                 Blog
               </a>
-              <a className="header-link" href="/blog/notes">
+              <a className="header-link" href="/notes">
                 Notes
               </a>
-              <a className="header-link" href="/blog/contact">
+              <a className="header-link" href="/contact">
                 Contact
               </a>
               <DarkModeComp displayClass={displayClass} cfg={cfg} />
@@ -57,13 +57,13 @@ export default ((userOpts?: Partial<SearchOptions>) => {
               </div>
               <div id="mobile-links" className="off-screen-menu">
                 <div className="mobile-header-links">
-                  <a className="header-link" href="/blog/post">
+                  <a className="header-link" href="/post">
                     Blog
                   </a>
-                  <a className="header-link" href="/blog/notes">
+                  <a className="header-link" href="/notes">
                     Notes
                   </a>
-                  <a className="header-link" href="/blog/contact">
+                  <a className="header-link" href="/contact">
                     Contact
                   </a>
                   <DarkModeComp displayClass={displayClass} cfg={cfg} />

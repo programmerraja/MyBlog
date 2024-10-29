@@ -477,7 +477,7 @@ code {
 tbody,
 li,
 p {
-  line-height: 1.6rem;
+  line-height: 2.0rem;
 }
 
 .table-container {
@@ -616,3 +616,17 @@ body {
 //   font-size: 1.75rem; /* 28 px */
 //   line-height: 1.4; /* 39 px */
 // }
+@media (max-width: 480px) {
+  body p {
+      font-size: 0.875rem !important ; /* 14 px */
+  }
+  h1 {
+      font-size: 1.3rem !important ; /* 24 px */
+  }
+  h2 {
+      font-size: 1.1rem !important ; /* 20 px */
+  }
+  h3 {
+      font-size: 1.125rem !important ; /* 18 px */
+  }
+}

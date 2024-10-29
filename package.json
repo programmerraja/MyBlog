@@ -13,8 +13,8 @@
   },
   "scripts": {
     "quartz": "./quartz/bootstrap-cli.mjs",
-    "build": "npx quartz build -o public/blog --concurrency=2",
-    "dev": "npx quartz build --serve --concurrency=2",
+    "build": "npx quartz build -o public/blog --concurrency=2 && rm -rf ./public/Images ./public/notes ./public/post ./public/static ./public/tags &&  mv -f ./public/blog/* ./public/ && rm -r ./public/blog",
+    "dev": "npx quartz build -o public/blog --serve --concurrency=2",
     "check": "tsc --noEmit && npx prettier . --check",
     "format": "npx prettier . --write",
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1"

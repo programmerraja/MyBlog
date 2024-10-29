@@ -9,8 +9,6 @@ tags:
   - python
   - code_against_clock
 ---
-
-
 Welcome back to ": Code Against the Clock :!" blog series where I’ll reveal how I turned my most boring tasks into streamlined, time-saving machines. I’ll share the exact steps I took to automate these chores and the cool tricks I discovered along the way. Ready to see how you can save time and make life a bit more exciting? Let’s dive in and get your tasks on autopilot!
 
 ## **A Solution to Balancing Content Creation with Busy Schedules**
