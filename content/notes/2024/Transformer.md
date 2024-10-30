@@ -544,7 +544,25 @@ In this we just quantization matrix value from 32 bit to 8 Bit
 - An optimized variant of LoRA where matrix B gets a higher learning rate.
 This tweak leads to faster and more effective learning.
 
+Resources
+- [LLORA  for finetuning](https://lightning.ai/lightning-ai/studios/code-lora-from-scratch)
+- [Fine tune LLMs 2024](https://www.philschmid.de/fine-tune-llms-in-2024-with-trl)
 
+
+
+### LLM traning methods
+
+**Causal Language Modeling (CLM)**
+
+CLM is an autoregressive method where the model is trained to predict the next token in a sequence given the previous tokens. CLM is used in models like GPT-2 and GPT-3 and is well-suited for tasks such as text generation and summarization. However, CLM models have unidirectional context, meaning they only consider the past and not the future context when generating predictions.
+
+**Masked Language Modeling (MLM)**
+
+MLM is a training method used in models like BERT, where some tokens in the input sequence are masked, and the model learns to predict the masked tokens based on the surrounding context. MLM has the advantage of bidirectional context, allowing the model to consider both past and future tokens when making predictions. This approach is especially useful for tasks like text classification, sentiment analysis, and named entity recognition.
+
+**Sequence-to-Sequence (Seq2Seq)**
+
+Seq2Seq models consist of an encoder-decoder architecture, where the encoder processes the input sequence and the decoder generates the output sequence. This approach is commonly used in tasks like machine translation, summarization, and question-answering. Seq2Seq models can handle more complex tasks that involve input-output transformations, making them versatile for a wide range of NLP tasks.
 ## Resources
 
 - [Deconstructing BERT Part 2: Visualizing the Inner Workings of Attention](https://towardsdatascience.com/deconstructing-bert-part-2-visualizing-the-inner-workings-of-attention-60a16d86b5c1)

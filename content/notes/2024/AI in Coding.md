@@ -6,14 +6,6 @@ tags:
   - genrative_ai
   - AI
 ---
-
-
-Discover vulnerabilities across a codebase with CodeQL, our industry-leading semantic code analysis engine. CodeQL lets you query code as though it were data. Write a query to find all variants of a vulnerability, eradicating it forever. Then share your query to help others do the same. 
-https://codeql.github.com/
-
-
-
-
 ## Agents in Software Engineering
 
 LLM-based agents comprising three key components: perception, memory, action.

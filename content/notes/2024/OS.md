@@ -6,8 +6,6 @@ tags:
   - notes
   - os
 ---
-
-
 ## Virtual Memory
 
   A CPU register that can store 32 bits can theoretically address 2 pow (32) different memory locations which 0.5 GB. let say a two program need 200 MB of space to run and 3rd one need 300MB to run if close one 200MB process 

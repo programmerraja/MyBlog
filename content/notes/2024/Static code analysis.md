@@ -19,6 +19,9 @@ CodeQL enables you to query code as though it were data. Write a query to find a
 
 Working with **CodeQL** involves setting up the tool, creating or running predefined queries, and analyzing the results. Here’s a step-by-step guide to get started with **CodeQL**:
 
+Discover vulnerabilities across a codebase with CodeQL, our industry-leading semantic code analysis engine. CodeQL lets you query code as though it were data. Write a query to find all variants of a vulnerability, eradicating it forever. Then share your query to help others do the same. 
+https://codeql.github.com/
+
 ### 1. **Install CodeQL CLI**
 The CodeQL CLI (Command-Line Interface) is required to create and analyze databases from your source code. Follow these steps to install it:
 

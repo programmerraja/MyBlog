@@ -6,150 +6,123 @@ tags:
   - devops
   - hacking
 ---
-
-
 ## Tools
 
-Checks whether Kubernetes is deployed according to security best practices as defined in the CIS Kubernetes Benchmark
-https://github.com/aquasecurity/kube-bench 
+1. **Kube-bench**
+   - Checks Kubernetes deployment against the CIS Kubernetes Benchmark.
+   - [GitHub Repository](https://github.com/aquasecurity/kube-bench)
 
-Popeye is a utility that scans live Kubernetes clusters and reports potential issues with deployed resources and configurations
-https://popeyecli.io/
+2. **Popeye**
+   - Scans live Kubernetes clusters for potential issues with resources and configurations.
+   - [Popeye CLI](https://popeyecli.io/)
 
-Hunt for security weaknesses in Kubernetes clusters python script wil look for opened ports and list all and what are the info that can be accessed
+3. **Kube-hunter**
+   - Hunts for security weaknesses in Kubernetes clusters by checking for open ports and accessible information.
+   - Can be run inside a pod to access the Kubernetes API token.
+   - [GitHub Repository](https://github.com/aquasecurity/kube-hunter)
 
-run inside POD it will access the token and do 
+4. **Sonobuoy**
+   - Certifies Kubernetes clusters.
+   - [Sonobuoy Documentation](https://sonobuoy.io/certifying-kubernetes-with-sonobuoy/)
 
-https://github.com/aquasecurity/kube-hunter
+## Security Practices
 
-https://sonobuoy.io/certifying-kubernetes-with-sonobuoy/ 
+### Container Best Practices
+- Run containers as non-root users.
+- Use distroless images (only include language runtimes).
+- Isolate the network for enhanced security.
 
+### Admission Controllers
 
+- **Open Policy Agent**
+  - A powerful policy engine for enforcing security and compliance.
+  - [Open Policy Agent](https://www.openpolicyagent.org/)
 
-## Notes
+### Activity Monitoring
 
-Run a container as noon root
-use distroless images (only have language runtime )
-isolate the network 
+- Set up alerts for unusual activities, such as:
+  - Container executions
+  - Creation of new services
+- **Monitoring Tools:**
+  - [Falco](https://falco.org/)
 
-Admission controller
-1. [Open policy agent ](https://www.openpolicyagent.org/)
+### Image Scanning
 
-Activities monitoring
+1. [Clair](https://github.com/quay/clair) - Static analysis for vulnerabilities.
+2. [Trivy](https://github.com/aquasecurity/trivy) - User-friendly vulnerability scanner.
+3. Copacetic - Used to patch vulnerabilities reported by Trivy.
+4. Sysdig - Another option for image scanning.
 
-Getting alerts when container exec , new service created etc that are weired.
-tools [Falco](https://falco.org/)  
+### Access Control
 
-Image scanning
-1. [Clair](https://github.com/quay/clair)
-2. [trivy](https://github.com/aquasecurity/trivy) It is easy compare to clair
-3. copacetic (used to patch the bug reported by trivy)
-4. 
-5. sysdig
+- Every pod can access its service account token, allowing it to call the Kubernetes API at:
+  - `https://kubernetes/api/v1/namespaces/default`
 
+### Playground
+- **Kubernetes Goat**: A "Vulnerable by Design" cluster environment to learn and practice Kubernetes security.
+  - [Kubernetes Goat GitHub](https://github.com/madhuakula/kubernetes-goat)
 
-Every pod can access the token that will can call kube API 
- 
-we can use this token to acess the kube API  `https://kubernetes/api/v1/namespaces/default`
+### Security Enhancements
+- Set `automountServiceAccountToken` to `false` in ServiceAccount configurations.
 
-
-Playground
-
-Kubernetes Goat is a "Vulnerable by Design" cluster environment to learn and practice Kubernetes security using an interactive hands-on playground https://github.com/madhuakula/kubernetes-goat
-
-The ServiceAccount and Pod configurations in this application's Namespace is using the default `automountServiceAccountToken` setting of `true` so set as false
-don't run a pod as root user
-```
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: beta
-automountServiceAccountToken: false
-```
-communication between pods are unencrypted
-By default secrets are not encrypted any one can view so encrypt and store it use vault
-
-secure the etcd 
-
-[Configure a Security Context for a Pod or Container](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/)
-
-Pods can communicate with any other pod even in different namespace so add network policy
-
-AKS security best practice
-1. Block ip to access api server
-2. Microsoft defender for AKS
-3. Rotate kubelete certificate
-
-Set following security context in pod ymal file
-
-```
-securityContext
-	allowPrivilegeEscalation:false
-	readOnlyRootFileSystem:true
-	runAsUser:1000 #(userId )
+```yaml
+  apiVersion: v1
+  kind: ServiceAccount
+  metadata:
+    name: beta
+  automountServiceAccountToken: false
 ```
 
+- Ensure that pods do not run as root users.
+- Encrypt secrets before storing them, using tools like HashiCorp Vault.
+- Secure etcd.
+- Configure network policies to restrict pod communication across namespaces.
 
- `privileged: true`  in a Kubernetes securityContext YAML file effectively grants the container access to the node's resources. When a container runs with `privileged: true`, it essentially gains access to all system resources on the node where it's scheduled.
-# Pod Security Admission
-The Kubernetes [Pod Security Standards](https://kubernetes.io/docs/concepts/security/pod-security-standards/) define different isolation levels for Pods. These standards let you define how you want to restrict the behavior of pods in a clear, consistent fashion.
+### Pod Security Admission
+- Implement the [Pod Security Standards](https://kubernetes.io/docs/concepts/security/pod-security-standards/) to define pod isolation levels.
 
-some best practice to follow
-https://github.com/snyk-labs/kubernetes-goof/blob/main/workshop/03-mitigations.md
+### Security Context for Pods
 
-Resources
-1. https://kubernetes.io/docs/concepts/security/pod-security-admission/
-2. https://gcollazo.com/the-security-footgun-in-etcd/
-- [K8s SIG-Security](https://github.com/kubernetes/sig-security)
-- [CNCF TAG-Security](https://github.com/cncf/tag-security)
-- [K8s SIG-Nework](https://github.com/kubernetes/community/tree/master/sig-network)
-- [OpenSSF](https://openssf.org/)
+Set the following security context in the pod YAML file:
+```yaml
+securityContext:
+  allowPrivilegeEscalation: false
+  readOnlyRootFilesystem: true
+  runAsUser: 1000 # (userId)
+```
 
+- Avoid using `privileged: true` in a Kubernetes securityContext, as it grants the container access to the node's resources.
 
-https://github.com/ahmetb/kubernetes-network-policy-recipes
-https://networkpolicy.io/
+---
 
+## Additional Best Practices for AKS
+1. Block IP access to the API server.
+2. Use Microsoft Defender for AKS.
+3. Rotate kubelet certificates.
 
-
-https://attack.mitre.org/ MITRE ATT&CK® is a globally-accessible knowledge base of adversary tactics and techniques based on real-world observations. The ATT&CK knowledge base is used as a foundation for the development of specific threat models and methodologies in the private sector, in government, and in the cybersecurity product and service community
-
-
-
-
-
-
-
-
-
-
-
-#### Finding container service on internet
-1. https://search.censys.io/
-2. https://www.binaryedge.io/
-3. https://www.shodan.io/search
+## Finding Container Services on the Internet
+1. [Censys](https://search.censys.io/)
+2. [BinaryEdge](https://www.binaryedge.io/)
+3. [Shodan](https://www.shodan.io/search)
 
 
-#### OWASP Kubernetes Top Ten
-https://owasp.org/www-project-kubernetes-top-ten/
+## Tools for Attacking and Scanning
+- [KubeHound](https://github.com/DataDog/KubeHound) - Automated calculation of attack paths in a cluster.
+- [Netfetch](https://github.com/deggja/netfetch) - Scans clusters for network policies and identifies unprotected workloads.
 
-
-Attacking kubelet
-1. https://www.cyberark.com/resources/threat-research-blog/using-kubelet-client-to-attack-the-kubernetes-cluster
-
-
-https://attack.mitre.org/ -> globally-accessible knowledge base of adversary tactics and techniques based on real-world observations.
-
-https://security.googleblog.com/2022/05/privileged-pod-escalations-in.html 
-
-## Docker
-
-`docker run -ti --previliged -net=host -pid=host --ipc=host --volume/:/host busybox chroot /host`  ->give the container unrestricted access to the host's resources.
-
-#### Tool
-- [A Kubernetes attack graph tool allowing automated calculation of attack paths between assets in a cluster ](https://github.com/DataDog/KubeHound?tab=readme-ov-file)
-- [Kubernetes tool for scanning clusters for network policies and identifying unprotected workloads.](https://github.com/deggja/netfetch) 
-
+## Docker Security
+- The command `docker run -ti --privileged --net=host --pid=host --ipc=host --volume /:/host busybox chroot /host` gives the container unrestricted access to the host's resources.
 
 ## Resources
-- https://www.armosec.io/blog/
-- https://cloud.hacktricks.xyz/pentesting-cloud/kubernetes-security
+- [Kubernetes Pod Security Admission](https://kubernetes.io/docs/concepts/security/pod-security-admission/)
+- [Kubernetes Security Footgun in etcd](https://gcollazo.com/the-security-footgun-in-etcd/)
+- [K8s SIG-Security](https://github.com/kubernetes/sig-security)
+- [CNCF TAG-Security](https://github.com/cncf/tag-security)
+- [K8s SIG-Network](https://github.com/kubernetes/community/tree/master/sig-network)
+- [OpenSSF](https://openssf.org/)
+- [Kubernetes Network Policy Recipes](https://github.com/ahmetb/kubernetes-network-policy-recipes)
+- [Attack MITRE ATT&CK®](https://attack.mitre.org/)
+- [OWASP Kubernetes Top Ten](https://owasp.org/www-project-kubernetes-top-ten/)
+- [CyberArk: Attacking Kubelet](https://www.cyberark.com/resources/threat-research-blog/using-kubelet-client-to-attack-the-kubernetes-cluster)
+-  [Armosec Blog](https://www.armosec.io/blog/)
+- [HackTricks: Pentesting Cloud Kubernetes Security](https://cloud.hacktricks.xyz/pentesting-cloud/kubernetes-security)

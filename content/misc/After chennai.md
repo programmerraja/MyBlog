@@ -29,3 +29,4 @@ Docker commit
 after diwali nov 1
 - need to create sheet for how much i am investing etc what amount  i need for future does i have 
 - what plan i have for x happens etc.
+- Look for opensource repo to contribute

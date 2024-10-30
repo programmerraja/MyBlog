@@ -4,8 +4,6 @@ date : 2024-01-17T08:19:32.3232+05:30
 tags  : ['android']
 draft : false
 ---
-
-
 ## File system
 Android devices typically have a partitioned storage system, where the storage is divided into different partitions, each serving a specific purpose.
 
@@ -80,7 +78,6 @@ CMD line tool it allows developers to communicate with and control Android devic
 
 #### How to connect
 1. Install **adb** pkg in linux by `sudo apt install adb`
-
 
 
 ## The FastBoot Protocol
