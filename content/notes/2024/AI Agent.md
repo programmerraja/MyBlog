@@ -125,6 +125,68 @@ Mean pooling in Natural Language Processing (NLP) is a technique used to create 
 1. **Tokenization**: The input text is split into tokens (words, subwords, or characters).
 2. **Embedding**: Each token is mapped to a corresponding vector using an embedding layer (e.g., pre-trained embeddings like Word2Vec, GloVe, or BERT embeddings).
 3. **Mean Pooling**: The vectors of all the tokens in the sequence are averaged to produce a single vector. This can be done by summing the vectors and then dividing by the total number of tokens.
+
+### Astute RAG
+
+To solve the potential conflicts arise between the LLMs’ internal knowledge and external sources. let say what is captial of india? for this LLM answer will be new delhi but we added the context using RAG that has `new york` so there will be conflict to resolve this they introduced this method
+
+**How it works**
+- First Astute RAG prompts the LLM with the question and asks it to generate a passage based on its internal knowledge
+- Astute RAG combines the generated passage with the retrieved ones using RAG, marking their sources.
+- It might go through a few iterations, prompting the LLM to further refine the information by sending both context and asking for good one
+
+**Prompt for first step**
+
+```
+Generate a document that provides accurate and relevant information to answer the given question. If the information is unclear or uncertain, explicitly state ’I don’t know’ to avoid any hallucinations. Question: {question} Document
+```
+
+
+Prompt for Iterative Knowledge Consolidation: 
+
+```
+Consolidate information from both your own memorized documents and externally retrieved documents in response to the given question. * For documents that provide consistent information, cluster them together and summarize the key details into a single, concise document. * For documents with conflicting information, separate them into distinct documents, ensuring each captures the unique perspective or data. * Exclude any information irrelevant to the query. For each new document created, clearly indicate: Whether the source was from memory or an external retrieval. 
+The original document numbers for transparency. 
+Initial Context: {context} 
+Last Context: {context} 
+Question: {question} 
+New Context
+
+```
+
+Final prompt
+
+```
+Task: Answer a given question using the consolidated information from both your own
+
+memorized documents and externally retrieved documents.
+
+Step 1: Consolidate information
+
+* For documents that provide consistent information, cluster them together and summarize the key details into a single, concise document.
+* For documents with conflicting information, separate them into distinct documents, ensuring each captures the unique perspective or data.
+* Exclude any information irrelevant to the query.For each new document created, clearly indicate:
+* Whether the source was from memory or an external retrieval.
+* The original document numbers for transparency.
+
+Step 2: Propose Answers and Assign Confidence For each group of documents, propose a possible answer and assign a confidence score based on the credibility and agreement of the information.
+
+Step 3: Select the Final Answer
+
+After evaluating all groups, select the most accurate and well-supported answer.
+
+Highlight your exact answer within <ANSWER> your answer </ANSWER>.
+
+Initial Context: {context_init}
+
+[Consolidated Context: {context}] # optional
+
+Question: {question}
+
+Answer:
+```
+
+`Note: This method only work  if LLM has some knoweledge about the question`
 ### Resources
 
 **Frameworks and Toolkits for RAG (Retrieval-Augmented Generation)**:

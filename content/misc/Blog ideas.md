@@ -15,7 +15,7 @@
 	- [x] How i save my Pm time by automating JIRA
 	- [x] How i save our Markting team time by webscraping
 - [ ] Folder exposing
-- [ ] Two if check cost (learn by doing series)
+- [x] Two if check cost (learn by doing series)
 - [x] How i earn my first 100 using MERN stack
 - [ ] Weekend learning 
 - [ ] Unsolved mysteries (ip timeout vault etc.,Meilisearch permission deined)
