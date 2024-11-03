@@ -380,6 +380,9 @@ server_tokens off;
     
 2. **Forces the browser to respect the declared content type**: By sending the `X-Content-Type-Options: nosniff` header, you're instructing the browser to trust the MIME type provided by the server and not try to infer it.
 
+#### [ModSecurity](https://modsecurity.org/)
+- ModSecurity is an open source, cross platform web application firewall (WAF) engine for Apache, IIS and Nginx. It has a robust event-based programming language which provides protection from a range of attacks against web applications and allows for HTTP traffic monitoring, logging and real-time analysis.
+
 ## Alternative
 #### [Envoy](https://www.envoyproxy.io/docs/envoy/latest/)
 it is layer 7 proxy and use Yaml extension for config

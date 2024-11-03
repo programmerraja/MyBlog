@@ -61,12 +61,16 @@ algorithms commonly used for similarity search indexing
 
 
 
-**Some vector DB**
+**vector DB**
 - Pinecone
 - Chroma
 - Milvus
 - Qdrant
 - weaviate
+
+## Postgress Vector DB
+
+
 
 
 https://milvus.io/  

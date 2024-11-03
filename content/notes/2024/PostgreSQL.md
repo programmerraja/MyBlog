@@ -57,3 +57,137 @@ Postgres to create a robust search engine. We’ll combine three techniques:
 2. Semantic search with `pgvector`
 3. Fuzzy matching with `pg_trgm`
 4. Bonus: BM25
+
+
+
+## Procedural languages
+
+PostgreSQL supports multiple procedural languages that allow you to write more complex logic and functions directly within the database. These procedural languages expand the capabilities of SQL by allowing you to use control structures like loops, conditionals, and variables,
+
+### 1. PL/pgSQL (Procedural SQL)
+
+- **Description**: PL/pgSQL (Procedural Language/PostgreSQL) is the default and most widely used procedural language in PostgreSQL. It is specifically designed for PostgreSQL and is similar to Oracle’s PL/SQL.
+- **Features**:
+    - Supports control structures (like loops, `IF` statements).
+    - Allows declaring variables and creating complex expressions.
+    - Supports exception handling, allowing you to catch and manage errors.
+    - Able to work closely with SQL, making it ideal for data-centric applications.
+- **Use Cases**:
+    - Creating complex stored procedures and triggers that need to perform conditional logic.
+    - Optimizing operations that need to be done frequently and should be close to the data.
+
+```sql
+CREATE FUNCTION calculate_discount(price NUMERIC, discount NUMERIC) RETURNS NUMERIC AS $$
+BEGIN
+    RETURN price * (1 - discount);
+END;
+$$ LANGUAGE plpgsql;
+
+```
+### 2. PL/Python
+
+- **Description**: PL/Python allows you to use Python to write functions in PostgreSQL. It’s useful for leveraging Python's libraries and for users familiar with Python.
+- **Features**:
+    - Enables using Python's extensive library ecosystem for math, data processing, etc., within PostgreSQL.
+    - Allows creating custom data processing functions and leveraging Python’s syntax.
+    - Includes the ability to work with arrays and other complex data types.
+- **Use Cases**:
+    - Ideal for advanced data processing, statistical operations, or custom business logic where Python's libraries are helpful.
+    - Useful when machine learning models need to be integrated or called from within PostgreSQL.
+
+```sql
+CREATE FUNCTION python_greeting(name TEXT) RETURNS TEXT AS $$
+return f"Hello, {name}!"
+$$ LANGUAGE plpythonu;
+
+```
+
+
+## Extensions
+
+PostgreSQL has a rich ecosystem of extensions that enhance its functionality.
+
+Exmaple
+`pg_stat_statements`:  Tracks execution statistics of all SQL statements executed by the server.
+
+```sql
+SELECT * FROM pg_available_extensions;
+```
+
+
+
+NOTES
+
+Parameter placeholders are a key feature in SQL statements used with database libraries (like `psycopg2` for PostgreSQL in Python) to safely incorporate user input or variable data into SQL queries. They help prevent SQL injection attacks by ensuring that input values are treated as data rather than executable code. Here’s a deeper look into how they work, their syntax, and other available options:
+
+### How Parameter Placeholders Work
+
+1. **Preventing SQL Injection**: 
+   - By using placeholders, the database library automatically handles the escaping of special characters, ensuring that user input cannot manipulate the SQL command structure. For example, if a user input includes a single quote, it won't break the SQL syntax.
+
+2. **Syntax**:
+   - In Python's `psycopg2` library (for PostgreSQL), the typical syntax for parameter placeholders is:
+     - Named placeholders: `%(key)s`
+     - Positional placeholders: `%s`
+
+3. **Named Placeholders**:
+   - You can use named placeholders (as seen in your example):
+     ```python
+     cur.execute(
+         """
+         INSERT INTO documents (title, content)
+         VALUES (%(title)s, %(content)s)
+         """,
+         {'title': 'My Title', 'content': 'Some content here.'}
+     )
+     ```
+   - Here, you pass a dictionary where keys correspond to the placeholders in the SQL statement.
+
+4. **Positional Placeholders**:
+   - You can also use positional placeholders, which are represented as `%s`:
+     ```python
+     cur.execute(
+         """
+         INSERT INTO documents (title, content)
+         VALUES (%s, %s)
+         """,
+         ('My Title', 'Some content here.')
+     )
+     ```
+   - In this case, the values are passed as a tuple, and their positions in the tuple correspond to the placeholders in the SQL query.
+
+### Other Available Options
+
+1. **Type Casting**:
+   - In some databases, you might need to specify the type explicitly. For example, in PostgreSQL, you can cast using `::type`:
+     ```sql
+     SELECT * FROM users WHERE id = %(id)s::integer
+     ```
+
+2. **Array and JSON Types**:
+   - If you're working with array or JSON data types, you can also use placeholders:
+     ```python
+     cur.execute(
+         """
+         INSERT INTO settings (options)
+         VALUES (%(options)s)
+         """,
+         {'options': [1, 2, 3]}  # Example of an array
+     )
+     ```
+
+3. **Multiple Statements**:
+   - Placeholders can be used across multiple statements within a single `execute` call if they are well-structured:
+     ```python
+     cur.execute(
+         """
+         UPDATE users SET last_login = NOW() WHERE id = %(id)s;
+         INSERT INTO logs (user_id, action) VALUES (%(id)s, 'login');
+         """,
+         {'id': user_id}
+     )
+     ```
+
+### Summary
+
+Parameter placeholders are essential for secure and efficient database interactions. They come in named and positional formats and can be used with various data types. By using placeholders, you ensure that your SQL queries are safe from injection attacks and maintain clean, readable code. This practice is standard across many database libraries and programming languages, promoting best practices in application development.

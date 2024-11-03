@@ -14,7 +14,7 @@ Explore my “Second Brain,” where I’ve compiled notes, tips, and resources 
 
 - [Debugging Adventures: A Sherlock Holmes Mystery](/tags/Sherlock_holmes)
 - [Coding Against the Clock: Automation Projects](/tags/code_against_clock)
-- [My Hacking Journey: Lessons Learned](/tags/hacking)
+- [My Reverse Engeering Blog](/tags/hacking)
 
 ## 🧠 My Second Brain
 

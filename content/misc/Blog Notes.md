@@ -1,46 +1,57 @@
 
-- [x] AWS lambad
-- [x] Memory leak in twilio
-- [x] Weekend projects serires interview helper jira ticker,etc
-- [x] Reverse eng techinuque to debug
-- [x] How i find eslint affecting our dev productivity
-- [ ] Best practice that i follow on node and react
-- [x] How i get my facebook password using c
-- [ ] A series of blog how i automate the boring task 
-	- [x] Mobile script
-	- [x] keka
-	- [x] class hunter
-	- [ ] interview helper
-	- [x] Money making machine
-	- [x] How i save my Pm time by automating JIRA
-	- [x] How i save our Markting team time by webscraping
-- [ ] Folder exposing
-- [x] Two if check cost (learn by doing series)
-- [x] How i earn my first 100 using MERN stack
-- [ ] Weekend learning 
-- [ ] Unsolved mysteries (ip timeout vault etc.,Meilisearch permission deined)
-- [x] Crazy debugging story (Welcome to the first post of my new miniseries, where I’ll be sharing some of the most intricate and entertaining bug investigations I’ve done throughout my career. I hope you find these stories enjoyable!)
-- [x] How i make our webiste to server hello world
-- [ ] Leason learned from 2 year dev
-	- [ ] Final advice no push on friday
 
+- [ ] Best practice that i follow on node and react
+- [ ] A series of blog how i automate the boring task 
+	- [ ] interview helper
+- [ ] Folder exposing
+- [ ] Weekend learning 
+- [x] Leason learned from 2 year dev
+	- [x] Final advice no push on friday
 - [ ] My Bashrc setup 
 - [ ] List of questions need to ask before deisgn some thing
 	- [ ] Can i use any design pattern
 	- [ ] Alwasys create a wrapper when using thirdparty such that it easy to swap
-
-- [x] How make our website to hello world  
 - [ ]  3 Lessons from the Smartest Developers I’ve Worked With
+- [ ] Exposed phone number on leaderboard
+- [ ] What we learns from migrating heroku to kuberneted
+	- [ ] Probe
+	- [ ] Staing
 
-```
-Hi, I'm an infra developer. My daily work involves fixing or investigating issues at the infrastructure level. I plan to write about these investigations in a blog series with a Sherlock Holmes detective theme. I need your help to write these blogs. I'll share the story, and you convert it into a perfect detective-themed blog. The blog should include:
+Sherlock Holmes
+- [ ] Econnreset
+- [ ] HOw nodejs update 18 restart the pod unhabled rejection
+- [ ] Links server slow nginx multiple ssl
+- [ ] debug ecconreset 15sec to update
 
-- A warm introduction about the series and the issue we're going to investigate
-- A step-by-step investigation with clear headings for each case, detailing what I checked and how
-- A nice ending that hooks the reader for the upcoming series
-- And important it need to be in plain englist don't use any jorgans
-```
+How to 
+- [ ] How to use wireshark
+- [ ] How to use zap scan
+- [ ] How to use lets encrypt
+- [ ] how to stream mongodb request 
+- [ ] Post about klenty dns
+- [ ] Rabbitmq load test
 
+Learn from mistakes or from expereinces
+- [ ]  Migration to 
+
+Unsolved mysteries
+- [ ] Vault timeout 
+- [ ] Meilisearch issue `Permission denied (os error 13)`
+
+A series for internal wokring
+- [ ] Mongodb
+
+How i solve X problem
+- [ ] Pod to pod communication
+
+Generative AI series of what i know
+- [ ] https://ullyer.medium.com/outlines-make-llm-structured-outputs-controllable-and-improve-the-stability-of-llm-applications-584ae9db3789 
+- [ ] How to get structure output
+- [ ] EVAl and Observation
+
+
+
+## Buy me coffe copy text
 
 
 > _If you liked the above story, you can_ [**_buy me a coffee_**](https://buymeacoffee.com/programmerraja) _to keep me energized for writing stories like this for you and to support me because as of writing this story, I’m not eligible for the Medium Partner Program._
@@ -59,116 +70,22 @@ _Find me on_ [LinkedIn](https://www.linkedin.com/in/programmerraja/), [Twitter
 
 https://giscus.app/ -> to add comments feature
 
+**Finally, if the article was helpful, please clap 👏and follow, thank you!**
 
+### Intro for sharing notes
+I decided to have a poke around and see if I could figure out how the HTTP streaming APIs from the various hosted LLM providers actually worked. Here are my notes so far.
 
+## Prompts
 
+Summary
 ```
 “Summarize the key points from the provided content, whether it’s a video, blog post, or article. Include details about the main topics and themes discussed. Summarize the key insights and findings, highlighting any significant advantages, limitations, or implications. Include any practical recommendations or advice for applying the discussed concepts or methods. Add any notable quotes that capture key points or significant perspectives. What is the one-sentence takeaway or central message from the content? List any references, tools, or additional resources mentioned that support the discussion.”
 ```
 
-
-
-AI BLOG IDEAs
-[ ] EVAL in AI
-
-
-
-
-Sherlock Holmes
-- [x] After moving to pod user is unable to login because of set cookie and http 
-- [x] How migrting to cloudfare affect our api rate lmit and other things 
-- [x] logstash shotdown on update
-- [x] Heroku app not found nginx host header
-- [x] Health enpoint (app is down when we deploy user is complice user are seeing)
-- [x] How connect sid fill the redis on ddos and cleared using saveUninitialized and connect flash
-- [ ] Econnreset
-- [ ] HOw nodejs update 18 restart the pod unhabled rejection
-- [ ] Links server slow nginx multiple ssl
-- [ ] debug ecconreset 15sec to update
-
-
-System design docs
-- link server
-- PASS
-- etc
-
-
-How to 
-
-- [ ] How to use wireshark
-- [ ] How to use zap scan
-- [ ] How to use lets encrypt
-- [ ] how to stream mongodb request 
-- [ ] Post about klenty dns
-- [ ] Rabbitmq load test
-- [ ] What we learns from migrating heroku to kuberneted
-	- [ ] Probe
-	- [ ] Staing
-
-AI research paper series
-
-
-Learn from mistakes or from expereinces
-- [ ]  Migration to 
-
-Unsolved mysteries
-- [ ] Vault timeout 
-- [ ] Meilisearch issue `Permission denied (os error 13)`
-
-
-A series of internal wokring
-- [ ] Mongodb
-
-
-How i solve X problem
-- [ ] POd to pod communication
-- [ ] 
-
-Generative AI series of what i know
-- [ ] https://ullyer.medium.com/outlines-make-llm-structured-outputs-controllable-and-improve-the-stability-of-llm-applications-584ae9db3789 
-- [ ] How to get structure output
-- [ ] EVAl and Observation
-
-Build AI that will convery my notes to blog
-
-Funny story
-- [x]  Hello world
-- [x] How i contributed to meiliseseach a typo mistake 
-
-Converting my automation all script in single repo
-
+For rough notes to blog
 
 ```
-write a youtube comments for prompting by subtack https://programmerraja.substack.com/ 
-where i share my programming experenince and debugging story teac etc
-```
-
-
-
-Note
-- Attach screenshot and other thing for better reach
-
-
-
-
-
-
-
-
-
-```
-help me create a cover image prompt for below blog post in cartoon version and make the devloper in very smart and under 18 without beard and the blog is
-```
-
-```
-do you think the blog is good and can be read by everyone does it lack of content if you can add the revlavent content think step by step and follow all industrial standard for tech blog
-```
-
-
-```
-**Finally, if the article was helpful, please clap 👏and follow, thank you!**
-
-
+You was tech blogger who have expereinced in writing the blog in techy way and interactive funny way to attract all type of audience today i wll share by rough work of the blog help me to enhance the blog with proper title and try add more humor Answer a question given in a natural, human-like manner
 ```
 
 
@@ -177,18 +94,47 @@ Write a blog like this
 https://funkbytetech.substack.com/p/i-fought-a-ddos-and-lived-to-tell?ref=dailydev
 
 
-
-You was tech blogger who have expereinced in writing the blog in techy way and interactive funny way to attract all type of audience today i wll share by rough work of the blog help me to enhance the blog with proper title and try add more humor Answer a question given in a natural, human-like manner
-
-
-
-## Intro to share the notes
-
-I decided to have a poke around and see if I could figure out how the HTTP streaming APIs from the various hosted LLM providers actually worked. Here are my notes so far.
-
-
-
 ## Prompt for blog writting 
+
+```
+
+**(C) Context:** In today’s tech-driven world, many readers crave accessible content that simplifies complex ideas, making technology enjoyable and relatable.
+
+**(O) Objective:** Write an engaging tech blog post that explains a current trend or innovation in simple terms, captivating and encouraging readers to explore further.
+
+**(S) Style:** Use a friendly, conversational style akin to a popular tech influencer, employing relatable analogies and anecdotes for clarity.
+
+**(T) Tone:** Keep the tone light-hearted and enthusiastic, incorporating humor to enhance the reading experience.
+
+**(A) Audience:** Target tech enthusiasts and casual readers with limited knowledge, ensuring the content resonates with beginners and offers insights for seasoned readers.
+
+**(R) Response:** Structure the post with:
+1. **Introduction** – Introduce the topic and its relevance.
+2. **Main Content** – Explain the trend using simple language and engaging examples.
+3. **Visuals** – Suggest where to include images or infographics.
+4. **Conclusion** – Summarize key points and encourage reader engagement.
+
+```
+
+```
+
+**(C) Context:** In the ever-evolving world of technology, many readers seek accessible content that simplifies complex concepts. The goal is to create a tech blog that breaks down intricate topics into relatable and enjoyable articles, making technology approachable for everyone.
+
+**(O) Objective:** Write an engaging tech blog post that explains a current tech trend or innovation in simple terms. The post should captivate readers, spark their curiosity, and encourage them to explore further.
+
+**(S) Style:** Adopt a friendly and conversational writing style, similar to that of a popular tech influencer. Use relatable analogies and anecdotes to illustrate points, while maintaining clarity and precision in explanations.
+
+**(T) Tone:** Keep the tone light-hearted and enthusiastic. Infuse humor where appropriate to create an enjoyable reading experience, while still conveying valuable information.
+
+**(A) Audience:** The intended audience includes tech enthusiasts, casual readers with limited technical knowledge, and anyone curious about technology. The writing should resonate with beginners and provide insights that even seasoned readers can appreciate.
+
+**(R) Response:** Format the blog post as a structured article with the following sections:
+1. **Introduction** – Briefly introduce the topic and its relevance.
+2. **Main Content** – Explain the tech trend or innovation using simple language, relatable examples, and engaging anecdotes.
+3. **Visuals** – Suggest where to include images, infographics, or videos to enhance understanding.
+4. **Conclusion** – Summarize key points and encourage readers to explore the topic further or share their thoughts.
+
+```
 
 ```
 > # CONTEXT # I want to advertise my company's new product. My company's name is Alpha and the product is called Beta, which is a new ultra-fast hairdryer.
@@ -244,7 +190,6 @@ _**5. Conclusion (about 300 words long)**_
 
 
 
-
 ## Prompt for summary using COSTAR framework
 
 **Context**: I have a research paper that I would like summarized. The paper is on a technical topic and contains various findings, methods, and conclusions. I need the summary to focus on the main ideas without losing important details.
@@ -262,20 +207,13 @@ _**5. Conclusion (about 300 words long)**_
 
 ## 1 3 1 technique
 
-
 1. Start with one declarative sentence
-    
 2. Follow it with three sentences that explain or build on the idea.
-    
 3. End with another declarative sentence that wraps it up neatly.
 
 Prompt
 ```
-Write a short post about {insert your topic}.
 
-Use an opinionated, casual, and informative tone.
-
-Follow this template:
 
 <TEMPLATE>
 # Subhead
@@ -285,32 +223,18 @@ Follow this template:
 2 line feeds.
 [1 declarative sentence.]
 </TEMPLATE>
+
+
+
+
+## Notes for blog content
+
+Performing attacks possibly on our honeypot network. (Email Spam, Automated Signups, Comment and Forum spamming, Login Attempts).
+
 ```
 
 
-
-
-what are the core concpets discussed and what they teaching explain all thing discussed in the video such that i can learn all things
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-|     |
-| --- |
-|     |
-Compromised Server
-
-Performing attacks possibly on our honeypot network. (Email Spam, Automated Signups, Comment and Forum spamming, Login Attempts).
+## Notes
 
 ```
 {
@@ -470,6 +394,37 @@ curl 'https://app-prod.5050cricket.co.in/v1/users/670ba1615a6eac9288930245/activ
 ```
 
 
+```python
+import requests
+
+url = 'https://app-prod.5050cricket.co.in/v1/auth/register'
+headers = {
+    'accept': '*/*',
+    'accept-language': 'en-US,en;q=0.9,ta-IN;q=0.8,ta;q=0.7',
+    'cache-control': 'no-cache',
+    'content-type': 'application/json',
+    'dnt': '1',
+    'origin': 'https://5050cricket.co.in',
+    'pragma': 'no-cache',
+    'priority': 'u=1, i',
+    'referer': 'https://5050cricket.co.in/',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-site',
+    'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1'
+}
+
+data = {
+    'name': '34',
+    'mobileNumber': '12345'
+}
+
+response = requests.post(url, headers=headers, json=data)
+
+print(response.status_code)
+print(response.json())
+
+```
 
 ```
 
@@ -493,32 +448,6 @@ Thanks so much! 🙏
 
 
 
-
-
-
-
-
-
-https://reward-box.com/rc_ps_otp_sms_1/
-
-
-
-The URL you shared appears to be a tracking or affiliate link, commonly used in digital marketing campaigns to monitor clicks and conversions. Here's a breakdown of the URL structure:
-
-- **`https://trkr.1kx.in`**: This is the domain of the tracking service, likely set up by a company or an affiliate network to track user behavior.
-  
-- **`/click?campaign_id=156&pub_id=7220&url_id=109&source=DRSPS1&p3=1234567890`**:
-   - **`campaign_id=156`**: Identifies the specific campaign being tracked.
-   - **`pub_id=7220`**: Likely the publisher or affiliate ID, showing who is promoting the campaign.
-   - **`url_id=109`**: Identifies the specific URL or landing page.
-   - **`source=DRSPS1`**: Could indicate the traffic source or ad placement.
-   - **`p3=1234567890`**: Additional tracking parameter, possibly used to track specific users or devices.
-
-When you click on such links, your interaction is logged by the tracking service to attribute clicks, views, or conversions to a particular source or campaign. This is typical in affiliate marketing, where affiliates earn commissions based on user actions.
-
-Let me know if you need help with something more specific about the URL!
-
-
 Pyhton server ->https://trinket.io/embed/python3/a5bd54189b
 
 
@@ -530,6 +459,4 @@ Welcome to my **public [Second Brain](https://www.ssp.sh/brain/second-brain)**
 - **Curated** Knowledge: Insights and listings carefully selected and refined over time, across various topics.
 - **Connected** Ideas: Explore how thoughts are interconnected with the interactive graph and follow the backlinks to uncover unexpected relationships between them; just like in a human brain.
 - **Compounded** Learning: With every note, idea, and insight, my Second Brain grows—compounding in value, just like a money investment, where wisdom deepens and accumulates over time.
-
-[  
-](https://www.ssp.sh/brain/#navigation)
+(https://www.ssp.sh/brain/#navigation)

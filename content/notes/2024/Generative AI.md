@@ -1,5 +1,5 @@
 ---
-title: AI Agent
+title: Generative AI
 date: 2024-07-30T06:27:13.1313+05:30
 draft: false
 tags:
@@ -10,19 +10,58 @@ tags:
 ## Multi-Agent Orchestrator
 Flexible and powerful framework for managing multiple AI agents and handling complex conversations
 
-
-
 ## RAG
 
+RAG stands for **Retrieval Augmented Generation**, which is a technique to **enhance Large Language Models (LLMs) by connecting them to external knowledge bases or datasets.** This approach is crucial when LLMs need to answer questions about specific products, services, or domains they haven't been trained on. A practical example is building a chatbot for a website that needs to provide information about the site's specific products and services.
+### **How RAG Works**
+
+The basic version of RAG, called **Naive RAG**, involves several steps:
+
+- **Knowledge Base Preparation:** Dividing the data into smaller chunks, embedding them (converting into numerical representations), and storing them in a vector database.
+- **Query Processing:** When a user submits a query, it's embedded and compared to the embedded chunks in the database using semantic matching (a technique to determine the similarity of meaning between pieces of text) to find the most relevant information.
+- **Contextualized Response:** The retrieved context is then sent to the LLM along with the original query, allowing the LLM to generate a response informed by the relevant knowledge.
+### **RAG Optimization Techniques**
+
+Optimizing a RAG system can be complex, involving several techniques that can be broadly categorized into four buckets:
+
+- **Pre-Retrieval Optimization**: Focusing on improving the quality and retrievability of data before the retrieval process.
+- **Retrieval Optimization**: Enhancing the actual retrieval process to find the most relevant context.
+- **Post-Retrieval Optimization**: Further refining the retrieved information to ensure its relevance and conciseness.
+- **Generation Optimization**: Optimizing how the LLM uses the retrieved context to generate the best possible answer.
+
+### **Specific Examples of RAG Optimization Techniques**
+
+The sources highlight a few specific examples of RAG optimization techniques.
+
+**1. Pre-Retrieval Optimization**
+
+- **Improving Information Density:** Unstructured data often has low information density, meaning the relevant facts are scattered within large volumes of text. This can lead to many chunks being sent to the LLM, increasing costs and the likelihood of errors. One solution is to use an LLM to pre-process and summarize the data into a more factual and concise format. A case study using GPT-4 to summarize financial services web pages showed a **4x reduction in token count**, leading to improved accuracy.
+	- GRAPH based RAG
+   
+- **Query Transformation:** User queries are often poorly worded or overly complex. Query transformation involves rewriting or breaking down queries to improve their clarity and effectiveness for retrieval. LLMs can be used for this task. For example, an LLM can rewrite a query with typos or grammatical errors or break down a complex query into multiple sub-queries. Another example involves handling conversational context by identifying the core query from a series of user interactions, ensuring the retrieval focuses on the current topic and avoids retrieving irrelevant past information.
+
+
+**2. Retrieval Optimization**
+
+- **Ensemble/Fusion Retriever:** This technique combines traditional keyword search (lexical search) with semantic search (vector search) to improve retrieval effectiveness, especially for domain-specific data where embedding models might not perform well. Two retrievers, one for each search type, run in parallel, and their results are combined using a technique like reciprocal rank fusion to produce a consolidated ranking of relevant chunks. Experiments by Microsoft have shown significant improvement in retrieving high-quality chunks using hybrid retrieval methods.
+
+**3. Post-Retrieval Optimization**
+
+- **Cross-Encoder Reranking:** This technique addresses the limitations of bi-encoder-based semantic search, where a single vector representation for a document might lose crucial context. Reranking involves using a cross-encoder, which processes both the query and the retrieved chunks together to determine their similarity more accurately, effectively reordering the retrieved chunks to prioritize the most relevant ones. This is particularly useful for pushing highly relevant chunks initially ranked lower due to the limitations of bi-encoders to the top of the results list. Due to its computational cost, cross-encoder reranking is typically used as a second stage after an initial retrieval method.
 ### Chunking Methods
 
 - **Naive chunking**: A simple method that divides text based on a fixed number of characters, often using the `CharacterTextSplitter` in Langchain. It is fast and efficient but may not be the most intelligent approach as it does not account for document structure.
+
 - **Sentence splitting**: This method uses natural language processing (NLP) frameworks like NLTK or SpaCy to split text into sentence-sized chunks. It is more accurate than naive chunking and can handle edge cases.
+
 - **Recursive character text splitting**: This method, implemented using the `RecursiveCharacterTextSplitter` in Langchain, combines character-based splitting with consideration for document structure. It recursively splits chunks based on paragraphs, sentences, and characters, maximizing the information contained within each chunk while adhering to the specified chunk size.
+
 - **Structural chunkers**: Langchain provides structural chunkers for HTML and Markdown documents that split text based on the document's schema, such as headers and subsections. This method is particularly useful for structured documents and allows for the addition of metadata to each chunk, indicating its source and location within the document.
+
 - Semantic Chunking: This strategy uses embedding models to analyze the meaning of sentences and group together sentences that are semantically similar. It results in chunks that are more likely to represent coherent concepts, but it requires more computational resources than other methods. check out the nice article to visulize the chunking [here](https://towardsdatascience.com/a-visual-exploration-of-semantic-text-chunking-6bb46f728e30)
 
-Evaluating Chunking Strategies
+### **Evaluating Chunking Strategies**
+
 Recall is a crucial metric for evaluating the effectiveness of a chunking strategy. It measures the proportion of relevant chunks retrieved in response to a query.
 
 A high recall rate indicates that the chunking strategy is effectively capturing and representing the information in a way that allows for accurate retrieval.
@@ -46,6 +85,18 @@ Contextual compression
 Hypothetical document embedding
 - ask LLM to suggest Hypothetical document for query and use that to fetch from DB
 
+### Retrevial Algorithm
+
+- Cosine Similarity and Euclidean Distance
+- Graph-Based RAG
+- Exact Nearest Neighbor (k-NN) Search
+- **Hierarchical Navigable Small Worlds (HNSW)**: A popular ANN algorithm that constructs a graph-like structure for fast similarity searches. It's highly scalable and suited to high-dimensional data.
+- **Product Quantization (PQ)**: Used to reduce storage requirements and speed up searches by dividing vectors into smaller, quantized components.
+- **Locality-Sensitive Hashing (LSH)**: This algorithm hashes input vectors so that similar vectors map to the same hash, allowing fast lookup based on hash values rather than full comparison
+- **BM25 (Best Matching 25)** Unlike vector-based search, which relies on embeddings, BM25 is a term-based algorithm that ranks documents based on the presence and frequency of query terms in the documents.
+
+
+
 BM25,ADA-002
 
 ### RAG Evaluation
@@ -59,6 +110,7 @@ Framework for eval `trulens_eval`
 ### RAG Fusion
 
 How it works
+
 1. **Multi-Query Generation:** RAG-Fusion generates multiple versions of the user's original query. As we've discussed above, this is different to single query generation, which traditional RAG does. This allows the system to explore different interpretations and perspectives, which significantly broadens the search's scope and improvs the relevance of the retrieved information. 
 	- Use AI to generate the multiple version of the user query 
 	

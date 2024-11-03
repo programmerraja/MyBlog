@@ -111,7 +111,9 @@ jorens analyze --cpg <path_to_cpg> --rules <path_to_rules>
 ```
 
 
+## sonarJs
 
+https://github.com/SonarSource/SonarJS
 ## espree
 
 ## Resources

@@ -10,20 +10,9 @@
 4. Health insurance
 
 
-- First scan preload scan on download html what are preload it will fetch
+Read book twice which give more idea
 
 
-
-Spanner
-- strong consistency and 100% avalibality
-- they break CAP theorm
-- True time for consisente state of data among the replica nodes
-- 2 phase protocol
-
-
-
-## Docker
-1. https://www.specfy.io/blog/1-efficient-dockerfile-nodejs-in-7-steps [Nalla iruku]
 
 
 

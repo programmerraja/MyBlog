@@ -1,7 +1,7 @@
 ---
 title: The Day a DDOS Attack Led to the World's Most Awkward 'Hello World'
 date: 2024-10-02T06:57:18.1818+05:30
-draft: true
+draft: false
 tags:
   - hacking
   - funny

@@ -1,7 +1,7 @@
 ---
 title: "The Joy of Debugging:  How One Tiny Typo Kept Us Busy for Hours"
 date: 2024-09-29T14:25:53.5353+05:30
-draft: true
+draft: false
 tags:
   - debugging
   - meilisearch

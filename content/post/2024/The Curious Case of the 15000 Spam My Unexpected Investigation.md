@@ -5,6 +5,7 @@ draft: false
 tags:
   - hacking
   - scam
+  - reverse_engineering
 ---
 Last Friday started off like any typical day—I was busy with my work in my office when I stumbled upon a suspicious message. My instincts told me it was spam, but my curiosity got the best of me. I clicked the link, and that’s when the adventure began!
 

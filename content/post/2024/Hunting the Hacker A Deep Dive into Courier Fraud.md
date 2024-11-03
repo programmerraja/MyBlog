@@ -5,6 +5,7 @@ draft: false
 tags:
   - hacking
   - scam
+  - reverse_engineering
 ---
 
 In today's digital age, cyber scams are becoming increasingly sophisticated. Recently, one of our colleagues received a suspicious call that led to an attempted scam. This blog post details our investigation into the scam, revealing the techniques used by the fraudsters and how we managed to thwart their efforts.

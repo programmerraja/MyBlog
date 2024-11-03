@@ -7,4 +7,12 @@ tags :
 
 - dont push on friday
 - communication is key
-- 
+- understanding the product
+- continous learning
+- adding comments
+- working with legcy code
+- deployment order
+- automate the thing more then 2 time
+- self review once
+- Saying NO 
+- if take time inform them
