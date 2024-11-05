@@ -371,6 +371,7 @@ tokenized_dataset = dataset.map(tokenize_and_pad, batched=True)
 
 ## Tokenzier
 
+- https://github.com/openai/tiktoken
 The process of converting text to numbers is called encoding.
 
 Encoding involves two steps:

@@ -67,6 +67,7 @@ Recall is a crucial metric for evaluating the effectiveness of a chunking strate
 A high recall rate indicates that the chunking strategy is effectively capturing and representing the information in a way that allows for accurate retrieval.
 
 Example:
+
 Imagine a document has been chunked, and a query results in three relevant chunks. The retriever returns five chunks, but only two of those are the relevant ones. In this case:
 - Relevant elements = 3
 - Retrieved elements that are also relevant = 2
@@ -94,10 +95,6 @@ Hypothetical document embedding
 - **Product Quantization (PQ)**: Used to reduce storage requirements and speed up searches by dividing vectors into smaller, quantized components.
 - **Locality-Sensitive Hashing (LSH)**: This algorithm hashes input vectors so that similar vectors map to the same hash, allowing fast lookup based on hash values rather than full comparison
 - **BM25 (Best Matching 25)** Unlike vector-based search, which relies on embeddings, BM25 is a term-based algorithm that ranks documents based on the presence and frequency of query terms in the documents.
-
-
-
-BM25,ADA-002
 
 ### RAG Evaluation
 

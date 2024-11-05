@@ -120,10 +120,16 @@ main();
 
 
 
+## Praser
 ## Jina AI
 
 - https://jina.ai/reader/
 free for non commerical use
+
+## Docling
+
+It use model to parse the content check [here](https://github.com/DS4SD/docling)
+
 ### Resources
 - https://blog.dottxt.co/coalescence.html
 - https://www.normalcomputing.com/blog-posts/eliminating-hallucinations-fast-in-large-language-models-with-finite-state-machines-3
