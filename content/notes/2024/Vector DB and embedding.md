@@ -1,7 +1,7 @@
 ---
 title: Vector DB
 date: 2024-10-19T16:23:07.077+05:30
-draft: true
+draft: false
 tags:
   - database
   - genrative_ai
@@ -60,17 +60,15 @@ algorithms commonly used for similarity search indexing
 - Hierarchical navigable small world (HNSW
 
 
+**How to reduce the optimize the vector embedding**
 
-**vector DB**
-- Pinecone
-- Chroma
-- Milvus
-- Qdrant
-- weaviate
+- **Principal component analysis** : reduce the vector dimension and store but not efficient
+- **Matryoshka Representation Learning** : 
+- **Binary Quantization** : quantization in models where you reduce the precision of weights, quantization for embeddings refers to a post-processing step for the embeddings themselves. In particular, binary quantization refers to the conversion of the `float32` values in an embedding to 1-bit values, resulting in a 32x reduction in memory and storage usage.
+- For more check [here](https://huggingface.co/blog/embedding-quantization)
 
 ## Postgress Vector DB
 
-- https://r2r-docs.sciphi.ai/documentation/deep-dive/providers/database
 - **Integrated Vector Storage:** Store your vectors seamlessly alongside your other data in PostgreSQL, leveraging the database's robustness, ACID compliance, and recovery features.
 - **Versatile Search:** pgvector supports both exact and approximate nearest neighbor searches, catering to various accuracy and speed requirements.
 - **Distance Functions:** Offers a range of distance metrics, including L2 distance, inner product, cosine distance, L1 distance, Hamming distance, and Jaccard distance. This flexibility allows you to select the most appropriate measure for your data and task.
@@ -82,12 +80,25 @@ algorithms commonly used for similarity search indexing
 - **Inserting Vectors:** Insert vectors as array-like strings, e.g., ''.
 - **Querying Nearest Neighbors:** Employ distance operators like `<->` for L2 distance, `<#>` for inner product, and `<= >` for cosine distance to find nearest neighbors, ordering results and limiting output as needed.
 
+Supported distance functions are:
+
+<-> - L2 distance
+<#> - (negative) inner product
+<=> - cosine distance
+<+> - L1 distance
+<~> - Hamming distance (binary vectors)
+< %> - Jaccard distance (binary vectors)
+
 ### Indexing and Performance Optimization
 
-pgvector provides indexing options to accelerate searches, particularly when dealing with large datasets:
+Three types of vector search indices available in PostgreSQL:
 
-- **HNSW (Hierarchical Navigable Small World):** This graph-based index offers excellent query performance but requires more memory and build time. It's suitable for scenarios with frequent queries.
-- **IVFFlat (Inverted File Flat):** This index is faster to build and uses less memory but may provide slightly lower query performance. It's a good choice for datasets that are updated less frequently.
+1.**IVF Flat**: Good for medium workloads, low memory usage, but requires rebuilding on updates and has lower accuracy compared to other options.
+
+2.**HNSW**: A versatile, graph-based index suitable for real-time search on medium to large workloads, offering a good balance of speed and accuracy, handling updates efficiently, and supporting quantization. Drawbacks include high memory usage and potential scalability limitations with very large datasets.
+
+3.**Streaming Disk ANN**: Excelent for real-time search and filtered search scenarios, particularly with large-scale workloads (10 million+ vectors). It offers high accuracy, scales effectively, supports quantization by default, and has cost advantages as its costs scale with disk and RAM rather than solely RAM. The main drawback is longer build times compared to HNSW
+
 
 pgvector also offers various options to fine-tune indexing and querying performance:
 
@@ -95,8 +106,6 @@ pgvector also offers various options to fine-tune indexing and querying performa
 - **Query Options:** Control search parameters like `hnsw.ef_search` (dynamic candidate list size for HNSW) and `ivfflat.probes` (number of lists to probe for IVFFlat) to adjust the speed-recall trade-off during query execution.
 - **Filtering Techniques:** Employ techniques like creating indexes on filter columns, using multicolumn indexes, utilizing approximate indexes for selective filters, and considering partial indexing or partitioning for specific filtering scenarios to optimize performance.
 - **Iterative Index Scans:** Introduced in pgvector 0.8.0, iterative scans improve recall for queries with filtering by progressively scanning more of the index.
-
-### Advanced Features
 
 pgvector extends its capabilities beyond basic vector operations, supporting:
 
@@ -106,81 +115,49 @@ pgvector extends its capabilities beyond basic vector operations, supporting:
 - **Hybrid Search:** Combine pgvector's vector similarity search with PostgreSQL's full-text search to create powerful hybrid search systems for retrieving relevant data based on both semantic meaning and vector representations.
 - **Subvector Indexing:** Index and query specific portions of vectors using expression indexing, facilitating specialized searches and analysis.
 
-https://severalnines.com/blog/vector-similarity-search-with-postgresqls-pgvector-a-deep-dive/
+### PgVectorScale and Pagai
+
+pgvectorscale complements [pgvector](https://github.com/pgvector/pgvector/blob/master/README.md), the open-source vector data extension for PostgreSQL, and introduces the following key innovations for pgvector data:
+
+- A new index type called StreamingDiskANN, inspired by the [DiskANN](https://github.com/microsoft/DiskANN) algorithm, based on research from Microsoft.
+- Statistical Binary Quantization: developed by Timescale researchers, This compression method improves on standard Binary Quantization.
+
+**pgai** simplifies the process of building search, Retrieval Augmented Generation (RAG), and other AI applications with PostgreSQL. It complements popular extensions for vector search in PostgreSQL like pgvector and pgvectorscale, building on top of their capabilities.
+
+Example
+
+```sql
+
+CREATE EXTENSION IF NOT EXISTS ai CASCADE ->will create the pgai extension
+
+//will create embedding 
+
+SELECT ai.create_vectorizer('{self.table_name}'::regclass,
+destination => '{self.embedding_table_name}',
+embedding => ai.embedding_openai('{st.session_state.embedding_model}', 768),
+chunking => ai.chunking_recursive_character_text_splitter('content')
+);
+
+```
+
+How pgai are work?
+- Pgai are use the sql extension feature where they have written the function defintion in sql and which will interact with python script
 
 
 
-Supported distance functions are:
+### Resources
+- [How We Made PostgreSQL as Fast as Pinecone for Vector Data ](https://www.timescale.com/blog/how-we-made-postgresql-as-fast-as-pinecone-for-vector-data/ )
+- [PostgreSQL Hybrid Search Using Pgvector and Cohere](https://www.timescale.com/blog/postgresql-hybrid-search-using-pgvector-and-cohere/)
+- [Vector Similarity Search with PostgreSQL’s pgvector – A Deep Dive](https://severalnines.com/blog/vector-similarity-search-with-postgresqls-pgvector-a-deep-dive/)
+- [Build, scale, and manage user-facing Retrieval-Augmented Generation applications using postgress](https://r2r-docs.sciphi.ai/introduction/what-is-r2r)
 
-<-> - L2 distance
-<#> - (negative) inner product
-<=> - cosine distance
-<+> - L1 distance (added in 0.7.0)
-<~> - Hamming distance (binary vectors, added in 0.7.0)
-< %> - Jaccard distance (binary vectors, added in 0.7.0)
+
+
+
+
+
 
 
 https://milvus.io/  
 https://qdrant.tech/
 https://weaviate.io/
-
-Here’s a breakdown of each of these distance metrics and how they’re commonly used:
-
-### 1. **Jaccard Distance**
-   - **Definition**: Jaccard Distance measures the dissimilarity between two sets. It’s defined as:
-     \[
-     \text{Jaccard Distance} = 1 - \frac{|A \cap B|}{|A \cup B|}
-     \]
-     where \( A \cap B \) is the intersection of sets \( A \) and \( B \) (elements common to both), and \( A \cup B \) is the union of \( A \) and \( B \) (all unique elements in both sets).
-   - **Range**: The Jaccard Distance ranges from 0 to 1, where 0 means the sets are identical (maximum similarity), and 1 means they are completely disjoint.
-   - **Usage**: It's commonly used for binary or categorical data, such as in text similarity (e.g., comparing the overlap of keywords in documents) or recommendation systems.
-   
-   **Example**: For sets \( A = \{1, 2, 3\} \) and \( B = \{2, 3, 4\} \):
-     \[
-     \text{Jaccard Distance} = 1 - \frac{|\{2, 3\}|}{|\{1, 2, 3, 4\}|} = 1 - \frac{2}{4} = 0.5
-     \]
-
-### 2. **Hamming Distance**
-   - **Definition**: Hamming Distance counts the number of positions at which two strings of equal length differ. For binary data, it’s just the count of differing bits.
-   - **Range**: It’s an integer value, where a distance of 0 indicates identical strings, and higher values indicate more differences.
-   - **Usage**: This metric is widely used in error detection and correction, particularly in coding theory. It’s also used for comparing binary or categorical data.
-
-   **Example**: For two binary strings \( A = 10101 \) and \( B = 11100 \), the Hamming Distance is 3 because they differ in the first, fourth, and fifth positions.
-
-### 3. **L1 Distance (Manhattan Distance)**
-   - **Definition**: Also known as Manhattan Distance or Taxicab Distance, L1 Distance measures the absolute difference between coordinates in a space. For two vectors \( \mathbf{x} = (x_1, x_2, \dots, x_n) \) and \( \mathbf{y} = (y_1, y_2, \dots, y_n) \):
-     \[
-     \text{L1 Distance} = \sum_{i=1}^n |x_i - y_i|
-     \]
-   - **Range**: L1 Distance is non-negative and can theoretically go up to infinity, depending on how far apart the points are.
-   - **Usage**: It’s used in machine learning for evaluating model errors (e.g., regression models) and is often preferred in high-dimensional spaces with sparse data.
-
-   **Example**: For points \( A = (1, 2) \) and \( B = (4, 6) \):
-     \[
-     \text{L1 Distance} = |1 - 4| + |2 - 6| = 3 + 4 = 7
-     \]
-
-### 4. **Cosine Similarity (and Cosine Distance)**
-   - **Definition**: Cosine Similarity measures the cosine of the angle between two vectors. Cosine Distance is simply 1 minus the Cosine Similarity. Given vectors \( \mathbf{x} \) and \( \mathbf{y} \):
-     \[
-     \text{Cosine Similarity} = \frac{\mathbf{x} \cdot \mathbf{y}}{||\mathbf{x}|| \, ||\mathbf{y}||}
-     \]
-     where \( \mathbf{x} \cdot \mathbf{y} \) is the dot product, and \( ||\mathbf{x}|| \) and \( ||\mathbf{y}|| \) are the magnitudes (norms) of the vectors.
-   - **Range**: Cosine Similarity ranges from -1 to 1, where 1 means vectors are identical in direction, 0 means they are orthogonal (completely dissimilar), and -1 means they are exactly opposite. Cosine Distance (1 - Cosine Similarity) ranges from 0 to 2.
-   - **Usage**: Cosine Similarity is especially useful in text analysis and document similarity, where the direction (rather than magnitude) of the vectors is more relevant.
-
-   **Example**: For vectors \( \mathbf{x} = (1, 0, 1) \) and \( \mathbf{y} = (1, 1, 0) \):
-     \[
-     \text{Cosine Similarity} = \frac{(1 \cdot 1 + 0 \cdot 1 + 1 \cdot 0)}{\sqrt{1^2 + 0^2 + 1^2} \times \sqrt{1^2 + 1^2 + 0^2}} = \frac{1}{\sqrt{2} \times \sqrt{2}} = 0.5
-     \]
-
-These distances are commonly used in machine learning, natural language processing, and clustering tasks, where they help determine similarity and grouping of data points.
-
-
-
-How to reduce the optimize the vector embedding
-- **Principal component analysis** : reduce the vector dimension and store but not efficient
-- **Matryoshka Representation Learning** : 
-- **Binary Quantization** : quantization in models where you reduce the precision of weights, quantization for embeddings refers to a post-processing step for the embeddings themselves. In particular, binary quantization refers to the conversion of the `float32` values in an embedding to 1-bit values, resulting in a 32x reduction in memory and storage usage.
-
-for more check [here](https://huggingface.co/blog/embedding-quantization)

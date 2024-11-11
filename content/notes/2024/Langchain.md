@@ -491,6 +491,3 @@ In graph each node is agent or tools and the edges connect nodes determine seque
 - https://github.dev/bhancockio/langchain-crash-course 
 - https://github.dev/Codium-ai/cover-agent
 
-
-
-https://github.com/adithya-s-k/omniparse  [Ingest, parse, and optimize any data]

@@ -108,7 +108,7 @@ Framework for eval `trulens_eval`
 
 How it works
 
-1. **Multi-Query Generation:** RAG-Fusion generates multiple versions of the user's original query. As we've discussed above, this is different to single query generation, which traditional RAG does. This allows the system to explore different interpretations and perspectives, which significantly broadens the search's scope and improvs the relevance of the retrieved information. 
+1. **Multi-Query Generation:** RAG-Fusion generates multiple versions of the user's original query.This is different to single query generation, which traditional RAG does. This allows the system to explore different interpretations and perspectives, which significantly broadens the search's scope and improvs the relevance of the retrieved information. 
 	- Use AI to generate the multiple version of the user query 
 	
 2. **Reciprocal Rank Fusion (RRF):** In this technique, we combine and re-rank search results based on relevance. By merging scores from various retrieval strategies, RAG-Fusion ensures that documents consistently appearing in top positions are prioritized, which makes the response more accurate.
@@ -175,6 +175,43 @@ Mean pooling in Natural Language Processing (NLP) is a technique used to create 
 2. **Embedding**: Each token is mapped to a corresponding vector using an embedding layer (e.g., pre-trained embeddings like Word2Vec, GloVe, or BERT embeddings).
 3. **Mean Pooling**: The vectors of all the tokens in the sequence are averaged to produce a single vector. This can be done by summing the vectors and then dividing by the total number of tokens.
 
+**How it worsk under the hood**
+
+- Send the whole document ang get embedding for it
+
+```python
+model_output[0] = [
+    # Each inner list represents the embedding of a token
+    [0.1, 0.2, 0.3],  # Token 1 embedding
+    [0.4, 0.5, 0.6],  # Token 2 embedding
+    [0.7, 0.8, 0.9],  # Token 3 embedding
+    [1.0, 1.1, 1.2]   # Token 4 embedding
+]
+```
+
+- Next chunk the the document based on chunk size and get the starting index and ending index for each document 
+```python
+span_annotation = [
+    [(0, 2), (2, 4)]  # Pool embeddings over tokens 1-2 and tokens 3-4
+]
+```
+
+- Calculate the pool embedding for each chunks as 
+	- For `(0, 2)`: Pool over tokens 1 and 2:
+```
+pooled1 = [0.1,0.2,0.3]+[0.4,0.5,0.6] / 2  ​= [0.25,0.35,0.45]
+pooled2 = [0.7,0.8,0.9]+[1.0,1.1,1.2] / 2  ​= [0.85,0.95,1.05]
+```
+
+The final `outputs` would contain these pooled embeddings as numpy arrays:
+```python
+outputs = [
+    [[0.25, 0.35, 0.45], [0.85, 0.95, 1.05]]
+]
+``` 
+
+- Now store this in DB which have more context 
+
 ### Astute RAG
 
 To solve the potential conflicts arise between the LLMs’ internal knowledge and external sources. let say what is captial of india? for this LLM answer will be new delhi but we added the context using RAG that has `new york` so there will be conflict to resolve this they introduced this method
@@ -236,6 +273,12 @@ Answer:
 ```
 
 `Note: This method only work  if LLM has some knoweledge about the question`
+
+
+### HTML RAG
+
+HtmlRAG is a system that uses HTML instead of plain text in Retrieval-Augmented Generation (RAG) systems, preserving structural and semantic information inherent in HTML documents. The system addresses the challenge of handling longer input sequences and noisy contexts presented by HTML by employing an HTML cleaning module to remove irrelevant content and compress redundant structures, followed by a two-step structure-aware pruning method. The first step prunes less important HTML blocks with low embedding similarities with the input query, and the second step conducts finer block pruning with a generative model.
+
 ### Resources
 
 **Frameworks and Toolkits for RAG (Retrieval-Augmented Generation)**:

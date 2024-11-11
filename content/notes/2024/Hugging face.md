@@ -540,6 +540,9 @@ Here are some interesting and lightweight LLMs available on Hugging Face that yo
 9. **Flan-T5**: A variant of T5 that's fine-tuned on a diverse set of tasks. It's useful for applications needing generalization across multiple NLP tasks.
 
 10. **CodeGen**: A model designed for code generation tasks. If you're interested in building tools related to programming or code assistance, this could be a fun choice.
+11. # LLaVA 
+
+
 
 You can easily find these models on the Hugging Face Model Hub. Depending on your project, consider the trade-offs between model size, performance, and the specific task you want to tackle!
 

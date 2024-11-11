@@ -563,6 +563,18 @@ MLM is a training method used in models like BERT, where some tokens in the inpu
 **Sequence-to-Sequence (Seq2Seq)**
 
 Seq2Seq models consist of an encoder-decoder architecture, where the encoder processes the input sequence and the decoder generates the output sequence. This approach is commonly used in tasks like machine translation, summarization, and question-answering. Seq2Seq models can handle more complex tasks that involve input-output transformations, making them versatile for a wide range of NLP tasks.
+
+
+## Knowledge Distillation
+
+This technique involves transferring knowledge from an LLM (teacher) to an SLM (student), enabling the smaller model to learn and mimic the capabilities of the larger one.
+
+Knowledge distillation can be implemented in two ways:
+
+- White-box distillation: The student model has full access to the teacher model's internal architecture and parameters (e.g., DistilBERT)
+
+- Black-box distillation: The student model only has access to the teacher model's outputs, learning to replicate the teacher's behavior without direct insight into its internal working
+
 ## Resources
 
 - [Deconstructing BERT Part 2: Visualizing the Inner Workings of Attention](https://towardsdatascience.com/deconstructing-bert-part-2-visualizing-the-inner-workings-of-attention-60a16d86b5c1)

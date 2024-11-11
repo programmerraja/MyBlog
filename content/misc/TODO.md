@@ -18,3 +18,25 @@ after diwali nov 1
 - what plan i have for x happens etc.
 - Look for opensource repo to contribute
 
+
+- Pg vector documentation 
+- Finance
+
+
+
+
+
+hdfc  153329
+canra  3338
+
+debt - > 34900
+
+
+2024 to 2025 -> 60,330
+2023 to 2024 -> 34,154
+
+passive income
+- online hackthon
+- stock (index fund)
+- 
+

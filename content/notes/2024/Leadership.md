@@ -49,3 +49,7 @@ This is the final step before deciding on more severe consequences. It's a last 
 
 **Action:**  
 Have one more in-depth conversation, expressing that this is their final opportunity to make a significant improvement. The tone should be serious but supportive, emphasizing that this is the last chance for a breakthrough before more drastic measures are considered.
+
+
+https://blog.gouravkhanijoe.com/p/reflection-shorts
+book # Simply Said: Communicating Better at Work and Beyond

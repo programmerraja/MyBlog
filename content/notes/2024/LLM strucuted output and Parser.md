@@ -121,14 +121,19 @@ main();
 
 
 ## Praser
-## Jina AI
+### Jina AI
 
 - https://jina.ai/reader/
 free for non commerical use
 
-## Docling
+### Docling
 
 It use model to parse the content check [here](https://github.com/DS4SD/docling)
+
+
+### Omniparse
+
+Ingest, parse, and optimize any data format ➡️ from documents to multimedia ➡️ for enhanced compatibility with GenAI frameworks
 
 ### Resources
 - https://blog.dottxt.co/coalescence.html
