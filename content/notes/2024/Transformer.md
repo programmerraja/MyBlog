@@ -547,7 +547,7 @@ This tweak leads to faster and more effective learning.
 Resources
 - [LLORA  for finetuning](https://lightning.ai/lightning-ai/studios/code-lora-from-scratch)
 - [Fine tune LLMs 2024](https://www.philschmid.de/fine-tune-llms-in-2024-with-trl)
-
+- [A collection Fine-Tuning video courses](https://parlance-labs.com/education/fine_tuning/kyle.html)
 
 
 ### LLM traning methods

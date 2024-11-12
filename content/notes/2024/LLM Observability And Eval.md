@@ -102,6 +102,9 @@ use YAML because it is less verbose, and hence consumes fewer tokens than JSON. 
 - **ROUGE-N**: Measures n-gram overlap between generated text and references.
 
 
+Never ask the point to LLM for question out of 5 like because we cannot decide what we going to do with the point. so ask for Critiques how it can improved etc 
+For more check  [Creating a LLM-as-a-Judge That Drives Business Results](https://hamel.dev/blog/posts/llm-judge/)
+
 ## Chain poll
 
  A HIGH EFFICACY METHOD FOR LLM HALLUCINATION DETECTION

@@ -13,6 +13,7 @@
 
 - [ ] How i automate dev moderate center using AI 
 - [ ] Automate bug bounty agents
+- [ ] Enter the company support articel URL and will scrape and index whoel and doc and start chatting
 
 
 

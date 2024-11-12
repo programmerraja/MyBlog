@@ -40,3 +40,10 @@ passive income
 - stock (index fund)
 - 
 
+
+
+Ai
+- RAg
+- Agents 
+- FIne tuneing
+- 
