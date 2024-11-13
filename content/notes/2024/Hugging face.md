@@ -58,7 +58,6 @@ Datasets are memory-mapped using Apache Arrow and cached locally.This means that
 Is wrapper which contain tokenizer ,model and the things need for after conversion of model output
 
 
-
 The AutoTokenizer class belongs to a larger set of “auto” classes whose job is to automatically retrieve the model’s configuration, pretrained weights, or vocabulary from the name of the checkpoint.
 
 
