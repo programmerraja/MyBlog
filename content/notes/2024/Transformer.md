@@ -588,6 +588,8 @@ special_tokens:
 LLM fine tuning made easy
 https://axolotl.ai/   
 
+## Quantization
+
 **Quantization** is a technique used to reduce the memory footprint and computational requirements of LLMs, particularly when dealing with limited hardware resources.
 - **Conversion Process**: Quantization involves converting model parameters, typically stored as 32-bit floating point numbers (FP32), to lower precision formats like 8-bit integers (INT8) or 16-bit floating point numbers (FP16).
 
@@ -653,6 +655,10 @@ Knowledge distillation can be implemented in two ways:
 
 - Black-box distillation: The student model only has access to the teacher model's outputs, learning to replicate the teacher's behavior without direct insight into its internal working
 
+
+### Unsloth
+
+[Unsloth](https://github.com/unslothai/unsloth) is a lightweight library for faster LLM fine-tuning
 ## Resources
 
 - [Deconstructing BERT Part 2: Visualizing the Inner Workings of Attention](https://towardsdatascience.com/deconstructing-bert-part-2-visualizing-the-inner-workings-of-attention-60a16d86b5c1)
@@ -670,7 +676,9 @@ Knowledge distillation can be implemented in two ways:
 - [Ecco GitHub Repository](https://github.com/jalammar/ecco?tab=readme-ov-file)
 - [The Transformers Architecture in Detail: What's the Magic Behind LLMs](https://aigents.co/data-science-blog/publication/the-transformers-architecture-in-detail-whats-the-magic-behind-llms)
 - https://rbcborealis.com/research-blogs/tutorial-14-transformers-i-introduction/ 
+- 
 
 #### Visualizer
 - [Inspectus GitHub Repository](https://github.com/labmlai/inspectus)
+- [Transformer Explained Visually](https://poloclub.github.io/transformer-explainer/): Learn How LLM Transformer Models Work with Interactive Visualization 
 

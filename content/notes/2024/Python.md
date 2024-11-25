@@ -853,6 +853,44 @@ async def main():
         print(f"Caught an exception from the task: {e}")
 
 ```
+
+### Under the Hood of async IO
+
+asyncio event loop is written in C
+```python
+from queue import Queue
+
+event_loop = Queue()
+
+class Task():
+	def __init__(self, generator):
+		self.iter = generator		
+		self.finished = False
+
+	def done(self):
+		return self.finished
+
+	def __await__(self):
+		while not self.finished:
+			yield self
+
+
+def create_task(generator):
+	task = Task(generator)
+	event_loop.put(task)
+	return task
+
+def run(main):
+	event_loop.put(Task(main))
+	while not event_loop.empty():
+		task = event_loop.get()
+		try:
+			task.iter.send(None)
+		except StopIteration:
+			task.finished = True
+		else:
+			event_loop.put(task)
+```
 ## Nest async io
 
 `nest_asyncio` is a Python library that allows you to run an asyncio event loop within an already running event loop. This is particularly useful in environments like Jupyter notebooks or other interactive environments where an event loop may already be running.
@@ -1032,16 +1070,31 @@ In Python, package management and package locking are handled using tools that m
 - https://dublog.net/blog/so-many-python-package-managers/
 ### Comparison:
 
-| Tool         | Dependency File         | Lock File          | Environment Isolation | Notes |
-|--------------|-------------------------|--------------------|-----------------------|-------|
-| `pip`        | `requirements.txt`       | No Lock File       | No                    | Most basic setup |
-| `pipenv`     | `Pipfile`                | `Pipfile.lock`      | Yes                   | Modern solution |
-| `poetry`     | `pyproject.toml`         | `poetry.lock`       | Yes                   | Great for projects with complex dependencies |
-| `conda`      | `environment.yml`        | No Lock File       | Yes                   | Popular for data science projects |
+| Tool     | Dependency File    | Lock File      | Environment Isolation | Notes                                        |
+| -------- | ------------------ | -------------- | --------------------- | -------------------------------------------- |
+| `pip`    | `requirements.txt` | No Lock File   | No                    | Most basic setup                             |
+| `pipenv` | `Pipfile`          | `Pipfile.lock` | Yes                   | Modern solution                              |
+| `poetry` | `pyproject.toml`   | `poetry.lock`  | Yes                   | Great for projects with complex dependencies |
+| `conda`  | `environment.yml`  | No Lock File   | Yes                   | Popular for data science projects            |
 
 
 new tools
 - pydantic
 - Ruff [ linting and formating]
-- uv
+- uv (An extremely fast Python package and project manager, written in Rust.) Good need to try this
 - mypy
+
+
+
+### PEP
+
+PEP stands for **Python Enhancement Proposal**. It is a design document providing information or proposing new features, processes, or changes to Python. PEPs serve as the primary mechanism for discussing, documenting, and communicating ideas to the Python community.
+
+**Types of PEPs**
+
+1. **Standards Track PEPs**: Propose new features or standards to be added to Python. 
+	- Example: **PEP 8** (Style Guide for Python Code), **PEP 484** (Type Hints).
+1. **Informational PEPs**: Provide guidelines or general information to the Python community.
+	- Example: **PEP 20** (Zen of Python).
+1. **Process PEPs**: Propose changes to the development process or tools for Python.
+	- Example: **PEP 1** (PEP Purpose and Guidelines).

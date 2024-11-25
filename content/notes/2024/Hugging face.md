@@ -498,6 +498,7 @@ ONNX supports standard data types for tensors (int8, int16, bool, float16, etc.)
 - [Huggingface 🤗 is all you need for NLP and beyond ](https://jarvislabs.ai/blogs/hf-getting-started )
 - https://paperswithcode.com/sota
 - https://playground.tensorflow.org/
+- https://github.com/ajinkyakolhe112/Huggingface-NLP-COURSE-NOTES/tree/main/1.%20Introduction%20to%20Huggingface/3.%20Fine-tuning%20a%20Pretrained%20model
 
 Visualizer for neural network, deep learning and machine learning models https://netron.app/
 

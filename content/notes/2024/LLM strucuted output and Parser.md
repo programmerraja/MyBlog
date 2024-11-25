@@ -118,7 +118,9 @@ main();
 - A bias value of -100 will likely block the token from being generated
 - **logprobs** Include the log probabilities on the `logprobs` most likely output tokens, as well the chosen tokens. For example, if `logprobs` is 5, the API will return a list of the 5 most likely tokens
 
+### xgrammar
 
+[XGrammar](https://github.com/mlc-ai/xgrammar) is an open-source library for efficient, flexible, and portable structured generation. It supports general context-free grammar to enable a broad range of structures while bringing careful system optimizations to enable fast executions. XGrammar features a minimal and portable C++ backend that can be easily integrated into multiple environments and frameworks, and is co-designed with the LLM inference engine and enables zero-overhead structured generation in LLM inference.
 
 ## Praser
 ### Jina AI
@@ -134,6 +136,10 @@ It use model to parse the content check [here](https://github.com/DS4SD/docling)
 ### Omniparse
 
 Ingest, parse, and optimize any data format ➡️ from documents to multimedia ➡️ for enhanced compatibility with GenAI frameworks
+
+
+### AgentQL
+Transforming websites into agent-friendly surfaces with an AI-native query language check [here](https://www.agentql.com/)
 
 ### Resources
 - https://blog.dottxt.co/coalescence.html

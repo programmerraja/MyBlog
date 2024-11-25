@@ -121,7 +121,7 @@ class DocumentProcessor:
 
 **Temporal decomposition**
 
-Common cause for the information leakage. Consider an application that reads a file in a particular format, modifies the contents ofthe file, and then writes the file out again. With temporal decomposition, this application might be broken into three classes: one to read the file,another to perform the modifications, and a third to write out the new version. Both the file reading and file writing steps have knowledge about the file format, which results in information leakage.
+Common cause for the information leakage. Consider an application that reads a file in a particular format, modifies the contents of the file, and then writes the file out again. With temporal decomposition, this application might be broken into three classes: one to read the file,another to perform the modifications, and a third to write out the new version. Both the file reading and file writing steps have knowledge about the file format, which results in information leakage.
 
 
 `Note:` **When designing modules, focus on the knowledge that’s needed to perform each task, not the order in which tasks occur.**

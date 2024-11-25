@@ -29,6 +29,8 @@ Other data connectors are offered through [LlamaHub](https://llamahub.ai/) �
 ### Data Transformations
 
  Transformations include chunking, extracting metadata, and embedding each chunk.
+
+First Convert the data in to `Document` and then convert to `Node` and do indexing
  
 Transformation input/outputs are `Node` objects (a `Document` is a subclass of a `Node`). Transformations can also be stacked and reordered.
 
@@ -76,3 +78,225 @@ pipeline = IngestionPipeline(transformations=[TokenTextSplitter(), ...])
 nodes = pipeline.run(documents=documents)
 
 ```
+
+#### Node Parsser
+
+```python
+from llama_index.core import Document
+from llama_index.core.node_parser import SentenceSplitter
+
+node_parser = SentenceSplitter(chunk_size=1024, chunk_overlap=20)
+
+nodes = node_parser.get_nodes_from_documents(
+    [Document(text="long text")], show_progress=False
+)
+```
+
+
+
+### Indexing
+- Summary Index
+- Vector Store Index
+- Tree index
+- keyword table index
+-  Property Graph Index
+
+### Vector store Index
+
+Vector stores accept a list of [`Node` objects](https://docs.llamaindex.ai/en/stable/module_guides/loading/documents_and_nodes/) and build an index from them
+
+```python
+
+from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
+
+# Load documents and build index
+documents = SimpleDirectoryReader(
+    "../../examples/data/paul_graham"
+).load_data()
+
+index = VectorStoreIndex.from_documents(documents,show_progress=true)
+#or
+
+from llama_index.core.schema import TextNode
+
+node1 = TextNode(text="<text_chunk>", id_="<node_id>")
+node2 = TextNode(text="<text_chunk>", id_="<node_id>")
+nodes = [node1, node2]
+index = VectorStoreIndex(nodes)
+
+```
+
+- By default, VectorStoreIndex stores everything in memory.
+
+ingestion pipeline to create nodes
+
+```python
+from llama_index.core import Document
+from llama_index.embeddings.openai import OpenAIEmbedding
+from llama_index.core.node_parser import SentenceSplitter
+from llama_index.core.extractors import TitleExtractor
+from llama_index.core.ingestion import IngestionPipeline, IngestionCache
+
+# create the pipeline with transformations
+pipeline = IngestionPipeline(
+    transformations=[
+        SentenceSplitter(chunk_size=25, chunk_overlap=0),
+        TitleExtractor(),
+        OpenAIEmbedding(),
+    ]
+)
+
+# run the pipeline
+nodes = pipeline.run(documents=[Document.example()])
+```
+
+Storing index in DB pass `storage_context=storage_context`
+
+```python 
+import pinecone
+from llama_index.core import (
+    VectorStoreIndex,
+    SimpleDirectoryReader,
+    StorageContext,
+)
+from llama_index.vector_stores.pinecone import PineconeVectorStore
+
+# init pinecone
+pinecone.init(api_key="<api_key>", environment="<environment>")
+pinecone.create_index(
+    "quickstart", dimension=1536, metric="euclidean", pod_type="p1"
+)
+
+# construct vector store and customize storage context
+storage_context = StorageContext.from_defaults(
+    vector_store=PineconeVectorStore(pinecone.Index("quickstart"))
+)
+
+# Load documents and build index
+documents = SimpleDirectoryReader(
+    "../../examples/data/paul_graham"
+).load_data()
+
+index = VectorStoreIndex.from_documents(
+    documents, storage_context=storage_context
+)
+```
+
+
+Node Postprocessor
+
+Node postprocessors are a set of modules that take a set of nodes, and apply some kind of transformation or filtering before returning them. 
+
+- **LLMRerank** (retervie the relvant context and send to LLM rerank it based on revelvance score)
+- **SentenceEmbeddingOptimizer** (Optimize a node text given the query by shortening the node text.)
+
+Has many more
+
+```python
+
+from llama_index.core.optimization.optimizer import Optimizer
+
+optimizer = SentenceEmbeddingOptimizer(percentile_cutoff=0.5,
+#this means that the top 50% of sentences will be used.
+#Alternatively, you can set the cutoff using a threshold on the similarity score. In this case only sentences with a similarity score higher than the threshold will be used.
+threshold_cutoff=0.7,
+)
+
+query_engine = index.as_query_engine(optimizer=optimizer)
+response = query_engine.query("<query_str>")
+```
+
+
+`Response Synthesizer` is what generates a response from an LLM, using a user query and a given set of text chunks. The output of a response synthesizer is a `Response` object.
+
+Types
+- BaseSynthesizer
+- SynthesizerComponent
+- Refine
+- SimpleSummarize
+- TreeSummarize
+- Generation
+- CompactAndRefine
+
+
+## Settings
+
+Settings will be used by all module instead of passing LLM to all module we can set it globally
+
+```python
+from llama_index.core import Settings
+
+settings.llm = 
+```
+
+
+
+
+
+Schema have document and node etc
+
+Node are class with below properties
+- `id_`
+- `embedding`
+- `metadata`
+- `excluded_embed_metadata_keys`
+- `excluded_llm_metadata_keys`
+- `relationships`
+- `metadata_template`
+- `metadata_separator`
+
+
+
+Vector store
+- interface between actula db and has retervieral
+- storage_context represent the obj of db that is storing data
+- 
+
+StorageContext is a utility container in LlamaIndex for managing storage components like nodes, indices, and vectors. It includes components such as `docstore`, `index_store`, `vector_store`, `graph_store`, and optionally `property_graph_store`
+
+Will be intermediate between store and index
+
+
+All store are under storage 
+ Storeage have
+ - doc store 
+ - index store
+ - grpah store
+
+All are stored in memory
+
+
+A interface for storage is StorageContext which is used in vector store
+
+Every index has store and retervial
+
+
+
+A query engine processes queries to return structured responses, often using a combination of retrieval and synthesis techniques. A retriever, on the other hand, focuses on retrieving relevant nodes or documents based on the query, typically using methods like vector similarity or keyword matching.
+
+
+
+Knowelege graph
+
+Extractor
+
+- `SimpleLLMPathExtractor` : Extract short statements using an LLM to prompt and parse single-hop paths in the format (`entity1`, `relation`, `entity2`)
+
+-  `ImplicitPathExtractor`: Extract paths using the `node.relationships` attribute on each llama-index node object.This extractor does not need an LLM or embedding model to run, since it's merely parsing properties that already exist on llama-index node objects.
+
+-  `SchemaLLMPathExtractor`: Extract paths following a strict schema of allowed entities, relationships, and which entities can be connected to which relationships.
+
+
+Reteriver
+
+All retrievers currently include: - 
+- `LLMSynonymRetriever` - retrieve based on LLM generated keywords/synonyms 
+
+- `VectorContextRetriever` - retrieve based on embedded graph nodes  
+
+- `TextToCypherRetriever` - ask the LLM to generate cypher based on the schema of the property graph 
+
+- `CypherTemplateRetriever` - use a cypher template with params inferred by
+	the LLM 
+
+- `CustomPGRetriever` - easy to subclass and implement custom retrieval logic

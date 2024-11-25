@@ -76,4 +76,20 @@ Each sha256 digest is also used as a filename in the `~/.ollama/models/blobs` 
 ```
 cd /usr/share/ollama/.ollama/models/blobs
 llamafile -m sha256-00e1317cbf74d901080d7100f57580ba8dd8de57203072dc6f668324ba545f29
+
 ```
+
+TO get model sha value it will under `/usr/share/ollama/.ollama/models/manifests/registry.ollama.ai/library/modelname/latest` 
+
+or check logs of ollama
+
+Note: If we run a ollama as service only it will store the model in above both if we running ollama as `ollama server` and pulling the model store the model in home dir
+
+By default when we pulling model Ollama may default to using a highly compressed model variant (e.g. Q4). (4 bit  [Quantization](Transformer.md#Quantization) ) which may have less accuracy so if we want more accurate model pull with `dolphin2.2-mistral:7b-q6_K.` (Q6)
+
+
+
+
+## PowerInfer
+
+[High-speed ](https://github.com/SJTU-IPADS/PowerInfer)Large Language Model Serving on PCs with Consumer-grade GPUs

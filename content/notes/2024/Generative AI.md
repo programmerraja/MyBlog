@@ -118,6 +118,7 @@ How it works
 **Resources**
 - [ Not RAG, but RAG Fusion?](https://pub.towardsai.net/not-rag-but-rag-fusion-understanding-next-gen-info-retrieval-477788da02e2)
 - https://github.com/Raudaschl/rag-fusion 
+- https://github.dev/Denis2054/RAG-Driven-Generative-AI
 
 ###  CRAG
 
@@ -161,6 +162,24 @@ A technique devloped by google that enhances the factual accuracy of large langu
 
 4. **Providing a Verified Answer**: The LLM uses the retrieved data to give a reliable, data-backed answer, reducing the risk of hallucinations and improving the trustworthiness of its output.
 
+### Graph RAG
+For query-focused abstractive summarization
+
+**Knowledge Graphs**: A knowledge graph is a specialized type of graph designed to represent knowledge and information in a structured way. It consists of:
+
+- **Nodes**: These represent entities, such as people, places, events, or concepts. For example, in a knowledge graph about movies, nodes could represent individual films, actors, directors, or genres.
+- **Edges**: These represent relationships between entities. For example, an edge labeled "directed" could connect a "director" node to a "movie" node, indicating that the director directed that particular film.
+- **Properties**: These are key-value pairs associated with nodes and edges that provide additional information. For example, a "movie" node might have properties like "title", "release date", and "IMDb rating".
+
+**Graph Databases**: These are databases specifically designed to store and manage knowledge graphs. They offer advantages over traditional relational databases (RDBMS) when dealing with complex, interconnected data. The sources specifically focus on Neo4j, a popular graph database.
+
+### HippoRAG
+
+This framework draws inspiration from the hippocampal indexing theory of human long-term memory and aims to enhance knowledge integration in Large Language Models
+
+HippoRAG utilizes the synergy between LLMs, knowledge graphs (KGs), and the Personalized PageRank (PPR) algorithm to emulate the roles of the neocortex and hippocampus in human memory
+
+During  retrieval, the LLM extracts key named entities (query named entities) from the user's query, and these entities are linked to corresponding nodes (query nodes) in the KG. These query nodes serve as the starting points for the PPR algorithm.PPR operates by distributing a probability mass across the KG, starting from the query nodes. The algorithm simulates random walks across the graph, with the probability of transitioning to neighboring nodes influenced by the edge weights and connections.
 ### Late Chunking
 
 - Let say we have doc as `Berin is captial of germany it is more then 3M population` if we chunk as `Berin is captial of germany` and `it is more then 3M population` in second chunk we loose the context to avoid that 
@@ -318,6 +337,32 @@ Data Creation Techniques
 - **Rule-based Data Cleaning:** Simple, human-understandable rules, such as regular expressions (regex), can be used to filter out unwanted patterns in the data, improving data quality.
 - **Advanced Techniques:** More advanced methods like topic modeling, zero-shot classifiers, and LLM-based judging can further enhance data quality.
 - **Human Annotation:** Human annotation, while potentially expensive, remains an important component of data set quality improvement.
+
+
+## MemGPT
+
+MemGPT: A Hierarchical Memory System for Large Language Models (LLMs)
+
+- **MemGPT is a new LLM system that addresses the limited context window problem of LLMs by drawing inspiration from the hierarchical memory systems found in traditional operating systems (OSes).**
+
+- MemGPT introduces **virtual context management** to provide the illusion of an extended context for LLMs, much like how virtual memory in OSes allows applications to work with datasets exceeding available physical memory.
+
+- The key idea behind MemGPT is to enable LLMs to manage their own memory by using function calls, allowing them to **read and write data to external sources, modify their own context, and decide when to respond**.
+
+Currently it implemented as [letta](https://www.letta.com/)
+
+#### Components of Letta
+
+- **Prompt** (which has below things)
+	- System instruction
+
+	- Working context: A dynamic, read/write area where MemGPT can store essential information about the user, task, or conversation. Think of this as a scratchpad for retaining key facts and preferences.
+
+	- FIFO queue : A rolling history of messages, system actions, and function call inputs/outputs. It operates on a First-In, First-Out basis, meaning older entries are evicted as new ones arrive. A recursive summary of evicted messages is stored at the beginning of the queue to preserve some context from past interactions
+
+- **Recall Memory** : A dedicated database for storing and retrieving past messages, ensuring a comprehensive record of interactions even as the FIFO Queue evicts older entries
+
+- **Archival storage**: A persistent database for storing arbitrary-length text objects. This could include documents, code, or any other information deemed relevant for future retrieval,MemGPT uses PostgreSQL with the pgvector extension for archival storage, enabling efficient vector search with an HNSW index.
 
 
 

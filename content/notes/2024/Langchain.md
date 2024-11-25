@@ -452,6 +452,58 @@ print(memory.chat_memory.messages)
 ```
 - Unlike **ConversationBufferMemory** , which retains all previous interactions, **ConversationBufferWindowMemory** only keeps the last k interactions, where k is the window size specified
 
+
+## Agents
+
+the agent with the LLM, the prompt, and the tools. The agent is responsible for taking in input and deciding what actions to take. Crucially, the Agent does not execute those actions - that is done by the AgentExecutor
+
+```python
+
+from langchain.agents import create_tool_calling_agent
+from langchain.tools.retriever import create_retriever_tool
+from langchain_openai import ChatOpenAI
+from langchain import hub
+
+from langchain_community.document_loaders import WebBaseLoader  
+from langchain_community.vectorstores import FAISS  
+from langchain_openai import OpenAIEmbeddings  
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+
+from langchain.agents import AgentExecutor
+
+llm = ChatOpenAI(model="gpt-3.5-turbo-0125", temperature=0)
+
+  
+loader = WebBaseLoader("https://docs.smith.langchain.com/overview")  
+
+docs = loader.load()  
+
+documents = RecursiveCharacterTextSplitter(  
+chunk_size=1000, chunk_overlap=200  
+).split_documents(docs)  
+
+vector = FAISS.from_documents(documents, OpenAIEmbeddings())
+
+retriever = vector.as_retriever()
+
+retriever_tool = create_retriever_tool(  
+retriever,  
+"langsmith_search",  
+"Search for information about LangSmith. For any questions about LangSmith, you must use this tool!",  
+)
+
+tools = [retriever_tool]
+
+prompt = hub.pull("hwchase17/openai-functions-agent")
+
+agent = create_tool_calling_agent(llm, tools, prompt)
+
+agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
+
+agent_executor.invoke({"input": "hi!"})
+
+```
+
 #### ZepMemory
 
 [Zep](https://github.com/getzep/zep) persists and recalls chat histories, and automatically generates summaries and other artifacts from these chat histories. It also embeds messages and summaries, enabling you to search Zep for relevant context from past conversations. Zep does all of this asyncronously, ensuring these operations don't impact your user's chat experience. Data is persisted to database, allowing you to scale out when growth demands.
@@ -470,14 +522,30 @@ State is dict the data used by agent will be write or read.
 
 In graph each node is agent or tools and the edges connect nodes determine sequence of ops
 
+
 ```python
 
 ```
 
 
+#### Memory
+
+- **Persistence:** LangGraph's system for saving the graph's state so it can be accessed and used later. Think of it like saving your progress in a video game.
+- **Checkpointers:** Special components that handle the process of saving the graph's state at various points. They're like the "save" button in a video game.
+- **Checkpoints:** The actual saved snapshots of the graph's state. Imagine them as the individual save files in your game.
+- **Threads:** A way to organize sets of checkpoints. Imagine playing the same game with multiple different characters each character would have its own set of save files, or threads.
+- **State Snapshot (`StateSnapshot`):** This is a Python object that holds all the important information about a particular checkpoint. It's like opening a save file and seeing all the details of your game at that point.
+
+
+- **`langgraph-checkpoint`:** The core library that defines how checkpointers work. It comes included with LangGraph and includes a simple checkpointer called `MemorySaver`.
+- **`langgraph-checkpoint-sqlite` and `langgraph-checkpoint-postgres`:** More powerful checkpointers that use SQLite and Postgres databases, respectively. These are better for handling larger amounts of data or for use in production environments.
+
+
+
 - https://github.dev/emarco177/langgaph-course
 - https://github.com/pinecone-io/examples/blob/master/learn/generation/langchain/langgraph/00-langgraph-intro.ipynb
 - https://colab.research.google.com/drive/1WemHvycYcoNTDr33w7p2HL3FF72Nj88i?usp=sharing [check this]
+- https://langchain-ai.github.io/langgraph/concepts/agentic_concepts/#subgraphs
 
 
 
@@ -490,4 +558,5 @@ In graph each node is agent or tools and the edges connect nodes determine seque
 - https://nanonets.com/blog/langchain/ 
 - https://github.dev/bhancockio/langchain-crash-course 
 - https://github.dev/Codium-ai/cover-agent
+
 

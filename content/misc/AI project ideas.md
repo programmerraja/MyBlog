@@ -14,6 +14,7 @@
 - [ ] How i automate dev moderate center using AI 
 - [ ] Automate bug bounty agents
 - [ ] Enter the company support articel URL and will scrape and index whoel and doc and start chatting
+- [ ] Spoken english teacher where you speak  it will help to fix english and teach
 
 
 
@@ -239,3 +240,11 @@ Fetch all my emails and summarize?
 
 Tommorow write down what all are the thing you know in AI to get clraity about myself 
 
+
+
+
+
+
+```
+i am building a product for sales people where they can practice cold call by choosing kind of prospect where they want to talk like Positive,neagtive,netural,Skeptical,busy,Curious etc once user choosed the prospect character where they can start cold call i will take the audio and convert to transcript and need to AI to get reply based on the prospect persona choose help me to write a perfect prompt for it
+```

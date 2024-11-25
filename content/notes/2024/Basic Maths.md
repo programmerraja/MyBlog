@@ -25,3 +25,6 @@ Trignomentry
 Sin -> to represent the vaule in vertical
 cos-> to represent the vaule in horzontal
 
+
+
+https://buttondown.com/jaffray/archive/adventures-in-probability/?ref=dailydev

@@ -150,6 +150,7 @@ How pgai are work?
 - [PostgreSQL Hybrid Search Using Pgvector and Cohere](https://www.timescale.com/blog/postgresql-hybrid-search-using-pgvector-and-cohere/)
 - [Vector Similarity Search with PostgreSQL’s pgvector – A Deep Dive](https://severalnines.com/blog/vector-similarity-search-with-postgresqls-pgvector-a-deep-dive/)
 - [Build, scale, and manage user-facing Retrieval-Augmented Generation applications using postgress](https://r2r-docs.sciphi.ai/introduction/what-is-r2r)
+- Learn to build vector-powered systems with [VectorHub](https://superlinked.com/vectorhub/), a free education and open-source platform for data scientists.
 
 
 

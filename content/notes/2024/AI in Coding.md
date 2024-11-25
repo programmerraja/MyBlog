@@ -142,3 +142,14 @@ https://github.com/Storia-AI/repo2vec
 ## LLM
 - [DeepSeek](https://www.deepseek.com/) Coder comprises a series of code language models trained from scratch on both 87% code and 13% natural language in English and Chinese Open sources and free to use
 - https://github.com/huybery/Awesome-Code-LLM 
+
+
+
+## Tools
+
+### [CopyCoder](https://copycoder.ai/)
+- Screenshot any app  
+2. Generate prompts  
+3. Paste into AI builder  
+4. Full FE clone app is created
+

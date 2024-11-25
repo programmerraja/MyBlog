@@ -233,6 +233,31 @@ RAG Triad of metrics
 - Context Relevance -> is retervied context relvant to the query?
 - Answer Relevance -> is the response relvant to the query?
 - Groundedness -> is response supported by the context?
+
+
+### Quotient AI 
+[Quotient](https://www.quotientai.co/) AI automates manual evaluations starting from real data, incorporating human feedback.
+
+- **Context Relevance**
+- **Chunk Relevance**
+- **Faithfulness**
+- **ROUGE-L**
+- **BERT Sentence Similarity**
+- **BERTScore**
+
+## Eleuther AI
+
+A [framework](https://github.com/EleutherAI/lm-evaluation-harness) for few-shot evaluation of language models.
+
+## Arize Phoenix
+
+Phoenix is an open-source observability library designed for experimentation, evaluation, and troubleshooting.
+
+## Braintrust
+
+Braintrust is an end-to-end platform for building AI applications. It makes software development with large language models (LLMs) robust and iterative.
+
+
 ## Tools
 
 - **Port Key**
@@ -246,5 +271,8 @@ RAG Triad of metrics
 - [Evaluating the Effectiveness of LLM-Evaluators](https://eugeneyan.com/writing/llm-evaluators/)
 - [A framework for few-shot evaluation of language models. ](https://github.com/EleutherAI/lm-evaluation-harness) 
 - [LLM Evaluation Skills Are Easy to Pick Up](https://freedium.cfd/https://towardsdatascience.com/llm-evaluation-techniques-and-costs-3147840afc53) 
+- [How to Cook Good AI Products with What You Already Have in your Data Warehouse](https://www.youtube.com/watch?v=G87yQv5CMq8)
+- [Optimizing RAG Through an Evaluation-Based Methodology](https://qdrant.tech/articles/rapid-rag-optimization-with-qdrant-and-quotient/)
+- 
 
 ---
