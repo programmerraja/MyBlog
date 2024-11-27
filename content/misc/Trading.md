@@ -338,4 +338,71 @@ NPS
 ![[Pasted image 20240721092914.png]]
 
 
+The **Financial Independence, Retire Early (FIRE)** movement is a lifestyle and financial planning approach aimed at achieving financial independence at an earlier age than traditional retirement. Here’s an overview of the FIRE principles:
 
+---
+
+### **Core Principles of FIRE**
+
+1. **Maximize Savings Rate**
+    
+    - Save and invest a significant portion of your income—typically 50-70%.
+    - Reduce expenses through frugal living and intentional spending.
+2. **Invest Wisely**
+    
+    - Build a diversified portfolio, often including index funds, real estate, and other income-generating assets.
+    - Focus on long-term growth and compounding returns.
+3. **Track Your Progress**
+    
+    - Calculate your **FIRE number**, the amount of money you need to sustain your desired lifestyle. A common formula is: FIRE Number=Annual Expenses×25\text{FIRE Number} = \text{Annual Expenses} \times 25FIRE Number=Annual Expenses×25 This is based on the **4% rule**, which assumes you can withdraw 4% of your portfolio annually in retirement.
+4. **Eliminate Debt**
+    
+    - Pay off high-interest debts, like credit cards, as soon as possible.
+    - Consider strategies for paying down mortgages or student loans efficiently.
+5. **Earn More**
+    
+    - Pursue higher-paying opportunities or side hustles to accelerate savings.
+    - Look into passive income streams to supplement investments.
+
+"COAST FIRE" stands for "Cost of Annual Spending Threshold Financial Independence, Retire Early." It's a strategy in the FIRE (Financial Independence, Retire Early) community where you save and invest enough early in your career so that your investments can grow over time without additional contributions. The goal is to "coast" into retirement without needing to save aggressively later in life.
+
+Here's a breakdown of how to map out a financial route for COAST FIRE:
+
+### 1. **Determine Your Annual Spending Needs**
+
+- Calculate your annual expenses, including housing, utilities, food, transportation, healthcare, entertainment, and other lifestyle costs.
+- Factor in inflation and potential increases in costs over time.
+
+### 2. **Estimate Your FIRE Number**
+
+- Your FIRE number is the amount you need in investments to retire comfortably. For COAST FIRE, this is typically calculated as: FIRE Number=Annual Expenses×Safe Withdrawal Rate (SWR)\text{FIRE Number} = \text{Annual Expenses} \times \text{Safe Withdrawal Rate (SWR)}FIRE Number=Annual Expenses×Safe Withdrawal Rate (SWR)
+    - A common SWR is 4% (the "4% Rule").
+    - Example: If you need $40,000 annually, your FIRE number is $1,000,000 ($40,000 ÷ 0.04).
+
+### 3. **Calculate Your COAST FIRE Number**
+
+- The COAST FIRE number is the amount you need in investments now to grow to your FIRE number by traditional retirement age without further contributions.
+- Use compound interest to estimate: Future Value=Current Investment×(1+r)t\text{Future Value} = \text{Current Investment} \times (1 + r)^tFuture Value=Current Investment×(1+r)t
+    - rrr = annual return rate (e.g., 7% for stocks).
+    - ttt = years until retirement.
+
+### 4. **Save Aggressively Early**
+
+- Prioritize saving and investing as much as possible in your 20s, 30s, or early career.
+- Focus on tax-advantaged accounts like 401(k)s, IRAs, or HSAs if available.
+- Invest in diversified index funds or ETFs to maximize returns with lower risk.
+
+### 5. **Reduce or Eliminate Contributions**
+
+- Once you reach your COAST FIRE number, contributions can decrease or stop entirely.
+- Let compound interest handle the growth until retirement.
+
+### 6. **Plan for Lifestyle and Career Flexibility**
+
+- Many COAST FIRE adherents continue working but choose lower-stress or more fulfilling jobs.
+- Some work part-time or freelance to cover current expenses without tapping investments.
+
+### 7. **Track Progress Regularly**
+
+- Reevaluate your investments and expenses annually.
+- Adjust for changes in life circumstances, inflation, or market conditions.

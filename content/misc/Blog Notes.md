@@ -21,7 +21,7 @@ Sherlock Holmes
 - [ ] Econnreset
 - [ ] HOw nodejs update 18 restart the pod unhabled rejection
 - [ ] Links server slow nginx multiple ssl
-- [ ] debug ecconreset 15sec to update
+- [x] debug ecconreset 15sec to update
 - [ ] How we fix dns error in pod
 
 How to 
@@ -34,6 +34,7 @@ How to
 
 Learn from mistakes or from expereinces
 - [ ]  Migration to 
+- [ ] How Our devops accedntly deelted the production kube cluster
 
 Unsolved mysteries
 - [ ] Vault timeout 
