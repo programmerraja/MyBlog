@@ -26,5 +26,5 @@ https://arxiv.org/abs/2201.00650
 
 
 RESUME
-- FIRST HAVE EXCUTIVE SUMMARY
+- FIRST HAVE EXCUTIVE SUMMARY (add why you good fit for currently applied job)
 - nO NEED SCHOOL MARKS 

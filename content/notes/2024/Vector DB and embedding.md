@@ -67,6 +67,22 @@ algorithms commonly used for similarity search indexing
 - **Binary Quantization** : quantization in models where you reduce the precision of weights, quantization for embeddings refers to a post-processing step for the embeddings themselves. In particular, binary quantization refers to the conversion of the `float32` values in an embedding to 1-bit values, resulting in a 32x reduction in memory and storage usage.
 - For more check [here](https://huggingface.co/blog/embedding-quantization)
 
+DIfferet distance calculation algorithm
+
+
+| **Metric**             | **When to Use**                                                                                       | **Why to Use**                                                                                            |
+| ---------------------- | ----------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| **Cosine Similarity**  | - Text data (e.g., TF-IDF, word embeddings)                                                           | - Measures the **angle** between vectors, ignoring magnitude                                              |
+|                        | - Document similarity, sentence comparison                                                            | - Focuses on the **direction** of vectors, useful for comparing content (e.g., semantic meaning)          |
+|                        | - High-dimensional, sparse data (e.g., NLP, recommender systems)                                      | - **Magnitude-insensitive**, so works well with documents of different lengths or sparse features         |
+| **Dot Product**        | - When both **magnitude** and **direction** are important                                             | - Measures both **magnitude** and **direction** of vectors, useful when frequency or importance matters   |
+|                        | - Frequency-based vector representations (e.g., Bag-of-Words, TF)                                     | - Computationally simpler than cosine similarity; no need for normalization if magnitudes matter          |
+|                        | - Quick similarity calculation (e.g., in recommendation systems)                                      | - **Sensitive to vector magnitude**, works well for scoring based on term frequencies or numerical values |
+| **Euclidean Distance** | - When the **absolute difference** between vectors is important (e.g., spatial data, feature vectors) | - Measures the **straight-line distance** between vectors in a space, sensitive to scale differences      |
+|                        | - Clustering, regression tasks, or other geometric distance-based problems                            | - **Sensitive to scale**; accounts for **magnitude differences**, great for real-valued, continuous data  |
+|                        | - Works well for **dense vectors** where absolute differences matter                                  | - **Intuitive interpretation** as "distance" in space                                                     |
+
+
 ## Postgress Vector DB
 
 - **Integrated Vector Storage:** Store your vectors seamlessly alongside your other data in PostgreSQL, leveraging the database's robustness, ACID compliance, and recovery features.
@@ -154,6 +170,90 @@ How pgai are work?
 
 
 
+
+## Qudrant
+
+### Concepts
+
+- **Collections**: A collection is a named set of points (vectors with a payload) among which you can search. The vector of each point within the same collection must have the same dimensionality and be compared by a single metric. **Named vectors** can be used to have multiple vectors in a single point, each of which can have their own dimensionality and metric requirements.
+- **Distance Metrics**: These are used to measure similarities among vectors and they must be selected at the same time you are creating a collection. The choice of metric depends on the way the vectors were obtained and, in particular, on the neural network that will be used to encode new queries.
+
+- **Points**: The points are the central entity that Qdrant operates with and they consist of a vector and an optional id and payload. `(smilar to documents in mogodb)`
+    - id: a unique identifier for your vectors.
+    - Vector: a high-dimensional representation of data, for example, an image, a sound, a document, a video, etc.
+    - [Payload](https://qdrant.tech/documentation/concepts/payload/): A payload is a JSON object with additional data you can add to a vector.
+    
+- **Storage** : Qdrant can use one of two options for storage, **In-memory** storage (Stores all vectors in RAM, has the highest speed since disk access is required only for persistence), or **Memmap** storage, (creates a virtual address space associated with the file on disk).
+
+Qdrant supports these most popular types of metrics:
+- Dot product: `Dot` 
+- Cosine similarity: `Cosine` 
+- Euclidean distance: `Euclid` 
+- Manhattan distance: `Manhattan` 
+
+### collections
+
+Creating a collection involves specifying parameters like vector size, distance metric, and various configuration options
+
+```http
+PUT /collections/{collection_name}
+{
+    "vectors": {
+      "size": 100,
+      "distance": "Cosine"
+    },
+    "init_from": {
+       "collection": "{from_collection_name}"
+    }
+}
+```
+
+### Point
+A document in db
+```http
+PUT /collections/{collection_name}/points
+{
+    "points": [
+        {
+            "id": 1,
+            "payload": {"color": "red"},
+            "vector": [0.9, 0.1, 0.1]
+        }
+    ]
+}
+```
+
+Each point in qdrant may have one or more vectors.Supported vector types
+
+- Dense Vectors -> Generated by LLM
+
+- Sparse Vectors -> Vectors with no fixed length, but only a few non-zero elements.  Useful for exact token match and collaborative filtering recommendations.
+
+- MultiVectors -> Matrices of numbers with fixed length but variable height.  Usually obtained from late interraction models like ColBERT.
+
+If the collection was created with multiple vectors, each vector data can be provided using the vector’s name:
+
+```http
+PUT /collections/{collection_name}/points
+{
+    "points": [
+        {
+            "id": 1,
+            "vector": {
+                "image": [0.9, 0.1, 0.1, 0.2],
+                "text": [0.4, 0.7, 0.1, 0.8, 0.1, 0.1, 0.9, 0.2]
+            }
+        },
+        {
+            "id": 2,
+            "vector": {
+                "image": [0.2, 0.1, 0.3, 0.9],
+                "text": [0.5, 0.2, 0.7, 0.4, 0.7, 0.2, 0.3, 0.9]
+            }
+        }
+    ]
+}
+```
 
 
 

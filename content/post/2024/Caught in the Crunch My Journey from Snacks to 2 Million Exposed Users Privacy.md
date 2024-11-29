@@ -1,7 +1,7 @@
 ---
-title: "Caught in the Crunch: My Journey from Snacks to 200,000 Exposed Users Privacy"
+title: "Caught in the Crunch: My Journey from Snacks to 2 Million Exposed Users Privacy"
 date: 2024-11-03T04:45:38.3838+05:30
-draft: true
+draft: false
 tags:
   - hacking
   - reverse_engineering

@@ -23,6 +23,7 @@ Sherlock Holmes
 - [ ] Links server slow nginx multiple ssl
 - [x] debug ecconreset 15sec to update
 - [ ] How we fix dns error in pod
+- [ ] hOW I SPEED UP OUR CI (pull shell code)
 
 How to 
 - [ ] How to use wireshark
@@ -31,6 +32,7 @@ How to
 - [ ] how to stream mongodb request 
 - [ ] Post about klenty dns
 - [ ] Rabbitmq load test
+- [ ] hOW I
 
 Learn from mistakes or from expereinces
 - [ ]  Migration to 
