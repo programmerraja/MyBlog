@@ -659,6 +659,9 @@ Knowledge distillation can be implemented in two ways:
 ### Unsloth
 
 [Unsloth](https://github.com/unslothai/unsloth) is a lightweight library for faster LLM fine-tuning
+
+
+- https://github.com/mistralai/mistral-finetune
 ## Resources
 
 - [Deconstructing BERT Part 2: Visualizing the Inner Workings of Attention](https://towardsdatascience.com/deconstructing-bert-part-2-visualizing-the-inner-workings-of-attention-60a16d86b5c1)

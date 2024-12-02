@@ -915,6 +915,9 @@ if __name__ == '__main__':
     asyncio.run(main())
 
 ```
+
+Resources
+- https://jacobpadilla.com/articles/handling-asyncio-tasks
 ## Type hints & Annotations
 
 Introduced in python 3.5 above it won't force to strict type we can give any type

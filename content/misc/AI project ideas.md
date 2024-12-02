@@ -248,3 +248,23 @@ Tommorow write down what all are the thing you know in AI to get clraity about m
 ```
 i am building a product for sales people where they can practice cold call by choosing kind of prospect where they want to talk like Positive,neagtive,netural,Skeptical,busy,Curious etc once user choosed the prospect character where they can start cold call i will take the audio and convert to transcript and need to AI to get reply based on the prospect persona choose help me to write a perfect prompt for it
 ```
+
+
+
+
+
+
+
+
+
+
+- name and password
+- choose programming and diffcultiy
+- Timer for each question
+- Total 3 levels 
+	- 1 level 
+		- 15 easy 
+		- 10 medium
+		- 5 Hard
+		- 5 Unlock 
+- Avatar for them 

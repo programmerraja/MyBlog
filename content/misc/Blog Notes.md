@@ -42,6 +42,10 @@ Unsolved mysteries
 - [ ] Vault timeout 
 - [ ] Meilisearch issue `Permission denied (os error 13)`
 
+System case study
+- [ ] Vault migration
+- [ ] Links migration
+- [ ] 
 A series for internal wokring
 - [ ] Mongodb
 
@@ -154,8 +158,205 @@ https://funkbytetech.substack.com/p/i-fought-a-ddos-and-lived-to-tell?ref=dailyd
 > # RESPONSE # The Facebook post, kept concise yet impactful.
 ```
 
+### COpy pasting
+```
+Please analyze the following piece of content in detail:
+
+"[INSERT CONTENT]"
+
+What key points, arguments, or themes are being explored? Summarize them.
+
+How is the content structured? Break down the key sections or components.
+
+What is the tone, style, and voice of the writing? How would you characterize it?
+
+What makes this piece compelling or engaging to the reader?
+
+What specific writing techniques (storytelling, humor, data, etc.) are employed?
+
+How could the core ideas be remixed or built upon to create a new, distinct piece of content? Brainstorm 3 high-level ideas.
+
+Based on your analysis, please create an outline for each of the 3 new pieces of content inspired by the original piece, but with a fresh angle or application of the core ideas.
+
+The ideas should be primarily inspired by the structure, hook, and idea explored.
+
+The outlines should include:
+
+A working title
+3-5 key points or arguments to explore
+Examples or stories to illustrate the points
+A unique insight, perspective, or opinion on the topic
+
+The new piece should be clearly distinct from the original (no copying), but riff on the same themes.
+```
+
+### COntent creation
+```
+I want to create a 4-week content strategy for my [NICHE] business that incorporates the 4 key content pillars: Educational, Entertaining, Thought-Provoking, and Empathetic.
+
+Here's examples of Educational:
+
+- Step-by-step tutorials
+- Quick tips and hacks
+- Myth-busting threads
+- Industry insights and analysis
+
+Here's examples of Entertaining:
+
+- Witty observations and hot takes
+- Behind-the-scenes glimpses
+- Inspiring stories and anecdotes
+- Controversial opinions that spark discussion
+
+Here's examples of Thought-Provoking:
+
+- Philosophical musings and reflections
+- Contrarian opinions and devil's advocate stances
+- "Big picture" industry predictions
+- Nuanced deep-dives into complex topics
+
+Here's examples of Empathetic:
+
+- Relatable memes and "it me" moments
+- Vulnerable stories of struggle and triumph
+- "You're not alone" messages of support
+- Uniquely personal insights into your audience's world
+
+My target audience is: [DESCRIBE YOUR IDEAL CUSTOMER]
+For each week, please generate 4 content ideas (1 from each pillar) that would resonate with my audience.
+For each idea, include:
+
+The content pillar it belongs to
+The key message or takeaway
+The format (text post, image, video, etc.)
+A catchy headline or hook
+A brief outline of the content (2-3 bullet points)
+
+Ensure the ideas are highly relevant to my niche and address my target audience's specific pain points, desires, and interests.
+
+Aim for a diverse mix of formats and angles to keep the content fresh and engaging throughout the month.
+```
+
+### Hook Prompt
+```
+I need your help to make my business more addictive and habit forming for my audience and customers.
+
+Here's context about my business:
+
+[INSERT CONTEXT]
+
+Based on the context provided, please create a step-by-step plan for how I can implement Nir Eyal's "Hooked" model to make my product/content more habit-forming and addictive for my audience.
+
+Here's Eyal's Hooked Model:
+
+1. Trigger
+
+A trigger is the actuator of behavior — the spark plug in the engine. Triggers come in two types: external and internal. Habit-forming products start by alerting users with external triggers like an email, a website link, or the app icon on a phone.
+
+For example, suppose Barbra, a young woman in Pennsylvania, happens to see a photo in her Facebook newsfeed taken by a family member from a rural part of the state. It’s a lovely picture and since she is planning a trip there with her brother Johnny, the external trigger’s call-to-action intrigues her and she clicks. By cycling through successive hooks, users begin to form associations with internal triggers, which attach to existing behaviors and emotions.
+
+When users start to automatically cue their next behavior, the new habit becomes part of their everyday routine. Over time, Barbra associates Facebook with her need for social connection.
+
+2. Action
+
+Following the trigger comes the action: the behavior done in anticipation of a reward. The simple action of clicking on the interesting picture in her newsfeed takes Barbra to a website called Pinterest, a “pinboard-style photo-sharing” site.
+
+This phase of the hook, as described in chapter three, draws upon the art and science of usability design to reveal how products drive specific user actions. Companies leverage two basic pulleys of human behavior to increase the likelihood of an action occurring: the ease of performing an action and the psychological motivation to do it.
+
+Once Barbra completes the simple action of clicking on the photo, she is dazzled by what she sees next.
+
+3. Variable Reward
+
+What distinguishes the Hook Model from a plain vanilla feedback loop is the hook’s ability to create a craving. Feedback loops are all around us, but predictable ones don’t create desire. The unsurprising response of your fridge light turning on when you open the door doesn’t drive you to keep opening it again and again. However, add some variability to the mix — say a different treat magically appears in your fridge every time you open it — and voila, intrigue is created.
+
+Variable rewards are one of the most powerful tools companies implement to hook users; chapter four explains them in further detail. Research shows that levels of the neurotransmitter dopamine surge when the brain is expecting a reward. Introducing variability multiplies the effect, creating a focused state, which suppresses the areas of the brain associated with judgment and reason while activating the parts associated with wanting and desire. Although classic examples include slot machines and lotteries, variable rewards are prevalent in many other habit-forming products.
+
+When Barbra lands on Pinterest, not only does she see the image she intended to find, but she is also served a multitude of other glittering objects. The images are related to what she is generally interested in — namely things to see on her upcoming trip to rural Pennsylvania — but there are other things that catch her eye as well. The exciting juxtaposition of relevant and irrelevant, tantalizing and plain, beautiful and common, sets her brain’s dopamine system aflutter with the promise of reward. Now she’s spending more time on Pinterest, hunting for the next wonderful thing to find. Before she knows it, she’s spent 45 minutes scrolling.
+
+4. Investment
+
+The last phase of the Hook Model is where the user does a bit of work. The investment phase increases the odds that the user will make another pass through the hook cycle in the future. The investment occurs when the user puts something into the product or service such as time, data, effort, social capital, or money.
+
+However, the investment phase isn’t about users opening up their wallets and moving on with their day. Rather, the investment implies an action that improves the service for the next go-around. Inviting friends, stating preferences , building virtual assets, and learning to use new features are all investments users make to improve their experience. These commitments can be leveraged to make the trigger more engaging, the action easier, and the reward more exciting with every pass through the hook cycle. …
+
+As Barbra enjoys endlessly scrolling through the Pinterest cornucopia, she builds a desire to keep the things that delight her. By collecting items, she’ll be giving the site data about her preferences. Soon she will follow, pin, re-pin, and make other investments, which serve to increase her ties to the site and prime her for future loops through the hook.
+
+For each of the four phases (Trigger, Action, Variable Reward, Investment), include:
+
+A clear definition of the phase and its importance in the "Hooked" cycle
+2-3 specific, actionable strategies for implementing that phase in my business, based on my unique context
+An explanation of the psychological principles at play and why this phase is so effective in creating addiction
+
+Provide your suggestions in a clear, numbered list format. Offer tangible, real-world examples wherever possible to illustrate the concepts.
+
+The plan should be written in an engaging, conversational tone that speaks directly to me as a solopreneur looking to boost my audience retention and build my authority.
+
+Use persuasive language and strong analogies to drive home the importance of each phase and inspire me to take action.
+```
 
 
+Viral content prompt
+```
+I want you to generate viral content ideas for my content business.
+
+Here's some context about my brand:
+
+[INSERT BRIEF CONTEXT]
+
+Please help me brainstorm 5 content ideas that incorporate all 6 elements of the STEPPS model:
+
+Social Currency: How can I make my audience feel like insiders?
+Triggers: What environmental cues could I tie my content to?
+Emotion: What strong emotions could my content evoke?
+Public: How can I make my idea more visible and shareable?
+Practical Value: What useful information can I provide?
+Stories: What compelling narrative could I use to convey my message?
+
+The output should be like this:
+
+Explain each idea about what the post will be about in a full sentence.
+
+Then underneath, explain in full sentences how it hits each STEPPS element.
+
+Avoid using hashtags or exclamation points in the content ideas.
+```
+
+###   Readability Refiner GPT
+
+```
+You are The Readability Refiner GPT, an AI assistant specialized in enhancing the clarity and readability of written content. Your expertise lies in simplifying complex text, shortening lengthy sentences, and improving flow, while maintaining the original tone and style. You focus on making the content more accessible and engaging for the intended audience.
+
+Goal:
+Your task is to rewrite the text below to improve its readability, making it suitable for the target audience. You will simplify language where possible, break down long sentences, keep paragraphs concise, and use effective transitions. Your goal is to enhance clarity without altering the original meaning or tone.
+
+Readability Enhancement Structure:
+1. Audience Understanding: Consider the specific needs and reading level of the target audience.
+2. Simplification: Replace complex words with shorter, simpler synonyms.
+3. Sentence Structure: Break down long, convoluted sentences into shorter, more digestible ones.
+4. Paragraph Optimization: Keep paragraphs brief and focused on one idea at a time.
+5. Transition Improvement: Use clear and effective transitions to maintain flow and coherence.
+6. Tone Preservation: Ensure the rewritten text retains the original tone and style.
+
+Questions to Ask:
+- Who is the intended audience for this text, and what is their reading level?
+- Are there any specific guidelines or preferences for tone and style that I should follow?
+- What key points or ideas should be emphasized in the text?
+- Are there any sections that are particularly challenging or complex that require extra attention?
+- How much flexibility do I have in rephrasing to improve readability?
+
+Criteria for Effective Readability Improvement:
+- The text should be easy to read and understand for the target audience.
+- Simplified language without losing the original meaning or nuances.
+- Sentences and paragraphs should be concise and clear.
+Transitions should be smooth, enhancing the overall flow.
+- The tone and style should remain consistent with the original content.
+
+Information About Me:
+- Audience description:[INSERT CONTEXT]
+- Original tone:[INSERT CONTEXT]
+- Key points:[INSERT CONTEXT]
+- Specific challenges:[INSERT CONTEXT]
+```
 ## Prompt for creating book
 
 1. _**Introduction (about 500 words long)**_

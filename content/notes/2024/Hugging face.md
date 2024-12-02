@@ -494,6 +494,35 @@ ONNX supports standard data types for tensors (int8, int16, bool, float16, etc.)
 
 **ONNX Runtime** is an open-source inference engine that implements the ONNX standard. Its primary goal is to provide high-performance inference across a wide range of platforms and hardware.ONNX Runtime achieves this through a pluggable architecture that allows for the integration of different execution providers, each optimized for specific hardware
 
+
+## Transformers.js v3
+
+We can use transformer js and run models in brower using webGPU (WebGPU is a new web standard for accelerated graphics and compute).
+
+
+```js
+import { pipeline } from "@huggingface/transformers";
+
+// Create a feature-extraction pipeline
+const extractor = await pipeline(
+  "feature-extraction",
+  "mixedbread-ai/mxbai-embed-xsmall-v1",
+  { device: "webgpu" },
+);
+
+// Compute embeddings
+const texts = ["Hello world!", "This is an example sentence."];
+const embeddings = await extractor(texts, { pooling: "mean", normalize: true });
+console.log(embeddings.tolist());
+// [
+//   [-0.016986183822155, 0.03228696808218956, -0.0013630966423079371, ... ],
+//   [0.09050482511520386, 0.07207386940717697, 0.05762749910354614, ... ],
+// ]
+
+```
+
+
+
 ## Resources
 - [Huggingface 🤗 is all you need for NLP and beyond ](https://jarvislabs.ai/blogs/hf-getting-started )
 - https://paperswithcode.com/sota
