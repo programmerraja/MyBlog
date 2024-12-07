@@ -630,6 +630,10 @@ Symmetric vs. Asymmetric Quantization:
 
 **QAT**
 - QAT incorporates quantization during the training process. It modifies the training procedure to make the model aware of the quantization that will occur later. This allows the model to adjust its weights to minimize the impact of quantization on its performance
+
+Resource
+- [A Visual Guide to Quantization ](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-quantization)
+- 
 ### LLM traning methods
 
 **Causal Language Modeling (CLM)**
@@ -662,6 +666,9 @@ Knowledge distillation can be implemented in two ways:
 
 
 - https://github.com/mistralai/mistral-finetune
+
+finetune 
+https://www.clarifai.com/
 ## Resources
 
 - [Deconstructing BERT Part 2: Visualizing the Inner Workings of Attention](https://towardsdatascience.com/deconstructing-bert-part-2-visualizing-the-inner-workings-of-attention-60a16d86b5c1)

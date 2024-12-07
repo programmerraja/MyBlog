@@ -168,6 +168,7 @@ How pgai are work?
 - [Build, scale, and manage user-facing Retrieval-Augmented Generation applications using postgress](https://r2r-docs.sciphi.ai/introduction/what-is-r2r)
 - Learn to build vector-powered systems with [VectorHub](https://superlinked.com/vectorhub/), a free education and open-source platform for data scientists.
 
+All vector db in one place https://superlinked.com/vector-db-comparison
 
 
 

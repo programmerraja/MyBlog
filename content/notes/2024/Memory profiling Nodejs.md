@@ -159,3 +159,5 @@ lastELU = tmpELU;
 [https://grafana.com/](https://grafana.com/)
 
 https://easyperf.net/blog/2024/02/12/Memory-Profiling-Part1?utm_source=tldrwebdev
+
+https://blog.jiayihu.net/comprenhensive-guide-chrome-performance/

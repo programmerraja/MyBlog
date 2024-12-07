@@ -404,6 +404,8 @@ it is layer 7 proxy and use Yaml extension for config
 4. [Cloudflare’s Pingora Proxy](https://blog.cloudflare.com/how-we-built-pingora-the-proxy-that-connects-cloudflare-to-the-internet/)
 5. [NGINX Documentation](https://nginx.org/en/docs/)
 6. [Optimizing NGINX for High Traffic Loads](https://blog.martinfjordvald.com/optimizing-nginx-for-high-traffic-load)
+8. [Thread Pools in NGINX Boost Performance](https://www.f5.com/company/blog/nginx/thread-pools-boost-performance-9x)
+9. 
 
 ## Tool
 

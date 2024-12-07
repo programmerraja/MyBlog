@@ -137,6 +137,9 @@ It use model to parse the content check [here](https://github.com/DS4SD/docling)
 
 Ingest, parse, and optimize any data format ➡️ from documents to multimedia ➡️ for enhanced compatibility with GenAI frameworks
 
+## firecrawl
+
+ Turn entire websites into LLM-ready markdown or structured data. Scrape, crawl and extract with a single API. check [here](https://github.com/mendableai/firecrawl)
 
 ### AgentQL
 Transforming websites into agent-friendly surfaces with an AI-native query language check [here](https://www.agentql.com/)

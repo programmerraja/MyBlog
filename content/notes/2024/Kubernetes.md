@@ -1211,7 +1211,7 @@ Need to study
 6. Inspect all internal and external cluster communications, API transactions, and data in transit with cluster-wide monitoring of all traffic going in, out, and across containers, pods, namespaces, nodes, and clusters. https://www.kubeshark.co/ 
 7. A simple [mitmproxy](https://github.com/ofirc/k8s-sniff-https?tab=readme-ov-file) blueprint to intercept HTTPS traffic from app running on Kubernetes 
 8. [Always Encrypted Kubernetes](https://github.com/edgelesssys/constellation ) 
-9. 
+9. https://github.com/k8sgpt-ai/k8sgpt is a tool for scanning your Kubernetes clusters, diagnosing, and triaging issues in simple English.
 
 
 

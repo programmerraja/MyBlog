@@ -104,3 +104,25 @@ It’s also often useful to track accomplishments outside of work, like:
 - Industry recognition
 - 
 ```
+
+
+## C4 Model
+
+The C4 model is a hierarchical way to visualize the architecture of a software system. It consists of four levels of diagrams:
+
+- Context (Level 1): This high-level diagram shows the system in its environment, including users and other interacting systems.
+- Containers (Level 2): This diagram zooms into the system, showing the major components (applications, data stores, etc.) and their interactions.
+- Components (Level 3): This level focuses on the internal structure of a specific container, showing the components within it and their relationships.
+- Code (Level 4): This level details the code-level implementation of components.
+
+
+## DORA Metrics
+
+The four key DORA metrics are:
+
+- Deployment Frequency: How often code is deployed to production.
+- Lead Time for Changes: The time it takes for a code change to go from commit to production.
+- Change Failure Rate: The percentage of deployments that result in a failure or rollback.
+- Time to Restore Service: The time it takes to restore service after an incident or outage.
+
+

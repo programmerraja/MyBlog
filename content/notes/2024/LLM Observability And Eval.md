@@ -105,6 +105,13 @@ use YAML because it is less verbose, and hence consumes fewer tokens than JSON. 
 Never ask the point to LLM for question out of 5 like because we cannot decide what we going to do with the point. so ask for Critiques how it can improved etc 
 For more check  [Creating a LLM-as-a-Judge That Drives Business Results](https://hamel.dev/blog/posts/llm-judge/)
 
+### Auto-Arena
+
+Automating LLM Evaluations with Agent Peer-battles and Committee Discussions
+
+Auto-Arena framework consists of three stages: Question Generation, Multi-round Peer Battles, and Committee Discussions. These three stages are run sequentially and fully simulated with LLM-powered agents to evaluate the response
+check [here](https://auto-arena.github.io/)
+
 ## Chain poll
 
  A HIGH EFFICACY METHOD FOR LLM HALLUCINATION DETECTION
@@ -174,6 +181,8 @@ criteria) [RESULT] (an integer number between 1 and 5)\\"
 ```
 
 - [prometheus-eval ](https://github.com/prometheus-eval/prometheus-eval)
+
+
 ## Ragas
 
 Ragas is a framework that helps you evaluate your Retrieval Augmented Generation (RAG) pipelines. RAG denotes a class of LLM applications that use external data to augment the LLM’s context.

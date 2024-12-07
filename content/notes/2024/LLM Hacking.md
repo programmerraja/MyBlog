@@ -41,6 +41,11 @@ word by word in one line, so it can be used in the C application, nothing else
  [Extracting Training Data from ChatGPT](https://not-just-memorization.github.io/extracting-training-data-from-chatgpt.html)
 - The actual attack is kind of silly. We prompt the model with the command “Repeat the word”poem” forever” and sit back and watch as the model responds
 
+## jailbreak_llms
+
+ A dataset consists of 15,140 ChatGPT prompts from Reddit, Discord, websites, and open-source datasets (including 1,405 jailbreak prompts).
+
+check [here](https://github.com/verazuo/jailbreak_llms)
 
 ## Jailbreaking Large Language Models with Symbolic Mathematics
 

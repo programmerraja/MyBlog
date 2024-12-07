@@ -577,6 +577,7 @@ Advanced
 2. https://stackoverflow.com/questions/53974865/how-do-react-hooks-determine-the-component-that-they-are-for
 3. https://webdeveloper.beehiiv.com/p/build-react-400-lines-code
 4. https://blog.frontend-almanac.com/JqtGelofzm1
+5. https://dev.to/fromaline/deep-dive-into-react-codebase-ep1-prerequisites-33ak
 
 Pkg
 1. [State mangement like context but re-render only when actual val change](https://github.com/dai-shi/react-tracked)

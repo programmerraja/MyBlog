@@ -141,6 +141,7 @@ Used in distributed shared database where the indexing is in global so when ever
 3. [Database Fundamentals](https://tontinton.com/posts/database-fundementals/)
 4. https://www.geeknarrator.com/blog/social-posts/ten-things-about-your-database
 5. [Advanced Database Systems 2024 ](https://davidgomes.com/advanced-database-systems-part-1/)
+6. https://planetscale.com/blog/btrees-and-database-indexes
 
 
 
