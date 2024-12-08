@@ -34,9 +34,9 @@ export default ((userOpts?: Partial<SearchOptions>) => {
               <a className="header-link" href="/notes">
                 Notes
               </a>
-              <a className="header-link" href="/contact">
+              {/* <a className="header-link" href="/contact">
                 Contact
-              </a>
+              </a> */}
               <DarkModeComp displayClass={displayClass} cfg={cfg} />
               <SearchComp
                 opts={opts}
@@ -63,9 +63,9 @@ export default ((userOpts?: Partial<SearchOptions>) => {
                   <a className="header-link" href="/notes">
                     Notes
                   </a>
-                  <a className="header-link" href="/contact">
+                  {/* <a className="header-link" href="/contact">
                     Contact
-                  </a>
+                  </a> */}
                   <DarkModeComp displayClass={displayClass} cfg={cfg} />
                   <SearchComp
                     opts={opts}

@@ -24,9 +24,9 @@ const TopNav: QuartzComponent = (props: QuartzComponentProps) => {
             <a className="header-link" href="/Courses">
               Notes
             </a>
-            <a className="header-link" href="/Contact">
+            {/* <a className="header-link" href="/Contact">
               Contact
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
@@ -46,9 +46,9 @@ const TopNav: QuartzComponent = (props: QuartzComponentProps) => {
                 <a className="header-link" href="/Courses">
                   Notes
                 </a>
-                <a className="header-link" href="/Contact">
+                {/* <a className="header-link" href="/Contact">
                   Contact
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
