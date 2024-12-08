@@ -17,6 +17,7 @@ Personal improvment
 - [ ] Public speaking 
 - [ ] Postive speak
 - [ ] polite with friends
+- [ ] Need to migle with people (extrovet)
 
 
 

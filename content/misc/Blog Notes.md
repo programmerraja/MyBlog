@@ -25,6 +25,8 @@ Sherlock Holmes
 - [x] How we fix dns error in pod
 - [ ] hOW I SPEED UP OUR CI (pull shell code)
 
+Code aganist clock
+- [ ] interview helper 
 How to 
 - [ ] How to use wireshark
 - [ ] How to use zap scan

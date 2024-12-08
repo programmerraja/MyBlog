@@ -28,3 +28,7 @@ https://arxiv.org/abs/2201.00650
 RESUME
 - FIRST HAVE EXCUTIVE SUMMARY (add why you good fit for currently applied job)
 - nO NEED SCHOOL MARKS 
+
+
+Negotiation
+- dont tell the except number ask them budget by saying i dont have expereince of this so can u say the budget

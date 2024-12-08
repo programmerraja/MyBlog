@@ -15,5 +15,11 @@ Read book twice which give more idea
 
 
 
+https://www.talhoffman.com/2021/07/18/firecracker-internals/
+https://actuated.com/blog/firecracker-container-lab
+https://k-jingyang.github.io/firecracker/2024/06/15/firecracker-bridge.html
+https://jvns.ca/blog/2021/01/20/day-42--writing-a-go-program-to-manage-firecracker-vms/
+https://github.com/firecracker-microvm/firectl
+https://betterprogramming.pub/getting-started-with-firecracker-a88495d656d9
 
 

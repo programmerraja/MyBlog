@@ -5,8 +5,8 @@ draft: false
 tags:
   - mongodb
   - database
+  - notes
 ---
-
 
 ## Collection
 

@@ -300,3 +300,66 @@ All retrievers currently include: - 
 	the LLM 
 
 - `CustomPGRetriever` - easy to subclass and implement custom retrieval logic
+
+
+Here's an explanation of Advanced Retrieval Techniques as discussed in the sources:
+
+### Advanced Retrieval 
+
+- **SubQuestion Query Engine**: This technique tackles complex questions by breaking them down into simpler sub-questions. It then uses metadata descriptions of different data sources to route each sub-question to the most appropriate source. This enables answering multifaceted queries that require drawing information from various sources.
+
+```python
+# setup base query engine as tool
+query_engine_tools = [
+    QueryEngineTool(
+        query_engine=simple_query_engine,
+        metadata=ToolMetadata(
+            name="pg_essay",
+            description="Paul Graham essay on What I Worked On",
+        ),
+    ),
+]
+
+query_engine = SubQuestionQueryEngine.from_defaults(
+    query_engine_tools=query_engine_tools
+)
+```
+
+- **Small-to-Big Retrieval**: This method addresses the need for both precision and context. It begins by retrieving small, highly specific chunks of text (like sentences) for maximum precision. Then, to provide the LLM with sufficient context, it expands the retrieval to include surrounding sentences before sending it for answer generation.
+
+```python
+query_engine = index.as_query_engine(
+    similarity_top_k=2,
+    node_postprocessors=[
+        MetadataReplacementPostProcessor(target_metadata_key="window")
+    ],
+)
+response = query_engine.query(
+    "What happened on August 3rd?"
+)
+print(response)
+```
+
+- **Metadata Filtering**: This technique leverages pre-existing metadata attached to data to filter and refine the retrieval process before employing vector search. For instance, when dealing with financial documents, one could filter by year or company name to increase the precision of retrieved context. LlamaIndex allows using the LLM itself to automate this metadata filtering process based on the query.
+- 
+```python
+query_engine = index.as_query_engine(
+    filters=MetadataFilters(
+        filters=[ExactMatchFilter(key="year", value="2021")]
+    )
+)
+response = query_engine.query(
+    "What was the annual profit in 2021?"
+)
+print(response)
+```
+- **Hybrid Search**: Recognizing the strengths of both traditional search and vector search, this approach combines the two. Traditional search engines like BM25 excel at keyword-based retrieval, while vector search captures semantic meaning. Hybrid search leverages both, with a parameter to control the weighting between the two methods.
+
+- **Time Series Filtering**: This technique is especially potent for time-dependent data. TimeScale, a vector database with time series capabilities, allows filtering by specific time ranges or intervals before performing vector search. This is illustrated with the example of querying git commit logs within specific time windows.
+
+- **Complex Document Handling**: For documents containing elements like tables, LlamaIndex employs a recursive retrieval strategy. It can create specialized indexes for tables (using the Pandas query engine) and use a recursive retriever to navigate to the appropriate sub-query engine based on the query. This allows for precise retrieval from complex documents.
+
+- **Direct SQL Querying**: This technique leverages the LLM's capability to generate SQL queries to directly query relational databases. For simpler cases, providing the table schema allows the LLM to formulate the query. For complex databases, LlamaIndex supports creating indexes for tables and using the LLM to select the relevant table based on table and column names or user-provided descriptions.
+
+- **Agent-Based Retrieval**: Agents in LlamaIndex can select the best retrieval strategy or tool from a predefined set based on the query. They can employ any combination of the techniques mentioned above, creating a flexible and dynamic retrieval system. The SEC Insights demo application exemplifies this, showcasing an agent capable of analyzing financial filings using multiple techniques.
+

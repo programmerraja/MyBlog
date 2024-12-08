@@ -6,8 +6,6 @@ tags:
   - prompt_engineering
   - genrative_ai
 ---
-
-
 ## Prompt classification 
 
 ![[Pasted image 20240720193516.png]]
@@ -656,6 +654,11 @@ The final prompt you output should adhere to the following structure below. Do n
 [optional: edge cases, details, and an area to call or repeat out specific important considerations]
 ```
 
+## Auto Prompt
+
+APE is an approach where the LLM is given the desired input and output, and the prompt is generated from these examples.
+
+check more [here](https://github.com/keirp/automatic_prompt_engineer)
 
 ## ChatML
 
@@ -723,8 +726,11 @@ Here are 5 papers you want to read to understand better how [OpenAI](https://www
 3. https://substack.com/@cwolferesearch/p-143156742 
 4. https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/
 5. [A collection of prompts, system prompts and LLM instructions]( https://github.com/0xeb/TheBigPromptLibrary )
+7. [Prompt Engineering Guide](https://www.promptingguide.ai/)
+8. [Prompt Engineering Toolkit build by Uber](https://www.uber.com/en-IN/blog/introducing-the-prompt-engineering-toolkit/)
 
 ## Tools
 
 1. [AI Prompt Optimizer](https://promptperfect.jina.ai/)
 2. [Start Generating Prompts with OctiAI](https://www.octiai.com/)
+3. [Latitude](https://github.com/latitude-dev/latitude-llm?tab=readme-ov-file) is the open-source prompt engineering platform to build, evaluate, and refine your prompts with AI 
