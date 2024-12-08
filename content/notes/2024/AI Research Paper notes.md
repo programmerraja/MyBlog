@@ -232,6 +232,15 @@ Here's how PLANSEARCH would approach it:
 
 
 ## LLMS KNOW MORE THAN THEY SHOW: ON THE INTRINSIC REPRESENTATION OF LLM HALLUCINATIONS
+ - 
+
+## Does Prompt Formatting Have Any Impact on LLM Performance?
+
+The key takeaway from the research  is that prompt formatting significantly influences LLM performance, and there's no universally optimal format across all models or tasks.
+
+GPT-3.5-turbo's performance varied by up to 40% in a code translation task depending on the prompt template, while larger models like GPT-4 were more robust
+
+Larger models like GPT-4 exhibited higher consistency scores compared to GPT-3.5, suggesting greater reliability in producing similar outputs across different prompt structures.
 ## Dataset
 
 - HumanEval: Evaluating Large Language Models Trained on Code

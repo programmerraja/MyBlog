@@ -22,7 +22,7 @@ Sherlock Holmes
 - [ ] HOw nodejs update 18 restart the pod unhabled rejection
 - [ ] Links server slow nginx multiple ssl
 - [x] debug ecconreset 15sec to update
-- [ ] How we fix dns error in pod
+- [x] How we fix dns error in pod
 - [ ] hOW I SPEED UP OUR CI (pull shell code)
 
 How to 

@@ -1,190 +1,417 @@
 
-## Term insurance
+### **Stock Market Basics**
 
-Health insurance to avoid
-- No co payment -> on claim they split money we need to pay some money 
-- No restriction on room rent 
-- check sublimits of dieases (they put how much they pay for heart diesese and other check that)
-- pre and post hospitalization care did they covring this and how long
-- opt for low waiting period
-- restoration benefit & day care cover
+1. **Stock Types:**
+    
+    - **Equity (Shares):** Buying stock of companies listed on the stock exchange.
+        - **Intraday:** Buy and sell the same stock on the same day.
+        - **Short-Term:** Hold for less than 12 months before selling.
+        - **Long-Term:** Hold for more than 12 months before selling.
+    - **Commodity Trading:** Involves trading physical products like gold, silver, etc., with contracts for 1 month, typically traded on MCX.
+2. **Markets:**
+    
+    - **Primary Market:** Companies issue new shares directly to investors (via IPO).
+    - **Secondary Market:** Investors buy and sell existing shares among themselves.
+3. **Stock Exchanges:**
+    
+    - **NSE (National Stock Exchange):** Around 2,000 listed companies.
+    - **BSE (Bombay Stock Exchange):** Around 5,000 listed companies.
+    - **Sensex:** Tracks the top 30 companies listed on BSE.
+    - **Nifty 50:** Tracks the top 50 companies listed on NSE.
+4. **Demat Account:**
+    - Stores shares in electronic form.
+    - **Depositories:** Convert physical shares into electronic shares in a Demat account.
+5. **SEBI (Securities and Exchange Board of India):**
+    - Regulatory body overseeing the functioning of the stock market in India.
+
+### **Stock Taxation**
+
+1. **Capital Gains Tax:**
+    
+    - **Long-Term Capital Gains (LTCG):**
+        - Taxed at **10%** for shares held for more than 1 year.
+        - **Exemption:** No tax on the first ₹1 lakh of LTCG.
+    - **Short-Term Capital Gains (STCG):**
+        - Taxed at **15%** for shares held for less than 1 year.
+        - **Exemption:** No tax on the first ₹1 lakh of STCG.
+    - **F&O (Futures & Options) Trading:**
+        - Considered as business income and taxed according to your income tax slab.
+        - Losses from F&O can be carried forward to offset future gains.
+2. **Tax Calculation:**
+    
+    - Add stock market profits to your salary to calculate your overall tax.
+    - For **Short-Term Capital Gains (STCG)**, tax is applied separately at 15%.
+    - For **Long-Term Capital Gains (LTCG)**, tax is applied at 10% after ₹1 lakh exemption.
+    - **Tax Loss Harvesting:** Losses can be carried forward. Short-term and long-term losses can be booked to offset future profits.
+3. **Tax Loss Harvesting Strategy:**
+    
+    - **Short-Term Loss:** Book the loss and use it to reduce taxable income.
+    - **Long-Term Loss:** Sell shares to realize the loss, then buy them back. This allows you to offset future gains with the realized loss.
+
+### **Types of Trades and Orders**
+
+1. **Brokerage:**
+    
+    - **Brokerage Commission:** Typically 2.5%, or ₹20 (whichever is lower).
+    - **Transaction Charges:** Fees levied by the broker for executing the trade.
+    - **Sebi Turnover Charge:** ₹10 for every ₹1 crore of turnover for a broker.
+    - **GST (Goods and Services Tax)** and **STT (Securities Transaction Tax):** Additional charges applied to stock transactions.
+2. **Order Types:**
+
+    - **Market Order:** Buy or sell at the current market price.
+    - **Limit Order:** Set a maximum or minimum price at which you wish to buy or sell.
+    - **Stop Loss:** Automatically sells the stock when the price drops below a threshold you set.
+    - **Stop Limit:** Sells the stock at the exact price you set, even if it is below the stop loss.
+3. **Short Selling:**
+    
+    - Borrow shares from a broker, sell them at the current market price, and then buy them back at a lower price later to return to the broker. Profit comes from the difference in price.
+4. **Option Trading:**
+    - **Call Option:** A contract that gives the holder the right (but not the obligation) to buy an asset at a specific price before a certain date.
+    - **Put Option:** A contract that gives the holder the right (but not the obligation) to sell an asset at a specific price before a certain date.
+    - **Margin Trading (MTF):** Borrow money from the broker to buy stocks, with interest charged on the borrowed amount.
+    - **Delivery vs. Intraday:**
+        - **Delivery (Long-term):** Stocks held for more than a day.
+        - **Intraday:** Stocks bought and sold within the same day.
+
+### **Futures and Options (F&O)**
+
+1. **Futures Contracts:**
+    - A legally binding agreement to buy or sell an asset at a predetermined price and date.
+    - **Futures vs. Options:**
+        - **Futures:** Obligation to buy/sell at the agreed date and price.
+        - **Options:** Right, but not the obligation, to buy/sell at a specified price by a set date.
+2. **F&O Margin Trading:**
+    - You need to pay a margin to enter an F&O position.
+    - F&O positions have lower margin requirements than futures.
+3. **Clearing House:**
+    - Ensures smooth settlement of transactions by matching buy and sell orders.
+### **Stock Trading Details**
+
+1. **Market Hours:**
+    - Stock market opens at **9:15 AM** and closes at **3:15 PM**.
+2. **Clearing & Settlement:**
+    - Brokers facilitate the transaction, while the **Clearing House** ensures the exchange of stocks between brokers.
+    - **Depositories** convert physical shares into electronic shares stored in your **Demat Account**.
+
+### **Other Key Concepts**
+
+1. **Taxation for Stock Market Earnings:**
+    
+    - **Capital Gains Tax:** Based on the holding period of stocks.
+        - **LTCG**: 10% tax on gains for holding more than 1 year.
+        - **STCG**: 15% tax on gains for holding less than 1 year.
+    - **F&O (Futures & Options) Income:** Treated as business income and taxed according to income tax slab.
+    - **Tax Deducted at Source (TDS)**: Some taxes might be deducted before dividends are paid.
+2. **Charges Deducted During Stock Purchases:**
+    - **Brokerage Commission:** Usually 2.5%, with a cap of ₹20.
+    - **Sebi Turnover Charge:** ₹10 per crore in turnover.
+    - **Transaction Fees, GST, and STT.**
+3. **CDSL (Central Depository Services Limited):**
+    - Responsible for holding shares in electronic format in your Demat account.
+
+### **Advanced Trading Concepts**
+
+1. **Equity Portfolio:**
+    - The collection of stocks you hold in your account.
+    - **Demat Holdings:** The overall stock holdings and profits from those holdings.
+2. **Placing Orders:**
+    - **Market Orders:** You buy or sell at the prevailing market price.
+    - **Limit Orders:** You specify the price at which you want to buy or sell, and the trade executes once the price is reached.
+3. **Stop Loss & Stop Limit:**
+    - **Stop Loss:** Automatically sells a stock if its price drops to a specified level.
+    - **Stop Limit:** Sells at a specific price when the stop threshold is triggered.
+4. **Position Types:**
+    - **Open Position:** Stocks held at a particular moment in time.
+    - **Delivery:** Long-term position, shares cannot be sold on the same day.
+
+### **Options Trading in Detail**
+
+1. **Buying Stocks:**
+    
+    - **Margin Trading (MTF):** You can buy stocks on margin with money borrowed from a broker. If you don’t pledge the borrowed amount, the broker can sell the stock after 7 days.
+    - **Pledge & Unpledge:** If you take a margin loan, you need to pledge the shares, and after selling, unpledge them.
+2. **Option Trading (Call & Put Options):**
+    
+    - **Call Option:** Prediction to buy stock at a set price.
+    - **Put Option:** Prediction to sell stock at a set price.
+
+### **Mutual Funds & SIP**
+
+ **Mutual Fund Types**:
+    - **Equity Mutual Funds**: Invest in stocks.
+    - **Debt Mutual Funds**: Low risk, low return.
+    - **Solution-Oriented Funds**: Target specific financial goals.
+    - **Index Funds**: Invest in top companies (low cost, long-term investment).
+    - **Liquid Funds**: Low risk, short-term investments.
+ 
+ **SIP (Systematic Investment Plan)**:
+    - Automatically invests a fixed amount every month into mutual funds or stocks.
+ **Lump-Sum Investment**:
+    - Invest a large amount at once.
+ **Expense Ratio**:
+    - **Expense Ratio**: The fee charged by the fund for managing the investment (typically expressed as a percentage).
+    - Aim for a **low expense ratio** (below 1%).
+ **Exit Load**:
+    - The fee charged when redeeming mutual fund units before a specified period (e.g., 2% if redeemed within 1 year).
+**Growth vs IDCW**:
+    - **Growth Plan**: Profits are reinvested, compounding the investment.
+    - **IDCW Plan**: Profits are distributed periodically as income but are taxable.
+
+**ELSS (Equity Linked Savings Scheme)**:
+    - 3-year lock-in.
+    - **Tax Deduction**: Eligible for tax deductions under Section 80C (up to ₹1.5 lakh).
+    - **Dividends**: Taxed at 10%.
+    - **Expense Ratio**: Affects returns, so choose funds with low expense ratios.
+
+**Direct vs. Regular Plans:** 
+
+Mutual funds come in two variants: Direct and Regular. Direct plans have a lower expense ratio as they are purchased directly from the fund house, bypassing distributors or agents. Regular plans have a higher expense ratio because they include commissions for distributors. The video strongly recommends investing in Direct plans to maximize returns
+
+Growth vs. IDCW: 
+
+Investors can choose between Growth and IDCW (Income Distribution cum Capital Withdrawal) options. In Growth plans, profits are reinvested back into the fund, allowing for compounding. IDCW plans distribute profits periodically as income. The video suggests opting for Growth plans for wealth building, while IDCW plans might be suitable for generating regular income, particularly after retirement. However, it cautions that income from IDCW plans is taxable.
+
+CAGR (Compound Annual Growth Rate): Represents the average annualized return of an investment over a specific period.
+
+Expense Ratio: The annual fee charged by the fund house to manage the fund. It is expressed as a percentage of the fund's assets. suggests to that an expense ratio below 1% is generally considered good
+
+Exit Load: 
+A fee charged when you redeem (sell) your mutual fund units within a specified period. The exit load structure varies depending on the fund. For instance, a fund might have a 2% exit load if you sell units within one year of purchase. 
+No exit load after 730 days
+
+### **Exchange Traded Funds (ETFs)**
+
+- **How ETFs Work**:
+    - ETFs trade like stocks and track underlying indexes, commodities, or sectors.
+    - When you invest in an ETF, you’re buying shares that represent a portion of the ETF’s assets.
+- **Benefits**:
+    - **Diversification**: ETFs are ideal for spreading investments across various assets.
+    - **Liquidity**: Can be bought and sold like individual stocks.
+- **Gold ETFs**: Popular gold ETFs in India include:
+    - **Nippon India ETF Gold BeES**
+    - **HDFC Gold ETF**
+    - **ICICI Prudential Gold ETF**
+    - **SBI Gold ETF**
+    - **Kotak Gold ETF**
+- **Key Differences**:
+    - **Mutual Funds**: Cannot buy/sell on the same day.
+    - **ETFs**: Managed by investors directly, and can be traded on stock exchanges.
+
+
+## Insurance
+### **Term Insurance**
+
+- **Key Points to Check:**
+    - **Co-payment**: Ensure no co-payment clause (i.e., the insurer should not split claims with you).
+    - **Room Rent**: No restrictions on room rent for hospitalization.
+    - **Sublimits**: Check disease-specific limits (e.g., heart disease).
+    - **Pre & Post Hospitalization Care**: Verify coverage and duration.
+    - **Waiting Period**: Opt for a low waiting period.
+    - **Restoration Benefit**: Check if the insurer offers a restoration benefit.
+    - **Day Care Coverage**: Ensure coverage for day care procedures.
+
+
+### **Investment Notes**
+
+- **Real Estate Investment for Tax Saving**:
+    - Invest profits from stocks in real estate to save tax (if no existing assets).
+- **Stock Market Investment**:
+    - Stick to **SBI** for stock investments.
+
+### **Gold Investment**
+
+1. **Physical Gold**:
+    
+    - **GST**: Be aware of GST charges on physical gold.
+    - **Tax Benefits**: Physical gold is taxed at lower rates compared to gold bonds.
+2. **Digital Gold**:
+    
+    - Bought via platforms like PhonePe, without making charges.
+    - Can be converted to physical gold.
+    - Not managed by SBI; not as safe.
+3. **Sovereign Gold Bonds (SGBs)**:
+    
+    - Issued by RBI (not backed by actual gold).
+    - **No GST** on SGBs.
+    - If held for 8 years, no tax on capital gains.
+    - **Interest**: 2.5% per year.
+    - Minimum holding period: 5 years.
+    - Purchase/sale can be done via Demat account.
+    - **Selling Frequency**: Every two months with a minimum of 1 gram purchase.
+4. **Gold ETFs**:
+    
+    - Requires a Demat account for purchase and sale.
+    - No GST on transactions.
+    - Can buy and sell like mutual funds; more flexibility than physical gold.
+5. **Gold Mutual Funds**:
+    
+    - Indirectly invest in gold via brokers.
+    - Typically available with SIP options.
+6. **Gold Purity**:
+    
+    - 24 Karat Gold: 99.9% purity.
+    - 22 Karat Gold: 91.6% purity.
+
+### **PPF (Public Provident Fund)**
+
+- **Tax**: Exempt from tax.
+- **Investment Tips**:
+    - Invest before the 5th of each month.
+    - Invest a lump sum at the beginning of the financial year for better returns.
+
+### **Post Office Insurance**
+
+- **Coverage**: ₹10 lakh.
+- **Group Accident Insurance (Tagic)**:
+    - ₹299 or ₹399 per year.
+    - Covers accidents, permanent disability, and medical expenses up to ₹60,000.
+    - **Additional Benefit**: In case of death due to an accident, provides 10% of the insured amount for child education.
+
+### **Tax Deductions**
+
+1. **Section 80C**: Deductions up to ₹1.5 lakh.
+    
+    - Includes PPF, EPF, NSC, ELSS, life insurance premiums, home loan principal repayment.
+2. **Section 80D**: Deductions for health insurance premiums.
+    - ₹25,000 for self/family.
+    - ₹25,000 for parents, or ₹50,000 if they are senior citizens.
+3. **Section 24B**: Deduction up to ₹2 lakh for home loan interest.
+4. **Section 80E**: Deduction for interest paid on education loans (no upper limit).
+5. **Section 80G**: Donations to charitable institutions are deductible.
+6. **Section 80TTA**: Deduction up to ₹10,000 for interest earned on savings accounts.
+7. **Section 80EE**: Additional ₹50,000 deduction for first-time home buyers.
+8. **Section 80CCD(1B)**: Contributions to NPS eligible for an additional deduction of ₹50,000.
+9. **HRA (House Rent Allowance)**:
+    - Claim HRA exemption based on rent, salary, and city of residence.
+10. **Standard Deduction**: ₹50,000 for salaried individuals.
+
+
+### **Senior Citizens’ Savings Scheme (SCSS)**
+
+- **Eligibility**: For individuals aged 60 or above.
+- **Interest Rate**: 8% p.a.
+- **Lock-in Period**: Can be closed after 5 years.
+
+### **Corporate Bonds & Other Investment Options**
+
+1. **Corporate Bonds**:
+    - Ideal interest rate: 12% (preferably AAA-rated bonds).
+2. **Small Cap & Mid Cap**:
+    - Diversify between small-cap and mid-cap funds for higher risk-reward potential.
+3. **Fund of Funds**:
+    - Invest in a diversified portfolio of mutual funds.
+4. **XIRR vs CAGR**:
+    - **XIRR**: Measures the annualized return considering the timing of cash flows.
+    - **CAGR**: Compound annual growth rate, based on initial and final values without considering intermediate cash flows.
 
 
 
-If  invest in stock and we get more profit in first time and we dont have any assests to save tax we buy real estate form that money no tax for it
 
 
-If we buy a real estate if we dont have any real estate
 
 
-NOTE: dont invest money other then SBI 
+### **Tax Considerations for Investments**
 
-### Gold
-https://auragold.in/ 
-physical gold
-- GST
-
-
-Physical gold has less tax compared to bonds (they have more tax)
-
-Other then physical
-- Digital Gold
-	- using phonepay,etc where they buy gold for us.. no making charge (can get as physical)
-	- They can say whenever to sell us
-	- Not under SBI (not safe)
-- Sovereign gold bonds
-	- Provided by RBI (only provided by paper they not buying actuall gold)
-	- NO GST
-	- If you hold 8 year  and sell to them no tax
-	- 2.5% interset per year
-	- can hold for 5 years 
-	- we can also sell like  when we want if we buy with demant account
-	- They sell on only in gap of 2 month where we need to buy minimum 1 Gram
-- Gold ETF 
-	- RBI can only buy if we have demant account
-	- when ever we can buy and sell similar to mutal funds
-	- No sigulli and wastage
-	- expense ratio where they get from our money
-- Gold mutal fund
-	- buy gold using broker they get expense ratio
-	- have SIP
+1. **Taxable Profits**:
+    
+    - **LTCG**: 10% tax on gains from stocks held for more than 1 year.
+    - **STCG**: 15% tax on gains from stocks held for less than 1 year. First ₹1 lakh of STCG is tax-free.
+    - **F&O Trading**: Treated as business income, taxed as per applicable income tax slab. Losses can be carried forward.
+2. **Tax Loss Harvesting**:
+    - Offset capital gains with capital losses to reduce tax liability.
+    - **Short-term loss**: Book and buy back the stock to show the loss.
 
 
-24 karat gold -> 99.9% gold
-22 karat gold -> 91.6% gold
+### **NPS (National Pension Scheme)**
+
+- **Eligibility**: Open to all Indian citizens aged 18-65.
+- **Returns**: Typically **14% p.a.**, varies depending on the chosen fund.
+- **Withdrawal**: **60% lump sum** at retirement, **40% annuity**.
+- **Contribution**: Minimum ₹1,000.
+- **Tax Benefits**:
+    - **Section 80C**: Deduction up to ₹1.5 lakh.
+    - **Section 80CCD(1B)**: Additional ₹50,000 for NPS contributions.
+
+---
+
+### **Tax Exemptions & Deductions**
+
+1. **HRA (House Rent Allowance)**:
+    - Tax exemption based on rent paid, salary, and city of residence (higher exemption for metro cities).
+2. **Section 80C**:
+    - Maximum deduction of ₹1.5 lakh.
+    - Includes PPF, EPF, LIC, ELSS, home loan principal repayment.
+3. **Section 80D**:
+    - Health insurance premiums:
+        - ₹25,000 for self/spouse/children.
+        - ₹25,000 for parents (₹50,000 for senior citizens).
+4. **Section 80CCD(1B)**:
+    - Additional ₹50,000 for contributions to NPS (beyond Section 80C).
+5. **Section 80E**:
+    - Deduction on interest paid on education loans (no upper limit).
+6. **Section 24(b)**:
+    - Deduction of up to ₹2 lakh on home loan interest for self-occupied properties.
+7. **Section 80G**:
+    - Donations to specified charitable institutions are deductible.
 
 
-SYSTEM DESIGN
+### **Finance & Investment Tips**
 
+1. **Stock Selection**:
+    
+    - Focus on growing sectors (e.g., electric vehicles).
+    - Research companies within the chosen sector.
+    - Invest systematically, instead of lump-sum.
+2. **Direct vs. Regular Mutual Fund Plans**:
+    
+    - **Direct Plans**: Lower expense ratio as there’s no intermediary.
+    - **Regular Plans**: Higher expense ratio due to commission paid to distributors.
 
-corporate bond -> 12% insert
-	- need to have AAA bond
-
-ETF 
-portfolio mangement service -> who helps to mange 
-
-monthly scheme no sekuali and stharam 
 
 EQT
 
-put selva magal titam 
+others
 
-
-
-## PPF
-- No tax 
-- Invest before date 5
-- Invest lum sum on beginning financial year
-
-
-
-## Exchange traded funds 
-
-Exchange-Traded Funds (ETFs) are investment funds that trade on stock exchanges, much like individual stocks. They are designed to track the performance of an underlying index, commodity, sector, or asset class. ETFs combine the features of mutual funds and stocks, making them a popular choice for investors.
-
-### How ETFs Work:
-
-- When you invest in an ETF, you buy shares of the fund. Each share represents a portion of the assets held by the ETF.
-- The ETF tracks the performance of its underlying index or assets.
-- Returns come from price appreciation, dividends, or interest earned by the underlying assets.
-
-### Example:
-
-If you invest in a **"Tech ETF"** that tracks major tech companies, you effectively own a small piece of companies like Apple, Microsoft, and Google, depending on the ETF's composition.
-
-ETFs are ideal for both beginners and experienced investors looking for diversification, flexibility, and cost-effectiveness in their portfolios.
-
-### Gold ETF
-- NO GST
-
-### Popular Gold ETFs in India:
-
-Some well-known Gold ETFs in India include:
-
-- **Nippon India ETF Gold BeES**
-- **HDFC Gold ETF**
-- **ICICI Prudential Gold ETF**
-- **SBI Gold ETF**
-- **Kotak Gold ETF**
-
-
-
-
-small case
-- app for buy money
-
-coin app index fun utti 
-
-
-## Post office insurance
-
-10 lakh coverage
-
-Tagic group accident insurance
-- 299 per year
-- 399 per year 
-
-It is for accident, permanent disablity etc, medical expense upto 60K
-
-if we died due to accident they will give 10% of 1olask for child study
-
-
-
-EQT
-others 
 debt
 
+  
 small cap?
 mid cap
 fund of fund?
 
+  
+
 XIRR vs CAGR?
+
 NASDAQ
 
 
+Credit card
+- Credit score  provided by four major credit bureaus
+	- **CIBIL (Credit Information Bureau (India) Limited)** 
+		- 300 to 900 score range we can use this to get loan from bank with low interset
+	- **Experian India**
+	- **Equifax India**
+	- **CRIF High Mark**
 
-Tax
-- ₹1.5 lakh under **Section 80C**
-- ₹50,000 under **Section 80D** for health insurance (self + parents)
-- ₹2 lakh under **Section 24B** for home loan interest
-- ₹50,000 under **Section 80CCD(1B)** for NPS
+Types
+1. **Standard Credit Cards**: Basic cards offering a pre-approved credit limit with no frills.
+2. **Premium Credit Cards**: High-end cards with luxury perks, higher credit limits, and exclusive benefits.
+3. **Cashback Credit Cards**: Cards that provide cashback on purchases, often in specific categories.
+4. **Rewards Credit Cards**: Cards that earn points for every purchase, redeemable for gifts or travel.
+5. **Travel Credit Cards**: Cards designed for frequent travelers with perks like air miles and lounge access.
+6. **Fuel Credit Cards**: Cards offering discounts or rewards on fuel purchases.
+7. **Secured Credit Cards**: Cards that require a fixed deposit as collateral, ideal for building credit history.
+8. **Student Credit Cards**: Low-limit cards for students to help build credit with fewer fees.
+9. **Business Credit Cards**: Cards designed for business expenses with rewards and financial management tools.
+10. **Zero Interest Credit Cards**: Cards offering 0% interest on purchases or balance transfers for an introductory period.
+11. **Balance Transfer Credit Cards**: Cards that allow you to transfer high-interest balances with low or 0% interest for a limited period.
+12. **Co-branded Credit Cards**: Cards partnered with specific brands offering exclusive rewards and discounts related to the brand.
 
-
-To reduce your tax liability in India with an annual income of 15 LPA (Lakh Per Annum), you can consider the following strategies:
-
-1. **Utilize Section 80C Deductions**:
-    
-    - **Investments in PPF, EPF, NSC, ELSS, and Life Insurance Premiums**: You can claim deductions up to INR 1.5 lakh under Section 80C by investing in Public Provident Fund (PPF), Employee Provident Fund (EPF), National Savings Certificate (NSC), Equity Linked Savings Scheme (ELSS), and paying life insurance premiums.
-    - **Principal Repayment on Home Loan**: The principal repayment on your home loan is also eligible for deduction under Section 80C.
-2. **Section 80D Deductions**:
-    
-    - **Health Insurance Premiums**: You can claim deductions for health insurance premiums paid for yourself, your spouse, children, and parents. The maximum deduction available is INR 25,000 for self, spouse, and children, and an additional INR 25,000 for parents (INR 50,000 if parents are senior citizens).
-3. **Section 24(b) Deductions**:
-    
-    - **Interest on Home Loan**: You can claim a deduction of up to INR 2 lakh on the interest paid on your home loan for a self-occupied property.
-4. **Section 80E Deductions**:
-    
-    - **Interest on Education Loan**: The interest paid on an education loan for higher studies is eligible for deduction under Section 80E. There is no upper limit for this deduction.
-5. **Section 80G Deductions**:
-    
-    - **Donations to Charitable Institutions**: Donations made to specified charitable institutions and relief funds are eligible for deduction under Section 80G. The deduction can be 50% or 100% of the donation amount, depending on the institution.
-6. **Section 80TTA Deductions**:
-    
-    - **Interest on Savings Account**: Interest earned on savings accounts is eligible for a deduction of up to INR 10,000 under Section 80TTA.
-7. **Section 80EE Deductions**:
-    
-    - **Additional Deduction for First-Time Home Buyers**: First-time home buyers can claim an additional deduction of up to INR 50,000 on the interest paid on home loans under Section 80EE.
-8. **Section 80CCD(1B) Deductions**:
-    
-    - **National Pension Scheme (NPS)**: Contributions to the National Pension Scheme (NPS) are eligible for an additional deduction of up to INR 50,000 under Section 80CCD(1B).
-9. **HRA (House Rent Allowance)**:
-    
-    - **Claim HRA Exemption**: If you live in a rented house, you can claim HRA exemption under Section 10(13A) of the Income Tax Act. The exemption is the least of the following:
-        - Actual HRA received.
-        - 50% of salary (for metro cities) or 40% of salary (for non-metro cities).
-        - Rent paid minus 10% of salary.
-10. **Standard Deduction**:
-    
-    - **Standard Deduction for Salaried Individuals**: Salaried individuals can claim a standard deduction of INR 50,000 from their salary income.
-
-By utilizing these deductions and exemptions, you can significantly reduce your taxable income and thereby lower your tax liability in India. Always consult with a tax professional to ensure you are maximizing your deductions and complying with the latest tax laws.
+Tips for credit score
+- credit utlization make sure it less then 30% if credit allow you to take 1 lakh per month spend only 30% from the card dont take too much amount 
+- Dont close the credit card that have credit  history
+- No of credit card have 2 to 3 
+- Check does the credit card have the maintaince charge 
+- Make sure high interset
+- Dont pay minimum amount pay all amount before expired date

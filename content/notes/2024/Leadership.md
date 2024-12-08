@@ -53,3 +53,50 @@ Have one more in-depth conversation, expressing that this is their final opportu
 
 https://blog.gouravkhanijoe.com/p/reflection-shorts
 book # Simply Said: Communicating Better at Work and Beyond
+
+
+
+### Non violent communication
+
+**Empathy** is the ability to deeply understand and share the feelings and experiences of another person.
+
+**The Four Components of NVC**:  
+Nonviolent Communication (NVC) is structured around four core components that facilitate effective and compassionate communication:
+
+- **Observations**: Focus on specific, objective observations without evaluation or judgment.  
+    _Example_: Instead of "You're always late," say, "I noticed you arrived 15 minutes later than our scheduled time."
+- **Feelings**: Express feelings clearly and authentically, avoiding disguised accusations.  
+    _Example_: "I feel frustrated" instead of "You make me feel frustrated."
+- **Needs**: Identify the universal needs behind your feelings, such as the need for respect, safety, or understanding.  
+    _Example_: "I need clarity on our deadlines to feel confident in my work."
+- **Requests**: Make actionable, specific, and respectful requests to meet your needs.  
+    _Example_: "Could we agree to a fixed time for future meetings?"
+
+#### **Workplace Feedback**
+
+- **Unhelpful**: "Your reports are always so sloppy. Can't you do better?"
+- **NVC Approach**:
+    - Observation: "In your last two reports, I noticed several data points were missing."
+    - Feeling: "I feel concerned because accurate data is crucial for our team decisions."
+    - Need: "I have a need for clarity and reliability in our reports."
+    - Request: "Would you be open to reviewing the reports together before the next submission?"
+
+### Key Principles in Practice
+- Avoid blame or criticism; focus on mutual understanding.
+- Clearly articulate what you feel, why you feel it, and what you need.
+- Listen empathetically to the other person’s feelings and needs.
+- Create solutions collaboratively.
+
+Never show angry or react suddenly to any incident think before act
+
+## Crucial Conversations: Tools for Talking When Stakes Are High
+
+### **What Are Crucial Conversations?**
+
+- **Definition**: Conversations where the stakes are high, opinions differ, and emotions run strong.
+- These conversations often occur in personal relationships, workplaces, and decision-making scenarios.
+- Avoiding or handling them poorly can lead to conflict, misunderstandings, or missed opportunities.
+
+## Resources
+- [Tech Lead Journal](https://www.youtube.com/@techleadjournal/videos)  (Hear from experienced technical leaders sharing their journey and philosophy for building great technical teams and achieving technical excellence. Find out what makes them great and how to apply those lessons to your work and team.)
+- 
