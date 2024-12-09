@@ -497,3 +497,9 @@ Tips for credit score
 - Check does the credit card have the maintaince charge 
 - Make sure high interset
 - Dont pay minimum amount pay all amount before expired date
+
+
+
+## Public fund
+
+- UAN -> single number for all company
