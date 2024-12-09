@@ -1,0 +1,59 @@
+/* 
+Author:  TfTHacker - more info  https://tfthacker.com/eisenhower-matrix-kanban
+Date:    2024-02-27
+LICENSE: Permission is granted to modify and distribute copies of this CSS file, that credit is given to TfThacker (https://tfthacker.com/) 
+         and the source (https://tfthacker.com/eisenhower-matrix-kanban) remains linked and credited.  
+*/
+
+.kanban-plugin__board > :has(* > div > div[data-hitboxid*="e-matrix"]) {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 15px;
+  height: 100%;
+  overflow-y: auto; /* constrols the vertical scrolling, which is usually disabled in the kanban board */
+
+  .kanban-plugin__lane-wrapper {
+    grid-column: span 1;
+    grid-row: span 1;
+    height: 100%;
+  }
+
+  .kanban-plugin__lane-wrapper:nth-child(1) > div {
+    background-color: rgba(var(--color-red-rgb), 0.2);
+  }
+
+  .kanban-plugin__lane-wrapper:nth-child(2) > div {
+    background-color: rgba(var(--color-blue-rgb), 0.2);
+  }
+
+  .kanban-plugin__lane-wrapper:nth-child(3) > div {
+    background-color: rgba(var(--color-green-rgb), 0.2);
+  }
+
+  .kanban-plugin__lane-wrapper:nth-child(4) > div {
+    background-color: rgba(var(--color-yellow-rgb), 0.2);
+  }
+}
+
+body:not(.is-mobile) {
+  .kanban-plugin__board > :has(* > div > div[data-hitboxid*="e-matrix"]) {
+    .kanban-plugin__lane-wrapper {
+      width: 100%;
+    }
+  }
+}
+
+body.is-mobile {
+  .kanban-plugin__board > :has(* > div > div[data-hitboxid*="e-matrix"]) {
+    /* make the card one line on mobile to make the matrix compact */
+    .kanban-plugin__item-title {
+      line-height: 1.2;
+      max-height: 1.2em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
