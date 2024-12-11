@@ -36,3 +36,4 @@ Dive into my curated collection of resources, notes, and lessons. This is where 
 
 Feel free to reach out if you want to talk tech, share ideas, or just say hello. I’m always up for a good discussion on the latest trends in development and AI!
 
+

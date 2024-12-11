@@ -11,146 +11,6 @@
             "id": "d1ee5070fe20325d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notes/2024/Leadership.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Leadership"
-            }
-          },
-          {
-            "id": "78d1166c03544c82",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "misc/Trading.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Trading"
-            }
-          },
-          {
-            "id": "36a58153252dd1d9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "misc/Random thougts.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Random thougts"
-            }
-          },
-          {
-            "id": "996174298807522b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notes/2024/Prompt Engineering.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Prompt Engineering"
-            }
-          },
-          {
-            "id": "e2d7fc9fd66292ec",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "misc/TODO.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "TODO"
-            }
-          },
-          {
-            "id": "a56ef866f097df38",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "post/2024/Code Aganist Clock Interview helper.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Code Aganist Clock Interview helper"
-            }
-          },
-          {
-            "id": "73a48033989b11fa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notes/2024/Mongodb Notes.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Mongodb Notes"
-            }
-          },
-          {
-            "id": "64e36d2b54d7feee",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "misc/Job.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Job"
-            }
-          },
-          {
-            "id": "2858ef470d30f5d6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notes/2024/LamaIndex.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "LamaIndex"
-            }
-          },
-          {
-            "id": "252bfe6de9d536df",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "misc/Finance  & stock.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Finance  & stock"
-            }
-          },
-          {
-            "id": "a316768e7edd7a9c",
-            "type": "leaf",
-            "state": {
               "type": "kanban",
               "state": {
                 "file": "misc/Tasks  e-matrix..md",
@@ -167,9 +27,23 @@
               "icon": "lucide-trello",
               "title": "Tasks  e-matrix."
             }
+          },
+          {
+            "id": "80de137f06e444df",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "notes/2024/Kubernetes.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Kubernetes"
+            }
           }
         ],
-        "currentTab": 10
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -200,7 +74,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "quantiza",
+                "query": "liquid fund",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -327,54 +201,54 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fa9b98d9b88c1a3c",
+  "active": "80de137f06e444df",
   "lastOpenFiles": [
-    "misc/What next?.md",
     "misc/Tasks  e-matrix..md",
-    "misc/TODO.md",
-    "2024-12-09.md",
     "misc/Finance  & stock.md",
-    "notes/2024/LamaIndex.md",
-    "misc/Job.md",
-    "notes/2024/Mongodb Notes.md",
     "notes/2024/Prompt Engineering.md",
+    "index.md",
+    "Excalidraw/art-2024-04-28 14.38.57.excalidraw",
+    "Excalidraw/art-2024-07-21 05.41.43.md",
+    "Excalidraw/LangchainAgent.excalidraw",
+    "Excalidraw/art-2024-02-11 07.27.35.excalidraw",
+    "Excalidraw/art-2024-01-25 14.32.40.excalidraw",
+    "Excalidraw/art-2024-01-19 19.56.09.svg",
+    "Excalidraw/LangchainAgent.md",
+    "Excalidraw/art-2024-02-11 07.27.35.md",
+    "Excalidraw/art-2024-01-25 14.32.40.md",
+    "Excalidraw/art-2024-01-19 19.56.09.excalidraw",
+    "Excalidraw/art-2024-01-19 19.56.09.md",
+    "Images/Pasted image 20241029075644.png",
+    "Images/Pasted image 20241029075441.png",
+    "Images/Pasted image 20241029075328.png",
+    "Images/WhatsApp Image 2024-10-20 at 6.00.41 AM.jpg",
+    "Images/Screenshot from 2024-10-03 06-53-49.png",
+    "Images/Screenshot from 2024-09-04 05-03-39.png",
+    "Images/jirasubtask.png",
+    "Images/jira.png",
+    "Images/Pasted image 20240721092914.png",
+    "post/2024/A Journey into Unseen Threats on our VM.md",
+    "post/2024/How to capture mongodb protocol in  wireshark.md",
+    "notes/2024/Leadership.md",
+    "notes/2024/Mongodb Notes.md",
+    "misc/Job.md",
+    "notes/2024/LamaIndex.md",
+    "misc/Generative AI e-matrix.md",
+    "notes/2024/Generative AI.md",
+    "notes/2024/Transformer.md",
+    "Untitled Kanban.md",
+    "misc/Blog template.md",
+    "misc/Bored.md",
+    "misc/TODO.md",
+    "misc/What next?.md",
+    "2024-12-09.md",
     "post/2024/Code Aganist Clock Interview helper.md",
     "notes/2024/Grafana.md",
-    "notes/2024/Influx db.md",
-    "notes/2024/OS.md",
-    "notes/2024/Python.md",
-    "notes/2024/System Design Case study.md",
-    "notes/2024/STrace.md",
-    "notes/2024/Distributed System.md",
-    "notes/2024/Elastic search.md",
-    "notes/2024/Typescript.md",
-    "notes/2024/Learning Domain-Driven Design.md",
-    "notes/2024/Database Performance at Scale.md",
-    "notes/2024/Software Architecture.md",
-    "notes/2024/Money Earning.md",
-    "notes/2024/Distributed tracing.md",
-    "notes/2024/AWS.md",
-    "notes/2024/Docker & Kubernetes hacking.md",
     "Scripts/remove.py",
     "Scripts/remove_no_git.py",
     "Scripts/export.py",
     "Scripts/export_no_git.py",
     "Scripts",
-    "Images/Pasted image 20241111071342.png",
-    "Images/leaderboard.png",
-    "Images/Pasted image 20240303172632.png",
-    "Images/Pasted image 20241029075705.png",
-    "Images/Pasted image 20241029075654.png",
-    "Images/Pasted image 20241029075644.png",
-    "Images/Pasted image 20241029075441.png",
-    "Images/ip_Same.png",
-    "Images/Pasted image 20241029075328.png",
-    "Images/logstash.png",
-    "Images/ss",
-    "Images/png.py",
-    "Images/Images/ss",
-    "Images/Images/png.py",
-    "Images/Images",
     "Untitled.canvas"
   ]
 }

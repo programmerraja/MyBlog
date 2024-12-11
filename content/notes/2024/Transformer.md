@@ -686,7 +686,7 @@ https://www.clarifai.com/
 - [Ecco GitHub Repository](https://github.com/jalammar/ecco?tab=readme-ov-file)
 - [The Transformers Architecture in Detail: What's the Magic Behind LLMs](https://aigents.co/data-science-blog/publication/the-transformers-architecture-in-detail-whats-the-magic-behind-llms)
 - https://rbcborealis.com/research-blogs/tutorial-14-transformers-i-introduction/ 
-- 
+- [How Do Language Models put Attention Weights over Long Context?](https://yaofu.notion.site/How-Do-Language-Models-put-Attention-Weights-over-Long-Context-10250219d5ce42e8b465087c383a034e ) 
 
 #### Visualizer
 - [Inspectus GitHub Repository](https://github.com/labmlai/inspectus)

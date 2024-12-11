@@ -304,8 +304,8 @@
 		},
 		{
 			"type": "arrow",
-			"version": 44,
-			"versionNonce": 133382368,
+			"version": 48,
+			"versionNonce": 990711430,
 			"isDeleted": false,
 			"id": "yC_8I3g0w_4oeKffgp4Zm",
 			"fillStyle": "solid",
@@ -327,7 +327,7 @@
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1719651799299,
+			"updated": 1733712930640,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -356,8 +356,8 @@
 		},
 		{
 			"type": "arrow",
-			"version": 22,
-			"versionNonce": 764945632,
+			"version": 23,
+			"versionNonce": 1689603526,
 			"isDeleted": false,
 			"id": "Bbm9xw28T3TDN5ZLtILBd",
 			"fillStyle": "solid",
@@ -379,7 +379,7 @@
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1719651799299,
+			"updated": 1733712930641,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -448,8 +448,8 @@
 		},
 		{
 			"type": "arrow",
-			"version": 19,
-			"versionNonce": 1504966880,
+			"version": 20,
+			"versionNonce": 2034948102,
 			"isDeleted": false,
 			"id": "rqOElszxraVmnfFPs9v-S",
 			"fillStyle": "solid",
@@ -471,7 +471,7 @@
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1719651799299,
+			"updated": 1733712930637,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -540,8 +540,8 @@
 		},
 		{
 			"type": "arrow",
-			"version": 31,
-			"versionNonce": 352356576,
+			"version": 32,
+			"versionNonce": 93562118,
 			"isDeleted": false,
 			"id": "Pv7j5KZHhVrGmwDTLCV2V",
 			"fillStyle": "solid",
@@ -563,7 +563,7 @@
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1719651799300,
+			"updated": 1733712930642,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -673,10 +673,10 @@
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 706.2957478184853,
-		"scrollY": -752.3662323028809,
+		"scrollX": 645.0772715958756,
+		"scrollY": -831.3238530458536,
 		"zoom": {
-			"value": 1.55
+			"value": 1.9000000000000001
 		},
 		"currentItemRoundness": "round",
 		"gridSize": null,

@@ -143,7 +143,10 @@
     - **Solution-Oriented Funds**: Target specific financial goals.
     - **Index Funds**: Invest in top companies (low cost, long-term investment).
     - **Liquid Funds**: Low risk, short-term investments.
- 
+
+Liquid funds
+- 
+
  **SIP (Systematic Investment Plan)**:
     - Automatically invests a fixed amount every month into mutual funds or stocks.
  **Lump-Sum Investment**:
@@ -385,10 +388,64 @@ Medical inflation is 15% in india.
 
 
 
+### Bonds
+
+- Only go if you have more amount 
+- 
+
+When an investor buys a bond, they are basically **lending money** to the organization (like a government or a company) that issues the bond. In return, the organization promises to pay the investor **interest** on the money they lent, usually at regular intervals (like every year or every six months).
+
+At the **end of the bond's term** (called the **maturity**), the organization will return the **original amount of money** (called the **principal** or **face value**) to the investor.
+
+It is similar to giving for vatti and interset
+
+Types
+- secure bond (low interset,low risk) there are assets backing the bond, if the issuer defaults (fails to repay), the bondholder can claim those assets to recover their money.  (like we giving gold to bank to get money )
+- unsecure bond (has high interest high risk) No assests like credit card
+
+Things to check
+- maturity data -> when they give whole money back
+- copoun rate -> interset rate
+
+Apps
+- Golden pie (regulated by sebi)
+- fixed income
+- wint
+- bonds india
+
+bond rating
+
+**Bond rating** refers to an evaluation of a bond issuer's creditworthiness or the likelihood that they will be able to meet their debt obligations
+
+### Main Credit Rating Agencies in India:
+
+1. **CRISIL (Credit Rating Information Services of India Limited)**
+2. **ICRA (Investment Information and Credit Rating Agency)**
+3. **CARE (Credit Analysis & Research Ltd.)**
+4. **Brickwork Ratings**
+5. **India Ratings and Research (part of Fitch Group)**
+
+- **AAA**: The highest rating, indicating an extremely low risk of default. Bonds with this rating are considered very safe investments.
+- **AA+**, **AA**, **AA-**: High-grade bonds, with only a slightly higher risk than AAA-rated bonds. Still considered very safe.
+- **A+**, **A**, **A-**: Bonds with a bit more risk but still considered investment-grade. These bonds are suitable for conservative investors.
+
+T-Bill (shorterm bonds)
+
+T-bills have short maturity periods, typically ranging from **91 days**, **182 days**, and **364 days**.
+
+A **T-bill** (short for **Treasury Bill**) is a short-term debt instrument issued by the **government** to raise funds for various expenses. In India, T-bills are issued by the **Reserve Bank of India (RBI)** on behalf of the **Indian government**. T-bills are considered one of the safest investments because they are backed by the government.
 
 
+The **RBI Floating Rate Savings Bond** is a government-backed savings instrument issued by the **Reserve Bank of India (RBI)**.
 
+The bond is available with a fixed tenure of **7 years** from the date of issue.
 
+- Interest is payable every **6 months** (semi-annually), making it a useful option for people seeking regular income.
+- The interest payments are **taxable**, and tax will be deducted at source (TDS) on the interest earned.
+- intreset rate wil change over 6 month
+- if interset is more then 10K they deduct tax
+
+Minimum - 1000 rupee
 ### **Tax Considerations for Investments**
 
 1. **Taxable Profits**:
@@ -503,3 +560,12 @@ Tips for credit score
 ## Public fund
 
 - UAN -> single number for all company
+
+
+
+
+
+
+
+Note 
+- Last 2 years index fund return is 5%

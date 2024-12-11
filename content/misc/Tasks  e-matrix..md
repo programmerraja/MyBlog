@@ -6,10 +6,15 @@ kanban-plugin: board
 
 ## Urgent and Important
 
+- [ ] Prompt  Pr agent
 
 
 ## Important but not urgent
 
+- [ ] Resume
+- [ ] Portfolio
+- [ ] Front end dev challenge
+- [ ] converting my notes to blog and repo
 
 
 ## urgent but not important
@@ -18,6 +23,7 @@ kanban-plugin: board
 
 ## not urgent and not important
 
+- [ ] On pr approve show model of UT passed ...
 
 
 

@@ -96,6 +96,7 @@ Components of Dspy
 
 
 ### Singature
+
  signature is a short function that specifies **what** a transformation does rather than **how** to prompt the LM to do it (e.g., "consume questions and context and return answers").
 ```txt
 "context, question"    -> "answer"

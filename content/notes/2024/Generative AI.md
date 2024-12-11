@@ -428,3 +428,8 @@ Unstructured Data for LLM
 
 
 https://github.com/WooooDyy/LLM-Agent-Paper-List
+
+
+## Resources
+- https://eugeneyan.com/ 
+- [Technical articles about graph neural networks, large language models, and convex optimization.](https://mlabonne.github.io/blog/) 
