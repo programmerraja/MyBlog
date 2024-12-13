@@ -87,6 +87,21 @@ I decided to have a poke around and see if I could figure out how the HTTP strea
 
 ## Prompts
 
+```
+Take the following piece of writing that feels disconnected or choppy and improve its flow by applying the following techniques: contrast, reasons, exceptions, examples, and details._
+
+**Instructions:**
+
+1. **Contrast**: Identify places where contrasting ideas can help clarify your point.
+2. **Reasons**: Connect statements by adding reasons that explain why something happened or why it's important.
+3. **Exceptions**: Anticipate possible counterpoints and add exceptions to create a more nuanced argument.
+4. **Examples**: Use concrete examples to clarify abstract ideas.
+5. **Details**: Add additional details or elaboration where necessary to ensure the writing feels complete but not overwhelming.
+
+**Text**:  
+
+```
+
 Summary
 ```
 “Summarize the key points from the provided content, whether it’s a video, blog post, or article. Include details about the main topics and themes discussed. Summarize the key insights and findings, highlighting any significant advantages, limitations, or implications. Include any practical recommendations or advice for applying the discussed concepts or methods. Add any notable quotes that capture key points or significant perspectives. What is the one-sentence takeaway or central message from the content? List any references, tools, or additional resources mentioned that support the discussion.”

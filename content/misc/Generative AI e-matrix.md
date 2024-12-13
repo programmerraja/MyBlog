@@ -13,6 +13,7 @@ kanban-plugin: board
 
 - [ ] Memory
 - [ ] fine tunning
+- [ ] https://github.com/hesamsheikh/ml-retreat LLM
 
 
 ## Urgent, Not Important

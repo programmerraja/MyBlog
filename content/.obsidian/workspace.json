@@ -11,21 +11,42 @@
             "id": "d1ee5070fe20325d",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "misc/Tasks  e-matrix..md",
-                "kanbanViewState": {
-                  "kanban-plugin": "board",
-                  "list-collapse": [
-                    false,
-                    false,
-                    false,
-                    false
-                  ]
-                }
+                "file": "notes/2024/Software principles.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-trello",
-              "title": "Tasks  e-matrix."
+              "icon": "lucide-file",
+              "title": "Software principles"
+            }
+          },
+          {
+            "id": "1b50be5708b9e7be",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "post/2024/Caught in the Crunch My Journey from Snacks to 2 Million Exposed Users Privacy.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Caught in the Crunch My Journey from Snacks to 2 Million Exposed Users Privacy"
+            }
+          },
+          {
+            "id": "eecc9beececd61bb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "misc/Blog Notes.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Blog Notes"
             }
           },
           {
@@ -34,16 +55,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/2024/Kubernetes.md",
+                "file": "notes/2024/Generative AI.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Kubernetes"
+              "title": "Generative AI"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -74,7 +95,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "liquid fund",
+                "query": "udge",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -201,23 +222,40 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "80de137f06e444df",
+  "active": "eecc9beececd61bb",
   "lastOpenFiles": [
+    "post/2024/Caught in the Crunch My Journey from Snacks to 2 Million Exposed Users Privacy.md",
+    "post/2024/Sherlock Holmes  The mystery of 1 milion Nxdomain error.md",
+    "post/2024/Code Aganist Clock Interview helper.md",
+    "misc/Blog Notes.md",
+    "notes/2024/Software principles.md",
+    "notes/2024/Domain driven design.md",
+    "notes/2024/Software Architecture.md",
+    "misc/Hackthon.md",
+    "notes/2024/Basic Maths.md",
+    "notes/2024/Learning from blog.md",
+    "misc/Generative AI e-matrix.md",
     "misc/Tasks  e-matrix..md",
+    "notes/2024/Generative AI.md",
+    "notes/2024/LLM Observability And Eval.md",
+    "notes/2024/Google vertex AI.md",
+    "post/2024/A Flexible AI-Powered Chat App for Websites Youtube Files and Dev.to Articles.md",
     "misc/Finance  & stock.md",
-    "notes/2024/Prompt Engineering.md",
+    "post/2024/How to capture mongodb protocol in  wireshark.md",
     "index.md",
+    "misc/What next?.md",
+    "misc/Job.md",
+    "misc/Blog template.md",
+    "misc/Bored.md",
+    "misc/AI project ideas.md",
+    "misc/Trading.md",
+    "misc/Random thougts.md",
     "Excalidraw/art-2024-04-28 14.38.57.excalidraw",
-    "Excalidraw/art-2024-07-21 05.41.43.md",
     "Excalidraw/LangchainAgent.excalidraw",
     "Excalidraw/art-2024-02-11 07.27.35.excalidraw",
     "Excalidraw/art-2024-01-25 14.32.40.excalidraw",
     "Excalidraw/art-2024-01-19 19.56.09.svg",
-    "Excalidraw/LangchainAgent.md",
-    "Excalidraw/art-2024-02-11 07.27.35.md",
-    "Excalidraw/art-2024-01-25 14.32.40.md",
     "Excalidraw/art-2024-01-19 19.56.09.excalidraw",
-    "Excalidraw/art-2024-01-19 19.56.09.md",
     "Images/Pasted image 20241029075644.png",
     "Images/Pasted image 20241029075441.png",
     "Images/Pasted image 20241029075328.png",
@@ -227,23 +265,6 @@
     "Images/jirasubtask.png",
     "Images/jira.png",
     "Images/Pasted image 20240721092914.png",
-    "post/2024/A Journey into Unseen Threats on our VM.md",
-    "post/2024/How to capture mongodb protocol in  wireshark.md",
-    "notes/2024/Leadership.md",
-    "notes/2024/Mongodb Notes.md",
-    "misc/Job.md",
-    "notes/2024/LamaIndex.md",
-    "misc/Generative AI e-matrix.md",
-    "notes/2024/Generative AI.md",
-    "notes/2024/Transformer.md",
-    "Untitled Kanban.md",
-    "misc/Blog template.md",
-    "misc/Bored.md",
-    "misc/TODO.md",
-    "misc/What next?.md",
-    "2024-12-09.md",
-    "post/2024/Code Aganist Clock Interview helper.md",
-    "notes/2024/Grafana.md",
     "Scripts/remove.py",
     "Scripts/remove_no_git.py",
     "Scripts/export.py",

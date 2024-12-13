@@ -569,3 +569,14 @@ Tips for credit score
 
 Note 
 - Last 2 years index fund return is 5%
+
+
+
+
+hdfc Credit card 
+- 50 days 
+- When we swipping cash using credit card 2.5 interset
+
+How to use credit card
+- pay before time
+- check your billing date and pay before that
