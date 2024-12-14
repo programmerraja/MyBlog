@@ -680,6 +680,8 @@ Developer tools and cloud infrastructure for perfectionists using LLMs. [Zenbase
 
 ### EvalLM
 Interactive Evaluation of Large Language Model Prompts on User-Defined Criteria
+
+https://github.com/hinthornw/promptimizer
 ## Prompt Hacking
 
 ### output2prompt

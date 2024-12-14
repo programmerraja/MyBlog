@@ -15,6 +15,7 @@ kanban-plugin: board
 - [ ] Portfolio
 - [ ] Front end dev challenge
 - [ ] converting my notes to blog and repo
+- [ ] Explore how we do with less code for projects for front end https://ui.shadcn.com/ and tawaild css
 
 
 ## urgent but not important

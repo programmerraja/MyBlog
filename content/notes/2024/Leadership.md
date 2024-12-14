@@ -97,6 +97,31 @@ Never show angry or react suddenly to any incident think before act
 - These conversations often occur in personal relationships, workplaces, and decision-making scenarios.
 - Avoiding or handling them poorly can lead to conflict, misunderstandings, or missed opportunities.
 
+
+
+
+## The 6 Mistakes You’re Going to Make as a New Manager
+
+- **Delegation:** New managers often struggle to delegate tasks they previously handled as ICs. They may rationalize this by thinking they're the only ones who can do it properly. This hinders team growth and prevents the manager from evolving into a leadership role.
+
+- **Seeking Dopamine from the Wrong Sources:** As an IC, the sense of accomplishment likely came from "shipping" projects. In a management role, this direct reward disappears. Managers need to find satisfaction in facilitating their team's success, through activities like providing feedback and witnessing team growth.
+
+- **Prioritizing Team Size over Quality:** It's easy to equate a larger team with success. However, focusing on the quality of the team's output and creating a collaborative environment leads to better results than simply having a bigger team.
+
+- **Struggling with Engagement Levels:** New managers often struggle to find the balance between involvement and micromanaging. "Guided Autonomy" is recommended, where managers set clear goals and allow their team to determine the execution.
+
+- **Failing to Manage Perception:** As an IC, work is easily visible. As a manager, it's less clear-cut. It becomes important to manage how the team, stakeholders, and senior management perceive you and your team's contributions. This involves effectively communicating achievements and showcasing leadership that empowers the team.
+
+- **Redefining Success:** Imposter syndrome is common among new managers. It's important to redefine success by focusing on the team's shipping ability and happiness. If both are present, the manager is likely succeeding.
+
+
+
+
+
+
+
+
+
 ## Resources
 - [Tech Lead Journal](https://www.youtube.com/@techleadjournal/videos)  (Hear from experienced technical leaders sharing their journey and philosophy for building great technical teams and achieving technical excellence. Find out what makes them great and how to apply those lessons to your work and team.)
-- 
+- [The 6 Mistakes You’re Going to Make as a New Manager](https://terriblesoftware.org/2024/12/04/the-6-mistakes-youre-going-to-make-as-a-new-manager/) 

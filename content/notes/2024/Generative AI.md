@@ -371,6 +371,7 @@ Currently it implemented as [letta](https://www.letta.com/)
 - **Archival storage**: A persistent database for storing arbitrary-length text objects. This could include documents, code, or any other information deemed relevant for future retrieval,MemGPT uses PostgreSQL with the pgvector extension for archival storage, enabling efficient vector search with an HNSW index.
 
 
+## LLM Routing 
 
 
 

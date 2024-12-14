@@ -410,3 +410,4 @@ it is layer 7 proxy and use Yaml extension for config
 ## Tool
 
 1. [https://github.com/louislam/uptime-kuma](https://github.com/louislam/uptime-kuma)
+2. [An SSO and OAuth / OIDC login solution for Nginx using the auth_request module ](https://github.com/vouch/vouch-proxy)

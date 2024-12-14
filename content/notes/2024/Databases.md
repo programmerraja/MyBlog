@@ -114,7 +114,7 @@ Redis leverages forking and copy-on-write to enable efficient data persistence. 
         - This approach allows Redis to handle many concurrent connections on a single thread, as it spends minimal time waiting for I/O operations to complete.
     - **Speed and Simplicity:** The single-threaded model, combined with in-memory data storage, makes Redis extremely fast. By avoiding multi-threading complexities, Redis also maintains code simplicity and reduces the risk of concurrency-related bugs.
 
-
+https://mattermost.com/blog/lessons-learned-running-redis-at-scale/
 
 ## StarRocks
 [StarRocks](https://www.starrocks.io/) is an open-source, OLAP (_analytics-focused_) database that’s designed for running low-latency queries on data in real-time
