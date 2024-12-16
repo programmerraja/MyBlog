@@ -857,6 +857,8 @@ Displays the current ARP table, which maps IP addresses to MAC addresses.
 Responsible for the physical transmission of raw bits over a physical medium. It deals with the actual hardware connections, transmission media, and electrical or optical signaling.
 
 
+
+
 ## RFC
 RFC stands for "Request for Comments." It is a series of documents and notes about the specifications, protocols, procedures, and conventions related to the operation and development of the internet. The RFC series is maintained by the Internet Engineering Task Force (IETF), a large open international community of network designers, operators, vendors, and researchers concerned with the evolution and smooth operation of the Internet architecture.
 
@@ -876,6 +878,10 @@ HMAC -> hashing with private key (where private key is used to verify the data i
 
 DHCP starvation ,DHCP spoofing
 IP spoofingk
+
+
+
+
 ## Resources
 
 1. [RFC Spec for SMTP](https://datatracker.ietf.org/doc/html/rfc5321) 
@@ -928,4 +934,6 @@ message Employess {
 }
 ```
 - Once you define your message types in a `.proto` file, you use the Protocol Buffers compiler (`protoc`) to generate source code in the language of your choice (e.g., C++, Java, Python). This generated code includes classes or structs for working with your defined message types in your chosen programming language.
+
+
 

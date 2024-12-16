@@ -4,39 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "0cfea92080b2989b",
+        "id": "67c92e5e0dc5971b",
         "type": "tabs",
         "children": [
           {
-            "id": "d1ee5070fe20325d",
+            "id": "e7f1807a126b62e9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/2024/Generative AI.md",
+                "file": "misc/Blog Notes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Generative AI"
+              "title": "Blog Notes"
             }
           },
           {
-            "id": "5060f7e957e516c3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notes/2024/LLM Observability And Eval.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "LLM Observability And Eval"
-            }
-          },
-          {
-            "id": "0e5833b183c7e68c",
+            "id": "4829d8488397b05b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -50,49 +36,7 @@
             }
           },
           {
-            "id": "035fd997fb598ee1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notes/2024/Leadership.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Leadership"
-            }
-          },
-          {
-            "id": "8a05385aefe01f70",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "index.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "index"
-            }
-          },
-          {
-            "id": "1b50be5708b9e7be",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "post/2024/Caught in the Crunch My Journey from Snacks to 2 Million Exposed Users Privacy.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Caught in the Crunch My Journey from Snacks to 2 Million Exposed Users Privacy"
-            }
-          },
-          {
-            "id": "eecc9beececd61bb",
+            "id": "b2d0ec368da2710f",
             "type": "leaf",
             "state": {
               "type": "kanban",
@@ -113,7 +57,7 @@
             }
           },
           {
-            "id": "80de137f06e444df",
+            "id": "e6a194196cde7be6",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -125,9 +69,37 @@
               "icon": "lucide-file",
               "title": "Generative AI"
             }
+          },
+          {
+            "id": "9d2bd5af706ef8a2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "misc/AI project ideas.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "AI project ideas"
+            }
+          },
+          {
+            "id": "5c26864a509820f9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "post/2024/Generative AI  A Personal Deep Dive  My Notes and Insights.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Generative AI  A Personal Deep Dive  My Notes and Insights"
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -158,7 +130,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "redis",
+                "query": "rsocket",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -193,8 +165,7 @@
               "title": "Money Earning"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -286,34 +257,35 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8a05385aefe01f70",
+  "active": "5c26864a509820f9",
   "lastOpenFiles": [
-    "misc/Bored.md",
-    "misc/Finance  & stock.md",
-    "notes/2024/Leadership.md",
-    "notes/2024/Databases.md",
     "notes/2024/Transformer.md",
-    "notes/2024/LLM Observability And Eval.md",
-    "notes/2024/Generative AI.md",
-    "notes/2024/Prompt Engineering.md",
-    "misc/Generative AI e-matrix.md",
-    "misc/Hackthon.md",
-    "notes/2024/Vector DB and embedding.md",
-    "misc/Blog Notes.md",
-    "notes/2024/Software principles.md",
+    "misc/AI project ideas.md",
+    "misc/What next?.md",
     "misc/Tasks  e-matrix..md",
-    "notes/2024/Nginx.md",
-    "post/2024/Caught in the Crunch My Journey from Snacks to 2 Million Exposed Users Privacy.md",
-    "post/2024/Sherlock Holmes  The mystery of 1 milion Nxdomain error.md",
-    "post/2024/Code Aganist Clock Interview helper.md",
+    "misc/Generative AI e-matrix.md",
+    "misc/Trading.md",
+    "misc/Blog template.md",
+    "misc/Job.md",
+    "misc/Revise calendar.md",
+    "misc/Day Dreaming Notes.md",
+    "notes/2024/Generative AI.md",
+    "notes/2024/Vector DB and embedding.md",
+    "tags/genrative_ai.md",
+    "post/2024/Generative AI  A Personal Deep Dive  My Notes and Insights.md",
+    "tags",
+    "notes/2024/Databases.md",
+    "misc/Blog Notes.md",
+    "Untitled.md",
+    "misc/Finance  & stock.md",
+    "notes/2024/Prompt Engineering.md",
+    "notes/2024/LLM Observability And Eval.md",
+    "notes/2024/Networking.md",
+    "notes/2024/System Design.md",
+    "notes/2024/System Design Case study.md",
+    "notes/2024/LLM strucuted output and Parser.md",
     "notes/2024/Domain driven design.md",
-    "notes/2024/Software Architecture.md",
-    "notes/2024/Basic Maths.md",
-    "notes/2024/Learning from blog.md",
-    "notes/2024/Google vertex AI.md",
-    "post/2024/A Flexible AI-Powered Chat App for Websites Youtube Files and Dev.to Articles.md",
-    "post/2024/How to capture mongodb protocol in  wireshark.md",
-    "index.md",
+    "notes/2024/Design pattern.md",
     "Excalidraw/art-2024-04-28 14.38.57.excalidraw",
     "Excalidraw/LangchainAgent.excalidraw",
     "Excalidraw/art-2024-02-11 07.27.35.excalidraw",
@@ -333,7 +305,6 @@
     "Scripts/remove_no_git.py",
     "Scripts/export.py",
     "Scripts/export_no_git.py",
-    "Scripts",
     "Untitled.canvas"
   ]
 }

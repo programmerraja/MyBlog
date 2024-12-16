@@ -1,8 +1,9 @@
 ---
-title : Terraform
-date : 2024-10-08T05:43:58.5858+05:30
-draft : true
-tags : 
+title: Terraform
+date: 2024-10-08T05:43:58.5858+05:30
+draft: true
+tags:
+  - devops
 ---
 
 

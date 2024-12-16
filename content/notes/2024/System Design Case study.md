@@ -231,3 +231,53 @@ The proxy separates read and write traffic from clients, handles client authenti
 
 The Ingestion Service was introduced to handle large traffic spikes. It queues requests from clients into a Kafka topic, and worker clients then send the requests to the Elasticsearch cluster. The service batches requests, listens to back-pressure, auto-throttles, and retries with backoff, smoothing out traffic to the cluster and preventing overload.
 
+
+
+
+
+## Real time coloboration
+
+### Canva
+
+Canva's initial implementation of real-time mouse pointers relied on a **backend-centric architecture** using **websockets and Redis**. Here's a simplified explanation with an example:
+
+Imagine three users, Alice, Bob, and Charlie, are collaborating on a Canva design.
+
+1. **Connection:** Each user connects to a specific Canva server instance (let's call them Instance 1, Instance 2, and Instance 3) via a websocket.
+2. **Session Information:** When a user connects, the server records which instance they are connected to. This information is stored in Redis, acting as a shared memory for all server instances. For example, Redis will store:
+    - Alice - Instance 1
+    - Bob - Instance 2
+    - Charlie - Instance 3
+3. **Mouse Movement:** Let's say Alice moves her mouse. Her browser sends the updated mouse position to Instance 1 via the websocket.
+4. **Data Broadcast:** Instance 1 checks the session information in Redis to see which instances Bob and Charlie are connected to.
+5. **Targeted Sending:** Instance 1 then sends Alice's mouse position data only to Instance 2 and Instance 3, ensuring targeted delivery.
+6. **Update Display:** Instances 2 and 3, upon receiving the data, update Bob and Charlie's screens, respectively, showing Alice's mouse pointer movement.
+
+This system allowed Canva to scale real-time collaboration features to a large number of users. However, to achieve even higher update rates and reduce latency, they later transitioned to a WebRTC-based architecture, enabling direct peer-to-peer communication between clients.
+
+Canva's second iteration of the real-time mouse pointer feature uses **WebRTC**, a technology designed for real-time communication in web browsers. This approach shifts from a server-centric model to a **peer-to-peer** connection, enabling direct data exchange between clients with minimal server involvement. Here's how it works with an example:
+
+Let's consider the same scenario: Alice, Bob, and Charlie are collaborating on a design.
+
+1. **Connection Establishment:**
+    - When Alice joins, her browser initiates contact with a **signaling server**. Canva uses its existing infrastructure from the first system for this purpose.
+    - The signaling server helps establish connections but doesn't handle the mouse pointer data itself.
+    - Alice's browser also gathers **ICE candidates** representing potential connection routes, including direct connections and connections relayed through a **TURN server**.
+2. **Offer and Answer:**
+    - Alice's browser sends an **offer SDP** (Session Description Protocol) to Bob and Charlie via the signaling server. This offer contains information about the session and codecs.
+    - Bob and Charlie, upon receiving the offer, respond with an **answer SDP**, also relayed through the signaling server.
+    - They simultaneously gather their own ICE candidates and exchange them with Alice via the signaling server.
+3. **Connection Formation:**
+    - Each user's browser analyzes the received ICE candidates and prioritizes them based on factors like connection type (direct or relayed).
+    - The browsers attempt to establish a **peer-to-peer connection** using the best candidate pair.
+    - If a direct connection is not feasible (e.g., due to firewalls or NAT), the connection is relayed through a TURN server.
+4. **Data Channel:**
+    - Once the connection is established, a **data channel** is opened over the connection. This channel allows the transmission of mouse pointer data in a chosen format (string or binary).
+5. **Real-time Updates:**
+    - When Alice moves her mouse, her browser sends the updated position information directly to Bob and Charlie through the established data channels, bypassing the need to go through a central server.
+    - Bob and Charlie's browsers receive this data and update their screens to reflect Alice's mouse movements in real time.
+
+
+Resources
+- https://www.canva.dev/blog/engineering/realtime-mouse-pointers/ 
+- https://www.canva.dev/blog/engineering/enabling-real-time-collaboration-with-rsocket/

@@ -10,6 +10,20 @@ to rember the design pattern narrate it as real life story
 
 resources https://youtu.be/taj_inLi-pY?si=2qu_7nqx6YRwX0Co
 
+
+**1. Command Pattern**: This pattern encapsulates a request as a standalone object, separating the request's trigger from its content. This decoupling allows for flexibility in how the request is handled. In the supermarket scenario, a mother's grocery request is written on a note (the command object), which is delivered by her daughter (the invoker) to the son who does the shopping (the receiver).
+
+**2. Observer Pattern**: This pattern establishes a one-to-many relationship where multiple observers are interested in the state of a single subject. Observers register their interest with the subject and receive notifications upon state changes. At the supermarket, customers waiting for coffee (observers) register their contact information with an employee (subject) to be notified when the coffee is restocked.
+
+**3. Adapter Pattern**: This pattern bridges the gap between incompatible interfaces. It converts the interface of a service to match the client's expectations. When a shopper needs to read a product label in Spanish but only understands English, a translation app acts as an adapter, converting the Spanish text to English.
+
+**4. Factory Method Pattern**: This pattern defines a method for creating objects but defers the actual object creation to subclasses. This allows for the creation of different subtypes of an object based on the specific subclass used. Different bakeries (subclasses) within and outside the supermarket provide different types of bread (subtypes) based on the same basic request for "bread".
+
+**5. Template Method Pattern**: This pattern defines a template or skeleton for an algorithm in a superclass, allowing subclasses to implement specific steps while maintaining a consistent overall structure. A baker uses a template method to make sandwiches, with specific ingredients (subclass implementations) varying between a chicken and a vegetable sandwich while the basic steps of sandwich assembly remain consistent.
+
+**6. Facade Pattern**: This pattern provides a simplified interface to a complex subsystem, hiding the underlying complexity from the client. A mother asking her sons to put away groceries uses a facade pattern, as the sons handle the complexity of sorting and storing groceries in different locations without the mother needing to specify those details.
+
+
 ## Crational Design pattern
 
 Once upon a time in the colorful land of Toyland, there were magical creatures known as Creators. Each Creator had a unique way of bringing toys to life, showcasing various creational design patterns.

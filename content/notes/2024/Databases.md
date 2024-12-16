@@ -114,10 +114,55 @@ Redis leverages forking and copy-on-write to enable efficient data persistence. 
         - This approach allows Redis to handle many concurrent connections on a single thread, as it spends minimal time waiting for I/O operations to complete.
     - **Speed and Simplicity:** The single-threaded model, combined with in-memory data storage, makes Redis extremely fast. By avoiding multi-threading complexities, Redis also maintains code simplicity and reduces the risk of concurrency-related bugs.
 
-https://mattermost.com/blog/lessons-learned-running-redis-at-scale/
+#### Streams
+
+A Redis stream is a data structure that acts like an append-only log but also implements several operations to overcome some of the limits of a typical append-only log. These include random access in O(1) time
+
+Redis generates a unique ID for each stream entry. You can use these IDs to retrieve their associated entries later or to read and process all subsequent entries in the stream.
+
+In nutshell -> we can add data to redis and read from it but it not pub sub we manully need to read from it, data are in ordered
+
+- Data in streams is stored persistently
+- Streams support automatic trimming (using `MAXLEN`), allowing you to control memory usage by removing old messages.
+
+Consumer group
+
+Redis Streams with Consumer Groups allow multiple consumers to share the responsibility of processing messages from a single stream. Each message is delivered to only one consumer in the group, ensuring parallel processing and scalability. If a consumer fails to process a message, another consumer can claim and process the unacknowledged message, ensuring fault tolerance and no message loss. `it is similar to rabbitmq or message broker behaviour`
+
+CMD 
+```bash
+
+XADD mystream * event_type "user_signup" user_id 12345 -> add the data to stream
+
+XRANGE mystream start-id end-id` -> to read data from stream
+
+XGROUP CREATE mystream mygroup 0 ->To create a consumer group
+```
+
+
+#### Pub/Sub
+
+- **Publisher**: A client sends messages to a specific "channel".
+- **Subscriber**: Clients subscribe to one or more channels to receive messages.
+- **No Persistence**: Redis Pub/Sub does not store messages. Once a message is sent, it is delivered to all subscribers in real time, but it's not saved or re-delivered if a subscriber is not connected.
+- No ack from client there is chance of data loss
+
+```bash
+
+PUBLISH mychannel "Hello, World!"
+
+SUBSCRIBE mychannel
+
+```
+
+Resources
+- https://mattermost.com/blog/lessons-learned-running-redis-at-scale/
 
 ## StarRocks
 [StarRocks](https://www.starrocks.io/) is an open-source, OLAP (_analytics-focused_) database that’s designed for running low-latency queries on data in real-time
+
+## Rockset 
+ World's fastest search and analytics database
 
 ## Influx DB
   

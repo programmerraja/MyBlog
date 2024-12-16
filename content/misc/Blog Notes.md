@@ -12,7 +12,7 @@
 	- [ ] Can i use any design pattern
 	- [ ] Alwasys create a wrapper when using thirdparty such that it easy to swap
 - [ ]  3 Lessons from the Smartest Developers I’ve Worked With
-- [ ] Exposed phone number on leaderboard
+- [x] Exposed phone number on leaderboard
 - [ ] What we learns from migrating heroku to kuberneted
 	- [ ] Probe
 	- [ ] Staing
@@ -88,7 +88,7 @@ I decided to have a poke around and see if I could figure out how the HTTP strea
 ## Prompts
 
 ```
-Take the following piece of writing that feels disconnected or choppy and improve its flow by applying the following techniques: contrast, reasons, exceptions, examples, and details._
+Take the following piece of writing that feels disconnected or choppy and improve its flow by applying the following techniques: contrast, reasons, exceptions, examples, and details. and write a blog like human
 
 **Instructions:**
 

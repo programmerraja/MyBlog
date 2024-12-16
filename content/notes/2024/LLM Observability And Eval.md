@@ -121,7 +121,7 @@ check [here](https://auto-arena.github.io/)
 
  A HIGH EFFICACY METHOD FOR LLM HALLUCINATION DETECTION
 
-The Correctness and Context Adherence metrics in the Galileo console are powered by ChainPoll-Correctness and ChainPoll-Adherence,
+The Correctness and Context Adherence metrics in the Galileo console are powered by ChainPoll-Correctness and ChainPoll-Adherence
 
  ChainPoll-based metric for each of these cases.
  

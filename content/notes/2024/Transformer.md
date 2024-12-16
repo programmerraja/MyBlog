@@ -692,3 +692,6 @@ https://www.clarifai.com/
 - [Inspectus GitHub Repository](https://github.com/labmlai/inspectus)
 - [Transformer Explained Visually](https://poloclub.github.io/transformer-explainer/): Learn How LLM Transformer Models Work with Interactive Visualization 
 
+
+- [A ChatGPT clone, in 3000 bytes of C, backed by GPT-2 ](https://nicholas.carlini.com/writing/2023/chat-gpt-2-in-c.html)
+- 

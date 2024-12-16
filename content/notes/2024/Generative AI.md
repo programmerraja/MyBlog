@@ -178,7 +178,7 @@ For query-focused abstractive summarization
 LightRAG achieves this by incorporating graph structures into text indexing and implementing a dual-level retrieval framework
 
 Features an incremental update algorithm that seamlessly integrates new entities and relationships into the existing graph structure without the need for full reconstruction
-- https://github.com/HKUDS/LightRAG?tab=readme-ov-file
+- https://github.com/HKUDS/LightRAG
 ### HippoRAG
 
 This framework draws inspiration from the hippocampal indexing theory of human long-term memory and aims to enhance knowledge integration in Large Language Models
@@ -440,4 +440,9 @@ https://github.com/WooooDyy/LLM-Agent-Paper-List
 
 Learning resource
 - [Machine Learning Journal for Intermediate to Advanced Topics. ](https://github.com/hesamsheikh/ml-retreat)
-- 
+
+
+## Ray
+
+it was used by **Airbnb's**
+An open source framework to build and scale your ML and Python applications easily
