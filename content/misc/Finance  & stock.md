@@ -582,3 +582,10 @@ How to use credit card
 - check your billing date and pay before that
 
 
+
+US stock
+- nasdaq index top 100 company on us
+
+
+good mutual  fund
+- tata digital india fund 

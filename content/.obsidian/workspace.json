@@ -39,25 +39,60 @@
             "id": "b2d0ec368da2710f",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "misc/Tasks  e-matrix..md",
-                "kanbanViewState": {
-                  "kanban-plugin": "board",
-                  "list-collapse": [
-                    false,
-                    false,
-                    false,
-                    false
-                  ]
-                }
+                "file": "notes/2024/Fullstack.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-trello",
-              "title": "Tasks  e-matrix."
+              "icon": "lucide-file",
+              "title": "Fullstack"
+            }
+          },
+          {
+            "id": "e6e2dfffebaa43bd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "post/2024/Generative AI  A Personal Deep Dive  My Notes and Insights.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Generative AI  A Personal Deep Dive  My Notes and Insights"
             }
           },
           {
             "id": "e6a194196cde7be6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "notes/2024/Generative AI  A Personal Deep Dive  My Notes and Insights Part -2.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Generative AI  A Personal Deep Dive  My Notes and Insights Part -2"
+            }
+          },
+          {
+            "id": "3bc5a5279bbfe52a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "notes/2024/LLM Observability And Eval.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "LLM Observability And Eval"
+            }
+          },
+          {
+            "id": "e0acc0201cf5b945",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -71,17 +106,17 @@
             }
           },
           {
-            "id": "9d2bd5af706ef8a2",
+            "id": "065b9366e5941381",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "misc/AI project ideas.md",
+                "file": "notes/2024/LLM strucuted output and Parser.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AI project ideas"
+              "title": "LLM strucuted output and Parser"
             }
           },
           {
@@ -99,7 +134,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -257,35 +292,35 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5c26864a509820f9",
+  "active": "e6a194196cde7be6",
   "lastOpenFiles": [
-    "notes/2024/Transformer.md",
+    "post/2024/Generative AI  A Personal Deep Dive  My Notes and Insights.md",
+    "notes/2024/Generative AI  A Personal Deep Dive  My Notes and Insights Part -2.md",
+    "notes/2024/LLM Observability And Eval.md",
+    "notes/2024/NextJs Notes.md",
+    "notes/2024/Generative AI.md",
     "misc/AI project ideas.md",
-    "misc/What next?.md",
+    "misc/Blog Notes.md",
+    "misc/Finance  & stock.md",
+    "notes/2024/LLM strucuted output and Parser.md",
+    "Untitled.md",
+    "post/2024/Sherlock Holmes The Case of the Missing User IPs.md",
+    "notes/2024/Fullstack.md",
+    "notes/2024/LamaIndex.md",
+    "notes/2024/Running Model locally.md",
+    "notes/2024/Open source.md",
     "misc/Tasks  e-matrix..md",
+    "notes/2024/Transformer.md",
+    "misc/What next?.md",
     "misc/Generative AI e-matrix.md",
     "misc/Trading.md",
     "misc/Blog template.md",
     "misc/Job.md",
     "misc/Revise calendar.md",
     "misc/Day Dreaming Notes.md",
-    "notes/2024/Generative AI.md",
     "notes/2024/Vector DB and embedding.md",
     "tags/genrative_ai.md",
-    "post/2024/Generative AI  A Personal Deep Dive  My Notes and Insights.md",
     "tags",
-    "notes/2024/Databases.md",
-    "misc/Blog Notes.md",
-    "Untitled.md",
-    "misc/Finance  & stock.md",
-    "notes/2024/Prompt Engineering.md",
-    "notes/2024/LLM Observability And Eval.md",
-    "notes/2024/Networking.md",
-    "notes/2024/System Design.md",
-    "notes/2024/System Design Case study.md",
-    "notes/2024/LLM strucuted output and Parser.md",
-    "notes/2024/Domain driven design.md",
-    "notes/2024/Design pattern.md",
     "Excalidraw/art-2024-04-28 14.38.57.excalidraw",
     "Excalidraw/LangchainAgent.excalidraw",
     "Excalidraw/art-2024-02-11 07.27.35.excalidraw",

@@ -8,6 +8,7 @@ kanban-plugin: board
 
 - [ ] Prompt  Pr agent
 - [ ] Hackthon
+- [ ] do resrard on how startup are building and do documentation
 
 
 ## Important but not urgent
