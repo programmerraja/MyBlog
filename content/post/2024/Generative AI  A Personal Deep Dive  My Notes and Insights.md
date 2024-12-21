@@ -1,7 +1,7 @@
 ---
 title: "Generative AI: A Personal Deep Dive – My Notes and Insights"
 date: 2024-12-15T11:45:10.1010+05:30
-draft: true
+draft: false
 tags:
   - genrative_ai
   - AI

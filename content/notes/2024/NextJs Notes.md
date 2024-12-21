@@ -18,11 +18,26 @@ tags:
 
 Private folders can be created by prefixing a folder with an underscore: `_folderName`
 
+
+Folder structure
+```
+src 
+	App
+		api
+		  - all backend code file name with route under api
+		page -> frontend filename with page,
+	Modles
+	Helper
+	middelware
+	etc..
+
+```
+
 ## Routers
 
 Next.js has two different routers: the App Router (nextjs 13) and the Pages Router. The App Router is a newer router that allows you to use React's latest features, such as Server Components and Streaming. The Pages Router is the original Next.js router, which allowed you to build server-rendered React applications
 
-  
+
 Nested route
 
 A nested route is a route composed of multiple URL segments. For example, the `/blog/[slug]` route is composed of three segments:
@@ -168,10 +183,42 @@ Then, on the client:
 `"use client"` is used to declare a boundary  between a Server and Client Component modules. This means that by defining a `"use client"` in a file, all other modules imported into it, including child components, are considered part of the client bundle.
 
 
+## Server action 
 
 
 
+## Middelware
 
+Middleware is defined in a special `middleware.js` file located at the root of your project.
+
+```js
+// middleware.js
+import { NextResponse } from 'next/server';
+
+export function middleware(req) {
+    const url = req.nextUrl;
+
+    // Example: Redirect to a login page if not authenticated
+    const token = req.cookies.get('auth-token');
+    if (!token && url.pathname !== '/login') {
+        return NextResponse.redirect(new URL('/login', url));
+    }
+
+    // Allow request to proceed
+    return NextResponse.next();
+}
+
+// Optional: Match paths
+export const config = {
+    matcher: ['/protected/:path*'], // Apply only to specific paths
+};
+
+```
+
+**NextResponse Methods**:
+- `NextResponse.next()`: Proceed with the request.
+- `NextResponse.redirect()`: Redirect the user to a new URL.
+- `NextResponse.rewrite()`: Rewrite the request to a different URL.
 
 
 

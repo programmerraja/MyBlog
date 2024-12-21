@@ -24,6 +24,8 @@ Sherlock Holmes
 - [x] debug ecconreset 15sec to update
 - [x] How we fix dns error in pod
 - [ ] hOW I SPEED UP OUR CI (pull shell code)
+- [ ] How invalod elho
+	- [ ] 550 Requested action not taken: Invalid HeloHost.(#5.5.0)","responseCode":550,"command":"MAIL FROM
 
 Code aganist clock
 - [ ] interview helper 
