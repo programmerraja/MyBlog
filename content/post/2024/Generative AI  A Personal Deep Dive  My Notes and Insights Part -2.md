@@ -57,15 +57,6 @@ Below are the some resources to learn more about structured output
 - [The Best Way to Generate Structured Output from LLMs](https://www.instill.tech/blog/llm-structured-outputs)
 - [Choosing the Best Structured Output Parser Approach | 3 Ways To Generate Structured Output](https://blog.gopenai.com/choosing-the-best-structured-output-parser-approach-3-ways-to-generate-structured-output-d9686482729c)
 
-
-## LLM Wrapper
-
-LLMs are incredibly powerful, the process of interacting with them  from making requests to handling their responses  can sometimes be cumbersome, especially if you’re not deeply familiar with the underlying technicalities.
-
-This is where **LLM wrappers** come in. An LLM wrapper is essentially a library or framework that abstracts away the repetitive, lower-level details involved in interacting with an LLM. Think of it as a bridge that makes it easier and more efficient to communicate with these models by providing pre-built functionality and common abstractions. With a wrapper, you can focus on the big picture, while the wrapper handles the technical nuances.
-
-There are several great libraries available, each with its own strengths and use cases. Based on my experience, here are a few of the most popular ones:
-
 | Library                                                                                                         | Method                       | Description                                                |
 | --------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------------- |
 | [langchain](https://python.langchain.com/docs/modules/model_io/output_parsers/types/pydantic/)                  | Prompting & function calling | Pydantic output parser as part of langchain                |
@@ -78,6 +69,28 @@ There are several great libraries available, each with its own strengths and use
 | [fructose](https://github.com/bananaml/fructose)                                                                | Function calling             | LLM calls as strongly-typed functions                      |
 | [mirascope](https://github.com/Mirascope/mirascope)                                                             | Function calling             | Prompting, chaining and structured information extraction  |
 | [texttunnel](https://github.com/qagentur/texttunnel)                                                            | Function calling             | Efficient async OpenAI API function calling                |
+
+## LLM Wrapper
+
+LLMs are incredibly powerful, the process of interacting with them  from making requests to handling their responses  can sometimes be cumbersome, especially if you’re not deeply familiar with the underlying technicalities.
+
+This is where **LLM wrappers** come in. An LLM wrapper is essentially a library or framework that abstracts away the repetitive, lower-level details involved in interacting with an LLM. Think of it as a bridge that makes it easier and more efficient to communicate with these models by providing pre-built functionality and common abstractions. With a wrapper, you can focus on the big picture, while the wrapper handles the technical nuances.
+
+There are several great libraries available, each with its own strengths and use cases. Based on my experience, here are a few of the most popular ones:
+
+| **Name**                                      | **Description**                                                                                                                     | **Key Features**                                                                                                                                                     |
+| --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [LlamaIndex](https://llamaindex.ai/)          | An open-source data framework optimized for building Retrieval Augmented Generation (RAG) applications.                             | Data Ingestion and Structuring, Efficient Indexing, Data Connectors for Diverse Sources                                                                              |
+| [LangChain](https://langchain.com/)           | A framework for building applications powered by large language models (LLMs), such as chatbots, knowledge-based systems, and more. | Chainable Components for Advanced Workflows, Seamless Integration with Various LLMs, Support for Retrieval-Augmented Generation (RAG), Memory Management for Context |
+| [AutoChain](https://www.autochain.ai/)        | A lightweight framework for building generative AI agents, known for its simplicity and ease of use.                                | Simplified Concepts Similar to LangChain, Support for OpenAI Function Calling, Basic Memory Tracking for Conversation History and Tool Outputs                       |
+| [Vellum AI](https://vellum.ai/)               | A platform designed for product and engineering teams to build, evaluate, and deploy AI systems.                                    | Experimentation and Evaluation Tools, Deployment and Monitoring Capabilities, Collaboration Features                                                                 |
+| [Flowise](https://flowiseai.com/)             | An open-source platform for creating LLM applications without coding using a drag-and-drop interface.                               | Code-Free LLM Development, Drag-and-Drop Interface, Integration with LangSmith and LangFuse                                                                          |
+| [Galileo](https://www.rungalileo.io/)         | A toolkit for improving and fine-tuning LLM applications, with a focus on debugging and observability.                              | Prompt Management Tools, Guardrail Metrics, Integration with Various LLM Providers                                                                                   |
+| [Klu AI](https://klu.ai/)                     | An LLM platform providing a unified API for accessing LLMs and integrating data sources.                                            | Unified API, Default Prompt Templates, Workflow Creation through Connecting Actions                                                                                  |
+| [Braintrust](https://www.braintrustdata.com/) | A platform for evaluating, improving, and deploying LLMs with tools for prompt engineering and data management.                     | Prompt Playground, Logging and Debugging, Eval() Function for Output Scoring                                                                                         |
+| [HumanLoop](https://humanloop.com/)           | Helps product teams develop reliable and scalable LLM-based applications by combining best practices with LLM-specific tools.       | Collaborative Prompt Workspace, Automated Evaluations, User Feedback Collection                                                                                      |
+| [HoneyHive AI](https://www.honeyhive.ai/)     | Focused on evaluating, debugging, and monitoring production LLM applications with an emphasis on observability.                     | Tracing Execution Flows, Customizable Event Feedback, Dataset Creation for Fine-Tuning                                                                               |
+| [Parea AI](https://www.parea.ai/)             | A platform for debugging, testing, and monitoring LLM applications, providing tools for the entire LLM workflow.                    | Prompt Experimentation, Performance Evaluation, Log and Trace Observability                                                                                          |
 
 ## AI Agents
 

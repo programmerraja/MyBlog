@@ -93,3 +93,12 @@ By default when we pulling model Ollama may default to using a highly compressed
 ## PowerInfer
 
 [High-speed ](https://github.com/SJTU-IPADS/PowerInfer)Large Language Model Serving on PCs with Consumer-grade GPUs
+
+
+## vLLM
+[vLLM](https://docs.vllm.ai/en/latest/index.html) is a fast and easy-to-use library for LLM inference and serving support hugging face models also
+- Seamless integration with popular HuggingFace models
+- High-throughput serving with various decoding algorithms, including _parallel sampling_, _beam search_, and more
+- Tensor parallelism and pipeline parallelism support for distributed inference
+- Streaming outputs
+- OpenAI-compatible API server

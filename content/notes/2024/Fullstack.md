@@ -10,6 +10,7 @@ Front end
 - https://ui.aceternity.com/
 - https://www.radix-ui.com/
 - https://ui.shadcn.com/
+- https://picocss.com/ (light weight)
 
 
 

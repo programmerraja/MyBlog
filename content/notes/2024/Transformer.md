@@ -688,6 +688,7 @@ https://www.clarifai.com/
 - https://rbcborealis.com/research-blogs/tutorial-14-transformers-i-introduction/ 
 - [How Do Language Models put Attention Weights over Long Context?](https://yaofu.notion.site/How-Do-Language-Models-put-Attention-Weights-over-Long-Context-10250219d5ce42e8b465087c383a034e ) 
 - [Understanding LLMs from Scratch Using Middle School Math](https://towardsdatascience.com/understanding-llms-from-scratch-using-middle-school-math-e602d27ec876) 
+- [Orignal transformer paper "Attention is all you need" introduced by a layman | Shawn's ML Notes](https://www.youtube.com/watch?v=iqmjzecbJHE)
 #### Visualizer
 - [Inspectus GitHub Repository](https://github.com/labmlai/inspectus)
 - [Transformer Explained Visually](https://poloclub.github.io/transformer-explainer/): Learn How LLM Transformer Models Work with Interactive Visualization 
