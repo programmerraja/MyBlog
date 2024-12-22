@@ -16,6 +16,8 @@ tags :
 - self review once
 - Saying NO 
 - if take time inform them
+- tracking mistakes made and acheviement which helps you to make you have not dont the mistake again
+- 
 
 
 Restarting the server

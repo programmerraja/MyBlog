@@ -361,6 +361,15 @@ http {
 	access_log /var/log/nginx/access.log main buffer=32k flush=1m;
 }
 ```
+
+**server_names_hash_max_size** and **server_names_hash_bucket_size**
+
+- Specifies the maximum size of the hash table used for storing server names.
+-  Increase this value if you have a large number of server names
+
+- Defines the size of a single bucket in the hash table. The bucket size should be large enough to fit all server names, including their terminating null characters.
+
+
 ## CMDS 
 
 - `ngnix -t `→ to test the config file is everything ok

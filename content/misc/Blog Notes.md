@@ -16,6 +16,11 @@
 - [ ] What we learns from migrating heroku to kuberneted
 	- [ ] Probe
 	- [ ] Staing
+- [ ] The question need to answer before design a system
+	- [ ] Rollback 
+	- [ ] disaster recovery (what if down how you handle)
+	- [ ] performance and optimization (not required but need to check current load will happens)
+	- [ ] 
 
 Sherlock Holmes
 - [ ] Econnreset

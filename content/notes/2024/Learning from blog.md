@@ -3,9 +3,6 @@ title: Learning from blog
 date: 2024-01-01T08:19:32.3232+05:30
 draft: false
 ---
-
-
-
 ## **[How LinkedIn Adopted Protocol Buffers to Reduce Latency by 60%](https://newsletter.systemdesign.one/p/protocol-buffers-vs-json)**
 
 - They heavly using microservice to avoid the latency between the service they go with protocol buffers
@@ -30,22 +27,21 @@ draft: false
 ## **[Scaling Cron Monitoring](https://sentry.engineering/blog/scaling-cron-monitoring)**
 
 - They have Relay which listen for check in and other event from cron and push to kafa
-    
 - Sentry Django application will consume from and do the heavy lifting of storing and processing those check-ins
-    
+
 - To inform the user about missed check in they written a job which run for a minute and checks on table whether it has check in if it not inform the user but it have 2 problem
-    
     - Assume due to overload in kafa consumer get consumed later but the job runs before and assume it has not checked in
     - During deploys of the celery beat scheduler, there is a short period where tasks may be skipped.
 - Their solution involved leveraging the timestamp of each check-in message to determine when all check-ins up to a minute boundary had been processed. They tracked the last time a minute boundary was crossed based on these timestamps. Once they reached a new minute boundary, they knew all check-ins before that moment had been consumed.
-    
-    For instance, imagine a sequence of check-in messages with timestamps:
-    
-    - Message 1: Timestamp 12:03:20
-    - Message 2: Timestamp 12:03:45
-    - Message 3: Timestamp 12:04:02
-    
-    When Message 3 arrives, it crosses the minute boundary of 12:04. This signals that all check-ins before 12:04 have been processed. This event becomes the trigger to generate tasks for detecting missing check-ins, eliminating the need for periodic celery beat tasks. This way, they avoid skipping tasks during deployment and accurately detect missed check-ins even during Kafka backlog scenarios.
+
+	- Message Timestamps: Each check-in message has a timestamp indicating when the cron job was supposed to run1. For instance, your cron job that was supposed to run at 1:00 PM would have a 1:00 PM timestamp on its check-in message, even if the message arrives at 1:03 PM1.
+	- Consumer-Driven Clock: Sentry uses the messages to drive a clock. This means it keeps track of the last time it crossed a minute boundary based on the timestamp of the check-ins1. This clock moves forward as messages are consumed.
+	- Kafka Partitions and Multiple Consumers: Incoming check-in messages are distributed across multiple partitions in Kafka2. Multiple consumers read from these partitions, and each consumer processes messages at their own speed2.
+	- Global Clock Synchronization: To handle the multiple consumers and partitions, the system maintains a global clock that is synchronized across all partitions3. This global clock will only advance when all partitions have processed messages up to the same time3.
+		- For example, if some partitions have processed messages up to 1:01 PM, and others have not, the global clock will not advance to 1:01 PM yet3.
+		-  The global clock will only advance to 1:01 PM once all consumers have processed all messages up to that time
+
+
 
 ## [ An overview of Cloudflare's logging pipeline](https://blog.cloudflare.com/an-overview-of-cloudflares-logging-pipeline)
 

@@ -8,7 +8,35 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e7f1807a126b62e9",
+            "id": "6e78faa606df816b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "notes/2024/Building Microservices.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Building Microservices"
+            }
+          },
+          {
+            "id": "168df3cffe8724a7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "post/2024/Lesson learned from 2 year expereince of working in startup.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Lesson learned from 2 year expereince of working in startup"
+            }
+          },
+          {
+            "id": "a61b41c787685188",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -22,168 +50,35 @@
             }
           },
           {
-            "id": "4829d8488397b05b",
+            "id": "2fe909653bf286d6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/2024/Databases.md",
+                "file": "misc/Revise calendar.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Databases"
+              "title": "Revise calendar"
             }
           },
           {
-            "id": "b2d0ec368da2710f",
+            "id": "7a9e8dd532838cad",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/2024/Fullstack.md",
+                "file": "notes/2024/System Design.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Fullstack"
-            }
-          },
-          {
-            "id": "e6e2dfffebaa43bd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "post/2024/Generative AI  A Personal Deep Dive  My Notes and Insights.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Generative AI  A Personal Deep Dive  My Notes and Insights"
-            }
-          },
-          {
-            "id": "e6a194196cde7be6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "post/2024/How to capture mongodb protocol in  wireshark.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "How to capture mongodb protocol in  wireshark"
-            }
-          },
-          {
-            "id": "958dc72b75c22718",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notes/2024/NextJs Notes.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "NextJs Notes"
-            }
-          },
-          {
-            "id": "3bc5a5279bbfe52a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notes/2024/LLM Observability And Eval.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "LLM Observability And Eval"
-            }
-          },
-          {
-            "id": "e0acc0201cf5b945",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "post/2024/Generative AI  A Personal Deep Dive  My Notes and Insights.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Generative AI  A Personal Deep Dive  My Notes and Insights"
-            }
-          },
-          {
-            "id": "5c26864a509820f9",
-            "type": "leaf",
-            "state": {
-              "type": "kanban",
-              "state": {
-                "file": "misc/Tasks  e-matrix..md",
-                "kanbanViewState": {
-                  "kanban-plugin": "board",
-                  "list-collapse": [
-                    false,
-                    false,
-                    false,
-                    false
-                  ]
-                }
-              },
-              "icon": "lucide-trello",
-              "title": "Tasks  e-matrix."
-            }
-          },
-          {
-            "id": "e33f13fd74cc76ec",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notes/2024/Running Model locally.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Running Model locally"
-            }
-          },
-          {
-            "id": "c7398e8b0f276997",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "post/2024/Generative AI  A Personal Deep Dive  My Notes and Insights Part -2.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Generative AI  A Personal Deep Dive  My Notes and Insights Part -2"
-            }
-          },
-          {
-            "id": "fa913f4a8d07aa92",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "misc/Blog Notes.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Blog Notes"
+              "title": "System Design"
             }
           }
         ],
-        "currentTab": 10
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -214,7 +109,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "rsocket",
+                "query": "www.letta.com",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -341,34 +236,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c7398e8b0f276997",
+  "active": "168df3cffe8724a7",
   "lastOpenFiles": [
-    "notes/2024/Fullstack.md",
-    "notes/2024/Running Model locally.md",
-    "notes/2024/AutoGen.md",
-    "notes/2024/Google vertex AI.md",
-    "notes/2024/Vector DB and embedding.md",
-    "notes/2024/LLM strucuted output and Parser.md",
-    "notes/2024/Transformer.md",
-    "misc/Tasks  e-matrix..md",
-    "misc/Generative AI e-matrix.md",
-    "misc/Revise calendar.md",
-    "misc/Day Dreaming Notes.md",
-    "notes/2024/Networking.md",
-    "post/2024/Generative AI  A Personal Deep Dive  My Notes and Insights Part -2.md",
-    "post/2024/Generative AI  A Personal Deep Dive  My Notes and Insights.md",
+    "post/2024/From Heroku to Kubernetes Lessons Learned in Our Migration Journey.md",
+    "post/2024/Lesson learned from 2 year expereince of working in startup.md",
+    "post/2024/How i build my second brain.md",
+    "post/2024/Sherlock Holmes  The mystery of 1 milion Nxdomain error.md",
     "misc/Blog Notes.md",
-    "notes/2024/LLM Observability And Eval.md",
-    "notes/2024/Generative AI.md",
-    "notes/2024/NextJs Notes.md",
-    "post/2024/How to capture mongodb protocol in  wireshark.md",
-    "misc/AI project ideas.md",
-    "misc/Finance  & stock.md",
+    "post/2024/Code Aganist Clock Interview helper.md",
+    "notes/2024/Building Microservices.md",
+    "notes/2024/Microservice Patterns and Best Practices.md",
+    "notes/2024/Software principles.md",
+    "notes/2024/A Philosophy of Software Design Book Notes.md",
     "Untitled.md",
-    "post/2024/Sherlock Holmes The Case of the Missing User IPs.md",
-    "notes/2024/LamaIndex.md",
-    "notes/2024/Open source.md",
-    "misc/What next?.md",
+    "notes/2024/Software Architecture and Decision-Making.md",
+    "misc/Revise calendar.md",
+    "notes/2024/System Design.md",
+    "notes/2024/Tech stack of popular companies.md",
+    "notes/2024/MicroServices.md",
+    "notes/2024/Docker.md",
+    "notes/2024/Networking.md",
+    "notes/2024/Nginx.md",
+    "notes/2024/Database internal.md",
+    "notes/2024/Learning from blog.md",
+    "notes/2024/Kubernetes.md",
+    "notes/2024/NextJs Notes.md",
+    "notes/2024/Fine-Tunning.md",
+    "notes/2024/Generative AI.md",
+    "notes/2024/Transformer.md",
     "tags",
     "Excalidraw/art-2024-04-28 14.38.57.excalidraw",
     "Excalidraw/LangchainAgent.excalidraw",

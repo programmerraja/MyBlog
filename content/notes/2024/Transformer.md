@@ -660,15 +660,6 @@ Knowledge distillation can be implemented in two ways:
 - Black-box distillation: The student model only has access to the teacher model's outputs, learning to replicate the teacher's behavior without direct insight into its internal working
 
 
-### Unsloth
-
-[Unsloth](https://github.com/unslothai/unsloth) is a lightweight library for faster LLM fine-tuning
-
-
-- https://github.com/mistralai/mistral-finetune
-
-finetune 
-https://www.clarifai.com/
 ## Resources
 
 - [Deconstructing BERT Part 2: Visualizing the Inner Workings of Attention](https://towardsdatascience.com/deconstructing-bert-part-2-visualizing-the-inner-workings-of-attention-60a16d86b5c1)

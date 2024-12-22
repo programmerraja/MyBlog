@@ -116,5 +116,9 @@ jorens analyze --cpg <path_to_cpg> --rules <path_to_rules>
 https://github.com/SonarSource/SonarJS
 ## espree
 
+## GritQL
+
+[GritQL](https://github.com/getgrit/gritql) is a query language for searching, linting, and modifying code.
+
 ## Resources
 - https://github.com/analysis-tools-dev/static-analysis?tab=readme-ov-file 

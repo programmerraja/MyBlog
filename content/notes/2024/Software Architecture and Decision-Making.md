@@ -146,6 +146,7 @@ To effectively optimize, it's crucial to identify where the bottlenecks occur. B
 - CPU utilization is a metric that measures the percentage of time the CPU spends executing non-idle tasks. It doesn't necessarily mean the CPU is busy with computation; it's more about the time the CPU is not running the idle thread.
 - The idle thread is a special task that runs when the CPU has no other tasks to perform. The operating system kernel tracks CPU utilization during context switches.
 - So  high %CPU to mean that the processing unit is the bottleneck, which is wrong because CPU is capable of doing the process it may wait for I/O or something .
+- **Instructions Per Cycle (IPC)**: This metric shows how many instructions are completed for each CPU clock cycle7. A higher IPC is better. For example, an IPC of 0.78 on a processor with a top speed of 4.0 means the CPU is only running at 19.5% of its top speed
 - `Source: https://opensource.com/article/18/4/cpu-utilization-wrong`
 
 ## The USE Method

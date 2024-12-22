@@ -344,8 +344,8 @@ Data Creation Techniques
 - **Advanced Techniques:** More advanced methods like topic modeling, zero-shot classifiers, and LLM-based judging can further enhance data quality.
 - **Human Annotation:** Human annotation, while potentially expensive, remains an important component of data set quality improvement.
 
-
-## MemGPT
+## Memory in AI
+### MemGPT
 
 MemGPT: A Hierarchical Memory System for Large Language Models (LLMs)
 
@@ -369,6 +369,7 @@ Currently it implemented as [letta](https://www.letta.com/)
 - **Recall Memory** : A dedicated database for storing and retrieving past messages, ensuring a comprehensive record of interactions even as the FIFO Queue evicts older entries
 
 - **Archival storage**: A persistent database for storing arbitrary-length text objects. This could include documents, code, or any other information deemed relevant for future retrieval,MemGPT uses PostgreSQL with the pgvector extension for archival storage, enabling efficient vector search with an HNSW index.
+
 
 
 ## LLM Routing 

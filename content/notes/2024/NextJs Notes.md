@@ -182,10 +182,86 @@ Then, on the client:
 
 `"use client"` is used to declare a boundary  between a Server and Client Component modules. This means that by defining a `"use client"` in a file, all other modules imported into it, including child components, are considered part of the client bundle.
 
+## API 
+
+Below are for Page based API routing  
+
+In Next.js, any file inside the `pages/api` directory automatically becomes an API route. For example:
+
+- `pages/api/hello.js` -> `/api/hello`
+```js
+export default function handler(req, res) {
+    const { id } = req.query;
+
+    if (req.method === 'GET') {
+        res.status(200).json({ message: `Fetching blog with ID: ${id}` });
+    } else if (req.method === 'DELETE') {
+        res.status(200).json({ message: `Deleted blog with ID: ${id}` });
+    } else {
+        res.setHeader('Allow', ['GET', 'DELETE']);
+        res.status(405).end(`Method ${req.method} Not Allowed`);
+    }
+}
+
+```
+
+**App Based Router**
+
+In the `app` directory, API routes are created just like page routes but can be placed inside any folder, not necessarily under `pages/api`.
+
+```
+app/
+├── api/
+│   └── data/
+│       └── route.js
+├── page.js
+
+```
+ 
+ To access /api/data/
+route.js
+```js
+export async function GET() {
+    return new Response('Hello from App Router API!');
+}
+
+export async function POST() {
+    return Response.json({ data })
+}
+
+```
+
 
 ## Server action 
 
+They allow you to define and execute server-side logic (like database queries or API calls) directly from React Server Components (RSCs) or even form submissions, eliminating the need for API routes for certain use cases.
 
+create action under action folder as 
+
+```js
+'use server'; // Required to declare a server action
+
+export async function saveData(data) {
+    // Perform server-side tasks like database updates
+    console.log('Saving data:', data);
+}
+
+```
+
+In front end directly call the function 
+
+```js
+import { saveData } from './actions';
+
+export default function Page() {
+    async function handleSubmit() {
+        await saveData({ name: 'Next.js', type: 'Framework' });
+    }
+
+    return <button onClick={handleSubmit}>Save Data</button>;
+}
+
+```
 
 ## Middelware
 
@@ -220,6 +296,23 @@ export const config = {
 - `NextResponse.redirect()`: Redirect the user to a new URL.
 - `NextResponse.rewrite()`: Rewrite the request to a different URL.
 
+
+## Images 
+
+The Next.js `<Image>` component is part of the `next/image` module. It supports lazy loading, resizing, and image optimization.
+
+Images should be placed in the **`public` folder** for static files.Access them using relative paths like `/images/example.jpg`.
+
+If the image comes from an external source, configure the `next.config.js` file to allow loading images from specific domains:
+
+```js
+module.exports = {
+  images: {
+    domains: ['example.com'], // Add the domain of your external images
+  },
+};
+
+```
 
 
 Library

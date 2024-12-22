@@ -116,7 +116,8 @@ https://jakelazaroff.com/words/an-interactive-intro-to-crdts/
 2. https://github.com/Coder-World04/Complete-System-Design?tab=readme-ov-file
 3. https://systemdesign.one/leaderboard-system-design/
 4. https://engineering.grab.com/frequency-capping
-5. https://www.primevideotech.com/video-streaming/how-prime-video-ingests-processes-and-distributes-live-tv-to-millions-of-customers-around-the-world-while-reducing-costs?utm_source=blog.quastor.org&utm_medium=newsletter&utm_campaign=how-amazon-streams-live-video-to-tens-of-millions-of-people
+5. https://www.primevideotech.com/video-streaming/how-prime-video-ingests-processes-and-distributes-live-tv-to-millions-of-customers-around-the-world-while-reducing-costs
+6. https://highscalability.com/
 
 
 
