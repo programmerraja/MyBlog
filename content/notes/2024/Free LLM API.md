@@ -8,6 +8,7 @@ tags :
 - https://www.awanllm.com
 - https://api.together.xyz/signin
 - https://www.together.ai/
+- https://www.mixedbread.ai/
 - The fastest and most efficient inference engine to build production-ready, compound AI systems. https://fireworks.ai/pricing
 
 https://llm.extractum.io/

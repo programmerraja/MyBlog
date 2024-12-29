@@ -1,19 +1,19 @@
 
 ### **Stock Market Basics**
 
+**Market Hours:**
+    - Stock market opens at **9:15 AM** and closes at **3:15 PM**.
+    -
 1. **Stock Types:**
-    
     - **Equity (Shares):** Buying stock of companies listed on the stock exchange.
         - **Intraday:** Buy and sell the same stock on the same day.
         - **Short-Term:** Hold for less than 12 months before selling.
         - **Long-Term:** Hold for more than 12 months before selling.
     - **Commodity Trading:** Involves trading physical products like gold, silver, etc., with contracts for 1 month, typically traded on MCX.
 2. **Markets:**
-    
     - **Primary Market:** Companies issue new shares directly to investors (via IPO).
     - **Secondary Market:** Investors buy and sell existing shares among themselves.
 3. **Stock Exchanges:**
-    
     - **NSE (National Stock Exchange):** Around 2,000 listed companies.
     - **BSE (Bombay Stock Exchange):** Around 5,000 listed companies.
     - **Sensex:** Tracks the top 30 companies listed on BSE.
@@ -21,9 +21,14 @@
 4. **Demat Account:**
     - Stores shares in electronic form.
     - **Depositories:** Convert physical shares into electronic shares in a Demat account.
-5. **SEBI (Securities and Exchange Board of India):**
+    - **CDSL** (Central Depository Services Limited) promoted by Bombay Stock Exchange. where CDSL hold our actual stocks and mutal funds details
+    - **NSDL (National Securities Depository Limited)**  by National Stock Exchange .Provides services for a wide range of securities, including equities, debentures, and mutual funds.
+1. **SEBI (Securities and Exchange Board of India):**
     - Regulatory body overseeing the functioning of the stock market in India.
 
+**Clearing & Settlement:**
+    - Brokers facilitate the transaction, while the **Clearing House** ensures the exchange of stocks between brokers.
+    - **Depositories** convert physical shares into electronic shares stored in your **Demat Account**..
 ### **Stock Taxation**
 
 1. **Capital Gains Tax:**
@@ -38,32 +43,27 @@
         - Considered as business income and taxed according to your income tax slab.
         - Losses from F&O can be carried forward to offset future gains.
 2. **Tax Calculation:**
-    
     - Add stock market profits to your salary to calculate your overall tax.
     - For **Short-Term Capital Gains (STCG)**, tax is applied separately at 15%.
     - For **Long-Term Capital Gains (LTCG)**, tax is applied at 10% after ₹1 lakh exemption.
     - **Tax Loss Harvesting:** Losses can be carried forward. Short-term and long-term losses can be booked to offset future profits.
 3. **Tax Loss Harvesting Strategy:**
-    
     - **Short-Term Loss:** Book the loss and use it to reduce taxable income.
     - **Long-Term Loss:** Sell shares to realize the loss, then buy them back. This allows you to offset future gains with the realized loss.
 
 ### **Types of Trades and Orders**
 
 1. **Brokerage:**
-    
     - **Brokerage Commission:** Typically 2.5%, or ₹20 (whichever is lower).
     - **Transaction Charges:** Fees levied by the broker for executing the trade.
     - **Sebi Turnover Charge:** ₹10 for every ₹1 crore of turnover for a broker.
     - **GST (Goods and Services Tax)** and **STT (Securities Transaction Tax):** Additional charges applied to stock transactions.
 2. **Order Types:**
-
     - **Market Order:** Buy or sell at the current market price.
     - **Limit Order:** Set a maximum or minimum price at which you wish to buy or sell.
     - **Stop Loss:** Automatically sells the stock when the price drops below a threshold you set.
     - **Stop Limit:** Sells the stock at the exact price you set, even if it is below the stop loss.
 3. **Short Selling:**
-    
     - Borrow shares from a broker, sell them at the current market price, and then buy them back at a lower price later to return to the broker. Profit comes from the difference in price.
 4. **Option Trading:**
     - **Call Option:** A contract that gives the holder the right (but not the obligation) to buy an asset at a specific price before a certain date.
@@ -85,29 +85,6 @@
     - F&O positions have lower margin requirements than futures.
 3. **Clearing House:**
     - Ensures smooth settlement of transactions by matching buy and sell orders.
-### **Stock Trading Details**
-
-1. **Market Hours:**
-    - Stock market opens at **9:15 AM** and closes at **3:15 PM**.
-2. **Clearing & Settlement:**
-    - Brokers facilitate the transaction, while the **Clearing House** ensures the exchange of stocks between brokers.
-    - **Depositories** convert physical shares into electronic shares stored in your **Demat Account**.
-
-### **Other Key Concepts**
-
-1. **Taxation for Stock Market Earnings:**
-    
-    - **Capital Gains Tax:** Based on the holding period of stocks.
-        - **LTCG**: 10% tax on gains for holding more than 1 year.
-        - **STCG**: 15% tax on gains for holding less than 1 year.
-    - **F&O (Futures & Options) Income:** Treated as business income and taxed according to income tax slab.
-    - **Tax Deducted at Source (TDS)**: Some taxes might be deducted before dividends are paid.
-2. **Charges Deducted During Stock Purchases:**
-    - **Brokerage Commission:** Usually 2.5%, with a cap of ₹20.
-    - **Sebi Turnover Charge:** ₹10 per crore in turnover.
-    - **Transaction Fees, GST, and STT.**
-3. **CDSL (Central Depository Services Limited):**
-    - Responsible for holding shares in electronic format in your Demat account.
 
 ### **Advanced Trading Concepts**
 
@@ -127,14 +104,34 @@
 ### **Options Trading in Detail**
 
 1. **Buying Stocks:**
-    
     - **Margin Trading (MTF):** You can buy stocks on margin with money borrowed from a broker. If you don’t pledge the borrowed amount, the broker can sell the stock after 7 days.
     - **Pledge & Unpledge:** If you take a margin loan, you need to pledge the shares, and after selling, unpledge them.
 2. **Option Trading (Call & Put Options):**
-    
     - **Call Option:** Prediction to buy stock at a set price.
     - **Put Option:** Prediction to sell stock at a set price.
 
+
+## Index fund
+
+best index fund
+- UTI nifty 50 Direct plan 
+- HDFC index fund
+- ICICI prudential nifty 50 index fund
+- Nippon india index fund
+- Navi Nifty 50 index fund  
+
+
+Growth categroy -> will invest on same 
+
+Nifty large mid cap 250 index (15% interset)
+defined as companies with market capitalizations between $2 billion and $10 billion
+
+**Large Mid-Cap 250 Index Fund**: Mid-cap stocks have historically outperformed both large-cap and small-cap stocks over long periods
+
+- Edelwiss NIFTY large mid cap
+- Zerodha 
+
+website to check tickertape
 ### **Mutual Funds & SIP**
 
  **Mutual Fund Types**:
@@ -143,9 +140,6 @@
     - **Solution-Oriented Funds**: Target specific financial goals.
     - **Index Funds**: Invest in top companies (low cost, long-term investment).
     - **Liquid Funds**: Low risk, short-term investments.
-
-Liquid funds
-- 
 
  **SIP (Systematic Investment Plan)**:
     - Automatically invests a fixed amount every month into mutual funds or stocks.
@@ -161,22 +155,23 @@ Liquid funds
     - **IDCW Plan**: Profits are distributed periodically as income but are taxable.
 
 **ELSS (Equity Linked Savings Scheme)**:
-    - 3-year lock-in.
+    - 3-year lock-in. and flexi cap (will invest in small,mid,large cap)
     - **Tax Deduction**: Eligible for tax deductions under Section 80C (up to ₹1.5 lakh).
+    - Each SIP can be redeemable after 3 year
     - **Dividends**: Taxed at 10%.
     - **Expense Ratio**: Affects returns, so choose funds with low expense ratios.
-
+    - Need to check
+	    - AUM
+	    - Portfolio turnover ratio (make sure low)
+	    - Sharpe ratio 
+	-  we can pause the ELSS for 3 month for a year (it we not pay for 3 month it will get rejected automatically)
+	- Example MIRAE ASSEST, DSP mutual fund, motilai oswal, PGIM india mutual fund ,
 **Direct vs. Regular Plans:** 
 
-Mutual funds come in two variants: Direct and Regular. Direct plans have a lower expense ratio as they are purchased directly from the fund house, bypassing distributors or agents. Regular plans have a higher expense ratio because they include commissions for distributors. The video strongly recommends investing in Direct plans to maximize returns
+Mutual funds come in two variants: Direct and Regular. Direct plans have a lower expense ratio as they are purchased directly from the fund house, bypassing distributors or agents. Regular plans have a higher expense ratio because they include commissions for distributors.
 
-Growth vs. IDCW: 
+**NOTE: BUY DIRECT PLAN**
 
-Investors can choose between Growth and IDCW (Income Distribution cum Capital Withdrawal) options. In Growth plans, profits are reinvested back into the fund, allowing for compounding. IDCW plans distribute profits periodically as income. The video suggests opting for Growth plans for wealth building, while IDCW plans might be suitable for generating regular income, particularly after retirement. However, it cautions that income from IDCW plans is taxable.
-
-CAGR (Compound Annual Growth Rate): Represents the average annualized return of an investment over a specific period.
-
-Expense Ratio: The annual fee charged by the fund house to manage the fund. It is expressed as a percentage of the fund's assets. suggests to that an expense ratio below 1% is generally considered good
 
 Exit Load: 
 A fee charged when you redeem (sell) your mutual fund units within a specified period. The exit load structure varies depending on the fund. For instance, a fund might have a 2% exit load if you sell units within one year of purchase. 
@@ -194,6 +189,11 @@ Type of mutual fund
 **Small-Cap Stocks**
 - Small-cap stocks typically have a market cap of **less than ₹5,000 crore (₹50 billion)**. 
 
+#### How to choose mutual funds
+
+- check AUM size
+- For index funds make sure tracking errror is less 
+- 
 
 ### **Exchange Traded Funds (ETFs)**
 
@@ -267,16 +267,118 @@ if you getting money before one year use **dividend** option to reduce the tax
 
 You can choose from different payout frequencies such as **monthly**, **quarterly**, or **annual** dividend payouts. Monthly dividends are more common with **liquid or debt-based arbitrage funds**.
 
-### **Summary of Mutual Fund Types**:
+#### SWP 
 
-- **Equity Funds**: Invest in stocks with a focus on long-term growth.
-- **Debt Funds**: Invest in bonds and other fixed-income securities for income and stability.
-- **Hybrid Funds**: Combine equity and debt for a balanced approach.
-- **Index Funds & ETFs**: Passively replicate the performance of a market index.
-- **Actively Managed Funds**: Managed by professionals aiming to beat the market.
-- **Passively Managed Funds**: Track an index or benchmark with minimal management.
+Systemtric widthrawl plan we can do this to withrdraw over a peroid 
+### **Gold Investment**
 
-Each type of mutual fund serves different investment goals based on factors like risk tolerance, time horizon, and desired return. Diversification across different types can help mitigate risk and optimize returns.
+Gold are imported  from other countries and price are decided based on US doller cost so if US doller increase gold will increase 
+
+Check for gold hallmark 
+ 750 - 18cart
+ 875 -> 21 cart
+ 916 -> 22 cart
+ 958 -> 23 cart
+ 999 -> 24 cart
+
+1. **Physical Gold**:
+    - **GST**: Be aware of GST charges on physical gold.
+    - **Tax Benefits**: Physical gold is taxed at lower rates compared to gold bonds.
+2. **Digital Gold**:
+    - Bought via platforms like PhonePe, without making charges.
+    - Can be converted to physical gold.
+    - Not managed by SBI; not as safe.
+3. **Sovereign Gold Bonds (SGBs)**:
+    - Issued by RBI (not backed by actual gold).
+    - **No GST** on SGBs.
+    - If held for 8 years, no tax on capital gains.
+    - **Interest**: 2.5% per year.
+    - Minimum holding period: 5 years.
+    - Purchase/sale can be done via Demat account.
+    - **Selling Frequency**: Every two months with a minimum of 1 gram purchase.
+4. **Gold ETFs**:
+    - Requires a Demat account for purchase and sale.
+    - No GST on transactions.
+    - Can buy and sell like mutual funds; more flexibility than physical gold.
+    - will tax for the profix based on tax slab if i am in slab 20 30% then we need to pay 30% of money from profit
+	- Check for liquidity when buying the gold how many people buying the gold etf top 5 are 
+		- Nippon  -> 0.82 
+		- SBi 0.64 
+		- ICICI 0.50
+		- HDFC 0.59  
+		- kOTAK 0.55 (expense ratio ) (may change the ratio quaterly)
+	- when we have more liquidity when we want to sell they buy for the market price else we may need to sell for less price  
+	-  while the **spot price** of gold reflects the current price of physical gold in the market, the **NAV** of a Gold ETF reflects the value of the underlying gold assets in the ETF, adjusted for expenses and divided by the number of outstanding units. Investors typically use NAV to assess the intrinsic value of an  ETF
+	- Buy when spot price is less then NAV then we buy for less price (but if we choose the high liquidity ETF if wont be difference)
+	- when ever stock go up gold go down and vice versa
+1. **Gold Mutual Funds**:
+    - Indirectly invest in gold via brokers.
+    - Typically available with SIP options.
+6. **Gold Purity**:
+    - 24 Karat Gold: 99.9% purity.
+    - 22 Karat Gold: 91.6% purity.
+
+**NOTE: There is website gold futures where we can get tommorow gold price by using that we can buy** 
+
+
+## Advanced stock
+
+
+Metrics for stocks
+
+| **Category**               | **Metric**                | **Purpose**                                                            |
+| -------------------------- | ------------------------- | ---------------------------------------------------------------------- |
+| **Price-Based Metrics**    | Price-to-Earnings (P/E)   | Assesses how much investors pay per dollar of earnings.                |
+|                            | Price-to-Book (P/B)       | Compares stock price to book value; useful for asset-heavy industries. |
+|                            | Price-to-Sales (P/S)      | Evaluates how much investors value each dollar of revenue.             |
+|                            | Price-to-Free Cash Flow   | Measures how much investors pay for free cash flow.                    |
+| **Growth Metrics**         | Earnings Per Share (EPS)  | Indicates profitability per share.                                     |
+|                            | PEG Ratio                 | Adjusts P/E by growth rate to assess growth potential.                 |
+|                            | Revenue Growth Rate       | Tracks the growth in revenue over time.                                |
+| **Profitability Metrics**  | Return on Equity (ROE)    | Measures profitability using shareholders’ equity.                     |
+|                            | Return on Assets (ROA)    | Evaluates how efficiently assets generate profit.                      |
+|                            | Net Profit Margin         | Shows profitability as a percentage of revenue.                        |
+| **Debt & Liquidity**       | Debt-to-Equity (D/E)      | Indicates financial leverage and risk.                                 |
+|                            | Current Ratio             | Measures short-term liquidity.                                         |
+|                            | Interest Coverage Ratio   | Assesses the ability to cover interest expenses.                       |
+| **Market & Sentiment**     | Market Capitalization     | Determines the company’s size in the market.                           |
+|                            | Dividend Yield            | Shows dividend returns relative to stock price.                        |
+|                            | Beta                      | Measures volatility relative to the market.                            |
+| **Free Cash Flow Metrics** | Free Cash Flow (FCF)      | Indicates cash available after capital expenses.                       |
+|                            | Operating Cash Flow (OCF) | Cash generated from business operations.                               |
+
+The **Buffett Indicator** is a popular stock market valuation metric named after Warren Buffett, who once referred to it as "probably the best single measure of where valuations stand at any given moment." It compares the total market value of publicly traded stocks to the overall economic output of a country.
+
+The Buffett Indicator is expressed as a percentage,
+- **< 75%**: The market may be undervalued.
+- **75%-100%**: The market is fairly valued.
+- **> 100%**: The market may be overvalued.
+- **> 120%-150%**: Indicates a significant overvaluation and potential risk of a market correction.
+
+
+#### **RSI (Relative Strength Index))** 
+
+evaluate the momentum of price movements and identify overbought or oversold conditions. It is expressed as a percentage and ranges from 0 to 100.
+
+Example
+- When the seesaw **goes too high on one side**, it might need to come back down soon.
+- When it **goes too low on the other side**, it might bounce back up soon.
+
+The **RSI (Relative Strength Index)** is like a seesaw for the price of a stock:
+
+- **Above 70**: It means the stock has gone up a lot (too high), and it might come down soon.
+- **Below 30**: It means the stock has gone down a lot (too low), and it might go up soon.
+
+It helps people decide:
+- "Should I buy because it’s too low?"
+- "Should I sell because it’s too high?"
+
+## Buying on DIP
+
+- Buy stock when **Buffett Indicator** less then 75% But make sure the fundamental of the stock is good
+
+
+
 
 ## Insurance
 ### **Term Insurance**
@@ -293,47 +395,6 @@ Each type of mutual fund serves different investment goals based on factors like
 ### Health insurance
 Medical inflation is 15% in india.
 
-### **Investment Notes**
-
-- **Real Estate Investment for Tax Saving**:
-    - Invest profits from stocks in real estate to save tax (if no existing assets).
-- **Stock Market Investment**:
-    - Stick to **SBI** for stock investments.
-
-### **Gold Investment**
-
-1. **Physical Gold**:
-    
-    - **GST**: Be aware of GST charges on physical gold.
-    - **Tax Benefits**: Physical gold is taxed at lower rates compared to gold bonds.
-2. **Digital Gold**:
-    
-    - Bought via platforms like PhonePe, without making charges.
-    - Can be converted to physical gold.
-    - Not managed by SBI; not as safe.
-3. **Sovereign Gold Bonds (SGBs)**:
-    
-    - Issued by RBI (not backed by actual gold).
-    - **No GST** on SGBs.
-    - If held for 8 years, no tax on capital gains.
-    - **Interest**: 2.5% per year.
-    - Minimum holding period: 5 years.
-    - Purchase/sale can be done via Demat account.
-    - **Selling Frequency**: Every two months with a minimum of 1 gram purchase.
-4. **Gold ETFs**:
-    
-    - Requires a Demat account for purchase and sale.
-    - No GST on transactions.
-    - Can buy and sell like mutual funds; more flexibility than physical gold.
-5. **Gold Mutual Funds**:
-    
-    - Indirectly invest in gold via brokers.
-    - Typically available with SIP options.
-6. **Gold Purity**:
-    
-    - 24 Karat Gold: 99.9% purity.
-    - 22 Karat Gold: 91.6% purity.
-
 ### **PPF (Public Provident Fund)**
 
 - **Tax**: Exempt from tax.
@@ -348,25 +409,6 @@ Medical inflation is 15% in india.
     - ₹299 or ₹399 per year.
     - Covers accidents, permanent disability, and medical expenses up to ₹60,000.
     - **Additional Benefit**: In case of death due to an accident, provides 10% of the insured amount for child education.
-
-### **Tax Deductions**
-
-1. **Section 80C**: Deductions up to ₹1.5 lakh.
-    
-    - Includes PPF, EPF, NSC, ELSS, life insurance premiums, home loan principal repayment.
-2. **Section 80D**: Deductions for health insurance premiums.
-    - ₹25,000 for self/family.
-    - ₹25,000 for parents, or ₹50,000 if they are senior citizens.
-3. **Section 24B**: Deduction up to ₹2 lakh for home loan interest.
-4. **Section 80E**: Deduction for interest paid on education loans (no upper limit).
-5. **Section 80G**: Donations to charitable institutions are deductible.
-6. **Section 80TTA**: Deduction up to ₹10,000 for interest earned on savings accounts.
-7. **Section 80EE**: Additional ₹50,000 deduction for first-time home buyers.
-8. **Section 80CCD(1B)**: Contributions to NPS eligible for an additional deduction of ₹50,000.
-9. **HRA (House Rent Allowance)**:
-    - Claim HRA exemption based on rent, salary, and city of residence.
-10. **Standard Deduction**: ₹50,000 for salaried individuals.
-
 
 ### **Senior Citizens’ Savings Scheme (SCSS)**
 
@@ -417,6 +459,10 @@ bond rating
 
 **Bond rating** refers to an evaluation of a bond issuer's creditworthiness or the likelihood that they will be able to meet their debt obligations
 
+
+## RBI Bond
+
+
 ### Main Credit Rating Agencies in India:
 
 1. **CRISIL (Credit Rating Information Services of India Limited)**
@@ -446,23 +492,14 @@ The bond is available with a fixed tenure of **7 years** from the date of issue.
 - if interset is more then 10K they deduct tax
 
 Minimum - 1000 rupee
-### **Tax Considerations for Investments**
-
-1. **Taxable Profits**:
-    
-    - **LTCG**: 10% tax on gains from stocks held for more than 1 year.
-    - **STCG**: 15% tax on gains from stocks held for less than 1 year. First ₹1 lakh of STCG is tax-free.
-    - **F&O Trading**: Treated as business income, taxed as per applicable income tax slab. Losses can be carried forward.
-2. **Tax Loss Harvesting**:
-    - Offset capital gains with capital losses to reduce tax liability.
-    - **Short-term loss**: Book and buy back the stock to show the loss.
 
 
 ### **NPS (National Pension Scheme)**
 
 - **Eligibility**: Open to all Indian citizens aged 18-65.
 - **Returns**: Typically **14% p.a.**, varies depending on the chosen fund.
-- **Withdrawal**: **60% lump sum** at retirement, **40% annuity**.
+- **Withdrawal**: **60% lump sum**  (not taxable) at retirement, **40% annuity**. (taxable under slab) 
+- 
 - **Contribution**: Minimum ₹1,000.
 - **Tax Benefits**:
     - **Section 80C**: Deduction up to ₹1.5 lakh.
@@ -470,36 +507,31 @@ Minimum - 1000 rupee
 
 ---
 
-### **Tax Exemptions & Deductions**
+### **Tax Deductions**
 
-1. **HRA (House Rent Allowance)**:
-    - Tax exemption based on rent paid, salary, and city of residence (higher exemption for metro cities).
-2. **Section 80C**:
-    - Maximum deduction of ₹1.5 lakh.
-    - Includes PPF, EPF, LIC, ELSS, home loan principal repayment.
-3. **Section 80D**:
-    - Health insurance premiums:
-        - ₹25,000 for self/spouse/children.
-        - ₹25,000 for parents (₹50,000 for senior citizens).
-4. **Section 80CCD(1B)**:
-    - Additional ₹50,000 for contributions to NPS (beyond Section 80C).
-5. **Section 80E**:
-    - Deduction on interest paid on education loans (no upper limit).
-6. **Section 24(b)**:
-    - Deduction of up to ₹2 lakh on home loan interest for self-occupied properties.
-7. **Section 80G**:
-    - Donations to specified charitable institutions are deductible.
+1. **Section 80C**: Deductions up to ₹1.5 lakh.
+    - Includes PPF, EPF, NSC, ELSS, life insurance premiums, home loan principal repayment.
+2. **Section 80D**: Deductions for health insurance premiums.
+    - ₹25,000 for self/family.
+    - ₹25,000 for parents, or ₹50,000 if they are senior citizens.
+3. **Section 24B**: Deduction up to ₹2 lakh for home loan interest.
+4. **Section 80E**: Deduction for interest paid on education loans (no upper limit).
+5. **Section 80G**: Donations to charitable institutions are deductible.
+6. **Section 80TTA**: Deduction up to ₹10,000 for interest earned on savings accounts.
+7. **Section 80EE**: Additional ₹50,000 deduction for first-time home buyers.
+8. **Section 80CCD(1B)**: Contributions to NPS eligible for an additional deduction of ₹50,000.
+9. **HRA (House Rent Allowance)**:
+    - Claim HRA exemption based on rent, salary, and city of residence.
+10. **Standard Deduction**: ₹50,000 for salaried individuals.
 
 
 ### **Finance & Investment Tips**
 
 1. **Stock Selection**:
-    
     - Focus on growing sectors (e.g., electric vehicles).
     - Research companies within the chosen sector.
     - Invest systematically, instead of lump-sum.
 2. **Direct vs. Regular Mutual Fund Plans**:
-    
     - **Direct Plans**: Lower expense ratio as there’s no intermediary.
     - **Regular Plans**: Higher expense ratio due to commission paid to distributors.
 
@@ -517,12 +549,12 @@ CAGR
 XIRR
 - If you made an investment of ₹1,00,000 on 1st Jan 2020, followed by ₹20,000 on 1st July 2021, and ₹30,000 on 1st Jan 2022, and you got back ₹2,00,000 on 1st Jan 2023, the XIRR calculation would reflect the return considering the exact dates of cash flows.
 
+## IRR
+
+Rate of interset of a year
 
 
-
-
-
-NASDAQ
+**Internal Rate of Return (IRR)** in the context of stock refers to the annualized effective compounded return rate that an investor earns on an investment, assuming the investment generates a series of cash flows over time. IRR is often used to evaluate the profitability of an investment or compare the attractiveness of different investments.
 
 
 Credit card
@@ -562,9 +594,35 @@ Tips for credit score
 - UAN -> single number for all company
 
 
+## Post office schemes
+
+Monthly fund
+- if you have lumsum account we can invest then give 7.4% of interset on montly for 5 year 
+- after 5 year they give the actual amount
+
+Senoir cetizen saving scheme
+- if we invest lumsum they give for every quarterly of 8.2% interset  for five year need to be 60 age above
+
+Endowment Assurance
+- is life insurance policy will give 100 rupee for every 1k in total maturity amount
+- if we get before 5 year no bouns
+- after 5 year if we get we get with bonus 
+- if they die also they give the money with bonus
+- i am getting only 3.95% of interset per annum 
+- Sum Assured : ₹ 5,00,000 Bonus : ₹ 3,38,000 Maturity Value : ₹ 8,38,000
+- Monthly 3075
 
 
 
+
+TIPS
+- Keep eye on company you have invested
+### **Investment Notes**
+
+- **Real Estate Investment for Tax Saving**:
+    - Invest profits from stocks in real estate to save tax (if no existing assets).
+- **Stock Market Investment**:
+    - Stick to **SBI** for stock investments.
 
 
 Note 
@@ -589,3 +647,206 @@ US stock
 
 good mutual  fund
 - tata digital india fund 
+
+
+IND money
+- no transcation fee and opening charge etc
+
+Invest in US you will get 15% insertest rate
+	- nasdaq
+	- n&q
+	- inveso QQQ
+
+
+
+## GDP
+
+Gross Domestic Product (GDP) in India refers to the total monetary value of all goods and services produced within the country's borders over a specific period, usually measured annually or quarterly. It serves as a key indicator of the country's economic health and performance.
+
+
+
+
+The **Rule of 72** is a simple formula used to estimate the number of years required to double an investment at a given annual rate of return (or interest rate). It can also be used to estimate the rate of return needed to double an investment within a certain number of years.
+
+### Formula:
+
+Year of double = 71/Rate of annula interset
+
+
+
+
+
+
+
+come up with plan
+- how much percentage you going to invest etc..
+
+
+
+Fixed deposit
+- flexiable RD -> the interset rate will be fixed even the rate change in future it wont affect it will the rate what when we start 
+- 
+
+FD will be provided by
+- more interset can give by small finance bank when you invest on that make sure that bank register under deposit insurance and credit gurantee corporation (they have insurance RBI will provide money if it went out)
+
+- Non banking financial corporations like shiram finance ,LIC  more risky they not under deposit insurance and credit gurantee corporation
+
+
+
+APPS
+
+GROWW 
+ - **stocks, mutual funds, gold, ETFs, and US stocks**.
+ - Free account opening and no maintenance fees.
+
+Zerodha
+- A professional-grade platform for **stock trading, futures & options (F&O), currency, and commodities**.
+- Requires a Demat and trading account with Zerodha.
+
+Coins
+- Enables investments in **direct mutual funds** without any commission.
+- Integrated with Zerodha's Demat account.
+
+Angel One
+Upstox
+
+
+
+
+
+
+
+- n FD-linked credit card
+- Need to check with PPF (increasing amount)
+- Need to calculate how much % i am puting for investment
+- ask mom can we pay the house loan to reduce money
+- Need to have insurance
+- Need to check with our company have health insurance
+- also have calcuation of how much amount i need montlhy to surview and for my investment such if you lose job you know what do 
+- Transfer that EPF from the old company to the new
+- **If your investment earns 5% and inflation is 5%, your real return is 0. Inflation is real. And it’s relentless.**
+
+
+- 25% to fixed-return assets (FD/EPF/PPF/debt mutual funds)
+- 75% to mutual funds
+Within that:
+- 40% in NIFTY 50 mutual funds SIP
+- 30% in mid-cap mutual funds SIP
+- 30% in small-cap mutual funds SIP
+
+- ask sanjay to put on PPF and prakash
+
+
+Need to change me from small small things like afraid be confideint dont afraid of people come up with that mindset
+
+
+Health insurance
+Pick a plan that doesn’t put a cap on room costs. 
+	You deserve the freedom to pick your room, without stress about extra expenses. Cashless hospital network Look for plans linked to hospitals that offer no-cash bill settlement. Check how many su
+
+need to check with Ditto Insurance.
+
+
+
+Health insurance
+- when reveling from office change the health insurance to personal
+- check for room rent choose which has no limit
+- check for wating peroid how long we need to wait after apply 
+- check for excluded dieases 
+- No claim bonus ( if we not claim for year they add one year)
+
+Types
+- cashless -> when get admit to hospital they directly pay (only specfic office) 
+	- some insurance can have only specfic hosptical check that
+- co -payment -> dont use this that where we pay some amount and they pay
+
+
+
+
+Term insurance
+
+types
+- NO return 
+- return of permium (some % they give and other invest in stock and give profit)
+- return of permium with no cost (give whole amount no interset)
+
+- claim assistet ratio
+- Amount settlement ratio
+- choose payout lumsum or monthly payout
+- Riders  (like addon they provide fund during below situation)
+	- terminal illness
+	- critical ilness ()
+- they reject if we have not paid amount on time (check which time we need to pay)
+- Need to claim before 90 days
+- check for restoration benefit
+- day care treatment 
+- 
+Zero cost term insurance 
+- dont take this the permium is high if we take normal insurance and invest the extra perimun in SIP we get more money
+Limited pay 
+
+5 Helath insurance plan
+Here's a summary of Suprit’s top 5 recommendations along with their pros, cons, and some honorary mentions:
+
+HDFC Ergo Optima Secure:
+	Pros: High claim settlement ratio (98%), good network hospital list (11,500+), Secure Benefit (doubles the sum insured), unlimited restoration add-on, wellness add-on, high coverage (up to 2 crore).
+	Cons: Not ideal for pre-existing conditions due to a 3-year waiting period, premiums can be expensive.
+
+Aditya Birla Activ One Max:
+	Pros: Decent claim settlement ratio, good network hospital list, chronic care add-on (reduces waiting period for pre-existing conditions to 30 days), incentivizes healthy lifestyles with premium discounts for meeting fitness goals
+	Cons: Relatively new company, slightly higher average complaints ratio (22 per 10,000 claims).
+Care Supreme:
+	Pros: Affordable premiums, good features (no room restrictions, no disease-wise limits), cumulative bonus (up to 500%), add-on options (health check-up, instant cover for pre-existing conditions)
+	Cons: High average complaints ratio (36), lower claim settlement ratio (91%) compared to others on the list
+
+ICICI Lombard Elevate:
+	Pros: Highly customizable, offers a wide range of features, including maternity cover, jumpstart benefit, reduction in pre-existing disease waiting periods, and unlimited coverage.
+	Cons: Low claim settlement ratio (85%), has room rent restrictions despite being a newer plan.
+
+Niva Bupa Aspire (Titanium Plus Variant):
+	Pros: Economical premiums, good features (maternity cover, add-ons to reduce waiting periods), international coverage option, lock the clock feature, cash bag feature, future ready feature.
+	Cons: Slightly lower claim settlement ratio (91%), potential for operational delays based on Ditto's experience.
+
+Tata AIG Medicare Plan
+Bajaj Allianz Health Guard Plan
+Max Bupa Health Companion
+
+
+Mutual fund
+- morning star
+- compare with index fund does it have more then index fund
+
+
+No Mutual fund consistencly performed well compared to index fund.
+
+Direct fund and regular fund ?
+
+
+current ratio need to be 1.5 to 3
+- current assests/ current liablities 
+divedend payment history
+EPS (Earning per share)
+
+
+How  to choose stock
+- choose larger cap
+- Return of captial employee
+- debt equlity ratio
+- revenuse growth need to greater then 10% 
+- beta < 1.3 
+- **Beta** in the stock market is a measure of a stock's volatility in relation to the overall market or a specific benchmark index, such as the S&P 500 or NIFTY 50. It indicates how much a stock's price moves compared to the market as a whole.
+- 
+
+
+
+How we can invest small amount ?
+
+Gold bees on tax slab
+
+
+
+
+
+## Resources
+- https://www.valueresearchonline.com/ 

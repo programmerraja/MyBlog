@@ -32,3 +32,10 @@ RESUME
 
 Negotiation
 - dont tell the except number ask them budget by saying i dont have expereince of this so can u say the budget
+
+
+
+jobscan.co
+reseumeworded
+overleaf
+zety

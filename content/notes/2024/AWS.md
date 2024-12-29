@@ -38,3 +38,6 @@ AWS offers two primary ways to implement NAT:
  **NAT Gateway/Instance**: Allows **outbound** traffic to the internet from private subnets.
 
  **Internet Gateway**: Enables **bi-directional** traffic (both inbound and outbound) between the internet and resources in **public subnets**.
+
+
+

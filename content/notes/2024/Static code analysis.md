@@ -120,5 +120,11 @@ https://github.com/SonarSource/SonarJS
 
 [GritQL](https://github.com/getgrit/gritql) is a query language for searching, linting, and modifying code.
 
+
+## Glean 
+
+System for collecting, deriving and querying facts about source code
+From facebook
+[Get Started](https://glean.software/docs/introduction/) 
 ## Resources
 - https://github.com/analysis-tools-dev/static-analysis?tab=readme-ov-file 

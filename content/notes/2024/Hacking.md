@@ -198,3 +198,12 @@ Let me know if you need more information about this type of attack or how to pro
 - **Outlook on the web (OWA):** While OWA modifies email content and CSS to prevent styling conflicts, attackers can still exploit predictable changes in the DOM structure after forwarding.
 - **Gmail:** Although Gmail strips styling when forwarding emails, attackers can still exploit this by hiding content in the original email, which becomes visible after forwarding due to the removal of CSS.
 Source [here](https://lutrasecurity.com/en/articles/kobold-letters/?utm_source=tldrinfosec)
+
+
+
+## Cloud
+
+
+### AWS
+- [Awseye](https://awseye.com/)
+- 
