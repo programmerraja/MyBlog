@@ -8,21 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "6e78faa606df816b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notes/2024/Building Microservices.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Building Microservices"
-            }
-          },
-          {
-            "id": "168df3cffe8724a7",
+            "id": "df13005e4f7df378",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -34,149 +20,8 @@
               "icon": "lucide-file",
               "title": "Finance  & stock"
             }
-          },
-          {
-            "id": "e224a499f766c2d2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notes/2024/Static code analysis.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Static code analysis"
-            }
-          },
-          {
-            "id": "4682d561d76f25c0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notes/2024/AWS.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "AWS"
-            }
-          },
-          {
-            "id": "4f02a92af15d7194",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notes/2024/Cyptography.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Cyptography"
-            }
-          },
-          {
-            "id": "df13005e4f7df378",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "misc/Revise calendar.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Revise calendar"
-            }
-          },
-          {
-            "id": "a61b41c787685188",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "misc/Blog Notes.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Blog Notes"
-            }
-          },
-          {
-            "id": "2fe909653bf286d6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "misc/Revise calendar.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Revise calendar"
-            }
-          },
-          {
-            "id": "a754fa7dd4945af3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notes/2024/Transformer.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Transformer"
-            }
-          },
-          {
-            "id": "1f8bc25da7242d28",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "post/2024/How to capture mongodb protocol in  wireshark.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "How to capture mongodb protocol in  wireshark"
-            }
-          },
-          {
-            "id": "6ee6a27bcc924d08",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "misc/Job.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Job"
-            }
-          },
-          {
-            "id": "7a9e8dd532838cad",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notes/2024/System Design.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "System Design"
-            }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -334,15 +179,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4f02a92af15d7194",
+  "active": "df13005e4f7df378",
   "lastOpenFiles": [
-    "notes/2024/Databases.md",
+    "misc/Revise calendar.md",
     "notes/2024/Cyptography.md",
+    "notes/2024/Databases.md",
     "notes/2024/Hacking.md",
     "notes/2024/AWS.md",
     "notes/2024/Static code analysis.md",
     "misc/Finance  & stock.md",
-    "misc/Revise calendar.md",
     "misc/Blog Notes.md",
     "misc/Job.md",
     "notes/2024/Fine-Tunning.md",

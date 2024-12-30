@@ -134,6 +134,19 @@ defined as companies with market capitalizations between $2 billion and $10 bill
 website to check tickertape
 ### **Mutual Funds & SIP**
 
+Mutual fund can be invested using demant account like coin etc using broker are we can directly invest them using fund house where we need to create multiple account on different website
+
+| Feature              | **Coin**                                 | **KFintech**              |
+| -------------------- | ---------------------------------------- | ------------------------- |
+| **Account Required** | Zerodha Demat Account                    | Bank Account + PAN        |
+| **Units Held In**    | Demat Form                               | Folio-Based System        |
+| **Fees**             | ₹50/month (Demat charges) currently free | No platform fees          |
+| **Focus**            | Stocks, ETFs, MFs                        | Mutual Funds Only         |
+| **Ease of Use**      | Unified Portfolio View                   | Direct Mutual Fund Access |
+
+A **folio number** is a unique identifier assigned to your mutual fund investment by the asset management company (AMC). It acts like an account number for your mutual fund holdings with a specific fund house and helps track your investments.
+
+
  **Mutual Fund Types**:
     - **Equity Mutual Funds**: Invest in stocks.
     - **Debt Mutual Funds**: Low risk, low return.
@@ -378,7 +391,16 @@ It helps people decide:
 - Buy stock when **Buffett Indicator** less then 75% But make sure the fundamental of the stock is good
 
 
+## Small case
 
+we buying actual stock where stock are grouped like mutual fund
+
+**Thematic Investing**: Smallcase offers baskets of stocks designed around a specific theme, such as:
+
+- Green energy.
+- Rising rural demand.
+- Dividend-paying stocks.
+- Sectoral themes like IT or healthcare.
 
 ## Insurance
 ### **Term Insurance**
@@ -846,6 +868,41 @@ Gold bees on tax slab
 
 
 
+
+INdex fund
+- Navi nifty 50 
+- Navi nifty mid cap 
+- TATA digital india fund
+- Nifty next 50 
+- Nifty midcap 150 
+- nfity microcap 250
+
+zerodha elss tax saver nifity large mid 250 index fund
+ELSS
+- Axis ELSS tax saver fund
+
+FLexi cap
+- kotak 
+- parak flexi
+
+Lage cap 
+- axis cap
+
+Debut mutual fund
+- Nippon indian income fund
+- kotak coporate
+- edeiwess banking
+
+
+Forgint EQT
+- icic prudential nasdqa
+- navi nasdaq
+- mtilal aswal sandaq
+- edelweiss greater 
+
+GOLD
+- icic prudential sliver
+- nippion india gold saving
 
 
 ## Resources
