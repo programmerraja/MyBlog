@@ -178,7 +178,8 @@ A **folio number** is a unique identifier assigned to your mutual fund investmen
 	    - Portfolio turnover ratio (make sure low)
 	    - Sharpe ratio 
 	-  we can pause the ELSS for 3 month for a year (it we not pay for 3 month it will get rejected automatically)
-	- Example MIRAE ASSEST, DSP mutual fund, motilai oswal, PGIM india mutual fund ,
+	- Example MIRAE ASSEST, DSP mutual fund, motilai oswal, PGIM india mutual fund 
+	
 **Direct vs. Regular Plans:** 
 
 Mutual funds come in two variants: Direct and Regular. Direct plans have a lower expense ratio as they are purchased directly from the fund house, bypassing distributors or agents. Regular plans have a higher expense ratio because they include commissions for distributors.
@@ -191,6 +192,7 @@ A fee charged when you redeem (sell) your mutual fund units within a specified p
 No exit load after 730 days
 
 Type of mutual fund
+
 **Large-Cap Stocks**
 
 - Typically, companies with a market cap of **₹20,000 crore (₹200 billion)** or more are considered large-cap. (single stock cost * total stock holdby the company)
@@ -204,9 +206,16 @@ Type of mutual fund
 
 #### How to choose mutual funds
 
-- check AUM size
+- check AUM (refers to the total market value of all the investments or assets that a mutual fund manages on behalf of its investors) size
 - For index funds make sure tracking errror is less 
-- 
+
+
+**Tracking Error** is a measure of how closely the performance of an investment portfolio matches the performance of its benchmark index
+
+A **benchmark index** is a standard against which the performance of an investment portfolio, mutual fund, or other financial product is measured. It serves as a point of reference to evaluate whether the portfolio is outperforming, underperforming, or matching the broader market or a specific segment of it.
+
+**Common Benchmark Indices**:
+- Nifty 50 or Sensex 
 
 ### **Exchange Traded Funds (ETFs)**
 
@@ -393,14 +402,193 @@ It helps people decide:
 
 ## Small case
 
-we buying actual stock where stock are grouped like mutual fund
+- A smallcase is a **basket of stocks** that are related to a single theme.
+- Smallcases are created by **SEBI-licensed research analysts and investment advisors**.
+- These professionals manage the smallcases, handling stock selection and rebalancing.
 
-**Thematic Investing**: Smallcase offers baskets of stocks designed around a specific theme, such as:
+**Costs Associated with Smallcase Investments**
 
-- Green energy.
-- Rising rural demand.
-- Dividend-paying stocks.
-- Sectoral themes like IT or healthcare.
+- **Investment Charges**:
+    - For investments **less than ₹4,000**, the charge is **2.5% of the investment amount plus GST**.
+    - For investments **equal to or greater than ₹4,000**, the charge is a flat **₹100 plus GST**, regardless of the investment amount.
+- **Selling Charges**:
+    - There are **no charges** when selling a smallcase, except for taxes.
+    - If the holding period is **less than or equal to one year**, the gains are taxed as **short-term capital gains (STCG) at 15%**.
+    - If the holding period is **more than one year**, the gains are taxed as **long-term capital gains (LTCG) at 10%**, but only if the LTCG is greater than ₹1 lakh.
+- **Rebalancing Charges**:
+    - Smallcase does **not charge a fee** for rebalancing.
+    - However, rebalancing involves selling existing stocks and buying new ones, so **brokerage and taxes (STCG or LTCG)** are applicable.
+
+**Other Aspects of Smallcase**
+
+- **Dividends**: Investors are eligible to receive dividends from the stocks held within a smallcase, and the same tax rules that apply to regular dividends are applicable.
+- **Rebalancing**:
+    - Rebalancing is **not mandatory**; you will receive an email notification to accept or deny the changes.
+- **Minimum Investment**:
+    - There is **no fixed minimum investment** amount. Some smallcases have a minimum as low as ₹270.
+    - You can filter smallcases by investment amount to find those with low minimums.
+- **Brokers**: Smallcase has tie-ups with a large number of Indian brokers.
+- **Tracking**: While you cannot track smallcase investments on the Zerodha app, you can track them on the Kite web portal by selecting the "smallcase" option in the holdings dropdown menu.
+
+**Smallcase vs Mutual Funds**
+
+- **Similarities**: Both are managed by professionals.
+- **Differences**:
+    - **Ownership**: In a mutual fund, you own units of the fund, while in a smallcase, you own the individual stocks.
+    - **Rebalancing**: In a smallcase, you have the option to accept or deny rebalancing; in a mutual fund, the fund manager does rebalancing without your consent.
+    - **Tax and Brokerage**: Rebalancing in a smallcase incurs brokerage and taxes; in a mutual fund, rebalancing does not incur separate charges.
+    - **Exit Load**: Smallcases do not have exit loads, unlike some mutual funds.
+    - **Customization**: Smallcases offer more customization with ready-made themes and strategies; you can select based on investment amount, volatility, and investment strategy.
+
+
+## Return calculation
+
+if we investing the amount for a particular period of time and we withdrawing the money after some time we would like to know how much return i get we can use the two method
+- **CAGR** is used when you make a **single lump-sum investment** and then **withdraw** it after a certain period of time. It tells you the average annual growth rate of your investment, assuming the investment grows at a **steady rate** over the period.
+- **XIRR** is used when you make **irregular or periodic investments** (e.g., monthly or quarterly) and **withdraw** money at different times. Unlike CAGR, **XIRR accounts for the exact timing of your cash flows**, which makes it more accurate when there are **multiple contributions** or **withdraw//only need to rewrite the url if it have user id als**.
+
+Example
+CAGR
+- If an investment grows from ₹1,00,000 to ₹2,00,000 over 5 years, the CAGR would be: 14.87% over 5 years.
+
+XIRR
+- If you made an investment of ₹1,00,000 on 1st Jan 2020, followed by ₹20,000 on 1st July 2021, and ₹30,000 on 1st Jan 2022, and you got back ₹2,00,000 on 1st Jan 2023, the XIRR calculation would reflect the return considering the exact dates of cash flows.
+
+## IRR
+
+Rate of interset of a year
+
+
+**Internal Rate of Return (IRR)** in the context of stock refers to the annualized effective compounded return rate that an investor earns on an investment, assuming the investment generates a series of cash flows over time. IRR is often used to evaluate the profitability of an investment or compare the attractiveness of different investments.
+
+
+### **Finance & Investment Tips**
+
+1. **Stock Selection**:
+    - Focus on growing sectors (e.g., electric vehicles).
+    - Research companies within the chosen sector.
+    - Invest systematically, instead of lump-sum.
+2. **Direct vs. Regular Mutual Fund Plans**:
+    - **Direct Plans**: Lower expense ratio as there’s no intermediary.
+    - **Regular Plans**: Higher expense ratio due to commission paid to distributors.
+
+
+
+
+Mutual fund
+- morning star
+- compare with index fund does it have more then index fund
+
+
+No Mutual fund consistencly performed well compared to index fund.
+
+Direct fund and regular fund ?
+
+
+current ratio need to be 1.5 to 3
+- current assests/ current liablities 
+divedend payment history
+EPS (Earning per share)
+
+
+How  to choose stock
+- choose larger cap
+- Return of captial employee
+- debt equlity ratio
+- revenuse growth need to greater then 10% 
+- beta < 1.3 
+- **Beta** in the stock market is a measure of a stock's volatility in relation to the overall market or a specific benchmark index, such as the S&P 500 or NIFTY 50. It indicates how much a stock's price moves compared to the market as a whole.
+- 
+
+
+
+How we can invest small amount ?
+
+Gold bees on tax slab
+
+
+
+
+INdex fund
+- Navi nifty 50 
+- Navi nifty mid cap 
+- TATA digital india fund
+- Nifty next 50 
+- Nifty midcap 150 
+- nfity microcap 250
+
+zerodha elss tax saver nifity large mid 250 index fund
+ELSS
+- Axis ELSS tax saver fund
+
+FLexi cap
+- kotak 
+- parak flexi
+
+Lage cap 
+- axis cap
+
+Debut mutual fund
+- Nippon indian income fund
+- kotak coporate
+- edeiwess banking
+
+
+Forgint EQT
+- icic prudential nasdqa
+- navi nasdaq
+- mtilal aswal sandaq
+- edelweiss greater 
+
+GOLD
+- icic prudential sliver
+- nippion india gold saving
+
+Things to check before buying mutal fund
+- examining rolling returns to assess consistency
+- AUM as a primary metric for selecting a fund16. While many people tend to prefer funds with a high AUM, this should not be the only factor when considering a fund
+- ump sum investments are made when the market falls by 5%, 10%, or 15% from its all-time high
+
+
+Key Ratios Explained
+
+Standard Deviation: Measures the total risk of a fund's portfolio and how much the return deviates from the expected return2. A higher standard deviation means higher volatility2.
+
+Sorno Ratio: Measures the risk-adjusted performance of a fund, specifically focusing on downside risk. A higher ratio indicates better risk-adjusted returns2. Generally a ratio between 1 and 2 is considered good2.
+
+Beta: Measures the risk of a fund compared to the market. A beta less than 1 indicates lower risk than the market, and a beta greater than 1 indicates higher risk than the market2.
+
+Upside Capture Ratio: Measures how well a fund performs relative to the benchmark during a rising market2.
+
+Downside Capture Ratio: Measures how well a fund performs relative to the benchmark during a falling market
+
+Operating Profit Margin: This indicates the profitability of a company’s core operations.
+
+Return on Equity (ROE): This measures how efficiently a company is using shareholders' investments to generate profit. A ROE of 15% or higher is considered a good benchmark2.
+
+**Return on Capital Employed (ROCE)** is a financial metric that measures a company's ability to generate profits from its capital employed (the total capital used for running the business). (higher is good)
+
+Free Cash Flow: This is the cash a company generates after accounting for capital expenditures, indicating financial health and flexibility2.
+
+Market Capitalization: Companies can be categorized by their size and this will influence the type of stocks you choose2.
+
+The **Price-to-Earnings (P/E) Ratio** is a widely used financial metric that helps investors assess the valuation of a company's stock relative to its earnings. It represents how much investors are willing to pay for each dollar of the company’s earnings and provides insight into how the market values the company’s future earnings growth.
+
+
+
+Invester type
+- **Value Investing**: Looks for **undervalued** stocks that have the potential to grow over time. 
+- **Growth Investing**: Focuses on companies with **strong potential for future growth**, even if their current valuation is high.
+- **Momentum Investing**: Seeks to profit from **current trends** in stock prices, buying stocks that are rising and selling those that are falling.
+
+
+
+
+
+## Resources
+- https://www.valueresearchonline.com/ 
+
+
 
 ## Insurance
 ### **Term Insurance**
@@ -529,6 +717,15 @@ Minimum - 1000 rupee
 
 ---
 
+## TAX and other things
+
+Tax Cycle
+**Financial Year (FY):**
+    
+- **April 1 to March 31**.
+    - Income earned during this period is assessed for taxation. For example, FY 2024-25 refers to income earned between April 1, 2024, and March 31, 2025.
+
+
 ### **Tax Deductions**
 
 1. **Section 80C**: Deductions up to ₹1.5 lakh.
@@ -545,38 +742,10 @@ Minimum - 1000 rupee
 9. **HRA (House Rent Allowance)**:
     - Claim HRA exemption based on rent, salary, and city of residence.
 10. **Standard Deduction**: ₹50,000 for salaried individuals.
+11. Gifting to Parents: Income can be gifted to parents, as it is not clubbed, and up to ₹7 lakhs of income is tax-free for them6. However, this benefit does not extend to spouses
 
 
-### **Finance & Investment Tips**
 
-1. **Stock Selection**:
-    - Focus on growing sectors (e.g., electric vehicles).
-    - Research companies within the chosen sector.
-    - Invest systematically, instead of lump-sum.
-2. **Direct vs. Regular Mutual Fund Plans**:
-    - **Direct Plans**: Lower expense ratio as there’s no intermediary.
-    - **Regular Plans**: Higher expense ratio due to commission paid to distributors.
-
-
-## Return calculation
-
-if we investing the amount for a particular period of time and we withdrawing the money after some time we would like to know how much return i get we can use the two method
-- **CAGR** is used when you make a **single lump-sum investment** and then **withdraw** it after a certain period of time. It tells you the average annual growth rate of your investment, assuming the investment grows at a **steady rate** over the period.
-- **XIRR** is used when you make **irregular or periodic investments** (e.g., monthly or quarterly) and **withdraw** money at different times. Unlike CAGR, **XIRR accounts for the exact timing of your cash flows**, which makes it more accurate when there are **multiple contributions** or **withdrawals**.
-
-Example
-CAGR
-- If an investment grows from ₹1,00,000 to ₹2,00,000 over 5 years, the CAGR would be: 14.87% over 5 years.
-
-XIRR
-- If you made an investment of ₹1,00,000 on 1st Jan 2020, followed by ₹20,000 on 1st July 2021, and ₹30,000 on 1st Jan 2022, and you got back ₹2,00,000 on 1st Jan 2023, the XIRR calculation would reflect the return considering the exact dates of cash flows.
-
-## IRR
-
-Rate of interset of a year
-
-
-**Internal Rate of Return (IRR)** in the context of stock refers to the annualized effective compounded return rate that an investor earns on an investment, assuming the investment generates a series of cash flows over time. IRR is often used to evaluate the profitability of an investment or compare the attractiveness of different investments.
 
 
 Credit card
@@ -647,11 +816,6 @@ TIPS
     - Stick to **SBI** for stock investments.
 
 
-Note 
-- Last 2 years index fund return is 5%
-
-
-
 
 hdfc Credit card 
 - 50 days 
@@ -662,9 +826,6 @@ How to use credit card
 - check your billing date and pay before that
 
 
-
-US stock
-- nasdaq index top 100 company on us
 
 
 good mutual  fund
@@ -757,8 +918,6 @@ Within that:
 - 30% in mid-cap mutual funds SIP
 - 30% in small-cap mutual funds SIP
 
-- ask sanjay to put on PPF and prakash
-
 
 Need to change me from small small things like afraid be confideint dont afraid of people come up with that mindset
 
@@ -835,75 +994,6 @@ Bajaj Allianz Health Guard Plan
 Max Bupa Health Companion
 
 
-Mutual fund
-- morning star
-- compare with index fund does it have more then index fund
 
-
-No Mutual fund consistencly performed well compared to index fund.
-
-Direct fund and regular fund ?
-
-
-current ratio need to be 1.5 to 3
-- current assests/ current liablities 
-divedend payment history
-EPS (Earning per share)
-
-
-How  to choose stock
-- choose larger cap
-- Return of captial employee
-- debt equlity ratio
-- revenuse growth need to greater then 10% 
-- beta < 1.3 
-- **Beta** in the stock market is a measure of a stock's volatility in relation to the overall market or a specific benchmark index, such as the S&P 500 or NIFTY 50. It indicates how much a stock's price moves compared to the market as a whole.
-- 
-
-
-
-How we can invest small amount ?
-
-Gold bees on tax slab
-
-
-
-
-INdex fund
-- Navi nifty 50 
-- Navi nifty mid cap 
-- TATA digital india fund
-- Nifty next 50 
-- Nifty midcap 150 
-- nfity microcap 250
-
-zerodha elss tax saver nifity large mid 250 index fund
-ELSS
-- Axis ELSS tax saver fund
-
-FLexi cap
-- kotak 
-- parak flexi
-
-Lage cap 
-- axis cap
-
-Debut mutual fund
-- Nippon indian income fund
-- kotak coporate
-- edeiwess banking
-
-
-Forgint EQT
-- icic prudential nasdqa
-- navi nasdaq
-- mtilal aswal sandaq
-- edelweiss greater 
-
-GOLD
-- icic prudential sliver
-- nippion india gold saving
-
-
-## Resources
-- https://www.valueresearchonline.com/ 
+Question to selvam
+- does profit from stock market comes under income slab

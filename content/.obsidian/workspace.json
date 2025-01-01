@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "67c92e5e0dc5971b",
+        "id": "79e8a7ee94540f34",
         "type": "tabs",
         "children": [
           {
-            "id": "df13005e4f7df378",
+            "id": "7800171a262c41ce",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -179,15 +179,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "df13005e4f7df378",
+  "active": "7800171a262c41ce",
   "lastOpenFiles": [
+    "misc/Finance  & stock.md",
     "misc/Revise calendar.md",
     "notes/2024/Cyptography.md",
     "notes/2024/Databases.md",
     "notes/2024/Hacking.md",
     "notes/2024/AWS.md",
     "notes/2024/Static code analysis.md",
-    "misc/Finance  & stock.md",
     "misc/Blog Notes.md",
     "misc/Job.md",
     "notes/2024/Fine-Tunning.md",
