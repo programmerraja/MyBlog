@@ -20,7 +20,21 @@
 	- [ ] Rollback 
 	- [ ] disaster recovery (what if down how you handle)
 	- [ ] performance and optimization (not required but need to check current load will happens)
-	- [ ] 
+
+# Mistakes engineers make in large established codebases
+
+
+Some code bad smell that i see
+- const SALESFORCE_SANDBOX_URL = process.env.SALESFORCE_SANDBOX_URL;
+- console log (how i can optimize) lot of logs
+- logs without any indent
+- Nested funtion defining at top
+- unwanted try catch
+- using constant that need only one place
+- default false in schema
+- harded mail template and replace which is not efficent
+- multiple state in frontend
+- usecallback and use memo
 
 Sherlock Holmes
 - [ ] Econnreset
@@ -67,6 +81,7 @@ Generative AI series of what i know
 - [ ] EVAl and Observation
 
 
+# Create blog of my second brain setup and github tempalte to get started
 
 ## Buy me coffe copy text
 
@@ -93,6 +108,49 @@ https://giscus.app/ -> to add comments feature
 I decided to have a poke around and see if I could figure out how the HTTP streaming APIs from the various hosted LLM providers actually worked. Here are my notes so far.
 
 ## Prompts
+
+```
+Write a thorough yet concise summary of [BOOK TITLE] by [AUTHOR].
+
+Concentrate on only the most important takeaways and primary points from the book that together will give me a solid overview and understanding of the book and its topic.
+
+Include all of the following in your summary:
+
+- 3 of the best Quotes from this Book that change the way we think
+- Main topic or theme of the book
+- Why should someone read this book (Be specific in this Heading)
+- 7–10 Key ideas or arguments presented
+- Chapter titles or main sections of the book
+- Key takeaways or conclusions
+- Any Techniques or special processes told by the author in the book
+- Author's background and qualifications
+- Comparison to other books on the same subject
+- 5–7 Target audience groups or intended readership
+- Reception or critical response to the book
+- Recommendations [Other similar books on the same topic] in detail
+- To sum up: The book's biggest Takeaway and point in a singular sentence.
+```
+
+```
+Act as a professional writing assistant. I will provide you with text and you will do the following:
+
+1. Check the text for any spelling, grammatical, and punctuation errors and correct them.
+2. Check for any grammatical errors and correct them
+3. Remove any unnecessary words or phrases to improve the conciseness of the text
+4. Provide an analysis of the tone of the text. Include this analysis beneath the corrected version of the input text. Make a thorough and comprehensive analysis of the tone.
+5. Re-write any sentences you deem to be hard to read or poorly written to improve clarity and make them sound better.
+6. Assess the word choice and find better or more compelling/suitable alternatives to overused, cliche or weak word choices
+7. Replace weak word choices with stronger and more sophisticated vocabulary.
+8. Replace words that are repeated too often with other suitable alternatives.
+9. Rewrite or remove any sentences, words or phrases that are redundant or repetitive.
+10. Rewrite any poorly structured work in a well-structured manner
+11. Ensure that the text does not waffle or ramble pointlessly. If it does, remove or correct it to be more concise and straight to the point. The text should get to the point and avoid fluff.
+12. Remove or replace any filler words
+13. Ensure the text flows smoothly and is very fluent, rewrite it if it does not.
+14. Use varying sentence lengths.
+15. Have a final read over the text and ensure everything sounds good and meets the above requirements. Change anything that doesn't sound good and make sure to be very critical even with the slightest errors. The final product should be the best possible version you can come up with. It should be very pleasing to read and give the impression that someone very well-educated wrote it. Ensure that during the editing process, you make as little change as possible to the tone of the original text input.
+```
+
 
 ```
 Take the following piece of writing that feels disconnected or choppy and improve its flow by applying the following techniques: contrast, reasons, exceptions, examples, and details. and write a blog like human

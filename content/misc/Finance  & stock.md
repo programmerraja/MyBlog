@@ -134,6 +134,8 @@ defined as companies with market capitalizations between $2 billion and $10 bill
 website to check tickertape
 ### **Mutual Funds & SIP**
 
+
+
 Mutual fund can be invested using demant account like coin etc using broker are we can directly invest them using fund house where we need to create multiple account on different website
 
 | Feature              | **Coin**                                 | **KFintech**              |
@@ -191,6 +193,10 @@ Exit Load:
 A fee charged when you redeem (sell) your mutual fund units within a specified period. The exit load structure varies depending on the fund. For instance, a fund might have a 2% exit load if you sell units within one year of purchase. 
 No exit load after 730 days
 
+In a mutual fund, **NAV** is the total value of all the investments (stocks, bonds, etc.) it owns, divided by the number of "stocks" (which are called **units**) the fund has.
+
+So, if you want to buy one unit of the mutual fund, you pay the NAV amount!
+
 Type of mutual fund
 
 **Large-Cap Stocks**
@@ -216,6 +222,10 @@ A **benchmark index** is a standard against which the performance of an investme
 
 **Common Benchmark Indices**:
 - Nifty 50 or Sensex 
+
+## AMFI
+
+The **Association of Mutual Funds in India (AMFI)** is a regulatory body for the mutual fund industry in India. Established in 1995, AMFI's primary objective is to promote and protect the interests of mutual fund investors while maintaining ethical standards and professional practices within the industry. It operates under the oversight of the **Securities and Exchange Board of India (SEBI)**.
 
 ### **Exchange Traded Funds (ETFs)**
 
@@ -478,6 +488,7 @@ Rate of interset of a year
 Mutual fund
 - morning star
 - compare with index fund does it have more then index fund
+-  Any advisor or salesperson who suggests choosing a fund based on its low NAV is misguiding you
 
 
 No Mutual fund consistencly performed well compared to index fund.
@@ -552,7 +563,7 @@ Things to check before buying mutal fund
 
 Key Ratios Explained
 
-Standard Deviation: Measures the total risk of a fund's portfolio and how much the return deviates from the expected return2. A higher standard deviation means higher volatility2.
+Standard Deviation: Measures the total risk of a fund's portfolio and how much the return deviates from the expected return. A higher standard deviation means higher volatility.
 
 Sorno Ratio: Measures the risk-adjusted performance of a fund, specifically focusing on downside risk. A higher ratio indicates better risk-adjusted returns2. Generally a ratio between 1 and 2 is considered good2.
 
@@ -587,6 +598,8 @@ Invester type
 
 ## Resources
 - https://www.valueresearchonline.com/ 
+- https://www.tickertape.in/digital-gold 
+- https://www.screener.in/screens/906496/madhu-rocks/?include_old=yes&order=asc
 
 
 
@@ -997,3 +1010,35 @@ Max Bupa Health Companion
 
 Question to selvam
 - does profit from stock market comes under income slab
+
+
+
+
+
+
+
+	Dividend yield funds are mutual funds that primarily invest in stocks of companies offering high dividend yields. These are companies that pay a significant portion of their profits as dividends to shareholders.
+
+
+
+
+## Commodities Market
+
+Timing : 9 AM to 11.30 PM 
+
+The **commodity market in India** is a marketplace where buyers and sellers trade physical commodities or their derivatives. Commodities are classified into two broad categories:
+
+1. **Hard Commodities**: Natural resources like gold, silver, crude oil, and natural gas.
+2. **Soft Commodities**: Agricultural products like wheat, rice, coffee, sugar, and cotton.
+
+### Types of Commodity Markets in India
+
+1. **Spot Market**: Where commodities are bought and sold for immediate delivery.
+2. **Futures Market**: Where contracts are bought and sold for future delivery at a specified price.
+
+### Commodity Exchanges in India
+
+1. **Multi Commodity Exchange (MCX)**: Primarily trades in metals, energy, and agricultural products.
+2. **National Commodity & Derivatives Exchange (NCDEX)**: Focuses on agricultural commodities.
+3. **Indian Commodity Exchange (ICEX)**: Trades commodities like diamonds.
+4. **National Multi Commodity Exchange (NMCE)**: Specializes in agricultural and non-agricultural commodities.
