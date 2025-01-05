@@ -17,7 +17,7 @@ Things to do
 - [ ] Portfolio 
 - [ ] Reading books
 
-
+- https://time.fyi/daily-planner
 
 Learning technique
 - Always have roadmap what flow you going to study such that you know where to go 

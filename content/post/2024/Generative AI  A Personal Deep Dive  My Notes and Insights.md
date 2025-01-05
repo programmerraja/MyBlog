@@ -26,6 +26,8 @@ The reason transformers have been so transformative (no pun intended!) is becaus
 - [Transformers Indepth Architecture Understanding- Attention Is All You Need](https://www.youtube.com/watch?v=SMZQrJ_L1vo&pp=ygUbdHJhbnNmb3JtZXJzIGxsbSBrcmlzaCBuYWlr)
 - [The math behind Attention: Keys, Queries, and Values matrices](https://www.youtube.com/watch?v=UPtG_38Oq8o&t=1045s)
 - [The Most Important Algorithm in Machine Learning](https://www.youtube.com/watch?v=SmZmBKc7Lrs&t=188s)
+- [5-Day Gen AI Intensive Course with Google Learn Guide](https://www.kaggle.com/learn-guide/5-day-genai#GenAI)
+- 
 
 **Blogs:**
 
@@ -70,6 +72,7 @@ However, prompt engineering isn’t a one-size-fits-all solution. The way you ph
 - [Brex's prompt engineering guide](https://github.com/brexhq/prompt-engineering)
 - [Meta's prompt engineering guide](https://llama.meta.com/docs/how-to-guides/prompting/)
 - [Google's Gemini prompt engineering guide](https://services.google.com/fh/files/misc/gemini-for-google-workspace-prompting-guide-101.pdf)
+- [Prompt Optimization](https://arize.com/course/prompt-optimization) 
 - [How I think about LLM prompt engineering](https://fchollet.substack.com/p/how-i-think-about-llm-prompt-engineering) (Francois Chollet, 2023)
 
 I gone through some research paper about prompt engineering that might helpfull for you

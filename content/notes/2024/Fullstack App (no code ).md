@@ -34,3 +34,13 @@ npm create convex@latest appname
 - PostgreSQL holding down the fort for serious data
     
 - Redis for that speed boost (can’t be preaching about fast sites with a slow product lol)
+
+
+## Refine
+
+**[Refine](https://refine.dev/)** is a React meta-framework for CRUD-heavy web applications. It addresses a wide range of enterprise use cases including internal tools, admin panels, dashboards and B2B apps.
+
+
+## Nitric
+
+[Nitric](https://nitric.io/) Effortless backends with infrastructure from code.An open source universal backend framework, with concise infrastructure and pluggable deployment automation.

@@ -47,6 +47,8 @@ word by word in one line, so it can be used in the C application, nothing else
 
 check [here](https://github.com/verazuo/jailbreak_llms)
 
+https://github.com/jplhughes/bon-jailbreaking
+
 ## Jailbreaking Large Language Models with Symbolic Mathematics
 
 This step converts natural language prompts into mathematical representations while preserving its meaning, structure and relationships.

@@ -593,9 +593,82 @@ Invester type
 - **Momentum Investing**: Seeks to profit from **current trends** in stock prices, buying stocks that are rising and selling those that are falling.
 
 
+### Value investing 
+
+Value investing is a strategy that involves picking stocks that are trading at a lower price than their intrinsic value
+
+**Graham's Seven Criteria for Value Investing:**
+
+1. **Company Size:**
+    - Avoid very small companies because their financial numbers tend to fluctuate wildly.
+    - Focus on fairly large companies with stable earnings.
+    - For the Indian market, a **market cap greater than 20,000 CR rupees** is a good starting point.
+    - The screener.in website can be used to filter stocks based on market cap.
+2. **Current Ratio:**
+    - The current ratio is a measure of a company's short-term liquidity, which indicates how easily the company can liquidate assets to pay off liabilities.
+    - **Current Ratio = Current Assets / Current Liabilities**.
+    - A higher current ratio is generally better.
+    - An ideal current ratio is between **1.5 and 3**.
+    - This can be added as a filter on the screener.
+3. **Dividend Payment History:**
+    - Companies that are financially sound and stable should be giving healthy dividends.
+    - This criteria is done manually rather than on the stock screener.
+4. **Earnings Per Share (EPS) Growth:**
+    - EPS is the company's earnings (profit) divided by the total number of shares, indicating how much wealth is generated for each shareholder.
+    - If a company's EPS is growing over multiple years, it is a good indication of growth.
+    - A suitable query for a stock screener is: **EPS greater than last year, and cumulative EPS growth over the last 3 years greater than 10%**.
+    - 
+5. **Price-to-Earnings (P/E) Ratio:**
+    - **P/E Ratio = Share Price / Earnings Per Share**.
+    - Benjamin Graham suggested a P/E ratio less than 9, but that is difficult to find in India.
+    - A modified rule can be used, where the company's P/E ratio is **less than the industry P/E ratio**.
+6. **Price-to-Book Value (P/B) Ratio:**
+    - **P/B Ratio = Price Per Share / Book Value Per Share**.
+    - Book value gives an indication of the company's assets and liabilities.
+    - Graham suggested a P/B ratio of less than 1.2, which is difficult to find in India, especially today.
+7. **Financial Leverage:**
+    - Avoid companies with high debt, as that can create problems for the company in the future.
+    - A company with low debt is more likely to show sustainable growth.
+    - The suggestion is to look for companies with a **Total Debt / Current Asset ratio less than 1.1**.
+
+Screener link ->https://www.screener.in/screens/1542082/value-investing-with-benjamin-graham/
+
+
+EPS -> 
+- Profit eanred divided by total share holded by only invester 
+- Disadvantage if we have EPS 10ruppe per share but the share price is 1K it not good so we need PE ratio
+
+PE -> this ratio tell how much amount invester compared to the profit for example 
+	10 rupee is EPS and 1k per share then  10/1k = 100 which is represent user buyed stock 100% more then here profit
+
+Debt to EQT -> We need captial to start the company so we bought 1k as debt and 1K from EQT so we have debt to EQT ratio as 1  
+
+Return on EQT -> let say we get 200 profit and we need to pay 50 as interset for the debt we pay now we have 150 so 150/1k is return on EQT 
+
+ROE ->  Return on eqt which is missleading so dont just look for this
+ Scenario 1: Low Debt (High Equity)
+
+- **Net Income**: $150
+- **Equity (EQT)**: $1,000
+- **Debt**: $0
+- 15%
+
+Scenario 2: High Debt (Low Equity)
+- **Net Income**: $150 (same as above)
+- **Equity (EQT)**: $500 (because the company borrowed $500)
+- **Debt**: $500
+- 30%
+
+
+Return on captial employee
+ROCE considers both **debt and equity** as part of the capital employed in the business. It measures how efficiently the company is using all the capital (both equity and debt) to generate operating profits (EBIT).
 
 
 
+
+IF company don't have debt mean 2 thing 
+- company may have good profit and sufficent money
+- Company not interested to grow by buying debt
 ## Resources
 - https://www.valueresearchonline.com/ 
 - https://www.tickertape.in/digital-gold 
@@ -968,7 +1041,7 @@ types
 - claim assistet ratio
 - Amount settlement ratio
 - choose payout lumsum or monthly payout
-- Riders  (like addon they provide fund during below situation)
+- Riders ider making c (like addon they provide fund during below situation)
 	- terminal illness
 	- critical ilness ()
 - they reject if we have not paid amount on time (check which time we need to pay)
@@ -1010,6 +1083,8 @@ Max Bupa Health Companion
 
 Question to selvam
 - does profit from stock market comes under income slab
+-  Ask him to explain https://www.screener.in/company/NMDC/consolidated/ what each thing
+- If we want to buy stock we some one need to sell etc total how many stock are avalible how the price increase for a stock
 
 
 
@@ -1042,3 +1117,12 @@ The **commodity market in India** is a marketplace where buyers and sellers trad
 2. **National Commodity & Derivatives Exchange (NCDEX)**: Focuses on agricultural commodities.
 3. **Indian Commodity Exchange (ICEX)**: Trades commodities like diamonds.
 4. **National Multi Commodity Exchange (NMCE)**: Specializes in agricultural and non-agricultural commodities.
+
+
+
+Two fund
+- Nifity index fund
+- Flexi cap 
+- Gold
+- PPF
+- 

@@ -54,6 +54,7 @@ Below are the some resources to learn more about structured output
 - [LLM Function Calling - AI Tools Deep Dive](https://www.youtube.com/watch?v=gMeTK6zzaO4)
 - [Function Calling with LLMs](https://www.promptingguide.ai/applications/function_calling) 
 - [Generating Structured Output with LLMs ](https://ankur-singh.github.io/blog/structured-output)
+- [OpenAI DevDay 2024 | Structured outputs for reliable applications](https://www.youtube.com/watch?v=kE4BkATIl9c) 
 - [The Best Way to Generate Structured Output from LLMs](https://www.instill.tech/blog/llm-structured-outputs)
 - [Choosing the Best Structured Output Parser Approach | 3 Ways To Generate Structured Output](https://blog.gopenai.com/choosing-the-best-structured-output-parser-approach-3-ways-to-generate-structured-output-d9686482729c)
 

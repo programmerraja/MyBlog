@@ -7,6 +7,31 @@ tags:
   - AI
 ---
 
+## How OpenAI produce structured Output
+
+OpenAI have two option to generate the structured output one is function calling and response type json 
+
+**How it works under the hood**
+
+
+It uses **Token masking**  it is nothing but LLM will choose the next token based on the probablity of the vocoblary it have we can remove the tokens that are staisfied the excpeted output and choose the token which has more probability from it
+
+
+- **Index Creation**: To optimize token masking, an index is built from the provided JSON schema. This index allows mask computation to function like a lookup, rather than requiring significant processing time. This process involves several steps:
+    
+    - The JSON schema is converted into a formal grammar.
+    - A parser is created to check if strings match the language specified by the grammar.
+    - The parser iterates over all tokens and possible parser states to determine which tokens are valid.
+    - An index is built in the form of a tree, which facilitates rapid lookups during inference.
+    - The index generation is done once and cached for subsequent queries.
+    
+- **Context-Free Grammar (CFG)**: Structured outputs use a CFG approach, as opposed to regular expressions, to handle the variety of JSON schemas, including those with recursion or deep nesting.
+    
+    - Regular expressions have limitations as they lack memory to store information about past lookups.
+    - For example, a schema for UI generation might define a component with a list of children that also match that same component schema. It is impossible to implement this with a regular expression due to its potential for recursive nesting.
+    - Another example is a language defined as strings with matching open and closed parentheses, which cannot be validated using regular expressions because of the arbitrary levels of nesting.
+    - CFG uses a stack to keep track of past outputs, which allows it to handle recursive and nested structures.
+
 ## Pydantic
 
 Pydantic, a popular Python library with over 70 million downloads per month, offers a robust and developer-friendly way to structure your prompts and validate LLM output. Here's how it works:

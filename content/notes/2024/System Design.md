@@ -142,3 +142,9 @@ https://blog.bytebytego.com/p/how-do-we-design-for-high-availability
 My notes
 - After implementing a system make to add monitoring for the system
 	- How many request processed/per second etc..
+
+
+
+
+
+

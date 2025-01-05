@@ -14,6 +14,7 @@
 - [ ] automate dev moderate center using AI 
 - [ ] Automate bug bounty agents
 - [ ] Enter the company support articel URL and will scrape and index whoel and doc and start chatting
+- [ ] How we can use AI to documenting the code and make sure devs are doing
 - [x] Spoken english teacher where you speak  it will help to fix english and teach
 
 

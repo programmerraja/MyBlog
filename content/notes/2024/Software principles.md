@@ -42,7 +42,10 @@ Blog for Software principles
 
 ## Hexgonal architecture
 
-write bussiness logic in centerk
+write bussiness logic in center
+
+
+## Vertical slice
 
 
 ## Reactive Architecture
@@ -76,3 +79,41 @@ Stereotypes in RDD
 5. **The Controller**
 6. **The Interfacer**
 - https://khalilstemmler.com/articles/3-steps-to-solve-most-design-problems/
+
+
+
+## FrontEnd
+
+### Feature-Sliced Design
+
+Architectural methodology for frontend projects
+
+
+### Vertical slice 
+
+**Vertical slice architecture** refers to a software design approach where the application is divided into small, fully functional units or **vertical slices**, each representing a feature or use case from end to end. Unlike traditional **layered architecture** where the system is divided into separate layers like data access, business logic, and presentation, a vertical slice typically contains all layers needed to fulfill a single feature, such as:
+
+- **UI (Presentation Layer)**
+- **Business Logic Layer**
+- **Data Access Layer**
+
+In a vertical slice, each slice is independently manageable and deployable, encapsulating all the functionality for a specific feature or functionality from the front-end to the back-end.
+
+
+orgnaise by use case not technical responsibility
+
+
+Vertical slice architecture is a good fit for applications where development speed, feature orientation, and independent code changes are critical, such as task-based or feature-driven applications (Ageil). Clean architecture is more suitable for large, complex applications where long-term maintainability, flexibility, and separation of concerns are the primary objectives.
+
+
+
+
+
+## My Notes
+
+When i am doing changes in the code i need to look for the way it has and the flow how it happens and how easy or hard to introduces the changes in the code try to find the pattern 
+
+
+Need to gothrough open source and need to check how they orgnizing the code
+
+V
