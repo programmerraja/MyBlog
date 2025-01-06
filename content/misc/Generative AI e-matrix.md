@@ -7,6 +7,7 @@ kanban-plugin: board
 ## Things to study
 
 - [ ] Prompt mangement and optimization
+- [ ] Build ai twitter agent to share daily post to get more followers
 
 
 ## **Important, Not Urgent**

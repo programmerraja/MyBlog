@@ -34,10 +34,14 @@ Some code bad smell that i see
 - default false in schema
 - harded mail template and replace which is not efficent
 - multiple state in frontend
+- using destruct the object from front end in backend query
+- promise.all
+- Not adding comments for specfic thing
 - usecallback and use memo
+- Doing atomic operation in code level
 
 Sherlock Holmes
-- [ ] Econnreset
+- [x] Econnreset
 - [ ] HOw nodejs update 18 restart the pod unhabled rejection
 - [ ] Links server slow nginx multiple ssl
 - [x] debug ecconreset 15sec to update

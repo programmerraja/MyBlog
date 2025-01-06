@@ -13,30 +13,79 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "misc/What next?.md",
+                "file": "post/2025/PR Nightmares 5 Common Coding Mistakes Ive Seen in the Last 2 Years.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "What next?"
+              "title": "PR Nightmares 5 Common Coding Mistakes Ive Seen in the Last 2 Years"
+            }
+          },
+          {
+            "id": "036694a8ad74297c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "post/2025/PR Nightmares 5 Common Coding Mistakes Ive Seen in the Last 2 Years.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "PR Nightmares 5 Common Coding Mistakes Ive Seen in the Last 2 Years"
+            }
+          },
+          {
+            "id": "5deb5e08999b4cf3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "misc/Blog Notes.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Blog Notes"
             }
           },
           {
             "id": "0fdcbf3f6b8418e8",
             "type": "leaf",
             "state": {
+              "type": "kanban",
+              "state": {
+                "file": "misc/Tasks  e-matrix..md",
+                "kanbanViewState": {
+                  "kanban-plugin": "board",
+                  "list-collapse": [
+                    false,
+                    false,
+                    false,
+                    false
+                  ]
+                }
+              },
+              "icon": "lucide-trello",
+              "title": "Tasks  e-matrix."
+            }
+          },
+          {
+            "id": "ec11f792cc68e0f0",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "misc/2025.md",
+                "file": "notes/2024/AI Content System.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025"
+              "title": "AI Content System"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -194,34 +243,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0fdcbf3f6b8418e8",
+  "active": "5deb5e08999b4cf3",
   "lastOpenFiles": [
-    "misc/Revise calendar.md",
-    "misc/Day Dreaming Notes.md",
-    "misc/Hackthon.md",
-    "misc/Generative AI e-matrix.md",
-    "post/2025/How chatgpt kiling the online interview.md",
     "post/2025/PR Nightmares 5 Common Coding Mistakes Ive Seen in the Last 2 Years.md",
     "misc/Blog Notes.md",
-    "misc/What next?.md",
-    "misc/2025.md",
-    "post/2024/Generative AI  A Personal Deep Dive  My Notes and Insights Part -2.md",
-    "post/2024/Generative AI  A Personal Deep Dive  My Notes and Insights.md",
-    "notes/2024/LLM strucuted output and Parser.md",
-    "notes/2024/Software principles.md",
-    "notes/2024/Fullstack App (no code ).md",
-    "notes/2024/System Design.md",
-    "notes/2024/Software Architecture.md",
-    "notes/2024/Appache Kaffa.md",
-    "notes/2024/LLM Hacking.md",
-    "notes/2024/Leadership.md",
-    "notes/2025/Passive Income.md",
-    "notes/2025/Awsome LLM model.md",
-    "notes/2024/Hugging face.md",
     "misc/Tasks  e-matrix..md",
-    "misc/Finance  & stock.md",
-    "notes/2025/Open sources.md",
-    "misc/AI project ideas.md",
+    "post/2025/Code Aganist Clock Interview helper.md",
+    "post/2025/How i build my second brain.md",
+    "post/2025/Lesson learned from 2 year expereince of working in startup.md",
+    "post/2025/From Heroku to Kubernetes Lessons Learned in Our Migration Journey.md",
+    "post/2025/Sherlock Holmes and The Case Redis Overload During a DDoS Attack.md",
+    "post/2025/How chatgpt kiling the online interview.md",
+    "post/2024/Hunting the Hacker A Deep Dive into Courier Fraud.md",
+    "post/2024/How I Hacked a Company Recruitment Test The Unexpected Tech Adventure of My College Life.md",
+    "post/2024/Code Against the Clock Creating class hunter.md",
+    "post/2024/Code Against the Clock Automating the youtube shorts.md",
+    "post/2024/C-razy Facebook Hack How I Pranked My Friend.md",
+    "post/2024/From Side Hustle to Payday How I Earned My First $100.md",
+    "post/2024/Code Against the Clock  From Clicks to Cash.md",
+    "post/2024/Code Against the Clock How I Enhanced My PM Productivity.md",
+    "post/2024/Code Against the Clock  How I Cut Our Marketing Team’s Daily Chores with Automation.md",
+    "post/2024/Code Against the Clock Automating Attendance Management.md",
+    "post/2024/Code Against the Clock How I Enhanced My Scrum Master Productivity.md",
+    "post/2024/Sherlock Holmes and the Mystery of the Missing Cookies.md",
+    "post/2024/Sherlock Holmes and The Mystery of the Erratic Logstash.md",
+    "post/2024/Sherlock Holmes and The Case of the App Not Found.md",
+    "post/2024/Sherlock Holmes and The Case of the Cloudflare Timeout Mystery.md",
+    "post/2024/The Joy of Debugging How One Tiny Typo Kept Us Busy for Hours.md",
+    "post/2024/The Day a DDOS Attack Led to the Most Awkward Hello World.md",
     "post/2025",
     "notes/2025",
     "Images/Screenshot from 2024-12-23 08-34-20.png",
