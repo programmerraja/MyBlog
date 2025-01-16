@@ -1,6 +1,12 @@
 
 ### **Stock Market Basics**
 
+- **Primary Market (IPO/FPO)**: Money goes directly to the company to fund its growth, expansion, and other business needs.
+- **Secondary Market (Stock Exchanges)**: Money goes to the seller (existing shareholders) of the stock. The company doesn’t directly benefit from these transactions.
+
+- **Stock prices increase** when there are **more buyers** than sellers (high demand for the stock).
+- **Stock prices decrease** when there are **more sellers** than buyers (low demand or increased selling pressure).
+
 **Market Hours:**
     - Stock market opens at **9:15 AM** and closes at **3:15 PM**.
     -
@@ -133,7 +139,6 @@ defined as companies with market capitalizations between $2 billion and $10 bill
 
 website to check tickertape
 ### **Mutual Funds & SIP**
-
 
 
 Mutual fund can be invested using demant account like coin etc using broker are we can directly invest them using fund house where we need to create multiple account on different website
@@ -317,18 +322,26 @@ Check for gold hallmark
     - **GST**: Be aware of GST charges on physical gold.
     - **Tax Benefits**: Physical gold is taxed at lower rates compared to gold bonds.
 2. **Digital Gold**:
-    - Bought via platforms like PhonePe, without making charges.
+    - Bought via platforms like PhonePe,groww, without making charges.
     - Can be converted to physical gold.
     - Not managed by SBI; not as safe.
-3. **Sovereign Gold Bonds (SGBs)**:
+    - gold stored  by one of MMTC, safe gold and augmont (convert digital to physical gold)
+    - 3% storage and insureance
+    - limit on holding for more then 5 year
+    - short term captial gain tax and long term 
+    - No regulator
+1. **Sovereign Gold Bonds (SGBs)**: **(BEST)**
     - Issued by RBI (not backed by actual gold).
     - **No GST** on SGBs.
     - If held for 8 years, no tax on capital gains.
-    - **Interest**: 2.5% per year.
+    - **Interest**: 2.5% per year. need to pay tax
     - Minimum holding period: 5 years.
+    - Minimum 1g max 4kG
+    - after 8 year automatically send to our bank
     - Purchase/sale can be done via Demat account.
-    - **Selling Frequency**: Every two months with a minimum of 1 gram purchase.
-4. **Gold ETFs**:
+    - **Selling Frequency**: Every two months with a minimum of 1 gram purchase
+    - can buying using bank,postoffice
+2. **Gold ETFs**:
     - Requires a Demat account for purchase and sale.
     - No GST on transactions.
     - Can buy and sell like mutual funds; more flexibility than physical gold.
@@ -342,11 +355,11 @@ Check for gold hallmark
 	- when we have more liquidity when we want to sell they buy for the market price else we may need to sell for less price  
 	-  while the **spot price** of gold reflects the current price of physical gold in the market, the **NAV** of a Gold ETF reflects the value of the underlying gold assets in the ETF, adjusted for expenses and divided by the number of outstanding units. Investors typically use NAV to assess the intrinsic value of an  ETF
 	- Buy when spot price is less then NAV then we buy for less price (but if we choose the high liquidity ETF if wont be difference)
-	- when ever stock go up gold go down and vice versa
-1. **Gold Mutual Funds**:
+	- **when ever stock go up gold go down and vice versa**
+3. **Gold Mutual Funds**:
     - Indirectly invest in gold via brokers.
     - Typically available with SIP options.
-6. **Gold Purity**:
+4. **Gold Purity**:
     - 24 Karat Gold: 99.9% purity.
     - 22 Karat Gold: 91.6% purity.
 
@@ -409,6 +422,12 @@ It helps people decide:
 
 - Buy stock when **Buffett Indicator** less then 75% But make sure the fundamental of the stock is good
 
+## US based 
+
+we have two options invest in indian market in US  motiala oswal NASDAQ
+us based ETF
+
+where US has high return and less expense ratio
 
 ## Small case
 
@@ -559,6 +578,14 @@ Things to check before buying mutal fund
 - examining rolling returns to assess consistency
 - AUM as a primary metric for selecting a fund16. While many people tend to prefer funds with a high AUM, this should not be the only factor when considering a fund
 - ump sum investments are made when the market falls by 5%, 10%, or 15% from its all-time high
+- check for **Indicative Net Asset Value**. (INAV) vaule if current price and this same no problem  if it is lower and current price is high we buying at high cost 
+
+INAV represents an estimate of the current value of an ETF's underlying assets, typically calculated in real-time throughout the trading day.
+
+- **NAV** (at the end of the day): You count all the cookies in the jar, and they are worth $100.
+- **INAV** (during the day): People are trading cookies, and based on the latest trades, the jar of cookies is worth $102, even though you don’t count them at the end of the day yet.
+
+So, the **INAV** is the estimate of the jar’s value during the day, while **NAV** is the exact value at the end of the day. Both help you know how much your jar of cookies (ETF) is worth!
 
 
 Key Ratios Explained
@@ -640,6 +667,8 @@ EPS ->
 
 PE -> this ratio tell how much amount invester compared to the profit for example 
 	10 rupee is EPS and 1k per share then  10/1k = 100 which is represent user buyed stock 100% more then here profit
+	
+how much investors are willing to pay for each dollar of a company's earnings.
 
 Debt to EQT -> We need captial to start the company so we bought 1k as debt and 1K from EQT so we have debt to EQT ratio as 1  
 
@@ -727,9 +756,37 @@ Medical inflation is 15% in india.
 
 
 ### Bonds
+website -> RBI retail direct to invest 
+
+TBills (only monday and tuesday) and less then one year
+- save
+
 
 - Only go if you have more amount 
 - 
+
+
+Interset will be based on rating
+- AAA >= 8%
+- A-,BB,BBB >=13% (high risk)
+
+Types
+- secured  (where company have assests when company goes off they sell assests and give our money)
+- unsecured ( no assests)
+- covered bonds (same as assest)
+- senoir secure bonds
+
+
+Top question to ask
+- why they issuesing the bond
+- check there history and payment history and last 5 year sales
+- every bond have isin number allocate by nsdl 
+	- go to nsdl and check by using isin number about the bond
+- check bond types 
+
+Every bond will have series based on how long we hold based on that the interset wil change
+
+
 
 When an investor buys a bond, they are basically **lending money** to the organization (like a government or a company) that issues the bond. In return, the organization promises to pay the investor **interest** on the money they lent, usually at regular intervals (like every year or every six months).
 
@@ -750,12 +807,19 @@ Apps
 - fixed income
 - wint
 - bonds india
+- the fixed income 
 
 bond rating
 
 **Bond rating** refers to an evaluation of a bond issuer's creditworthiness or the likelihood that they will be able to meet their debt obligations
 
 
+Gilt mutal fund -> better then goverment bonds
+- 
+
+Tax 
+- Interset rate will be addedto income slab
+- long term gain 10%
 ## RBI Bond
 
 
@@ -1084,7 +1148,6 @@ Max Bupa Health Companion
 Question to selvam
 - does profit from stock market comes under income slab
 -  Ask him to explain https://www.screener.in/company/NMDC/consolidated/ what each thing
-- If we want to buy stock we some one need to sell etc total how many stock are avalible how the price increase for a stock
 
 
 
@@ -1125,4 +1188,18 @@ Two fund
 - Flexi cap 
 - Gold
 - PPF
-- 
+
+
+
+TODO
+- need to buy AI mutual fund
+
+
+
+## Resources
+- https://www.tatamutualfund.com/learning-academy
+- https://www.nseindia.com/learn/find-a-course
+
+
+## Tool
+- https://www.tickertape.in/

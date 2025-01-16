@@ -94,6 +94,7 @@ Resources
 
 
 
+
 How uber implements caching
 
 They have build own database top of SQL called docstore in that query engine they have introduced caching layer. 
@@ -138,6 +139,35 @@ https://blog.bytebytego.com/p/how-do-we-design-for-high-availability
  Never fail a system design interview again. A collection of [Quiz](https://www.swequiz.com/)
 
 
+## CQRS
+
+command query responsibility seggregation. where it will use full when we need to more read optimitic and write optimistic There is two opporach in impelement this
+- Using same database
+- Using different database 
+
+
+## Event sourcing
+
+**Event sourcing** is a Microservice design pattern that involves capturing all changes to an application’s state as a **sequence of events, rather than simply updating the state itself**. Each event represents a discrete change to the system and is stored in **an event log,** which can be used to reconstruct the system’s state at any point in time. it will be usefull when we want the history of updation record
+	1. **Event Generation:** An event is generated whenever a change occurs in the system.
+	2. **Persistence in Event Store:** The event is persisted to an event store, which is essentially a log of all events that have occurred in the system.
+	3. **Reconstruction of current state by replaying events:** The current state of the system can be reconstructed at any time by replaying all of the events in the event store, in the order that they occurred.
+	4. **Service wise event store** : Each service in the microservice architecture can have its own event store, which can be used to maintain its own state.
+	5. **Subscription to event store:** Services can subscribe to events that are relevant to them and update their own state accordingly.
+
+we can combine CQRS with event sourcing to handle update and read
+
+## SAGA
+ 
+ Saga pattern for acid among microservices
+    
+A Saga is a design pattern used in distributed systems and microservices architecture to manage a sequence of related, independent transactions or operations. The primary goal of a Saga is to ensure that all these transactions are completed successfully or, if an error occurs, to provide a mechanism to compensate for the operations that have already occurred.
+    - Two ways to implement SAGA
+        - [**Orchestration-Based Saga](https://blog.bitsrc.io/how-to-use-saga-pattern-in-microservices-9eaadde79748#:~:text=1.%20Orchestration%2DBased%20Saga):** A single orchestrator (arranger) manages all the transactions and directs services to execute local transactions.
+        - [**Choreography-Based Saga**](https://blog.bitsrc.io/how-to-use-saga-pattern-in-microservices-9eaadde79748#:~:text=2.%20Choreography%2DBased%20Saga): All the services that are part of the distributed transaction publish a new event after completing their local transaction.
+    
+-  [https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/saga/saga](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/saga/saga)
+- https://blog.bitsrc.io/implementing-saga-pattern-in-a-microservices-with-node-js-aa2faddafac3](https://blog.bitsrc.io/implementing-saga-pattern-in-a-microservices-with-node-js-aa2faddafac3)
 
 My notes
 - After implementing a system make to add monitoring for the system

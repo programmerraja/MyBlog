@@ -319,6 +319,7 @@ HtmlRAG is a system that uses HTML instead of plain text in Retrieval-Augmented 
 1. **[RAG Techniques](https://github.com/NirDiamant/RAG_Techniques)**: A GitHub repository that compiles techniques, methods, and best practices for working with RAG systems.
 2. **[Beyond the Basics of RAG](https://github.com/ruc-nlpir/flashrag)**: Advanced topics and concepts for pushing the limits of RAG technology.
 3.  [Microsoft AutoGen](https://microsoft.github.io/autogen/)**: A toolkit provided by Microsoft to automate the process of generating language models and leveraging RAG workflows.
+4. https://github.com/bRAGAI/bRAG-langchain Everything you need to know to build your own RAG application
 
 
 ## DataSet For finetuning

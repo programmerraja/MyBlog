@@ -11,6 +11,8 @@ Front end
 - https://www.radix-ui.com/
 - https://ui.shadcn.com/
 - https://picocss.com/ (light weight)
+- https://easyfrontend.com/ (700+ Free UI Components With Code Editor)
+- https://www.boringtemplate.com/
 
 
 

@@ -125,3 +125,4 @@ Never show angry or react suddenly to any incident think before act
 ## Resources
 - [Tech Lead Journal](https://www.youtube.com/@techleadjournal/videos)  (Hear from experienced technical leaders sharing their journey and philosophy for building great technical teams and achieving technical excellence. Find out what makes them great and how to apply those lessons to your work and team.)
 - [The 6 Mistakes You’re Going to Make as a New Manager](https://terriblesoftware.org/2024/12/04/the-6-mistakes-youre-going-to-make-as-a-new-manager/) 
+- https://newsletter.techworld-with-milan.com/p/15-best-leadership-books?ref=dailydev

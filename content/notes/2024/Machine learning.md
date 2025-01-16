@@ -89,3 +89,6 @@ F1_score = 2* Precision * recall / Precision + recall
 ## Resources
 - [ML system design: 450 case studies to learn from](https://www.evidentlyai.com/ml-system-design)
 - https://distill.pub/
+
+Maths
+- https://freedium.cfd/https://towardsdatascience.com/how-to-learn-math-for-machine-learning-fast-even-with-zero-math-background-159757833c3a

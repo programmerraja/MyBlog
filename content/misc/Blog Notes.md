@@ -20,6 +20,11 @@
 	- [ ] Rollback 
 	- [ ] disaster recovery (what if down how you handle)
 	- [ ] performance and optimization (not required but need to check current load will happens)
+- [ ] The thing wont tell by anyone when i am studying college
+	- [ ] FInance 
+	- [ ] tax
+	- [ ] Leadership 
+	- [ ] communication 
 
 # Mistakes engineers make in large established codebases
 

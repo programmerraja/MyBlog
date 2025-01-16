@@ -1,0 +1,208 @@
+---
+title : Leading EffectiveEngineering Teams
+date : 2025-01-13T18:51:01.011+05:30
+draft : true
+tags : 
+---
+## PROJECT ARISTOTLE
+
+Google conducted one of the best-known studies on effective software engineer-
+ing teams, known as ***Project Aristotle***. The project aimed to identify the factors
+that make some teams more successful than others.
+
+
+Project Aristotle identified five key dynamics that contribute to the success of
+software engineering teams
+
+- **Psychological Safety**: Team members feel safe to take risks, make mistakes, and express their opinions without fear of judgment or retribution. 
+	- Give open forum to share feedback in anonymous
+
+- **Dependability**: Team members can rely on each other to deliver high-quality work on time and meet commitments.
+
+- **Structure and Clarity**: Team members have clear roles, goals, and processes, with a defined sense of how the team functions and what is expected.
+
+- **Meaning**: Team members find their work personally meaningful and aligned with their values or goals.
+
+- **Impact**: Team members feel that their work has a meaningful impact on the organization, customers, or the world at large.
+
+Some other points from other research
+- Smaller teams are better.
+- Diversity can be beneficial. (different kind of people senior ,junior etc will encourage invation and creativity)
+- Clear communication is vital.
+- Leadership matters.
+
+**Hiring and interviewing for effectiveness**
+
+When building a new team or adding members to an existing one, it’s important
+to assess candidates not just for their technical skills but also for the key mind-
+sets and qualities that contribute to team effectiveness. During interviews, ask
+questions that probe for evidence of the engineering mindsets discussed earlier,
+such as caring about users, being a good problem solver, and being open to
+learning and growth. Present candidates with scenarios that test their approach
+to challenges like prioritization and balancing trade-offs.
+
+**What Author Learned About Leadership**
+
+1. **Align with Broader Objectives**  
+    Ensure your work aligns with your organization’s core goals. This alignment amplifies the impact of your efforts and contributes meaningfully to overarching priorities.
+
+2. **Leverage Your Team’s Unique Strengths**  
+    Recognize and utilize the distinct skills and expertise within your team. By understanding each member’s strengths, you can delegate effectively and foster growth.
+
+3. **Communicate Effectively**  
+    Maintain open and consistent communication. Regularly share progress, challenges, and achievements to build trust, encourage collaboration, and ensure everyone stays informed.
+
+4. **Focus on Impact, Not Just Hard Work**  
+    Hard work is valuable, but the focus should be on outcomes that create measurable, meaningful impact. Prioritize efforts that align with organizational objectives and yield significant results.
+
+5. **Build a Narrative Around Your Work**  
+    Document and share the story of your team’s journey. A compelling narrative enhances visibility, highlights achievements, and positions your work as a critical contributor to success.
+
+
+## Efficiency Versus Effectiveness Versus Productivity
+
+**Efficiency** -> Efficiency implies doing things right to minimize waste and maximize output.
+
+**Effectiveness** -> Effectiveness implies doing the right thing and delivering the right outcome.
+
+**Productivity** -> Productivity is a subset of efficiency and measures output over input
+
+
+## 20 minute rule
+
+If you are blocked, use the first 20 minutes to do research to unblock yourself; after that, either ask our team chat or a person and let them know of the results/findings of the prior research.” This enables them to better understand a problem or task and the requirements and constraints involved before asking questions, making informed decisions, and producing better-quality code.
+
+## SMART
+
+A **SMART goal** is a structured and methodical approach to setting objectives that enhance clarity, focus, and achievability. 
+### 1. **Specific**
+
+A goal must be clear and precise, leaving no room for ambiguity. It should address the "who, what, where, when, and why" of the objective.
+
+- **Why it matters:** Specific goals provide direction and eliminate confusion, making it easier to focus efforts and measure progress.
+- **Example:** Instead of saying, "Improve customer service," a specific goal could be, "Reduce customer complaint response time to under 24 hours by streamlining the support ticket system."
+### 2. **Measurable**
+
+A goal should include criteria to measure progress and success. This involves defining key metrics or indicators that will track progress over time.
+
+- **Why it matters:** Measurement ensures accountability and provides a way to evaluate whether the goal is being met.
+- **Example:** Rather than "Increase sales," a measurable goal could be, "Increase sales revenue by 20% within the next quarter."
+### 3. **Achievable**
+
+Goals should be realistic and attainable, considering available resources, constraints, and time. While they should challenge you, they must remain within reach.
+
+- **Why it matters:** Unrealistic goals can lead to frustration and demotivation. Achievable goals maintain motivation and ensure progress.
+- **Example:** Instead of "Double our revenue in a month," an achievable goal could be, "Increase revenue by 10% over six months by expanding our digital marketing efforts."
+### 4. **Relevant**
+
+A goal must align with broader organizational or personal objectives. It should directly contribute to the mission, vision, or priorities of the team or individual.
+
+- **Why it matters:** Relevant goals ensure that time and effort are spent on activities that truly matter, preventing wasted resources.
+- **Example:** For a company focused on sustainability, a relevant goal could be, "Reduce packaging waste by 30% by switching to biodegradable materials within the next year."
+
+### 5. **Time-Bound**
+
+A goal needs a clear deadline or timeframe for completion. This creates urgency and helps prioritize actions.
+
+- **Why it matters:** Deadlines instill discipline and provide a sense of urgency, ensuring progress is made consistently.
+- **Example:** Instead of "Launch a new product," a time-bound goal could be, "Launch the new product by December 31, 2025, with a targeted marketing campaign starting three months prior."
+
+
+Two techniques that can help define relevant productivity metrics
+
+**Goal-question-metric (GQM)**
+
+GQM is a structured framework that links goals to measurable outcomes through specific questions.
+
+Example
+1. **Goal**: Decide what you want to achieve (e.g., "Be the best treasure hunter").
+2. **Question**: Ask how to measure progress (e.g., "How much treasure did I find?").
+3. **Metric**: Choose what to track (e.g., "Number of treasures found").
+4. Link the goal, questions, and metrics to evaluate success.
+5. Use the results to improve and reach your goal faster!
+
+
+**Objectives and key results (OKRs)**
+
+OKRs are a goal-setting framework used to define and track objectives and their measurable outcomes.
+
+Objective -> What you want to do?
+Key results -> How you going to achevie this (the benchmark to track your progress they are metrics of your sucess)
+
+
+## The 3 E’s Model of Effective Engineering
+
+- Enable
+- Empower
+- Expand
+
+
+### Enable
+
+DEFINE EFFECTIVENESS FOR YOUR BUSINESS TYPE AND TEAM SIZE
+
+steps you can follow to define what effectiveness means for your team
+- Identify your team’s goals and objectives
+- Determine what metrics are relevant to measuring success
+- Set targets for each metric
+- Define effectiveness in terms of outcomes
+
+### Empower
+
+If enabling is about identifying what needs to be done to become effective and
+initializing it, empowerment takes you a step further. Empowering effectiveness
+involves providing the necessary support, resources, autonomy, and opportunities for growth and development.
+
+**Patrick Lencioni’s** model, known as the **Five Dysfunctions of a Team**, explains why teams fail and how they can succeed by addressing these dysfunctions. It’s structured like a pyramid with five layers, starting from the base. 
+- Absence of Trust  (Build trust by encouraging openness and honesty)
+- Fear of Conflict (Encourage constructive conflict.)
+- Lack of Commitment  (Ensure everyone’s input is heard and agree on a clear plan)
+- Avoidance of Accountability (Set clear roles and expectations)
+- Inattention to Results  (Focus on collective results)
+		Team members prioritize personal success over team goals.
+
+
+**Tuckman’s model** of group development outlines **five stages** that teams go through to become high-performing. These stages are **Forming, Storming, Norming, Performing, and Adjourning**.
+
+1. **Forming**: Getting to know each other.
+2. **Storming**: Facing conflicts.
+3. **Norming**: Resolving issues and collaborating.
+4. **Performing**: Achieving great results.
+5. **Adjourning**: Wrapping up and parting ways.
+
+
+#### Expand
+
+Expanding effectiveness refers to increasing an organization’s overall effectiveness, efficiency, and success across its various departments, teams, and functions by making them self-sufficient.
+
+- Empowerment through trust (trust the team and leave them to take decision)
+
+**The three always of leadership**
+
+- **Always Be Deciding:** Make timely, impactful decisions. even without knowing full info.Make informed choices quickly, accepting that not all decisions will be perfect.
+- **Always Be Leaving:** Empower others to lead and ensure continuity.
+- **Always Be Scaling:** Focus on growth and scalability for long-term success.
+
+Always be deciding
+
+Three-step approach to decision making
+
+Identify the blinders 
+Blinders are mental blocks that prevent us from considering all possible
+solutions to a problem.
+
+Identify the key trade-offs
+Decide, then iterate
+
+
+
+
+## Resources
+- [Identify what makes a great manager](https://rework.withgoogle.com/en/guides/managers-identify-what-makes-a-great-manager#introduction)
+- 
+My Takeway
+- Do something to build the communication between the team such going out and playing games and brainstroming
+- Build a open culture
+
+
+How i can make the team the build on time with proper code and doc etc?

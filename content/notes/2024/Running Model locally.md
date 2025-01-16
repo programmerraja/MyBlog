@@ -102,3 +102,7 @@ By default when we pulling model Ollama may default to using a highly compressed
 - Tensor parallelism and pipeline parallelism support for distributed inference
 - Streaming outputs
 - OpenAI-compatible API server
+
+
+## MobileLLM
+https://github.com/facebookresearch/MobileLLM
