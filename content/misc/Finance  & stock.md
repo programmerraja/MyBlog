@@ -418,6 +418,15 @@ It helps people decide:
 - "Should I buy because it’s too low?"
 - "Should I sell because it’s too high?"
 
+Here’s how it works step by step:
+
+1. **Compare Daily Moves**: Every day, check if the price went up or down compared to the day before. If it went up, it’s a "gain." If it went down, it’s a "loss."
+
+2. **Average It Out**: Add up all the gains over the last 14 days and divide by 14 to get the **average gain**. Do the same for the losses to get the **average loss**.
+
+3. **Find the Strength**: Now, divide the average gain by the average loss. This gives you the **Relative Strength (RS)**—a number showing how strong the "ups" are compared to the "downs."
+
+4. **Turn It Into a Percentage**: Use this formula to get the RSI score
 ## Buying on DIP
 
 - Buy stock when **Buffett Indicator** less then 75% But make sure the fundamental of the stock is good
@@ -612,6 +621,24 @@ Market Capitalization: Companies can be categorized by their size and this will 
 
 The **Price-to-Earnings (P/E) Ratio** is a widely used financial metric that helps investors assess the valuation of a company's stock relative to its earnings. It represents how much investors are willing to pay for each dollar of the company’s earnings and provides insight into how the market values the company’s future earnings growth.
 
+Imagine you have a lemonade stand, and you make $10 every week selling lemonade. A friend wants to buy your lemonade stand, but you don’t know how much it’s worth.
+
+The **Price-to-Earnings (P/E) ratio** is like a way to figure out if the price they want to pay is fair.
+
+- The **"Price"** is how much they’re willing to pay to buy your lemonade stand. Let’s say they offer you $50.
+- The **"Earnings"** is how much money your stand makes in a week—$10.
+
+To find the P/E ratio, you divide the price by the earnings:
+
+P/E=5010=5P/E = \frac{50}{10} = 5P/E=1050​=5
+
+A P/E of 5 means they are paying 5 times what your stand earns in one week.
+
+If someone else offers $100, the P/E becomes:
+
+P/E=10010=10P/E = \frac{100}{10} = 10P/E=10100​=10
+
+Now they’re paying 10 times your earnings. A bigger P/E means they’re paying more for every dollar you earn.
 
 
 Invester type
@@ -1183,6 +1210,32 @@ The **commodity market in India** is a marketplace where buyers and sellers trad
 
 
 
+Metrics to check when buying mutal fund
+
+- Rolling returns -> instead of taking two points and check there return take two point and in that take multiple point and take a average 
+	- example 2000 - 2020 take every 3 year return and calculate the average
+	
+- **Standard deviation** is a way to measure how much those daily prices are moving around. Are they staying pretty close to an average price, or are they bouncing all over the place? **standard deviation** tells you how “risky” or “volatile” a stock is. A high standard deviation means the stock is unpredictable and risky.
+
+ - The **Sharpe Ratio** is a way to measure how good an investment is by comparing its returns to the risk you're taking 
+	 - Formula = return - risk free rate / standard deviation
+	 - It return how much we earn for one unit of risk higher is good
+
+- Beta -> tell how the stock will perform to the market
+	- **Beta = 1** -> the stock align with market if it go 1% up this also go
+	- Beta > 1 -> if market move up it may move double and  market down it may down
+	- Beta < 1 -> less volatile than the marke
+	- Beta = 0 
+- **Upside Capture Rate** - This measures how much of the market's gains the investment captures during periods when the market is going **up**.
+	- A high upside capture rate means the investment tends to do well when the market is rising.
+- **Downside Capture Rate** - This measures how much of the market's losses the investment captures during periods when the market is going **down**.
+	- A low downside capture rate is desirable because it means the investment loses less when the market drops.
+- check the fund type did they full invest in EQT or debt also ? both have different tax
+- Compare the choosen fund with other same cateorgry fund let say if you choose transport fund compare this fund with other same transport fund
+- When we investing on mutiple mutual fund check for the stock overlap how much stock is overlap between them there online tool also avalibel
+
+
+
 Two fund
 - Nifity index fund
 - Flexi cap 
@@ -1195,6 +1248,7 @@ TODO
 - need to buy AI mutual fund
 
 
+Dont stop SIP when market is high you will get less return
 
 ## Resources
 - https://www.tatamutualfund.com/learning-academy

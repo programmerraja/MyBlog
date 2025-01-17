@@ -16,6 +16,7 @@
 - [ ] Enter the company support articel URL and will scrape and index whoel and doc and start chatting
 - [ ] How we can use AI to documenting the code and make sure devs are doing
 - [x] Spoken english teacher where you speak  it will help to fix english and teach
+- [ ] Build a chrome extension which will anlayse the stock on screener website and give the oponion based on data
 
 
 
