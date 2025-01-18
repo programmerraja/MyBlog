@@ -39,3 +39,11 @@ jobscan.co
 reseumeworded
 overleaf
 zety
+
+
+Dont tell exceptation ask for the roles and respon and say i will check does it aligin with my exceptation
+
+Tell the market researh and range dont tell excat number 
+ask ctc breakdown
+
+ask when they put hikes

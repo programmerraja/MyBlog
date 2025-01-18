@@ -550,6 +550,43 @@ export const App = () => {
 
 The general problem is that different `useCallback` hooks in a single component might reference each other and other expensive data through the closure scopes. The closures are then held in memory until the `useCallback` hooks are recreated. Having more than one `useCallback` hook in a component makes it super hard to reason about what’s being held in memory and when it’s being released. The more callbacks you have, the more likely it is that you’ll encounter this issue.
 
+## Patterns
+
+Instead of handling each input and button state and function we can write that as custom hook like below
+
+```js
+function useInput(initialState = '') {
+  const [state, setState] = React.useState(initialState)
+
+  const handlers = React.useMemo(
+    () => ({
+      handleInputChange: e => {
+        setState(e.target.value)
+      },
+      resetInput: () => {
+        setState(initialState)
+      },
+    }),
+    [initialState],
+  )
+
+  return [state, handlers]
+}
+
+function Component({ startingWord }) {
+  //...
+  const [inputState, { handleInputChange, resetInput }] = useInput(startingWord)
+  //...
+return (
+     <input
+          type="text"
+          id="randomWord"
+          onChange={handleInputChange}
+          value={inputState}
+        />)
+}
+```
+
 ## Resources
 1. [React re-renders guide: everything, all at once]([https://www.developerway.com/posts/react-re-renders-guide](https://www.developerway.com/posts/react-re-renders-guide)
 2. [React Element, children, parents and re-renders](https://www.developerway.com/posts/react-elements-children-parents)
@@ -578,6 +615,7 @@ Advanced
 3. https://webdeveloper.beehiiv.com/p/build-react-400-lines-code
 4. https://blog.frontend-almanac.com/JqtGelofzm1
 5. https://dev.to/fromaline/deep-dive-into-react-codebase-ep1-prerequisites-33ak
+6. https://tigerabrodi.blog/how-reacts-render-effects-and-refs-work-under-the-hood
 
 Pkg
 1. [State mangement like context but re-render only when actual val change](https://github.com/dai-shi/react-tracked)

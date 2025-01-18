@@ -2,7 +2,6 @@
 
 
 Things to learn
-- [ ] Terrraform
 - [ ] Finanace
 - [ ] How to design a system
 - [ ] how to write a effective code

@@ -1253,7 +1253,132 @@ Dont stop SIP when market is high you will get less return
 ## Resources
 - https://www.tatamutualfund.com/learning-academy
 - https://www.nseindia.com/learn/find-a-course
+- https://magicformulainvesting.com/
 
 
 ## Tool
 - https://www.tickertape.in/
+- https://freefincal.com/
+- https://www.morningstar.in/default.aspx
+- https://www.advisorkhoj.com/
+- https://thefundoo.com/
+
+
+
+
+
+
+
+
+
+Mutual fund
+### Scenario:
+
+Imagine a mutual fund called **"XYZ Equity Fund"** that collects money from investors and invests in stocks. Let's walk through the process with an example.
+
+### 1. **Mutual Fund Creation and Fundraising**
+
+- **XYZ Fund House** decides to create a mutual fund called the **XYZ Equity Fund**.
+- The fund house **raises money** from investors who want to invest in the fund. Let's say that **10 investors** (including you) decide to invest in this fund.
+
+**Total Investment from all investors**: ₹1,00,000
+
+So, the total amount raised by the mutual fund is **₹1,00,000**.
+
+### 2. **Buying Assets (Stocks, Bonds, etc.)**
+
+- The fund house (manager) now takes the ₹1,00,000 raised from all investors and starts **buying assets** (stocks, bonds, or other securities).
+
+Let's say the XYZ Equity Fund buys:
+
+- 10 shares of **Company A** (₹1,000 per share)
+- 5 shares of **Company B** (₹2,000 per share)
+- 5 shares of **Company C** (₹2,000 per share)
+
+**Total amount spent** = (10 * ₹1,000) + (5 * ₹2,000) + (5 * ₹2,000)  
+**Total assets** = ₹10,000 + ₹10,000 + ₹10,000 = ₹30,000
+
+So, the mutual fund has invested **₹30,000** in stocks and other assets.
+
+### 3. **Dividing the Fund into Units**
+
+Now, the XYZ Equity Fund decides to divide the total value of the fund into **1,000 units** (the total number of pieces the fund will be divided into). This decision is made by the fund house.
+
+**Number of Units Issued**: 1,000 units
+
+The **Net Asset Value (NAV)** of each unit is calculated by dividing the **total value of the assets** (₹30,000) by the **total number of units** (1,000 units).
+
+NAV per unit=Total Value of AssetsTotal Number of Units=₹30,0001,000=₹30 per unit\text{NAV per unit} = \frac{\text{Total Value of Assets}}{\text{Total Number of Units}} = \frac{₹30,000}{1,000} = ₹30 \, \text{per unit}
+
+### 4. **Investors Buy Units**
+
+Now, the **investors** (like you) can **buy units** of the fund. Each unit costs **₹30** based on the current NAV.
+
+Let’s say you decide to invest ₹9,000 in this mutual fund.
+
+Number of Units you get=₹9,000₹30 per unit=300 units\text{Number of Units you get} = \frac{₹9,000}{₹30 \, \text{per unit}} = 300 \, \text{units}
+
+So, with ₹9,000, you **buy 300 units** of the XYZ Equity Fund.
+
+### 5. **Fund Performance and NAV Change**
+
+Over time, the mutual fund’s assets (stocks, bonds, etc.) will change in value based on how well the companies (stocks) perform.
+
+#### Example:
+
+- The shares of **Company A** increase in value from ₹1,000 to ₹1,500 each.
+- The shares of **Company B** increase from ₹2,000 to ₹2,500 each.
+- The shares of **Company C** remain the same at ₹2,000.
+
+So, the **total value of the fund’s assets** has increased:
+
+- 10 shares of Company A are now worth (10 * ₹1,500) = ₹15,000
+- 5 shares of Company B are now worth (5 * ₹2,500) = ₹12,500
+- 5 shares of Company C are still worth (5 * ₹2,000) = ₹10,000
+
+**Total new value of assets** = ₹15,000 + ₹12,500 + ₹10,000 = ₹37,500
+
+#### New NAV:
+
+Now, the new NAV is calculated by dividing the new total value of assets (₹37,500) by the total number of units (1,000 units).
+
+New NAV per unit=₹37,5001,000=₹37.50 per unit\text{New NAV per unit} = \frac{₹37,500}{1,000} = ₹37.50 \, \text{per unit}
+
+So, the value of each unit has increased from ₹30 to ₹37.50 due to the performance of the assets.
+
+### 6. **Your Investment Grows**
+
+Since you have **300 units**, the value of your investment has increased as well. Here’s how:
+
+- Your **300 units** are now worth:
+    
+    300 units×₹37.50 per unit=₹11,250300 \, \text{units} \times ₹37.50 \, \text{per unit} = ₹11,250
+
+So, your **₹9,000 investment** has grown to **₹11,250** because the NAV per unit increased from ₹30 to ₹37.50.
+
+### 7. **Selling Units (Redemption)**
+
+If you want to **cash out** your investment, you can sell your units back to the mutual fund at the **current NAV**.
+
+- If you decide to sell your 300 units at ₹37.50 per unit:
+    
+    300 units×₹37.50=₹11,250300 \, \text{units} \times ₹37.50 = ₹11,250
+
+You get back ₹11,250 for your investment.
+
+### Key Takeaways from This Example:
+
+- **The mutual fund collects money** from investors and **invests it in stocks and bonds**.
+- The fund is **divided into units**, and each unit represents a small portion of the total assets.
+- The **NAV (Net Asset Value)** tells you the price of each unit based on the total value of the fund's assets.
+- **Investors buy units** of the fund, and their investment is **proportional to the number of units they buy**.
+- The **value of the units** changes based on the performance of the assets the fund invests in.
+- Investors can **sell units back** at the current NAV to get their money back.
+
+I hope this real-life example makes everything clearer! Let me know if you need further explanation.
+
+
+
+Unlisted share
+- Private Equity hold by the employee we can buy that in gray  market not regulated by SEBI
+- we can buy that in precize

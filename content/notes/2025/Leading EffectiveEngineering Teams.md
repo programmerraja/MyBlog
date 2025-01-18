@@ -195,10 +195,82 @@ Identify the key trade-offs
 Decide, then iterate
 
 
+## Common Effectiveness Antipatterns
+
+### Individual Antipatterns
+
+**THE SPECIALIST**  Don't make one on specialist in specifc area let everyone know everything because if they not present it hard to other work on Even if you conduct knowelege sharing so on untill they have hands on expereience it hard to understand
+
+**THE GENERALIST** Who work  in all thing without understanding indepth only have shallow knoweledge
+
+**THE HOARDER** someone who works in isolation, accumulating changes throughout a sprint and withholding updates until the end.
+
+Identifying a hoarder is relatively easy, and you might observe them in the
+first sprint itself:
+	• The engineer’s updates are withheld until they accumulate into a substan-
+	tial pull request.
+	• Other team members find themselves largely unaware of the hoarder’s
+	ongoing work.
+	• Code reviews of the hoarder’s sizable pull request become time-
+	consuming and happen so late that you may be unable to devote adequate
+	resources to them, leaving the code under-reviewed.
+	• The engineer believes their code to be perfect and may not readily accept
+	suggestions to change it to fit better with the rest of the solution.
 
 
+
+**THE RELENTLESS GUIDE**  when a team member, often with good intentions, consistently provides solutions and guidance to others, even beyond what is necessary. While their support may initially seem admirable, it can lead to problems if team members start relying too much on the guide and stop developing their own problem-solving skills.
+
+
+**THE TRIVIAL TWEAKER** Engineers making small, often insignificant changes to code that don't have a meaningful impact on the project. These engineers, driven by boredom or a desire to improve the code, engage in minor tweaks, such as refactoring or reorganizing, under the guise of making improvements. While these changes might seem harmless, they can divert attention away from more important tasks, wasting time and resources on superficial adjustments.
+
+### Practice-Related Antipatterns
+
+Practice-related antipatterns are caused by procedural pitfalls when designing, coding, reviewing, or testing solutions. A single individual cannot be held responsible for these. They can only be managed when the entire team collaborates to standardize and follow processes under the guidance of a leader.
+
+**LAST-MINUTE HEROICS** 
+
+Happens when team members scramble to fix problems right before a deadline, often with little time for proper testing or feedback. While it may seem like a quick fix, it can hide deeper issues and create risks for the project.
+
+**PROTRACTED REFACTORING**
+
+self-motivated engineers often discover existing code that could be written better, for example, by using a new API or library that was not available previously
+
+- The planned refactor expands organically, incorporating more elements and aspects, leading to unintended scope expansion.
+- As the refactor persists, project timelines may extend, potentially delaying releases and affecting overall project objectives.
+
+### Structural Antipatterns
+
+Structural antipatterns are caused by structural issues, including knowledge
+silos, skill imbalances, and communication gaps, which can pose risks to the
+long-term sustainability of the team.
+
+**ISOLATED CLUSTERS**
+
+when subteams within a larger software development team form insular groups, limiting cross-team collaboration. Members of these clusters tend to engage mostly with colleagues from their own subgroup for reviews, help, and knowledge sharing, which creates barriers to broader teamwork and stifles collective progress.
+
+### Leadership Antipatterns
+
+- **MICROMANAGEMENT**
+- **SCOPE MISMANAGEMENT**
+- **PLANNING OVERKILL**
+- **Skeptical leadership** is an antipattern where engineering managers develop unnecessary insecurities about their team's competence as a project progresses. These managers become overly anxious, viewing minor issues as potential risks and questioning decisions without clear justification
+
+## Effective Managers
+
+**Managing Your Time**
+- Time blocking
+- Chunking similar tasks
+
+**ASSESSMENT**
+
+verify whether your strategies are working through regular assessment. You must assess the execution of your time management strategies and adjust them if necessary as a cycle of improvement:
+
+
+## Becoming an Effective Leader
 ## Resources
 - [Identify what makes a great manager](https://rework.withgoogle.com/en/guides/managers-identify-what-makes-a-great-manager#introduction)
+- https://leaddev.com/communication/five-management-anti-patterns-and-why-they-happen
 - 
 My Takeway
 - Do something to build the communication between the team such going out and playing games and brainstroming

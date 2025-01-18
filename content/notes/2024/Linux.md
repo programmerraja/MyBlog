@@ -520,3 +520,6 @@ vmstat  | tail -n 1 | awk '{print "| procs | r (run queue) | "$1" |\n| procs | b
 TO get no of system call used by the program
 
 `sudo strace  -c  node filename.js` -> will print all sys call and time it take
+
+
+- https://osintteam.blog/learning-networks-with-linux-bluetooth-hacking-eccaf55a620e
