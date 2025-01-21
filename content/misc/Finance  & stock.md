@@ -1382,3 +1382,9 @@ I hope this real-life example makes everything clearer! Let me know if you need 
 Unlisted share
 - Private Equity hold by the employee we can buy that in gray  market not regulated by SEBI
 - we can buy that in precize
+
+
+
+
+
+Compared to FD debt fund have very low tax

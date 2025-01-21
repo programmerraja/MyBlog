@@ -28,6 +28,43 @@ The main difference between a connection and a channel is that a connection repr
 
 In summary, a connection in RabbitMQ represents a physical network connection to the broker, while a channel represents a logical connection within that physical connection, allowing multiple AMQP operations to be multiplexed over a single network connection.
 
+## Queue 
+
+### Durable Queue
+A queue that survives broker restarts.Queue metadata (not the messages themselves, unless explicitly persisted) is stored on disk. Messages in the queue can be persisted if they are marked as persistent.
+
+### Transient Queues
+
+A **transient queue** refers to a queue that is not durable, meaning it is not persistent and will not survive a broker restart. Transient queues are typically used for short-lived or temporary messaging scenarios, where persistence and reliability are not critical. which has performance higher compared to normal queue 
+
+### Exclusive Queue
+A queue that is private to the connection that declared it and is deleted when the connection closes.
+
+### Lazy Queue
+A queue designed to handle large volumes of messages by storing them on disk instead of memory.
+- Created with a `x-queue-mode` argument set to `lazy`.
+- Messages are moved to disk as soon as possible.
+- Helps prevent memory overload in scenarios with high message backlogs.
+
+###  Quorum Queue
+ A replicated queue type that uses the Raft consensus algorithm for high availability and consistency.
+ - Messages and metadata are replicated across multiple nodes in a cluster.
+ - Provides stronger data safety guarantees than classic mirrored queues.
+ - Supports sharding for large-scale message handling.
+
+|**Queue Type**|**Persistent**|**Replicated**|**Special Feature**|
+|---|---|---|---|
+|Durable Queue|Yes|No|Survives restarts|
+|Transient Queue|No|No|Lost after restart|
+|Exclusive Queue|Optional|No|Tied to a single connection|
+|Auto-Delete Queue|Optional|No|Deleted when last consumer disconnects|
+|Temporary Queue|Optional|No|Auto-generated, often exclusive|
+|Lazy Queue|Yes|No|Stores messages on disk to save memory|
+|Quorum Queue|Yes|Yes|High availability using Raft|
+|Classic Mirrored Queue|Yes|Yes|Legacy replication|
+|Dead Letter Queue|Optional|Optional|For undeliverable messages|
+|Header Queue|Optional|Optional|Matches on message headers|
+
 ## Exchanges 
 
 In RabbitMQ, an exchange is a message routing agent that receives messages from producers and routes them to queues based on message properties such as the routing key. When a producer sends a message to an exchange, it is up to the exchange to route the message to one or more queues.
@@ -179,6 +216,11 @@ Rabbitmq simulator tool to playaround with it
 ## Unack msg
 
 In RabbitMQ, messages are marked as **unacknowledged (unack)** when a consumer receives a message but hasn't sent an acknowledgment back to RabbitMQ yet. Unacknowledged messages remain in the queue and are not re-delivered to other consumers until they are either acknowledged or the connection with the consumer is closed.
+
+
+## Plugin
+
+Shovel Plugin  RabbitMQ plugin that unidirectionally moves messages from a source to a destination. rabbitmq
 ## Internal
 
 Protocol : AMQP

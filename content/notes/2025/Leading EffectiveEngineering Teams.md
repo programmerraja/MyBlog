@@ -268,6 +268,46 @@ verify whether your strategies are working through regular assessment. You must 
 
 
 ## Becoming an Effective Leader
+
+#### Assessing Your Leadership Skills
+
+**Technical expertise**
+- Do I have the required technical know-how for this project?
+- Have I perceived a team member’s face light up when I guided them toward a creative solution?
+- When was the last time I helped someone solve a difficult problem?
+
+**Communication**
+- Does my team always understand me?
+- Have there been any instances of misunderstandings or miscommunication where a team member did not understand what I was trying to convey?
+- Do I tailor my communication style to the individual or group I am addressing?
+- Do I often need to repeat instructions?
+- Do I actively listen and remember the discussion in the right context?
+
+**Drive**
+- Am I distracted easily from my end goals?
+- Am I able to follow up relentlessly and course-correct quickly?
+- Do I remain tenacious and optimistic in the face of challenges?
+- Am I able to recognize and seize opportunities that can help me with achieving my goals?
+
+**Fairness**
+- Do I always make objective decisions based on facts?
+- Do I hold any prejudices that may subconsciously influence my decisions?
+- Am I impartial when delegating responsibilities?
+
+**Influence**
+- Do people listen to me because of my authority as a leader or because they trust me to do the right thing?
+- Would I be able to guide others even without authority?
+
+Caring for others
+- Am I aware of what’s going on in my team members’ lives?
+- Am I able to empathize with others?
+- Are my team members overly cautious while communicating with me?
+
+
+
+
+
+
 ## Resources
 - [Identify what makes a great manager](https://rework.withgoogle.com/en/guides/managers-identify-what-makes-a-great-manager#introduction)
 - https://leaddev.com/communication/five-management-anti-patterns-and-why-they-happen
@@ -275,6 +315,7 @@ verify whether your strategies are working through regular assessment. You must 
 My Takeway
 - Do something to build the communication between the team such going out and playing games and brainstroming
 - Build a open culture
+- 
 
 
 How i can make the team the build on time with proper code and doc etc?
