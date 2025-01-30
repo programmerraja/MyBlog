@@ -19,6 +19,10 @@
 - [ ] Build a chrome extension which will anlayse the stock on screener website and give the oponion based on data
 
 
+Agent AI
+- Product name suggestion based on there product description
+- 
+- 
 
 
 I want you to help me to build the website for me in minimist theme below i have share details about me and what website need to have

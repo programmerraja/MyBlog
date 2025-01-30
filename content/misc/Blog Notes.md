@@ -26,6 +26,7 @@
 	- [ ] Leadership 
 	- [ ] communication 
 
+- How to integrate 11labs with twilio
 # Mistakes engineers make in large established codebases
 
 
@@ -69,6 +70,7 @@ How to
 Learn from mistakes or from expereinces
 - [ ]  Migration to 
 - [ ] How Our devops accedntly deelted the production kube cluster
+- [ ] dbhash run cmd block total db by our db developer
 
 Unsolved mysteries
 - [ ] Vault timeout 

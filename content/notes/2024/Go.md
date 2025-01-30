@@ -43,7 +43,7 @@ tags: programming
 - Arrays
     
     ```jsx
-     var name [2] string 
+    var name [2] string 
     name[0] = "1"
     
     name := [2]string("1","2") //size optional

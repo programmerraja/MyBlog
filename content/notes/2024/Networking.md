@@ -379,17 +379,74 @@ Provides secure access to a remote device or server over a network, allowing for
 
 #### WebRTC
 
+##### Signaling and Client Discovery
+
+- Initially, **Client A** and **Client B** connect to a **signaling server**. This server acts as an intermediary for exchanging connection setup information (not media data) between the clients.
+- Both clients confirm their presence and availability to each other through this signaling server. This ensures that both parties are ready to establish a connection.
+##### Discovering Public IP and Port with STUN
+
+- To establish a direct connection, each client needs to know its **public IP address** and port as seen from outside their private network.
+- Both clients reach out to a publicly available **STUN (Session Traversal Utilities for NAT) server**. The STUN server replies with the public IP and port for each client.
+    - For example:
+        - Client A discovers its public IP: `203.0.113.10` and port: `40000`.
+        - Client B discovers its public IP: `198.51.100.20` and port: `45000`.
+
+##### Exchanging ICE Candidates
+
+- Each client bundles its connectivity information (including public IP, port, and any additional network candidates) into what is called an **ICE (Interactive Connectivity Establishment) candidate**.
+- These ICE candidates are exchanged between Client A and Client B via the signaling server. This allows each client to know the other’s public-facing network information.
+    - For example:
+        - Client A shares its candidate (`203.0.113.10:40000`) with Client B.
+        - Client B shares its candidate (`198.51.100.20:45000`) with Client A.
+
+##### NAT Traversal and Connection Establishment
+
+Once ICE candidates are exchanged, the type of NAT each client is behind determines how the connection proceeds:
+###### **a) Full Cone NAT**
+
+- **Characteristics**: This type of NAT allows any external IP and port to send traffic to the client’s public IP and port, as long as the mapping has been created by the client’s outgoing traffic.
+- **How It Works**:
+    - After exchanging ICE candidates, Client A can directly send a message to Client B’s public IP and port (`198.51.100.20:45000`), and Client B can do the same for Client A.
+    - No additional steps are required because Full Cone NAT is the least restrictive.
+###### **b) Port-Restricted Cone NAT**
+
+- **Characteristics**: Incoming traffic is allowed only if the source IP and port match the destination of a previously sent packet.
+- **How It Works**:
+    - After exchanging ICE candidates, both Client A and Client B send small "punch-through" packets to each other’s public IP and port.
+        - For example:
+            - Client A sends a packet to `198.51.100.20:45000`.
+            - Client B sends a packet to `203.0.113.10:40000`.
+    - These packets create NAT mappings on both sides, allowing subsequent traffic to flow freely.
+###### **c) Symmetric NAT**
+
+- **Characteristics**: A new NAT mapping is created for each unique destination IP and port. This makes direct communication nearly impossible because the mapping for the STUN server differs from the mapping for the peer.
+- **How It Works**:
+    - Even after exchanging ICE candidates, the NAT mappings for Client A and Client B do not align, making direct communication impossible.
+    - In this case, a **TURN (Traversal Using Relays around NAT) server** is used as a relay.
+        - Both Client A and Client B send their media traffic to the TURN server.
+        - The TURN server forwards the traffic between the two clients, ensuring connectivity.
+##### 5. **Final C onnection**
+
+- Depending on the NAT type:
+    - **Full Cone NAT or Port-Restricted Cone NAT**: A direct peer-to-peer connection is established, enabling efficient and low-latency communication.
+    - **Symmetric NAT**: The connection relies on the TURN server to relay data, which adds some latency but ensures the communication works.
+
+
 Peer to peer exchange video and audio 
 
-STUN (session traversal util for NAT)
+STUN (session traversal util for NAT) (public server)
 - A Server tell me my public ip address/port through NAT
 - The client want to know his public ip and port (the ip of router)
 - The clent will do STUN request to the STUN server where it send the response of the public ip and port
 
+
+ **SDP (Session Description Protocol)**: SDP is a format used in WebRTC for describing multimedia communication sessions. It includes information about the codec, media type (audio/video), transport addresses, encryption keys, and more. It is exchanged during the signaling phase to ensure both clients agree on how to communicate.
+
 TURN (traversal using relay around NAT)
-- 
+- when user not able to connect directly we use TURN server which is private
 
 
+capture network traffic while a WebRTC call is active, then filter the packets to identify the RTP (Real-time Transport Protocol) packets which carry the WebRTC data, using the "rtp" protocol in the filter, and decode them as RTP to see detailed information like SSRC and payload type within Wireshark
 
 #### VoIP
 allows voice communication and multimedia sessions over the Internet.
@@ -776,10 +833,63 @@ Network Address Translation allows multiple devices within a local network to sh
 ISP uses NAT where some group of users comes under the same Router where it replace his IP when the request going out of internal.
 
 Types
-1. One to one (packet to external IP:port on the router always maps to internal ip:port )
+1. 
 2. Address restricted NAT 
 3. Port restricted
 4. Symmentric
+##### **Static NAT**
+- Maps a specific private IP address to a specific public IP address in a one-to-one relationship. The mapping is fixed and predefined.
+Example:
+- Private IP: **192.168.1.10**
+- Public IP: **203.0.113.10**
+- Rule: Any packet destined for `203.0.113.10` is translated to `192.168.1.10`.
+
+Packet Flow:
+	 **Incoming Packet**:
+    - **Packet**: Source: `8.8.8.8:443` → Destination: `203.0.113.10:80`
+    - **Action**: NAT translates the destination IP to `192.168.1.10:80` and forwards it to the private network.
+    - **Result**: **Accepted**.
+    - **Packet**: Source: `8.8.8.8:443` → Destination: `203.0.113.11:80`
+	- **Action**: NAT finds no matching mapping for `203.0.113.11`.
+	- **Result**: **Rejected**.
+
+##### PAT (Port Address Translation) / NAT Overload
+
+Maps multiple private IP addresses to a single public IP address by assigning unique port numbers.
+
+ Example:
+- Single Public IP: **203.0.113.10**
+- Private IPs: **192.168.1.10**, **192.168.1.11**
+
+**Outgoing Packet** (Another Device):
+
+- **Packet**: Source: `192.168.1.11:1234` → Destination: `8.8.8.8:443`
+- **Action**: NAT assigns a different port (e.g., `203.0.113.10:50001`) and forwards the packet.
+- **Result**
+ 
+**Incoming Packet**
+- **Packet**: Source: `8.8.8.8:443` → Destination: `203.0.113.10:50000`
+- **Action**: NAT translates the destination to `192.168.1.10:1234` and forwards it to the private network.
+
+If packet came from some other destination that dont have map in NAT it wil reject
+
+##### Symmetric NAT
+
+It works by creating unique mappings for each source IP, source port, and destination IP combination. This behavior makes it more secure but also more restrictive, especially for certain applications like VoIP or peer-to-peer communications.
+##### **How Symmetric NAT Works**
+
+1. When a private device sends a packet to a specific destination, the NAT device:
+    - Creates a unique mapping for the private IP and port to a public IP and port.
+    - This mapping is specific to the destination IP address.
+2. If the same private device sends a packet to a different destination, a new, separate mapping is created, even if the source IP and port are the same.
+
+|**Scenario**|**Action**|**Reason**|
+|---|---|---|
+|**Outgoing Packet**: `192.168.1.10:1234` → `8.8.8.8:443`|**Accepted**|New mapping created for this destination.|
+|**Outgoing Packet**: `192.168.1.10:1234` → `1.1.1.1:443`|**Accepted**|New mapping created for the new destination.|
+|**Incoming Packet**: `8.8.8.8:443` → `203.0.113.10:50000`|**Accepted**|Matches the existing mapping.|
+|**Incoming Packet**: `1.1.1.1:443` → `203.0.113.10:50000`|**Rejected**|Mapping does not match the destination IP.|
+
 
 #### Tools
 
