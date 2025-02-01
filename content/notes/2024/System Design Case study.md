@@ -278,6 +278,45 @@ Let's consider the same scenario: Alice, Bob, and Charlie are collaborating on a
     - Bob and Charlie's browsers receive this data and update their screens to reflect Alice's mouse movements in real time.
 
 
+#### Scaling websocket
+
+To achieve near-zero downtime during deployments, Compose follows these steps:
+
+1. New servers are spun up and become healthy.
+2. Old servers return 503 responses, causing the load balancer to remove them after 25 seconds.
+3. Old servers send a custom WebSocket close message to clients, asking them to reconnect with a random delay to avoid a surge.
+4. Clients use exponential backoff for reconnections to handle potential issues.
+5. Once all clients disconnect, the old servers shut down.
+
+At Compose, WebSocket messages are organized using a custom 2-byte type prefix to categorize each message, allowing up to 65,536 message types. This is space-efficient and ensures reliable message parsing.
+
+A delimiter (`|`) separates fields inside the message, making encoding/decoding faster and more memory-efficient than using JSON. By using TypeScript on both backend and frontend, message schemas are easily shared, preventing version mismatches.
+
+Example TypeScript code:
+
+```typescript
+const MESSAGE_TYPE_TO_HEADER = {
+  RENDER_UI: "aa",
+  UPDATE_UI: "ab",
+  SHOW_LOADING: "ac",
+  RENDER_UI_V2: "ad",
+  // ...
+}
+
+const DELIMITER = "|";
+
+function createDelimitedMessage(type: string, args: any[]) {
+  return [MESSAGE_TYPE_TO_HEADER[type], ...args].join(DELIMITER);
+}
+
+function parseDelimitedMessage(message: string) {
+  const [type, ...args] = message.split(DELIMITER);
+  return { type, args };
+}
+```
+
+This approach allows easy API upgrades with versioned message types.
+
 Resources
 - https://www.canva.dev/blog/engineering/realtime-mouse-pointers/ 
 - https://www.canva.dev/blog/engineering/enabling-real-time-collaboration-with-rsocket/

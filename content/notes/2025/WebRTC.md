@@ -433,7 +433,9 @@ Alice "calls" Bob using his SIP identity, a type of Uniform Resource Identifier 
 
 
 
+## Audio worklet
 
+Audio worklets process audio in blocks of 128 samples at a time3. This is a very short frame (2 and 2/3 milliseconds at a 48kHz sample rate)
 
 
 ## Debugging in chrome

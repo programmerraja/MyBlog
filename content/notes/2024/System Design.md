@@ -178,3 +178,5 @@ My notes
 
 
 
+
+https://kb.databasedesignbook.com/ 

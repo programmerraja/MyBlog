@@ -357,3 +357,7 @@ SS0
     - These are likely "good" connections where only a single SYN packet was sent. This could indicate that the connection was successfully established or that no response was received but no retries were made.
 - **Connections with More Than 1 Packet**:
     - These are most likely "unanswered" connections where the SYN packet was retried multiple times due to no SYN+ACK response. The presence of multiple packets typically indicates retries.
+
+
+
+[Stratoshark](OS.md#Stratoshark)

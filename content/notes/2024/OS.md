@@ -54,3 +54,13 @@ Note:the virtual address space dedicated to a process by the OS is [128TB on Lin
 
 
 TIP: IF you want to cache some file on RAM and move all other from cache cat the huge file it will be moved cache 
+
+
+
+Tools
+
+### Stratoshark
+
+Stratoshark is a sibling application for Wireshark which lets you analyze system calls and log messages. It helps people understand, troubleshoot, and secure their systems via system calls and log messages similar to the way Wireshark helps people understand, troubleshoot, and secure their networks via packets.
+
+Refere [here](https://wiki.wireshark.org/Stratoshark) 

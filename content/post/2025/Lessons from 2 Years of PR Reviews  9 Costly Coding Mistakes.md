@@ -1,5 +1,5 @@
 ---
-title: "PR Nightmares: 5 Common Coding Mistakes I've Seen in the Last 2 Years"
+title: "Lessons from 2 Years of PR Reviews: 9 Costly Coding Mistakes"
 date: 2025-01-12T17:39:14.1414+05:30
 draft: false
 tags:
@@ -7,7 +7,7 @@ tags:
 
 Hey everyone! If you're a regular follower, you might already know a bit about me. But if not, let me quickly introduce myself: I’m a full-stack developer, and I’ve been working at a startup for the past two years. During this time, I’ve reviewed countless pull requests and noticed recurring coding mistakes. Today, I’m excited to share these insights with you. This will be focused on Node.js.
 
-### Constant Variables: When to Avoid the Global Constant File
+## 1. Constant Variables: When to Avoid the Global Constant File
 
 A common mistake I see is defining constants in a global file when they’re only used in one function. This pollutes the global scope and unnecessarily keeps the variable in memory.
 
@@ -17,8 +17,6 @@ Defining a constant in a separate file for use in just one function doesn’t ma
 #### The Solution
 
 Define constants **locally** within the function where they’re needed. Only move them to a separate file if they’re used across multiple files.
-
-#### Example:
 
 **Bad Code:**
 
@@ -49,7 +47,7 @@ function fetchData() {
 
 This keeps your code cleaner and more efficient.
 
-### Environment Variables: Skip the Middleman
+## 2.  Environment Variables: Skip the Middleman
 
 In Node.js, we typically store secrets in environment variables and access them with `process.env.KEY_NAME`. However, a common mistake I’ve seen is assigning the value of an environment variable to a constant, and then accessing it via that constant.
 
@@ -60,8 +58,6 @@ This adds unnecessary indirection. If you're just going to access `process.env.K
 #### The Solution
 
 Access environment variables **directly** via `process.env.KEY_NAME` instead of assigning them to a constant unless the value needs to be used multiple times in a large scope.
-
-#### Example:
 
 **Bad Code:**
 
@@ -76,7 +72,6 @@ function connect() {
 
 ```
 
-
 **Better Code:**
 
 ```javascript
@@ -88,7 +83,7 @@ function connect() {
 
 This keeps the code cleaner and reduces unnecessary assignments.
 
-### Logs Without Indentation: Clean Up Your Debugging
+## 3. Logs Without Indentation: Clean Up Your Debugging
 
  I often come across logs that are useful for debugging but lack proper indentation or context. Logs without structure make it harder to extract meaningful insights.
 
@@ -99,8 +94,6 @@ Logs without context or proper formatting can clutter production logs, making it
 #### The Solution
 
 Log **only when necessary** and ensure logs are **structured** with relevant context. Use consistent formatting (e.g., timestamps, log levels) to make logs easier to read and search.
-
-#### Example:
 
 **Bad Code:**
 
@@ -126,7 +119,7 @@ function fetchData(username){
 }
 ```
 
-### Handling Independent Async Calls: Run Promises in Parallel
+## 5. Handling Independent Async Calls: Run Promises in Parallel
 
 Let say we have function which job is to fetch data from two service code will look like as below in nodejs 
 
@@ -136,14 +129,14 @@ const serviceTwoData = await fetch()
 ```
 
 Would you able to find the problem in the code ?
-#### Can You Spot the Issue?
+
+**Can You Spot the Issue?**
 
 The problem here is that we’re waiting for each `fetch()` call to complete **sequentially**, meaning the second call won’t start until the first one finishes. This is inefficient, especially if these calls are independent of each other.
 
 #### Why It’s a Problem
 
 Executing asynchronous calls in sequence means you're **blocking** the execution, and the overall process takes longer than necessary. Since the two calls don’t depend on each other, there’s no reason to wait for one before starting the other.
-
 #### The Solution
 
 To improve efficiency, we can run both asynchronous calls **in parallel** using `Promise.all()`. This allows both requests to be processed simultaneously, reducing overall waiting time.
@@ -157,7 +150,7 @@ const [serviceOneData, serviceTwoData] = await Promise.all([
 
 ```
 
-### Trusting the Frontend
+## 6. Trusting the Frontend
 
 When performing CRUD operations, the frontend typically sends data as an object when creating or updating a document. On the backend, the data is spread and used directly to create or update the document. This technique is commonly used for both creation and updates.
 
@@ -179,19 +172,59 @@ To prevent this issue, don’t blindly trust the frontend. There are two primary
 
 2. **Avoid Using the Spread Operator:** Instead of using the spread operator to update documents, destructure the object to ensure that only the allowed fields are included in the update operation.
 
-## Ingoring comments
+## 7. Ingoring comments
 
 Have you ever encountered code that’s difficult to understand just by reading it? It may look vague, or the business logic behind it might be unclear, leaving you unsure about why it was written a certain way. This can be especially challenging when you’re trying to maintain or extend the code, as the original intent is lost without proper explanations.
 
 When code lacks comments, future developers (including your future self) might waste time trying to figure out the reasoning behind specific logic, which can slow down development and increase the risk of introducing bugs.
 
-Try to understand the below code
+Take a look at the following JavaScript function:
+
+```js
+function getMatchingQuery(initialMatchQuery, value) {
+    const durationMap = {
+        lessThanThirtySeconds: { $gt: 0, $lte: 29 },
+        betweenThirtySecondsAndOneMinute: { $gt: 29, $lte: 60 },
+        betweenOneAndFive: { $gt: 60, $lte: 300 },
+        betweenFiveAndTen: { $gt: 300, $lte: 600 },
+        greaterThanTen: { $gt: 600 }, 
+    };
+
+    if (value && Array.isArray(value)) {
+        initialMatchQuery = {
+            ...initialMatchQuery,
+            duration: { $gt: 0 },
+        };
+
+        if (value.length < 5) {
+            delete initialMatchQuery.duration;
+            value.sort((a, b) => a.key - b.key);
+            const mergedIntervals = [];
+            let currentInterval = { ...durationMap[value[0].id] };
+            for (let i = 1; i < value.length; i++) {
+                const range = durationMap[value[i].id];
+                if (currentInterval.$lte && currentInterval.$lte === range.$gt) {
+                    if (range.$lte) {
+                        currentInterval.$lte = range.$lte;
+                    } else {
+                        delete currentInterval.$lte;
+                    }
+                } else {
+                    mergedIntervals.push(currentInterval);
+                    currentInterval = { ...range };
+                }
+            }
+        }
+    }
+    return initialMatchQuery;
+}
 
 ```
 
-```
+At first glance, understanding this function isn’t straightforward. Without any comments, it's hard to determine its purpose and logic. Imagine a developer trying to debug or modify this function without any context—this could lead to frustration, wasted time, and potentially breaking the functionality.
 
-## Handling Atomic operation  in code level
+A simple yet effective way to make this code more maintainable is by adding meaningful comments. Comments act as a guide, explaining why certain decisions were made and making it easier for others (and your future self) to work with the code.
+## 8. Handling Atomic operation  in code level
 
 When implementing logic that modifies user credits, it’s common to reduce the credit balance each time a specific action is performed, as shown in the following code snippet:
 
@@ -218,7 +251,7 @@ This method guarantees that the credit will be correctly decremented by 5 credit
 
 If you would like to learn more about ACID properties in DB check out here
 
-## Overprotecting Your Code:
+## 9. Overprotecting Your Code:
 
 I’ve noticed that many developers overcomplicate their code by adding excessive safeguards, which often goes against the fundamental principle that code should work as intended. Overthinking and over-safeguarding the code can lead to unnecessary complexity and inefficiency.
 
@@ -261,4 +294,4 @@ In this case, the `try-catch` block is redundant. You can simply remove the `try
 
 ### Open to Feedback
 
-Growth comes from learning, and as long as we stay open to feedback, we can always improve. If you disagree with any point, feel free to challenge me I welcome constructive discussion. Keep coding and growing!
+Growth comes from continuous learning, and staying open to feedback is key to improvement. If you have a different perspective, feel free to share I appreciate thoughtful discussions. Keep coding, keep growing!

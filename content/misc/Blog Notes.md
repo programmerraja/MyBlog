@@ -27,6 +27,7 @@
 	- [ ] communication 
 
 - How to integrate 11labs with twilio
+- How db.admin() make our db downtime for a 30 min
 # Mistakes engineers make in large established codebases
 
 

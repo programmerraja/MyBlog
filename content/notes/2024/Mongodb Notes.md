@@ -631,6 +631,8 @@ https://github.com/danielabar/mongo-performance?tab=readme-ov-file [ need to rea
 
 https://tech.oyorooms.com/mongodb-out-of-memory-kill-process-mongodb-using-too-much-memory-solved-44e9ae577bed
 
+https://www.mydbops.com/blog/optimize-mongodb-storage-compression-indexing-and-ttl-best-practices
+
 
 ```
 for(let i=0;i<100;i++){

@@ -103,3 +103,4 @@ logical, algebraic, and set-theoretic formulations
 ## Blog
 - https://embracethered.com/blog/posts/2024/chatgpt-hacking-memories/
 - https://github.com/sherdencooper/GPTFuzz 
+- https://github.com/git-disl/virus 

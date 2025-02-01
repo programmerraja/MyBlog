@@ -153,3 +153,5 @@ https://github.com/Storia-AI/repo2vec
 3. Paste into AI builder  
 4. Full FE clone app is created
 
+
+https://sourcegraph.com/blog/introducing-agentic-chat

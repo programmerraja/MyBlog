@@ -279,6 +279,7 @@ Braintrust is an end-to-end platform for building AI applications. It makes soft
 - **Inspect AI**: [GitHub](https://github.com/UKGovernmentBEIS/inspect_ai)
 - **Giskard**: [GitHub](https://github.com/Giskard-AI/giskard)
 - https://github.com/EleutherAI/lm-evaluation-harness 
+- https://gymnasium.farama.org/
 
 ## Resources
 - [A Survey on Hallucination in Large Language Models](https://github.com/LuckyyySTA/Awesome-LLM-hallucination?tab=readme-ov-file)
@@ -287,6 +288,5 @@ Braintrust is an end-to-end platform for building AI applications. It makes soft
 - [LLM Evaluation Skills Are Easy to Pick Up](https://freedium.cfd/https://towardsdatascience.com/llm-evaluation-techniques-and-costs-3147840afc53) 
 - [How to Cook Good AI Products with What You Already Have in your Data Warehouse](https://www.youtube.com/watch?v=G87yQv5CMq8)
 - [Optimizing RAG Through an Evaluation-Based Methodology](https://qdrant.tech/articles/rapid-rag-optimization-with-qdrant-and-quotient/)
-- 
-
+- [Innovations in Evaluating AI Agent Performance ](https://www.qawolf.com/webinars/innovations-in-evaluating-ai-agent-performance)
 ---

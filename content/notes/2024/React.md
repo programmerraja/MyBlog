@@ -684,3 +684,4 @@ Internal of react 6hour
 
 Tool 
 - https://www.fuzzmap.io/
+- https://github.com/aidenybai/react-scan [BEST]

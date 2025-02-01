@@ -230,6 +230,7 @@ LSM  delete are expensive
 #### Resources
 - https://redis.io/docs/latest/operate/oss_and_stack/management/optimization/benchmarks/
 - https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/understanding-partitioning-and-sharding-in-postgres-and-citus/ba-p/3891629
+- https://kb.databasedesignbook.com/
 
 
 #### Tools
