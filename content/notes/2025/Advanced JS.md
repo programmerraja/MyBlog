@@ -29,7 +29,11 @@ reader.readAsText(blob);
 
 ```
 
+### ArrayBuffer
 
+Raw data 
+
+Typed Array raw data in 8bit,16 bit ,32 bit etc which unit8Array ,,
 
 ## AudioContext
 

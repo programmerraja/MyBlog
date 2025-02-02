@@ -586,7 +586,7 @@ GOLD
 Things to check before buying mutal fund
 - examining rolling returns to assess consistency
 - AUM as a primary metric for selecting a fund16. While many people tend to prefer funds with a high AUM, this should not be the only factor when considering a fund
-- ump sum investments are made when the market falls by 5%, 10%, or 15% from its all-time high
+- lump sum investments are made when the market falls by 5%, 10%, or 15% from its all-time high
 - check for **Indicative Net Asset Value**. (INAV) vaule if current price and this same no problem  if it is lower and current price is high we buying at high cost 
 
 INAV represents an estimate of the current value of an ETF's underlying assets, typically calculated in real-time throughout the trading day.
@@ -601,21 +601,21 @@ Key Ratios Explained
 
 Standard Deviation: Measures the total risk of a fund's portfolio and how much the return deviates from the expected return. A higher standard deviation means higher volatility.
 
-Sorno Ratio: Measures the risk-adjusted performance of a fund, specifically focusing on downside risk. A higher ratio indicates better risk-adjusted returns2. Generally a ratio between 1 and 2 is considered good2.
+Sorno Ratio: Measures the risk-adjusted performance of a fund, specifically focusing on downside risk. A higher ratio indicates better risk-adjusted returns2. Generally a ratio between 1 and 2 is considered good.
 
-Beta: Measures the risk of a fund compared to the market. A beta less than 1 indicates lower risk than the market, and a beta greater than 1 indicates higher risk than the market2.
+Beta: Measures the risk of a fund compared to the market. A beta less than 1 indicates lower risk than the market, and a beta greater than 1 indicates higher risk than the market.
 
-Upside Capture Ratio: Measures how well a fund performs relative to the benchmark during a rising market2.
+Upside Capture Ratio: Measures how well a fund performs relative to the benchmark during a rising market.
 
 Downside Capture Ratio: Measures how well a fund performs relative to the benchmark during a falling market
 
 Operating Profit Margin: This indicates the profitability of a company’s core operations.
 
-Return on Equity (ROE): This measures how efficiently a company is using shareholders' investments to generate profit. A ROE of 15% or higher is considered a good benchmark2.
+Return on Equity (ROE): This measures how efficiently a company is using shareholders' investments to generate profit. A ROE of 15% or higher is considered a good benchmark.
 
 **Return on Capital Employed (ROCE)** is a financial metric that measures a company's ability to generate profits from its capital employed (the total capital used for running the business). (higher is good)
 
-Free Cash Flow: This is the cash a company generates after accounting for capital expenditures, indicating financial health and flexibility2.
+Free Cash Flow: This is the cash a company generates after accounting for capital expenditures, indicating financial health and flexibility.
 
 Market Capitalization: Companies can be categorized by their size and this will influence the type of stocks you choose2.
 
@@ -626,7 +626,7 @@ Imagine you have a lemonade stand, and you make $10 every week selling lemonade.
 The **Price-to-Earnings (P/E) ratio** is like a way to figure out if the price they want to pay is fair.
 
 - The **"Price"** is how much they’re willing to pay to buy your lemonade stand. Let’s say they offer you $50.
-- The **"Earnings"** is how much money your stand makes in a week—$10.
+- The **"Earnings"** is how much money your stand makes in a week $10.
 
 To find the P/E ratio, you divide the price by the earnings:
 
@@ -1388,3 +1388,12 @@ Unlisted share
 
 
 Compared to FD debt fund have very low tax
+
+
+
+
+Tax harvesting
+- showing loss to reduce the tax
+- AIS download
+
+Annual Information Statement  where from income tax we can download our anual incom statement

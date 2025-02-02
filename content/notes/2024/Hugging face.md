@@ -547,6 +547,8 @@ There are often creative ways to solve problems within the limit, e.g. condensin
 - openai-community/gpt2
 - https://huggingface.co/1bitLLM 
 - SmolLM models are designed for local deployment and have low memory footprints, making them suitable for devices like smartphones
+- Human-Like-Llama-3-8B-Instruct 
+- Human-Like-Qwen-2.5-7B-Instruct
 
 Here are some interesting and lightweight LLMs available on Hugging Face that you can use for various projects:
 

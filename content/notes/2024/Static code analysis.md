@@ -126,5 +126,10 @@ https://github.com/SonarSource/SonarJS
 System for collecting, deriving and querying facts about source code
 From facebook
 [Get Started](https://glean.software/docs/introduction/) 
+
+
+## Codemod
+
+https://codemod.com/
 ## Resources
 - https://github.com/analysis-tools-dev/static-analysis?tab=readme-ov-file 

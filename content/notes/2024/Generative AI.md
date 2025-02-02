@@ -352,7 +352,7 @@ MemGPT: A Hierarchical Memory System for Large Language Models (LLMs)
 
 - **MemGPT is a new LLM system that addresses the limited context window problem of LLMs by drawing inspiration from the hierarchical memory systems found in traditional operating systems (OSes).**
 
-- MemGPT introduces **virtual context management** to provide the illusion of an extended context for LLMs, much like how virtual memory in OSes allows applications to work with datasets exceeding available physical memory.
+- MemGPT introduces **virtual context management** to provide the illusion of an extended context for LLMs, much like how virtual memory in OS allows applications to work with datasets exceeding available physical memory.
 
 - The key idea behind MemGPT is to enable LLMs to manage their own memory by using function calls, allowing them to **read and write data to external sources, modify their own context, and decide when to respond**.
 

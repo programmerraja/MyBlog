@@ -155,3 +155,6 @@ https://github.com/Storia-AI/repo2vec
 
 
 https://sourcegraph.com/blog/introducing-agentic-chat
+
+
+https://lovable.dev/ (looking awsome)
