@@ -6,14 +6,14 @@
   "type": "module",
   "author": "jackyzha0 <j.zhao2k19@gmail.com>",
   "license": "MIT",
-  "homepage": "https://quartz.jzhao.xyz",
+  "homepage": "https://programmerraja.github.io",
   "repository": {
     "type": "git",
     "url": "https://github.com/jackyzha0/quartz.git"
   },
   "scripts": {
     "quartz": "./quartz/bootstrap-cli.mjs",
-    "build": "npx quartz build -o public/blog --concurrency=2 && rm -rf ./public/Images ./public/notes ./public/post ./public/static ./public/tags &&  mv -f ./public/blog/* ./public/ && rm -r ./public/blog",
+    "build": "npx quartz build -o public/blog --concurrency=4 && rm -rf ./public/Images ./public/notes ./public/post ./public/static ./public/tags &&  mv -f ./public/blog/* ./public/ && rm -r ./public/blog",
     "dev": "npx quartz build -o public/blog --serve --concurrency=2",
     "check": "tsc --noEmit && npx prettier . --check",
     "format": "npx prettier . --write",
