@@ -106,3 +106,7 @@ By default when we pulling model Ollama may default to using a highly compressed
 
 ## MobileLLM
 https://github.com/facebookresearch/MobileLLM
+
+
+## JAN
+https://jan.ai/

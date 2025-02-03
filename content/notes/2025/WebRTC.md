@@ -453,3 +453,5 @@ Tools
 - https://cyara.com/blog/webrtc-internals-parameters/
 - https://audioply.vercel.app/
 - https://webaudiodemos.appspot.com/
+- https://medium.com/@fippo/working-around-webrtc-bugs-d4f6fdb763f
+- https://www.kirsle.net/journey-to-get-webrtc-working-well-in-safari

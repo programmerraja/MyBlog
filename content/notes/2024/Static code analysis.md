@@ -131,5 +131,9 @@ From facebook
 ## Codemod
 
 https://codemod.com/
+
+
+https://codescene.com/
+https://snyk.io/platform/deepcode-ai/
 ## Resources
 - https://github.com/analysis-tools-dev/static-analysis?tab=readme-ov-file 

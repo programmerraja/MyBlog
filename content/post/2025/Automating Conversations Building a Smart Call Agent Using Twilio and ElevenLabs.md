@@ -1,9 +1,10 @@
 ---
 title: "Automating Conversations: Building a Smart Call Agent Using Twilio and ElevenLabs"
 date: 2025-02-02T04:31:55.5555+05:30
-draft: true
+draft: false
 tags:
   - AI
+  - agent
 ---
 
 We are living in the era of AI agents, where people are increasingly developing these tools to automate mundane tasks. Today, we’ll explore how to build our own call agent using Twilio and ElevenLabs. While our primary focus will be on understanding how the system works and its architecture, I’ll provide the relevant code and additional resources at the end of the blog for those interested in digging deeper.
@@ -18,9 +19,8 @@ Twilio, on the other hand, is a cloud communications platform that enables devel
 
 #### Prerequisites:
 
-- **ElevenLabs account** (10k free credits provided for testing)
-- **Twilio account** with an active phone number
-
+- **[ElevenLabs account](https://elevenlabs.io/)** (10k free credits)
+- **[Twilio account](https://www.twilio.com/en-us/messaging)** with an active phone number
 ![](../../Images/Screenshot%20from%202025-02-02%2017-35-00%201.png)
 
 First we will initiate the call with Twilio and set up the stream as follows: (we passed the to number in query params check the code for more details)
